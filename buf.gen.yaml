@@ -1,0 +1,16 @@
+# file: buf.gen.yaml
+# version: 1.0.0
+# guid: buf-gen-config-gcommon-go
+
+version: v1
+plugins:
+  - plugin: buf.build/protocolbuffers/go
+    out: .
+    opt:
+      - paths=source_relative
+      - module=github.com/jdfalk/gcommon-go
+  - plugin: buf.build/grpc/go
+    out: .
+    opt:
+      - paths=source_relative
+      - module=github.com/jdfalk/gcommon-go

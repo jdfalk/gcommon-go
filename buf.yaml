@@ -1,0 +1,14 @@
+# file: buf.yaml
+# version: 1.0.0
+# guid: buf-config-gcommon-go
+
+version: v1
+lint:
+  use:
+    - DEFAULT
+breaking:
+  use:
+    - FILE
+deps:
+  - buf.build/protocolbuffers/protobuf
+  - buf.build/grpc-ecosystem/grpc-gateway
