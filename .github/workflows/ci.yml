@@ -1,41 +1,25 @@
 # file: .github/workflows/ci.yml
-# version: 1.0.0
+# version: 1.1.0
 # guid: ci-workflow-gcommon-go
 
 name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Go
-      uses: actions/setup-go@v4
-      with:
-        go-version: '1.21'
-        
-    - name: Install buf
-      run: |
-        BUF_VERSION="1.26.1"
-        curl -sSL "https://github.com/bufbuild/buf/releases/download/v${BUF_VERSION}/buf-$(uname -s)-$(uname -m)" -o "/usr/local/bin/buf"
-        chmod +x "/usr/local/bin/buf"
-        
-    - name: Setup dependencies
-      run: make setup
-      
-    - name: Generate protocol buffers
-      run: make generate
-      
-    - name: Run tests
-      run: make test
-      
-    - name: Run linting
-      run: make lint
+  ci:
+    uses: jdfalk/ghcommon/.github/workflows/reusable-ci.yml@main
+    with:
+      go-version: '1.24'
+      skip-protobuf: false  # Need protobuf generation for Go SDK
+      skip-tests: false
+      skip-linting: false

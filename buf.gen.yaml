@@ -1,16 +1,17 @@
 # file: buf.gen.yaml
-# version: 1.0.0
+# version: 2.0.0
 # guid: buf-gen-config-gcommon-go
 
-version: v1
+version: v2
+clean: true
 plugins:
-  - plugin: buf.build/protocolbuffers/go
+  - remote: buf.build/protocolbuffers/go
     out: .
     opt:
       - paths=source_relative
-      - module=github.com/jdfalk/gcommon-go
-  - plugin: buf.build/grpc/go
+      - module=github.com/jdfalk/gcommon
+  - remote: buf.build/grpc/go
     out: .
     opt:
       - paths=source_relative
-      - module=github.com/jdfalk/gcommon-go
+      - module=github.com/jdfalk/gcommon
