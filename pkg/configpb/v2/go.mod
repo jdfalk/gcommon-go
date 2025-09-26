@@ -4,7 +4,7 @@
 
 module github.com/jdfalk/gcommon/pkg/configpb/v2
 
-go 1.24
+go 1.24.0
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1

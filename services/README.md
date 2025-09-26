@@ -9,9 +9,10 @@ This directory contains concrete implementations of all protobuf services define
 ## Architecture
 
 ### Service Structure
+
 Each service follows a consistent structure:
 
-```
+```ascii
 services/{package}/
 ├── service.go          # Main service implementation
 ├── config.go           # Service-specific configuration
@@ -24,6 +25,7 @@ services/{package}/
 ```
 
 ### Implementation Pattern
+
 All services follow the same implementation pattern:
 
 1. **Interface Compliance**: Implements the generated gRPC service interface
@@ -34,6 +36,7 @@ All services follow the same implementation pattern:
 6. **Graceful Shutdown**: Proper resource cleanup and connection draining
 
 ### Service Dependencies
+
 Services can depend on:
 
 - **Database**: SQL/NoSQL database connections
@@ -45,6 +48,7 @@ Services can depend on:
 ## Available Services
 
 ### Core Infrastructure
+
 - **[health](health/)** - Health checking, readiness/liveness probes
 - **[config](config/)** - Configuration management and hot-reload
 - **[database](database/)** - Database operations, migrations, connection pooling
@@ -52,15 +56,18 @@ Services can depend on:
 - **[metrics](metrics/)** - Metrics collection, aggregation, export
 
 ### Security & Authentication
+
 - **[auth](auth/)** - Authentication, JWT management, session handling
 - **[authorization](authorization/)** - RBAC, policy enforcement, permissions
 
 ### Application Services
+
 - **[organization](organization/)** - Multi-tenant organization management
 - **[media](media/)** - Media processing, audio handling, subtitle management
 - **[web](web/)** - HTTP/gRPC gateway, static assets, admin interfaces
 
 ### Operational Services
+
 - **[cache](cache/)** - Distributed caching, invalidation strategies
 - **[logging](logging/)** - Log aggregation, structured logging, analysis
 - **[notification](notification/)** - Multi-channel notifications, templates
@@ -69,11 +76,13 @@ Services can depend on:
 ## Quick Start
 
 ### 1. Choose a Service
+
 ```go
 import "github.com/jdfalk/gcommon/services/health"
 ```
 
 ### 2. Configure Dependencies
+
 ```go
 deps := health.Dependencies{
     Database: &DatabaseHealthChecker{db: myDB},
@@ -85,6 +94,7 @@ deps := health.Dependencies{
 ```
 
 ### 3. Configure Service
+
 ```go
 config := &health.Config{
     CheckInterval:    30 * time.Second,
@@ -94,6 +104,7 @@ config := &health.Config{
 ```
 
 ### 4. Create and Register Service
+
 ```go
 healthService := health.NewService(config, deps)
 
@@ -102,6 +113,7 @@ healthpb.RegisterHealthServiceServer(server, healthService)
 ```
 
 ### 5. Start Server
+
 ```go
 lis, _ := net.Listen("tcp", ":8080")
 server.Serve(lis)
@@ -110,6 +122,7 @@ server.Serve(lis)
 ## Configuration Management
 
 ### Environment-Based Configuration
+
 ```yaml
 # config.yaml
 services:
@@ -127,6 +140,7 @@ services:
 ```
 
 ### Configuration Loading
+
 ```go
 import "github.com/jdfalk/gcommon/internal/config"
 
@@ -142,6 +156,7 @@ dbConfig := cfg.Services.Database
 ## Middleware System
 
 ### Standard Middleware Stack
+
 All services include a standard middleware stack:
 
 1. **Logging**: Request/response logging with correlation IDs
@@ -153,6 +168,7 @@ All services include a standard middleware stack:
 7. **Recovery**: Panic recovery and error handling
 
 ### Custom Middleware
+
 ```go
 func CustomMiddleware() grpc.UnaryServerInterceptor {
     return func(ctx context.Context, req interface{}, info *grpc.UnaryServerInfo, handler grpc.UnaryHandler) (interface{}, error) {
@@ -175,6 +191,7 @@ server := grpc.NewServer(
 ## Testing Strategy
 
 ### Unit Tests
+
 Each service includes comprehensive unit tests:
 
 ```go
@@ -193,6 +210,7 @@ func TestHealthService_Check(t *testing.T) {
 ```
 
 ### Integration Tests
+
 Full integration tests with real dependencies:
 
 ```go
@@ -217,6 +235,7 @@ func TestHealthService_Integration(t *testing.T) {
 ```
 
 ### Load Testing
+
 Performance testing with realistic load:
 
 ```bash
@@ -235,6 +254,7 @@ ghz --insecure \
 ## Production Deployment
 
 ### Docker Container
+
 ```dockerfile
 FROM golang:1.24-alpine AS builder
 WORKDIR /app
@@ -249,6 +269,7 @@ CMD ["health-service"]
 ```
 
 ### Kubernetes Deployment
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -288,6 +309,7 @@ spec:
 ```
 
 ### Service Mesh Integration
+
 Services are designed to work with Istio, Linkerd, and other service mesh solutions:
 
 ```yaml
@@ -316,6 +338,7 @@ spec:
 ## Monitoring & Observability
 
 ### Metrics
+
 All services export Prometheus metrics:
 
 - **Request metrics**: Total requests, request duration, error rates
@@ -323,6 +346,7 @@ All services export Prometheus metrics:
 - **Resource metrics**: Memory usage, goroutine count, database connections
 
 ### Logging
+
 Structured logging with configurable levels:
 
 ```json
@@ -338,6 +362,7 @@ Structured logging with configurable levels:
 ```
 
 ### Tracing
+
 Distributed tracing with OpenTelemetry:
 
 ```go
@@ -351,24 +376,28 @@ defer span.End()
 ## Development Guidelines
 
 ### Code Style
+
 - Follow Go best practices and conventions
 - Use consistent error handling patterns
 - Include comprehensive documentation
 - Write testable code with dependency injection
 
 ### Performance
+
 - Use connection pooling for databases
 - Implement caching where appropriate
 - Set reasonable timeouts and limits
 - Profile performance-critical paths
 
 ### Security
+
 - Validate all input parameters
 - Use secure defaults for configurations
 - Implement proper authentication/authorization
 - Log security-relevant events
 
 ### Reliability
+
 - Handle errors gracefully with proper recovery
 - Implement circuit breakers for external dependencies
 - Use exponential backoff for retries
@@ -377,6 +406,7 @@ defer span.End()
 ## Contributing
 
 ### Adding a New Service
+
 1. Create the service directory: `services/{package}/`
 2. Implement the service interface from `pkg/{package}pb/`
 3. Add configuration struct with validation
@@ -385,6 +415,7 @@ defer span.End()
 6. Update this README
 
 ### Service Template
+
 Use the health service as a template for new services:
 
 ```bash
@@ -393,6 +424,7 @@ cp -r services/health services/myservice
 ```
 
 ### Code Review Checklist
+
 - [ ] Implements correct protobuf interface
 - [ ] Includes comprehensive error handling
 - [ ] Has configuration with defaults
