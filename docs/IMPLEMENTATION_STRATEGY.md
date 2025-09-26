@@ -9,7 +9,8 @@ This document outlines the strategy for implementing shared service implementati
 ## Architecture Overview
 
 ### Repository Structure
-```
+
+```ascii
 gcommon/
 ├── pkg/                        # Generated protobuf code (read-only)
 │   ├── commonpb/              # Common types and utilities
@@ -44,6 +45,7 @@ gcommon/
 Based on our protobuf definitions, we have **33 unique services** across **9 packages**:
 
 ### Core Infrastructure Services
+
 - **healthpb**: `health_service`, `health_check_service`, `health_admin_service`
 - **configpb**: `config_service`, `config_admin_service`
 - **databasepb**: `database_service`, `database_admin_service`, `migration_service`
@@ -51,11 +53,13 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 - **metricspb**: `metrics_service`, `metrics_management_service`
 
 ### Application Services
+
 - **organizationpb**: `organization_service`, `tenant_service`, `hierarchy_service`
 - **mediapb**: `media_service`, `media_processing_service`, `audio_service`, `subtitle_service`
 - **webpb**: `web_service`, `web_admin_service`
 
 ### Security & Operations
+
 - **commonpb**: `auth_service`, `auth_admin_service`, `authorization_service`, `session_service`
 - **Cross-cutting**: `cache_service`, `cache_admin_service`, `log_service`, `log_admin_service`, `notification_service`, `transaction_service`, `workflow_service`
 
@@ -64,19 +68,23 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ### Phase 1: Foundation & Core Infrastructure (Week 1-2)
 
 #### 1.1 Project Structure Setup
+
 - Create `internal/` package with shared utilities
 - Set up `services/` package structure
 - Create base interfaces and common patterns
 - Implement middleware system (logging, metrics, auth)
 
 #### 1.2 Core Infrastructure Services
+
 **Priority Order:**
+
 1. **Health Services** (`healthpb`) - Essential for service discovery
 2. **Configuration Services** (`configpb`) - Required by all other services
 3. **Database Services** (`databasepb`) - Foundation for data persistence
 4. **Metrics Services** (`metricspb`) - Observability foundation
 
 **Deliverables:**
+
 - Base service interfaces with dependency injection
 - Standard middleware (auth, logging, metrics, rate limiting)
 - Health check implementations with readiness/liveness probes
@@ -87,17 +95,20 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ### Phase 2: Message Queue & Caching (Week 3)
 
 #### 2.1 Queue Services (`queuepb`)
+
 - Implement async message processing
 - Queue monitoring and admin operations
 - Dead letter queue handling
 - Message retry strategies
 
 #### 2.2 Caching Services
+
 - Distributed caching implementations
 - Cache invalidation strategies
 - Cache admin and monitoring
 
 **Deliverables:**
+
 - Queue service implementations with multiple backends (Redis, RabbitMQ, etc.)
 - Caching layer with Redis/Memcached support
 - Admin interfaces for queue and cache management
@@ -105,12 +116,14 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ### Phase 3: Security & Authentication (Week 4)
 
 #### 3.1 Authentication Services (`commonpb`)
+
 - JWT token management
 - Session handling
 - User authentication flows
 - Authorization and RBAC
 
 **Deliverables:**
+
 - Complete authentication system
 - Session management with distributed storage
 - Authorization middleware with policy enforcement
@@ -119,16 +132,19 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ### Phase 4: Application Services (Week 5-6)
 
 #### 4.1 Organization Services (`organizationpb`)
+
 - Multi-tenant organization management
 - Hierarchical organization structures
 - Tenant isolation and resource management
 
 #### 4.2 Media Services (`mediapb`)
+
 - Audio processing pipelines
 - Subtitle management and synchronization
 - Media file handling and storage
 
 **Deliverables:**
+
 - Complete organization management system
 - Media processing workflows
 - Subtitle extraction and synchronization tools
@@ -136,17 +152,20 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ### Phase 5: Web & Operational Services (Week 7)
 
 #### 5.1 Web Services (`webpb`)
+
 - HTTP to gRPC gateway implementations
 - Web admin interfaces
 - Static asset serving
 
 #### 5.2 Operational Services
+
 - Logging aggregation and management
 - Notification systems
 - Transaction management
 - Workflow orchestration
 
 **Deliverables:**
+
 - Web service implementations
 - Complete operational monitoring suite
 - Notification delivery system
@@ -154,6 +173,7 @@ Based on our protobuf definitions, we have **33 unique services** across **9 pac
 ## Technical Implementation Patterns
 
 ### 1. Service Interface Pattern
+
 ```go
 type ServiceInterface interface {
     // Core business methods from protobuf
@@ -173,6 +193,7 @@ type ServiceImpl struct {
 ```
 
 ### 2. Dependency Injection
+
 ```go
 type ServiceDependencies struct {
     Database database.Interface
@@ -193,6 +214,7 @@ func NewService(deps ServiceDependencies) ServiceInterface {
 ```
 
 ### 3. Middleware Chain
+
 ```go
 type Middleware func(ctx context.Context, req interface{}, handler grpc.UnaryHandler) (interface{}, error)
 
@@ -207,6 +229,7 @@ var DefaultMiddleware = []Middleware{
 ```
 
 ### 4. Configuration Management
+
 ```go
 type ServiceConfig struct {
     Database   DatabaseConfig   `yaml:"database"`
@@ -218,6 +241,7 @@ type ServiceConfig struct {
 ```
 
 ### 5. Error Handling
+
 ```go
 type ServiceError struct {
     Code    codes.Code
@@ -241,6 +265,7 @@ func (e ServiceError) GRPCStatus() *status.Status {
 ## Implementation Guidelines
 
 ### Code Organization
+
 - **One service per package** in `services/` directory
 - **Interface-driven design** for testability and modularity
 - **Shared utilities** in `internal/` package
@@ -248,6 +273,7 @@ func (e ServiceError) GRPCStatus() *status.Status {
 - **Comprehensive testing** with unit, integration, and e2e tests
 
 ### Quality Standards
+
 - **100% test coverage** for all service implementations
 - **Comprehensive documentation** with godoc comments
 - **Benchmarking** for performance-critical paths
@@ -255,6 +281,7 @@ func (e ServiceError) GRPCStatus() *status.Status {
 - **API compatibility** with versioning strategy
 
 ### Deployment Patterns
+
 - **Docker containers** with multi-stage builds
 - **Kubernetes deployments** with health checks and resource limits
 - **Service mesh ready** (Istio/Linkerd compatible)
@@ -264,24 +291,28 @@ func (e ServiceError) GRPCStatus() *status.Status {
 ## Integration Points
 
 ### Database Integration
+
 - **Connection pooling** with configurable limits
 - **Migration management** with versioned schemas
 - **Transaction support** with rollback capabilities
 - **Multi-database support** (PostgreSQL, MySQL, SQLite)
 
 ### Caching Integration
+
 - **Distributed caching** with Redis/Memcached
 - **Cache invalidation** strategies
 - **Cache warming** for frequently accessed data
 - **Cache metrics** and monitoring
 
 ### Message Queue Integration
+
 - **Multiple backends** (Redis, RabbitMQ, Apache Kafka)
 - **Message serialization** with protobuf
 - **Dead letter queues** for error handling
 - **Message routing** and filtering
 
 ### Security Integration
+
 - **JWT token validation** with configurable keys
 - **RBAC implementation** with role-based access
 - **API rate limiting** per user/service
@@ -290,18 +321,21 @@ func (e ServiceError) GRPCStatus() *status.Status {
 ## Testing Strategy
 
 ### Unit Tests
+
 - **Mock all dependencies** for isolated testing
 - **Test all error paths** including edge cases
 - **Performance tests** for critical methods
 - **Coverage reports** with minimum 95% requirement
 
 ### Integration Tests
+
 - **Real database connections** with test databases
 - **Message queue integration** with test queues
 - **Cache integration** with test cache instances
 - **End-to-end service tests** with real dependencies
 
 ### Load Testing
+
 - **gRPC load testing** with ghz tool
 - **Concurrent user simulation** for realistic load
 - **Resource usage monitoring** during tests
@@ -310,6 +344,7 @@ func (e ServiceError) GRPCStatus() *status.Status {
 ## Deployment & Operations
 
 ### Container Strategy
+
 ```dockerfile
 FROM golang:1.24-alpine AS builder
 WORKDIR /app
@@ -323,6 +358,7 @@ CMD ["service"]
 ```
 
 ### Kubernetes Deployment
+
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -350,6 +386,7 @@ spec:
 ```
 
 ### Monitoring Integration
+
 - **Prometheus metrics** export on `/metrics` endpoint
 - **Structured logging** with JSON format
 - **Distributed tracing** with OpenTelemetry
@@ -358,18 +395,21 @@ spec:
 ## Success Metrics
 
 ### Development Metrics
+
 - **Implementation velocity**: All services implemented within 7 weeks
 - **Test coverage**: Minimum 95% code coverage across all services
 - **Documentation coverage**: 100% of public APIs documented
 - **Performance targets**: Sub-100ms p95 latency for all endpoints
 
 ### Operational Metrics
+
 - **Service reliability**: 99.9% uptime SLA
 - **Performance consistency**: p99 latency under 500ms
 - **Error rates**: Less than 0.1% error rate
 - **Resource efficiency**: Memory usage under 100MB per service
 
 ### Developer Experience Metrics
+
 - **Integration time**: New services can integrate within 1 day
 - **Debugging efficiency**: Issues can be diagnosed within 15 minutes
 - **Configuration simplicity**: Services start with minimal config
