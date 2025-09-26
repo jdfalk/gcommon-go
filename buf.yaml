@@ -1,8 +1,10 @@
 # file: buf.yaml
-# version: 2.0.0
+# version: 2.8.0
 # guid: buf-config-gcommon-go
 
-version: v1
+version: v2
+modules:
+  - path: proto
 lint:
   use:
     - DEFAULT
@@ -10,5 +12,5 @@ breaking:
   use:
     - FILE
 deps:
-  - buf.build/protocolbuffers/protobuf
-  - buf.build/grpc-ecosystem/grpc-gateway
+  - buf.build/googleapis/googleapis
+  - buf.build/bufbuild/protovalidate

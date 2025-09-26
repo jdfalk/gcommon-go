@@ -1,17 +1,15 @@
 # file: buf.gen.yaml
-# version: 2.0.0
+# version: 2.4.0
 # guid: buf-gen-config-gcommon-go
 
 version: v2
-clean: true
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/jdfalk/gcommon
 plugins:
   - remote: buf.build/protocolbuffers/go
-    out: .
-    opt:
-      - paths=source_relative
-      - module=github.com/jdfalk/gcommon
+    out: gen
   - remote: buf.build/grpc/go
-    out: .
-    opt:
-      - paths=source_relative
-      - module=github.com/jdfalk/gcommon
+    out: gen

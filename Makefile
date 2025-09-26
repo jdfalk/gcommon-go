@@ -21,7 +21,16 @@ generate: sync-protos ## Generate Go code from protocol buffers
 	buf generate
 
 sync-protos: ## Sync protocol buffer definitions from gcommon repo
-	./scripts/sync-protos.sh
+	@echo "Syncing proto files from gcommon repository..."
+	@if [ ! -d "proto" ]; then \
+		git clone --depth 1 --no-checkout https://github.com/jdfalk/gcommon.git proto-temp; \
+		cd proto-temp && git checkout main -- proto/; \
+		mv proto ../proto; \
+		cd .. && rm -rf proto-temp; \
+	else \
+		echo "Proto directory exists, updating..."; \
+		cd proto && git pull origin main || (cd .. && rm -rf proto && $(MAKE) sync-protos); \
+	fi
 
 build: generate ## Build the Go module
 	go build ./...
