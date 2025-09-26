@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -155,7 +155,7 @@ const file_database_v1_transaction_status_response_proto_rawDesc = "" +
 	"-database/v1/transaction_status_response.proto\x12\vdatabase.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"h\n" +
 	"\x19TransactionStatusResponse\x12\x1f\n" +
 	"\x06status\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06status\x12*\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_transaction_status_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_transaction_status_response_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -318,7 +318,7 @@ const file_organization_v1_database_isolation_proto_rawDesc = "" +
 	"\x06backup\x18\x05 \x01(\v2).organization.v1.OrganizationBackupConfigR\x06backup\x12-\n" +
 	"\x12allowed_operations\x18\x06 \x03(\tR\x11allowedOperations\x12'\n" +
 	"\x0fmax_connections\x18\a \x01(\x05R\x0emaxConnections\x122\n" +
-	"\x15query_timeout_seconds\x18\b \x01(\x05R\x13queryTimeoutSecondsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15query_timeout_seconds\x18\b \x01(\x05R\x13queryTimeoutSecondsB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_database_isolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_database_isolation_proto_goTypes = []any{

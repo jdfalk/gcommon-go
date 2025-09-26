@@ -210,7 +210,7 @@ const file_metrics_v1_tls_config_proto_rawDesc = "" +
 	"\tcert_file\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bcertFile\x12\"\n" +
 	"\bkey_file\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\akeyFile\x12 \n" +
 	"\aca_file\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06caFile\x12!\n" +
-	"\fverify_certs\x18\x04 \x01(\bR\vverifyCertsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fverify_certs\x18\x04 \x01(\bR\vverifyCertsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_tls_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_tls_config_proto_goTypes = []any{

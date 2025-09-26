@@ -7,7 +7,7 @@
 package database
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -187,7 +187,7 @@ const file_database_v1_transaction_options_proto_rawDesc = "" +
 	"\x12TransactionOptions\x12?\n" +
 	"\tisolation\x18\x01 \x01(\x0e2!.common.v1.DatabaseIsolationLevelR\tisolation\x127\n" +
 	"\atimeout\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\atimeout\x12\x1b\n" +
-	"\tread_only\x18\x03 \x01(\bR\breadOnlyB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tread_only\x18\x03 \x01(\bR\breadOnlyB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_transaction_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_transaction_options_proto_goTypes = []any{

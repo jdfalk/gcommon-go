@@ -428,7 +428,7 @@ const file_database_v1_cache_stats_proto_rawDesc = "" +
 	"\n" +
 	"last_reset\x18\n" +
 	" \x01(\v2\x1a.google.protobuf.TimestampR\tlastReset\x12.\n" +
-	"\x0euptime_seconds\x18\v \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ruptimeSecondsB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0euptime_seconds\x18\v \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ruptimeSecondsB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_cache_stats_proto_goTypes = []any{

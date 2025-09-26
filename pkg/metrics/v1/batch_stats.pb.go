@@ -297,7 +297,7 @@ const file_metrics_v1_batch_stats_proto_rawDesc = "" +
 	"\x13deduplication_count\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x12deduplicationCount\x122\n" +
 	"\x10parallel_workers\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fparallelWorkers\x125\n" +
 	"\x12storage_latency_ms\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10storageLatencyMs\x125\n" +
-	"\x12memory_usage_bytes\x18\a \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10memoryUsageBytesB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12memory_usage_bytes\x18\a \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10memoryUsageBytesB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_batch_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_batch_stats_proto_goTypes = []any{

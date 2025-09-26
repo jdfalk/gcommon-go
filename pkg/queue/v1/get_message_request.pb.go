@@ -273,7 +273,7 @@ const file_queue_v1_get_message_request_proto_rawDesc = "" +
 	"\x06offset\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06offset\x12)\n" +
 	"\x10include_metadata\x18\x05 \x01(\bR\x0fincludeMetadata\x12&\n" +
 	"\n" +
-	"timeout_ms\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_message_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_message_request_proto_goTypes = []any{

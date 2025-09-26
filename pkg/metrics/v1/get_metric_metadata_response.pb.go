@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -327,7 +327,7 @@ const file_metrics_v1_get_metric_metadata_response_proto_rawDesc = "" +
 	"totalCount\x12=\n" +
 	"\fgenerated_at\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAt\x12$\n" +
 	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x123\n" +
-	"\x11execution_time_ms\x18\t \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fexecutionTimeMsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11execution_time_ms\x18\t \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fexecutionTimeMsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_metric_metadata_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_metric_metadata_response_proto_goTypes = []any{

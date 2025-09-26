@@ -220,7 +220,7 @@ const file_web_v1_websocket_config_proto_rawDesc = "" +
 	"\x0fallowed_origins\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0eallowedOrigins\x12-\n" +
 	"\x12enable_compression\x18\x03 \x01(\bR\x11enableCompression\x121\n" +
 	"\x10read_buffer_size\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0ereadBufferSize\x123\n" +
-	"\x11write_buffer_size\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fwriteBufferSizeB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11write_buffer_size\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fwriteBufferSizeB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_websocket_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_websocket_config_proto_goTypes = []any{

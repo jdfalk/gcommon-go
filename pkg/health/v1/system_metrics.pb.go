@@ -520,7 +520,7 @@ const file_health_v1_system_metrics_proto_rawDesc = "" +
 	"\x0fload_average_5m\x18\v \x01(\x01R\rloadAverage5m\x12(\n" +
 	"\x10load_average_15m\x18\f \x01(\x01R\x0eloadAverage15m\x12#\n" +
 	"\rprocess_count\x18\r \x01(\x05R\fprocessCount\x12%\n" +
-	"\x0euptime_seconds\x18\x0e \x01(\x03R\ruptimeSecondsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0euptime_seconds\x18\x0e \x01(\x03R\ruptimeSecondsB.Z$github.com/jdfalk/gcommon/pkg/health\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_system_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_system_metrics_proto_goTypes = []any{

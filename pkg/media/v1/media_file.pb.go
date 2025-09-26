@@ -8,7 +8,7 @@ package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -417,7 +417,7 @@ const file_media_v1_media_file_proto_rawDesc = "" +
 	"\x0fsubtitle_tracks\x18\t \x03(\v2\x17.media.v1.SubtitleTrackR\x0esubtitleTracks\x127\n" +
 	"\faudio_tracks\x18\n" +
 	" \x03(\v2\x14.media.v1.AudioTrackR\vaudioTracks\x120\n" +
-	"\aquality\x18\v \x01(\v2\x16.media.v1.MediaQualityR\aqualityB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aquality\x18\v \x01(\v2\x16.media.v1.MediaQualityR\aqualityB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_media_file_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_media_file_proto_goTypes = []any{

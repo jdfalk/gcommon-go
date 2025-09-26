@@ -107,7 +107,7 @@ const file_common_v1_media_type_proto_rawDesc = "" +
 	"\x12MEDIA_TYPE_LECTURE\x10\b\x12\x18\n" +
 	"\x14MEDIA_TYPE_INTERVIEW\x10\t\x12\x19\n" +
 	"\x15MEDIA_TYPE_RADIO_SHOW\x10\n" +
-	"B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_media_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_media_type_proto_goTypes = []any{

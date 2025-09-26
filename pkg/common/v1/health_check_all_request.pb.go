@@ -154,7 +154,7 @@ const file_common_v1_health_check_all_request_proto_rawDesc = "" +
 	"\x15HealthCheckAllRequest\x124\n" +
 	"\x05types\x18\x01 \x03(\x0e2\x14.common.v1.CheckTypeB\b\xbaH\x05\x92\x01\x02\b\x01R\x05types\x12'\n" +
 	"\x0finclude_details\x18\x02 \x01(\bR\x0eincludeDetails\x120\n" +
-	"\x0ftimeout_seconds\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0etimeoutSecondsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ftimeout_seconds\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0etimeoutSecondsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_health_check_all_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_health_check_all_request_proto_goTypes = []any{

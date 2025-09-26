@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -141,7 +141,7 @@ const file_metrics_v1_secondary_sort_field_proto_rawDesc = "" +
 	"metrics.v1\x1a\x1ecommon/v1/sort_direction.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"k\n" +
 	"\x12SecondarySortField\x12\x1d\n" +
 	"\x05field\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05field\x126\n" +
-	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_secondary_sort_field_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_secondary_sort_field_proto_goTypes = []any{

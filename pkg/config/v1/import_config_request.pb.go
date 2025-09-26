@@ -8,7 +8,7 @@ package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -205,7 +205,7 @@ const file_config_v1_import_config_request_proto_rawDesc = "" +
 	"\tnamespace\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12\x18\n" +
 	"\acontent\x18\x02 \x01(\fR\acontent\x12\x1f\n" +
 	"\x06format\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06format\x126\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_import_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_import_config_request_proto_goTypes = []any{

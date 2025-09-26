@@ -409,7 +409,7 @@ const file_common_v1_terminate_session_response_proto_rawDesc = "" +
 	"\x12forced_termination\x18\b \x01(\bR\x11forcedTermination\x126\n" +
 	"\x17remaining_session_count\x18\t \x01(\x05R\x15remainingSessionCount\x12\x18\n" +
 	"\amessage\x18\n" +
-	" \x01(\tR\amessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\tR\amessageB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_terminate_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_terminate_session_response_proto_goTypes = []any{

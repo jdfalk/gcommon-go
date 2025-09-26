@@ -29,7 +29,7 @@ const file_web_v1_web_service_proto_rawDesc = "" +
 	"\n" +
 	"WebService\x12L\n" +
 	"\rHandleRequest\x12\x1c.web.v1.HandleRequestRequest\x1a\x1d.web.v1.HandleRequestResponse\x12L\n" +
-	"\vHealthCheck\x12\x1d.web.v1.WebHealthCheckRequest\x1a\x1e.web.v1.WebHealthCheckResponseB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vHealthCheck\x12\x1d.web.v1.WebHealthCheckRequest\x1a\x1e.web.v1.WebHealthCheckResponseB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_web_service_proto_goTypes = []any{
 	(*HandleRequestRequest)(nil),   // 0: web.v1.HandleRequestRequest

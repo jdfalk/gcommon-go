@@ -105,7 +105,7 @@ const file_common_v1_value_type_proto_rawDesc = "" +
 	"\x0fVALUE_TYPE_BOOL\x10\x04\x12\x14\n" +
 	"\x10VALUE_TYPE_BYTES\x10\x05\x12\x13\n" +
 	"\x0fVALUE_TYPE_JSON\x10\x06\x12\x13\n" +
-	"\x0fVALUE_TYPE_YAML\x10\aB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fVALUE_TYPE_YAML\x10\aB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_value_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_value_type_proto_goTypes = []any{

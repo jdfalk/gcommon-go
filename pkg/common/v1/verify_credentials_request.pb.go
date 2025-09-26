@@ -237,7 +237,7 @@ const file_common_v1_verify_credentials_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12<\n" +
 	"\bpassword\x18\x02 \x01(\v2\x1e.common.v1.PasswordCredentialsH\x00R\bpassword\x127\n" +
 	"\aapi_key\x18\x03 \x01(\v2\x1c.common.v1.APIKeyCredentialsH\x00R\x06apiKeyB\r\n" +
-	"\vcredentialsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vcredentialsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_verify_credentials_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_verify_credentials_request_proto_goTypes = []any{

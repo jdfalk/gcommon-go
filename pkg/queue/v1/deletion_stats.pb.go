@@ -232,7 +232,7 @@ const file_queue_v1_deletion_stats_proto_rawDesc = "" +
 	"\x12data_deleted_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10dataDeletedBytes\x12<\n" +
 	"\x15subscriptions_deleted\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x14subscriptionsDeleted\x126\n" +
 	"\x12partitions_deleted\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11partitionsDeleted\x129\n" +
-	"\x14deletion_duration_ms\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x12deletionDurationMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14deletion_duration_ms\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x12deletionDurationMsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_deletion_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_deletion_stats_proto_goTypes = []any{

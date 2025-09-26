@@ -339,7 +339,7 @@ const file_common_v1_api_key_proto_rawDesc = "" +
 	"created_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAt\x12=\n" +
 	"\n" +
 	"expires_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\texpiresAt\x12\x16\n" +
-	"\x06active\x18\a \x01(\bR\x06activeB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06active\x18\a \x01(\bR\x06activeB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_api_key_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_api_key_proto_goTypes = []any{

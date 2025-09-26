@@ -202,7 +202,7 @@ const file_web_v1_performance_stats_proto_rawDesc = "" +
 	"\x12average_latency_ms\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x10averageLatencyMs\x126\n" +
 	"\x12active_connections\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11activeConnections\x12-\n" +
 	"\n" +
-	"error_rate\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\terrorRateB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"error_rate\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\terrorRateB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_performance_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_performance_stats_proto_goTypes = []any{

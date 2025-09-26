@@ -253,7 +253,7 @@ const file_common_v1_mfa_config_proto_rawDesc = "" +
 	"totpDigits\x12\x1f\n" +
 	"\vsms_enabled\x18\x05 \x01(\bR\n" +
 	"smsEnabled\x12#\n" +
-	"\remail_enabled\x18\x06 \x01(\bR\femailEnabledB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\remail_enabled\x18\x06 \x01(\bR\femailEnabledB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_mfa_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_mfa_config_proto_goTypes = []any{

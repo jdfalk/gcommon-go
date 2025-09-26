@@ -335,7 +335,7 @@ const file_common_v1_update_user_response_proto_rawDesc = "" +
 	"updated_at\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x129\n" +
 	"\n" +
 	"expires_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAt\x12%\n" +
-	"\x0eupdated_fields\x18\t \x03(\tR\rupdatedFieldsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eupdated_fields\x18\t \x03(\tR\rupdatedFieldsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_update_user_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_update_user_response_proto_goTypes = []any{

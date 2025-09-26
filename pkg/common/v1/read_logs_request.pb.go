@@ -241,7 +241,7 @@ const file_common_v1_read_logs_request_proto_rawDesc = "" +
 	"\n" +
 	"start_time\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tstartTime\x12\"\n" +
 	"\bend_time\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\aendTime\x12\x1d\n" +
-	"\x05limit\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05limit\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_read_logs_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_read_logs_request_proto_goTypes = []any{

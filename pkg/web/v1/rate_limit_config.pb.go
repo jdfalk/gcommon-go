@@ -8,7 +8,7 @@ package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -256,7 +256,7 @@ const file_web_v1_rate_limit_config_proto_rawDesc = "" +
 	"burst_size\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tburstSize\x128\n" +
 	"\bstrategy\x18\x04 \x01(\x0e2\x1c.common.v1.RateLimitStrategyR\bstrategy\x12,\n" +
 	"\rkey_extractor\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fkeyExtractor\x121\n" +
-	"\x0fskip_conditions\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0eskipConditionsB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fskip_conditions\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0eskipConditionsB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_rate_limit_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_rate_limit_config_proto_goTypes = []any{

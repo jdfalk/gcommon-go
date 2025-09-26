@@ -82,7 +82,7 @@ const file_common_v1_permission_level_proto_rawDesc = "" +
 	"\x17PERMISSION_LEVEL_SYSTEM\x10\x01\x12!\n" +
 	"\x1dPERMISSION_LEVEL_ORGANIZATION\x10\x02\x12\x1c\n" +
 	"\x18PERMISSION_LEVEL_PROJECT\x10\x03\x12\x1d\n" +
-	"\x19PERMISSION_LEVEL_RESOURCE\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x19PERMISSION_LEVEL_RESOURCE\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_permission_level_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_permission_level_proto_goTypes = []any{

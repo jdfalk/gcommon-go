@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -334,7 +334,7 @@ const file_metrics_v1_metrics_summary_proto_rawDesc = "" +
 	"\vtop_metrics\x18\a \x01(\v2\x16.metrics.v1.TopMetricsR\n" +
 	"topMetrics\x12=\n" +
 	"\tretention\x18\b \x01(\v2\x1f.common.v1.MetricsRetentionInfoR\tretention\x12=\n" +
-	"\rexport_status\x18\t \x01(\v2\x18.metrics.v1.ExportStatusR\fexportStatusB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rexport_status\x18\t \x01(\v2\x18.metrics.v1.ExportStatusR\fexportStatusB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_summary_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metrics_summary_proto_goTypes = []any{

@@ -175,7 +175,7 @@ const file_common_v1_send_notification_response_proto_rawDesc = "" +
 	"\x18SendNotificationResponse\x120\n" +
 	"\x0fnotification_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0enotificationId\x12\x1a\n" +
 	"\baccepted\x18\x02 \x01(\bR\baccepted\x121\n" +
-	"\x06status\x18\x03 \x01(\x0e2\x19.common.v1.DeliveryStatusR\x06statusB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06status\x18\x03 \x01(\x0e2\x19.common.v1.DeliveryStatusR\x06statusB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_send_notification_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_send_notification_response_proto_goTypes = []any{

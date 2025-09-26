@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -188,7 +188,7 @@ const file_queue_v1_cluster_health_proto_rawDesc = "" +
 	"\rhealthy_nodes\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fhealthyNodes\x12(\n" +
 	"\vtotal_nodes\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\n" +
 	"totalNodes\x12 \n" +
-	"\x06issues\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x06issuesB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06issues\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x06issuesB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_cluster_health_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_cluster_health_proto_goTypes = []any{

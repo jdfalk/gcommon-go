@@ -89,7 +89,7 @@ const file_common_v1_database_isolation_level_proto_rawDesc = "" +
 	")DATABASE_ISOLATION_LEVEL_READ_UNCOMMITTED\x10\x01\x12+\n" +
 	"'DATABASE_ISOLATION_LEVEL_READ_COMMITTED\x10\x02\x12,\n" +
 	"(DATABASE_ISOLATION_LEVEL_REPEATABLE_READ\x10\x03\x12)\n" +
-	"%DATABASE_ISOLATION_LEVEL_SERIALIZABLE\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"%DATABASE_ISOLATION_LEVEL_SERIALIZABLE\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_database_isolation_level_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_database_isolation_level_proto_goTypes = []any{

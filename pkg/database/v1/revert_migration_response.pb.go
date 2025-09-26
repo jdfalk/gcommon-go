@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -188,7 +188,7 @@ const file_database_v1_revert_migration_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12(\n" +
 	"\vreverted_to\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"revertedTo\x12*\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_revert_migration_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_revert_migration_response_proto_goTypes = []any{

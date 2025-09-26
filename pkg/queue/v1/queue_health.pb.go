@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -220,7 +220,7 @@ const file_queue_v1_queue_health_proto_rawDesc = "" +
 	"\fhealth_score\x18\x03 \x01(\x05R\vhealthScore\x12\x16\n" +
 	"\x06issues\x18\x04 \x03(\tR\x06issues\x129\n" +
 	"\n" +
-	"last_check\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"last_check\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_queue_health_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_queue_health_proto_goTypes = []any{

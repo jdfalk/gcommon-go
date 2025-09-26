@@ -209,7 +209,7 @@ const file_queue_v1_schema_config_proto_rawDesc = "" +
 	"definition\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"definition\x12\x1b\n" +
 	"\x04type\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04type\x12\x1a\n" +
-	"\bvalidate\x18\x04 \x01(\bR\bvalidateB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bvalidate\x18\x04 \x01(\bR\bvalidateB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_schema_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_schema_config_proto_goTypes = []any{

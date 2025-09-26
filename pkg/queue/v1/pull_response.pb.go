@@ -7,7 +7,7 @@
 package queue
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -124,7 +124,7 @@ const file_queue_v1_pull_response_proto_rawDesc = "" +
 	"\x1cqueue/v1/pull_response.proto\x12\bqueue.v1\x1a!common/v1/response_metadata.proto\x1a\x1fqueue/v1/received_message.proto\x1a!google/protobuf/go_features.proto\"|\n" +
 	"\fPullResponse\x123\n" +
 	"\amessage\x18\x01 \x01(\v2\x19.queue.v1.ReceivedMessageR\amessage\x127\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_pull_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_pull_response_proto_goTypes = []any{

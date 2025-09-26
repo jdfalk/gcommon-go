@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -892,7 +892,7 @@ const file_organization_v1_team_proto_rawDesc = "" +
 	"objectives\x18\x17 \x03(\tR\n" +
 	"objectives\x12\x12\n" +
 	"\x04kpis\x18\x18 \x03(\tR\x04kpis\x12)\n" +
-	"\x10cross_functional\x18\x19 \x01(\bR\x0fcrossFunctionalB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10cross_functional\x18\x19 \x01(\bR\x0fcrossFunctionalB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_team_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_team_proto_goTypes = []any{

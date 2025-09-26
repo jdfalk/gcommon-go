@@ -7,7 +7,7 @@
 package metrics
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -190,7 +190,7 @@ const file_metrics_v1_stop_scraping_response_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05error\x12'\n" +
 	"\x03job\x18\x03 \x01(\v2\x15.metrics.v1.ScrapeJobR\x03job\x129\n" +
 	"\n" +
-	"stopped_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tstoppedAtB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"stopped_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tstoppedAtB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stop_scraping_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stop_scraping_response_proto_goTypes = []any{

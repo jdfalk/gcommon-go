@@ -195,7 +195,7 @@ const file_media_v1_chapter_detection_options_proto_rawDesc = "" +
 	"\x14silence_threshold_db\x18\x01 \x01(\x01R\x12silenceThresholdDb\x12;\n" +
 	"\x1amin_chapter_length_seconds\x18\x02 \x01(\x01R\x17minChapterLengthSeconds\x12!\n" +
 	"\fuse_metadata\x18\x03 \x01(\bR\vuseMetadata\x12(\n" +
-	"\x10use_ai_detection\x18\x04 \x01(\bR\x0euseAiDetectionB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10use_ai_detection\x18\x04 \x01(\bR\x0euseAiDetectionB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_chapter_detection_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_chapter_detection_options_proto_goTypes = []any{

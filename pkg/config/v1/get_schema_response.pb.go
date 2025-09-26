@@ -7,7 +7,7 @@
 package config
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -126,7 +126,7 @@ const file_config_v1_get_schema_response_proto_rawDesc = "" +
 	"#config/v1/get_schema_response.proto\x12\tconfig.v1\x1a\x15common/v1/error.proto\x1a\x1dconfig/v1/config_schema.proto\x1a!google/protobuf/go_features.proto\"l\n" +
 	"\x11GetSchemaResponse\x12/\n" +
 	"\x06schema\x18\x01 \x01(\v2\x17.config.v1.ConfigSchemaR\x06schema\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_schema_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_schema_response_proto_goTypes = []any{

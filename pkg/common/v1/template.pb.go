@@ -270,7 +270,7 @@ const file_common_v1_template_proto_rawDesc = "" +
 	"\n" +
 	"created_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAt\x12=\n" +
 	"\n" +
-	"updated_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\tupdatedAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"updated_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\tupdatedAtB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_template_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_template_proto_goTypes = []any{

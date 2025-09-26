@@ -100,7 +100,7 @@ const file_common_v1_list_notifications_request_proto_rawDesc = "" +
 	"\x18ListNotificationsRequest\x125\n" +
 	"\n" +
 	"pagination\x18\x01 \x01(\v2\x15.common.v1.PaginationR\n" +
-	"paginationB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"paginationB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_list_notifications_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_list_notifications_request_proto_goTypes = []any{

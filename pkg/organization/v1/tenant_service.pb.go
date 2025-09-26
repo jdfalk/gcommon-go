@@ -35,7 +35,7 @@ const file_organization_v1_tenant_service_proto_rawDesc = "" +
 	"\x18ConfigureTenantIsolation\x120.organization.v1.ConfigureTenantIsolationRequest\x1a1.organization.v1.ConfigureTenantIsolationResponse\x12m\n" +
 	"\x12GetTenantIsolation\x12*.organization.v1.GetTenantIsolationRequest\x1a+.organization.v1.GetTenantIsolationResponse\x12j\n" +
 	"\x11UpdateTenantQuota\x12).organization.v1.UpdateTenantQuotaRequest\x1a*.organization.v1.UpdateTenantQuotaResponse\x12a\n" +
-	"\x0eGetTenantUsage\x12&.organization.v1.GetTenantUsageRequest\x1a'.organization.v1.GetTenantUsageResponseB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eGetTenantUsage\x12&.organization.v1.GetTenantUsageRequest\x1a'.organization.v1.GetTenantUsageResponseB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_tenant_service_proto_goTypes = []any{
 	(*CreateTenantRequest)(nil),              // 0: organization.v1.CreateTenantRequest

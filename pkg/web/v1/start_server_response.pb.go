@@ -8,7 +8,7 @@ package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -202,7 +202,7 @@ const file_web_v1_start_server_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12/\n" +
 	"\x06status\x18\x02 \x01(\x0e2\x17.common.v1.ServerStatusR\x06status\x12.\n" +
 	"\x0elisten_address\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rlistenAddress\x12&\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_start_server_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_start_server_response_proto_goTypes = []any{

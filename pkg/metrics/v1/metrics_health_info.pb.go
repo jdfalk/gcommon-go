@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -165,7 +165,7 @@ const file_metrics_v1_metrics_health_info_proto_rawDesc = "" +
 	"\rhealth_checks\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\fhealthChecks\x12$\n" +
 	"\bwarnings\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x129\n" +
 	"\n" +
-	"last_check\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"last_check\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_health_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metrics_health_info_proto_goTypes = []any{

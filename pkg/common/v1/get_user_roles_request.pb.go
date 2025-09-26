@@ -138,7 +138,7 @@ const file_common_v1_get_user_roles_request_proto_rawDesc = "" +
 	"&common/v1/get_user_roles_request.proto\x12\tcommon.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\xbf\x01\n" +
 	"\x13GetUserRolesRequest\x12p\n" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x126\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_user_roles_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_user_roles_request_proto_goTypes = []any{

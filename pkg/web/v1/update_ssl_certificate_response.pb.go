@@ -7,7 +7,7 @@
 package web
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -197,7 +197,7 @@ const file_web_v1_update_ssl_certificate_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12E\n" +
 	"\x10request_metadata\x18\v \x01(\v2\x1a.common.v1.RequestMetadataR\x0frequestMetadata\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12N\n" +
-	"\x15response_generated_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_update_ssl_certificate_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_update_ssl_certificate_response_proto_goTypes = []any{

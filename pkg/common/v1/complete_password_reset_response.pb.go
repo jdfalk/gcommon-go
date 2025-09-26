@@ -369,7 +369,7 @@ const file_common_v1_complete_password_reset_response_proto_rawDesc = "" +
 	"\x0etokens_revoked\x18\x06 \x01(\bR\rtokensRevoked\x12.\n" +
 	"\x13revoked_token_count\x18\a \x01(\x05R\x11revokedTokenCount\x12H\n" +
 	" requires_additional_verification\x18\b \x01(\bR\x1erequiresAdditionalVerification\x12\x18\n" +
-	"\amessage\x18\t \x01(\tR\amessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\t \x01(\tR\amessageB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_complete_password_reset_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_complete_password_reset_response_proto_goTypes = []any{

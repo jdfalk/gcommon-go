@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -273,7 +273,7 @@ const file_metrics_v1_metric_aggregation_proto_rawDesc = "" +
 	"\x0fcustom_function\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0ecustomFunction\x12#\n" +
 	"\rinclude_nulls\x18\x06 \x01(\bR\fincludeNulls\x12(\n" +
 	"\vmin_samples\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\n" +
-	"minSamplesB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"minSamplesB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_aggregation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_aggregation_proto_goTypes = []any{

@@ -31,7 +31,7 @@ const file_media_v1_subtitle_service_proto_rawDesc = "" +
 	"\rSyncSubtitles\x12\x1e.media.v1.SyncSubtitlesRequest\x1a\x1f.media.v1.SyncSubtitlesResponse\x12e\n" +
 	"\x14AdjustSubtitleTiming\x12%.media.v1.AdjustSubtitleTimingRequest\x1a&.media.v1.AdjustSubtitleTimingResponse\x12h\n" +
 	"\x15ConvertSubtitleFormat\x12&.media.v1.ConvertSubtitleFormatRequest\x1a'.media.v1.ConvertSubtitleFormatResponse\x12\\\n" +
-	"\x11ValidateSubtitles\x12\".media.v1.ValidateSubtitlesRequest\x1a#.media.v1.ValidateSubtitlesResponseB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11ValidateSubtitles\x12\".media.v1.ValidateSubtitlesRequest\x1a#.media.v1.ValidateSubtitlesResponseB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_subtitle_service_proto_goTypes = []any{
 	(*MergeSubtitlesRequest)(nil),         // 0: media.v1.MergeSubtitlesRequest

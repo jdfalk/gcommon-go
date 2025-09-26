@@ -205,7 +205,7 @@ const file_organization_v1_domain_config_proto_rawDesc = "" +
 	"domainName\x12'\n" +
 	"\x0fssl_certificate\x18\x02 \x01(\tR\x0esslCertificate\x12,\n" +
 	"\x03dns\x18\x03 \x01(\v2\x1a.organization.v1.DNSConfigR\x03dns\x12+\n" +
-	"\x11validation_status\x18\x04 \x01(\tR\x10validationStatusB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11validation_status\x18\x04 \x01(\tR\x10validationStatusB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_domain_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_domain_config_proto_goTypes = []any{

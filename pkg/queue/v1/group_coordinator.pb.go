@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -241,7 +241,7 @@ const file_queue_v1_group_coordinator_proto_rawDesc = "" +
 	"\x04host\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04host\x12\x1f\n" +
 	"\x04port\x18\x03 \x01(\x05B\v\xbaH\b\x1a\x06\x18\xff\xff\x03(\x01R\x04port\x121\n" +
 	"\x05state\x18\x04 \x01(\x0e2\x1b.common.v1.CoordinatorStateR\x05state\x12\x1d\n" +
-	"\x05epoch\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x05epochB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05epoch\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x05epochB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_group_coordinator_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_group_coordinator_proto_goTypes = []any{

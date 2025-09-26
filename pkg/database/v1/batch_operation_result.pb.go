@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -220,7 +220,7 @@ const file_database_v1_batch_operation_result_proto_rawDesc = "" +
 	"\raffected_rows\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\faffectedRows\x12G\n" +
 	"\x0egenerated_keys\x18\x03 \x03(\v2\x14.google.protobuf.AnyB\n" +
 	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\rgeneratedKeys\x12*\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_batch_operation_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_batch_operation_result_proto_goTypes = []any{

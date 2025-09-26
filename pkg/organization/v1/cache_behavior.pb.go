@@ -215,7 +215,7 @@ const file_organization_v1_cache_behavior_proto_rawDesc = "" +
 	"ttlSeconds\x12\x1a\n" +
 	"\bcompress\x18\x03 \x01(\bR\bcompress\x121\n" +
 	"\x0fallowed_methods\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0eallowedMethods\x12<\n" +
-	"\tcache_key\x18\x05 \x01(\v2\x1f.organization.v1.CacheKeyPolicyR\bcacheKeyB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tcache_key\x18\x05 \x01(\v2\x1f.organization.v1.CacheKeyPolicyR\bcacheKeyB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_cache_behavior_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_cache_behavior_proto_goTypes = []any{

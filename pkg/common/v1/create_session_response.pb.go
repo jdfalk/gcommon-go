@@ -325,7 +325,7 @@ const file_common_v1_create_session_response_proto_rawDesc = "" +
 	"\x12refresh_expires_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\x10refreshExpiresAt\x12p\n" +
 	"\auser_id\x18\a \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12\x14\n" +
 	"\x05roles\x18\b \x03(\tR\x05roles\x12 \n" +
-	"\vpermissions\x18\t \x03(\tR\vpermissionsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vpermissions\x18\t \x03(\tR\vpermissionsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_create_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_create_session_response_proto_goTypes = []any{

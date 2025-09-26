@@ -163,7 +163,7 @@ const file_database_v1_get_namespace_stats_response_proto_rawDesc = "" +
 	"\x19GetNamespaceStatsResponse\x12*\n" +
 	"\fnamespace_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vnamespaceId\x121\n" +
 	"\x05stats\x18\x02 \x01(\v2\x1b.database.v1.NamespaceStatsR\x05stats\x12=\n" +
-	"\fcollected_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\vcollectedAtB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fcollected_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\vcollectedAtB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_namespace_stats_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_namespace_stats_response_proto_goTypes = []any{

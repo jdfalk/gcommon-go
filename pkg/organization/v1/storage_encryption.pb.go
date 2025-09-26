@@ -208,7 +208,7 @@ const file_organization_v1_storage_encryption_proto_rawDesc = "" +
 	"\vserver_side\x18\x03 \x01(\bR\n" +
 	"serverSide\x12\x1f\n" +
 	"\vclient_side\x18\x04 \x01(\bR\n" +
-	"clientSideB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"clientSideB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_storage_encryption_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_storage_encryption_proto_goTypes = []any{

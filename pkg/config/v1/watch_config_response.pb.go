@@ -7,7 +7,7 @@
 package config
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -191,7 +191,7 @@ const file_config_v1_watch_config_response_proto_rawDesc = "" +
 	"changeType\x12,\n" +
 	"\x05entry\x18\x02 \x01(\v2\x16.config.v1.ConfigEntryR\x05entry\x12=\n" +
 	"\x0eprevious_entry\x18\x03 \x01(\v2\x16.config.v1.ConfigEntryR\rpreviousEntry\x128\n" +
-	"\ttimestamp\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\ttimestamp\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_watch_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_watch_config_response_proto_goTypes = []any{

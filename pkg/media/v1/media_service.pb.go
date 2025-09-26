@@ -33,7 +33,7 @@ const file_media_v1_media_service_proto_rawDesc = "" +
 	"\x0fUpdateMediaFile\x12 .media.v1.UpdateMediaFileRequest\x1a!.media.v1.UpdateMediaFileResponse\x12V\n" +
 	"\x0fDeleteMediaFile\x12 .media.v1.DeleteMediaFileRequest\x1a!.media.v1.DeleteMediaFileResponse\x12S\n" +
 	"\x0eListMediaFiles\x12\x1f.media.v1.ListMediaFilesRequest\x1a .media.v1.ListMediaFilesResponse\x12J\n" +
-	"\vSearchMedia\x12\x1c.media.v1.SearchMediaRequest\x1a\x1d.media.v1.SearchMediaResponseB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vSearchMedia\x12\x1c.media.v1.SearchMediaRequest\x1a\x1d.media.v1.SearchMediaResponseB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_media_service_proto_goTypes = []any{
 	(*UploadMediaRequest)(nil),      // 0: media.v1.UploadMediaRequest

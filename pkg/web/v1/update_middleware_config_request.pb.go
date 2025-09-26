@@ -7,7 +7,7 @@
 package web
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -124,7 +124,7 @@ const file_web_v1_update_middleware_config_request_proto_rawDesc = "" +
 	"-web/v1/update_middleware_config_request.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a\x1eweb/v1/middleware_config.proto\x1a!google/protobuf/go_features.proto\"\x89\x01\n" +
 	"\x1dUpdateMiddlewareConfigRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x120\n" +
-	"\x06config\x18\x02 \x01(\v2\x18.web.v1.MiddlewareConfigR\x06configB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06config\x18\x02 \x01(\v2\x18.web.v1.MiddlewareConfigR\x06configB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_update_middleware_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_update_middleware_config_request_proto_goTypes = []any{

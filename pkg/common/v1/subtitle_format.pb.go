@@ -94,7 +94,7 @@ const file_common_v1_subtitle_format_proto_rawDesc = "" +
 	"\x13SUBTITLE_FORMAT_SSA\x10\x04\x12\x18\n" +
 	"\x14SUBTITLE_FORMAT_TTML\x10\x05\x12\x17\n" +
 	"\x13SUBTITLE_FORMAT_SCC\x10\x06\x12\x17\n" +
-	"\x13SUBTITLE_FORMAT_SBV\x10\aB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13SUBTITLE_FORMAT_SBV\x10\aB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_subtitle_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_subtitle_format_proto_goTypes = []any{

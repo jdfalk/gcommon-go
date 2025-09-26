@@ -390,7 +390,7 @@ const file_organization_v1_security_settings_proto_rawDesc = "" +
 	"\x12api_access_enabled\x18\t \x01(\bR\x10apiAccessEnabled\x12R\n" +
 	"\x0eapi_rate_limit\x18\n" +
 	" \x01(\v2,.organization.v1.OrganizationRateLimitConfigR\fapiRateLimit\x12@\n" +
-	"\x18audit_log_retention_days\x18\v \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x15auditLogRetentionDaysB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x18audit_log_retention_days\x18\v \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x15auditLogRetentionDaysB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_security_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_security_settings_proto_goTypes = []any{

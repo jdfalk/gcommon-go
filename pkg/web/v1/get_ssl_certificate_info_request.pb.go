@@ -7,7 +7,7 @@
 package web
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -133,7 +133,7 @@ const file_web_v1_get_ssl_certificate_info_request_proto_rawDesc = "" +
 	"-web/v1/get_ssl_certificate_info_request.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xa4\x01\n" +
 	"\x1cGetSSLCertificateInfoRequest\x12E\n" +
 	"\x10request_metadata\x18\v \x01(\v2\x1a.common.v1.RequestMetadataR\x0frequestMetadata\x12=\n" +
-	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_get_ssl_certificate_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_get_ssl_certificate_info_request_proto_goTypes = []any{

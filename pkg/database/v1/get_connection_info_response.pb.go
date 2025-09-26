@@ -162,7 +162,7 @@ const file_database_v1_get_connection_info_response_proto_rawDesc = "" +
 	".database/v1/get_connection_info_response.proto\x12\vdatabase.v1\x1a&database/v1/connection_pool_info.proto\x1a\x1fdatabase/v1/database_info.proto\x1a!google/protobuf/go_features.proto\"\xa1\x01\n" +
 	"\x19GetConnectionInfoResponse\x12@\n" +
 	"\tpool_info\x18\x01 \x01(\v2\x1f.database.v1.ConnectionPoolInfoB\x02(\x01R\bpoolInfo\x12B\n" +
-	"\rdatabase_info\x18\x02 \x01(\v2\x19.database.v1.DatabaseInfoB\x02(\x01R\fdatabaseInfoB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rdatabase_info\x18\x02 \x01(\v2\x19.database.v1.DatabaseInfoB\x02(\x01R\fdatabaseInfoB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_connection_info_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_connection_info_response_proto_goTypes = []any{

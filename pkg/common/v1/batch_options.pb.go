@@ -200,7 +200,7 @@ const file_common_v1_batch_options_proto_rawDesc = "" +
 	"\fmax_parallel\x18\x01 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxParallel\x12\x1b\n" +
 	"\tfail_fast\x18\x02 \x01(\bR\bfailFast\x123\n" +
 	"\atimeout\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x12%\n" +
-	"\x0ereturn_partial\x18\x04 \x01(\bR\rreturnPartialB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ereturn_partial\x18\x04 \x01(\bR\rreturnPartialB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_batch_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_batch_options_proto_goTypes = []any{

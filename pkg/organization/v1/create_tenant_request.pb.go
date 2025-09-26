@@ -7,7 +7,7 @@
 package organization
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -158,7 +158,7 @@ const file_organization_v1_create_tenant_request_proto_rawDesc = "" +
 	"\x13CreateTenantRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12/\n" +
 	"\x06tenant\x18\x02 \x01(\v2\x17.organization.v1.TenantR\x06tenant\x12#\n" +
-	"\rvalidate_only\x18\x03 \x01(\bR\fvalidateOnlyB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rvalidate_only\x18\x03 \x01(\bR\fvalidateOnlyB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_create_tenant_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_create_tenant_request_proto_goTypes = []any{

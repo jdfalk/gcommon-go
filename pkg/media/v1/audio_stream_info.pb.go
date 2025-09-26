@@ -299,7 +299,7 @@ const file_media_v1_audio_stream_info_proto_rawDesc = "" +
 	"\bchannels\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bchannels\x12!\n" +
 	"\abitrate\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\abitrate\x12#\n" +
 	"\blanguage\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\blanguage\x12\x1d\n" +
-	"\x05title\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05titleB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05title\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05titleB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_audio_stream_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_audio_stream_info_proto_goTypes = []any{

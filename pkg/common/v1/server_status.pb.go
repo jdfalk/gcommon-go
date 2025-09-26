@@ -90,7 +90,7 @@ const file_common_v1_server_status_proto_rawDesc = "" +
 	"\x15SERVER_STATUS_RUNNING\x10\x03\x12\x1a\n" +
 	"\x16SERVER_STATUS_STOPPING\x10\x04\x12\x19\n" +
 	"\x15SERVER_STATUS_STOPPED\x10\x05\x12\x17\n" +
-	"\x13SERVER_STATUS_ERROR\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13SERVER_STATUS_ERROR\x10\x06B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_server_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_server_status_proto_goTypes = []any{

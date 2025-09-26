@@ -225,7 +225,7 @@ const file_database_v1_list_namespaces_response_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12+\n" +
 	"\vtotal_pages\x18\x05 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\n" +
-	"totalPagesB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"totalPagesB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_list_namespaces_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_list_namespaces_response_proto_goTypes = []any{

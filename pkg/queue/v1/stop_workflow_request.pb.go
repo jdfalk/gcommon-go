@@ -144,7 +144,7 @@ const file_queue_v1_stop_workflow_request_proto_rawDesc = "" +
 	"$queue/v1/stop_workflow_request.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"b\n" +
 	"\x13StopWorkflowRequest\x12*\n" +
 	"\fexecution_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vexecutionId\x12\x1f\n" +
-	"\x06reason\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06reason\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_stop_workflow_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_stop_workflow_request_proto_goTypes = []any{

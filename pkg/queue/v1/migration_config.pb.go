@@ -337,7 +337,7 @@ const file_queue_v1_migration_config_proto_rawDesc = "" +
 	"\x10verify_integrity\x18\x06 \x01(\bR\x0fverifyIntegrity\x12\x1f\n" +
 	"\vkeep_source\x18\a \x01(\bR\n" +
 	"keepSource\x120\n" +
-	"\x0fmax_concurrency\x18\b \x01(\rB\a\xbaH\x04*\x02(\x00R\x0emaxConcurrencyB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmax_concurrency\x18\b \x01(\rB\a\xbaH\x04*\x02(\x00R\x0emaxConcurrencyB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_migration_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_migration_config_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -246,7 +246,7 @@ const file_queue_v1_nack_error_proto_rawDesc = "" +
 	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessage\x128\n" +
 	"\bcategory\x18\x03 \x01(\x0e2\x1c.common.v1.NackErrorCategoryR\bcategory\x12\x1c\n" +
 	"\tretryable\x18\x04 \x01(\bR\tretryable\x12!\n" +
-	"\adetails\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\adetailsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adetails\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\adetailsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_nack_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_nack_error_proto_goTypes = []any{

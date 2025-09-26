@@ -7,7 +7,7 @@
 package health
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -300,7 +300,7 @@ const file_health_v1_health_check_response_proto_rawDesc = "" +
 	"\x10unhealthy_checks\x18\x05 \x01(\x05R\x0funhealthyChecks\x127\n" +
 	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x120\n" +
 	"\x14all_checks_completed\x18\a \x01(\bR\x12allChecksCompleted\x12\x1a\n" +
-	"\bwarnings\x18\b \x03(\tR\bwarningsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\b \x03(\tR\bwarningsB.Z$github.com/jdfalk/gcommon/pkg/health\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_health_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_health_check_response_proto_goTypes = []any{

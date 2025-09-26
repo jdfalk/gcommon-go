@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -326,7 +326,7 @@ const file_queue_v1_acknowledge_request_proto_rawDesc = "" +
 	"\x13processing_times_ms\x18\x0f \x03(\x03R\x11processingTimesMs\x12+\n" +
 	"\x11force_acknowledge\x18\x10 \x01(\bR\x10forceAcknowledge\x12\x1d\n" +
 	"\n" +
-	"batch_mode\x18\x11 \x01(\bR\tbatchModeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"batch_mode\x18\x11 \x01(\bR\tbatchModeB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_acknowledge_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_acknowledge_request_proto_goTypes = []any{

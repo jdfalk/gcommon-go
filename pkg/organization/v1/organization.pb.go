@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -866,7 +866,7 @@ const file_organization_v1_organization_proto_rawDesc = "" +
 	"\x14multi_tenant_enabled\x18\x14 \x01(\bR\x12multiTenantEnabled\x12'\n" +
 	"\n" +
 	"avatar_url\x18\x15 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\tavatarUrl\x12,\n" +
-	"\rbilling_email\x18\x16 \x01(\tB\a\xbaH\x04r\x02`\x01R\fbillingEmailB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rbilling_email\x18\x16 \x01(\tB\a\xbaH\x04r\x02`\x01R\fbillingEmailB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_organization_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_organization_proto_goTypes = []any{

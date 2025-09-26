@@ -115,7 +115,7 @@ const file_queue_v1_get_queue_health_response_proto_rawDesc = "" +
 	"(queue/v1/get_queue_health_response.proto\x12\bqueue.v1\x1a\x1dqueue/v1/cluster_health.proto\x1a\x1bqueue/v1/queue_health.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\x9c\x01\n" +
 	"\x16GetQueueHealthResponse\x12B\n" +
 	"\fqueue_health\x18\x01 \x03(\v2\x15.queue.v1.QueueHealthB\b\xbaH\x05\x92\x01\x02\b\x01R\vqueueHealth\x12>\n" +
-	"\x0ecluster_health\x18\x02 \x01(\v2\x17.queue.v1.ClusterHealthR\rclusterHealthB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecluster_health\x18\x02 \x01(\v2\x17.queue.v1.ClusterHealthR\rclusterHealthB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_queue_health_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_queue_health_response_proto_goTypes = []any{

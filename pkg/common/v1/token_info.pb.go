@@ -353,7 +353,7 @@ const file_common_v1_token_info_proto_rawDesc = "" +
 	"expires_at\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAt\x12\x16\n" +
 	"\x06active\x18\b \x01(\bR\x06active\x12\x1d\n" +
 	"\n" +
-	"expires_in\x18\t \x01(\x03R\texpiresInB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"expires_in\x18\t \x01(\x03R\texpiresInB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_token_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_token_info_proto_goTypes = []any{

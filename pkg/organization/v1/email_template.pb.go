@@ -212,7 +212,7 @@ const file_organization_v1_email_template_proto_rawDesc = "" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12\x18\n" +
 	"\asubject\x18\x02 \x01(\tR\asubject\x12\x1b\n" +
 	"\tbody_html\x18\x03 \x01(\tR\bbodyHtml\x12\x1b\n" +
-	"\tbody_text\x18\x04 \x01(\tR\bbodyTextB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tbody_text\x18\x04 \x01(\tR\bbodyTextB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_email_template_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_email_template_proto_goTypes = []any{

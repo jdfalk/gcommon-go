@@ -187,7 +187,7 @@ const file_media_v1_sync_subtitles_request_proto_rawDesc = "" +
 	"\x10subtitle_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0esubtitleFileId\x12+\n" +
 	"\rmedia_file_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vmediaFileId\x12,\n" +
 	"\x12auto_detect_timing\x18\x03 \x01(\bR\x10autoDetectTiming\x12$\n" +
-	"\x0esync_points_ms\x18\x04 \x03(\x03R\fsyncPointsMsB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0esync_points_ms\x18\x04 \x03(\x03R\fsyncPointsMsB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_sync_subtitles_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_sync_subtitles_request_proto_goTypes = []any{

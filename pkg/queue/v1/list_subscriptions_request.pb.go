@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -204,7 +204,7 @@ const file_queue_v1_list_subscriptions_request_proto_rawDesc = "" +
 	"\tpage_size\x18\x03 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12&\n" +
 	"\n" +
-	"page_token\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"page_token\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_list_subscriptions_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_list_subscriptions_request_proto_goTypes = []any{

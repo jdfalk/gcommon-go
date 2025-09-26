@@ -8,7 +8,7 @@ package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -174,7 +174,7 @@ const file_web_v1_compression_config_proto_rawDesc = "" +
 	"\x10compression_type\x18\x01 \x01(\x0e2\x1d.common.v1.LogCompressionTypeR\x0fcompressionType\x12&\n" +
 	"\n" +
 	"min_length\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tminLength\x12\x1d\n" +
-	"\x05level\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05levelB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05level\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05levelB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_compression_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_compression_config_proto_goTypes = []any{

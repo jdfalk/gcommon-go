@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -252,7 +252,7 @@ const file_database_v1_query_options_proto_rawDesc = "" +
 	"\x06offset\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x06offset\x127\n" +
 	"\atimeout\x18\x03 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\atimeout\x12)\n" +
 	"\x10include_metadata\x18\x04 \x01(\bR\x0fincludeMetadata\x12E\n" +
-	"\vconsistency\x18\x05 \x01(\x0e2#.common.v1.DatabaseConsistencyLevelR\vconsistencyB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vconsistency\x18\x05 \x01(\x0e2#.common.v1.DatabaseConsistencyLevelR\vconsistencyB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_query_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_query_options_proto_goTypes = []any{

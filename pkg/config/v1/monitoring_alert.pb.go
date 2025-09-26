@@ -241,7 +241,7 @@ const file_config_v1_monitoring_alert_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12\x1c\n" +
 	"\tcondition\x18\x03 \x01(\tR\tcondition\x12\x1c\n" +
 	"\tthreshold\x18\x04 \x01(\x01R\tthreshold\x12\x18\n" +
-	"\aenabled\x18\x05 \x01(\bR\aenabledB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aenabled\x18\x05 \x01(\bR\aenabledB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_monitoring_alert_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_monitoring_alert_proto_goTypes = []any{

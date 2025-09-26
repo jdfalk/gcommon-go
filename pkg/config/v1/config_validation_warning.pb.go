@@ -179,7 +179,7 @@ const file_config_v1_config_validation_warning_proto_rawDesc = "" +
 	"\x17ConfigValidationWarning\x12\x19\n" +
 	"\x03key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03key\x12!\n" +
 	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessage\x12\x1b\n" +
-	"\x04code\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04codeB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04code\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04codeB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_config_validation_warning_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_config_validation_warning_proto_goTypes = []any{

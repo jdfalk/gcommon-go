@@ -198,7 +198,7 @@ const file_media_v1_upload_metadata_proto_rawDesc = "" +
 	"\fcontent_type\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcontentType\x12&\n" +
 	"\n" +
 	"total_size\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ttotalSize\x12>\n" +
-	"\x0emedia_metadata\x18\x04 \x01(\v2\x17.media.v1.MediaMetadataR\rmediaMetadataB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0emedia_metadata\x18\x04 \x01(\v2\x17.media.v1.MediaMetadataR\rmediaMetadataB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_upload_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_upload_metadata_proto_goTypes = []any{

@@ -33,7 +33,7 @@ const file_media_v1_audio_service_proto_rawDesc = "" +
 	"SplitAudio\x12\x1b.media.v1.SplitAudioRequest\x1a\x1c.media.v1.SplitAudioResponse\x12G\n" +
 	"\n" +
 	"MergeAudio\x12\x1b.media.v1.MergeAudioRequest\x1a\x1c.media.v1.MergeAudioResponse\x12b\n" +
-	"\x13AnalyzeAudioQuality\x12$.media.v1.AnalyzeAudioQualityRequest\x1a%.media.v1.AnalyzeAudioQualityResponseB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13AnalyzeAudioQuality\x12$.media.v1.AnalyzeAudioQualityRequest\x1a%.media.v1.AnalyzeAudioQualityResponseB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_audio_service_proto_goTypes = []any{
 	(*DetectChaptersRequest)(nil),       // 0: media.v1.DetectChaptersRequest

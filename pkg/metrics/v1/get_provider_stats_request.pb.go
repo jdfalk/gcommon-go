@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -259,7 +259,7 @@ const file_metrics_v1_get_provider_stats_request_proto_rawDesc = "" +
 	"time_range\x18\x03 \x01(\v2\x1b.common.v1.TimeRangeMetricsR\ttimeRange\x122\n" +
 	"\aoptions\x18\x04 \x01(\v2\x18.metrics.v1.StatsOptionsR\aoptions\x12 \n" +
 	"\vgranularity\x18\x05 \x01(\tR\vgranularity\x12)\n" +
-	"\x10include_realtime\x18\x06 \x01(\bR\x0fincludeRealtimeB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10include_realtime\x18\x06 \x01(\bR\x0fincludeRealtimeB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_provider_stats_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_provider_stats_request_proto_goTypes = []any{

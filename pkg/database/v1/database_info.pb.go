@@ -231,7 +231,7 @@ const file_database_v1_database_info_proto_rawDesc = "" +
 	"\aversion\x18\x02 \x01(\tR\aversion\x12\x12\n" +
 	"\x04type\x18\x03 \x01(\tR\x04type\x12+\n" +
 	"\x11connection_string\x18\x04 \x01(\tR\x10connectionString\x12\x1a\n" +
-	"\bfeatures\x18\x05 \x03(\tR\bfeaturesB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bfeatures\x18\x05 \x03(\tR\bfeaturesB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_database_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_database_info_proto_goTypes = []any{

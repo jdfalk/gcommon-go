@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -336,7 +336,7 @@ const file_metrics_v1_provider_statistics_proto_rawDesc = "" +
 	"\vtop_metrics\x18\t \x01(\v2\x16.metrics.v1.TopMetricsR\n" +
 	"topMetrics\x121\n" +
 	"\x06trends\x18\n" +
-	" \x01(\v2\x19.metrics.v1.TrendAnalysisR\x06trendsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\v2\x19.metrics.v1.TrendAnalysisR\x06trendsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_statistics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_provider_statistics_proto_goTypes = []any{

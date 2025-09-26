@@ -201,7 +201,7 @@ const file_metrics_v1_network_usage_proto_rawDesc = "" +
 	"\x13bytes_in_per_second\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10bytesInPerSecond\x128\n" +
 	"\x14bytes_out_per_second\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11bytesOutPerSecond\x12:\n" +
 	"\x15packets_in_per_second\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12packetsInPerSecond\x12<\n" +
-	"\x16packets_out_per_second\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x13packetsOutPerSecondB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16packets_out_per_second\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x13packetsOutPerSecondB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_network_usage_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_network_usage_proto_goTypes = []any{

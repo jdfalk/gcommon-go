@@ -339,7 +339,7 @@ const file_common_v1_pagination_info_proto_rawDesc = "" +
 	"\bhas_next\x18\x05 \x01(\bR\ahasNext\x12!\n" +
 	"\fhas_previous\x18\x06 \x01(\bR\vhasPrevious\x12/\n" +
 	"\x0fnext_page_token\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x127\n" +
-	"\x13previous_page_token\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11previousPageTokenB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13previous_page_token\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11previousPageTokenB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_pagination_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_pagination_info_proto_goTypes = []any{

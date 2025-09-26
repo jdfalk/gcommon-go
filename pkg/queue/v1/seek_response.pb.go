@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -266,7 +266,7 @@ const file_queue_v1_seek_response_proto_rawDesc = "" +
 	"\x06offset\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06offset\x12*\n" +
 	"\fpartition_id\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vpartitionId\x12,\n" +
 	"\rerror_message\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x127\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_seek_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_seek_response_proto_goTypes = []any{

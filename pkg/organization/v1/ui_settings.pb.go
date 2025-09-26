@@ -425,7 +425,7 @@ const file_organization_v1_ui_settings_proto_rawDesc = "" +
 	"\vtime_format\x18\t \x01(\tR\n" +
 	"timeFormat\x12*\n" +
 	"\x11dark_mode_default\x18\n" +
-	" \x01(\bR\x0fdarkModeDefaultB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\bR\x0fdarkModeDefaultB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_ui_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_ui_settings_proto_goTypes = []any{

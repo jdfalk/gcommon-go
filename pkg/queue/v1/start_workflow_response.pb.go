@@ -179,7 +179,7 @@ const file_queue_v1_start_workflow_response_proto_rawDesc = "" +
 	"\x15StartWorkflowResponse\x12*\n" +
 	"\fexecution_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vexecutionId\x12\x1f\n" +
 	"\x06status\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06status\x12\x1d\n" +
-	"\x05error\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05errorB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05errorB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_start_workflow_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_start_workflow_response_proto_goTypes = []any{

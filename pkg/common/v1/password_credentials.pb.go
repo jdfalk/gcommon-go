@@ -180,7 +180,7 @@ const file_common_v1_password_credentials_proto_rawDesc = "" +
 	"\busername\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\busername\x12#\n" +
 	"\bpassword\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\bR\bpassword\x12\x1f\n" +
 	"\vremember_me\x18\x03 \x01(\bR\n" +
-	"rememberMeB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"rememberMeB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_password_credentials_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_password_credentials_proto_goTypes = []any{

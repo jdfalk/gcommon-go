@@ -182,7 +182,7 @@ const file_media_v1_subtitle_extraction_options_proto_rawDesc = "" +
 	"\routput_format\x18\x01 \x01(\tR\foutputFormat\x128\n" +
 	"\x18include_hearing_impaired\x18\x02 \x01(\bR\x16includeHearingImpaired\x12%\n" +
 	"\x0einclude_forced\x18\x03 \x01(\bR\rincludeForced\x12\x1c\n" +
-	"\tlanguages\x18\x04 \x03(\tR\tlanguagesB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tlanguages\x18\x04 \x03(\tR\tlanguagesB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_subtitle_extraction_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_subtitle_extraction_options_proto_goTypes = []any{

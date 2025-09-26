@@ -434,7 +434,7 @@ const file_queue_v1_message_metadata_proto_rawDesc = "" +
 	"\breply_to\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\areplyTo\x1a:\n" +
 	"\fHeadersEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_message_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_message_metadata_proto_goTypes = []any{

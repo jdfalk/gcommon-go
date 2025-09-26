@@ -132,7 +132,7 @@ const file_media_v1_normalize_audio_request_proto_rawDesc = "" +
 	"&media/v1/normalize_audio_request.proto\x12\bmedia.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\x1a$media/v1/normalization_options.proto\"~\n" +
 	"\x15NormalizeAudioRequest\x12+\n" +
 	"\raudio_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaudioFileId\x128\n" +
-	"\aoptions\x18\x02 \x01(\v2\x1e.media.v1.NormalizationOptionsR\aoptionsB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aoptions\x18\x02 \x01(\v2\x1e.media.v1.NormalizationOptionsR\aoptionsB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_normalize_audio_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_normalize_audio_request_proto_goTypes = []any{

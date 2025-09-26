@@ -138,7 +138,7 @@ const file_queue_v1_last_writer_wins_proto_rawDesc = "" +
 	"\x1fqueue/v1/last_writer_wins.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\"s\n" +
 	"\x0eLastWriterWins\x120\n" +
 	"\x14use_server_timestamp\x18\x01 \x01(\bR\x12useServerTimestamp\x12/\n" +
-	"\x13timestamp_precision\x18\x02 \x01(\tR\x12timestampPrecisionB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13timestamp_precision\x18\x02 \x01(\tR\x12timestampPrecisionB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_last_writer_wins_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_last_writer_wins_proto_goTypes = []any{

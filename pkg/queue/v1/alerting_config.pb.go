@@ -8,7 +8,7 @@ package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -205,7 +205,7 @@ const file_queue_v1_alerting_config_proto_rawDesc = "" +
 	"\x05rules\x18\x02 \x03(\v2\x13.queue.v1.AlertRuleB\b\xbaH\x05\x92\x01\x02\b\x01R\x05rules\x12H\n" +
 	"\bchannels\x18\x03 \x03(\v2\".queue.v1.QueueNotificationChannelB\b\xbaH\x05\x92\x01\x02\b\x01R\bchannels\x12I\n" +
 	"\x10default_severity\x18\x04 \x01(\x0e2\x1e.common.v1.CommonAlertSeverityR\x0fdefaultSeverity\x12H\n" +
-	"\x12aggregation_window\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\x11aggregationWindowB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12aggregation_window\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\x11aggregationWindowB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_alerting_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_alerting_config_proto_goTypes = []any{

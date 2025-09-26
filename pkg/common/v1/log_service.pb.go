@@ -29,7 +29,7 @@ const file_common_v1_log_service_proto_rawDesc = "" +
 	"\n" +
 	"LogService\x12C\n" +
 	"\bWriteLog\x12\x1a.common.v1.WriteLogRequest\x1a\x1b.common.v1.WriteLogResponse\x12C\n" +
-	"\bReadLogs\x12\x1a.common.v1.ReadLogsRequest\x1a\x1b.common.v1.ReadLogsResponseB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bReadLogs\x12\x1a.common.v1.ReadLogsRequest\x1a\x1b.common.v1.ReadLogsResponseB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_log_service_proto_goTypes = []any{
 	(*WriteLogRequest)(nil),  // 0: common.v1.WriteLogRequest

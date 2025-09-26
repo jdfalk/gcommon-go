@@ -139,7 +139,7 @@ const file_queue_v1_delete_topic_request_proto_rawDesc = "" +
 	"#queue/v1/delete_topic_request.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"I\n" +
 	"\x12DeleteTopicRequest\x12\x1d\n" +
 	"\x05topic\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05topic\x12\x14\n" +
-	"\x05force\x18\x02 \x01(\bR\x05forceB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05force\x18\x02 \x01(\bR\x05forceB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_delete_topic_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_delete_topic_request_proto_goTypes = []any{

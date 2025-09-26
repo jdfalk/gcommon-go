@@ -88,7 +88,7 @@ const file_common_v1_mfa_type_proto_rawDesc = "" +
 	"\rMFA_TYPE_TOTP\x10\x01\x12\x10\n" +
 	"\fMFA_TYPE_SMS\x10\x02\x12\x12\n" +
 	"\x0eMFA_TYPE_EMAIL\x10\x03\x12\x11\n" +
-	"\rMFA_TYPE_PUSH\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rMFA_TYPE_PUSH\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_mfa_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_mfa_type_proto_goTypes = []any{

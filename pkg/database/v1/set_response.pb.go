@@ -172,7 +172,7 @@ const file_database_v1_set_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12 \n" +
 	"\voverwritten\x18\x02 \x01(\bR\voverwritten\x12&\n" +
 	"\n" +
-	"size_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tsizeBytesB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"size_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tsizeBytesB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_set_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_set_response_proto_goTypes = []any{

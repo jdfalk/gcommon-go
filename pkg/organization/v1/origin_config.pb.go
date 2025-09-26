@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -198,7 +198,7 @@ const file_organization_v1_origin_config_proto_rawDesc = "" +
 	"\vorigin_path\x18\x02 \x01(\tR\n" +
 	"originPath\x12'\n" +
 	"\x0fprotocol_policy\x18\x03 \x01(\tR\x0eprotocolPolicy\x12:\n" +
-	"\x0ecustom_headers\x18\x04 \x03(\v2\x13.common.v1.KeyValueR\rcustomHeadersB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecustom_headers\x18\x04 \x03(\v2\x13.common.v1.KeyValueR\rcustomHeadersB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_origin_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_origin_config_proto_goTypes = []any{

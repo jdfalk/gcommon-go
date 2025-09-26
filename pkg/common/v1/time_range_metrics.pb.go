@@ -159,7 +159,7 @@ const file_common_v1_time_range_metrics_proto_rawDesc = "" +
 	"\x10TimeRangeMetrics\x120\n" +
 	"\x05start\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\x05start\x12,\n" +
 	"\x03end\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\x03end\x122\n" +
-	"\x10duration_seconds\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x0fdurationSecondsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10duration_seconds\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x0fdurationSecondsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_time_range_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_time_range_metrics_proto_goTypes = []any{

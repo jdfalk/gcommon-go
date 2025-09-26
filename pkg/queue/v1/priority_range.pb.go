@@ -138,7 +138,7 @@ const file_queue_v1_priority_range_proto_rawDesc = "" +
 	"\x1dqueue/v1/priority_range.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"g\n" +
 	"\rPriorityRange\x12*\n" +
 	"\fmin_priority\x18\x01 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vminPriority\x12*\n" +
-	"\fmax_priority\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxPriorityB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fmax_priority\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxPriorityB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_priority_range_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_priority_range_proto_goTypes = []any{

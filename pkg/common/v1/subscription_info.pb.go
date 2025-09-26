@@ -284,7 +284,7 @@ const file_common_v1_subscription_info_proto_rawDesc = "" +
 	"subscriber\x18\x05 \x01(\v2\x15.common.v1.ClientInfoR\n" +
 	"subscriber\x128\n" +
 	"\aoptions\x18\x06 \x01(\v2\x1e.common.v1.SubscriptionOptionsR\aoptions\x125\n" +
-	"\x06status\x18\a \x01(\x0e2\x1d.common.v1.SubscriptionStatusR\x06statusB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06status\x18\a \x01(\x0e2\x1d.common.v1.SubscriptionStatusR\x06statusB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_subscription_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_subscription_info_proto_goTypes = []any{

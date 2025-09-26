@@ -109,7 +109,7 @@ const file_queue_v1_message_id_proto_rawDesc = "" +
 	"\n" +
 	"\x19queue/v1/message_id.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"*\n" +
 	"\tMessageId\x12\x1d\n" +
-	"\x05value\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05valueB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05valueB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_message_id_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_message_id_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package database
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -119,7 +119,7 @@ const file_database_v1_list_subscriptions_request_proto_rawDesc = "" +
 	"\n" +
 	",database/v1/list_subscriptions_request.proto\x12\vdatabase.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\"[\n" +
 	"\x1dCacheListSubscriptionsRequest\x12:\n" +
-	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_list_subscriptions_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_list_subscriptions_request_proto_goTypes = []any{

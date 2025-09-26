@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -339,7 +339,7 @@ const file_metrics_v1_unregister_metric_response_proto_rawDesc = "" +
 	"\x06result\x18\a \x01(\v2 .metrics.v1.UnregistrationResultR\x06result\x12\x1a\n" +
 	"\bwarnings\x18\b \x03(\tR\bwarnings\x12>\n" +
 	"\vbackup_info\x18\t \x01(\v2\x1d.metrics.v1.MetricsBackupInfoR\n" +
-	"backupInfoB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"backupInfoB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_unregister_metric_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_unregister_metric_response_proto_goTypes = []any{

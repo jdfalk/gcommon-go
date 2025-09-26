@@ -8,7 +8,7 @@ package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -170,7 +170,7 @@ const file_web_v1_unregister_middleware_request_proto_rawDesc = "" +
 	"\x1bUnregisterMiddlewareRequest\x12$\n" +
 	"\tserver_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bserverId\x12,\n" +
 	"\rmiddleware_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fmiddlewareId\x126\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_unregister_middleware_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_unregister_middleware_request_proto_goTypes = []any{

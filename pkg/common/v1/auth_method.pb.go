@@ -107,7 +107,7 @@ const file_common_v1_auth_method_proto_rawDesc = "" +
 	"\x17COMMON_AUTH_METHOD_LDAP\x10\x05\x12\x1a\n" +
 	"\x16COMMON_AUTH_METHOD_MFA\x10\x06\x12\x1c\n" +
 	"\x18COMMON_AUTH_METHOD_TOKEN\x10\a\x12\x1b\n" +
-	"\x17COMMON_AUTH_METHOD_NONE\x10\bB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17COMMON_AUTH_METHOD_NONE\x10\bB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_auth_method_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_auth_method_proto_goTypes = []any{

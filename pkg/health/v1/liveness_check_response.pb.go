@@ -7,7 +7,7 @@
 package health
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -233,7 +233,7 @@ const file_health_v1_liveness_check_response_proto_rawDesc = "" +
 	"\n" +
 	"started_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tstartedAt\x127\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x12\x18\n" +
-	"\adetails\x18\x05 \x01(\tR\adetailsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adetails\x18\x05 \x01(\tR\adetailsB.Z$github.com/jdfalk/gcommon/pkg/health\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_liveness_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_liveness_check_response_proto_goTypes = []any{

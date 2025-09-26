@@ -334,7 +334,7 @@ const file_queue_v1_reset_details_proto_rawDesc = "" +
 	"\x11reset_duration_ms\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x0fresetDurationMs\x12#\n" +
 	"\rpartial_reset\x18\x06 \x01(\bR\fpartialReset\x12*\n" +
 	"\freset_reason\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vresetReason\x12*\n" +
-	"\finitiated_by\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vinitiatedByB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\finitiated_by\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vinitiatedByB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_reset_details_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_reset_details_proto_goTypes = []any{

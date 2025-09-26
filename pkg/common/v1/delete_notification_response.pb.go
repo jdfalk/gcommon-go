@@ -105,7 +105,7 @@ const file_common_v1_delete_notification_response_proto_rawDesc = "" +
 	"\n" +
 	",common/v1/delete_notification_response.proto\x12\tcommon.v1\x1a!google/protobuf/go_features.proto\"6\n" +
 	"\x1aDeleteNotificationResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccessB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\x01 \x01(\bR\asuccessB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_delete_notification_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_delete_notification_response_proto_goTypes = []any{

@@ -7,7 +7,7 @@
 package health
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -230,7 +230,7 @@ const file_health_v1_readiness_check_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x123\n" +
 	"\atimeout\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x121\n" +
 	"\x14include_dependencies\x18\x04 \x01(\bR\x13includeDependencies\x12(\n" +
-	"\x10min_health_score\x18\x05 \x01(\x05R\x0eminHealthScoreB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10min_health_score\x18\x05 \x01(\x05R\x0eminHealthScoreB.Z$github.com/jdfalk/gcommon/pkg/health\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_readiness_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_readiness_check_request_proto_goTypes = []any{

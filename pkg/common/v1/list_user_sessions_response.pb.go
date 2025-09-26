@@ -386,7 +386,7 @@ const file_common_v1_list_user_sessions_response_proto_rawDesc = "" +
 	"\auser_id\x18\x0f \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12=\n" +
 	"\fgenerated_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAt\x12F\n" +
-	"\x11data_refreshed_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x0fdataRefreshedAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11data_refreshed_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x0fdataRefreshedAtB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_list_user_sessions_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_list_user_sessions_response_proto_goTypes = []any{

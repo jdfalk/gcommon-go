@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -222,7 +222,7 @@ const file_metrics_v1_query_step_proto_rawDesc = "" +
 	"\toperation\x18\x02 \x01(\x0e2\x19.common.v1.QueryOperationR\toperation\x12*\n" +
 	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12H\n" +
 	"\x12estimated_duration\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\x11estimatedDuration\x12$\n" +
-	"\x0einput_step_ids\x18\x05 \x03(\tR\finputStepIdsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0einput_step_ids\x18\x05 \x03(\tR\finputStepIdsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_step_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_step_proto_goTypes = []any{

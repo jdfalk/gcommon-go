@@ -194,7 +194,7 @@ const file_media_v1_scene_detection_proto_rawDesc = "" +
 	"confidence\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\n" +
 	"confidence\x12\x1d\n" +
 	"\n" +
-	"scene_type\x18\x04 \x01(\tR\tsceneTypeB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"scene_type\x18\x04 \x01(\tR\tsceneTypeB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_scene_detection_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_scene_detection_proto_goTypes = []any{

@@ -102,7 +102,7 @@ const file_queue_v1_role_inheritance_proto_rawDesc = "" +
 	"\x1fqueue/v1/role_inheritance.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\x81\x01\n" +
 	"\x0fRoleInheritance\x12-\n" +
 	"\rinherits_from\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\finheritsFrom\x12?\n" +
-	"\x16additional_permissions\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15additionalPermissionsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16additional_permissions\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15additionalPermissionsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_role_inheritance_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_role_inheritance_proto_goTypes = []any{

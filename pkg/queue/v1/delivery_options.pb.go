@@ -317,7 +317,7 @@ const file_queue_v1_delivery_options_proto_rawDesc = "" +
 	"\vrequire_ack\x18\a \x01(\bR\n" +
 	"requireAck\x12:\n" +
 	"\vack_timeout\x18\b \x01(\v2\x19.google.protobuf.DurationR\n" +
-	"ackTimeoutB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"ackTimeoutB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_delivery_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_delivery_options_proto_goTypes = []any{

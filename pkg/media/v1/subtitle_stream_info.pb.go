@@ -267,7 +267,7 @@ const file_media_v1_subtitle_stream_info_proto_rawDesc = "" +
 	"\blanguage\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\blanguage\x12\x1d\n" +
 	"\x05title\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05title\x12\x16\n" +
 	"\x06forced\x18\x05 \x01(\bR\x06forced\x12)\n" +
-	"\x10hearing_impaired\x18\x06 \x01(\bR\x0fhearingImpairedB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10hearing_impaired\x18\x06 \x01(\bR\x0fhearingImpairedB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_subtitle_stream_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_subtitle_stream_info_proto_goTypes = []any{

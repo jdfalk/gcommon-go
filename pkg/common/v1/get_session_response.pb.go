@@ -126,7 +126,7 @@ const file_common_v1_get_session_response_proto_rawDesc = "" +
 	"$common/v1/get_session_response.proto\x12\tcommon.v1\x1a\x15common/v1/error.proto\x1a\x17common/v1/session.proto\x1a!google/protobuf/go_features.proto\"n\n" +
 	"\x16AuthGetSessionResponse\x12,\n" +
 	"\asession\x18\x01 \x01(\v2\x12.common.v1.SessionR\asession\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_session_response_proto_goTypes = []any{

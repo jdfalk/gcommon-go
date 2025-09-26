@@ -7,7 +7,7 @@
 package metrics
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -252,7 +252,7 @@ const file_metrics_v1_list_providers_request_proto_rawDesc = "" +
 	"pagination\x12%\n" +
 	"\x0einclude_status\x18\x04 \x01(\bR\rincludeStatus\x12%\n" +
 	"\x0einclude_config\x18\x05 \x01(\bR\rincludeConfig\x12#\n" +
-	"\rinclude_stats\x18\x06 \x01(\bR\fincludeStatsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rinclude_stats\x18\x06 \x01(\bR\fincludeStatsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_list_providers_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_list_providers_request_proto_goTypes = []any{

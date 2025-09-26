@@ -257,7 +257,7 @@ const file_queue_v1_circuit_breaker_config_proto_rawDesc = "" +
 	"\x11success_threshold\x18\x03 \x01(\rB\a\xbaH\x04*\x02(\x00R\x10successThreshold\x123\n" +
 	"\atimeout\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x12*\n" +
 	"\fmax_requests\x18\x05 \x01(\rB\a\xbaH\x04*\x02(\x00R\vmaxRequests\x125\n" +
-	"\binterval\x18\x06 \x01(\v2\x19.google.protobuf.DurationR\bintervalB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\binterval\x18\x06 \x01(\v2\x19.google.protobuf.DurationR\bintervalB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_circuit_breaker_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_circuit_breaker_config_proto_goTypes = []any{

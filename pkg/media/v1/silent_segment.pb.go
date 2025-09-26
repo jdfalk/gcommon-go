@@ -156,7 +156,7 @@ const file_media_v1_silent_segment_proto_rawDesc = "" +
 	"\n" +
 	"start_time\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\tstartTime\x124\n" +
 	"\bend_time\x18\x02 \x01(\v2\x19.google.protobuf.DurationR\aendTime\x12!\n" +
-	"\fthreshold_db\x18\x03 \x01(\x01R\vthresholdDbB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fthreshold_db\x18\x03 \x01(\x01R\vthresholdDbB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_silent_segment_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_silent_segment_proto_goTypes = []any{

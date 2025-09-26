@@ -98,7 +98,7 @@ const file_common_v1_routing_strategy_proto_rawDesc = "" +
 	"\x17ROUTING_STRATEGY_FANOUT\x10\x03\x12\x1b\n" +
 	"\x17ROUTING_STRATEGY_HEADER\x10\x04\x12\x1c\n" +
 	"\x18ROUTING_STRATEGY_CONTENT\x10\x05\x12\x19\n" +
-	"\x15ROUTING_STRATEGY_HASH\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15ROUTING_STRATEGY_HASH\x10\x06B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_routing_strategy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_routing_strategy_proto_goTypes = []any{

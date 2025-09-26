@@ -7,7 +7,7 @@
 package metrics
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -127,7 +127,7 @@ const file_metrics_v1_get_metric_response_proto_rawDesc = "" +
 	"metrics.v1\x1a\x15common/v1/error.proto\x1a\x1cmetrics/v1/metric_data.proto\x1a!google/protobuf/go_features.proto\"k\n" +
 	"\x11GetMetricResponse\x12.\n" +
 	"\x06metric\x18\x01 \x01(\v2\x16.metrics.v1.MetricDataR\x06metric\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_metric_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_metric_response_proto_goTypes = []any{

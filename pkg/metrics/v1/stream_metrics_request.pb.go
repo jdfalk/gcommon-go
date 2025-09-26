@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -245,7 +245,7 @@ const file_metrics_v1_stream_metrics_request_proto_rawDesc = "" +
 	"\vprovider_id\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"providerId\x12-\n" +
 	"\x05start\x18\x05 \x01(\v2\x17.metrics.v1.StreamStartR\x05start\x12=\n" +
-	"\rbuffer_config\x18\x06 \x01(\v2\x18.metrics.v1.BufferConfigR\fbufferConfigB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rbuffer_config\x18\x06 \x01(\v2\x18.metrics.v1.BufferConfigR\fbufferConfigB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stream_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stream_metrics_request_proto_goTypes = []any{

@@ -145,7 +145,7 @@ const file_common_v1_sort_options_proto_rawDesc = "" +
 	"\vSortOptions\x12&\n" +
 	"\n" +
 	"sort_field\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsortField\x126\n" +
-	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_sort_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_sort_options_proto_goTypes = []any{

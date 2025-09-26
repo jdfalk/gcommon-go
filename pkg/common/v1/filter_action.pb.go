@@ -81,7 +81,7 @@ const file_common_v1_filter_action_proto_rawDesc = "" +
 	"\x15FILTER_ACTION_INCLUDE\x10\x01\x12\x19\n" +
 	"\x15FILTER_ACTION_EXCLUDE\x10\x02\x12\x1b\n" +
 	"\x17FILTER_ACTION_TRANSFORM\x10\x03\x12\x1a\n" +
-	"\x16FILTER_ACTION_VALIDATE\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16FILTER_ACTION_VALIDATE\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_filter_action_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_filter_action_proto_goTypes = []any{

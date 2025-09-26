@@ -7,7 +7,7 @@
 package config
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -160,7 +160,7 @@ const file_config_v1_get_config_response_proto_rawDesc = "" +
 	"\x11GetConfigResponse\x12,\n" +
 	"\x05entry\x18\x01 \x01(\v2\x16.config.v1.ConfigEntryR\x05entry\x12\x14\n" +
 	"\x05found\x18\x02 \x01(\bR\x05found\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_config_response_proto_goTypes = []any{

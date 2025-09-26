@@ -32,7 +32,7 @@ const file_database_v1_cache_admin_service_proto_rawDesc = "" +
 	"\x0fDeleteNamespace\x12#.database.v1.DeleteNamespaceRequest\x1a\x16.google.protobuf.Empty\x12Y\n" +
 	"\x0eListNamespaces\x12\".database.v1.ListNamespacesRequest\x1a#.database.v1.ListNamespacesResponse\x12b\n" +
 	"\x11GetNamespaceStats\x12%.database.v1.GetNamespaceStatsRequest\x1a&.database.v1.GetNamespaceStatsResponse\x12\\\n" +
-	"\x0fConfigurePolicy\x12#.database.v1.ConfigurePolicyRequest\x1a$.database.v1.ConfigurePolicyResponseB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fConfigurePolicy\x12#.database.v1.ConfigurePolicyRequest\x1a$.database.v1.ConfigurePolicyResponseB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_admin_service_proto_goTypes = []any{
 	(*CreateNamespaceRequest)(nil),    // 0: database.v1.CreateNamespaceRequest

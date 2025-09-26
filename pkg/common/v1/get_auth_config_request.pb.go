@@ -120,7 +120,7 @@ const file_common_v1_get_auth_config_request_proto_rawDesc = "" +
 	"'common/v1/get_auth_config_request.proto\x12\tcommon.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"a\n" +
 	"\x14GetAuthConfigRequest\x12\x1c\n" +
 	"\x04keys\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x04keys\x12+\n" +
-	"\x11include_sensitive\x18\x02 \x01(\bR\x10includeSensitiveB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11include_sensitive\x18\x02 \x01(\bR\x10includeSensitiveB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_auth_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_auth_config_request_proto_goTypes = []any{

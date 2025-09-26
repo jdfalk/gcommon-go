@@ -7,7 +7,7 @@
 package metrics
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -301,7 +301,7 @@ const file_metrics_v1_record_histogram_response_proto_rawDesc = "" +
 	"recordedAt\x12\"\n" +
 	"\ris_new_metric\x18\x06 \x01(\bR\visNewMetric\x12?\n" +
 	"\x0faffected_bucket\x18\a \x01(\v2\x16.metrics.v1.BucketInfoR\x0eaffectedBucket\x12C\n" +
-	"\x0frecording_stats\x18\b \x01(\v2\x1a.metrics.v1.RecordingStatsR\x0erecordingStatsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0frecording_stats\x18\b \x01(\v2\x1a.metrics.v1.RecordingStatsR\x0erecordingStatsB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_histogram_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_record_histogram_response_proto_goTypes = []any{

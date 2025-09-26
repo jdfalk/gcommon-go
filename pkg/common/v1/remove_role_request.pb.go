@@ -173,7 +173,7 @@ const file_common_v1_remove_role_request_proto_rawDesc = "" +
 	"\x11RemoveRoleRequest\x12p\n" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12\x17\n" +
 	"\arole_id\x18\x02 \x01(\tR\x06roleId\x126\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_remove_role_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_remove_role_request_proto_goTypes = []any{

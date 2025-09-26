@@ -310,7 +310,7 @@ const file_config_v1_version_compatibility_info_proto_rawDesc = "" +
 	"\vmax_version\x18\x06 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\n" +
 	"maxVersion\x129\n" +
 	"\x13deprecated_features\x18\a \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12deprecatedFeatures\x120\n" +
-	"\x0fmigration_guide\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0emigrationGuideB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmigration_guide\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0emigrationGuideB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_version_compatibility_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_version_compatibility_info_proto_goTypes = []any{

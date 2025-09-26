@@ -340,7 +340,7 @@ const file_common_v1_remediation_details_proto_rawDesc = "" +
 	"\x10current_attempts\x18\x05 \x01(\x05R\x0fcurrentAttempts\x124\n" +
 	"\x16last_attempt_timestamp\x18\x06 \x01(\x03R\x14lastAttemptTimestamp\x12\x18\n" +
 	"\asuccess\x18\a \x01(\bR\asuccess\x12#\n" +
-	"\rerror_message\x18\b \x01(\tR\ferrorMessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rerror_message\x18\b \x01(\tR\ferrorMessageB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_remediation_details_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_remediation_details_proto_goTypes = []any{

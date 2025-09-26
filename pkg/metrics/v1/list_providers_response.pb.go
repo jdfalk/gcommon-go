@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -235,7 +235,7 @@ const file_metrics_v1_list_providers_response_proto_rawDesc = "" +
 	"pagination\x18\x04 \x01(\v2!.metrics.v1.MetricsPaginationInfoR\n" +
 	"pagination\x125\n" +
 	"\asummary\x18\x05 \x01(\v2\x1b.metrics.v1.ProviderSummaryR\asummary\x12=\n" +
-	"\fgenerated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAtB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fgenerated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAtB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_list_providers_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_list_providers_response_proto_goTypes = []any{

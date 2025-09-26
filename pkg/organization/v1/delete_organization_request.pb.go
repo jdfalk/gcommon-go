@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -135,7 +135,7 @@ const file_organization_v1_delete_organization_request_proto_rawDesc = "" +
 	"1organization/v1/delete_organization_request.proto\x12\x0forganization.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\xd6\x01\n" +
 	"\x19DeleteOrganizationRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x80\x01\n" +
-	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationIdB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationIdB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_delete_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_delete_organization_request_proto_goTypes = []any{

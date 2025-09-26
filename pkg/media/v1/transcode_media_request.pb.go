@@ -201,7 +201,7 @@ const file_media_v1_transcode_media_request_proto_rawDesc = "" +
 	"\rmedia_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vmediaFileId\x12#\n" +
 	"\routput_format\x18\x02 \x01(\tR\foutputFormat\x12!\n" +
 	"\foutput_codec\x18\x03 \x01(\tR\voutputCodec\x124\n" +
-	"\aoptions\x18\x04 \x01(\v2\x1a.media.v1.TranscodeOptionsR\aoptionsB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aoptions\x18\x04 \x01(\v2\x1a.media.v1.TranscodeOptionsR\aoptionsB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_transcode_media_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_transcode_media_request_proto_goTypes = []any{

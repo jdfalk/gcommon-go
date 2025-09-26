@@ -214,7 +214,7 @@ const file_common_v1_auth_provider_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x02id\x12\x1d\n" +
 	"\x04name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12/\n" +
 	"\x04type\x18\x03 \x01(\x0e2\x1b.common.v1.AuthProviderTypeR\x04type\x12\x16\n" +
-	"\x06config\x18\x04 \x01(\tR\x06configB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06config\x18\x04 \x01(\tR\x06configB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_auth_provider_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_auth_provider_proto_goTypes = []any{

@@ -81,7 +81,7 @@ const file_common_v1_metrics_export_format_proto_rawDesc = "" +
 	" METRICS_EXPORT_FORMAT_PROMETHEUS\x10\x01\x12\x1e\n" +
 	"\x1aMETRICS_EXPORT_FORMAT_JSON\x10\x02\x12\x1d\n" +
 	"\x19METRICS_EXPORT_FORMAT_CSV\x10\x03\x12'\n" +
-	"#METRICS_EXPORT_FORMAT_OPENTELEMETRY\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"#METRICS_EXPORT_FORMAT_OPENTELEMETRY\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_metrics_export_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_metrics_export_format_proto_goTypes = []any{

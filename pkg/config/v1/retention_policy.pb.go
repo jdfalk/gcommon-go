@@ -251,7 +251,7 @@ const file_config_v1_retention_policy_proto_rawDesc = "" +
 	"\x10custom_retention\x18\x06 \x03(\v25.config.v1.ConfigRetentionPolicy.CustomRetentionEntryR\x0fcustomRetention\x1aB\n" +
 	"\x14CustomRetentionEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\x05R\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_retention_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_retention_policy_proto_goTypes = []any{

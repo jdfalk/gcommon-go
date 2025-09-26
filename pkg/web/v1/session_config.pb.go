@@ -8,7 +8,7 @@ package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -263,7 +263,7 @@ const file_web_v1_session_config_proto_rawDesc = "" +
 	"cookieName\x12%\n" +
 	"\x0esecure_cookies\x18\x04 \x01(\bR\rsecureCookies\x12\x1b\n" +
 	"\thttp_only\x18\x05 \x01(\bR\bhttpOnly\x126\n" +
-	"\tsame_site\x18\x06 \x01(\x0e2\x19.common.v1.CookieSameSiteR\bsameSiteB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tsame_site\x18\x06 \x01(\x0e2\x19.common.v1.CookieSameSiteR\bsameSiteB+Z!github.com/jdfalk/gcommon/pkg/web\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_session_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_session_config_proto_goTypes = []any{

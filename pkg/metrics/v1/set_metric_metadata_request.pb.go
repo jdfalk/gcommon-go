@@ -7,7 +7,7 @@
 package metrics
 
 import (
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -145,7 +145,7 @@ const file_metrics_v1_set_metric_metadata_request_proto_rawDesc = "" +
 	"metrics.v1\x1a common/v1/request_metadata.proto\x1a metrics/v1/metric_metadata.proto\x1a!google/protobuf/go_features.proto\"\x95\x01\n" +
 	"\x18SetMetricMetadataRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.metrics.v1.MetricMetadataR\bmetadata\x12A\n" +
-	"\frequest_meta\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\vrequestMetaB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frequest_meta\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\vrequestMetaB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_set_metric_metadata_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_set_metric_metadata_request_proto_goTypes = []any{

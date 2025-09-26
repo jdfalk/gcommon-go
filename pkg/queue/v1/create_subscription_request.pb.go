@@ -305,7 +305,7 @@ const file_queue_v1_create_subscription_request_proto_rawDesc = "" +
 	"\x0estart_position\x18\x05 \x01(\tR\rstartPosition\x12!\n" +
 	"\fstart_offset\x18\x06 \x01(\x03R\vstartOffset\x12\x1d\n" +
 	"\n" +
-	"timeout_ms\x18\a \x01(\x05R\ttimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\a \x01(\x05R\ttimeoutMsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_create_subscription_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_create_subscription_request_proto_goTypes = []any{

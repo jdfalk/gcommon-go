@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -297,7 +297,7 @@ const file_organization_v1_create_organization_request_proto_rawDesc = "" +
 	" initial_settings_json.valid_json\x120Initial settings must be valid JSON if provided.\x1a5this == '' || this.matches(r'^\\s*[\\{\\[].*[\\}\\]]\\s*$')R\x13initialSettingsJson\x12{\n" +
 	"\rowner_user_id\x18\x05 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\vownerUserId\x12,\n" +
 	"\x12send_welcome_email\x18\x06 \x01(\bR\x10sendWelcomeEmail\x12M\n" +
-	"\x15organization_template\x18\a \x01(\tB\x18\xbaH\x15r\x13\x18d2\x0f^[a-zA-Z0-9_]*$R\x14organizationTemplateB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15organization_template\x18\a \x01(\tB\x18\xbaH\x15r\x13\x18d2\x0f^[a-zA-Z0-9_]*$R\x14organizationTemplateB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_create_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_create_organization_request_proto_goTypes = []any{

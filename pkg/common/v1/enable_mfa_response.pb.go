@@ -157,7 +157,7 @@ const file_common_v1_enable_mfa_response_proto_rawDesc = "" +
 	"\x11EnableMfaResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12W\n" +
 	"\x12setup_instructions\x18\x02 \x03(\v2\x1e.common.v1.MfaSetupInstructionB\b\xbaH\x05\x92\x01\x02\b\x01R\x11setupInstructions\x12,\n" +
-	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_enable_mfa_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_enable_mfa_response_proto_goTypes = []any{

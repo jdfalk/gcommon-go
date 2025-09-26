@@ -234,7 +234,7 @@ const file_health_v1_check_registry_proto_rawDesc = "" +
 	"\x12monitored_services\x18\x06 \x03(\tR\x11monitoredServices\x1aQ\n" +
 	"\vChecksEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12,\n" +
-	"\x05value\x18\x02 \x01(\v2\x16.health.v1.HealthCheckR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\v2\x16.health.v1.HealthCheckR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/health\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_check_registry_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_health_v1_check_registry_proto_goTypes = []any{

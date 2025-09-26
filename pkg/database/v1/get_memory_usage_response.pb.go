@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -166,7 +166,7 @@ const file_database_v1_get_memory_usage_response_proto_rawDesc = "" +
 	"\x16GetMemoryUsageResponse\x125\n" +
 	"\x12memory_usage_bytes\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10memoryUsageBytes\x12I\n" +
 	"\x14memory_usage_percent\x18\x02 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\x12memoryUsagePercent\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_memory_usage_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_memory_usage_response_proto_goTypes = []any{

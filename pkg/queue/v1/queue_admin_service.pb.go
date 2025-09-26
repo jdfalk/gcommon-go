@@ -34,7 +34,7 @@ const file_queue_v1_queue_admin_service_proto_rawDesc = "" +
 	"\vResumeQueue\x12\x1c.queue.v1.ResumeQueueRequest\x1a\x1d.queue.v1.ResumeQueueResponse\x12=\n" +
 	"\n" +
 	"PurgeQueue\x12\x16.queue.v1.PurgeRequest\x1a\x17.queue.v1.PurgeResponse\x12V\n" +
-	"\x0fResetQueueStats\x12 .queue.v1.ResetQueueStatsRequest\x1a!.queue.v1.ResetQueueStatsResponseB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fResetQueueStats\x12 .queue.v1.ResetQueueStatsRequest\x1a!.queue.v1.ResetQueueStatsResponseB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_queue_admin_service_proto_goTypes = []any{
 	(*CreateQueueRequest)(nil),      // 0: queue.v1.CreateQueueRequest

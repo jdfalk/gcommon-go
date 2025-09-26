@@ -208,7 +208,7 @@ const file_common_v1_get_health_history_request_proto_rawDesc = "" +
 	"\n" +
 	"start_time\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\tstartTime\x125\n" +
 	"\bend_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\aendTime\x12:\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_health_history_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_health_history_request_proto_goTypes = []any{

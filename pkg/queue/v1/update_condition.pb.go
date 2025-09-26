@@ -273,7 +273,7 @@ const file_queue_v1_update_condition_proto_rawDesc = "" +
 	"\x0fmax_age_seconds\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rmaxAgeSeconds\x121\n" +
 	"\x15only_if_not_delivered\x18\x04 \x01(\bR\x12onlyIfNotDelivered\x12&\n" +
 	"\x0fonly_if_visible\x18\x05 \x01(\bR\ronlyIfVisible\x12:\n" +
-	"\x14condition_expression\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x13conditionExpressionB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14condition_expression\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x13conditionExpressionB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_update_condition_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_update_condition_proto_goTypes = []any{

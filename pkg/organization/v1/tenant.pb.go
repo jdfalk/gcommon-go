@@ -8,7 +8,7 @@ package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -795,7 +795,7 @@ const file_organization_v1_tenant_proto_rawDesc = "" +
 	"\x06locale\x18\x12 \x01(\tR\x06locale\x12\x1d\n" +
 	"\n" +
 	"trial_mode\x18\x13 \x01(\bR\ttrialMode\x12H\n" +
-	"\x10trial_expires_at\x18\x14 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\x0etrialExpiresAtB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10trial_expires_at\x18\x14 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\x0etrialExpiresAtB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_tenant_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_tenant_proto_goTypes = []any{

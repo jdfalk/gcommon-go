@@ -251,7 +251,7 @@ const file_common_v1_error_info_proto_rawDesc = "" +
 	"\x06causes\x18\x06 \x03(\v2\x14.common.v1.ErrorInfoB\b\xbaH\x05\x92\x01\x02\b\x01R\x06causes\x1a:\n" +
 	"\fContextEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_error_info_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_common_v1_error_info_proto_goTypes = []any{

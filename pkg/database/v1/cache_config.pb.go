@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -338,7 +338,7 @@ const file_database_v1_cache_config_proto_rawDesc = "" +
 	"\fenable_stats\x18\x05 \x01(\bR\venableStats\x12-\n" +
 	"\x12enable_persistence\x18\x06 \x01(\bR\x11enablePersistence\x12)\n" +
 	"\x10persistence_file\x18\a \x01(\tR\x0fpersistenceFile\x12\x1d\n" +
-	"\x04name\x18\b \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04nameB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04name\x18\b \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04nameB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_cache_config_proto_goTypes = []any{

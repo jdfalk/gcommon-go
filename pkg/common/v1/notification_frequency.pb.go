@@ -238,7 +238,7 @@ const file_common_v1_notification_frequency_proto_rawDesc = "" +
 	"\x0eweekly_summary\x18\x02 \x01(\bR\rweeklySummary\x123\n" +
 	"\x15instant_notifications\x18\x03 \x01(\bR\x14instantNotifications\x123\n" +
 	"\x11quiet_hours_start\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fquietHoursStart\x12/\n" +
-	"\x0fquiet_hours_end\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rquietHoursEndB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fquiet_hours_end\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rquietHoursEndB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_notification_frequency_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_notification_frequency_proto_goTypes = []any{

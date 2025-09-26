@@ -226,7 +226,7 @@ const file_queue_v1_routing_info_proto_rawDesc = "" +
 	"\fpartition_id\x18\x02 \x01(\x05R\vpartitionId\x12#\n" +
 	"\rpartition_key\x18\x03 \x01(\tR\fpartitionKey\x12.\n" +
 	"\rexchange_name\x18\x04 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\fexchangeName\x12!\n" +
-	"\frouting_tags\x18\x05 \x03(\tR\vroutingTagsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frouting_tags\x18\x05 \x03(\tR\vroutingTagsB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_routing_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_routing_info_proto_goTypes = []any{

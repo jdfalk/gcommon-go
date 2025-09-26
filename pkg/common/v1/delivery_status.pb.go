@@ -82,7 +82,7 @@ const file_common_v1_delivery_status_proto_rawDesc = "" +
 	"\x17DELIVERY_STATUS_PENDING\x10\x01\x12\x18\n" +
 	"\x14DELIVERY_STATUS_SENT\x10\x02\x12\x1a\n" +
 	"\x16DELIVERY_STATUS_FAILED\x10\x03\x12 \n" +
-	"\x1cDELIVERY_STATUS_ACKNOWLEDGED\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1cDELIVERY_STATUS_ACKNOWLEDGED\x10\x04B.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_delivery_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_delivery_status_proto_goTypes = []any{

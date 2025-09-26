@@ -132,7 +132,7 @@ const file_media_v1_analyze_media_request_proto_rawDesc = "" +
 	"$media/v1/analyze_media_request.proto\x12\bmedia.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\x1a\x1fmedia/v1/analysis_options.proto\"w\n" +
 	"\x13AnalyzeMediaRequest\x12+\n" +
 	"\rmedia_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vmediaFileId\x123\n" +
-	"\aoptions\x18\x02 \x01(\v2\x19.media.v1.AnalysisOptionsR\aoptionsB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aoptions\x18\x02 \x01(\v2\x19.media.v1.AnalysisOptionsR\aoptionsB-Z#github.com/jdfalk/gcommon/pkg/media\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_analyze_media_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_analyze_media_request_proto_goTypes = []any{

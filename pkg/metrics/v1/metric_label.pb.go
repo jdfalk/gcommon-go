@@ -146,7 +146,7 @@ const file_metrics_v1_metric_label_proto_rawDesc = "" +
 	"metrics.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"G\n" +
 	"\vMetricLabel\x12\x19\n" +
 	"\x03key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03key\x12\x1d\n" +
-	"\x05value\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05valueB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05valueB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_label_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_label_proto_goTypes = []any{

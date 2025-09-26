@@ -286,7 +286,7 @@ const file_config_v1_approval_requirement_proto_rawDesc = "" +
 	"\x06policy\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06policy\x12#\n" +
 	"\bworkflow\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bworkflow\x12B\n" +
 	"\x18auto_approval_conditions\x18\a \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x16autoApprovalConditions\x12=\n" +
-	"\x16approval_timeout_hours\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x14approvalTimeoutHoursB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16approval_timeout_hours\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x14approvalTimeoutHoursB.Z$github.com/jdfalk/gcommon/pkg/config\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_approval_requirement_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_approval_requirement_proto_goTypes = []any{

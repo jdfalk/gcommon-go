@@ -295,7 +295,7 @@ const file_common_v1_permission_metadata_proto_rawDesc = "" +
 	"\n" +
 	"created_at\x18\a \x01(\x03R\tcreatedAt\x12s\n" +
 	"\n" +
-	"created_by\x18\b \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tcreatedByB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"created_by\x18\b \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tcreatedByB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_permission_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_permission_metadata_proto_goTypes = []any{

@@ -237,7 +237,7 @@ const file_organization_v1_audit_config_proto_rawDesc = "" +
 	"\x10storage_location\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fstorageLocation\x12/\n" +
 	"\x0eaudited_events\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rauditedEvents\x120\n" +
 	"\x14real_time_monitoring\x18\x05 \x01(\bR\x12realTimeMonitoring\x12=\n" +
-	"\x06alerts\x18\x06 \x03(\v2\x1b.organization.v1.AuditAlertB\b\xbaH\x05\x92\x01\x02\b\x01R\x06alertsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06alerts\x18\x06 \x03(\v2\x1b.organization.v1.AuditAlertB\b\xbaH\x05\x92\x01\x02\b\x01R\x06alertsB4Z*github.com/jdfalk/gcommon/pkg/organization\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_audit_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_audit_config_proto_goTypes = []any{

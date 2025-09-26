@@ -90,7 +90,7 @@ const file_common_v1_list_notifications_response_proto_rawDesc = "" +
 	"\n" +
 	"+common/v1/list_notifications_response.proto\x12\tcommon.v1\x1a$common/v1/notification_message.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"k\n" +
 	"\x19ListNotificationsResponse\x12N\n" +
-	"\rnotifications\x18\x01 \x03(\v2\x1e.common.v1.NotificationMessageB\b\xbaH\x05\x92\x01\x02\b\x01R\rnotificationsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rnotifications\x18\x01 \x03(\v2\x1e.common.v1.NotificationMessageB\b\xbaH\x05\x92\x01\x02\b\x01R\rnotificationsB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_list_notifications_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_list_notifications_response_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -368,7 +368,7 @@ const file_metrics_v1_stream_options_proto_rawDesc = "" +
 	"\x1aheartbeat_interval_seconds\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x18heartbeatIntervalSeconds\x12\x1d\n" +
 	"\n" +
 	"auto_retry\x18\b \x01(\bR\tautoRetry\x12&\n" +
-	"\x03qos\x18\t \x01(\x0e2\x14.common.v1.StreamQOSR\x03qosB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x03qos\x18\t \x01(\x0e2\x14.common.v1.StreamQOSR\x03qosB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stream_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stream_options_proto_goTypes = []any{

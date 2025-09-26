@@ -32,7 +32,7 @@ const file_database_v1_database_service_proto_rawDesc = "" +
 	"\aExecute\x12\x1b.database.v1.ExecuteRequest\x1a\x1c.database.v1.ExecuteResponse\x12S\n" +
 	"\fExecuteBatch\x12 .database.v1.ExecuteBatchRequest\x1a!.database.v1.ExecuteBatchResponse\x12b\n" +
 	"\x11GetConnectionInfo\x12%.database.v1.GetConnectionInfoRequest\x1a&.database.v1.GetConnectionInfoResponse\x12`\n" +
-	"\vHealthCheck\x12'.database.v1.DatabaseHealthCheckRequest\x1a(.database.v1.DatabaseHealthCheckResponseB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vHealthCheck\x12'.database.v1.DatabaseHealthCheckRequest\x1a(.database.v1.DatabaseHealthCheckResponseB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_database_service_proto_goTypes = []any{
 	(*QueryRequest)(nil),                // 0: database.v1.QueryRequest

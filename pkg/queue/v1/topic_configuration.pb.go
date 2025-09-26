@@ -399,7 +399,7 @@ const file_queue_v1_topic_configuration_proto_rawDesc = "" +
 	"\x0ecleanup_policy\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rcleanupPolicy\x127\n" +
 	"\x13min_insync_replicas\x18\t \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11minInsyncReplicas\x125\n" +
 	"\x12segment_size_bytes\x18\n" +
-	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10segmentSizeBytesB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10segmentSizeBytesB-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_topic_configuration_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_topic_configuration_proto_goTypes = []any{

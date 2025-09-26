@@ -254,7 +254,7 @@ const file_common_v1_client_info_proto_rawDesc = "" +
 	"ip_address\x18\x03 \x01(\tR\tipAddress\x12\x1d\n" +
 	"\n" +
 	"user_agent\x18\x04 \x01(\tR\tuserAgent\x12\x1a\n" +
-	"\bplatform\x18\x05 \x01(\tR\bplatformB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bplatform\x18\x05 \x01(\tR\bplatformB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_client_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_client_info_proto_goTypes = []any{

@@ -267,7 +267,7 @@ const file_common_v1_log_statistics_proto_rawDesc = "" +
 	"total_size\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ttotalSize\x12(\n" +
 	"\verror_count\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"errorCount\x12,\n" +
-	"\rwarning_count\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fwarningCountB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rwarning_count\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fwarningCountB.Z$github.com/jdfalk/gcommon/pkg/common\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_log_statistics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_log_statistics_proto_goTypes = []any{

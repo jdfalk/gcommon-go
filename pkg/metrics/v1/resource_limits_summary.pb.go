@@ -396,7 +396,7 @@ const file_metrics_v1_resource_limits_summary_proto_rawDesc = "" +
 	"\x1anetwork_used_bytes_per_sec\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x16networkUsedBytesPerSec\x12'\n" +
 	"\x0flimits_enforced\x18\t \x01(\bR\x0elimitsEnforced\x122\n" +
 	"\x10violations_count\x18\n" +
-	" \x01(\rB\a\xbaH\x04*\x02(\x00R\x0fviolationsCountB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\rB\a\xbaH\x04*\x02(\x00R\x0fviolationsCountB/Z%github.com/jdfalk/gcommon/pkg/metrics\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_resource_limits_summary_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_resource_limits_summary_proto_goTypes = []any{

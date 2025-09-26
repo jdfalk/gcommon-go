@@ -8,7 +8,7 @@ package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	common "github.com/jdfalk/gcommon/pkg/common/"
+	common "github.com/jdfalk/gcommon/pkg/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -234,7 +234,7 @@ const file_database_v1_touch_expiration_request_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03key\x12/\n" +
 	"\x03ttl\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x03ttl\x12%\n" +
 	"\tnamespace\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/database\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_touch_expiration_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_touch_expiration_request_proto_goTypes = []any{

@@ -30,7 +30,7 @@ const file_queue_v1_queue_monitoring_service_proto_rawDesc = "" +
 	"\x0eGetClusterInfo\x12\x1f.queue.v1.GetClusterInfoRequest\x1a .queue.v1.GetClusterInfoResponse\x12S\n" +
 	"\x0eGetQueueHealth\x12\x1f.queue.v1.GetQueueHealthRequest\x1a .queue.v1.GetQueueHealthResponse\x12M\n" +
 	"\rGetQueueStats\x12\x1e.queue.v1.GetQueueStatsRequest\x1a\x1c.queue.v1.QueueStatsResponse\x12N\n" +
-	"\rStreamMetrics\x12#.queue.v1.QueueStreamMetricsRequest\x1a\x16.queue.v1.MetricsEvent0\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rStreamMetrics\x12#.queue.v1.QueueStreamMetricsRequest\x1a\x16.queue.v1.MetricsEvent0\x01B-Z#github.com/jdfalk/gcommon/pkg/queue\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_queue_monitoring_service_proto_goTypes = []any{
 	(*GetClusterInfoRequest)(nil),     // 0: queue.v1.GetClusterInfoRequest
