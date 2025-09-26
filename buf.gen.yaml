@@ -1,5 +1,5 @@
 # file: buf.gen.managed.yaml
-# version: 2.0.0
+# version: 2.1.0
 # guid: buf-gen-managed-mode-gcommon
 
 version: v2
@@ -50,6 +50,10 @@ managed:
       module: buf.build/jdfalk/gcommon
       path: web/v1
       value: github.com/jdfalk/gcommon/pkg/webpb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: auth/v1
+      value: github.com/jdfalk/gcommon/pkg/authpb
 
     # v2 files: old BSR paths to new pb-suffixed Go packages with v2 subdirectory
     - file_option: go_package_prefix
@@ -88,6 +92,10 @@ managed:
       module: buf.build/jdfalk/gcommon
       path: web/v2
       value: github.com/jdfalk/gcommon/pkg/webpb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: auth/v2
+      value: github.com/jdfalk/gcommon/pkg/authpb/v2
 plugins:
   - remote: buf.build/protocolbuffers/go
     out: pkg
