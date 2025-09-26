@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/media
+module github.com/jdfalk/gcommon/pkg/media
 
 go 1.24
 

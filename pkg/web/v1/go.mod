@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/web
+module github.com/jdfalk/gcommon/pkg/web
 
 go 1.24
 

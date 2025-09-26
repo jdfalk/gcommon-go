@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/common/v2
+module github.com/jdfalk/gcommon/pkg/common/v2
 
 go 1.24
 

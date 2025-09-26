@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/health
+module github.com/jdfalk/gcommon/pkg/health
 
 go 1.24
 

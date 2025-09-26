@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/organization/v2
+module github.com/jdfalk/gcommon/pkg/organization/v2
 
 go 1.24
 

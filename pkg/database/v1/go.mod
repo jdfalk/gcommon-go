@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/database
+module github.com/jdfalk/gcommon/pkg/database
 
 go 1.24
 

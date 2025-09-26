@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/queue/v2
+module github.com/jdfalk/gcommon/pkg/queue/v2
 
 go 1.24
 

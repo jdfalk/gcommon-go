@@ -1,4 +1,4 @@
-module github.com/jdfalk/gcommon-go/pkg/metrics
+module github.com/jdfalk/gcommon/pkg/metrics
 
 go 1.24
 
