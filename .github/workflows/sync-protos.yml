@@ -1,8 +1,8 @@
 # file: .github/workflows/sync-protos.yml
-# version: 2.0.0
+# version: 3.0.0
 # guid: sync-protos-workflow-gcommon-go
 
-name: Sync Protocol Buffers
+name: Generate Go Code from BSR
 
 on:
   # Triggered by gcommon repository when protos are updated
@@ -12,11 +12,11 @@ on:
   # Manual trigger
   workflow_dispatch:
     inputs:
-      gcommon_ref:
-        description: 'gcommon repository reference (branch/tag/commit)'
+      force_regenerate:
+        description: 'Force regeneration even if no changes detected'
         required: false
-        default: 'main'
-        type: string
+        default: false
+        type: boolean
 
   # Schedule periodic sync (daily at 6 AM UTC)
   schedule:
@@ -27,7 +27,7 @@ permissions:
   pull-requests: write
 
 jobs:
-  sync-and-generate:
+  generate:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,14 +36,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
-      - name: Checkout gcommon repository
-        uses: actions/checkout@v4
-        with:
-          repository: jdfalk/gcommon
-          ref: ${{ inputs.gcommon_ref || github.event.client_payload.ref || 'main' }}
-          path: gcommon-source
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up buf
         uses: bufbuild/buf-setup-action@v1.41.0
@@ -55,23 +47,14 @@ jobs:
         with:
           go-version: '1.24'
 
-      - name: Sync protocol buffer definitions
+      - name: Generate Go code from BSR
         run: |
-          # Remove existing proto directory
-          rm -rf proto/
-
-          # Copy proto definitions from gcommon
-          cp -r gcommon-source/proto/ ./
-
-          echo "Synced proto files from gcommon repository"
-
-      - name: Generate Go code
-        run: |
+          echo "Generating Go code from buf.build/jdfalk/gcommon..."
           buf generate
 
       - name: Update go.mod module reference
         run: |
-          # Update any generated .pb.go files to use the correct module path
+          # Ensure generated .pb.go files use the correct module path
           find . -name "*.pb.go" -type f -exec sed -i 's|github.com/jdfalk/gcommon-go|github.com/jdfalk/gcommon|g' {} \;
 
       - name: Run go mod tidy
@@ -93,25 +76,24 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.changes.outputs.has_changes == 'true'
+        if: steps.changes.outputs.has_changes == 'true' || inputs.force_regenerate == 'true'
         run: |
           git add .
-          git commit -m "chore(protos): sync protocol buffer definitions from gcommon
+          git commit -m "feat(gen): regenerate Go code from BSR
 
-          Automatically synced protocol buffer definitions from jdfalk/gcommon repository
-          and regenerated Go code.
+          Automatically regenerated Go code from buf.build/jdfalk/gcommon.
 
-          Source: ${{ github.event.client_payload.ref || inputs.gcommon_ref || 'main' }}"
+          Generated from latest protocol buffer definitions."
           git push
 
       - name: Summary
         run: |
-          echo "## Protocol Buffer Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Go Code Generation Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ]; then
-            echo "✅ Successfully synced and updated protocol buffer definitions" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.changes.outputs.has_changes }}" == "true" ] || [ "${{ inputs.force_regenerate }}" == "true" ]; then
+            echo "✅ Successfully regenerated Go code from BSR" >> $GITHUB_STEP_SUMMARY
             echo "📦 Generated Go code has been updated" >> $GITHUB_STEP_SUMMARY
           else
-            echo "ℹ️ No changes detected - protocol buffers are up to date" >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ No changes detected - generated code is up to date" >> $GITHUB_STEP_SUMMARY
           fi
-          echo "🔗 Source: jdfalk/gcommon@${{ github.event.client_payload.ref || inputs.gcommon_ref || 'main' }}" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 Source: buf.build/jdfalk/gcommon" >> $GITHUB_STEP_SUMMARY
