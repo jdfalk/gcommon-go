@@ -4,11 +4,13 @@
 
 module github.com/jdfalk/gcommon/pkg/database/v2
 
-go 1.21
+go 1.24
 
 require (
+	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1
+	github.com/jdfalk/gcommon/pkg/common/v2 v2.1.1
 	google.golang.org/grpc v1.65.0
-	google.golang.org/protobuf v1.34.2
+	google.golang.org/protobuf v1.36.9
 )
 
 require (

@@ -2,8 +2,8 @@ buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-2025091214101
 buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1/go.mod h1:aY3zbkNan5F+cGm9lITDP6oxJIwu0dn9KjJuJjWaHkg=
 github.com/google/go-cmp v0.6.0 h1:ofyhxvXcZhMsU5ulbFiLKl/XBFqE1GSq7atu8tAmTRI=
 github.com/google/go-cmp v0.6.0/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
-github.com/jdfalk/gcommon/pkg/common/v2 v2.1.1 h1:/NY/CuCXf+R7q4m0s6g6hxJMG+rM32Lj/AaEubKbA6E=
-github.com/jdfalk/gcommon/pkg/common/v2 v2.1.1/go.mod h1:bPY3dnSCWsJ/6LnRPpOPSoh+IxTV96Ag3ch9JJsdDMU=
+github.com/jdfalk/gcommon/pkg/common v1.9.7 h1:e+sV0z218mX81I3R/q73LNHAaEQswCtq/mnaQ1FHAlw=
+github.com/jdfalk/gcommon/pkg/common v1.9.7/go.mod h1:5FqIS6jzHVGhiBBppyZrlAwbcgDp51pyYWWWgtbUGTM=
 golang.org/x/net v0.25.0 h1:d/OCCoBEUq33pjydKrGQhw7IlUPI2Oylr+8qLx49kac=
 golang.org/x/net v0.25.0/go.mod h1:JkAGAh7GEvH74S6FOH42FLoXpXbE/aqXSrIQjXgsiwM=
 golang.org/x/sys v0.20.0 h1:Od9JTbYCk261bKm4M/mw7AklTlFYIa0bIp9BgSm1S8Y=
