@@ -21,13 +21,6 @@ go.work
 .vscode/
 .idea/
 
-# Generated protocol buffer files
-*.pb.go
-*_grpc.pb.go
-
-# Temporary proto directory
-proto/
-
 # Logs
 logs/
 *.log
