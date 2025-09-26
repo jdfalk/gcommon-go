@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # file: scripts/fix-go-paths.py
-# version: 2.0.0
+# version: 2.1.0
 # guid: fix-go-paths-v1-v2-script
 
 """
@@ -90,7 +90,7 @@ def create_go_mod_v1(module_dir: Path, module_name: str):
 
 module github.com/jdfalk/gcommon/pkg/{module_name}
 
-go 1.21
+go 1.24
 
 require (
 \tgoogle.golang.org/grpc v1.65.0
@@ -120,7 +120,7 @@ def create_go_mod_v2(v2_dir: Path, module_name: str):
 
 module github.com/jdfalk/gcommon/pkg/{module_name}/v2
 
-go 1.21
+go 1.24
 
 require (
 \tgoogle.golang.org/grpc v1.65.0

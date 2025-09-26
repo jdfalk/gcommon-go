@@ -4,11 +4,13 @@
 
 module github.com/jdfalk/gcommon/pkg/healthpb
 
-go 1.21
+go 1.24
 
 require (
+	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1
+	github.com/jdfalk/gcommon/pkg/commonpb v0.0.0-20250926164202-48e80cd3f3d1
 	google.golang.org/grpc v1.65.0
-	google.golang.org/protobuf v1.34.2
+	google.golang.org/protobuf v1.36.9
 )
 
 require (
