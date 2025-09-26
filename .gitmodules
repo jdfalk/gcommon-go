@@ -1,0 +1,3 @@
+[submodule "protos"]
+	path = protos
+	url = https://github.com/jdfalk/gcommon.git
