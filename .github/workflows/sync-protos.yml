@@ -1,11 +1,11 @@
 # file: .github/workflows/sync-protos.yml
-# version: 3.0.0
-# guid: sync-protos-workflow-gcommon-go
+# version: 3.1.0
+# guid: sync-protos-workflow-gcommon
 
 name: Generate Go Code from BSR
 
 on:
-  # Triggered by gcommon repository when protos are updated
+  # Triggered by gcommon-proto repository when protos are updated
   repository_dispatch:
     types: [sync-protos]
 
@@ -13,14 +13,14 @@ on:
   workflow_dispatch:
     inputs:
       force_regenerate:
-        description: 'Force regeneration even if no changes detected'
+        description: "Force regeneration even if no changes detected"
         required: false
         default: false
         type: boolean
 
   # Schedule periodic sync (daily at 6 AM UTC)
   schedule:
-    - cron: '0 6 * * *'
+    - cron: "0 6 * * *"
 
 permissions:
   contents: write
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout gcommon-go repository
+      - name: Checkout gcommon repository
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,7 +45,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.24'
+          go-version: "1.24"
 
       - name: Generate Go code from BSR
         run: |
