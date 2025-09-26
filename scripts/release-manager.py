@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 # file: scripts/release-manager.py
 # version: 1.0.0
-# guid: release-manager-automation-script
+#!/usr/bin/env python3
+# file: scripts/release-manager.py
+# version: 1.1.0
+# guid: b9f7c8d3-2a4e-4c5b-8f1a-9e6d7b2c1a3f
 
 """
 Automated Release Management Script
@@ -166,22 +169,31 @@ class ReleaseManager:
         success_count = 0
         for go_mod_file in go_mod_files:
             module_dir = Path(go_mod_file).parent
+            full_module_path = self.repo_path / module_dir
             logger.info(f"  📦 Running go mod tidy in {module_dir}")
 
-            result = self.run_command(
+            # Run go mod tidy in the specific module directory
+            result = subprocess.run(
                 ["go", "mod", "tidy"],
+                cwd=full_module_path,
                 check=False,
-                capture_output=True
+                capture_output=True,
+                text=True
             )
 
             if result.returncode == 0:
                 success_count += 1
-                logger.debug(f"    ✅ Success: {module_dir}")
+                logger.info(f"    ✅ go mod tidy successful for {module_dir}")
             else:
-                logger.warning(f"    ⚠️  Failed: {module_dir} - {result.stderr}")
+                logger.error(f"    ❌ go mod tidy failed for {module_dir}")
+                if result.stderr:
+                    logger.error(f"    Error: {result.stderr.strip()}")
 
-        logger.info(f"✅ Completed go mod tidy on {success_count}/{len(go_mod_files)} modules")
-        return success_count > 0
+        logger.info(f"🔧 go mod tidy completed: {success_count}/{len(go_mod_files)} modules successful")
+        if success_count != len(go_mod_files):
+            logger.warning(f"⚠️ {len(go_mod_files) - success_count} modules failed go mod tidy")
+
+        return success_count == len(go_mod_files)
 
     def generate_changelog(self) -> str:
         """Generate changelog for the release."""
