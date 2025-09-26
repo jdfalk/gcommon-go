@@ -1,12 +1,93 @@
-# file: buf.gen.yaml
-# version: 3.0.0
-# guid: buf-gen-config-gcommon-go
+# file: buf.gen.managed.yaml
+# version: 2.0.0
+# guid: buf-gen-managed-mode-gcommon
 
 version: v2
 inputs:
   - module: buf.build/jdfalk/gcommon
 managed:
-  enabled: false
+  enabled: true
+  disable:
+    - file_option: go_package_prefix
+      module: buf.build/googleapis/googleapis
+  override:
+    # Map old BSR paths to new pb-suffixed Go packages
+    # BSR still has old structure (common/v1/) but we want new Go packages (pkg/commonpb)
+    # v1 files: common/v1/ -> pkg/commonpb (no v1 subdirectory)
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: common/v1
+      value: github.com/jdfalk/gcommon/pkg/commonpb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: config/v1
+      value: github.com/jdfalk/gcommon/pkg/configpb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: database/v1
+      value: github.com/jdfalk/gcommon/pkg/databasepb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: health/v1
+      value: github.com/jdfalk/gcommon/pkg/healthpb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: media/v1
+      value: github.com/jdfalk/gcommon/pkg/mediapb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: metrics/v1
+      value: github.com/jdfalk/gcommon/pkg/metricspb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: organization/v1
+      value: github.com/jdfalk/gcommon/pkg/organizationpb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: queue/v1
+      value: github.com/jdfalk/gcommon/pkg/queuepb
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: web/v1
+      value: github.com/jdfalk/gcommon/pkg/webpb
+
+    # v2 files: old BSR paths to new pb-suffixed Go packages with v2 subdirectory
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: common/v2
+      value: github.com/jdfalk/gcommon/pkg/commonpb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: config/v2
+      value: github.com/jdfalk/gcommon/pkg/configpb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: database/v2
+      value: github.com/jdfalk/gcommon/pkg/databasepb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: health/v2
+      value: github.com/jdfalk/gcommon/pkg/healthpb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: media/v2
+      value: github.com/jdfalk/gcommon/pkg/mediapb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: metrics/v2
+      value: github.com/jdfalk/gcommon/pkg/metricspb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: organization/v2
+      value: github.com/jdfalk/gcommon/pkg/organizationpb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: queue/v2
+      value: github.com/jdfalk/gcommon/pkg/queuepb/v2
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: web/v2
+      value: github.com/jdfalk/gcommon/pkg/webpb/v2
 plugins:
   - remote: buf.build/protocolbuffers/go
     out: pkg
