@@ -7,6 +7,10 @@ replace github.com/jdfalk/gcommon/internal => ./internal
 
 replace github.com/jdfalk/gcommon/services => ./services
 
+replace github.com/jdfalk/gcommon/services/health => ./services/health
+
+replace github.com/jdfalk/gcommon/services/auth => ./services/auth
+
 require (
 	github.com/jdfalk/gcommon/internal v0.0.0-00010101000000-000000000000
 	google.golang.org/grpc v1.75.1
