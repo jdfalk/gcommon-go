@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/list_users_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -289,7 +289,7 @@ const file_common_v1_list_users_response_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\n" +
 	"totalPages\x12\"\n" +
 	"\rhas_next_page\x18\x06 \x01(\bR\vhasNextPage\x12*\n" +
-	"\x11has_previous_page\x18\a \x01(\bR\x0fhasPreviousPageB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11has_previous_page\x18\a \x01(\bR\x0fhasPreviousPageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_list_users_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_list_users_response_proto_goTypes = []any{

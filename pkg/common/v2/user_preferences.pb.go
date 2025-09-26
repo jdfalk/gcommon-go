@@ -299,7 +299,7 @@ const file_common_v2_user_preferences_proto_rawDesc = "" +
 	"\x10marketing_emails\x18\x04 \x01(\bR\x0fmarketingEmails\x12,\n" +
 	"\x12two_factor_enabled\x18\x05 \x01(\bR\x10twoFactorEnabled\x12?\n" +
 	"\x17session_timeout_minutes\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x15sessionTimeoutMinutes\x12\x1d\n" +
-	"\x05theme\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05themeB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05theme\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05themeB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_user_preferences_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_user_preferences_proto_goTypes = []any{

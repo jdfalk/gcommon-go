@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/proxy_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 // ProxyConfig message definition.
 type ProxyConfig struct {
 	state                          protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ProxyType           v1.ProxyType           `protobuf:"varint,1,opt,name=proxy_type,json=proxyType,enum=common.v1.ProxyType"`
+	xxx_hidden_ProxyType           common.ProxyType       `protobuf:"varint,1,opt,name=proxy_type,json=proxyType,enum=common.v1.ProxyType"`
 	xxx_hidden_TargetUrl           *string                `protobuf:"bytes,2,opt,name=target_url,json=targetUrl"`
 	xxx_hidden_ForwardHeaders      *[]*HttpHeader         `protobuf:"bytes,3,rep,name=forward_headers,json=forwardHeaders"`
 	xxx_hidden_ConnectTimeout      *durationpb.Duration   `protobuf:"bytes,4,opt,name=connect_timeout,json=connectTimeout"`
@@ -63,13 +63,13 @@ func (x *ProxyConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ProxyConfig) GetProxyType() v1.ProxyType {
+func (x *ProxyConfig) GetProxyType() common.ProxyType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_ProxyType
 		}
 	}
-	return v1.ProxyType(0)
+	return common.ProxyType(0)
 }
 
 func (x *ProxyConfig) GetTargetUrl() string {
@@ -105,7 +105,7 @@ func (x *ProxyConfig) GetTrustForwardHeaders() bool {
 	return false
 }
 
-func (x *ProxyConfig) SetProxyType(v v1.ProxyType) {
+func (x *ProxyConfig) SetProxyType(v common.ProxyType) {
 	x.xxx_hidden_ProxyType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
@@ -158,7 +158,7 @@ func (x *ProxyConfig) HasTrustForwardHeaders() bool {
 
 func (x *ProxyConfig) ClearProxyType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_ProxyType = v1.ProxyType_PROXY_TYPE_UNSPECIFIED
+	x.xxx_hidden_ProxyType = common.ProxyType_PROXY_TYPE_UNSPECIFIED
 }
 
 func (x *ProxyConfig) ClearTargetUrl() {
@@ -179,7 +179,7 @@ type ProxyConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Type of proxy
-	ProxyType *v1.ProxyType
+	ProxyType *common.ProxyType
 	// Target backend URL
 	TargetUrl *string
 	// Headers to forward to the backend
@@ -223,12 +223,12 @@ const file_web_v1_proxy_config_proto_rawDesc = "" +
 	"target_url\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\ttargetUrl\x12;\n" +
 	"\x0fforward_headers\x18\x03 \x03(\v2\x12.web.v1.HttpHeaderR\x0eforwardHeaders\x12B\n" +
 	"\x0fconnect_timeout\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\x0econnectTimeout\x122\n" +
-	"\x15trust_forward_headers\x18\x05 \x01(\bR\x13trustForwardHeadersB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15trust_forward_headers\x18\x05 \x01(\bR\x13trustForwardHeadersB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_proxy_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_proxy_config_proto_goTypes = []any{
 	(*ProxyConfig)(nil),         // 0: web.v1.ProxyConfig
-	(v1.ProxyType)(0),           // 1: common.v1.ProxyType
+	(common.ProxyType)(0),       // 1: common.v1.ProxyType
 	(*HttpHeader)(nil),          // 2: web.v1.HttpHeader
 	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
 }

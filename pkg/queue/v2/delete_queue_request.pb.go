@@ -172,7 +172,7 @@ const file_queue_v2_delete_queue_request_proto_rawDesc = "" +
 	"\x05queue\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05queue\x12\x14\n" +
 	"\x05force\x18\x02 \x01(\bR\x05force\x12\x1f\n" +
 	"\vpurge_first\x18\x03 \x01(\bR\n" +
-	"purgeFirstB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"purgeFirstB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_delete_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_delete_queue_request_proto_goTypes = []any{

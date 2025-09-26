@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/set_options.proto
 
-package v1
+package database
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -217,7 +217,7 @@ const file_database_v1_set_options_proto_rawDesc = "" +
 	"\x0eonly_if_absent\x18\x01 \x01(\bR\fonlyIfAbsent\x12&\n" +
 	"\x0fonly_if_present\x18\x02 \x01(\bR\ronlyIfPresent\x12/\n" +
 	"\x03ttl\x18\x03 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x03ttl\x12'\n" +
-	"\x0freturn_previous\x18\x04 \x01(\bR\x0ereturnPreviousB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0freturn_previous\x18\x04 \x01(\bR\x0ereturnPreviousB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_set_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_set_options_proto_goTypes = []any{

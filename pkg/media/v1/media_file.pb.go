@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: media/v1/media_file.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,7 +30,7 @@ type MediaFile struct {
 	xxx_hidden_Id             *string                `protobuf:"bytes,1,opt,name=id"`
 	xxx_hidden_Path           *string                `protobuf:"bytes,2,opt,name=path"`
 	xxx_hidden_Filename       *string                `protobuf:"bytes,3,opt,name=filename"`
-	xxx_hidden_Type           v1.MediaType           `protobuf:"varint,4,opt,name=type,enum=common.v1.MediaType"`
+	xxx_hidden_Type           common.MediaType       `protobuf:"varint,4,opt,name=type,enum=common.v1.MediaType"`
 	xxx_hidden_SizeBytes      int64                  `protobuf:"varint,5,opt,name=size_bytes,json=sizeBytes"`
 	xxx_hidden_CreatedAt      *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=created_at,json=createdAt"`
 	xxx_hidden_ModifiedAt     *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=modified_at,json=modifiedAt"`
@@ -101,13 +101,13 @@ func (x *MediaFile) GetFilename() string {
 	return ""
 }
 
-func (x *MediaFile) GetType() v1.MediaType {
+func (x *MediaFile) GetType() common.MediaType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MediaType(0)
+	return common.MediaType(0)
 }
 
 func (x *MediaFile) GetSizeBytes() int64 {
@@ -192,7 +192,7 @@ func (x *MediaFile) SetFilename(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 11)
 }
 
-func (x *MediaFile) SetType(v v1.MediaType) {
+func (x *MediaFile) SetType(v common.MediaType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 11)
 }
@@ -316,7 +316,7 @@ func (x *MediaFile) ClearFilename() {
 
 func (x *MediaFile) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_Type = v1.MediaType_MEDIA_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MediaType_MEDIA_TYPE_UNSPECIFIED
 }
 
 func (x *MediaFile) ClearSizeBytes() {
@@ -348,7 +348,7 @@ type MediaFile_builder struct {
 	Id             *string
 	Path           *string
 	Filename       *string
-	Type           *v1.MediaType
+	Type           *common.MediaType
 	SizeBytes      *int64
 	CreatedAt      *timestamppb.Timestamp
 	ModifiedAt     *timestamppb.Timestamp
@@ -417,12 +417,12 @@ const file_media_v1_media_file_proto_rawDesc = "" +
 	"\x0fsubtitle_tracks\x18\t \x03(\v2\x17.media.v1.SubtitleTrackR\x0esubtitleTracks\x127\n" +
 	"\faudio_tracks\x18\n" +
 	" \x03(\v2\x14.media.v1.AudioTrackR\vaudioTracks\x120\n" +
-	"\aquality\x18\v \x01(\v2\x16.media.v1.MediaQualityR\aqualityB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aquality\x18\v \x01(\v2\x16.media.v1.MediaQualityR\aqualityB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_media_file_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_media_file_proto_goTypes = []any{
 	(*MediaFile)(nil),             // 0: media.v1.MediaFile
-	(v1.MediaType)(0),             // 1: common.v1.MediaType
+	(common.MediaType)(0),         // 1: common.v1.MediaType
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 	(*MediaMetadata)(nil),         // 3: media.v1.MediaMetadata
 	(*SubtitleTrack)(nil),         // 4: media.v1.SubtitleTrack

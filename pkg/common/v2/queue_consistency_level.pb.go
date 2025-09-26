@@ -93,7 +93,7 @@ const file_common_v2_queue_consistency_level_proto_rawDesc = "" +
 	"\x1cQUEUE_CONSISTENCY_LEVEL_WEAK\x10\x02\x12\"\n" +
 	"\x1eQUEUE_CONSISTENCY_LEVEL_STRONG\x10\x03\x12&\n" +
 	"\"QUEUE_CONSISTENCY_LEVEL_SEQUENTIAL\x10\x04\x12(\n" +
-	"$QUEUE_CONSISTENCY_LEVEL_LINEARIZABLE\x10\x05B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"$QUEUE_CONSISTENCY_LEVEL_LINEARIZABLE\x10\x05B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_queue_consistency_level_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_queue_consistency_level_proto_goTypes = []any{

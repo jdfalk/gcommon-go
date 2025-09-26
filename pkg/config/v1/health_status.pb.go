@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/health_status.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,12 +25,12 @@ const (
 )
 
 type ConfigHealthStatus struct {
-	state                   protoimpl.MessageState      `protogen:"opaque.v1"`
-	xxx_hidden_Overall      v1.HealthState              `protobuf:"varint,1,opt,name=overall,enum=common.v1.HealthState"`
-	xxx_hidden_Components   map[string]v1.HealthState   `protobuf:"bytes,2,rep,name=components" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=common.v1.HealthState"`
-	xxx_hidden_HealthChecks *[]*ConfigHealthCheckResult `protobuf:"bytes,3,rep,name=health_checks,json=healthChecks"`
-	xxx_hidden_LastCheck    *timestamppb.Timestamp      `protobuf:"bytes,4,opt,name=last_check,json=lastCheck"`
-	xxx_hidden_Metrics      map[string]float64          `protobuf:"bytes,5,rep,name=metrics" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"fixed64,2,opt,name=value"`
+	state                   protoimpl.MessageState        `protogen:"opaque.v1"`
+	xxx_hidden_Overall      common.HealthState            `protobuf:"varint,1,opt,name=overall,enum=common.v1.HealthState"`
+	xxx_hidden_Components   map[string]common.HealthState `protobuf:"bytes,2,rep,name=components" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=common.v1.HealthState"`
+	xxx_hidden_HealthChecks *[]*ConfigHealthCheckResult   `protobuf:"bytes,3,rep,name=health_checks,json=healthChecks"`
+	xxx_hidden_LastCheck    *timestamppb.Timestamp        `protobuf:"bytes,4,opt,name=last_check,json=lastCheck"`
+	xxx_hidden_Metrics      map[string]float64            `protobuf:"bytes,5,rep,name=metrics" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"fixed64,2,opt,name=value"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -62,16 +62,16 @@ func (x *ConfigHealthStatus) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ConfigHealthStatus) GetOverall() v1.HealthState {
+func (x *ConfigHealthStatus) GetOverall() common.HealthState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Overall
 		}
 	}
-	return v1.HealthState(0)
+	return common.HealthState(0)
 }
 
-func (x *ConfigHealthStatus) GetComponents() map[string]v1.HealthState {
+func (x *ConfigHealthStatus) GetComponents() map[string]common.HealthState {
 	if x != nil {
 		return x.xxx_hidden_Components
 	}
@@ -101,12 +101,12 @@ func (x *ConfigHealthStatus) GetMetrics() map[string]float64 {
 	return nil
 }
 
-func (x *ConfigHealthStatus) SetOverall(v v1.HealthState) {
+func (x *ConfigHealthStatus) SetOverall(v common.HealthState) {
 	x.xxx_hidden_Overall = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *ConfigHealthStatus) SetComponents(v map[string]v1.HealthState) {
+func (x *ConfigHealthStatus) SetComponents(v map[string]common.HealthState) {
 	x.xxx_hidden_Components = v
 }
 
@@ -138,7 +138,7 @@ func (x *ConfigHealthStatus) HasLastCheck() bool {
 
 func (x *ConfigHealthStatus) ClearOverall() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Overall = v1.HealthState_HEALTH_STATE_UNSPECIFIED
+	x.xxx_hidden_Overall = common.HealthState_HEALTH_STATE_UNSPECIFIED
 }
 
 func (x *ConfigHealthStatus) ClearLastCheck() {
@@ -149,9 +149,9 @@ type ConfigHealthStatus_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Overall health
-	Overall *v1.HealthState
+	Overall *common.HealthState
 	// Component health
-	Components map[string]v1.HealthState
+	Components map[string]common.HealthState
 	// Health checks
 	HealthChecks []*ConfigHealthCheckResult
 	// Last health check
@@ -194,14 +194,14 @@ const file_config_v1_health_status_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x0e2\x16.common.v1.HealthStateR\x05value:\x028\x01\x1a:\n" +
 	"\fMetricsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\x01R\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\x01R\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_health_status_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_config_v1_health_status_proto_goTypes = []any{
 	(*ConfigHealthStatus)(nil),      // 0: config.v1.ConfigHealthStatus
 	nil,                             // 1: config.v1.ConfigHealthStatus.ComponentsEntry
 	nil,                             // 2: config.v1.ConfigHealthStatus.MetricsEntry
-	(v1.HealthState)(0),             // 3: common.v1.HealthState
+	(common.HealthState)(0),         // 3: common.v1.HealthState
 	(*ConfigHealthCheckResult)(nil), // 4: config.v1.ConfigHealthCheckResult
 	(*timestamppb.Timestamp)(nil),   // 5: google.protobuf.Timestamp
 }

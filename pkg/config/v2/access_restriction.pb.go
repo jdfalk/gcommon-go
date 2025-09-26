@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -212,7 +212,7 @@ const file_config_v2_access_restriction_proto_rawDesc = "" +
 	"\x04type\x18\x01 \x01(\x0e2\x1a.common.v2.RestrictionTypeR\x04type\x12\x1d\n" +
 	"\x05value\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05value\x12#\n" +
 	"\boperator\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\boperator\x12\x1f\n" +
-	"\x06reason\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB-Z#github.com/jdfalk/gcommon/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06reason\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB1Z'github.com/jdfalk/gcommon/pkg/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v2_access_restriction_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v2_access_restriction_proto_goTypes = []any{

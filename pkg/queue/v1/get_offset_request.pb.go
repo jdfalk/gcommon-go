@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_offset_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Request to get the current offset for a consumer or partition.
 // Used for tracking message consumption progress.
 type GetOffsetRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName     *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_PartitionId   int32                  `protobuf:"varint,2,opt,name=partition_id,json=partitionId"`
-	xxx_hidden_ConsumerGroup *string                `protobuf:"bytes,3,opt,name=consumer_group,json=consumerGroup"`
-	xxx_hidden_ConsumerId    *string                `protobuf:"bytes,4,opt,name=consumer_id,json=consumerId"`
-	xxx_hidden_OffsetType    v1.OffsetType          `protobuf:"varint,5,opt,name=offset_type,json=offsetType,enum=common.v1.OffsetType"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,6,opt,name=metadata"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName     *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_PartitionId   int32                   `protobuf:"varint,2,opt,name=partition_id,json=partitionId"`
+	xxx_hidden_ConsumerGroup *string                 `protobuf:"bytes,3,opt,name=consumer_group,json=consumerGroup"`
+	xxx_hidden_ConsumerId    *string                 `protobuf:"bytes,4,opt,name=consumer_id,json=consumerId"`
+	xxx_hidden_OffsetType    common.OffsetType       `protobuf:"varint,5,opt,name=offset_type,json=offsetType,enum=common.v1.OffsetType"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,6,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -102,16 +102,16 @@ func (x *GetOffsetRequest) GetConsumerId() string {
 	return ""
 }
 
-func (x *GetOffsetRequest) GetOffsetType() v1.OffsetType {
+func (x *GetOffsetRequest) GetOffsetType() common.OffsetType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			return x.xxx_hidden_OffsetType
 		}
 	}
-	return v1.OffsetType(0)
+	return common.OffsetType(0)
 }
 
-func (x *GetOffsetRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetOffsetRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -138,12 +138,12 @@ func (x *GetOffsetRequest) SetConsumerId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
 
-func (x *GetOffsetRequest) SetOffsetType(v v1.OffsetType) {
+func (x *GetOffsetRequest) SetOffsetType(v common.OffsetType) {
 	x.xxx_hidden_OffsetType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
 }
 
-func (x *GetOffsetRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetOffsetRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -211,7 +211,7 @@ func (x *GetOffsetRequest) ClearConsumerId() {
 
 func (x *GetOffsetRequest) ClearOffsetType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	x.xxx_hidden_OffsetType = v1.OffsetType_OFFSET_TYPE_UNSPECIFIED
+	x.xxx_hidden_OffsetType = common.OffsetType_OFFSET_TYPE_UNSPECIFIED
 }
 
 func (x *GetOffsetRequest) ClearMetadata() {
@@ -230,9 +230,9 @@ type GetOffsetRequest_builder struct {
 	// Consumer ID within the group (optional)
 	ConsumerId *string
 	// Type of offset to retrieve
-	OffsetType *v1.OffsetType
+	OffsetType *common.OffsetType
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetOffsetRequest_builder) Build() *GetOffsetRequest {
@@ -277,13 +277,13 @@ const file_queue_v1_get_offset_request_proto_rawDesc = "" +
 	"consumerId\x126\n" +
 	"\voffset_type\x18\x05 \x01(\x0e2\x15.common.v1.OffsetTypeR\n" +
 	"offsetType\x126\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_offset_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_offset_request_proto_goTypes = []any{
-	(*GetOffsetRequest)(nil),   // 0: queue.v1.GetOffsetRequest
-	(v1.OffsetType)(0),         // 1: common.v1.OffsetType
-	(*v1.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
+	(*GetOffsetRequest)(nil),       // 0: queue.v1.GetOffsetRequest
+	(common.OffsetType)(0),         // 1: common.v1.OffsetType
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_queue_v1_get_offset_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.GetOffsetRequest.offset_type:type_name -> common.v1.OffsetType

@@ -292,7 +292,7 @@ const file_queue_v2_latency_metrics_proto_rawDesc = "" +
 	"\x18average_queue_latency_ms\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x15averageQueueLatencyMs\x12?\n" +
 	"\x14p95_queue_latency_ms\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11p95QueueLatencyMs\x12C\n" +
 	"\x16average_e2e_latency_ms\x18\x06 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x13averageE2eLatencyMs\x12;\n" +
-	"\x12p95_e2e_latency_ms\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fp95E2eLatencyMsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12p95_e2e_latency_ms\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fp95E2eLatencyMsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_latency_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_latency_metrics_proto_goTypes = []any{

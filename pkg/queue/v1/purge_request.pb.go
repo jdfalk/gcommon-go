@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/purge_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type PurgeRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName   *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Options     *PurgeOptions          `protobuf:"bytes,2,opt,name=options"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,100,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName   *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Options     *PurgeOptions           `protobuf:"bytes,2,opt,name=options"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,100,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -76,7 +76,7 @@ func (x *PurgeRequest) GetOptions() *PurgeOptions {
 	return nil
 }
 
-func (x *PurgeRequest) GetMetadata() *v1.RequestMetadata {
+func (x *PurgeRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -92,7 +92,7 @@ func (x *PurgeRequest) SetOptions(v *PurgeOptions) {
 	x.xxx_hidden_Options = v
 }
 
-func (x *PurgeRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *PurgeRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -138,7 +138,7 @@ type PurgeRequest_builder struct {
 	// Purge options
 	Options *PurgeOptions
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 PurgeRequest_builder) Build() *PurgeRequest {
@@ -163,13 +163,13 @@ const file_queue_v1_purge_request_proto_rawDesc = "" +
 	"\n" +
 	"queue_name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tqueueName\x120\n" +
 	"\aoptions\x18\x02 \x01(\v2\x16.queue.v1.PurgeOptionsR\aoptions\x126\n" +
-	"\bmetadata\x18d \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18d \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_purge_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_purge_request_proto_goTypes = []any{
-	(*PurgeRequest)(nil),       // 0: queue.v1.PurgeRequest
-	(*PurgeOptions)(nil),       // 1: queue.v1.PurgeOptions
-	(*v1.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
+	(*PurgeRequest)(nil),           // 0: queue.v1.PurgeRequest
+	(*PurgeOptions)(nil),           // 1: queue.v1.PurgeOptions
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_queue_v1_purge_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.PurgeRequest.options:type_name -> queue.v1.PurgeOptions

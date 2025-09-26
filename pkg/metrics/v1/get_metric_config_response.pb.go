@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_metric_config_response.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type GetMetricConfigResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_Config      *MetricConfig          `protobuf:"bytes,3,opt,name=config"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -67,7 +67,7 @@ func (x *GetMetricConfigResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *GetMetricConfigResponse) GetError() *v1.Error {
+func (x *GetMetricConfigResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -86,7 +86,7 @@ func (x *GetMetricConfigResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 3)
 }
 
-func (x *GetMetricConfigResponse) SetError(v *v1.Error) {
+func (x *GetMetricConfigResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -134,7 +134,7 @@ type GetMetricConfigResponse_builder struct {
 	// Operation success flag
 	Success *bool
 	// Error details if any
-	Error *v1.Error
+	Error *common.Error
 	// Retrieved configuration
 	Config *MetricConfig
 }
@@ -161,12 +161,12 @@ const file_metrics_v1_get_metric_config_response_proto_rawDesc = "" +
 	"\x17GetMetricConfigResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12&\n" +
 	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05error\x120\n" +
-	"\x06config\x18\x03 \x01(\v2\x18.metrics.v1.MetricConfigR\x06configB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06config\x18\x03 \x01(\v2\x18.metrics.v1.MetricConfigR\x06configB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_metric_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_metric_config_response_proto_goTypes = []any{
 	(*GetMetricConfigResponse)(nil), // 0: metrics.v1.GetMetricConfigResponse
-	(*v1.Error)(nil),                // 1: common.v1.Error
+	(*common.Error)(nil),            // 1: common.v1.Error
 	(*MetricConfig)(nil),            // 2: metrics.v1.MetricConfig
 }
 var file_metrics_v1_get_metric_config_response_proto_depIdxs = []int32{

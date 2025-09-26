@@ -217,7 +217,7 @@ const file_database_v2_pool_stats_proto_rawDesc = "" +
 	"\rtotal_created\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalCreated\x12*\n" +
 	"\ftotal_closed\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vtotalClosed\x12:\n" +
 	"\x14acquisition_failures\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x13acquisitionFailures\x12O\n" +
-	"\x14avg_acquisition_time\x18\x04 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x12avgAcquisitionTimeB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14avg_acquisition_time\x18\x04 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x12avgAcquisitionTimeB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_pool_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_pool_stats_proto_goTypes = []any{

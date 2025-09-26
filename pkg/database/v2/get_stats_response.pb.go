@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -361,7 +361,7 @@ const file_database_v2_get_stats_response_proto_rawDesc = "" +
 	"\fmemory_limit\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vmemoryLimit\x12,\n" +
 	"\revicted_items\x18\a \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fevictedItems\x12\x18\n" +
 	"\asuccess\x18\b \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\t \x01(\v2\x10.common.v2.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\t \x01(\v2\x10.common.v2.ErrorR\x05errorB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_get_stats_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_get_stats_response_proto_goTypes = []any{

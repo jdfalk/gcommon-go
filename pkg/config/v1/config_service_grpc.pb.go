@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: config/v1/config_service.proto
 
-package v1
+package config
 
 import (
 	context "context"

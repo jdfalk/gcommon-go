@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/create_organization_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,14 +24,14 @@ const (
 )
 
 type CreateOrganizationRequest struct {
-	state                           protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata             *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Organization         *Organization          `protobuf:"bytes,2,opt,name=organization"`
-	xxx_hidden_CreateDefaultTenant  bool                   `protobuf:"varint,3,opt,name=create_default_tenant,json=createDefaultTenant"`
-	xxx_hidden_InitialSettingsJson  *string                `protobuf:"bytes,4,opt,name=initial_settings_json,json=initialSettingsJson"`
-	xxx_hidden_OwnerUserId          *string                `protobuf:"bytes,5,opt,name=owner_user_id,json=ownerUserId"`
-	xxx_hidden_SendWelcomeEmail     bool                   `protobuf:"varint,6,opt,name=send_welcome_email,json=sendWelcomeEmail"`
-	xxx_hidden_OrganizationTemplate *string                `protobuf:"bytes,7,opt,name=organization_template,json=organizationTemplate"`
+	state                           protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata             *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Organization         *Organization           `protobuf:"bytes,2,opt,name=organization"`
+	xxx_hidden_CreateDefaultTenant  bool                    `protobuf:"varint,3,opt,name=create_default_tenant,json=createDefaultTenant"`
+	xxx_hidden_InitialSettingsJson  *string                 `protobuf:"bytes,4,opt,name=initial_settings_json,json=initialSettingsJson"`
+	xxx_hidden_OwnerUserId          *string                 `protobuf:"bytes,5,opt,name=owner_user_id,json=ownerUserId"`
+	xxx_hidden_SendWelcomeEmail     bool                    `protobuf:"varint,6,opt,name=send_welcome_email,json=sendWelcomeEmail"`
+	xxx_hidden_OrganizationTemplate *string                 `protobuf:"bytes,7,opt,name=organization_template,json=organizationTemplate"`
 	XXX_raceDetectHookData          protoimpl.RaceDetectHookData
 	XXX_presence                    [1]uint32
 	unknownFields                   protoimpl.UnknownFields
@@ -63,7 +63,7 @@ func (x *CreateOrganizationRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *CreateOrganizationRequest) GetMetadata() *v1.RequestMetadata {
+func (x *CreateOrganizationRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -121,7 +121,7 @@ func (x *CreateOrganizationRequest) GetOrganizationTemplate() string {
 	return ""
 }
 
-func (x *CreateOrganizationRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *CreateOrganizationRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -240,7 +240,7 @@ type CreateOrganizationRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context - required
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Organization information to create - required
 	Organization *Organization
 	// Whether to create a default tenant for this organization
@@ -297,12 +297,12 @@ const file_organization_v1_create_organization_request_proto_rawDesc = "" +
 	" initial_settings_json.valid_json\x120Initial settings must be valid JSON if provided.\x1a5this == '' || this.matches(r'^\\s*[\\{\\[].*[\\}\\]]\\s*$')R\x13initialSettingsJson\x12{\n" +
 	"\rowner_user_id\x18\x05 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\vownerUserId\x12,\n" +
 	"\x12send_welcome_email\x18\x06 \x01(\bR\x10sendWelcomeEmail\x12M\n" +
-	"\x15organization_template\x18\a \x01(\tB\x18\xbaH\x15r\x13\x18d2\x0f^[a-zA-Z0-9_]*$R\x14organizationTemplateB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15organization_template\x18\a \x01(\tB\x18\xbaH\x15r\x13\x18d2\x0f^[a-zA-Z0-9_]*$R\x14organizationTemplateB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_create_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_create_organization_request_proto_goTypes = []any{
 	(*CreateOrganizationRequest)(nil), // 0: organization.v1.CreateOrganizationRequest
-	(*v1.RequestMetadata)(nil),        // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
 	(*Organization)(nil),              // 2: organization.v1.Organization
 }
 var file_organization_v1_create_organization_request_proto_depIdxs = []int32{

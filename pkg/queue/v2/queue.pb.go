@@ -25,7 +25,7 @@ var File_queue_v2_queue_proto protoreflect.FileDescriptor
 
 const file_queue_v2_queue_proto_rawDesc = "" +
 	"\n" +
-	"\x14queue/v2/queue.proto\x12\bqueue.v2\x1a!google/protobuf/go_features.protoB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14queue/v2/queue.proto\x12\bqueue.v2\x1a!google/protobuf/go_features.protoB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_queue_proto_goTypes = []any{}
 var file_queue_v2_queue_proto_depIdxs = []int32{

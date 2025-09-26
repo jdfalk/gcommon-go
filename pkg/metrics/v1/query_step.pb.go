@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/query_step.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type QueryStep struct {
 	state                        protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_StepId            *string                `protobuf:"bytes,1,opt,name=step_id,json=stepId"`
-	xxx_hidden_Operation         v1.QueryOperation      `protobuf:"varint,2,opt,name=operation,enum=common.v1.QueryOperation"`
+	xxx_hidden_Operation         common.QueryOperation  `protobuf:"varint,2,opt,name=operation,enum=common.v1.QueryOperation"`
 	xxx_hidden_Description       *string                `protobuf:"bytes,3,opt,name=description"`
 	xxx_hidden_EstimatedDuration *durationpb.Duration   `protobuf:"bytes,4,opt,name=estimated_duration,json=estimatedDuration"`
 	xxx_hidden_InputStepIds      []string               `protobuf:"bytes,5,rep,name=input_step_ids,json=inputStepIds"`
@@ -72,13 +72,13 @@ func (x *QueryStep) GetStepId() string {
 	return ""
 }
 
-func (x *QueryStep) GetOperation() v1.QueryOperation {
+func (x *QueryStep) GetOperation() common.QueryOperation {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Operation
 		}
 	}
-	return v1.QueryOperation(0)
+	return common.QueryOperation(0)
 }
 
 func (x *QueryStep) GetDescription() string {
@@ -110,7 +110,7 @@ func (x *QueryStep) SetStepId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *QueryStep) SetOperation(v v1.QueryOperation) {
+func (x *QueryStep) SetOperation(v common.QueryOperation) {
 	x.xxx_hidden_Operation = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
@@ -163,7 +163,7 @@ func (x *QueryStep) ClearStepId() {
 
 func (x *QueryStep) ClearOperation() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Operation = v1.QueryOperation_QUERY_OPERATION_UNSPECIFIED
+	x.xxx_hidden_Operation = common.QueryOperation_QUERY_OPERATION_UNSPECIFIED
 }
 
 func (x *QueryStep) ClearDescription() {
@@ -181,7 +181,7 @@ type QueryStep_builder struct {
 	// Step identifier
 	StepId *string
 	// Operation to perform in this step
-	Operation *v1.QueryOperation
+	Operation *common.QueryOperation
 	// Description of the operation
 	Description *string
 	// Estimated cost/time for this step
@@ -222,12 +222,12 @@ const file_metrics_v1_query_step_proto_rawDesc = "" +
 	"\toperation\x18\x02 \x01(\x0e2\x19.common.v1.QueryOperationR\toperation\x12*\n" +
 	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12H\n" +
 	"\x12estimated_duration\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\x11estimatedDuration\x12$\n" +
-	"\x0einput_step_ids\x18\x05 \x03(\tR\finputStepIdsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0einput_step_ids\x18\x05 \x03(\tR\finputStepIdsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_step_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_step_proto_goTypes = []any{
 	(*QueryStep)(nil),           // 0: metrics.v1.QueryStep
-	(v1.QueryOperation)(0),      // 1: common.v1.QueryOperation
+	(common.QueryOperation)(0),  // 1: common.v1.QueryOperation
 	(*durationpb.Duration)(nil), // 2: google.protobuf.Duration
 }
 var file_metrics_v1_query_step_proto_depIdxs = []int32{

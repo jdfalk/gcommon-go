@@ -244,7 +244,7 @@ const file_common_v2_parameter_constraints_proto_rawDesc = "" +
 	"\tmax_value\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bmaxValue\x12!\n" +
 	"\apattern\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\apattern\x12\x1a\n" +
 	"\brequired\x18\x04 \x01(\bR\brequired\x12,\n" +
-	"\rdefault_value\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fdefaultValueB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rdefault_value\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fdefaultValueB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_parameter_constraints_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_parameter_constraints_proto_goTypes = []any{

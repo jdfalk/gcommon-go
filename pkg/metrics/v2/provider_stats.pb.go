@@ -261,7 +261,7 @@ const file_metrics_v2_provider_stats_proto_rawDesc = "" +
 	"\x15operations_per_second\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x13operationsPerSecond\x12-\n" +
 	"\n" +
 	"error_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\terrorRate\x12@\n" +
-	"\x0eresource_usage\x18\x06 \x01(\v2\x19.metrics.v2.ResourceUsageR\rresourceUsageB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eresource_usage\x18\x06 \x01(\v2\x19.metrics.v2.ResourceUsageR\rresourceUsageB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_provider_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_provider_stats_proto_goTypes = []any{

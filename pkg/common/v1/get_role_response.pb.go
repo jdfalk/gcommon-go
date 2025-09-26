@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_role_response.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -161,7 +161,7 @@ const file_common_v1_get_role_response_proto_rawDesc = "" +
 	"!common/v1/get_role_response.proto\x12\tcommon.v1\x1a\x15common/v1/error.proto\x1a\x14common/v1/role.proto\x1a!google/protobuf/go_features.proto\"f\n" +
 	"\x0fGetRoleResponse\x12'\n" +
 	"\x04role\x18\x01 \x01(\v2\x0f.common.v1.RoleB\x02(\x01R\x04role\x12*\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_role_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_role_response_proto_goTypes = []any{

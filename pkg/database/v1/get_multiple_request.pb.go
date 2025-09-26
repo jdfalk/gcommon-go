@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/get_multiple_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,9 +27,9 @@ const (
 // Request to get multiple cache values by keys.
 // Supports batch retrieval for performance optimization.
 type GetMultipleRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Keys     []string               `protobuf:"bytes,1,rep,name=keys"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Keys     []string                `protobuf:"bytes,1,rep,name=keys"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -70,13 +70,13 @@ func (x *GetMultipleRequest) GetKeys() []string {
 	return nil
 }
 
-func (x *GetMultipleRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetMultipleRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -88,7 +88,7 @@ func (x *GetMultipleRequest) SetKeys(v []string) {
 	x.xxx_hidden_Keys = v
 }
 
-func (x *GetMultipleRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetMultipleRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -106,7 +106,7 @@ func (x *GetMultipleRequest) HasMetadata() bool {
 
 func (x *GetMultipleRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type GetMultipleRequest_builder struct {
@@ -115,7 +115,7 @@ type GetMultipleRequest_builder struct {
 	// List of keys to retrieve
 	Keys []string
 	// Request metadata for tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetMultipleRequest_builder) Build() *GetMultipleRequest {
@@ -137,12 +137,12 @@ const file_database_v1_get_multiple_request_proto_rawDesc = "" +
 	"&database/v1/get_multiple_request.proto\x12\vdatabase.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"n\n" +
 	"\x12GetMultipleRequest\x12\x1c\n" +
 	"\x04keys\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x04keys\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_multiple_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_multiple_request_proto_goTypes = []any{
-	(*GetMultipleRequest)(nil), // 0: database.v1.GetMultipleRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*GetMultipleRequest)(nil),     // 0: database.v1.GetMultipleRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_database_v1_get_multiple_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.GetMultipleRequest.metadata:type_name -> common.v1.RequestMetadata

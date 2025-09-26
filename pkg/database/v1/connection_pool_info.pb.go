@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/connection_pool_info.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -260,7 +260,7 @@ const file_database_v1_connection_pool_info_proto_rawDesc = "" +
 	"\x12active_connections\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11activeConnections\x122\n" +
 	"\x10idle_connections\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fidleConnections\x12@\n" +
 	"\favg_lifetime\x18\x04 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\vavgLifetime\x120\n" +
-	"\x05stats\x18\x05 \x01(\v2\x16.database.v1.PoolStatsB\x02(\x01R\x05statsB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05stats\x18\x05 \x01(\v2\x16.database.v1.PoolStatsB\x02(\x01R\x05statsB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_connection_pool_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_connection_pool_info_proto_goTypes = []any{

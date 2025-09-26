@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/decrement_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // *
 // Request to decrement a cached counter atomically.
 type DecrementRequest struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Key          *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_Delta        int64                  `protobuf:"varint,2,opt,name=delta"`
-	xxx_hidden_InitialValue int64                  `protobuf:"varint,3,opt,name=initial_value,json=initialValue"`
-	xxx_hidden_Ttl          *durationpb.Duration   `protobuf:"bytes,4,opt,name=ttl"`
-	xxx_hidden_Namespace    *string                `protobuf:"bytes,5,opt,name=namespace"`
-	xxx_hidden_Metadata     *v1.RequestMetadata    `protobuf:"bytes,6,opt,name=metadata"`
+	state                   protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Key          *string                 `protobuf:"bytes,1,opt,name=key"`
+	xxx_hidden_Delta        int64                   `protobuf:"varint,2,opt,name=delta"`
+	xxx_hidden_InitialValue int64                   `protobuf:"varint,3,opt,name=initial_value,json=initialValue"`
+	xxx_hidden_Ttl          *durationpb.Duration    `protobuf:"bytes,4,opt,name=ttl"`
+	xxx_hidden_Namespace    *string                 `protobuf:"bytes,5,opt,name=namespace"`
+	xxx_hidden_Metadata     *common.RequestMetadata `protobuf:"bytes,6,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -115,13 +115,13 @@ func (x *DecrementRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *DecrementRequest) GetMetadata() *v1.RequestMetadata {
+func (x *DecrementRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 5) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 6)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -158,7 +158,7 @@ func (x *DecrementRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
 }
 
-func (x *DecrementRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *DecrementRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
@@ -236,7 +236,7 @@ func (x *DecrementRequest) ClearNamespace() {
 
 func (x *DecrementRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type DecrementRequest_builder struct {
@@ -253,7 +253,7 @@ type DecrementRequest_builder struct {
 	// Optional namespace
 	Namespace *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 DecrementRequest_builder) Build() *DecrementRequest {
@@ -298,13 +298,13 @@ const file_database_v1_decrement_request_proto_rawDesc = "" +
 	"\rinitial_value\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\finitialValue\x12/\n" +
 	"\x03ttl\x18\x04 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x03ttl\x12%\n" +
 	"\tnamespace\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_decrement_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_decrement_request_proto_goTypes = []any{
-	(*DecrementRequest)(nil),    // 0: database.v1.DecrementRequest
-	(*durationpb.Duration)(nil), // 1: google.protobuf.Duration
-	(*v1.RequestMetadata)(nil),  // 2: common.v1.RequestMetadata
+	(*DecrementRequest)(nil),       // 0: database.v1.DecrementRequest
+	(*durationpb.Duration)(nil),    // 1: google.protobuf.Duration
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_database_v1_decrement_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.DecrementRequest.ttl:type_name -> google.protobuf.Duration

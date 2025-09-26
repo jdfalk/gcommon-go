@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/hierarchy_node.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -35,7 +35,7 @@ type HierarchyNode struct {
 	xxx_hidden_Position  int32                  `protobuf:"varint,8,opt,name=position"`
 	xxx_hidden_Path      *string                `protobuf:"bytes,9,opt,name=path"`
 	xxx_hidden_ManagerId *string                `protobuf:"bytes,10,opt,name=manager_id,json=managerId"`
-	xxx_hidden_Metadata  *[]*v1.KeyValue        `protobuf:"bytes,11,rep,name=metadata"`
+	xxx_hidden_Metadata  *[]*common.KeyValue    `protobuf:"bytes,11,rep,name=metadata"`
 	xxx_hidden_Active    bool                   `protobuf:"varint,12,opt,name=active"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
@@ -161,13 +161,13 @@ func (x *HierarchyNode) GetManagerId() string {
 	return ""
 }
 
-func (x *HierarchyNode) GetMetadata() []*v1.KeyValue {
+func (x *HierarchyNode) GetMetadata() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 10) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 11)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -231,11 +231,11 @@ func (x *HierarchyNode) SetManagerId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 9, 12)
 }
 
-func (x *HierarchyNode) SetMetadata(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *HierarchyNode) SetMetadata(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -391,7 +391,7 @@ type HierarchyNode_builder struct {
 	// Manager or responsible person for this node
 	ManagerId *string
 	// Node metadata and custom attributes
-	Metadata []*v1.KeyValue
+	Metadata []*common.KeyValue
 	// Whether this node is currently active
 	Active *bool
 }
@@ -467,12 +467,12 @@ const file_organization_v1_hierarchy_node_proto_rawDesc = "" +
 	"manager_id\x18\n" +
 	" \x01(\tR\tmanagerId\x123\n" +
 	"\bmetadata\x18\v \x03(\v2\x13.common.v1.KeyValueB\x02(\x01R\bmetadata\x12\x16\n" +
-	"\x06active\x18\f \x01(\bR\x06activeB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06active\x18\f \x01(\bR\x06activeB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_hierarchy_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_hierarchy_node_proto_goTypes = []any{
-	(*HierarchyNode)(nil), // 0: organization.v1.HierarchyNode
-	(*v1.KeyValue)(nil),   // 1: common.v1.KeyValue
+	(*HierarchyNode)(nil),   // 0: organization.v1.HierarchyNode
+	(*common.KeyValue)(nil), // 1: common.v1.KeyValue
 }
 var file_organization_v1_hierarchy_node_proto_depIdxs = []int32{
 	1, // 0: organization.v1.HierarchyNode.metadata:type_name -> common.v1.KeyValue

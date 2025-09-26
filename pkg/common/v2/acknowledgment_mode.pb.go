@@ -88,7 +88,7 @@ const file_common_v2_acknowledgment_mode_proto_rawDesc = "" +
 	"\x1fACKNOWLEDGMENT_MODE_UNSPECIFIED\x10\x00\x12\x1c\n" +
 	"\x18ACKNOWLEDGMENT_MODE_AUTO\x10\x01\x12\x1e\n" +
 	"\x1aACKNOWLEDGMENT_MODE_MANUAL\x10\x02\x12\x1c\n" +
-	"\x18ACKNOWLEDGMENT_MODE_NONE\x10\x03B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x18ACKNOWLEDGMENT_MODE_NONE\x10\x03B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_acknowledgment_mode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_acknowledgment_mode_proto_goTypes = []any{

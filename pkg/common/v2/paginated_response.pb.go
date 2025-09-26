@@ -279,7 +279,7 @@ const file_common_v2_paginated_response_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\n" +
 	"totalPages\x12'\n" +
 	"\tpage_size\x18\x06 \x01(\x05B\n" +
-	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSizeB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSizeB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_paginated_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_paginated_response_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/channel_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -97,7 +97,7 @@ const file_common_v1_channel_type_proto_rawDesc = "" +
 	"\x16CHANNEL_TYPE_PAGERDUTY\x10\x05\x12\x16\n" +
 	"\x12CHANNEL_TYPE_TEAMS\x10\x06\x12\x18\n" +
 	"\x14CHANNEL_TYPE_DISCORD\x10\a\x12\x15\n" +
-	"\x11CHANNEL_TYPE_JIRA\x10\bB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11CHANNEL_TYPE_JIRA\x10\bB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_channel_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_channel_type_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -178,7 +178,7 @@ const file_organization_v2_update_organization_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadata\x12\x80\x01\n" +
 	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationId\x12A\n" +
 	"\forganization\x18\x03 \x01(\v2\x1d.organization.v2.OrganizationR\forganization\x12#\n" +
-	"\rupdate_fields\x18\x04 \x03(\tR\fupdateFieldsB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rupdate_fields\x18\x04 \x03(\tR\fupdateFieldsB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_update_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_update_organization_request_proto_goTypes = []any{

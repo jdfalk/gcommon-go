@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/consumer_group_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,17 +24,17 @@ const (
 )
 
 type ConsumerGroupConfig struct {
-	state                            protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_LoadBalancingStrategy v1.LoadBalancingStrategy `protobuf:"varint,1,opt,name=load_balancing_strategy,json=loadBalancingStrategy,enum=common.v1.LoadBalancingStrategy"`
-	xxx_hidden_RebalanceStrategy     v1.RebalanceStrategy     `protobuf:"varint,2,opt,name=rebalance_strategy,json=rebalanceStrategy,enum=common.v1.RebalanceStrategy"`
-	xxx_hidden_SessionTimeoutMs      int32                    `protobuf:"varint,3,opt,name=session_timeout_ms,json=sessionTimeoutMs"`
-	xxx_hidden_HeartbeatIntervalMs   int32                    `protobuf:"varint,4,opt,name=heartbeat_interval_ms,json=heartbeatIntervalMs"`
-	xxx_hidden_MaxPollIntervalMs     int32                    `protobuf:"varint,5,opt,name=max_poll_interval_ms,json=maxPollIntervalMs"`
-	xxx_hidden_AutoCommit            *AutoCommitConfig        `protobuf:"bytes,6,opt,name=auto_commit,json=autoCommit"`
-	xxx_hidden_OffsetResetStrategy   v1.OffsetResetStrategy   `protobuf:"varint,7,opt,name=offset_reset_strategy,json=offsetResetStrategy,enum=common.v1.OffsetResetStrategy"`
-	xxx_hidden_MaxConsumers          int32                    `protobuf:"varint,8,opt,name=max_consumers,json=maxConsumers"`
-	xxx_hidden_ExactlyOnceEnabled    bool                     `protobuf:"varint,9,opt,name=exactly_once_enabled,json=exactlyOnceEnabled"`
-	xxx_hidden_DlqConfig             *DeadLetterQueueConfig   `protobuf:"bytes,10,opt,name=dlq_config,json=dlqConfig"`
+	state                            protoimpl.MessageState       `protogen:"opaque.v1"`
+	xxx_hidden_LoadBalancingStrategy common.LoadBalancingStrategy `protobuf:"varint,1,opt,name=load_balancing_strategy,json=loadBalancingStrategy,enum=common.v1.LoadBalancingStrategy"`
+	xxx_hidden_RebalanceStrategy     common.RebalanceStrategy     `protobuf:"varint,2,opt,name=rebalance_strategy,json=rebalanceStrategy,enum=common.v1.RebalanceStrategy"`
+	xxx_hidden_SessionTimeoutMs      int32                        `protobuf:"varint,3,opt,name=session_timeout_ms,json=sessionTimeoutMs"`
+	xxx_hidden_HeartbeatIntervalMs   int32                        `protobuf:"varint,4,opt,name=heartbeat_interval_ms,json=heartbeatIntervalMs"`
+	xxx_hidden_MaxPollIntervalMs     int32                        `protobuf:"varint,5,opt,name=max_poll_interval_ms,json=maxPollIntervalMs"`
+	xxx_hidden_AutoCommit            *AutoCommitConfig            `protobuf:"bytes,6,opt,name=auto_commit,json=autoCommit"`
+	xxx_hidden_OffsetResetStrategy   common.OffsetResetStrategy   `protobuf:"varint,7,opt,name=offset_reset_strategy,json=offsetResetStrategy,enum=common.v1.OffsetResetStrategy"`
+	xxx_hidden_MaxConsumers          int32                        `protobuf:"varint,8,opt,name=max_consumers,json=maxConsumers"`
+	xxx_hidden_ExactlyOnceEnabled    bool                         `protobuf:"varint,9,opt,name=exactly_once_enabled,json=exactlyOnceEnabled"`
+	xxx_hidden_DlqConfig             *DeadLetterQueueConfig       `protobuf:"bytes,10,opt,name=dlq_config,json=dlqConfig"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -66,22 +66,22 @@ func (x *ConsumerGroupConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ConsumerGroupConfig) GetLoadBalancingStrategy() v1.LoadBalancingStrategy {
+func (x *ConsumerGroupConfig) GetLoadBalancingStrategy() common.LoadBalancingStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_LoadBalancingStrategy
 		}
 	}
-	return v1.LoadBalancingStrategy(0)
+	return common.LoadBalancingStrategy(0)
 }
 
-func (x *ConsumerGroupConfig) GetRebalanceStrategy() v1.RebalanceStrategy {
+func (x *ConsumerGroupConfig) GetRebalanceStrategy() common.RebalanceStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_RebalanceStrategy
 		}
 	}
-	return v1.RebalanceStrategy(0)
+	return common.RebalanceStrategy(0)
 }
 
 func (x *ConsumerGroupConfig) GetSessionTimeoutMs() int32 {
@@ -112,13 +112,13 @@ func (x *ConsumerGroupConfig) GetAutoCommit() *AutoCommitConfig {
 	return nil
 }
 
-func (x *ConsumerGroupConfig) GetOffsetResetStrategy() v1.OffsetResetStrategy {
+func (x *ConsumerGroupConfig) GetOffsetResetStrategy() common.OffsetResetStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 6) {
 			return x.xxx_hidden_OffsetResetStrategy
 		}
 	}
-	return v1.OffsetResetStrategy(0)
+	return common.OffsetResetStrategy(0)
 }
 
 func (x *ConsumerGroupConfig) GetMaxConsumers() int32 {
@@ -142,12 +142,12 @@ func (x *ConsumerGroupConfig) GetDlqConfig() *DeadLetterQueueConfig {
 	return nil
 }
 
-func (x *ConsumerGroupConfig) SetLoadBalancingStrategy(v v1.LoadBalancingStrategy) {
+func (x *ConsumerGroupConfig) SetLoadBalancingStrategy(v common.LoadBalancingStrategy) {
 	x.xxx_hidden_LoadBalancingStrategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *ConsumerGroupConfig) SetRebalanceStrategy(v v1.RebalanceStrategy) {
+func (x *ConsumerGroupConfig) SetRebalanceStrategy(v common.RebalanceStrategy) {
 	x.xxx_hidden_RebalanceStrategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 10)
 }
@@ -171,7 +171,7 @@ func (x *ConsumerGroupConfig) SetAutoCommit(v *AutoCommitConfig) {
 	x.xxx_hidden_AutoCommit = v
 }
 
-func (x *ConsumerGroupConfig) SetOffsetResetStrategy(v v1.OffsetResetStrategy) {
+func (x *ConsumerGroupConfig) SetOffsetResetStrategy(v common.OffsetResetStrategy) {
 	x.xxx_hidden_OffsetResetStrategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 10)
 }
@@ -262,12 +262,12 @@ func (x *ConsumerGroupConfig) HasDlqConfig() bool {
 
 func (x *ConsumerGroupConfig) ClearLoadBalancingStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_LoadBalancingStrategy = v1.LoadBalancingStrategy_LOAD_BALANCING_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_LoadBalancingStrategy = common.LoadBalancingStrategy_LOAD_BALANCING_STRATEGY_UNSPECIFIED
 }
 
 func (x *ConsumerGroupConfig) ClearRebalanceStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_RebalanceStrategy = v1.RebalanceStrategy_REBALANCE_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_RebalanceStrategy = common.RebalanceStrategy_REBALANCE_STRATEGY_UNSPECIFIED
 }
 
 func (x *ConsumerGroupConfig) ClearSessionTimeoutMs() {
@@ -291,7 +291,7 @@ func (x *ConsumerGroupConfig) ClearAutoCommit() {
 
 func (x *ConsumerGroupConfig) ClearOffsetResetStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 6)
-	x.xxx_hidden_OffsetResetStrategy = v1.OffsetResetStrategy_OFFSET_RESET_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_OffsetResetStrategy = common.OffsetResetStrategy_OFFSET_RESET_STRATEGY_UNSPECIFIED
 }
 
 func (x *ConsumerGroupConfig) ClearMaxConsumers() {
@@ -312,9 +312,9 @@ type ConsumerGroupConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Load balancing strategy for partition assignment
-	LoadBalancingStrategy *v1.LoadBalancingStrategy
+	LoadBalancingStrategy *common.LoadBalancingStrategy
 	// Rebalance strategy when consumers join/leave
-	RebalanceStrategy *v1.RebalanceStrategy
+	RebalanceStrategy *common.RebalanceStrategy
 	// Session timeout for consumer heartbeats (milliseconds)
 	SessionTimeoutMs *int32
 	// Heartbeat interval (milliseconds)
@@ -324,7 +324,7 @@ type ConsumerGroupConfig_builder struct {
 	// Auto-commit configuration
 	AutoCommit *AutoCommitConfig
 	// Offset reset strategy for new consumers
-	OffsetResetStrategy *v1.OffsetResetStrategy
+	OffsetResetStrategy *common.OffsetResetStrategy
 	// Maximum number of consumers allowed in the group
 	MaxConsumers *int32
 	// Enable exactly-once semantics
@@ -392,16 +392,16 @@ const file_queue_v1_consumer_group_config_proto_rawDesc = "" +
 	"\x14exactly_once_enabled\x18\t \x01(\bR\x12exactlyOnceEnabled\x12>\n" +
 	"\n" +
 	"dlq_config\x18\n" +
-	" \x01(\v2\x1f.queue.v1.DeadLetterQueueConfigR\tdlqConfigB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\v2\x1f.queue.v1.DeadLetterQueueConfigR\tdlqConfigB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_consumer_group_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_consumer_group_config_proto_goTypes = []any{
-	(*ConsumerGroupConfig)(nil),   // 0: queue.v1.ConsumerGroupConfig
-	(v1.LoadBalancingStrategy)(0), // 1: common.v1.LoadBalancingStrategy
-	(v1.RebalanceStrategy)(0),     // 2: common.v1.RebalanceStrategy
-	(*AutoCommitConfig)(nil),      // 3: queue.v1.AutoCommitConfig
-	(v1.OffsetResetStrategy)(0),   // 4: common.v1.OffsetResetStrategy
-	(*DeadLetterQueueConfig)(nil), // 5: queue.v1.DeadLetterQueueConfig
+	(*ConsumerGroupConfig)(nil),       // 0: queue.v1.ConsumerGroupConfig
+	(common.LoadBalancingStrategy)(0), // 1: common.v1.LoadBalancingStrategy
+	(common.RebalanceStrategy)(0),     // 2: common.v1.RebalanceStrategy
+	(*AutoCommitConfig)(nil),          // 3: queue.v1.AutoCommitConfig
+	(common.OffsetResetStrategy)(0),   // 4: common.v1.OffsetResetStrategy
+	(*DeadLetterQueueConfig)(nil),     // 5: queue.v1.DeadLetterQueueConfig
 }
 var file_queue_v1_consumer_group_config_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ConsumerGroupConfig.load_balancing_strategy:type_name -> common.v1.LoadBalancingStrategy

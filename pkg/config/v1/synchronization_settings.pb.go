@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/synchronization_settings.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type SynchronizationSettings struct {
-	state                         protoimpl.MessageState      `protogen:"opaque.v1"`
-	xxx_hidden_Enabled            bool                        `protobuf:"varint,1,opt,name=enabled"`
-	xxx_hidden_Targets            *[]*SynchronizationTarget   `protobuf:"bytes,2,rep,name=targets"`
-	xxx_hidden_Frequency          v1.SynchronizationFrequency `protobuf:"varint,3,opt,name=frequency,enum=common.v1.SynchronizationFrequency"`
-	xxx_hidden_ConflictResolution v1.ConflictResolution       `protobuf:"varint,4,opt,name=conflict_resolution,json=conflictResolution,enum=common.v1.ConflictResolution"`
-	xxx_hidden_Metadata           map[string]string           `protobuf:"bytes,5,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                         protoimpl.MessageState          `protogen:"opaque.v1"`
+	xxx_hidden_Enabled            bool                            `protobuf:"varint,1,opt,name=enabled"`
+	xxx_hidden_Targets            *[]*SynchronizationTarget       `protobuf:"bytes,2,rep,name=targets"`
+	xxx_hidden_Frequency          common.SynchronizationFrequency `protobuf:"varint,3,opt,name=frequency,enum=common.v1.SynchronizationFrequency"`
+	xxx_hidden_ConflictResolution common.ConflictResolution       `protobuf:"varint,4,opt,name=conflict_resolution,json=conflictResolution,enum=common.v1.ConflictResolution"`
+	xxx_hidden_Metadata           map[string]string               `protobuf:"bytes,5,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -77,22 +77,22 @@ func (x *SynchronizationSettings) GetTargets() []*SynchronizationTarget {
 	return nil
 }
 
-func (x *SynchronizationSettings) GetFrequency() v1.SynchronizationFrequency {
+func (x *SynchronizationSettings) GetFrequency() common.SynchronizationFrequency {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Frequency
 		}
 	}
-	return v1.SynchronizationFrequency(0)
+	return common.SynchronizationFrequency(0)
 }
 
-func (x *SynchronizationSettings) GetConflictResolution() v1.ConflictResolution {
+func (x *SynchronizationSettings) GetConflictResolution() common.ConflictResolution {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_ConflictResolution
 		}
 	}
-	return v1.ConflictResolution(0)
+	return common.ConflictResolution(0)
 }
 
 func (x *SynchronizationSettings) GetMetadata() map[string]string {
@@ -111,12 +111,12 @@ func (x *SynchronizationSettings) SetTargets(v []*SynchronizationTarget) {
 	x.xxx_hidden_Targets = &v
 }
 
-func (x *SynchronizationSettings) SetFrequency(v v1.SynchronizationFrequency) {
+func (x *SynchronizationSettings) SetFrequency(v common.SynchronizationFrequency) {
 	x.xxx_hidden_Frequency = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
 
-func (x *SynchronizationSettings) SetConflictResolution(v v1.ConflictResolution) {
+func (x *SynchronizationSettings) SetConflictResolution(v common.ConflictResolution) {
 	x.xxx_hidden_ConflictResolution = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
 }
@@ -153,12 +153,12 @@ func (x *SynchronizationSettings) ClearEnabled() {
 
 func (x *SynchronizationSettings) ClearFrequency() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Frequency = v1.SynchronizationFrequency_SYNCHRONIZATION_FREQUENCY_UNSPECIFIED
+	x.xxx_hidden_Frequency = common.SynchronizationFrequency_SYNCHRONIZATION_FREQUENCY_UNSPECIFIED
 }
 
 func (x *SynchronizationSettings) ClearConflictResolution() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_ConflictResolution = v1.ConflictResolution_COMMON_CONFLICT_RESOLUTION_UNSPECIFIED
+	x.xxx_hidden_ConflictResolution = common.ConflictResolution_COMMON_CONFLICT_RESOLUTION_UNSPECIFIED
 }
 
 type SynchronizationSettings_builder struct {
@@ -169,9 +169,9 @@ type SynchronizationSettings_builder struct {
 	// Synchronization targets
 	Targets []*SynchronizationTarget
 	// Synchronization frequency
-	Frequency *v1.SynchronizationFrequency
+	Frequency *common.SynchronizationFrequency
 	// Synchronization conflict resolution
-	ConflictResolution *v1.ConflictResolution
+	ConflictResolution *common.ConflictResolution
 	// Synchronization metadata
 	Metadata map[string]string
 }
@@ -210,15 +210,15 @@ const file_config_v1_synchronization_settings_proto_rawDesc = "" +
 	"\bmetadata\x18\x05 \x03(\v20.config.v1.SynchronizationSettings.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_synchronization_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_synchronization_settings_proto_goTypes = []any{
-	(*SynchronizationSettings)(nil),  // 0: config.v1.SynchronizationSettings
-	nil,                              // 1: config.v1.SynchronizationSettings.MetadataEntry
-	(*SynchronizationTarget)(nil),    // 2: config.v1.SynchronizationTarget
-	(v1.SynchronizationFrequency)(0), // 3: common.v1.SynchronizationFrequency
-	(v1.ConflictResolution)(0),       // 4: common.v1.ConflictResolution
+	(*SynchronizationSettings)(nil),      // 0: config.v1.SynchronizationSettings
+	nil,                                  // 1: config.v1.SynchronizationSettings.MetadataEntry
+	(*SynchronizationTarget)(nil),        // 2: config.v1.SynchronizationTarget
+	(common.SynchronizationFrequency)(0), // 3: common.v1.SynchronizationFrequency
+	(common.ConflictResolution)(0),       // 4: common.v1.ConflictResolution
 }
 var file_config_v1_synchronization_settings_proto_depIdxs = []int32{
 	2, // 0: config.v1.SynchronizationSettings.targets:type_name -> config.v1.SynchronizationTarget

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/watch_health_response.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // Provides real-time health monitoring data.
 // Follows 1-1-1 pattern: one message per file.
 type WatchHealthResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_UpdateType  *string                `protobuf:"bytes,1,opt,name=update_type,json=updateType"`
-	xxx_hidden_Result      *HealthResult          `protobuf:"bytes,2,opt,name=result"`
-	xxx_hidden_Event       *HealthEvent           `protobuf:"bytes,3,opt,name=event"`
-	xxx_hidden_Metadata    *v1.ResponseMetadata   `protobuf:"bytes,4,opt,name=metadata"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_UpdateType  *string                  `protobuf:"bytes,1,opt,name=update_type,json=updateType"`
+	xxx_hidden_Result      *HealthResult            `protobuf:"bytes,2,opt,name=result"`
+	xxx_hidden_Event       *HealthEvent             `protobuf:"bytes,3,opt,name=event"`
+	xxx_hidden_Metadata    *common.ResponseMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -87,7 +87,7 @@ func (x *WatchHealthResponse) GetEvent() *HealthEvent {
 	return nil
 }
 
-func (x *WatchHealthResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *WatchHealthResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -107,7 +107,7 @@ func (x *WatchHealthResponse) SetEvent(v *HealthEvent) {
 	x.xxx_hidden_Event = v
 }
 
-func (x *WatchHealthResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *WatchHealthResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -166,7 +166,7 @@ type WatchHealthResponse_builder struct {
 	// Health event (for event updates)
 	Event *HealthEvent
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 }
 
 func (b0 WatchHealthResponse_builder) Build() *WatchHealthResponse {
@@ -193,14 +193,14 @@ const file_health_v1_watch_health_response_proto_rawDesc = "" +
 	"updateType\x12/\n" +
 	"\x06result\x18\x02 \x01(\v2\x17.health.v1.HealthResultR\x06result\x12,\n" +
 	"\x05event\x18\x03 \x01(\v2\x16.health.v1.HealthEventR\x05event\x127\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_watch_health_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_watch_health_response_proto_goTypes = []any{
-	(*WatchHealthResponse)(nil), // 0: health.v1.WatchHealthResponse
-	(*HealthResult)(nil),        // 1: health.v1.HealthResult
-	(*HealthEvent)(nil),         // 2: health.v1.HealthEvent
-	(*v1.ResponseMetadata)(nil), // 3: common.v1.ResponseMetadata
+	(*WatchHealthResponse)(nil),     // 0: health.v1.WatchHealthResponse
+	(*HealthResult)(nil),            // 1: health.v1.HealthResult
+	(*HealthEvent)(nil),             // 2: health.v1.HealthEvent
+	(*common.ResponseMetadata)(nil), // 3: common.v1.ResponseMetadata
 }
 var file_health_v1_watch_health_response_proto_depIdxs = []int32{
 	1, // 0: health.v1.WatchHealthResponse.result:type_name -> health.v1.HealthResult

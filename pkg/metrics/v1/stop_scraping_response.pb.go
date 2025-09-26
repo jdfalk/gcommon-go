@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/stop_scraping_response.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type StopScrapingResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_Job         *ScrapeJob             `protobuf:"bytes,3,opt,name=job"`
 	xxx_hidden_StoppedAt   *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=stopped_at,json=stoppedAt"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -69,7 +69,7 @@ func (x *StopScrapingResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *StopScrapingResponse) GetError() *v1.Error {
+func (x *StopScrapingResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -95,7 +95,7 @@ func (x *StopScrapingResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *StopScrapingResponse) SetError(v *v1.Error) {
+func (x *StopScrapingResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -158,7 +158,7 @@ type StopScrapingResponse_builder struct {
 	// Whether the job was stopped successfully
 	Success *bool
 	// Error information if unsuccessful
-	Error *v1.Error
+	Error *common.Error
 	// Details of the stopped job
 	Job *ScrapeJob
 	// Timestamp when the job stopped
@@ -190,12 +190,12 @@ const file_metrics_v1_stop_scraping_response_proto_rawDesc = "" +
 	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05error\x12'\n" +
 	"\x03job\x18\x03 \x01(\v2\x15.metrics.v1.ScrapeJobR\x03job\x129\n" +
 	"\n" +
-	"stopped_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tstoppedAtB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"stopped_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tstoppedAtB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stop_scraping_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stop_scraping_response_proto_goTypes = []any{
 	(*StopScrapingResponse)(nil),  // 0: metrics.v1.StopScrapingResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 	(*ScrapeJob)(nil),             // 2: metrics.v1.ScrapeJob
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }

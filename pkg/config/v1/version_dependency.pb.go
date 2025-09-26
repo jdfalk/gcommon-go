@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/version_dependency.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type VersionDependency struct {
-	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_Name        *string                  `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Version     *string                  `protobuf:"bytes,2,opt,name=version"`
-	xxx_hidden_Type        v1.VersionDependencyType `protobuf:"varint,3,opt,name=type,enum=common.v1.VersionDependencyType"`
-	xxx_hidden_Scope       *string                  `protobuf:"bytes,4,opt,name=scope"`
-	xxx_hidden_Constraints []string                 `protobuf:"bytes,6,rep,name=constraints"`
-	xxx_hidden_Metadata    map[string]string        `protobuf:"bytes,7,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                  protoimpl.MessageState       `protogen:"opaque.v1"`
+	xxx_hidden_Name        *string                      `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Version     *string                      `protobuf:"bytes,2,opt,name=version"`
+	xxx_hidden_Type        common.VersionDependencyType `protobuf:"varint,3,opt,name=type,enum=common.v1.VersionDependencyType"`
+	xxx_hidden_Scope       *string                      `protobuf:"bytes,4,opt,name=scope"`
+	xxx_hidden_Constraints []string                     `protobuf:"bytes,6,rep,name=constraints"`
+	xxx_hidden_Metadata    map[string]string            `protobuf:"bytes,7,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -82,13 +82,13 @@ func (x *VersionDependency) GetVersion() string {
 	return ""
 }
 
-func (x *VersionDependency) GetType() v1.VersionDependencyType {
+func (x *VersionDependency) GetType() common.VersionDependencyType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.VersionDependencyType(0)
+	return common.VersionDependencyType(0)
 }
 
 func (x *VersionDependency) GetScope() string {
@@ -125,7 +125,7 @@ func (x *VersionDependency) SetVersion(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
 
-func (x *VersionDependency) SetType(v v1.VersionDependencyType) {
+func (x *VersionDependency) SetType(v common.VersionDependencyType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
@@ -183,7 +183,7 @@ func (x *VersionDependency) ClearVersion() {
 
 func (x *VersionDependency) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Type = v1.VersionDependencyType_VERSION_DEPENDENCY_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.VersionDependencyType_VERSION_DEPENDENCY_TYPE_UNSPECIFIED
 }
 
 func (x *VersionDependency) ClearScope() {
@@ -199,7 +199,7 @@ type VersionDependency_builder struct {
 	// Dependency version
 	Version *string
 	// Dependency type
-	Type *v1.VersionDependencyType
+	Type *common.VersionDependencyType
 	// Dependency scope
 	Scope *string
 	// Dependency constraints
@@ -247,13 +247,13 @@ const file_config_v1_version_dependency_proto_rawDesc = "" +
 	"\bmetadata\x18\a \x03(\v2*.config.v1.VersionDependency.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_version_dependency_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_version_dependency_proto_goTypes = []any{
-	(*VersionDependency)(nil),     // 0: config.v1.VersionDependency
-	nil,                           // 1: config.v1.VersionDependency.MetadataEntry
-	(v1.VersionDependencyType)(0), // 2: common.v1.VersionDependencyType
+	(*VersionDependency)(nil),         // 0: config.v1.VersionDependency
+	nil,                               // 1: config.v1.VersionDependency.MetadataEntry
+	(common.VersionDependencyType)(0), // 2: common.v1.VersionDependencyType
 }
 var file_config_v1_version_dependency_proto_depIdxs = []int32{
 	2, // 0: config.v1.VersionDependency.type:type_name -> common.v1.VersionDependencyType

@@ -166,7 +166,7 @@ const file_queue_v2_size_bucket_proto_rawDesc = "" +
 	"SizeBucket\x12-\n" +
 	"\x0emin_size_bytes\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fminSizeBytes\x12-\n" +
 	"\x0emax_size_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmaxSizeBytes\x12,\n" +
-	"\rmessage_count\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmessageCountB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rmessage_count\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmessageCountB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_size_bucket_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_size_bucket_proto_goTypes = []any{

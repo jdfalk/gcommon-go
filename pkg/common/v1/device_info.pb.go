@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/device_info.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -242,7 +242,7 @@ const file_common_v1_device_info_proto_rawDesc = "" +
 	"\x02os\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x02os\x12!\n" +
 	"\abrowser\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\abrowser\x12\x1d\n" +
 	"\n" +
-	"is_trusted\x18\x05 \x01(\bR\tisTrustedB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"is_trusted\x18\x05 \x01(\bR\tisTrustedB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_device_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_device_info_proto_goTypes = []any{

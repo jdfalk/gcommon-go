@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_preferences_response.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -125,7 +125,7 @@ const file_common_v1_get_preferences_response_proto_rawDesc = "" +
 	"(common/v1/get_preferences_response.proto\x12\tcommon.v1\x1a!common/v1/response_metadata.proto\x1a(common/v1/subscription_preferences.proto\x1a!google/protobuf/go_features.proto\"\x97\x01\n" +
 	"\x16GetPreferencesResponse\x12D\n" +
 	"\vpreferences\x18\x01 \x01(\v2\".common.v1.SubscriptionPreferencesR\vpreferences\x127\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_preferences_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_preferences_response_proto_goTypes = []any{

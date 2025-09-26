@@ -289,7 +289,7 @@ const file_organization_v2_network_isolation_proto_rawDesc = "" +
 	"\x11dedicated_network\x18\x05 \x01(\bR\x10dedicatedNetwork\x12T\n" +
 	"\rload_balancer\x18\x06 \x01(\v2/.organization.v2.OrganizationLoadBalancerConfigR\floadBalancer\x12,\n" +
 	"\x03cdn\x18\a \x01(\v2\x1a.organization.v2.CDNConfigR\x03cdn\x125\n" +
-	"\x06domain\x18\b \x01(\v2\x1d.organization.v2.DomainConfigR\x06domainB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06domain\x18\b \x01(\v2\x1d.organization.v2.DomainConfigR\x06domainB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_network_isolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_network_isolation_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_summary_response.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type RecordSummaryResponse struct {
 	state             protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Metric *SummaryMetric         `protobuf:"bytes,1,opt,name=metric"`
 	xxx_hidden_Stats  *RecordingStats        `protobuf:"bytes,2,opt,name=stats"`
-	xxx_hidden_Error  *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error  *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	unknownFields     protoimpl.UnknownFields
 	sizeCache         protoimpl.SizeCache
 }
@@ -72,7 +72,7 @@ func (x *RecordSummaryResponse) GetStats() *RecordingStats {
 	return nil
 }
 
-func (x *RecordSummaryResponse) GetError() *v1.Error {
+func (x *RecordSummaryResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -87,7 +87,7 @@ func (x *RecordSummaryResponse) SetStats(v *RecordingStats) {
 	x.xxx_hidden_Stats = v
 }
 
-func (x *RecordSummaryResponse) SetError(v *v1.Error) {
+func (x *RecordSummaryResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -132,7 +132,7 @@ type RecordSummaryResponse_builder struct {
 	// Processing stats
 	Stats *RecordingStats
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 RecordSummaryResponse_builder) Build() *RecordSummaryResponse {
@@ -154,14 +154,14 @@ const file_metrics_v1_record_summary_response_proto_rawDesc = "" +
 	"\x15RecordSummaryResponse\x121\n" +
 	"\x06metric\x18\x01 \x01(\v2\x19.metrics.v1.SummaryMetricR\x06metric\x120\n" +
 	"\x05stats\x18\x02 \x01(\v2\x1a.metrics.v1.RecordingStatsR\x05stats\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_summary_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_record_summary_response_proto_goTypes = []any{
 	(*RecordSummaryResponse)(nil), // 0: metrics.v1.RecordSummaryResponse
 	(*SummaryMetric)(nil),         // 1: metrics.v1.SummaryMetric
 	(*RecordingStats)(nil),        // 2: metrics.v1.RecordingStats
-	(*v1.Error)(nil),              // 3: common.v1.Error
+	(*common.Error)(nil),          // 3: common.v1.Error
 }
 var file_metrics_v1_record_summary_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RecordSummaryResponse.metric:type_name -> metrics.v1.SummaryMetric

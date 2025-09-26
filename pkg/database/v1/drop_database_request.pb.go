@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/drop_database_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type DropDatabaseRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name     *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Name     *string                 `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -70,13 +70,13 @@ func (x *DropDatabaseRequest) GetName() string {
 	return ""
 }
 
-func (x *DropDatabaseRequest) GetMetadata() *v1.RequestMetadata {
+func (x *DropDatabaseRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -89,7 +89,7 @@ func (x *DropDatabaseRequest) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *DropDatabaseRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *DropDatabaseRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -119,7 +119,7 @@ func (x *DropDatabaseRequest) ClearName() {
 
 func (x *DropDatabaseRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type DropDatabaseRequest_builder struct {
@@ -128,7 +128,7 @@ type DropDatabaseRequest_builder struct {
 	// Name of the database to drop
 	Name *string
 	// Request metadata for tracing and authentication
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 DropDatabaseRequest_builder) Build() *DropDatabaseRequest {
@@ -153,12 +153,12 @@ const file_database_v1_drop_database_request_proto_rawDesc = "" +
 	"'database/v1/drop_database_request.proto\x12\vdatabase.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"p\n" +
 	"\x13DropDatabaseRequest\x12\x1d\n" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_drop_database_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_drop_database_request_proto_goTypes = []any{
-	(*DropDatabaseRequest)(nil), // 0: database.v1.DropDatabaseRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*DropDatabaseRequest)(nil),    // 0: database.v1.DropDatabaseRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_database_v1_drop_database_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.DropDatabaseRequest.metadata:type_name -> common.v1.RequestMetadata

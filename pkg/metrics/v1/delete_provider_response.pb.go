@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/delete_provider_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type DeleteProviderResponse struct {
 	state                        protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success           bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error             *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error             *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_ProviderId        *string                `protobuf:"bytes,3,opt,name=provider_id,json=providerId"`
 	xxx_hidden_DeletedAt         *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=deleted_at,json=deletedAt"`
 	xxx_hidden_DeletionResult    *DeletionResult        `protobuf:"bytes,5,opt,name=deletion_result,json=deletionResult"`
@@ -72,7 +72,7 @@ func (x *DeleteProviderResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *DeleteProviderResponse) GetError() *v1.Error {
+func (x *DeleteProviderResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -129,7 +129,7 @@ func (x *DeleteProviderResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *DeleteProviderResponse) SetError(v *v1.Error) {
+func (x *DeleteProviderResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -243,7 +243,7 @@ type DeleteProviderResponse_builder struct {
 	// Success status of the deletion
 	Success *bool
 	// Error information if deletion failed
-	Error *v1.Error
+	Error *common.Error
 	// Provider ID that was deleted
 	ProviderId *string
 	// When the deletion was completed
@@ -296,12 +296,12 @@ const file_metrics_v1_delete_provider_response_proto_rawDesc = "" +
 	"\bwarnings\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x12>\n" +
 	"\vbackup_info\x18\a \x01(\v2\x1d.metrics.v1.MetricsBackupInfoR\n" +
 	"backupInfo\x12I\n" +
-	"\x12scheduled_deletion\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\x11scheduledDeletionB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12scheduled_deletion\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\x11scheduledDeletionB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_delete_provider_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_delete_provider_response_proto_goTypes = []any{
 	(*DeleteProviderResponse)(nil), // 0: metrics.v1.DeleteProviderResponse
-	(*v1.Error)(nil),               // 1: common.v1.Error
+	(*common.Error)(nil),           // 1: common.v1.Error
 	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 	(*DeletionResult)(nil),         // 3: metrics.v1.DeletionResult
 	(*MetricsBackupInfo)(nil),      // 4: metrics.v1.MetricsBackupInfo

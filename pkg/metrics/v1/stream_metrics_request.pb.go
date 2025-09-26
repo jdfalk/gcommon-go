@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/stream_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type MetricsStreamMetricsRequest struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata     *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Filter       *MetricFilter          `protobuf:"bytes,2,opt,name=filter"`
-	xxx_hidden_Options      *StreamOptions         `protobuf:"bytes,3,opt,name=options"`
-	xxx_hidden_ProviderId   *string                `protobuf:"bytes,4,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Start        *StreamStart           `protobuf:"bytes,5,opt,name=start"`
-	xxx_hidden_BufferConfig *BufferConfig          `protobuf:"bytes,6,opt,name=buffer_config,json=bufferConfig"`
+	state                   protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata     *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Filter       *MetricFilter           `protobuf:"bytes,2,opt,name=filter"`
+	xxx_hidden_Options      *StreamOptions          `protobuf:"bytes,3,opt,name=options"`
+	xxx_hidden_ProviderId   *string                 `protobuf:"bytes,4,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Start        *StreamStart            `protobuf:"bytes,5,opt,name=start"`
+	xxx_hidden_BufferConfig *BufferConfig           `protobuf:"bytes,6,opt,name=buffer_config,json=bufferConfig"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -62,7 +62,7 @@ func (x *MetricsStreamMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MetricsStreamMetricsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *MetricsStreamMetricsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -107,7 +107,7 @@ func (x *MetricsStreamMetricsRequest) GetBufferConfig() *BufferConfig {
 	return nil
 }
 
-func (x *MetricsStreamMetricsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *MetricsStreamMetricsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -203,7 +203,7 @@ type MetricsStreamMetricsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Filter to determine which metrics to stream
 	Filter *MetricFilter
 	// Streaming configuration options
@@ -245,12 +245,12 @@ const file_metrics_v1_stream_metrics_request_proto_rawDesc = "" +
 	"\vprovider_id\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"providerId\x12-\n" +
 	"\x05start\x18\x05 \x01(\v2\x17.metrics.v1.StreamStartR\x05start\x12=\n" +
-	"\rbuffer_config\x18\x06 \x01(\v2\x18.metrics.v1.BufferConfigR\fbufferConfigB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rbuffer_config\x18\x06 \x01(\v2\x18.metrics.v1.BufferConfigR\fbufferConfigB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stream_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stream_metrics_request_proto_goTypes = []any{
 	(*MetricsStreamMetricsRequest)(nil), // 0: metrics.v1.MetricsStreamMetricsRequest
-	(*v1.RequestMetadata)(nil),          // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),      // 1: common.v1.RequestMetadata
 	(*MetricFilter)(nil),                // 2: metrics.v1.MetricFilter
 	(*StreamOptions)(nil),               // 3: metrics.v1.StreamOptions
 	(*StreamStart)(nil),                 // 4: metrics.v1.StreamStart

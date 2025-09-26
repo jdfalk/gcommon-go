@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/dequeue_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,20 +31,20 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type DequeueResponse struct {
-	state                           protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Messages             *[]*QueueMessage       `protobuf:"bytes,1,rep,name=messages"`
-	xxx_hidden_Success              bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_RequestMetadata      *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_QueueName            *string                `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
-	xxx_hidden_MessagesRemaining    int32                  `protobuf:"varint,13,opt,name=messages_remaining,json=messagesRemaining"`
-	xxx_hidden_ApproximateQueueSize int64                  `protobuf:"varint,14,opt,name=approximate_queue_size,json=approximateQueueSize"`
-	xxx_hidden_ConsumerId           *string                `protobuf:"bytes,15,opt,name=consumer_id,json=consumerId"`
-	xxx_hidden_WaitStartedAt        *timestamppb.Timestamp `protobuf:"bytes,16,opt,name=wait_started_at,json=waitStartedAt"`
-	xxx_hidden_WaitDurationMs       int64                  `protobuf:"varint,17,opt,name=wait_duration_ms,json=waitDurationMs"`
-	xxx_hidden_TimedOut             bool                   `protobuf:"varint,18,opt,name=timed_out,json=timedOut"`
-	xxx_hidden_Error                *v1.Error              `protobuf:"bytes,61,opt,name=error"`
-	xxx_hidden_OperationStartedAt   *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=operation_started_at,json=operationStartedAt"`
-	xxx_hidden_ResponseGeneratedAt  *timestamppb.Timestamp `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
+	state                           protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Messages             *[]*QueueMessage        `protobuf:"bytes,1,rep,name=messages"`
+	xxx_hidden_Success              bool                    `protobuf:"varint,2,opt,name=success"`
+	xxx_hidden_RequestMetadata      *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_QueueName            *string                 `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
+	xxx_hidden_MessagesRemaining    int32                   `protobuf:"varint,13,opt,name=messages_remaining,json=messagesRemaining"`
+	xxx_hidden_ApproximateQueueSize int64                   `protobuf:"varint,14,opt,name=approximate_queue_size,json=approximateQueueSize"`
+	xxx_hidden_ConsumerId           *string                 `protobuf:"bytes,15,opt,name=consumer_id,json=consumerId"`
+	xxx_hidden_WaitStartedAt        *timestamppb.Timestamp  `protobuf:"bytes,16,opt,name=wait_started_at,json=waitStartedAt"`
+	xxx_hidden_WaitDurationMs       int64                   `protobuf:"varint,17,opt,name=wait_duration_ms,json=waitDurationMs"`
+	xxx_hidden_TimedOut             bool                    `protobuf:"varint,18,opt,name=timed_out,json=timedOut"`
+	xxx_hidden_Error                *common.Error           `protobuf:"bytes,61,opt,name=error"`
+	xxx_hidden_OperationStartedAt   *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=operation_started_at,json=operationStartedAt"`
+	xxx_hidden_ResponseGeneratedAt  *timestamppb.Timestamp  `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
 	XXX_raceDetectHookData          protoimpl.RaceDetectHookData
 	XXX_presence                    [1]uint32
 	unknownFields                   protoimpl.UnknownFields
@@ -92,7 +92,7 @@ func (x *DequeueResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *DequeueResponse) GetRequestMetadata() *v1.RequestMetadata {
+func (x *DequeueResponse) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -154,7 +154,7 @@ func (x *DequeueResponse) GetTimedOut() bool {
 	return false
 }
 
-func (x *DequeueResponse) GetError() *v1.Error {
+func (x *DequeueResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -184,7 +184,7 @@ func (x *DequeueResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 13)
 }
 
-func (x *DequeueResponse) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *DequeueResponse) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -222,7 +222,7 @@ func (x *DequeueResponse) SetTimedOut(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 9, 13)
 }
 
-func (x *DequeueResponse) SetError(v *v1.Error) {
+func (x *DequeueResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -386,7 +386,7 @@ type DequeueResponse_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Name of the queue messages were retrieved from.
 	// Echoed from the request for verification.
@@ -417,7 +417,7 @@ type DequeueResponse_builder struct {
 	// *
 	// Error information if the dequeue operation failed
 	// or completed with warnings.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// Timestamp when the dequeue operation started.
 	OperationStartedAt *timestamppb.Timestamp
@@ -487,15 +487,15 @@ const file_queue_v1_dequeue_response_proto_rawDesc = "" +
 	"\ttimed_out\x18\x12 \x01(\bR\btimedOut\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12L\n" +
 	"\x14operation_started_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x12operationStartedAt\x12N\n" +
-	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_dequeue_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_dequeue_response_proto_goTypes = []any{
-	(*DequeueResponse)(nil),       // 0: queue.v1.DequeueResponse
-	(*QueueMessage)(nil),          // 1: queue.v1.QueueMessage
-	(*v1.RequestMetadata)(nil),    // 2: common.v1.RequestMetadata
-	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
-	(*v1.Error)(nil),              // 4: common.v1.Error
+	(*DequeueResponse)(nil),        // 0: queue.v1.DequeueResponse
+	(*QueueMessage)(nil),           // 1: queue.v1.QueueMessage
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
+	(*timestamppb.Timestamp)(nil),  // 3: google.protobuf.Timestamp
+	(*common.Error)(nil),           // 4: common.v1.Error
 }
 var file_queue_v1_dequeue_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.DequeueResponse.messages:type_name -> queue.v1.QueueMessage

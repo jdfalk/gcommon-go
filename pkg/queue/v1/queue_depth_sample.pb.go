@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/queue_depth_sample.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -130,7 +130,7 @@ const file_queue_v1_queue_depth_sample_proto_rawDesc = "" +
 	"!queue/v1/queue_depth_sample.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1bbuf/validate/validate.proto\"k\n" +
 	"\x10QueueDepthSample\x128\n" +
 	"\ttimestamp\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestamp\x12\x1d\n" +
-	"\x05depth\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x05depthB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05depth\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x05depthB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_queue_depth_sample_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_queue_depth_sample_proto_goTypes = []any{

@@ -233,7 +233,7 @@ const file_queue_v2_update_topic_config_request_proto_rawDesc = "" +
 	"\rvalidate_only\x18\x03 \x01(\bR\fvalidateOnly\x12-\n" +
 	"\x12incremental_update\x18\x04 \x01(\bR\x11incrementalUpdate\x12\x1d\n" +
 	"\n" +
-	"timeout_ms\x18\x05 \x01(\x05R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\x05 \x01(\x05R\ttimeoutMsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_update_topic_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_update_topic_config_request_proto_goTypes = []any{

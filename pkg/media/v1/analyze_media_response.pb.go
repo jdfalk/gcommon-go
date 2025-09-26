@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/analyze_media_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -201,7 +201,7 @@ const file_media_v1_analyze_media_response_proto_rawDesc = "" +
 	"\x06job_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05jobId\x12\x16\n" +
 	"\x06status\x18\x02 \x01(\tR\x06status\x123\n" +
 	"\banalysis\x18\x03 \x01(\v2\x17.media.v1.MediaAnalysisR\banalysis\x12#\n" +
-	"\rerror_message\x18\x04 \x01(\tR\ferrorMessageB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rerror_message\x18\x04 \x01(\tR\ferrorMessageB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_analyze_media_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_analyze_media_response_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_health_metrics_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -115,7 +115,7 @@ const file_common_v1_get_health_metrics_response_proto_rawDesc = "" +
 	"+common/v1/get_health_metrics_response.proto\x12\tcommon.v1\x1a\"common/v1/health_metric_data.proto\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\x93\x01\n" +
 	"\x18GetHealthMetricsResponse\x12?\n" +
 	"\ametrics\x18\x01 \x03(\v2\x1b.common.v1.HealthMetricDataB\b\xbaH\x05\x92\x01\x02\b\x01R\ametrics\x126\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_health_metrics_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_health_metrics_response_proto_goTypes = []any{

@@ -253,7 +253,7 @@ const file_database_v2_query_stats_proto_rawDesc = "" +
 	"\fcolumn_count\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vcolumnCount\x12&\n" +
 	"\n" +
 	"query_plan\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tqueryPlan\x123\n" +
-	"\rcost_estimate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcostEstimateB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rcost_estimate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcostEstimateB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_query_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_query_stats_proto_goTypes = []any{

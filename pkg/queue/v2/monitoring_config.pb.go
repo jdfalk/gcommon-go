@@ -140,7 +140,7 @@ const file_queue_v2_monitoring_config_proto_rawDesc = "" +
 	" queue/v2/monitoring_config.proto\x12\bqueue.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"e\n" +
 	"\x15QueueMonitoringConfig\x12\x18\n" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x122\n" +
-	"\x10metrics_endpoint\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fmetricsEndpointB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10metrics_endpoint\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fmetricsEndpointB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_monitoring_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_monitoring_config_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/hierarchy_service.proto
 
-package v1
+package organization
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -41,7 +41,7 @@ const file_organization_v1_hierarchy_service_proto_rawDesc = "" +
 	"DeleteTeam\x12\".organization.v1.DeleteTeamRequest\x1a#.organization.v1.DeleteTeamResponse\x12R\n" +
 	"\tListTeams\x12!.organization.v1.ListTeamsRequest\x1a\".organization.v1.ListTeamsResponse\x12[\n" +
 	"\fGetHierarchy\x12$.organization.v1.GetHierarchyRequest\x1a%.organization.v1.GetHierarchyResponse\x12d\n" +
-	"\x0fUpdateHierarchy\x12'.organization.v1.UpdateHierarchyRequest\x1a(.organization.v1.UpdateHierarchyResponseB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fUpdateHierarchy\x12'.organization.v1.UpdateHierarchyRequest\x1a(.organization.v1.UpdateHierarchyResponseB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_hierarchy_service_proto_goTypes = []any{
 	(*CreateDepartmentRequest)(nil),  // 0: organization.v1.CreateDepartmentRequest

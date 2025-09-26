@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/middleware_info.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type MiddlewareInfo struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Id          *string                `protobuf:"bytes,1,opt,name=id"`
-	xxx_hidden_Type        v1.MiddlewareType      `protobuf:"varint,2,opt,name=type,enum=common.v1.MiddlewareType"`
+	xxx_hidden_Type        common.MiddlewareType  `protobuf:"varint,2,opt,name=type,enum=common.v1.MiddlewareType"`
 	xxx_hidden_Order       int32                  `protobuf:"varint,3,opt,name=order"`
 	xxx_hidden_Metadata    map[string]string      `protobuf:"bytes,4,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -71,13 +71,13 @@ func (x *MiddlewareInfo) GetId() string {
 	return ""
 }
 
-func (x *MiddlewareInfo) GetType() v1.MiddlewareType {
+func (x *MiddlewareInfo) GetType() common.MiddlewareType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MiddlewareType(0)
+	return common.MiddlewareType(0)
 }
 
 func (x *MiddlewareInfo) GetOrder() int32 {
@@ -99,7 +99,7 @@ func (x *MiddlewareInfo) SetId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *MiddlewareInfo) SetType(v v1.MiddlewareType) {
+func (x *MiddlewareInfo) SetType(v common.MiddlewareType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
@@ -141,7 +141,7 @@ func (x *MiddlewareInfo) ClearId() {
 
 func (x *MiddlewareInfo) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Type = v1.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
 }
 
 func (x *MiddlewareInfo) ClearOrder() {
@@ -155,7 +155,7 @@ type MiddlewareInfo_builder struct {
 	// Middleware identifier
 	Id *string
 	// Middleware type
-	Type *v1.MiddlewareType
+	Type *common.MiddlewareType
 	// Execution order priority
 	Order *int32
 	// Arbitrary metadata for middleware
@@ -194,13 +194,13 @@ const file_web_v1_middleware_info_proto_rawDesc = "" +
 	"\bmetadata\x18\x04 \x03(\v2$.web.v1.MiddlewareInfo.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_middleware_info_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_web_v1_middleware_info_proto_goTypes = []any{
-	(*MiddlewareInfo)(nil), // 0: web.v1.MiddlewareInfo
-	nil,                    // 1: web.v1.MiddlewareInfo.MetadataEntry
-	(v1.MiddlewareType)(0), // 2: common.v1.MiddlewareType
+	(*MiddlewareInfo)(nil),     // 0: web.v1.MiddlewareInfo
+	nil,                        // 1: web.v1.MiddlewareInfo.MetadataEntry
+	(common.MiddlewareType)(0), // 2: common.v1.MiddlewareType
 }
 var file_web_v1_middleware_info_proto_depIdxs = []int32{
 	2, // 0: web.v1.MiddlewareInfo.type:type_name -> common.v1.MiddlewareType

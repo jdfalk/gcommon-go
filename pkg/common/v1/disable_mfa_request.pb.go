@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/disable_mfa_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -193,7 +193,7 @@ const file_common_v1_disable_mfa_request_proto_rawDesc = "" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12\x1a\n" +
 	"\bpassword\x18\x02 \x01(\tR\bpassword\x12+\n" +
 	"\x11verification_code\x18\x03 \x01(\tR\x10verificationCode\x12.\n" +
-	"\amethods\x18\x04 \x03(\x0e2\x14.common.v1.MfaMethodR\amethodsB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amethods\x18\x04 \x03(\x0e2\x14.common.v1.MfaMethodR\amethodsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_disable_mfa_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_disable_mfa_request_proto_goTypes = []any{

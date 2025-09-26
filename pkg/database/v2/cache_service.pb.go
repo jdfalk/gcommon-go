@@ -40,7 +40,7 @@ const file_database_v2_cache_service_proto_rawDesc = "" +
 	"\x04Keys\x12\x18.database.v2.KeysRequest\x1a\x19.database.v2.KeysResponse\x12Q\n" +
 	"\bGetStats\x12!.database.v2.CacheGetStatsRequest\x1a\".database.v2.CacheGetStatsResponse\x12>\n" +
 	"\x05Flush\x12\x19.database.v2.FlushRequest\x1a\x1a.database.v2.FlushResponse\x12\\\n" +
-	"\x0fTouchExpiration\x12#.database.v2.TouchExpirationRequest\x1a$.database.v2.TouchExpirationResponseB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fTouchExpiration\x12#.database.v2.TouchExpirationRequest\x1a$.database.v2.TouchExpirationResponseB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_cache_service_proto_goTypes = []any{
 	(*GetRequest)(nil),              // 0: database.v2.GetRequest

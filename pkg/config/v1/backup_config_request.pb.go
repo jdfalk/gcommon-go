@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/backup_config_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,11 +26,11 @@ const (
 // *
 // BackupConfigRequest triggers creation of a configuration backup.
 type BackupConfigRequest struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Namespace      *string                `protobuf:"bytes,1,opt,name=namespace"`
-	xxx_hidden_Description    *string                `protobuf:"bytes,2,opt,name=description"`
-	xxx_hidden_IncludeSecrets bool                   `protobuf:"varint,3,opt,name=include_secrets,json=includeSecrets"`
-	xxx_hidden_Metadata       *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
+	state                     protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Namespace      *string                 `protobuf:"bytes,1,opt,name=namespace"`
+	xxx_hidden_Description    *string                 `protobuf:"bytes,2,opt,name=description"`
+	xxx_hidden_IncludeSecrets bool                    `protobuf:"varint,3,opt,name=include_secrets,json=includeSecrets"`
+	xxx_hidden_Metadata       *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -89,7 +89,7 @@ func (x *BackupConfigRequest) GetIncludeSecrets() bool {
 	return false
 }
 
-func (x *BackupConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *BackupConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -111,7 +111,7 @@ func (x *BackupConfigRequest) SetIncludeSecrets(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *BackupConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *BackupConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -172,7 +172,7 @@ type BackupConfigRequest_builder struct {
 	// Include secrets in the backup
 	IncludeSecrets *bool
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 BackupConfigRequest_builder) Build() *BackupConfigRequest {
@@ -204,12 +204,12 @@ const file_config_v1_backup_config_request_proto_rawDesc = "" +
 	"\tnamespace\x18\x01 \x01(\tR\tnamespace\x12*\n" +
 	"\vdescription\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12'\n" +
 	"\x0finclude_secrets\x18\x03 \x01(\bR\x0eincludeSecrets\x126\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_backup_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_backup_config_request_proto_goTypes = []any{
-	(*BackupConfigRequest)(nil), // 0: config.v1.BackupConfigRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*BackupConfigRequest)(nil),    // 0: config.v1.BackupConfigRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_config_v1_backup_config_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.BackupConfigRequest.metadata:type_name -> common.v1.RequestMetadata

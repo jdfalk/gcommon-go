@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/cluster_health.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type ClusterHealth struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Status       v1.CommonHealthStatus  `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_HealthyNodes int32                  `protobuf:"varint,2,opt,name=healthy_nodes,json=healthyNodes"`
-	xxx_hidden_TotalNodes   int32                  `protobuf:"varint,3,opt,name=total_nodes,json=totalNodes"`
-	xxx_hidden_Issues       []string               `protobuf:"bytes,4,rep,name=issues"`
+	state                   protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Status       common.CommonHealthStatus `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_HealthyNodes int32                     `protobuf:"varint,2,opt,name=healthy_nodes,json=healthyNodes"`
+	xxx_hidden_TotalNodes   int32                     `protobuf:"varint,3,opt,name=total_nodes,json=totalNodes"`
+	xxx_hidden_Issues       []string                  `protobuf:"bytes,4,rep,name=issues"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -60,13 +60,13 @@ func (x *ClusterHealth) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ClusterHealth) GetStatus() v1.CommonHealthStatus {
+func (x *ClusterHealth) GetStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *ClusterHealth) GetHealthyNodes() int32 {
@@ -90,7 +90,7 @@ func (x *ClusterHealth) GetIssues() []string {
 	return nil
 }
 
-func (x *ClusterHealth) SetStatus(v v1.CommonHealthStatus) {
+func (x *ClusterHealth) SetStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -132,7 +132,7 @@ func (x *ClusterHealth) HasTotalNodes() bool {
 
 func (x *ClusterHealth) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Status = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *ClusterHealth) ClearHealthyNodes() {
@@ -149,7 +149,7 @@ type ClusterHealth_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Overall health status
-	Status *v1.CommonHealthStatus
+	Status *common.CommonHealthStatus
 	// Number of healthy nodes
 	HealthyNodes *int32
 	// Total number of nodes
@@ -188,12 +188,12 @@ const file_queue_v1_cluster_health_proto_rawDesc = "" +
 	"\rhealthy_nodes\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fhealthyNodes\x12(\n" +
 	"\vtotal_nodes\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\n" +
 	"totalNodes\x12 \n" +
-	"\x06issues\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x06issuesB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06issues\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x06issuesB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_cluster_health_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_cluster_health_proto_goTypes = []any{
-	(*ClusterHealth)(nil),      // 0: queue.v1.ClusterHealth
-	(v1.CommonHealthStatus)(0), // 1: common.v1.CommonHealthStatus
+	(*ClusterHealth)(nil),          // 0: queue.v1.ClusterHealth
+	(common.CommonHealthStatus)(0), // 1: common.v1.CommonHealthStatus
 }
 var file_queue_v1_cluster_health_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ClusterHealth.status:type_name -> common.v1.CommonHealthStatus

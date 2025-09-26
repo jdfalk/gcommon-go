@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/value_status.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -101,7 +101,7 @@ const file_common_v1_value_status_proto_rawDesc = "" +
 	"\x12VALUE_STATUS_ERROR\x10\x06\x12\x18\n" +
 	"\x14VALUE_STATUS_PENDING\x10\a\x12\x18\n" +
 	"\x14VALUE_STATUS_SYNCING\x10\b\x12\x1b\n" +
-	"\x17VALUE_STATUS_VALIDATING\x10\tB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17VALUE_STATUS_VALIDATING\x10\tB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_value_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_value_status_proto_goTypes = []any{

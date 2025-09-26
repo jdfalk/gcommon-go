@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/stop_scraping_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type StopScrapingRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_JobId       *string                `protobuf:"bytes,2,opt,name=job_id,json=jobId"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_JobId       *string                 `protobuf:"bytes,2,opt,name=job_id,json=jobId"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -58,7 +58,7 @@ func (x *StopScrapingRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *StopScrapingRequest) GetMetadata() *v1.RequestMetadata {
+func (x *StopScrapingRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -75,7 +75,7 @@ func (x *StopScrapingRequest) GetJobId() string {
 	return ""
 }
 
-func (x *StopScrapingRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *StopScrapingRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -111,7 +111,7 @@ type StopScrapingRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Identifier of the job to stop
 	JobId *string
 }
@@ -136,12 +136,12 @@ const file_metrics_v1_stop_scraping_request_proto_rawDesc = "" +
 	"metrics.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"m\n" +
 	"\x13StopScrapingRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x1e\n" +
-	"\x06job_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05jobIdB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06job_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05jobIdB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stop_scraping_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stop_scraping_request_proto_goTypes = []any{
-	(*StopScrapingRequest)(nil), // 0: metrics.v1.StopScrapingRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*StopScrapingRequest)(nil),    // 0: metrics.v1.StopScrapingRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_metrics_v1_stop_scraping_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.StopScrapingRequest.metadata:type_name -> common.v1.RequestMetadata

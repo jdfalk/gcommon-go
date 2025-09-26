@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/delete_multiple_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,10 +26,10 @@ const (
 // *
 // Request to delete multiple cache keys.
 type DeleteMultipleRequest struct {
-	state                protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Keys      []string               `protobuf:"bytes,1,rep,name=keys"`
-	xxx_hidden_Namespace *string                `protobuf:"bytes,2,opt,name=namespace"`
-	xxx_hidden_Metadata  *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state                protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Keys      []string                `protobuf:"bytes,1,rep,name=keys"`
+	xxx_hidden_Namespace *string                 `protobuf:"bytes,2,opt,name=namespace"`
+	xxx_hidden_Metadata  *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -80,13 +80,13 @@ func (x *DeleteMultipleRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *DeleteMultipleRequest) GetMetadata() *v1.RequestMetadata {
+func (x *DeleteMultipleRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -103,7 +103,7 @@ func (x *DeleteMultipleRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *DeleteMultipleRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *DeleteMultipleRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
@@ -133,7 +133,7 @@ func (x *DeleteMultipleRequest) ClearNamespace() {
 
 func (x *DeleteMultipleRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type DeleteMultipleRequest_builder struct {
@@ -144,7 +144,7 @@ type DeleteMultipleRequest_builder struct {
 	// Optional namespace
 	Namespace *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 DeleteMultipleRequest_builder) Build() *DeleteMultipleRequest {
@@ -171,12 +171,12 @@ const file_database_v1_delete_multiple_request_proto_rawDesc = "" +
 	"\x15DeleteMultipleRequest\x12\x1c\n" +
 	"\x04keys\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x04keys\x12%\n" +
 	"\tnamespace\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_delete_multiple_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_delete_multiple_request_proto_goTypes = []any{
-	(*DeleteMultipleRequest)(nil), // 0: database.v1.DeleteMultipleRequest
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
+	(*DeleteMultipleRequest)(nil),  // 0: database.v1.DeleteMultipleRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_database_v1_delete_multiple_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.DeleteMultipleRequest.metadata:type_name -> common.v1.RequestMetadata

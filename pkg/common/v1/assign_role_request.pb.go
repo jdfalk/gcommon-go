@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/assign_role_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -352,7 +352,7 @@ const file_common_v1_assign_role_request_proto_rawDesc = "" +
 	"\x06reason\x18\x06 \x01(\tR\x06reason\x12\x1c\n" +
 	"\ttemporary\x18\a \x01(\bR\ttemporary\x12\x1d\n" +
 	"\n" +
-	"expires_at\x18\b \x01(\x03R\texpiresAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"expires_at\x18\b \x01(\x03R\texpiresAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_assign_role_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_assign_role_request_proto_goTypes = []any{

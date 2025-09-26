@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -364,7 +364,7 @@ const file_config_v2_rotation_settings_proto_rawDesc = "" +
 	"\x0flast_rotated_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\rlastRotatedAt\x12D\n" +
 	"\x10next_rotation_at\x18\t \x01(\v2\x1a.google.protobuf.TimestampR\x0enextRotationAt\x12M\n" +
 	"\x10rotation_history\x18\n" +
-	" \x03(\v2\x18.config.v2.RotationEventB\b\xbaH\x05\x92\x01\x02\b\x01R\x0frotationHistoryB-Z#github.com/jdfalk/gcommon/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x03(\v2\x18.config.v2.RotationEventB\b\xbaH\x05\x92\x01\x02\b\x01R\x0frotationHistoryB1Z'github.com/jdfalk/gcommon/pkg/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v2_rotation_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v2_rotation_settings_proto_goTypes = []any{

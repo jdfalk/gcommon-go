@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/export_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type ExportMetricsRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_ProviderId      *string                `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Format          v1.MetricsExportFormat `protobuf:"varint,3,opt,name=format,enum=common.v1.MetricsExportFormat"`
-	xxx_hidden_Destination     *string                `protobuf:"bytes,4,opt,name=destination"`
-	xxx_hidden_MetricNames     []string               `protobuf:"bytes,5,rep,name=metric_names,json=metricNames"`
-	xxx_hidden_IncludeMetadata bool                   `protobuf:"varint,6,opt,name=include_metadata,json=includeMetadata"`
+	state                      protoimpl.MessageState     `protogen:"opaque.v1"`
+	xxx_hidden_Metadata        *common.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_ProviderId      *string                    `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Format          common.MetricsExportFormat `protobuf:"varint,3,opt,name=format,enum=common.v1.MetricsExportFormat"`
+	xxx_hidden_Destination     *string                    `protobuf:"bytes,4,opt,name=destination"`
+	xxx_hidden_MetricNames     []string                   `protobuf:"bytes,5,rep,name=metric_names,json=metricNames"`
+	xxx_hidden_IncludeMetadata bool                       `protobuf:"varint,6,opt,name=include_metadata,json=includeMetadata"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -62,7 +62,7 @@ func (x *ExportMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ExportMetricsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ExportMetricsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -79,13 +79,13 @@ func (x *ExportMetricsRequest) GetProviderId() string {
 	return ""
 }
 
-func (x *ExportMetricsRequest) GetFormat() v1.MetricsExportFormat {
+func (x *ExportMetricsRequest) GetFormat() common.MetricsExportFormat {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Format
 		}
 	}
-	return v1.MetricsExportFormat(0)
+	return common.MetricsExportFormat(0)
 }
 
 func (x *ExportMetricsRequest) GetDestination() string {
@@ -112,7 +112,7 @@ func (x *ExportMetricsRequest) GetIncludeMetadata() bool {
 	return false
 }
 
-func (x *ExportMetricsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ExportMetricsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -121,7 +121,7 @@ func (x *ExportMetricsRequest) SetProviderId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
 
-func (x *ExportMetricsRequest) SetFormat(v v1.MetricsExportFormat) {
+func (x *ExportMetricsRequest) SetFormat(v common.MetricsExportFormat) {
 	x.xxx_hidden_Format = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
@@ -186,7 +186,7 @@ func (x *ExportMetricsRequest) ClearProviderId() {
 
 func (x *ExportMetricsRequest) ClearFormat() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Format = v1.MetricsExportFormat_METRICS_EXPORT_FORMAT_UNSPECIFIED
+	x.xxx_hidden_Format = common.MetricsExportFormat_METRICS_EXPORT_FORMAT_UNSPECIFIED
 }
 
 func (x *ExportMetricsRequest) ClearDestination() {
@@ -203,11 +203,11 @@ type ExportMetricsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Metrics provider to export from
 	ProviderId *string
 	// Desired export format
-	Format *v1.MetricsExportFormat
+	Format *common.MetricsExportFormat
 	// Destination URI or path
 	Destination *string
 	// Specific metrics to include (optional)
@@ -254,13 +254,13 @@ const file_metrics_v1_export_metrics_request_proto_rawDesc = "" +
 	"\x06format\x18\x03 \x01(\x0e2\x1e.common.v1.MetricsExportFormatR\x06format\x12)\n" +
 	"\vdestination\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vdestination\x12+\n" +
 	"\fmetric_names\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\vmetricNames\x12)\n" +
-	"\x10include_metadata\x18\x06 \x01(\bR\x0fincludeMetadataB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10include_metadata\x18\x06 \x01(\bR\x0fincludeMetadataB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_export_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_export_metrics_request_proto_goTypes = []any{
-	(*ExportMetricsRequest)(nil), // 0: metrics.v1.ExportMetricsRequest
-	(*v1.RequestMetadata)(nil),   // 1: common.v1.RequestMetadata
-	(v1.MetricsExportFormat)(0),  // 2: common.v1.MetricsExportFormat
+	(*ExportMetricsRequest)(nil),    // 0: metrics.v1.ExportMetricsRequest
+	(*common.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(common.MetricsExportFormat)(0), // 2: common.v1.MetricsExportFormat
 }
 var file_metrics_v1_export_metrics_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.ExportMetricsRequest.metadata:type_name -> common.v1.RequestMetadata

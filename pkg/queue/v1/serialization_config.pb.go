@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/serialization_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,17 +26,17 @@ const (
 // *
 // Configuration for message serialization and deserialization.
 type SerializationConfig struct {
-	state                            protoimpl.MessageState    `protogen:"opaque.v1"`
-	xxx_hidden_DefaultFormat         v1.SerializationFormat    `protobuf:"varint,1,opt,name=default_format,json=defaultFormat,enum=common.v1.SerializationFormat"`
-	xxx_hidden_SupportedFormats      []v1.SerializationFormat  `protobuf:"varint,2,rep,packed,name=supported_formats,json=supportedFormats,enum=common.v1.SerializationFormat"`
-	xxx_hidden_AutoDetectFormat      bool                      `protobuf:"varint,3,opt,name=auto_detect_format,json=autoDetectFormat"`
-	xxx_hidden_DefaultCompression    v1.CompressionAlgorithm   `protobuf:"varint,4,opt,name=default_compression,json=defaultCompression,enum=common.v1.CompressionAlgorithm"`
-	xxx_hidden_SupportedCompressions []v1.CompressionAlgorithm `protobuf:"varint,5,rep,packed,name=supported_compressions,json=supportedCompressions,enum=common.v1.CompressionAlgorithm"`
-	xxx_hidden_AutoDetectCompression bool                      `protobuf:"varint,6,opt,name=auto_detect_compression,json=autoDetectCompression"`
-	xxx_hidden_FormatOptions         map[string]*FormatOptions `protobuf:"bytes,7,rep,name=format_options,json=formatOptions" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_ValidateOnDeserialize bool                      `protobuf:"varint,8,opt,name=validate_on_deserialize,json=validateOnDeserialize"`
-	xxx_hidden_MaxMessageSize        uint64                    `protobuf:"varint,9,opt,name=max_message_size,json=maxMessageSize"`
-	xxx_hidden_BackwardsCompatible   bool                      `protobuf:"varint,10,opt,name=backwards_compatible,json=backwardsCompatible"`
+	state                            protoimpl.MessageState        `protogen:"opaque.v1"`
+	xxx_hidden_DefaultFormat         common.SerializationFormat    `protobuf:"varint,1,opt,name=default_format,json=defaultFormat,enum=common.v1.SerializationFormat"`
+	xxx_hidden_SupportedFormats      []common.SerializationFormat  `protobuf:"varint,2,rep,packed,name=supported_formats,json=supportedFormats,enum=common.v1.SerializationFormat"`
+	xxx_hidden_AutoDetectFormat      bool                          `protobuf:"varint,3,opt,name=auto_detect_format,json=autoDetectFormat"`
+	xxx_hidden_DefaultCompression    common.CompressionAlgorithm   `protobuf:"varint,4,opt,name=default_compression,json=defaultCompression,enum=common.v1.CompressionAlgorithm"`
+	xxx_hidden_SupportedCompressions []common.CompressionAlgorithm `protobuf:"varint,5,rep,packed,name=supported_compressions,json=supportedCompressions,enum=common.v1.CompressionAlgorithm"`
+	xxx_hidden_AutoDetectCompression bool                          `protobuf:"varint,6,opt,name=auto_detect_compression,json=autoDetectCompression"`
+	xxx_hidden_FormatOptions         map[string]*FormatOptions     `protobuf:"bytes,7,rep,name=format_options,json=formatOptions" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_ValidateOnDeserialize bool                          `protobuf:"varint,8,opt,name=validate_on_deserialize,json=validateOnDeserialize"`
+	xxx_hidden_MaxMessageSize        uint64                        `protobuf:"varint,9,opt,name=max_message_size,json=maxMessageSize"`
+	xxx_hidden_BackwardsCompatible   bool                          `protobuf:"varint,10,opt,name=backwards_compatible,json=backwardsCompatible"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -68,16 +68,16 @@ func (x *SerializationConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *SerializationConfig) GetDefaultFormat() v1.SerializationFormat {
+func (x *SerializationConfig) GetDefaultFormat() common.SerializationFormat {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_DefaultFormat
 		}
 	}
-	return v1.SerializationFormat(0)
+	return common.SerializationFormat(0)
 }
 
-func (x *SerializationConfig) GetSupportedFormats() []v1.SerializationFormat {
+func (x *SerializationConfig) GetSupportedFormats() []common.SerializationFormat {
 	if x != nil {
 		return x.xxx_hidden_SupportedFormats
 	}
@@ -91,16 +91,16 @@ func (x *SerializationConfig) GetAutoDetectFormat() bool {
 	return false
 }
 
-func (x *SerializationConfig) GetDefaultCompression() v1.CompressionAlgorithm {
+func (x *SerializationConfig) GetDefaultCompression() common.CompressionAlgorithm {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_DefaultCompression
 		}
 	}
-	return v1.CompressionAlgorithm(0)
+	return common.CompressionAlgorithm(0)
 }
 
-func (x *SerializationConfig) GetSupportedCompressions() []v1.CompressionAlgorithm {
+func (x *SerializationConfig) GetSupportedCompressions() []common.CompressionAlgorithm {
 	if x != nil {
 		return x.xxx_hidden_SupportedCompressions
 	}
@@ -142,12 +142,12 @@ func (x *SerializationConfig) GetBackwardsCompatible() bool {
 	return false
 }
 
-func (x *SerializationConfig) SetDefaultFormat(v v1.SerializationFormat) {
+func (x *SerializationConfig) SetDefaultFormat(v common.SerializationFormat) {
 	x.xxx_hidden_DefaultFormat = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *SerializationConfig) SetSupportedFormats(v []v1.SerializationFormat) {
+func (x *SerializationConfig) SetSupportedFormats(v []common.SerializationFormat) {
 	x.xxx_hidden_SupportedFormats = v
 }
 
@@ -156,12 +156,12 @@ func (x *SerializationConfig) SetAutoDetectFormat(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 10)
 }
 
-func (x *SerializationConfig) SetDefaultCompression(v v1.CompressionAlgorithm) {
+func (x *SerializationConfig) SetDefaultCompression(v common.CompressionAlgorithm) {
 	x.xxx_hidden_DefaultCompression = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 10)
 }
 
-func (x *SerializationConfig) SetSupportedCompressions(v []v1.CompressionAlgorithm) {
+func (x *SerializationConfig) SetSupportedCompressions(v []common.CompressionAlgorithm) {
 	x.xxx_hidden_SupportedCompressions = v
 }
 
@@ -240,7 +240,7 @@ func (x *SerializationConfig) HasBackwardsCompatible() bool {
 
 func (x *SerializationConfig) ClearDefaultFormat() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_DefaultFormat = v1.SerializationFormat_SERIALIZATION_FORMAT_UNSPECIFIED
+	x.xxx_hidden_DefaultFormat = common.SerializationFormat_SERIALIZATION_FORMAT_UNSPECIFIED
 }
 
 func (x *SerializationConfig) ClearAutoDetectFormat() {
@@ -250,7 +250,7 @@ func (x *SerializationConfig) ClearAutoDetectFormat() {
 
 func (x *SerializationConfig) ClearDefaultCompression() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_DefaultCompression = v1.CompressionAlgorithm_COMPRESSION_ALGORITHM_UNSPECIFIED
+	x.xxx_hidden_DefaultCompression = common.CompressionAlgorithm_COMPRESSION_ALGORITHM_UNSPECIFIED
 }
 
 func (x *SerializationConfig) ClearAutoDetectCompression() {
@@ -277,15 +277,15 @@ type SerializationConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Default serialization format
-	DefaultFormat *v1.SerializationFormat
+	DefaultFormat *common.SerializationFormat
 	// Supported serialization formats
-	SupportedFormats []v1.SerializationFormat
+	SupportedFormats []common.SerializationFormat
 	// Whether to auto-detect format from message headers
 	AutoDetectFormat *bool
 	// Default compression algorithm
-	DefaultCompression *v1.CompressionAlgorithm
+	DefaultCompression *common.CompressionAlgorithm
 	// Supported compression algorithms
-	SupportedCompressions []v1.CompressionAlgorithm
+	SupportedCompressions []common.CompressionAlgorithm
 	// Whether to auto-detect compression from message headers
 	AutoDetectCompression *bool
 	// Format-specific options
@@ -355,15 +355,15 @@ const file_queue_v1_serialization_config_proto_rawDesc = "" +
 	" \x01(\bR\x13backwardsCompatible\x1aY\n" +
 	"\x12FormatOptionsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12-\n" +
-	"\x05value\x18\x02 \x01(\v2\x17.queue.v1.FormatOptionsR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\v2\x17.queue.v1.FormatOptionsR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_serialization_config_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_serialization_config_proto_goTypes = []any{
-	(*SerializationConfig)(nil),  // 0: queue.v1.SerializationConfig
-	nil,                          // 1: queue.v1.SerializationConfig.FormatOptionsEntry
-	(v1.SerializationFormat)(0),  // 2: common.v1.SerializationFormat
-	(v1.CompressionAlgorithm)(0), // 3: common.v1.CompressionAlgorithm
-	(*FormatOptions)(nil),        // 4: queue.v1.FormatOptions
+	(*SerializationConfig)(nil),      // 0: queue.v1.SerializationConfig
+	nil,                              // 1: queue.v1.SerializationConfig.FormatOptionsEntry
+	(common.SerializationFormat)(0),  // 2: common.v1.SerializationFormat
+	(common.CompressionAlgorithm)(0), // 3: common.v1.CompressionAlgorithm
+	(*FormatOptions)(nil),            // 4: queue.v1.FormatOptions
 }
 var file_queue_v1_serialization_config_proto_depIdxs = []int32{
 	2, // 0: queue.v1.SerializationConfig.default_format:type_name -> common.v1.SerializationFormat

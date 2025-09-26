@@ -226,7 +226,7 @@ const file_queue_v2_historical_data_point_proto_rawDesc = "" +
 	"throughput\x12<\n" +
 	"\x12average_latency_ms\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x10averageLatencyMs\x12-\n" +
 	"\n" +
-	"error_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\terrorRateB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"error_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\terrorRateB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_historical_data_point_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_historical_data_point_proto_goTypes = []any{

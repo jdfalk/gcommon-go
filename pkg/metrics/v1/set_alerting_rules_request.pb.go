@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/set_alerting_rules_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type SetAlertingRulesRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_MetricId *string                `protobuf:"bytes,1,opt,name=metric_id,json=metricId"`
-	xxx_hidden_Rules    *[]*AlertingRule       `protobuf:"bytes,2,rep,name=rules"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_MetricId *string                 `protobuf:"bytes,1,opt,name=metric_id,json=metricId"`
+	xxx_hidden_Rules    *[]*AlertingRule        `protobuf:"bytes,2,rep,name=rules"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -80,13 +80,13 @@ func (x *SetAlertingRulesRequest) GetRules() []*AlertingRule {
 	return nil
 }
 
-func (x *SetAlertingRulesRequest) GetMetadata() *v1.RequestMetadata {
+func (x *SetAlertingRulesRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -103,7 +103,7 @@ func (x *SetAlertingRulesRequest) SetRules(v []*AlertingRule) {
 	x.xxx_hidden_Rules = &v
 }
 
-func (x *SetAlertingRulesRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *SetAlertingRulesRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
@@ -133,7 +133,7 @@ func (x *SetAlertingRulesRequest) ClearMetricId() {
 
 func (x *SetAlertingRulesRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type SetAlertingRulesRequest_builder struct {
@@ -144,7 +144,7 @@ type SetAlertingRulesRequest_builder struct {
 	// Rules to set
 	Rules []*AlertingRule
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 SetAlertingRulesRequest_builder) Build() *SetAlertingRulesRequest {
@@ -172,13 +172,13 @@ const file_metrics_v1_set_alerting_rules_request_proto_rawDesc = "" +
 	"\x17SetAlertingRulesRequest\x12$\n" +
 	"\tmetric_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bmetricId\x128\n" +
 	"\x05rules\x18\x02 \x03(\v2\x18.metrics.v1.AlertingRuleB\b\xbaH\x05\x92\x01\x02\b\x01R\x05rules\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_set_alerting_rules_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_set_alerting_rules_request_proto_goTypes = []any{
 	(*SetAlertingRulesRequest)(nil), // 0: metrics.v1.SetAlertingRulesRequest
 	(*AlertingRule)(nil),            // 1: metrics.v1.AlertingRule
-	(*v1.RequestMetadata)(nil),      // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),  // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_set_alerting_rules_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.SetAlertingRulesRequest.rules:type_name -> metrics.v1.AlertingRule

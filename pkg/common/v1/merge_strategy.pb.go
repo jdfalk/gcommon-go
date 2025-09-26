@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/merge_strategy.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -93,7 +93,7 @@ const file_common_v1_merge_strategy_proto_rawDesc = "" +
 	"\x1bMERGE_STRATEGY_ARRAY_CONCAT\x10\x04\x12 \n" +
 	"\x1cMERGE_STRATEGY_ARRAY_REPLACE\x10\x05\x12\x1e\n" +
 	"\x1aMERGE_STRATEGY_ARRAY_MERGE\x10\x06\x12\x19\n" +
-	"\x15MERGE_STRATEGY_CUSTOM\x10\aB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15MERGE_STRATEGY_CUSTOM\x10\aB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_merge_strategy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_merge_strategy_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_user_permissions_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -160,7 +160,7 @@ const file_common_v1_get_user_permissions_response_proto_rawDesc = "" +
 	"\x10role_permissions\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0frolePermissions\x12=\n" +
 	"\x15effective_permissions\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x14effectivePermissions\x121\n" +
 	"\x05roles\x18\x04 \x03(\v2\x0f.common.v1.RoleB\n" +
-	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\x05rolesB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\x05rolesB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_user_permissions_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_user_permissions_response_proto_goTypes = []any{

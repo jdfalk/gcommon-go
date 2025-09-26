@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/performance_options.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -233,7 +233,7 @@ const file_queue_v1_performance_options_proto_rawDesc = "" +
 	"batch_size\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tbatchSize\x12-\n" +
 	"\x0ebuffer_size_mb\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fbufferSizeMb\x12-\n" +
 	"\x12enable_compression\x18\x04 \x01(\bR\x11enableCompression\x12,\n" +
-	"\rthrottle_rate\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fthrottleRateB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rthrottle_rate\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fthrottleRateB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_performance_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_performance_options_proto_goTypes = []any{

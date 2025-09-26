@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/refresh_token.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -191,7 +191,7 @@ const file_common_v1_refresh_token_proto_rawDesc = "" +
 	"\x05value\x18\x01 \x01(\tR\x05value\x12p\n" +
 	"\auser_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12=\n" +
 	"\n" +
-	"expires_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\texpiresAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"expires_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\texpiresAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_refresh_token_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_refresh_token_proto_goTypes = []any{

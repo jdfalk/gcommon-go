@@ -77,7 +77,7 @@ const file_common_v2_conflict_resolution_proto_rawDesc = "" +
 	"&COMMON_CONFLICT_RESOLUTION_UNSPECIFIED\x10\x00\x12$\n" +
 	" COMMON_CONFLICT_RESOLUTION_MERGE\x10\x01\x12(\n" +
 	"$COMMON_CONFLICT_RESOLUTION_OVERWRITE\x10\x02\x12#\n" +
-	"\x1fCOMMON_CONFLICT_RESOLUTION_FAIL\x10\x03B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1fCOMMON_CONFLICT_RESOLUTION_FAIL\x10\x03B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_conflict_resolution_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_conflict_resolution_proto_goTypes = []any{

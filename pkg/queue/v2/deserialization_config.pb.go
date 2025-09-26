@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -256,7 +256,7 @@ const file_queue_v2_deserialization_config_proto_rawDesc = "" +
 	"\x0fvalidate_schema\x18\x03 \x01(\bR\x0evalidateSchema\x120\n" +
 	"\x14allow_unknown_fields\x18\x04 \x01(\bR\x12allowUnknownFields\x128\n" +
 	"\x13custom_deserializer\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x12customDeserializer\x121\n" +
-	"\x10max_message_size\x18\x06 \x01(\x04B\a\xbaH\x042\x02(\x00R\x0emaxMessageSizeB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10max_message_size\x18\x06 \x01(\x04B\a\xbaH\x042\x02(\x00R\x0emaxMessageSizeB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_deserialization_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_deserialization_config_proto_goTypes = []any{

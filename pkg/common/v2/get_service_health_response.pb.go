@@ -164,7 +164,7 @@ const file_common_v2_get_service_health_response_proto_rawDesc = "" +
 	"\x06status\x18\x01 \x01(\x0e2\x1d.common.v2.CommonHealthStatusR\x06status\x129\n" +
 	"\n" +
 	"last_check\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheck\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v2.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v2.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_service_health_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_service_health_response_proto_goTypes = []any{

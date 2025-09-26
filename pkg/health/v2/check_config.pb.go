@@ -368,7 +368,7 @@ const file_health_v2_check_config_proto_rawDesc = "" +
 	"\x10retention_period\x18\t \x01(\v2\x19.google.protobuf.DurationR\x0fretentionPeriod\x12\x1d\n" +
 	"\n" +
 	"auto_retry\x18\n" +
-	" \x01(\bR\tautoRetryB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\bR\tautoRetryB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_check_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v2_check_config_proto_goTypes = []any{

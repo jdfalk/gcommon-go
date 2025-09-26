@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/get_route_metrics_request.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,9 +29,9 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type GetRouteMetricsRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_RequestMetadata *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_RequestedAt     *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=requested_at,json=requestedAt"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_RequestMetadata *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_RequestedAt     *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=requested_at,json=requestedAt"`
 	unknownFields              protoimpl.UnknownFields
 	sizeCache                  protoimpl.SizeCache
 }
@@ -61,7 +61,7 @@ func (x *GetRouteMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetRouteMetricsRequest) GetRequestMetadata() *v1.RequestMetadata {
+func (x *GetRouteMetricsRequest) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -75,7 +75,7 @@ func (x *GetRouteMetricsRequest) GetRequestedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *GetRouteMetricsRequest) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *GetRouteMetricsRequest) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -111,7 +111,7 @@ type GetRouteMetricsRequest_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Timestamp when this request was created.
 	RequestedAt *timestamppb.Timestamp
@@ -133,12 +133,12 @@ const file_web_v1_get_route_metrics_request_proto_rawDesc = "" +
 	"&web/v1/get_route_metrics_request.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x9e\x01\n" +
 	"\x16GetRouteMetricsRequest\x12E\n" +
 	"\x10request_metadata\x18\v \x01(\v2\x1a.common.v1.RequestMetadataR\x0frequestMetadata\x12=\n" +
-	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_get_route_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_get_route_metrics_request_proto_goTypes = []any{
 	(*GetRouteMetricsRequest)(nil), // 0: web.v1.GetRouteMetricsRequest
-	(*v1.RequestMetadata)(nil),     // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 }
 var file_web_v1_get_route_metrics_request_proto_depIdxs = []int32{

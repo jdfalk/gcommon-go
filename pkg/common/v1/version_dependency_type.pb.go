@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/version_dependency_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -89,7 +89,7 @@ const file_common_v1_version_dependency_type_proto_rawDesc = "" +
 	"\x1cVERSION_DEPENDENCY_TYPE_TEST\x10\x03\x12\x1f\n" +
 	"\x1bVERSION_DEPENDENCY_TYPE_DEV\x10\x04\x12 \n" +
 	"\x1cVERSION_DEPENDENCY_TYPE_PEER\x10\x05\x12$\n" +
-	" VERSION_DEPENDENCY_TYPE_OPTIONAL\x10\x06B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" VERSION_DEPENDENCY_TYPE_OPTIONAL\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_version_dependency_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_version_dependency_type_proto_goTypes = []any{

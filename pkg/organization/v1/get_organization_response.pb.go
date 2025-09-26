@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/get_organization_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type GetOrganizationResponse struct {
 	xxx_hidden_Settings     *OrganizationSettings  `protobuf:"bytes,2,opt,name=settings"`
 	xxx_hidden_MemberCount  int32                  `protobuf:"varint,3,opt,name=member_count,json=memberCount"`
 	xxx_hidden_Tenants      *[]*Tenant             `protobuf:"bytes,4,rep,name=tenants"`
-	xxx_hidden_Errors       *[]*v1.Error           `protobuf:"bytes,5,rep,name=errors"`
+	xxx_hidden_Errors       *[]*common.Error       `protobuf:"bytes,5,rep,name=errors"`
 	xxx_hidden_Success      bool                   `protobuf:"varint,6,opt,name=success"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
@@ -94,7 +94,7 @@ func (x *GetOrganizationResponse) GetTenants() []*Tenant {
 	return nil
 }
 
-func (x *GetOrganizationResponse) GetErrors() []*v1.Error {
+func (x *GetOrganizationResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -127,7 +127,7 @@ func (x *GetOrganizationResponse) SetTenants(v []*Tenant) {
 	x.xxx_hidden_Tenants = &v
 }
 
-func (x *GetOrganizationResponse) SetErrors(v []*v1.Error) {
+func (x *GetOrganizationResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -194,7 +194,7 @@ type GetOrganizationResponse_builder struct {
 	// List of tenants in organization (if requested)
 	Tenants []*Tenant
 	// Any errors encountered during retrieval
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 }
@@ -229,7 +229,7 @@ const file_organization_v1_get_organization_response_proto_rawDesc = "" +
 	"\fmember_count\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmemberCount\x12;\n" +
 	"\atenants\x18\x04 \x03(\v2\x17.organization.v1.TenantB\b\xbaH\x05\x92\x01\x02\b\x01R\atenants\x122\n" +
 	"\x06errors\x18\x05 \x03(\v2\x10.common.v1.ErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12\x18\n" +
-	"\asuccess\x18\x06 \x01(\bR\asuccessB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\x06 \x01(\bR\asuccessB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_get_organization_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_get_organization_response_proto_goTypes = []any{
@@ -237,7 +237,7 @@ var file_organization_v1_get_organization_response_proto_goTypes = []any{
 	(*Organization)(nil),            // 1: organization.v1.Organization
 	(*OrganizationSettings)(nil),    // 2: organization.v1.OrganizationSettings
 	(*Tenant)(nil),                  // 3: organization.v1.Tenant
-	(*v1.Error)(nil),                // 4: common.v1.Error
+	(*common.Error)(nil),            // 4: common.v1.Error
 }
 var file_organization_v1_get_organization_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.GetOrganizationResponse.organization:type_name -> organization.v1.Organization

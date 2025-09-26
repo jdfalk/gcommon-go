@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_filter.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -301,7 +301,7 @@ const file_metrics_v1_metric_filter_proto_rawDesc = "" +
 	"\x10exclude_patterns\x18\t \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fexcludePatterns\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_metric_filter_proto_goTypes = []any{

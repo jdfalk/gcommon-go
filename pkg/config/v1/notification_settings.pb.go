@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/notification_settings.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ type ConfigNotificationSettings struct {
 	state                   protoimpl.MessageState        `protogen:"opaque.v1"`
 	xxx_hidden_Enabled      bool                          `protobuf:"varint,1,opt,name=enabled"`
 	xxx_hidden_Channels     *[]*ConfigNotificationChannel `protobuf:"bytes,2,rep,name=channels"`
-	xxx_hidden_Triggers     []v1.NotificationTrigger      `protobuf:"varint,3,rep,packed,name=triggers,enum=common.v1.NotificationTrigger"`
+	xxx_hidden_Triggers     []common.NotificationTrigger  `protobuf:"varint,3,rep,packed,name=triggers,enum=common.v1.NotificationTrigger"`
 	xxx_hidden_Template     *string                       `protobuf:"bytes,4,opt,name=template"`
 	xxx_hidden_Recipients   []string                      `protobuf:"bytes,5,rep,name=recipients"`
 	xxx_hidden_DelayMinutes int32                         `protobuf:"varint,6,opt,name=delay_minutes,json=delayMinutes"`
@@ -79,7 +79,7 @@ func (x *ConfigNotificationSettings) GetChannels() []*ConfigNotificationChannel 
 	return nil
 }
 
-func (x *ConfigNotificationSettings) GetTriggers() []v1.NotificationTrigger {
+func (x *ConfigNotificationSettings) GetTriggers() []common.NotificationTrigger {
 	if x != nil {
 		return x.xxx_hidden_Triggers
 	}
@@ -126,7 +126,7 @@ func (x *ConfigNotificationSettings) SetChannels(v []*ConfigNotificationChannel)
 	x.xxx_hidden_Channels = &v
 }
 
-func (x *ConfigNotificationSettings) SetTriggers(v []v1.NotificationTrigger) {
+func (x *ConfigNotificationSettings) SetTriggers(v []common.NotificationTrigger) {
 	x.xxx_hidden_Triggers = v
 }
 
@@ -203,7 +203,7 @@ type ConfigNotificationSettings_builder struct {
 	// Notification channels
 	Channels []*ConfigNotificationChannel
 	// Notification triggers
-	Triggers []v1.NotificationTrigger
+	Triggers []common.NotificationTrigger
 	// Notification template
 	Template *string
 	// Notification recipients
@@ -251,13 +251,13 @@ const file_config_v1_notification_settings_proto_rawDesc = "" +
 	"recipients\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"recipients\x12,\n" +
 	"\rdelay_minutes\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fdelayMinutes\x127\n" +
-	"\bbatching\x18\a \x01(\v2\x1b.config.v1.BatchingSettingsR\bbatchingB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bbatching\x18\a \x01(\v2\x1b.config.v1.BatchingSettingsR\bbatchingB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_notification_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_notification_settings_proto_goTypes = []any{
 	(*ConfigNotificationSettings)(nil), // 0: config.v1.ConfigNotificationSettings
 	(*ConfigNotificationChannel)(nil),  // 1: config.v1.ConfigNotificationChannel
-	(v1.NotificationTrigger)(0),        // 2: common.v1.NotificationTrigger
+	(common.NotificationTrigger)(0),    // 2: common.v1.NotificationTrigger
 	(*BatchingSettings)(nil),           // 3: config.v1.BatchingSettings
 }
 var file_config_v1_notification_settings_proto_depIdxs = []int32{

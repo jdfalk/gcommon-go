@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/audio_track.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -301,7 +301,7 @@ const file_media_v1_audio_track_proto_rawDesc = "" +
 	"\bchannels\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bchannels\x12(\n" +
 	"\vsample_rate\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\n" +
 	"sampleRate\x12#\n" +
-	"\rdefault_track\x18\a \x01(\bR\fdefaultTrackB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rdefault_track\x18\a \x01(\bR\fdefaultTrackB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_audio_track_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_audio_track_proto_goTypes = []any{

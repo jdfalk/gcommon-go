@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: common/v1/authorization_service.proto
 
-package v1
+package common
 
 import (
 	context "context"

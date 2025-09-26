@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_queue_info_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -411,7 +411,7 @@ const file_queue_v1_get_queue_info_request_proto_rawDesc = "" +
 	"time_range\x18\t \x01(\v2\x19.queue.v1.TimeRangeFilterR\ttimeRange\x12-\n" +
 	"\rinfo_sections\x18\n" +
 	" \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\finfoSections\x12*\n" +
-	"\faccess_token\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaccessTokenB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\faccess_token\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaccessTokenB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_queue_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_queue_info_request_proto_goTypes = []any{

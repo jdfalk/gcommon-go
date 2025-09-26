@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/query_response.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ type QueryResponse struct {
 	state                protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_ResultSet *ResultSet             `protobuf:"bytes,1,opt,name=result_set,json=resultSet"`
 	xxx_hidden_Stats     *DatabaseQueryStats    `protobuf:"bytes,2,opt,name=stats"`
-	xxx_hidden_Error     *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error     *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -91,13 +91,13 @@ func (x *QueryResponse) GetStats() *DatabaseQueryStats {
 	return nil
 }
 
-func (x *QueryResponse) GetError() *v1.Error {
+func (x *QueryResponse) GetError() *common.Error {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Error) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *v1.Error
+			var rv *common.Error
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Error), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -123,7 +123,7 @@ func (x *QueryResponse) SetStats(v *DatabaseQueryStats) {
 	}
 }
 
-func (x *QueryResponse) SetError(v *v1.Error) {
+func (x *QueryResponse) SetError(v *common.Error) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
@@ -165,7 +165,7 @@ func (x *QueryResponse) ClearStats() {
 
 func (x *QueryResponse) ClearError() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*v1.Error)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*common.Error)(nil))
 }
 
 type QueryResponse_builder struct {
@@ -176,7 +176,7 @@ type QueryResponse_builder struct {
 	// Query execution statistics and performance metrics
 	Stats *DatabaseQueryStats
 	// Error information if the query failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 QueryResponse_builder) Build() *QueryResponse {
@@ -207,14 +207,14 @@ const file_database_v1_query_response_proto_rawDesc = "" +
 	"\n" +
 	"result_set\x18\x01 \x01(\v2\x16.database.v1.ResultSetB\x02(\x01R\tresultSet\x129\n" +
 	"\x05stats\x18\x02 \x01(\v2\x1f.database.v1.DatabaseQueryStatsB\x02(\x01R\x05stats\x12*\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_query_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_query_response_proto_goTypes = []any{
 	(*QueryResponse)(nil),      // 0: database.v1.QueryResponse
 	(*ResultSet)(nil),          // 1: database.v1.ResultSet
 	(*DatabaseQueryStats)(nil), // 2: database.v1.DatabaseQueryStats
-	(*v1.Error)(nil),           // 3: common.v1.Error
+	(*common.Error)(nil),       // 3: common.v1.Error
 }
 var file_database_v1_query_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.QueryResponse.result_set:type_name -> database.v1.ResultSet

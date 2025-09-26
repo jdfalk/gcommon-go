@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/analyze_audio_quality_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -228,7 +228,7 @@ const file_media_v1_analyze_audio_quality_response_proto_rawDesc = "" +
 	"rmsLevelDb\x128\n" +
 	"\x10dynamic_range_db\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0edynamicRangeDb\x12A\n" +
 	"\x15signal_to_noise_ratio\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x12signalToNoiseRatio\x12+\n" +
-	"\x11clipping_detected\x18\x05 \x01(\bR\x10clippingDetectedB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11clipping_detected\x18\x05 \x01(\bR\x10clippingDetectedB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_analyze_audio_quality_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_analyze_audio_quality_response_proto_goTypes = []any{

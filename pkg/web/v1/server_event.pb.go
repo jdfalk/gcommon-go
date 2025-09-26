@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/server_event.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -246,7 +246,7 @@ const file_web_v1_server_event_proto_rawDesc = "" +
 	"\tserver_id\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bserverId\x12\x1a\n" +
 	"\bmetadata\x18\f \x01(\tR\bmetadata\x129\n" +
 	"\n" +
-	"event_time\x183 \x01(\v2\x1a.google.protobuf.TimestampR\teventTimeB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"event_time\x183 \x01(\v2\x1a.google.protobuf.TimestampR\teventTimeB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_server_event_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_server_event_proto_goTypes = []any{

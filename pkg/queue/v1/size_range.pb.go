@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/size_range.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -138,7 +138,7 @@ const file_queue_v1_size_range_proto_rawDesc = "" +
 	"\x19queue/v1/size_range.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"S\n" +
 	"\tSizeRange\x12\"\n" +
 	"\bmin_size\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\aminSize\x12\"\n" +
-	"\bmax_size\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\amaxSizeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmax_size\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\amaxSizeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_size_range_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_size_range_proto_goTypes = []any{

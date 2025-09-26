@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/update_provider_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,15 +27,15 @@ const (
 // *
 // UpdateProviderResponse contains the result of updating a metrics provider.
 type UpdateProviderResponse struct {
-	state                        protoimpl.MessageState         `protogen:"opaque.v1"`
-	xxx_hidden_Success           bool                           `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_ProviderId        *string                        `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Status            *ProviderStatus                `protobuf:"bytes,3,opt,name=status"`
-	xxx_hidden_ValidationResults *[]*v1.MetricsValidationResult `protobuf:"bytes,4,rep,name=validation_results,json=validationResults"`
-	xxx_hidden_Error             *v1.Error                      `protobuf:"bytes,5,opt,name=error"`
-	xxx_hidden_UpdatedAt         *timestamppb.Timestamp         `protobuf:"bytes,6,opt,name=updated_at,json=updatedAt"`
-	xxx_hidden_AppliedChanges    []string                       `protobuf:"bytes,7,rep,name=applied_changes,json=appliedChanges"`
-	xxx_hidden_Warnings          []string                       `protobuf:"bytes,8,rep,name=warnings"`
+	state                        protoimpl.MessageState             `protogen:"opaque.v1"`
+	xxx_hidden_Success           bool                               `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_ProviderId        *string                            `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Status            *ProviderStatus                    `protobuf:"bytes,3,opt,name=status"`
+	xxx_hidden_ValidationResults *[]*common.MetricsValidationResult `protobuf:"bytes,4,rep,name=validation_results,json=validationResults"`
+	xxx_hidden_Error             *common.Error                      `protobuf:"bytes,5,opt,name=error"`
+	xxx_hidden_UpdatedAt         *timestamppb.Timestamp             `protobuf:"bytes,6,opt,name=updated_at,json=updatedAt"`
+	xxx_hidden_AppliedChanges    []string                           `protobuf:"bytes,7,rep,name=applied_changes,json=appliedChanges"`
+	xxx_hidden_Warnings          []string                           `protobuf:"bytes,8,rep,name=warnings"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -91,7 +91,7 @@ func (x *UpdateProviderResponse) GetStatus() *ProviderStatus {
 	return nil
 }
 
-func (x *UpdateProviderResponse) GetValidationResults() []*v1.MetricsValidationResult {
+func (x *UpdateProviderResponse) GetValidationResults() []*common.MetricsValidationResult {
 	if x != nil {
 		if x.xxx_hidden_ValidationResults != nil {
 			return *x.xxx_hidden_ValidationResults
@@ -100,7 +100,7 @@ func (x *UpdateProviderResponse) GetValidationResults() []*v1.MetricsValidationR
 	return nil
 }
 
-func (x *UpdateProviderResponse) GetError() *v1.Error {
+func (x *UpdateProviderResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -142,11 +142,11 @@ func (x *UpdateProviderResponse) SetStatus(v *ProviderStatus) {
 	x.xxx_hidden_Status = v
 }
 
-func (x *UpdateProviderResponse) SetValidationResults(v []*v1.MetricsValidationResult) {
+func (x *UpdateProviderResponse) SetValidationResults(v []*common.MetricsValidationResult) {
 	x.xxx_hidden_ValidationResults = &v
 }
 
-func (x *UpdateProviderResponse) SetError(v *v1.Error) {
+func (x *UpdateProviderResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -229,9 +229,9 @@ type UpdateProviderResponse_builder struct {
 	// Updated provider status
 	Status *ProviderStatus
 	// Validation results from the update operation
-	ValidationResults []*v1.MetricsValidationResult
+	ValidationResults []*common.MetricsValidationResult
 	// Error information if update failed
-	Error *v1.Error
+	Error *common.Error
 	// Timestamp when the update was processed
 	UpdatedAt *timestamppb.Timestamp
 	// Configuration changes that were applied
@@ -277,15 +277,15 @@ const file_metrics_v1_update_provider_response_proto_rawDesc = "" +
 	"\n" +
 	"updated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x121\n" +
 	"\x0fapplied_changes\x18\a \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0eappliedChanges\x12$\n" +
-	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_update_provider_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_update_provider_response_proto_goTypes = []any{
-	(*UpdateProviderResponse)(nil),     // 0: metrics.v1.UpdateProviderResponse
-	(*ProviderStatus)(nil),             // 1: metrics.v1.ProviderStatus
-	(*v1.MetricsValidationResult)(nil), // 2: common.v1.MetricsValidationResult
-	(*v1.Error)(nil),                   // 3: common.v1.Error
-	(*timestamppb.Timestamp)(nil),      // 4: google.protobuf.Timestamp
+	(*UpdateProviderResponse)(nil),         // 0: metrics.v1.UpdateProviderResponse
+	(*ProviderStatus)(nil),                 // 1: metrics.v1.ProviderStatus
+	(*common.MetricsValidationResult)(nil), // 2: common.v1.MetricsValidationResult
+	(*common.Error)(nil),                   // 3: common.v1.Error
+	(*timestamppb.Timestamp)(nil),          // 4: google.protobuf.Timestamp
 }
 var file_metrics_v1_update_provider_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.UpdateProviderResponse.status:type_name -> metrics.v1.ProviderStatus

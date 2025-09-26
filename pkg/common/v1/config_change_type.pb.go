@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/config_change_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -89,7 +89,7 @@ const file_common_v1_config_change_type_proto_rawDesc = "" +
 	" TEMPLATE_CHANGE_TYPE_ENHANCEMENT\x10\x03\x12#\n" +
 	"\x1fTEMPLATE_CHANGE_TYPE_DEPRECATED\x10\x04\x12!\n" +
 	"\x1dTEMPLATE_CHANGE_TYPE_SECURITY\x10\x05\x12\x18\n" +
-	"\x14CHANGE_TYPE_BREAKING\x10\x06B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14CHANGE_TYPE_BREAKING\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_config_change_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_config_change_type_proto_goTypes = []any{

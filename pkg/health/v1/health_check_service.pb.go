@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: health/v1/health_check_service.proto
 
-package v1
+package health
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ const file_health_v1_health_check_service_proto_rawDesc = "" +
 	"\x0fUnregisterCheck\x12!.health.v1.UnregisterCheckRequest\x1a\".health.v1.UnregisterCheckResponse\x12I\n" +
 	"\n" +
 	"ListChecks\x12\x1c.health.v1.ListChecksRequest\x1a\x1d.health.v1.ListChecksResponse\x12Z\n" +
-	"\x11CheckDependencies\x12!.health.v1.DependencyCheckRequest\x1a\".health.v1.DependencyCheckResponseB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11CheckDependencies\x12!.health.v1.DependencyCheckRequest\x1a\".health.v1.DependencyCheckResponseB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_health_check_service_proto_goTypes = []any{
 	(*RegisterCheckRequest)(nil),    // 0: health.v1.RegisterCheckRequest

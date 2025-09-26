@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/register_metric_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type RegisterMetricResponse struct {
 	state                       protoimpl.MessageState  `protogen:"opaque.v1"`
 	xxx_hidden_Success          bool                    `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error            *v1.Error               `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error            *common.Error           `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_MetricId         *string                 `protobuf:"bytes,3,opt,name=metric_id,json=metricId"`
 	xxx_hidden_MetricName       *string                 `protobuf:"bytes,4,opt,name=metric_name,json=metricName"`
 	xxx_hidden_RegisteredAt     *timestamppb.Timestamp  `protobuf:"bytes,5,opt,name=registered_at,json=registeredAt"`
@@ -74,7 +74,7 @@ func (x *RegisterMetricResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *RegisterMetricResponse) GetError() *v1.Error {
+func (x *RegisterMetricResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -151,7 +151,7 @@ func (x *RegisterMetricResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *RegisterMetricResponse) SetError(v *v1.Error) {
+func (x *RegisterMetricResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -301,7 +301,7 @@ type RegisterMetricResponse_builder struct {
 	// Success status of the registration
 	Success *bool
 	// Error information if registration failed
-	Error *v1.Error
+	Error *common.Error
 	// Unique ID assigned to the registered metric
 	MetricId *string
 	// Name of the registered metric
@@ -373,12 +373,12 @@ const file_metrics_v1_register_metric_response_proto_rawDesc = "" +
 	"\x06result\x18\b \x01(\v2\x1e.metrics.v1.RegistrationResultR\x06result\x12\x1a\n" +
 	"\bwarnings\x18\t \x03(\tR\bwarnings\x12+\n" +
 	"\x11replaced_existing\x18\n" +
-	" \x01(\bR\x10replacedExistingB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\bR\x10replacedExistingB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_register_metric_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_register_metric_response_proto_goTypes = []any{
 	(*RegisterMetricResponse)(nil), // 0: metrics.v1.RegisterMetricResponse
-	(*v1.Error)(nil),               // 1: common.v1.Error
+	(*common.Error)(nil),           // 1: common.v1.Error
 	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 	(*RegistrationValidation)(nil), // 3: metrics.v1.RegistrationValidation
 	(*RegistrationResult)(nil),     // 4: metrics.v1.RegistrationResult

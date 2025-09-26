@@ -208,7 +208,7 @@ const file_common_v2_mfa_setup_instruction_proto_rawDesc = "" +
 	"\vinstruction\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vinstruction\x12 \n" +
 	"\aqr_code\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06qrCode\x12&\n" +
 	"\n" +
-	"secret_key\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsecretKeyB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"secret_key\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsecretKeyB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_mfa_setup_instruction_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_mfa_setup_instruction_proto_goTypes = []any{

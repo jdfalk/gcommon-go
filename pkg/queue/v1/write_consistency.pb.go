@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/write_consistency.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type WriteConsistency struct {
 	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Level             v1.WriteLevel          `protobuf:"varint,1,opt,name=level,enum=common.v1.WriteLevel"`
+	xxx_hidden_Level             common.WriteLevel      `protobuf:"varint,1,opt,name=level,enum=common.v1.WriteLevel"`
 	xxx_hidden_SyncReplication   *SyncReplication       `protobuf:"bytes,2,opt,name=sync_replication,json=syncReplication"`
 	xxx_hidden_ConflictDetection *ConflictDetection     `protobuf:"bytes,3,opt,name=conflict_detection,json=conflictDetection"`
 	xxx_hidden_TimeoutMs         int32                  `protobuf:"varint,4,opt,name=timeout_ms,json=timeoutMs"`
@@ -61,13 +61,13 @@ func (x *WriteConsistency) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *WriteConsistency) GetLevel() v1.WriteLevel {
+func (x *WriteConsistency) GetLevel() common.WriteLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Level
 		}
 	}
-	return v1.WriteLevel(0)
+	return common.WriteLevel(0)
 }
 
 func (x *WriteConsistency) GetSyncReplication() *SyncReplication {
@@ -98,7 +98,7 @@ func (x *WriteConsistency) GetRetryConfig() *WriteRetryConfig {
 	return nil
 }
 
-func (x *WriteConsistency) SetLevel(v v1.WriteLevel) {
+func (x *WriteConsistency) SetLevel(v common.WriteLevel) {
 	x.xxx_hidden_Level = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
@@ -157,7 +157,7 @@ func (x *WriteConsistency) HasRetryConfig() bool {
 
 func (x *WriteConsistency) ClearLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Level = v1.WriteLevel_WRITE_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Level = common.WriteLevel_WRITE_LEVEL_UNSPECIFIED
 }
 
 func (x *WriteConsistency) ClearSyncReplication() {
@@ -181,7 +181,7 @@ type WriteConsistency_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Write consistency level
-	Level *v1.WriteLevel
+	Level *common.WriteLevel
 	// Synchronous replication requirements
 	SyncReplication *SyncReplication
 	// Write conflict detection
@@ -221,12 +221,12 @@ const file_queue_v1_write_consistency_proto_rawDesc = "" +
 	"\x12conflict_detection\x18\x03 \x01(\v2\x1b.queue.v1.ConflictDetectionR\x11conflictDetection\x12&\n" +
 	"\n" +
 	"timeout_ms\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMs\x12=\n" +
-	"\fretry_config\x18\x05 \x01(\v2\x1a.queue.v1.WriteRetryConfigR\vretryConfigB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fretry_config\x18\x05 \x01(\v2\x1a.queue.v1.WriteRetryConfigR\vretryConfigB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_write_consistency_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_write_consistency_proto_goTypes = []any{
 	(*WriteConsistency)(nil),  // 0: queue.v1.WriteConsistency
-	(v1.WriteLevel)(0),        // 1: common.v1.WriteLevel
+	(common.WriteLevel)(0),    // 1: common.v1.WriteLevel
 	(*SyncReplication)(nil),   // 2: queue.v1.SyncReplication
 	(*ConflictDetection)(nil), // 3: queue.v1.ConflictDetection
 	(*WriteRetryConfig)(nil),  // 4: queue.v1.WriteRetryConfig

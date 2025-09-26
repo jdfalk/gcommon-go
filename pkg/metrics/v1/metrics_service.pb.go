@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metrics_service.proto
 
-package v1
+package metrics
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -37,7 +37,7 @@ const file_metrics_v1_metrics_service_proto_rawDesc = "" +
 	"\x10UnregisterMetric\x12#.metrics.v1.UnregisterMetricRequest\x1a$.metrics.v1.UnregisterMetricResponse\x12`\n" +
 	"\x11GetMetricMetadata\x12$.metrics.v1.GetMetricMetadataRequest\x1a%.metrics.v1.GetMetricMetadataResponse\x12Q\n" +
 	"\fQueryMetrics\x12\x1f.metrics.v1.QueryMetricsRequest\x1a .metrics.v1.QueryMetricsResponse\x12`\n" +
-	"\x11GetMetricsSummary\x12$.metrics.v1.GetMetricsSummaryRequest\x1a%.metrics.v1.GetMetricsSummaryResponseB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11GetMetricsSummary\x12$.metrics.v1.GetMetricsSummaryRequest\x1a%.metrics.v1.GetMetricsSummaryResponseB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_service_proto_goTypes = []any{
 	(*RecordMetricRequest)(nil),         // 0: metrics.v1.RecordMetricRequest

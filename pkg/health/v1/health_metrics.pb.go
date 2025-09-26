@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: health/v1/health_metrics.proto
 
-package v1
+package health
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -618,7 +618,7 @@ const file_health_v1_health_metrics_proto_rawDesc = "" +
 	"checkCount\x12!\n" +
 	"\fhealth_score\x18\x03 \x01(\x05R\vhealthScore\x12%\n" +
 	"\x0euptime_percent\x18\x04 \x01(\x01R\ruptimePercent\x12/\n" +
-	"\x14avg_response_time_ms\x18\x05 \x01(\x01R\x11avgResponseTimeMsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14avg_response_time_ms\x18\x05 \x01(\x01R\x11avgResponseTimeMsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_health_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_health_v1_health_metrics_proto_goTypes = []any{

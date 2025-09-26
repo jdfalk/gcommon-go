@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/add_middleware_request.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,9 +29,9 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type AddMiddlewareRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_RequestMetadata *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_RequestedAt     *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=requested_at,json=requestedAt"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_RequestMetadata *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_RequestedAt     *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=requested_at,json=requestedAt"`
 	unknownFields              protoimpl.UnknownFields
 	sizeCache                  protoimpl.SizeCache
 }
@@ -61,7 +61,7 @@ func (x *AddMiddlewareRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *AddMiddlewareRequest) GetRequestMetadata() *v1.RequestMetadata {
+func (x *AddMiddlewareRequest) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -75,7 +75,7 @@ func (x *AddMiddlewareRequest) GetRequestedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *AddMiddlewareRequest) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *AddMiddlewareRequest) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -111,7 +111,7 @@ type AddMiddlewareRequest_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Timestamp when this request was created.
 	RequestedAt *timestamppb.Timestamp
@@ -133,13 +133,13 @@ const file_web_v1_add_middleware_request_proto_rawDesc = "" +
 	"#web/v1/add_middleware_request.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x9c\x01\n" +
 	"\x14AddMiddlewareRequest\x12E\n" +
 	"\x10request_metadata\x18\v \x01(\v2\x1a.common.v1.RequestMetadataR\x0frequestMetadata\x12=\n" +
-	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frequested_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\vrequestedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_add_middleware_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_add_middleware_request_proto_goTypes = []any{
-	(*AddMiddlewareRequest)(nil),  // 0: web.v1.AddMiddlewareRequest
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
+	(*AddMiddlewareRequest)(nil),   // 0: web.v1.AddMiddlewareRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 }
 var file_web_v1_add_middleware_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.AddMiddlewareRequest.request_metadata:type_name -> common.v1.RequestMetadata

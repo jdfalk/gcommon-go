@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/summary_metric.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,17 +26,17 @@ const (
 )
 
 type SummaryMetric struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name        *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_SampleCount uint64                 `protobuf:"varint,2,opt,name=sample_count,json=sampleCount"`
-	xxx_hidden_SampleSum   float64                `protobuf:"fixed64,3,opt,name=sample_sum,json=sampleSum"`
-	xxx_hidden_Quantiles   *[]*SummaryQuantile    `protobuf:"bytes,4,rep,name=quantiles"`
-	xxx_hidden_Labels      map[string]string      `protobuf:"bytes,5,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Timestamp   *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=timestamp"`
-	xxx_hidden_Help        *string                `protobuf:"bytes,7,opt,name=help"`
-	xxx_hidden_Unit        *string                `protobuf:"bytes,8,opt,name=unit"`
-	xxx_hidden_MaxAge      *durationpb.Duration   `protobuf:"bytes,9,opt,name=max_age,json=maxAge"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,10,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Name        *string                 `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_SampleCount uint64                  `protobuf:"varint,2,opt,name=sample_count,json=sampleCount"`
+	xxx_hidden_SampleSum   float64                 `protobuf:"fixed64,3,opt,name=sample_sum,json=sampleSum"`
+	xxx_hidden_Quantiles   *[]*SummaryQuantile     `protobuf:"bytes,4,rep,name=quantiles"`
+	xxx_hidden_Labels      map[string]string       `protobuf:"bytes,5,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Timestamp   *timestamppb.Timestamp  `protobuf:"bytes,6,opt,name=timestamp"`
+	xxx_hidden_Help        *string                 `protobuf:"bytes,7,opt,name=help"`
+	xxx_hidden_Unit        *string                 `protobuf:"bytes,8,opt,name=unit"`
+	xxx_hidden_MaxAge      *durationpb.Duration    `protobuf:"bytes,9,opt,name=max_age,json=maxAge"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,10,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -142,7 +142,7 @@ func (x *SummaryMetric) GetMaxAge() *durationpb.Duration {
 	return nil
 }
 
-func (x *SummaryMetric) GetMetadata() *v1.RequestMetadata {
+func (x *SummaryMetric) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -190,7 +190,7 @@ func (x *SummaryMetric) SetMaxAge(v *durationpb.Duration) {
 	x.xxx_hidden_MaxAge = v
 }
 
-func (x *SummaryMetric) SetMetadata(v *v1.RequestMetadata) {
+func (x *SummaryMetric) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -309,7 +309,7 @@ type SummaryMetric_builder struct {
 	// Maximum age of observations in the summary
 	MaxAge *durationpb.Duration
 	// Metadata for request tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 SummaryMetric_builder) Build() *SummaryMetric {
@@ -365,16 +365,16 @@ const file_metrics_v1_summary_metric_proto_rawDesc = "" +
 	" \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_summary_metric_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_summary_metric_proto_goTypes = []any{
-	(*SummaryMetric)(nil),         // 0: metrics.v1.SummaryMetric
-	nil,                           // 1: metrics.v1.SummaryMetric.LabelsEntry
-	(*SummaryQuantile)(nil),       // 2: metrics.v1.SummaryQuantile
-	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
-	(*durationpb.Duration)(nil),   // 4: google.protobuf.Duration
-	(*v1.RequestMetadata)(nil),    // 5: common.v1.RequestMetadata
+	(*SummaryMetric)(nil),          // 0: metrics.v1.SummaryMetric
+	nil,                            // 1: metrics.v1.SummaryMetric.LabelsEntry
+	(*SummaryQuantile)(nil),        // 2: metrics.v1.SummaryQuantile
+	(*timestamppb.Timestamp)(nil),  // 3: google.protobuf.Timestamp
+	(*durationpb.Duration)(nil),    // 4: google.protobuf.Duration
+	(*common.RequestMetadata)(nil), // 5: common.v1.RequestMetadata
 }
 var file_metrics_v1_summary_metric_proto_depIdxs = []int32{
 	2, // 0: metrics.v1.SummaryMetric.quantiles:type_name -> metrics.v1.SummaryQuantile

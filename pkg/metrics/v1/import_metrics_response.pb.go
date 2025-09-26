@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/import_metrics_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type ImportMetricsResponse struct {
 	state                    protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_ImportedCount int32                  `protobuf:"varint,1,opt,name=imported_count,json=importedCount"`
-	xxx_hidden_Error         *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error         *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -67,7 +67,7 @@ func (x *ImportMetricsResponse) GetImportedCount() int32 {
 	return 0
 }
 
-func (x *ImportMetricsResponse) GetError() *v1.Error {
+func (x *ImportMetricsResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -79,7 +79,7 @@ func (x *ImportMetricsResponse) SetImportedCount(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *ImportMetricsResponse) SetError(v *v1.Error) {
+func (x *ImportMetricsResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -112,7 +112,7 @@ type ImportMetricsResponse_builder struct {
 	// Number of metrics successfully imported
 	ImportedCount *int32
 	// Error information if the import failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 ImportMetricsResponse_builder) Build() *ImportMetricsResponse {
@@ -135,12 +135,12 @@ const file_metrics_v1_import_metrics_response_proto_rawDesc = "" +
 	"metrics.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"s\n" +
 	"\x15ImportMetricsResponse\x122\n" +
 	"\x0eimported_count\x18\x01 \x01(\x05B\v\xbaH\b\x1a\x06\x18\xff\xff\x03(\x01R\rimportedCount\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_import_metrics_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_import_metrics_response_proto_goTypes = []any{
 	(*ImportMetricsResponse)(nil), // 0: metrics.v1.ImportMetricsResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 }
 var file_metrics_v1_import_metrics_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.ImportMetricsResponse.error:type_name -> common.v1.Error

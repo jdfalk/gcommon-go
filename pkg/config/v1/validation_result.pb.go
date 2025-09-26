@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/validation_result.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type ConfigValidationResult struct {
-	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_RuleName    *string                 `protobuf:"bytes,1,opt,name=rule_name,json=ruleName"`
-	xxx_hidden_Result      v1.ValidationResultType `protobuf:"varint,2,opt,name=result,enum=common.v1.ValidationResultType"`
-	xxx_hidden_Message     *string                 `protobuf:"bytes,3,opt,name=message"`
-	xxx_hidden_Severity    v1.ValidationSeverity   `protobuf:"varint,4,opt,name=severity,enum=common.v1.ValidationSeverity"`
-	xxx_hidden_Field       *string                 `protobuf:"bytes,5,opt,name=field"`
-	xxx_hidden_Context     map[string]string       `protobuf:"bytes,6,rep,name=context" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                  protoimpl.MessageState      `protogen:"opaque.v1"`
+	xxx_hidden_RuleName    *string                     `protobuf:"bytes,1,opt,name=rule_name,json=ruleName"`
+	xxx_hidden_Result      common.ValidationResultType `protobuf:"varint,2,opt,name=result,enum=common.v1.ValidationResultType"`
+	xxx_hidden_Message     *string                     `protobuf:"bytes,3,opt,name=message"`
+	xxx_hidden_Severity    common.ValidationSeverity   `protobuf:"varint,4,opt,name=severity,enum=common.v1.ValidationSeverity"`
+	xxx_hidden_Field       *string                     `protobuf:"bytes,5,opt,name=field"`
+	xxx_hidden_Context     map[string]string           `protobuf:"bytes,6,rep,name=context" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -72,13 +72,13 @@ func (x *ConfigValidationResult) GetRuleName() string {
 	return ""
 }
 
-func (x *ConfigValidationResult) GetResult() v1.ValidationResultType {
+func (x *ConfigValidationResult) GetResult() common.ValidationResultType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Result
 		}
 	}
-	return v1.ValidationResultType(0)
+	return common.ValidationResultType(0)
 }
 
 func (x *ConfigValidationResult) GetMessage() string {
@@ -91,13 +91,13 @@ func (x *ConfigValidationResult) GetMessage() string {
 	return ""
 }
 
-func (x *ConfigValidationResult) GetSeverity() v1.ValidationSeverity {
+func (x *ConfigValidationResult) GetSeverity() common.ValidationSeverity {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_Severity
 		}
 	}
-	return v1.ValidationSeverity(0)
+	return common.ValidationSeverity(0)
 }
 
 func (x *ConfigValidationResult) GetField() string {
@@ -122,7 +122,7 @@ func (x *ConfigValidationResult) SetRuleName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *ConfigValidationResult) SetResult(v v1.ValidationResultType) {
+func (x *ConfigValidationResult) SetResult(v common.ValidationResultType) {
 	x.xxx_hidden_Result = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
@@ -132,7 +132,7 @@ func (x *ConfigValidationResult) SetMessage(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *ConfigValidationResult) SetSeverity(v v1.ValidationSeverity) {
+func (x *ConfigValidationResult) SetSeverity(v common.ValidationSeverity) {
 	x.xxx_hidden_Severity = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
@@ -188,7 +188,7 @@ func (x *ConfigValidationResult) ClearRuleName() {
 
 func (x *ConfigValidationResult) ClearResult() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Result = v1.ValidationResultType_VALIDATION_RESULT_TYPE_UNSPECIFIED
+	x.xxx_hidden_Result = common.ValidationResultType_VALIDATION_RESULT_TYPE_UNSPECIFIED
 }
 
 func (x *ConfigValidationResult) ClearMessage() {
@@ -198,7 +198,7 @@ func (x *ConfigValidationResult) ClearMessage() {
 
 func (x *ConfigValidationResult) ClearSeverity() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_Severity = v1.ValidationSeverity_VALIDATION_SEVERITY_UNSPECIFIED
+	x.xxx_hidden_Severity = common.ValidationSeverity_VALIDATION_SEVERITY_UNSPECIFIED
 }
 
 func (x *ConfigValidationResult) ClearField() {
@@ -212,11 +212,11 @@ type ConfigValidationResult_builder struct {
 	// Validation rule name
 	RuleName *string
 	// Validation result
-	Result *v1.ValidationResultType
+	Result *common.ValidationResultType
 	// Validation message
 	Message *string
 	// Severity level
-	Severity *v1.ValidationSeverity
+	Severity *common.ValidationSeverity
 	// Field that was validated
 	Field *string
 	// Additional context
@@ -265,14 +265,14 @@ const file_config_v1_validation_result_proto_rawDesc = "" +
 	"\acontext\x18\x06 \x03(\v2..config.v1.ConfigValidationResult.ContextEntryR\acontext\x1a:\n" +
 	"\fContextEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_validation_result_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_validation_result_proto_goTypes = []any{
-	(*ConfigValidationResult)(nil), // 0: config.v1.ConfigValidationResult
-	nil,                            // 1: config.v1.ConfigValidationResult.ContextEntry
-	(v1.ValidationResultType)(0),   // 2: common.v1.ValidationResultType
-	(v1.ValidationSeverity)(0),     // 3: common.v1.ValidationSeverity
+	(*ConfigValidationResult)(nil),   // 0: config.v1.ConfigValidationResult
+	nil,                              // 1: config.v1.ConfigValidationResult.ContextEntry
+	(common.ValidationResultType)(0), // 2: common.v1.ValidationResultType
+	(common.ValidationSeverity)(0),   // 3: common.v1.ValidationSeverity
 }
 var file_config_v1_validation_result_proto_depIdxs = []int32{
 	2, // 0: config.v1.ConfigValidationResult.result:type_name -> common.v1.ValidationResultType

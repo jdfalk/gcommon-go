@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_queue_health_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -121,7 +121,7 @@ const file_queue_v1_get_queue_health_request_proto_rawDesc = "" +
 	"\x15GetQueueHealthRequest\x12)\n" +
 	"\vqueue_names\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"queueNames\x12'\n" +
-	"\x0finclude_details\x18\x02 \x01(\bR\x0eincludeDetailsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0finclude_details\x18\x02 \x01(\bR\x0eincludeDetailsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_queue_health_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_queue_health_request_proto_goTypes = []any{

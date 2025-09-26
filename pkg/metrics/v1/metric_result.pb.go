@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_result.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type MetricResult struct {
 	state                   protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Index        int32                  `protobuf:"varint,1,opt,name=index"`
 	xxx_hidden_Success      bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_Error        *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error        *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	xxx_hidden_MetricId     *string                `protobuf:"bytes,4,opt,name=metric_id,json=metricId"`
 	xxx_hidden_RecordedAt   *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=recorded_at,json=recordedAt"`
 	xxx_hidden_Warnings     []string               `protobuf:"bytes,6,rep,name=warnings"`
@@ -78,7 +78,7 @@ func (x *MetricResult) GetSuccess() bool {
 	return false
 }
 
-func (x *MetricResult) GetError() *v1.Error {
+func (x *MetricResult) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -126,7 +126,7 @@ func (x *MetricResult) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 7)
 }
 
-func (x *MetricResult) SetError(v *v1.Error) {
+func (x *MetricResult) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -226,7 +226,7 @@ type MetricResult_builder struct {
 	// Success status for this specific metric
 	Success *bool
 	// Error information if this metric failed
-	Error *v1.Error
+	Error *common.Error
 	// Unique ID assigned to the metric (if successful)
 	MetricId *string
 	// Timestamp when this metric was recorded
@@ -277,12 +277,12 @@ const file_metrics_v1_metric_result_proto_rawDesc = "" +
 	"\vrecorded_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"recordedAt\x12$\n" +
 	"\bwarnings\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x12\"\n" +
-	"\fdeduplicated\x18\a \x01(\bR\fdeduplicatedB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fdeduplicated\x18\a \x01(\bR\fdeduplicatedB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_result_proto_goTypes = []any{
 	(*MetricResult)(nil),          // 0: metrics.v1.MetricResult
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_metrics_v1_metric_result_proto_depIdxs = []int32{

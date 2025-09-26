@@ -99,7 +99,7 @@ const file_metrics_v2_set_metric_config_request_proto_rawDesc = "" +
 	"*metrics/v2/set_metric_config_request.proto\x12\n" +
 	"metrics.v2\x1a\x1emetrics/v2/metric_config.proto\x1a!google/protobuf/go_features.proto\"J\n" +
 	"\x16SetMetricConfigRequest\x120\n" +
-	"\x06config\x18\x01 \x01(\v2\x18.metrics.v2.MetricConfigR\x06configB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06config\x18\x01 \x01(\v2\x18.metrics.v2.MetricConfigR\x06configB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_set_metric_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_set_metric_config_request_proto_goTypes = []any{

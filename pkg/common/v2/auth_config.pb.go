@@ -162,7 +162,7 @@ const file_common_v2_auth_config_proto_rawDesc = "" +
 	"\x10access_token_ttl\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\x0eaccessTokenTtl\x12F\n" +
 	"\x11refresh_token_ttl\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\x0frefreshTokenTtl\x12\x1f\n" +
 	"\vrequire_mfa\x18\x03 \x01(\bR\n" +
-	"requireMfaB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"requireMfaB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_auth_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_auth_config_proto_goTypes = []any{

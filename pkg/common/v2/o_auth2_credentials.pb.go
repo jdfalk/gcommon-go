@@ -217,7 +217,7 @@ const file_common_v2_o_auth2_credentials_proto_rawDesc = "" +
 	"\x04code\x18\x01 \x01(\tR\x04code\x12+\n" +
 	"\fredirect_uri\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\vredirectUri\x12\x1b\n" +
 	"\tclient_id\x18\x03 \x01(\tR\bclientId\x12#\n" +
-	"\rclient_secret\x18\x04 \x01(\tR\fclientSecretB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rclient_secret\x18\x04 \x01(\tR\fclientSecretB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_o_auth2_credentials_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_o_auth2_credentials_proto_goTypes = []any{

@@ -167,7 +167,7 @@ const file_media_v2_validate_subtitles_response_proto_rawDesc = "" +
 	"\bis_valid\x18\x01 \x01(\bR\aisValid\x12+\n" +
 	"\x11validation_errors\x18\x02 \x03(\tR\x10validationErrors\x12/\n" +
 	"\x13validation_warnings\x18\x03 \x03(\tR\x12validationWarnings\x12'\n" +
-	"\x0fdetected_format\x18\x04 \x01(\tR\x0edetectedFormatB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fdetected_format\x18\x04 \x01(\tR\x0edetectedFormatB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_validate_subtitles_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_validate_subtitles_response_proto_goTypes = []any{

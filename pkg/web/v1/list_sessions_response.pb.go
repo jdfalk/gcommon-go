@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/list_sessions_response.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -89,7 +89,7 @@ const file_web_v1_list_sessions_response_proto_rawDesc = "" +
 	"\n" +
 	"#web/v1/list_sessions_response.proto\x12\x06web.v1\x1a\x19web/v1/session_data.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"T\n" +
 	"\x17WebListSessionsResponse\x129\n" +
-	"\bsessions\x18\x01 \x03(\v2\x13.web.v1.SessionDataB\b\xbaH\x05\x92\x01\x02\b\x01R\bsessionsB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bsessions\x18\x01 \x03(\v2\x13.web.v1.SessionDataB\b\xbaH\x05\x92\x01\x02\b\x01R\bsessionsB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_list_sessions_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_list_sessions_response_proto_goTypes = []any{

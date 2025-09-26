@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/create_organization_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type CreateOrganizationResponse struct {
 	xxx_hidden_Organization  *Organization          `protobuf:"bytes,1,opt,name=organization"`
 	xxx_hidden_DefaultTenant *Tenant                `protobuf:"bytes,2,opt,name=default_tenant,json=defaultTenant"`
 	xxx_hidden_OwnerMemberId *string                `protobuf:"bytes,3,opt,name=owner_member_id,json=ownerMemberId"`
-	xxx_hidden_Errors        *[]*v1.Error           `protobuf:"bytes,4,rep,name=errors"`
+	xxx_hidden_Errors        *[]*common.Error       `protobuf:"bytes,4,rep,name=errors"`
 	xxx_hidden_Success       bool                   `protobuf:"varint,5,opt,name=success"`
 	xxx_hidden_Message       *string                `protobuf:"bytes,6,opt,name=message"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
@@ -89,7 +89,7 @@ func (x *CreateOrganizationResponse) GetOwnerMemberId() string {
 	return ""
 }
 
-func (x *CreateOrganizationResponse) GetErrors() []*v1.Error {
+func (x *CreateOrganizationResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -128,7 +128,7 @@ func (x *CreateOrganizationResponse) SetOwnerMemberId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *CreateOrganizationResponse) SetErrors(v []*v1.Error) {
+func (x *CreateOrganizationResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -210,7 +210,7 @@ type CreateOrganizationResponse_builder struct {
 	// Organization member record for the owner
 	OwnerMemberId *string
 	// Any errors encountered during creation
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 	// Additional information about the creation process
@@ -250,14 +250,14 @@ const file_organization_v1_create_organization_response_proto_rawDesc = "" +
 	"\x0fowner_member_id\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rownerMemberId\x122\n" +
 	"\x06errors\x18\x04 \x03(\v2\x10.common.v1.ErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12\x18\n" +
 	"\asuccess\x18\x05 \x01(\bR\asuccess\x12!\n" +
-	"\amessage\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_create_organization_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_create_organization_response_proto_goTypes = []any{
 	(*CreateOrganizationResponse)(nil), // 0: organization.v1.CreateOrganizationResponse
 	(*Organization)(nil),               // 1: organization.v1.Organization
 	(*Tenant)(nil),                     // 2: organization.v1.Tenant
-	(*v1.Error)(nil),                   // 3: common.v1.Error
+	(*common.Error)(nil),               // 3: common.v1.Error
 }
 var file_organization_v1_create_organization_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.CreateOrganizationResponse.organization:type_name -> organization.v1.Organization

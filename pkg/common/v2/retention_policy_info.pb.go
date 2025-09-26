@@ -135,7 +135,7 @@ const file_common_v2_retention_policy_info_proto_rawDesc = "" +
 	"%common/v2/retention_policy_info.proto\x12\tcommon.v2\x1a/common/v2/metrics_retention_policy_config.proto\x1a common/v2/retention_policy.proto\x1a!google/protobuf/go_features.proto\"\x91\x01\n" +
 	"\x13RetentionPolicyInfo\x129\n" +
 	"\x06policy\x18\x01 \x01(\x0e2!.common.v2.MetricsRetentionPolicyR\x06policy\x12?\n" +
-	"\x06config\x18\x02 \x01(\v2'.common.v2.MetricsRetentionPolicyConfigR\x06configB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06config\x18\x02 \x01(\v2'.common.v2.MetricsRetentionPolicyConfigR\x06configB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_retention_policy_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_retention_policy_info_proto_goTypes = []any{

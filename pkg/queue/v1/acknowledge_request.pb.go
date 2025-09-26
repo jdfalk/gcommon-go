@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/acknowledge_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,16 +30,16 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type AcknowledgeRequest struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName         *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_ReceiptHandles    []string               `protobuf:"bytes,2,rep,name=receipt_handles,json=receiptHandles"`
-	xxx_hidden_Metadata          *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=metadata"`
-	xxx_hidden_ConsumerId        *string                `protobuf:"bytes,12,opt,name=consumer_id,json=consumerId"`
-	xxx_hidden_ProcessingResults []string               `protobuf:"bytes,13,rep,name=processing_results,json=processingResults"`
-	xxx_hidden_ProcessingNotes   []string               `protobuf:"bytes,14,rep,name=processing_notes,json=processingNotes"`
-	xxx_hidden_ProcessingTimesMs []int64                `protobuf:"varint,15,rep,packed,name=processing_times_ms,json=processingTimesMs"`
-	xxx_hidden_ForceAcknowledge  bool                   `protobuf:"varint,16,opt,name=force_acknowledge,json=forceAcknowledge"`
-	xxx_hidden_BatchMode         bool                   `protobuf:"varint,17,opt,name=batch_mode,json=batchMode"`
+	state                        protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName         *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_ReceiptHandles    []string                `protobuf:"bytes,2,rep,name=receipt_handles,json=receiptHandles"`
+	xxx_hidden_Metadata          *common.RequestMetadata `protobuf:"bytes,11,opt,name=metadata"`
+	xxx_hidden_ConsumerId        *string                 `protobuf:"bytes,12,opt,name=consumer_id,json=consumerId"`
+	xxx_hidden_ProcessingResults []string                `protobuf:"bytes,13,rep,name=processing_results,json=processingResults"`
+	xxx_hidden_ProcessingNotes   []string                `protobuf:"bytes,14,rep,name=processing_notes,json=processingNotes"`
+	xxx_hidden_ProcessingTimesMs []int64                 `protobuf:"varint,15,rep,packed,name=processing_times_ms,json=processingTimesMs"`
+	xxx_hidden_ForceAcknowledge  bool                    `protobuf:"varint,16,opt,name=force_acknowledge,json=forceAcknowledge"`
+	xxx_hidden_BatchMode         bool                    `protobuf:"varint,17,opt,name=batch_mode,json=batchMode"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -88,7 +88,7 @@ func (x *AcknowledgeRequest) GetReceiptHandles() []string {
 	return nil
 }
 
-func (x *AcknowledgeRequest) GetMetadata() *v1.RequestMetadata {
+func (x *AcknowledgeRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -149,7 +149,7 @@ func (x *AcknowledgeRequest) SetReceiptHandles(v []string) {
 	x.xxx_hidden_ReceiptHandles = v
 }
 
-func (x *AcknowledgeRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *AcknowledgeRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -253,7 +253,7 @@ type AcknowledgeRequest_builder struct {
 	// *
 	// Standard request metadata including authentication context,
 	// tracing information, and client details.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// *
 	// Consumer ID that processed these messages.
 	// Used for tracking and metrics.
@@ -326,12 +326,12 @@ const file_queue_v1_acknowledge_request_proto_rawDesc = "" +
 	"\x13processing_times_ms\x18\x0f \x03(\x03R\x11processingTimesMs\x12+\n" +
 	"\x11force_acknowledge\x18\x10 \x01(\bR\x10forceAcknowledge\x12\x1d\n" +
 	"\n" +
-	"batch_mode\x18\x11 \x01(\bR\tbatchModeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"batch_mode\x18\x11 \x01(\bR\tbatchModeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_acknowledge_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_acknowledge_request_proto_goTypes = []any{
-	(*AcknowledgeRequest)(nil), // 0: queue.v1.AcknowledgeRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*AcknowledgeRequest)(nil),     // 0: queue.v1.AcknowledgeRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_acknowledge_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.AcknowledgeRequest.metadata:type_name -> common.v1.RequestMetadata

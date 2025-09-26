@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -134,7 +134,7 @@ const file_metrics_v2_set_scrape_config_response_proto_rawDesc = "" +
 	"metrics.v2\x1a\x15common/v2/error.proto\x1a!google/protobuf/go_features.proto\"[\n" +
 	"\x17SetScrapeConfigResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorR\x05errorB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_set_scrape_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_set_scrape_config_response_proto_goTypes = []any{

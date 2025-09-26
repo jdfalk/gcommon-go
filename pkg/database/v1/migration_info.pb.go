@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/migration_info.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -173,7 +173,7 @@ const file_database_v1_migration_info_proto_rawDesc = "" +
 	"\aversion\x18\x01 \x01(\tR\aversion\x12*\n" +
 	"\vdescription\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x129\n" +
 	"\n" +
-	"applied_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tappliedAtB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"applied_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tappliedAtB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_migration_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_migration_info_proto_goTypes = []any{

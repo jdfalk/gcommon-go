@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/list_files_request.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,15 +27,15 @@ const (
 // Request to list files in a directory.
 // Used for static file serving and directory browsing.
 type ListFilesRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_DirectoryPath *string                `protobuf:"bytes,1,opt,name=directory_path,json=directoryPath"`
-	xxx_hidden_Recursive     bool                   `protobuf:"varint,2,opt,name=recursive"`
-	xxx_hidden_Pattern       *string                `protobuf:"bytes,3,opt,name=pattern"`
-	xxx_hidden_Limit         int32                  `protobuf:"varint,4,opt,name=limit"`
-	xxx_hidden_Offset        int32                  `protobuf:"varint,5,opt,name=offset"`
-	xxx_hidden_IncludeHidden bool                   `protobuf:"varint,6,opt,name=include_hidden,json=includeHidden"`
-	xxx_hidden_SortOrder     v1.FileSortOrder       `protobuf:"varint,7,opt,name=sort_order,json=sortOrder,enum=common.v1.FileSortOrder"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,8,opt,name=metadata"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_DirectoryPath *string                 `protobuf:"bytes,1,opt,name=directory_path,json=directoryPath"`
+	xxx_hidden_Recursive     bool                    `protobuf:"varint,2,opt,name=recursive"`
+	xxx_hidden_Pattern       *string                 `protobuf:"bytes,3,opt,name=pattern"`
+	xxx_hidden_Limit         int32                   `protobuf:"varint,4,opt,name=limit"`
+	xxx_hidden_Offset        int32                   `protobuf:"varint,5,opt,name=offset"`
+	xxx_hidden_IncludeHidden bool                    `protobuf:"varint,6,opt,name=include_hidden,json=includeHidden"`
+	xxx_hidden_SortOrder     common.FileSortOrder    `protobuf:"varint,7,opt,name=sort_order,json=sortOrder,enum=common.v1.FileSortOrder"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,8,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -115,16 +115,16 @@ func (x *ListFilesRequest) GetIncludeHidden() bool {
 	return false
 }
 
-func (x *ListFilesRequest) GetSortOrder() v1.FileSortOrder {
+func (x *ListFilesRequest) GetSortOrder() common.FileSortOrder {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 6) {
 			return x.xxx_hidden_SortOrder
 		}
 	}
-	return v1.FileSortOrder(0)
+	return common.FileSortOrder(0)
 }
 
-func (x *ListFilesRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListFilesRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -161,12 +161,12 @@ func (x *ListFilesRequest) SetIncludeHidden(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 8)
 }
 
-func (x *ListFilesRequest) SetSortOrder(v v1.FileSortOrder) {
+func (x *ListFilesRequest) SetSortOrder(v common.FileSortOrder) {
 	x.xxx_hidden_SortOrder = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 8)
 }
 
-func (x *ListFilesRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListFilesRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -258,7 +258,7 @@ func (x *ListFilesRequest) ClearIncludeHidden() {
 
 func (x *ListFilesRequest) ClearSortOrder() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 6)
-	x.xxx_hidden_SortOrder = v1.FileSortOrder_FILE_SORT_ORDER_UNSPECIFIED
+	x.xxx_hidden_SortOrder = common.FileSortOrder_FILE_SORT_ORDER_UNSPECIFIED
 }
 
 func (x *ListFilesRequest) ClearMetadata() {
@@ -281,9 +281,9 @@ type ListFilesRequest_builder struct {
 	// Whether to include hidden files (starting with .)
 	IncludeHidden *bool
 	// Sort order for the files
-	SortOrder *v1.FileSortOrder
+	SortOrder *common.FileSortOrder
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ListFilesRequest_builder) Build() *ListFilesRequest {
@@ -336,13 +336,13 @@ const file_web_v1_list_files_request_proto_rawDesc = "" +
 	"\x0einclude_hidden\x18\x06 \x01(\bR\rincludeHidden\x127\n" +
 	"\n" +
 	"sort_order\x18\a \x01(\x0e2\x18.common.v1.FileSortOrderR\tsortOrder\x126\n" +
-	"\bmetadata\x18\b \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\b \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_list_files_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_list_files_request_proto_goTypes = []any{
-	(*ListFilesRequest)(nil),   // 0: web.v1.ListFilesRequest
-	(v1.FileSortOrder)(0),      // 1: common.v1.FileSortOrder
-	(*v1.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
+	(*ListFilesRequest)(nil),       // 0: web.v1.ListFilesRequest
+	(common.FileSortOrder)(0),      // 1: common.v1.FileSortOrder
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_web_v1_list_files_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.ListFilesRequest.sort_order:type_name -> common.v1.FileSortOrder

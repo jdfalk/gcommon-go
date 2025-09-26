@@ -411,7 +411,7 @@ const file_common_v2_authenticate_request_proto_rawDesc = "" +
 	"\x06scopes\x18\x06 \x03(\tR\x06scopes\x12:\n" +
 	"\vclient_info\x18\a \x01(\v2\x15.common.v2.ClientInfoB\x02(\x01R\n" +
 	"clientInfoB\r\n" +
-	"\vcredentialsB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vcredentialsB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_authenticate_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_authenticate_request_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/chapter_info.proto
 
-package v1
+package media
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -251,7 +251,7 @@ const file_media_v1_chapter_info_proto_rawDesc = "" +
 	"start_time\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\tstartTime\x124\n" +
 	"\bend_time\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\aendTime\x125\n" +
 	"\bduration\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\bduration\x12 \n" +
-	"\vdescription\x18\x06 \x01(\tR\vdescriptionB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vdescription\x18\x06 \x01(\tR\vdescriptionB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_chapter_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_chapter_info_proto_goTypes = []any{

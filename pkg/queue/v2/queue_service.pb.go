@@ -32,7 +32,7 @@ const file_queue_v2_queue_service_proto_rawDesc = "" +
 	"\x04Peek\x12\x15.queue.v2.PeekRequest\x1a\x16.queue.v2.PeekResponse\x12M\n" +
 	"\fGetQueueInfo\x12\x1d.queue.v2.GetQueueInfoRequest\x1a\x1e.queue.v2.GetQueueInfoResponse\x12K\n" +
 	"\tSubscribe\x12\x1f.queue.v2.QueueSubscribeRequest\x1a\x1b.queue.v2.SubscribeResponse0\x01\x12C\n" +
-	"\aPublish\x12\x1d.queue.v2.QueuePublishRequest\x1a\x19.queue.v2.PublishResponseB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aPublish\x12\x1d.queue.v2.QueuePublishRequest\x1a\x19.queue.v2.PublishResponseB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_queue_service_proto_goTypes = []any{
 	(*EnqueueRequest)(nil),        // 0: queue.v2.EnqueueRequest

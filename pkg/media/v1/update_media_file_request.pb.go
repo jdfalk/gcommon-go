@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/update_media_file_request.proto
 
-package v1
+package media
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -125,7 +125,7 @@ const file_media_v1_update_media_file_request_proto_rawDesc = "" +
 	"\n" +
 	"media_file\x18\x01 \x01(\v2\x13.media.v1.MediaFileR\tmediaFile\x12;\n" +
 	"\vupdate_mask\x18\x02 \x01(\v2\x1a.google.protobuf.FieldMaskR\n" +
-	"updateMaskB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"updateMaskB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_update_media_file_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_update_media_file_request_proto_goTypes = []any{

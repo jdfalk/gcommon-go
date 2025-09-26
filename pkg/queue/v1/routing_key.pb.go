@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/routing_key.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ const (
 type RoutingKey struct {
 	state                    protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Key           *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_PatternType   v1.RoutingPattern      `protobuf:"varint,2,opt,name=pattern_type,json=patternType,enum=common.v1.RoutingPattern"`
+	xxx_hidden_PatternType   common.RoutingPattern  `protobuf:"varint,2,opt,name=pattern_type,json=patternType,enum=common.v1.RoutingPattern"`
 	xxx_hidden_CaseSensitive bool                   `protobuf:"varint,3,opt,name=case_sensitive,json=caseSensitive"`
 	xxx_hidden_Priority      int32                  `protobuf:"varint,4,opt,name=priority"`
 	xxx_hidden_Attributes    map[string]string      `protobuf:"bytes,5,rep,name=attributes" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
@@ -74,13 +74,13 @@ func (x *RoutingKey) GetKey() string {
 	return ""
 }
 
-func (x *RoutingKey) GetPatternType() v1.RoutingPattern {
+func (x *RoutingKey) GetPatternType() common.RoutingPattern {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_PatternType
 		}
 	}
-	return v1.RoutingPattern(0)
+	return common.RoutingPattern(0)
 }
 
 func (x *RoutingKey) GetCaseSensitive() bool {
@@ -109,7 +109,7 @@ func (x *RoutingKey) SetKey(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *RoutingKey) SetPatternType(v v1.RoutingPattern) {
+func (x *RoutingKey) SetPatternType(v common.RoutingPattern) {
 	x.xxx_hidden_PatternType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
@@ -163,7 +163,7 @@ func (x *RoutingKey) ClearKey() {
 
 func (x *RoutingKey) ClearPatternType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_PatternType = v1.RoutingPattern_ROUTING_PATTERN_UNSPECIFIED
+	x.xxx_hidden_PatternType = common.RoutingPattern_ROUTING_PATTERN_UNSPECIFIED
 }
 
 func (x *RoutingKey) ClearCaseSensitive() {
@@ -182,7 +182,7 @@ type RoutingKey_builder struct {
 	// The routing key string
 	Key *string
 	// Pattern type for key matching
-	PatternType *v1.RoutingPattern
+	PatternType *common.RoutingPattern
 	// Whether the pattern is case sensitive
 	CaseSensitive *bool
 	// Priority for routing (higher numbers = higher priority)
@@ -231,13 +231,13 @@ const file_queue_v1_routing_key_proto_rawDesc = "" +
 	"attributes\x1a=\n" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_routing_key_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_routing_key_proto_goTypes = []any{
-	(*RoutingKey)(nil),     // 0: queue.v1.RoutingKey
-	nil,                    // 1: queue.v1.RoutingKey.AttributesEntry
-	(v1.RoutingPattern)(0), // 2: common.v1.RoutingPattern
+	(*RoutingKey)(nil),         // 0: queue.v1.RoutingKey
+	nil,                        // 1: queue.v1.RoutingKey.AttributesEntry
+	(common.RoutingPattern)(0), // 2: common.v1.RoutingPattern
 }
 var file_queue_v1_routing_key_proto_depIdxs = []int32{
 	2, // 0: queue.v1.RoutingKey.pattern_type:type_name -> common.v1.RoutingPattern

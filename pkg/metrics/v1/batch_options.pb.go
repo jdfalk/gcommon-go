@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/batch_options.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -33,7 +33,7 @@ type MetricsBatchOptions struct {
 	xxx_hidden_ReturnDetailedResults bool                   `protobuf:"varint,4,opt,name=return_detailed_results,json=returnDetailedResults"`
 	xxx_hidden_TimeoutSeconds        int32                  `protobuf:"varint,5,opt,name=timeout_seconds,json=timeoutSeconds"`
 	xxx_hidden_Transactional         bool                   `protobuf:"varint,6,opt,name=transactional"`
-	xxx_hidden_Priority              v1.BatchPriority       `protobuf:"varint,7,opt,name=priority,enum=common.v1.BatchPriority"`
+	xxx_hidden_Priority              common.BatchPriority   `protobuf:"varint,7,opt,name=priority,enum=common.v1.BatchPriority"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -107,13 +107,13 @@ func (x *MetricsBatchOptions) GetTransactional() bool {
 	return false
 }
 
-func (x *MetricsBatchOptions) GetPriority() v1.BatchPriority {
+func (x *MetricsBatchOptions) GetPriority() common.BatchPriority {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 6) {
 			return x.xxx_hidden_Priority
 		}
 	}
-	return v1.BatchPriority(0)
+	return common.BatchPriority(0)
 }
 
 func (x *MetricsBatchOptions) SetParallelProcessing(v bool) {
@@ -146,7 +146,7 @@ func (x *MetricsBatchOptions) SetTransactional(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 7)
 }
 
-func (x *MetricsBatchOptions) SetPriority(v v1.BatchPriority) {
+func (x *MetricsBatchOptions) SetPriority(v common.BatchPriority) {
 	x.xxx_hidden_Priority = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 7)
 }
@@ -232,7 +232,7 @@ func (x *MetricsBatchOptions) ClearTransactional() {
 
 func (x *MetricsBatchOptions) ClearPriority() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 6)
-	x.xxx_hidden_Priority = v1.BatchPriority_BATCH_PRIORITY_UNSPECIFIED
+	x.xxx_hidden_Priority = common.BatchPriority_BATCH_PRIORITY_UNSPECIFIED
 }
 
 type MetricsBatchOptions_builder struct {
@@ -251,7 +251,7 @@ type MetricsBatchOptions_builder struct {
 	// Whether to enable transactional semantics (all or nothing)
 	Transactional *bool
 	// Priority level for the batch operation
-	Priority *v1.BatchPriority
+	Priority *common.BatchPriority
 }
 
 func (b0 MetricsBatchOptions_builder) Build() *MetricsBatchOptions {
@@ -302,12 +302,12 @@ const file_metrics_v1_batch_options_proto_rawDesc = "" +
 	"\x17return_detailed_results\x18\x04 \x01(\bR\x15returnDetailedResults\x120\n" +
 	"\x0ftimeout_seconds\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0etimeoutSeconds\x12$\n" +
 	"\rtransactional\x18\x06 \x01(\bR\rtransactional\x124\n" +
-	"\bpriority\x18\a \x01(\x0e2\x18.common.v1.BatchPriorityR\bpriorityB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpriority\x18\a \x01(\x0e2\x18.common.v1.BatchPriorityR\bpriorityB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_batch_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_batch_options_proto_goTypes = []any{
 	(*MetricsBatchOptions)(nil), // 0: metrics.v1.MetricsBatchOptions
-	(v1.BatchPriority)(0),       // 1: common.v1.BatchPriority
+	(common.BatchPriority)(0),   // 1: common.v1.BatchPriority
 }
 var file_metrics_v1_batch_options_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsBatchOptions.priority:type_name -> common.v1.BatchPriority

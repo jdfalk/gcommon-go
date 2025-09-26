@@ -130,7 +130,7 @@ const file_common_v2_get_user_response_proto_rawDesc = "" +
 	"!common/v2/get_user_response.proto\x12\tcommon.v2\x1a\x1ccommon/v2/user_details.proto\x1a!google/protobuf/go_features.proto\"S\n" +
 	"\x0fGetUserResponse\x12*\n" +
 	"\x04user\x18\x01 \x01(\v2\x16.common.v2.UserDetailsR\x04user\x12\x14\n" +
-	"\x05found\x18\x02 \x01(\bR\x05foundB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05found\x18\x02 \x01(\bR\x05foundB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_user_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_user_response_proto_goTypes = []any{

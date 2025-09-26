@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/error_type_count.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -171,7 +171,7 @@ const file_common_v1_error_type_count_proto_rawDesc = "" +
 	"\x05count\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x05count\x127\n" +
 	"\n" +
 	"percentage\x18\x03 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\n" +
-	"percentageB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"percentageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_error_type_count_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_error_type_count_proto_goTypes = []any{

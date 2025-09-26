@@ -185,7 +185,7 @@ const file_metrics_v2_resource_allocations_proto_rawDesc = "" +
 	"\x16allocated_memory_bytes\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x14allocatedMemoryBytes\x12K\n" +
 	"\x15allocated_cpu_percent\x18\x02 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\x13allocatedCpuPercent\x129\n" +
 	"\x14allocated_disk_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12allocatedDiskBytes\x121\n" +
-	"\x0fallocated_ports\x18\x04 \x03(\x05B\b\xbaH\x05\x92\x01\x02\b\x01R\x0eallocatedPortsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fallocated_ports\x18\x04 \x03(\x05B\b\xbaH\x05\x92\x01\x02\b\x01R\x0eallocatedPortsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_resource_allocations_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_resource_allocations_proto_goTypes = []any{

@@ -262,7 +262,7 @@ const file_common_v2_circuit_breaker_config_proto_rawDesc = "" +
 	"\fmax_requests\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxRequests\x12:\n" +
 	"\vwindow_size\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\n" +
 	"windowSize\x124\n" +
-	"\x05state\x18\x06 \x01(\x0e2\x1e.common.v2.CircuitBreakerStateR\x05stateB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05state\x18\x06 \x01(\x0e2\x1e.common.v2.CircuitBreakerStateR\x05stateB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_circuit_breaker_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_circuit_breaker_config_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/service_version.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -246,7 +246,7 @@ const file_common_v1_service_version_proto_rawDesc = "" +
 	"\n" +
 	"build_time\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tbuildTime\x12\x1d\n" +
 	"\n" +
-	"go_version\x18\x05 \x01(\tR\tgoVersionB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"go_version\x18\x05 \x01(\tR\tgoVersionB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_service_version_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_service_version_proto_goTypes = []any{

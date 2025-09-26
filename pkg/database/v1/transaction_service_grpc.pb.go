@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: database/v1/transaction_service.proto
 
-package v1
+package database
 
 import (
 	context "context"

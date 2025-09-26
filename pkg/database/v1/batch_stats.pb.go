@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/batch_stats.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -218,7 +218,7 @@ const file_database_v1_batch_stats_proto_rawDesc = "" +
 	"total_time\x18\x01 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\ttotalTime\x12<\n" +
 	"\x15successful_operations\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x14successfulOperations\x124\n" +
 	"\x11failed_operations\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x10failedOperations\x127\n" +
-	"\x13total_affected_rows\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11totalAffectedRowsB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13total_affected_rows\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11totalAffectedRowsB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_batch_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_batch_stats_proto_goTypes = []any{

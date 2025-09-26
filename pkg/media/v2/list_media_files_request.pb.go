@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -241,7 +241,7 @@ const file_media_v2_list_media_files_request_proto_rawDesc = "" +
 	"media_type\x18\x03 \x01(\x0e2\x14.common.v2.MediaTypeR\tmediaType\x12\x1f\n" +
 	"\vpath_prefix\x18\x04 \x01(\tR\n" +
 	"pathPrefix\x12)\n" +
-	"\x10include_metadata\x18\x05 \x01(\bR\x0fincludeMetadataB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10include_metadata\x18\x05 \x01(\bR\x0fincludeMetadataB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_list_media_files_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_list_media_files_request_proto_goTypes = []any{

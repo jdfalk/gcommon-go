@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -241,7 +241,7 @@ const file_media_v2_media_quality_proto_rawDesc = "" +
 	"\x10duration_seconds\x18\x04 \x01(\x02B\n" +
 	"\xbaH\a\n" +
 	"\x05-\x00\x00\x00\x00R\x0fdurationSeconds\x12<\n" +
-	"\rquality_score\x18\x05 \x01(\x0e2\x17.common.v2.QualityScoreR\fqualityScoreB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rquality_score\x18\x05 \x01(\x0e2\x17.common.v2.QualityScoreR\fqualityScoreB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_media_quality_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_media_quality_proto_goTypes = []any{

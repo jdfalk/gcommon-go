@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/update_provider_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,14 +24,14 @@ const (
 )
 
 type UpdateProviderRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_ProviderId  *string                `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Name        *string                `protobuf:"bytes,3,opt,name=name"`
-	xxx_hidden_Type        *string                `protobuf:"bytes,4,opt,name=type"`
-	xxx_hidden_Config      map[string]string      `protobuf:"bytes,5,rep,name=config" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Description *string                `protobuf:"bytes,6,opt,name=description"`
-	xxx_hidden_Enabled     bool                   `protobuf:"varint,7,opt,name=enabled"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_ProviderId  *string                 `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Name        *string                 `protobuf:"bytes,3,opt,name=name"`
+	xxx_hidden_Type        *string                 `protobuf:"bytes,4,opt,name=type"`
+	xxx_hidden_Config      map[string]string       `protobuf:"bytes,5,rep,name=config" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Description *string                 `protobuf:"bytes,6,opt,name=description"`
+	xxx_hidden_Enabled     bool                    `protobuf:"varint,7,opt,name=enabled"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -63,7 +63,7 @@ func (x *UpdateProviderRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *UpdateProviderRequest) GetMetadata() *v1.RequestMetadata {
+func (x *UpdateProviderRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -124,7 +124,7 @@ func (x *UpdateProviderRequest) GetEnabled() bool {
 	return false
 }
 
-func (x *UpdateProviderRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *UpdateProviderRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -232,7 +232,7 @@ type UpdateProviderRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Provider ID to update
 	ProviderId *string
 	// Updated configuration
@@ -289,13 +289,13 @@ const file_metrics_v1_update_provider_request_proto_rawDesc = "" +
 	"\aenabled\x18\a \x01(\bR\aenabled\x1a9\n" +
 	"\vConfigEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_update_provider_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_update_provider_request_proto_goTypes = []any{
-	(*UpdateProviderRequest)(nil), // 0: metrics.v1.UpdateProviderRequest
-	nil,                           // 1: metrics.v1.UpdateProviderRequest.ConfigEntry
-	(*v1.RequestMetadata)(nil),    // 2: common.v1.RequestMetadata
+	(*UpdateProviderRequest)(nil),  // 0: metrics.v1.UpdateProviderRequest
+	nil,                            // 1: metrics.v1.UpdateProviderRequest.ConfigEntry
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_update_provider_request_proto_depIdxs = []int32{
 	2, // 0: metrics.v1.UpdateProviderRequest.metadata:type_name -> common.v1.RequestMetadata

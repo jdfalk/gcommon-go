@@ -154,7 +154,7 @@ const file_common_v2_invalidate_user_sessions_request_proto_rawDesc = "" +
 	"0common/v2/invalidate_user_sessions_request.proto\x12\tcommon.v2\x1a common/v2/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\xcd\x01\n" +
 	"\x1dInvalidateUserSessionsRequest\x12p\n" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_invalidate_user_sessions_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_invalidate_user_sessions_request_proto_goTypes = []any{

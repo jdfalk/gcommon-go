@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/update_permission_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -380,7 +380,7 @@ const file_common_v1_update_permission_request_proto_rawDesc = "" +
 	"updateMask\x126\n" +
 	"\bmetadata\x18\t \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x16\n" +
 	"\x06reason\x18\n" +
-	" \x01(\tR\x06reasonB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\tR\x06reasonB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_update_permission_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_update_permission_request_proto_goTypes = []any{

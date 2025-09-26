@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/restore_error.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -333,7 +333,7 @@ const file_queue_v1_restore_error_proto_rawDesc = "" +
 	"\x0eaffected_range\x18\x06 \x01(\v2\x15.queue.v1.OffsetRangeR\raffectedRange\x129\n" +
 	"\n" +
 	"error_time\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\terrorTime\x12 \n" +
-	"\vrecoverable\x18\b \x01(\bR\vrecoverableB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vrecoverable\x18\b \x01(\bR\vrecoverableB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_restore_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_restore_error_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/cache_config.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,7 +32,7 @@ type CacheCacheConfig struct {
 	xxx_hidden_MaxEntries        int64                  `protobuf:"varint,1,opt,name=max_entries,json=maxEntries"`
 	xxx_hidden_MaxMemoryBytes    int64                  `protobuf:"varint,2,opt,name=max_memory_bytes,json=maxMemoryBytes"`
 	xxx_hidden_DefaultTtl        *durationpb.Duration   `protobuf:"bytes,3,opt,name=default_ttl,json=defaultTtl"`
-	xxx_hidden_EvictionPolicy    v1.EvictionPolicy      `protobuf:"varint,4,opt,name=eviction_policy,json=evictionPolicy,enum=common.v1.EvictionPolicy"`
+	xxx_hidden_EvictionPolicy    common.EvictionPolicy  `protobuf:"varint,4,opt,name=eviction_policy,json=evictionPolicy,enum=common.v1.EvictionPolicy"`
 	xxx_hidden_EnableStats       bool                   `protobuf:"varint,5,opt,name=enable_stats,json=enableStats"`
 	xxx_hidden_EnablePersistence bool                   `protobuf:"varint,6,opt,name=enable_persistence,json=enablePersistence"`
 	xxx_hidden_PersistenceFile   *string                `protobuf:"bytes,7,opt,name=persistence_file,json=persistenceFile"`
@@ -89,13 +89,13 @@ func (x *CacheCacheConfig) GetDefaultTtl() *durationpb.Duration {
 	return nil
 }
 
-func (x *CacheCacheConfig) GetEvictionPolicy() v1.EvictionPolicy {
+func (x *CacheCacheConfig) GetEvictionPolicy() common.EvictionPolicy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_EvictionPolicy
 		}
 	}
-	return v1.EvictionPolicy(0)
+	return common.EvictionPolicy(0)
 }
 
 func (x *CacheCacheConfig) GetEnableStats() bool {
@@ -146,7 +146,7 @@ func (x *CacheCacheConfig) SetDefaultTtl(v *durationpb.Duration) {
 	x.xxx_hidden_DefaultTtl = v
 }
 
-func (x *CacheCacheConfig) SetEvictionPolicy(v v1.EvictionPolicy) {
+func (x *CacheCacheConfig) SetEvictionPolicy(v common.EvictionPolicy) {
 	x.xxx_hidden_EvictionPolicy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 8)
 }
@@ -243,7 +243,7 @@ func (x *CacheCacheConfig) ClearDefaultTtl() {
 
 func (x *CacheCacheConfig) ClearEvictionPolicy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_EvictionPolicy = v1.EvictionPolicy_EVICTION_POLICY_UNSPECIFIED
+	x.xxx_hidden_EvictionPolicy = common.EvictionPolicy_EVICTION_POLICY_UNSPECIFIED
 }
 
 func (x *CacheCacheConfig) ClearEnableStats() {
@@ -276,7 +276,7 @@ type CacheCacheConfig_builder struct {
 	// Default time-to-live for entries
 	DefaultTtl *durationpb.Duration
 	// Eviction policy when cache is full
-	EvictionPolicy *v1.EvictionPolicy
+	EvictionPolicy *common.EvictionPolicy
 	// Whether to enable cache statistics
 	EnableStats *bool
 	// Whether to enable cache persistence
@@ -338,13 +338,13 @@ const file_database_v1_cache_config_proto_rawDesc = "" +
 	"\fenable_stats\x18\x05 \x01(\bR\venableStats\x12-\n" +
 	"\x12enable_persistence\x18\x06 \x01(\bR\x11enablePersistence\x12)\n" +
 	"\x10persistence_file\x18\a \x01(\tR\x0fpersistenceFile\x12\x1d\n" +
-	"\x04name\x18\b \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04nameB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04name\x18\b \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04nameB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_cache_config_proto_goTypes = []any{
 	(*CacheCacheConfig)(nil),    // 0: database.v1.CacheCacheConfig
 	(*durationpb.Duration)(nil), // 1: google.protobuf.Duration
-	(v1.EvictionPolicy)(0),      // 2: common.v1.EvictionPolicy
+	(common.EvictionPolicy)(0),  // 2: common.v1.EvictionPolicy
 }
 var file_database_v1_cache_config_proto_depIdxs = []int32{
 	1, // 0: database.v1.CacheCacheConfig.default_ttl:type_name -> google.protobuf.Duration

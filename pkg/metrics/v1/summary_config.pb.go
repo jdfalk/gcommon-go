@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/summary_config.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -160,7 +160,7 @@ const file_metrics_v1_summary_config_proto_rawDesc = "" +
 	"\tquantiles\x18\x01 \x03(\x01B\b\xbaH\x05\x92\x01\x02\b\x01R\tquantiles\x12(\n" +
 	"\vtime_window\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"timeWindow\x12 \n" +
-	"\amax_age\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06maxAgeB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amax_age\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06maxAgeB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_summary_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_summary_config_proto_goTypes = []any{

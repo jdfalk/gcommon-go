@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -323,7 +323,7 @@ const file_queue_v2_batch_publish_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadata\x12\x1f\n" +
 	"\vmax_retries\x18\a \x01(\x05R\n" +
 	"maxRetries\x12\x19\n" +
-	"\bbatch_id\x18\b \x01(\tR\abatchIdB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bbatch_id\x18\b \x01(\tR\abatchIdB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_batch_publish_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_batch_publish_request_proto_goTypes = []any{

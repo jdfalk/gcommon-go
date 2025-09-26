@@ -199,7 +199,7 @@ const file_media_v2_upload_media_request_proto_rawDesc = "" +
 	"\x12UploadMediaRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x18.media.v2.UploadMetadataH\x00R\bmetadata\x12\x16\n" +
 	"\x05chunk\x18\x02 \x01(\fH\x00R\x05chunkB\x06\n" +
-	"\x04dataB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04dataB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_upload_media_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_upload_media_request_proto_goTypes = []any{

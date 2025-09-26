@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/auth_service.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -35,7 +35,7 @@ const file_common_v1_auth_service_proto_rawDesc = "" +
 	"\vGetUserInfo\x12\x1d.common.v1.GetUserInfoRequest\x1a\x1e.common.v1.GetUserInfoResponse\x12j\n" +
 	"\x15InitiatePasswordReset\x12'.common.v1.InitiatePasswordResetRequest\x1a(.common.v1.InitiatePasswordResetResponse\x12j\n" +
 	"\x15CompletePasswordReset\x12'.common.v1.CompletePasswordResetRequest\x1a(.common.v1.CompletePasswordResetResponse\x12U\n" +
-	"\x0eChangePassword\x12 .common.v1.ChangePasswordRequest\x1a!.common.v1.ChangePasswordResponseB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eChangePassword\x12 .common.v1.ChangePasswordRequest\x1a!.common.v1.ChangePasswordResponseB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_auth_service_proto_goTypes = []any{
 	(*AuthAuthenticateRequest)(nil),       // 0: common.v1.AuthAuthenticateRequest

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/rate_limit_strategy.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -82,7 +82,7 @@ const file_common_v1_rate_limit_strategy_proto_rawDesc = "" +
 	" RATE_LIMIT_STRATEGY_TOKEN_BUCKET\x10\x01\x12$\n" +
 	" RATE_LIMIT_STRATEGY_FIXED_WINDOW\x10\x02\x12&\n" +
 	"\"RATE_LIMIT_STRATEGY_SLIDING_WINDOW\x10\x03\x12$\n" +
-	" RATE_LIMIT_STRATEGY_LEAKY_BUCKET\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" RATE_LIMIT_STRATEGY_LEAKY_BUCKET\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_rate_limit_strategy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_rate_limit_strategy_proto_goTypes = []any{

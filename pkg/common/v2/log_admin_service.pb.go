@@ -27,7 +27,7 @@ const file_common_v2_log_admin_service_proto_rawDesc = "" +
 	"\n" +
 	"!common/v2/log_admin_service.proto\x12\tcommon.v2\x1a(common/v2/configure_logger_request.proto\x1a)common/v2/configure_logger_response.proto\x1a!google/protobuf/go_features.proto2k\n" +
 	"\x0fLogAdminService\x12X\n" +
-	"\x0fConfigureLogger\x12!.common.v2.ConfigureLoggerRequest\x1a\".common.v2.ConfigureLoggerResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fConfigureLogger\x12!.common.v2.ConfigureLoggerRequest\x1a\".common.v2.ConfigureLoggerResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_log_admin_service_proto_goTypes = []any{
 	(*ConfigureLoggerRequest)(nil),  // 0: common.v2.ConfigureLoggerRequest

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/route_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,9 +27,9 @@ const (
 type RouteConfig struct {
 	state                    protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Path          *string                `protobuf:"bytes,1,opt,name=path"`
-	xxx_hidden_Methods       []v1.HTTPMethod        `protobuf:"varint,2,rep,packed,name=methods,enum=common.v1.HTTPMethod"`
+	xxx_hidden_Methods       []common.HTTPMethod    `protobuf:"varint,2,rep,packed,name=methods,enum=common.v1.HTTPMethod"`
 	xxx_hidden_Handler       *string                `protobuf:"bytes,3,opt,name=handler"`
-	xxx_hidden_HandlerType   v1.HandlerType         `protobuf:"varint,4,opt,name=handler_type,json=handlerType,enum=common.v1.HandlerType"`
+	xxx_hidden_HandlerType   common.HandlerType     `protobuf:"varint,4,opt,name=handler_type,json=handlerType,enum=common.v1.HandlerType"`
 	xxx_hidden_MiddlewareIds []string               `protobuf:"bytes,5,rep,name=middleware_ids,json=middlewareIds"`
 	xxx_hidden_AuthRequired  bool                   `protobuf:"varint,6,opt,name=auth_required,json=authRequired"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
@@ -73,7 +73,7 @@ func (x *RouteConfig) GetPath() string {
 	return ""
 }
 
-func (x *RouteConfig) GetMethods() []v1.HTTPMethod {
+func (x *RouteConfig) GetMethods() []common.HTTPMethod {
 	if x != nil {
 		return x.xxx_hidden_Methods
 	}
@@ -90,13 +90,13 @@ func (x *RouteConfig) GetHandler() string {
 	return ""
 }
 
-func (x *RouteConfig) GetHandlerType() v1.HandlerType {
+func (x *RouteConfig) GetHandlerType() common.HandlerType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_HandlerType
 		}
 	}
-	return v1.HandlerType(0)
+	return common.HandlerType(0)
 }
 
 func (x *RouteConfig) GetMiddlewareIds() []string {
@@ -118,7 +118,7 @@ func (x *RouteConfig) SetPath(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *RouteConfig) SetMethods(v []v1.HTTPMethod) {
+func (x *RouteConfig) SetMethods(v []common.HTTPMethod) {
 	x.xxx_hidden_Methods = v
 }
 
@@ -127,7 +127,7 @@ func (x *RouteConfig) SetHandler(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *RouteConfig) SetHandlerType(v v1.HandlerType) {
+func (x *RouteConfig) SetHandlerType(v common.HandlerType) {
 	x.xxx_hidden_HandlerType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
@@ -181,7 +181,7 @@ func (x *RouteConfig) ClearHandler() {
 
 func (x *RouteConfig) ClearHandlerType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_HandlerType = v1.HandlerType_HANDLER_TYPE_UNSPECIFIED
+	x.xxx_hidden_HandlerType = common.HandlerType_HANDLER_TYPE_UNSPECIFIED
 }
 
 func (x *RouteConfig) ClearAuthRequired() {
@@ -195,11 +195,11 @@ type RouteConfig_builder struct {
 	// URL path pattern
 	Path *string
 	// Allowed HTTP methods
-	Methods []v1.HTTPMethod
+	Methods []common.HTTPMethod
 	// Handler name or identifier
 	Handler *string
 	// Handler type implementation
-	HandlerType *v1.HandlerType
+	HandlerType *common.HandlerType
 	// Middleware IDs applied to this route
 	MiddlewareIds []string
 	// Require authentication for route
@@ -242,13 +242,13 @@ const file_web_v1_route_config_proto_rawDesc = "" +
 	"\ahandler\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ahandler\x129\n" +
 	"\fhandler_type\x18\x04 \x01(\x0e2\x16.common.v1.HandlerTypeR\vhandlerType\x12/\n" +
 	"\x0emiddleware_ids\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rmiddlewareIds\x12#\n" +
-	"\rauth_required\x18\x06 \x01(\bR\fauthRequiredB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rauth_required\x18\x06 \x01(\bR\fauthRequiredB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_route_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_route_config_proto_goTypes = []any{
-	(*RouteConfig)(nil), // 0: web.v1.RouteConfig
-	(v1.HTTPMethod)(0),  // 1: common.v1.HTTPMethod
-	(v1.HandlerType)(0), // 2: common.v1.HandlerType
+	(*RouteConfig)(nil),     // 0: web.v1.RouteConfig
+	(common.HTTPMethod)(0),  // 1: common.v1.HTTPMethod
+	(common.HandlerType)(0), // 2: common.v1.HandlerType
 }
 var file_web_v1_route_config_proto_depIdxs = []int32{
 	1, // 0: web.v1.RouteConfig.methods:type_name -> common.v1.HTTPMethod

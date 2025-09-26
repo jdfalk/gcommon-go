@@ -225,7 +225,7 @@ const file_queue_v2_batch_pull_response_proto_rawDesc = "" +
 	"\n" +
 	"next_token\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnextToken\x12(\n" +
 	"\vtotal_bytes\x18\x05 \x01(\x04B\a\xbaH\x042\x02(\x00R\n" +
-	"totalBytesB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"totalBytesB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_batch_pull_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_batch_pull_response_proto_goTypes = []any{

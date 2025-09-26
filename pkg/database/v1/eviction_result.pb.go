@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/eviction_result.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type EvictionResult struct {
 	state                     protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_EvictedCount   int64                  `protobuf:"varint,1,opt,name=evicted_count,json=evictedCount"`
 	xxx_hidden_EvictedKeys    []string               `protobuf:"bytes,2,rep,name=evicted_keys,json=evictedKeys"`
-	xxx_hidden_PolicyUsed     v1.EvictionPolicy      `protobuf:"varint,3,opt,name=policy_used,json=policyUsed,enum=common.v1.EvictionPolicy"`
+	xxx_hidden_PolicyUsed     common.EvictionPolicy  `protobuf:"varint,3,opt,name=policy_used,json=policyUsed,enum=common.v1.EvictionPolicy"`
 	xxx_hidden_EvictionReason *string                `protobuf:"bytes,4,opt,name=eviction_reason,json=evictionReason"`
 	xxx_hidden_EvictedAt      *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=evicted_at,json=evictedAt"`
 	xxx_hidden_MemoryFreed    int64                  `protobuf:"varint,6,opt,name=memory_freed,json=memoryFreed"`
@@ -81,13 +81,13 @@ func (x *EvictionResult) GetEvictedKeys() []string {
 	return nil
 }
 
-func (x *EvictionResult) GetPolicyUsed() v1.EvictionPolicy {
+func (x *EvictionResult) GetPolicyUsed() common.EvictionPolicy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_PolicyUsed
 		}
 	}
-	return v1.EvictionPolicy(0)
+	return common.EvictionPolicy(0)
 }
 
 func (x *EvictionResult) GetEvictionReason() string {
@@ -130,7 +130,7 @@ func (x *EvictionResult) SetEvictedKeys(v []string) {
 	x.xxx_hidden_EvictedKeys = v
 }
 
-func (x *EvictionResult) SetPolicyUsed(v v1.EvictionPolicy) {
+func (x *EvictionResult) SetPolicyUsed(v common.EvictionPolicy) {
 	x.xxx_hidden_PolicyUsed = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 7)
 }
@@ -203,7 +203,7 @@ func (x *EvictionResult) ClearEvictedCount() {
 
 func (x *EvictionResult) ClearPolicyUsed() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_PolicyUsed = v1.EvictionPolicy_EVICTION_POLICY_UNSPECIFIED
+	x.xxx_hidden_PolicyUsed = common.EvictionPolicy_EVICTION_POLICY_UNSPECIFIED
 }
 
 func (x *EvictionResult) ClearEvictionReason() {
@@ -233,7 +233,7 @@ type EvictionResult_builder struct {
 	// List of evicted keys
 	EvictedKeys []string
 	// Eviction policy used
-	PolicyUsed *v1.EvictionPolicy
+	PolicyUsed *common.EvictionPolicy
 	// Reason for eviction
 	EvictionReason *string
 	// Timestamp of eviction
@@ -287,12 +287,12 @@ const file_database_v1_eviction_result_proto_rawDesc = "" +
 	"\n" +
 	"evicted_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tevictedAt\x12*\n" +
 	"\fmemory_freed\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vmemoryFreed\x12\x18\n" +
-	"\asuccess\x18\a \x01(\bR\asuccessB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\a \x01(\bR\asuccessB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_eviction_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_eviction_result_proto_goTypes = []any{
 	(*EvictionResult)(nil),        // 0: database.v1.EvictionResult
-	(v1.EvictionPolicy)(0),        // 1: common.v1.EvictionPolicy
+	(common.EvictionPolicy)(0),    // 1: common.v1.EvictionPolicy
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_database_v1_eviction_result_proto_depIdxs = []int32{

@@ -169,7 +169,7 @@ const file_organization_v2_memory_allocation_proto_rawDesc = "" +
 	"\asize_mb\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06sizeMb\x12:\n" +
 	"\x13usage_limit_percent\x18\x02 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\x11usageLimitPercent\x12 \n" +
-	"\aswap_mb\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06swapMbB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aswap_mb\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06swapMbB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_memory_allocation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_memory_allocation_proto_goTypes = []any{

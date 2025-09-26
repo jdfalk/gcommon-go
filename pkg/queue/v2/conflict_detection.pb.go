@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -192,7 +192,7 @@ const file_queue_v2_conflict_detection_proto_rawDesc = "" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x127\n" +
 	"\bstrategy\x18\x02 \x01(\x0e2\x1b.common.v2.ConflictStrategyR\bstrategy\x12>\n" +
 	"\fvector_clock\x18\x03 \x01(\v2\x1b.queue.v2.VectorClockConfigR\vvectorClock\x12D\n" +
-	"\x10timestamp_config\x18\x04 \x01(\v2\x19.queue.v2.TimestampConfigR\x0ftimestampConfigB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10timestamp_config\x18\x04 \x01(\v2\x19.queue.v2.TimestampConfigR\x0ftimestampConfigB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_conflict_detection_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_conflict_detection_proto_goTypes = []any{

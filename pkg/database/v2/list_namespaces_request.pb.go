@@ -208,7 +208,7 @@ const file_database_v2_list_namespaces_request_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12(\n" +
 	"\vname_filter\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"nameFilter\x12#\n" +
-	"\rinclude_stats\x18\x04 \x01(\bR\fincludeStatsB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rinclude_stats\x18\x04 \x01(\bR\fincludeStatsB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_list_namespaces_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_list_namespaces_request_proto_goTypes = []any{

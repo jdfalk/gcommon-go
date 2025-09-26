@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/list_middleware_request.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,12 +25,12 @@ const (
 
 // ListMiddlewareRequest request definition.
 type ListMiddlewareRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServerId    *string                `protobuf:"bytes,1,opt,name=server_id,json=serverId"`
-	xxx_hidden_Type        v1.MiddlewareType      `protobuf:"varint,2,opt,name=type,enum=common.v1.MiddlewareType"`
-	xxx_hidden_Enabled     bool                   `protobuf:"varint,3,opt,name=enabled"`
-	xxx_hidden_Pagination  *v1.Pagination         `protobuf:"bytes,4,opt,name=pagination"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServerId    *string                 `protobuf:"bytes,1,opt,name=server_id,json=serverId"`
+	xxx_hidden_Type        common.MiddlewareType   `protobuf:"varint,2,opt,name=type,enum=common.v1.MiddlewareType"`
+	xxx_hidden_Enabled     bool                    `protobuf:"varint,3,opt,name=enabled"`
+	xxx_hidden_Pagination  *common.Pagination      `protobuf:"bytes,4,opt,name=pagination"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -72,13 +72,13 @@ func (x *ListMiddlewareRequest) GetServerId() string {
 	return ""
 }
 
-func (x *ListMiddlewareRequest) GetType() v1.MiddlewareType {
+func (x *ListMiddlewareRequest) GetType() common.MiddlewareType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MiddlewareType(0)
+	return common.MiddlewareType(0)
 }
 
 func (x *ListMiddlewareRequest) GetEnabled() bool {
@@ -88,14 +88,14 @@ func (x *ListMiddlewareRequest) GetEnabled() bool {
 	return false
 }
 
-func (x *ListMiddlewareRequest) GetPagination() *v1.Pagination {
+func (x *ListMiddlewareRequest) GetPagination() *common.Pagination {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
 	return nil
 }
 
-func (x *ListMiddlewareRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListMiddlewareRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -107,7 +107,7 @@ func (x *ListMiddlewareRequest) SetServerId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *ListMiddlewareRequest) SetType(v v1.MiddlewareType) {
+func (x *ListMiddlewareRequest) SetType(v common.MiddlewareType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
@@ -117,11 +117,11 @@ func (x *ListMiddlewareRequest) SetEnabled(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
 
-func (x *ListMiddlewareRequest) SetPagination(v *v1.Pagination) {
+func (x *ListMiddlewareRequest) SetPagination(v *common.Pagination) {
 	x.xxx_hidden_Pagination = v
 }
 
-func (x *ListMiddlewareRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListMiddlewareRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -167,7 +167,7 @@ func (x *ListMiddlewareRequest) ClearServerId() {
 
 func (x *ListMiddlewareRequest) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Type = v1.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
 }
 
 func (x *ListMiddlewareRequest) ClearEnabled() {
@@ -189,13 +189,13 @@ type ListMiddlewareRequest_builder struct {
 	// Server identifier
 	ServerId *string
 	// Filter by middleware type
-	Type *v1.MiddlewareType
+	Type *common.MiddlewareType
 	// Filter by enabled state
 	Enabled *bool
 	// Pagination options
-	Pagination *v1.Pagination
+	Pagination *common.Pagination
 	// Standard request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ListMiddlewareRequest_builder) Build() *ListMiddlewareRequest {
@@ -231,14 +231,14 @@ const file_web_v1_list_middleware_request_proto_rawDesc = "" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x15.common.v1.PaginationR\n" +
 	"pagination\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_list_middleware_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_list_middleware_request_proto_goTypes = []any{
-	(*ListMiddlewareRequest)(nil), // 0: web.v1.ListMiddlewareRequest
-	(v1.MiddlewareType)(0),        // 1: common.v1.MiddlewareType
-	(*v1.Pagination)(nil),         // 2: common.v1.Pagination
-	(*v1.RequestMetadata)(nil),    // 3: common.v1.RequestMetadata
+	(*ListMiddlewareRequest)(nil),  // 0: web.v1.ListMiddlewareRequest
+	(common.MiddlewareType)(0),     // 1: common.v1.MiddlewareType
+	(*common.Pagination)(nil),      // 2: common.v1.Pagination
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_web_v1_list_middleware_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.ListMiddlewareRequest.type:type_name -> common.v1.MiddlewareType

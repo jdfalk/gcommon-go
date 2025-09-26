@@ -239,7 +239,7 @@ const file_database_v2_pebble_config_proto_rawDesc = "" +
 	"cache_size\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tcacheSize\x12,\n" +
 	"\rmemtable_size\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmemtableSize\x12-\n" +
 	"\x0emax_open_files\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fmaxOpenFiles\x12 \n" +
-	"\vcompression\x18\x05 \x01(\bR\vcompressionB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vcompression\x18\x05 \x01(\bR\vcompressionB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_pebble_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_pebble_config_proto_goTypes = []any{

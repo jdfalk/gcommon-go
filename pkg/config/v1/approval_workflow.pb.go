@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/approval_workflow.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -223,7 +223,7 @@ const file_config_v1_approval_workflow_proto_rawDesc = "" +
 	"\n" +
 	"conditions\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"conditions\x12.\n" +
-	"\rnotifications\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rnotificationsB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rnotifications\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rnotificationsB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_approval_workflow_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_approval_workflow_proto_goTypes = []any{

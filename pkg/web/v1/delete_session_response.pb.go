@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/delete_session_response.proto
 
-package v1
+package web
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -104,7 +104,7 @@ const file_web_v1_delete_session_response_proto_rawDesc = "" +
 	"\n" +
 	"$web/v1/delete_session_response.proto\x12\x06web.v1\x1a!google/protobuf/go_features.proto\"4\n" +
 	"\x18WebDeleteSessionResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccessB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\x01 \x01(\bR\asuccessB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_delete_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_delete_session_response_proto_goTypes = []any{

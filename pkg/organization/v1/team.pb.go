@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/team.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -39,7 +39,7 @@ type Team struct {
 	xxx_hidden_LeadId               *string                `protobuf:"bytes,7,opt,name=lead_id,json=leadId"`
 	xxx_hidden_TeamType             *string                `protobuf:"bytes,8,opt,name=team_type,json=teamType"`
 	xxx_hidden_FocusArea            *string                `protobuf:"bytes,9,opt,name=focus_area,json=focusArea"`
-	xxx_hidden_Metadata             *[]*v1.KeyValue        `protobuf:"bytes,10,rep,name=metadata"`
+	xxx_hidden_Metadata             *[]*common.KeyValue    `protobuf:"bytes,10,rep,name=metadata"`
 	xxx_hidden_CreatedAt            *timestamppb.Timestamp `protobuf:"bytes,11,opt,name=created_at,json=createdAt"`
 	xxx_hidden_UpdatedAt            *timestamppb.Timestamp `protobuf:"bytes,12,opt,name=updated_at,json=updatedAt"`
 	xxx_hidden_CreatedBy            *string                `protobuf:"bytes,13,opt,name=created_by,json=createdBy"`
@@ -178,13 +178,13 @@ func (x *Team) GetFocusArea() string {
 	return ""
 }
 
-func (x *Team) GetMetadata() []*v1.KeyValue {
+func (x *Team) GetMetadata() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 9) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 10)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -371,11 +371,11 @@ func (x *Team) SetFocusArea(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 8, 25)
 }
 
-func (x *Team) SetMetadata(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *Team) SetMetadata(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -723,7 +723,7 @@ type Team_builder struct {
 	// Team's primary focus area or mission
 	FocusArea *string
 	// Team metadata and custom attributes
-	Metadata []*v1.KeyValue
+	Metadata []*common.KeyValue
 	// Team creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last update timestamp
@@ -892,12 +892,12 @@ const file_organization_v1_team_proto_rawDesc = "" +
 	"objectives\x18\x17 \x03(\tR\n" +
 	"objectives\x12\x12\n" +
 	"\x04kpis\x18\x18 \x03(\tR\x04kpis\x12)\n" +
-	"\x10cross_functional\x18\x19 \x01(\bR\x0fcrossFunctionalB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10cross_functional\x18\x19 \x01(\bR\x0fcrossFunctionalB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_team_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_team_proto_goTypes = []any{
 	(*Team)(nil),                  // 0: organization.v1.Team
-	(*v1.KeyValue)(nil),           // 1: common.v1.KeyValue
+	(*common.KeyValue)(nil),       // 1: common.v1.KeyValue
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_organization_v1_team_proto_depIdxs = []int32{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/database_isolation.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ type DatabaseIsolation struct {
 	state                          protoimpl.MessageState    `protogen:"opaque.v1"`
 	xxx_hidden_DatabaseInstance    *string                   `protobuf:"bytes,1,opt,name=database_instance,json=databaseInstance"`
 	xxx_hidden_SchemaName          *string                   `protobuf:"bytes,2,opt,name=schema_name,json=schemaName"`
-	xxx_hidden_ConnectionParams    *[]*v1.KeyValue           `protobuf:"bytes,3,rep,name=connection_params,json=connectionParams"`
+	xxx_hidden_ConnectionParams    *[]*common.KeyValue       `protobuf:"bytes,3,rep,name=connection_params,json=connectionParams"`
 	xxx_hidden_DedicatedDatabase   bool                      `protobuf:"varint,4,opt,name=dedicated_database,json=dedicatedDatabase"`
 	xxx_hidden_Backup              *OrganizationBackupConfig `protobuf:"bytes,5,opt,name=backup"`
 	xxx_hidden_AllowedOperations   []string                  `protobuf:"bytes,6,rep,name=allowed_operations,json=allowedOperations"`
@@ -86,13 +86,13 @@ func (x *DatabaseIsolation) GetSchemaName() string {
 	return ""
 }
 
-func (x *DatabaseIsolation) GetConnectionParams() []*v1.KeyValue {
+func (x *DatabaseIsolation) GetConnectionParams() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_ConnectionParams) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_ConnectionParams), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -145,11 +145,11 @@ func (x *DatabaseIsolation) SetSchemaName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 8)
 }
 
-func (x *DatabaseIsolation) SetConnectionParams(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *DatabaseIsolation) SetConnectionParams(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_ConnectionParams), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_ConnectionParams), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -258,7 +258,7 @@ type DatabaseIsolation_builder struct {
 	// Schema or database name for this tenant
 	SchemaName *string
 	// Database connection parameters
-	ConnectionParams []*v1.KeyValue
+	ConnectionParams []*common.KeyValue
 	// Whether tenant has dedicated database
 	DedicatedDatabase *bool
 	// Database backup configuration
@@ -318,12 +318,12 @@ const file_organization_v1_database_isolation_proto_rawDesc = "" +
 	"\x06backup\x18\x05 \x01(\v2).organization.v1.OrganizationBackupConfigR\x06backup\x12-\n" +
 	"\x12allowed_operations\x18\x06 \x03(\tR\x11allowedOperations\x12'\n" +
 	"\x0fmax_connections\x18\a \x01(\x05R\x0emaxConnections\x122\n" +
-	"\x15query_timeout_seconds\x18\b \x01(\x05R\x13queryTimeoutSecondsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15query_timeout_seconds\x18\b \x01(\x05R\x13queryTimeoutSecondsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_database_isolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_database_isolation_proto_goTypes = []any{
 	(*DatabaseIsolation)(nil),        // 0: organization.v1.DatabaseIsolation
-	(*v1.KeyValue)(nil),              // 1: common.v1.KeyValue
+	(*common.KeyValue)(nil),          // 1: common.v1.KeyValue
 	(*OrganizationBackupConfig)(nil), // 2: organization.v1.OrganizationBackupConfig
 }
 var file_organization_v1_database_isolation_proto_depIdxs = []int32{

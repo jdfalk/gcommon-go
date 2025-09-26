@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -235,7 +235,7 @@ const file_queue_v2_get_topic_info_request_proto_rawDesc = "" +
 	"\rinclude_stats\x18\x02 \x01(\bR\fincludeStats\x12-\n" +
 	"\x12include_partitions\x18\x03 \x01(\bR\x11includePartitions\x126\n" +
 	"\x17include_consumer_groups\x18\x04 \x01(\bR\x15includeConsumerGroups\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_get_topic_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_get_topic_info_request_proto_goTypes = []any{

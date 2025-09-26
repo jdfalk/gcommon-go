@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/delete_organization_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type DeleteOrganizationResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Errors      *[]*v1.Error           `protobuf:"bytes,1,rep,name=errors"`
+	xxx_hidden_Errors      *[]*common.Error       `protobuf:"bytes,1,rep,name=errors"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,2,opt,name=success"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -58,7 +58,7 @@ func (x *DeleteOrganizationResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *DeleteOrganizationResponse) GetErrors() []*v1.Error {
+func (x *DeleteOrganizationResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -74,7 +74,7 @@ func (x *DeleteOrganizationResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *DeleteOrganizationResponse) SetErrors(v []*v1.Error) {
+func (x *DeleteOrganizationResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -99,7 +99,7 @@ type DeleteOrganizationResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Any errors encountered
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 }
@@ -123,12 +123,12 @@ const file_organization_v1_delete_organization_response_proto_rawDesc = "" +
 	"2organization/v1/delete_organization_response.proto\x12\x0forganization.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"j\n" +
 	"\x1aDeleteOrganizationResponse\x122\n" +
 	"\x06errors\x18\x01 \x03(\v2\x10.common.v1.ErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12\x18\n" +
-	"\asuccess\x18\x02 \x01(\bR\asuccessB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\x02 \x01(\bR\asuccessB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_delete_organization_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_delete_organization_response_proto_goTypes = []any{
 	(*DeleteOrganizationResponse)(nil), // 0: organization.v1.DeleteOrganizationResponse
-	(*v1.Error)(nil),                   // 1: common.v1.Error
+	(*common.Error)(nil),               // 1: common.v1.Error
 }
 var file_organization_v1_delete_organization_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.DeleteOrganizationResponse.errors:type_name -> common.v1.Error

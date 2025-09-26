@@ -185,7 +185,7 @@ const file_database_v2_batch_execute_options_proto_rawDesc = "" +
 	"\x13BatchExecuteOptions\x12\x1b\n" +
 	"\tfail_fast\x18\x01 \x01(\bR\bfailFast\x127\n" +
 	"\atimeout\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\atimeout\x12*\n" +
-	"\fmax_parallel\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxParallelB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fmax_parallel\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxParallelB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_batch_execute_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_batch_execute_options_proto_goTypes = []any{

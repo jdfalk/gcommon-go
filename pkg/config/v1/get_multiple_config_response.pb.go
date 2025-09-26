@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/get_multiple_config_response.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ type GetMultipleConfigResponse struct {
 	state               protoimpl.MessageState  `protogen:"opaque.v1"`
 	xxx_hidden_Entries  map[string]*ConfigEntry `protobuf:"bytes,1,rep,name=entries" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	xxx_hidden_NotFound []string                `protobuf:"bytes,2,rep,name=not_found,json=notFound"`
-	xxx_hidden_Error    *v1.Error               `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error    *common.Error           `protobuf:"bytes,3,opt,name=error"`
 	unknownFields       protoimpl.UnknownFields
 	sizeCache           protoimpl.SizeCache
 }
@@ -73,7 +73,7 @@ func (x *GetMultipleConfigResponse) GetNotFound() []string {
 	return nil
 }
 
-func (x *GetMultipleConfigResponse) GetError() *v1.Error {
+func (x *GetMultipleConfigResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -88,7 +88,7 @@ func (x *GetMultipleConfigResponse) SetNotFound(v []string) {
 	x.xxx_hidden_NotFound = v
 }
 
-func (x *GetMultipleConfigResponse) SetError(v *v1.Error) {
+func (x *GetMultipleConfigResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -111,7 +111,7 @@ type GetMultipleConfigResponse_builder struct {
 	// Keys that were not found
 	NotFound []string
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 GetMultipleConfigResponse_builder) Build() *GetMultipleConfigResponse {
@@ -135,13 +135,13 @@ const file_config_v1_get_multiple_config_response_proto_rawDesc = "" +
 	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05error\x1aR\n" +
 	"\fEntriesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12,\n" +
-	"\x05value\x18\x02 \x01(\v2\x16.config.v1.ConfigEntryR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\v2\x16.config.v1.ConfigEntryR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_multiple_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_get_multiple_config_response_proto_goTypes = []any{
 	(*GetMultipleConfigResponse)(nil), // 0: config.v1.GetMultipleConfigResponse
 	nil,                               // 1: config.v1.GetMultipleConfigResponse.EntriesEntry
-	(*v1.Error)(nil),                  // 2: common.v1.Error
+	(*common.Error)(nil),              // 2: common.v1.Error
 	(*ConfigEntry)(nil),               // 3: config.v1.ConfigEntry
 }
 var file_config_v1_get_multiple_config_response_proto_depIdxs = []int32{

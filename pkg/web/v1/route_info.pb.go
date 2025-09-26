@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/route_info.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type RouteInfo struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Config      *RouteConfig           `protobuf:"bytes,1,opt,name=config"`
-	xxx_hidden_RouteType   v1.RouteType           `protobuf:"varint,2,opt,name=route_type,json=routeType,enum=common.v1.RouteType"`
+	xxx_hidden_RouteType   common.RouteType       `protobuf:"varint,2,opt,name=route_type,json=routeType,enum=common.v1.RouteType"`
 	xxx_hidden_CreatedAt   *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=created_at,json=createdAt"`
 	xxx_hidden_UpdatedAt   *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=updated_at,json=updatedAt"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -69,13 +69,13 @@ func (x *RouteInfo) GetConfig() *RouteConfig {
 	return nil
 }
 
-func (x *RouteInfo) GetRouteType() v1.RouteType {
+func (x *RouteInfo) GetRouteType() common.RouteType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_RouteType
 		}
 	}
-	return v1.RouteType(0)
+	return common.RouteType(0)
 }
 
 func (x *RouteInfo) GetCreatedAt() *timestamppb.Timestamp {
@@ -96,7 +96,7 @@ func (x *RouteInfo) SetConfig(v *RouteConfig) {
 	x.xxx_hidden_Config = v
 }
 
-func (x *RouteInfo) SetRouteType(v v1.RouteType) {
+func (x *RouteInfo) SetRouteType(v common.RouteType) {
 	x.xxx_hidden_RouteType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
@@ -143,7 +143,7 @@ func (x *RouteInfo) ClearConfig() {
 
 func (x *RouteInfo) ClearRouteType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_RouteType = v1.RouteType_ROUTE_TYPE_UNSPECIFIED
+	x.xxx_hidden_RouteType = common.RouteType_ROUTE_TYPE_UNSPECIFIED
 }
 
 func (x *RouteInfo) ClearCreatedAt() {
@@ -160,7 +160,7 @@ type RouteInfo_builder struct {
 	// Route configuration
 	Config *RouteConfig
 	// Type of route
-	RouteType *v1.RouteType
+	RouteType *common.RouteType
 	// Creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last update timestamp
@@ -193,13 +193,13 @@ const file_web_v1_route_info_proto_rawDesc = "" +
 	"\n" +
 	"created_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampB\x06\xbaH\x03\xc8\x01\x01R\tcreatedAt\x129\n" +
 	"\n" +
-	"updated_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"updated_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_route_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_route_info_proto_goTypes = []any{
 	(*RouteInfo)(nil),             // 0: web.v1.RouteInfo
 	(*RouteConfig)(nil),           // 1: web.v1.RouteConfig
-	(v1.RouteType)(0),             // 2: common.v1.RouteType
+	(common.RouteType)(0),         // 2: common.v1.RouteType
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_web_v1_route_info_proto_depIdxs = []int32{

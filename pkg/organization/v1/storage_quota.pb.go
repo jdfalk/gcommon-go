@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/storage_quota.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -201,7 +201,7 @@ const file_organization_v1_storage_quota_proto_rawDesc = "" +
 	"\vmax_objects\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"maxObjects\x12>\n" +
 	"\x17max_requests_per_second\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x14maxRequestsPerSecond\x129\n" +
-	"\x14transfer_quota_bytes\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12transferQuotaBytesB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14transfer_quota_bytes\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12transferQuotaBytesB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_storage_quota_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_storage_quota_proto_goTypes = []any{

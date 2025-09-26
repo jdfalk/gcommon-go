@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/transaction_options.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,10 +27,10 @@ const (
 // TransactionOptions configures behavior for database transactions.
 // Controls isolation level, timeout, and read-only mode.
 type TransactionOptions struct {
-	state                protoimpl.MessageState    `protogen:"opaque.v1"`
-	xxx_hidden_Isolation v1.DatabaseIsolationLevel `protobuf:"varint,1,opt,name=isolation,enum=common.v1.DatabaseIsolationLevel"`
-	xxx_hidden_Timeout   *durationpb.Duration      `protobuf:"bytes,2,opt,name=timeout"`
-	xxx_hidden_ReadOnly  bool                      `protobuf:"varint,3,opt,name=read_only,json=readOnly"`
+	state                protoimpl.MessageState        `protogen:"opaque.v1"`
+	xxx_hidden_Isolation common.DatabaseIsolationLevel `protobuf:"varint,1,opt,name=isolation,enum=common.v1.DatabaseIsolationLevel"`
+	xxx_hidden_Timeout   *durationpb.Duration          `protobuf:"bytes,2,opt,name=timeout"`
+	xxx_hidden_ReadOnly  bool                          `protobuf:"varint,3,opt,name=read_only,json=readOnly"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -64,13 +64,13 @@ func (x *TransactionOptions) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *TransactionOptions) GetIsolation() v1.DatabaseIsolationLevel {
+func (x *TransactionOptions) GetIsolation() common.DatabaseIsolationLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Isolation
 		}
 	}
-	return v1.DatabaseIsolationLevel(0)
+	return common.DatabaseIsolationLevel(0)
 }
 
 func (x *TransactionOptions) GetTimeout() *durationpb.Duration {
@@ -94,7 +94,7 @@ func (x *TransactionOptions) GetReadOnly() bool {
 	return false
 }
 
-func (x *TransactionOptions) SetIsolation(v v1.DatabaseIsolationLevel) {
+func (x *TransactionOptions) SetIsolation(v common.DatabaseIsolationLevel) {
 	x.xxx_hidden_Isolation = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 3)
 }
@@ -136,7 +136,7 @@ func (x *TransactionOptions) HasReadOnly() bool {
 
 func (x *TransactionOptions) ClearIsolation() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Isolation = v1.DatabaseIsolationLevel_DATABASE_ISOLATION_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Isolation = common.DatabaseIsolationLevel_DATABASE_ISOLATION_LEVEL_UNSPECIFIED
 }
 
 func (x *TransactionOptions) ClearTimeout() {
@@ -153,7 +153,7 @@ type TransactionOptions_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Isolation level for the transaction
-	Isolation *v1.DatabaseIsolationLevel
+	Isolation *common.DatabaseIsolationLevel
 	// Transaction timeout before automatic rollback
 	Timeout *durationpb.Duration
 	// Whether this is a read-only transaction
@@ -187,13 +187,13 @@ const file_database_v1_transaction_options_proto_rawDesc = "" +
 	"\x12TransactionOptions\x12?\n" +
 	"\tisolation\x18\x01 \x01(\x0e2!.common.v1.DatabaseIsolationLevelR\tisolation\x127\n" +
 	"\atimeout\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\atimeout\x12\x1b\n" +
-	"\tread_only\x18\x03 \x01(\bR\breadOnlyB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tread_only\x18\x03 \x01(\bR\breadOnlyB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_transaction_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_transaction_options_proto_goTypes = []any{
-	(*TransactionOptions)(nil),     // 0: database.v1.TransactionOptions
-	(v1.DatabaseIsolationLevel)(0), // 1: common.v1.DatabaseIsolationLevel
-	(*durationpb.Duration)(nil),    // 2: google.protobuf.Duration
+	(*TransactionOptions)(nil),         // 0: database.v1.TransactionOptions
+	(common.DatabaseIsolationLevel)(0), // 1: common.v1.DatabaseIsolationLevel
+	(*durationpb.Duration)(nil),        // 2: google.protobuf.Duration
 }
 var file_database_v1_transaction_options_proto_depIdxs = []int32{
 	1, // 0: database.v1.TransactionOptions.isolation:type_name -> common.v1.DatabaseIsolationLevel

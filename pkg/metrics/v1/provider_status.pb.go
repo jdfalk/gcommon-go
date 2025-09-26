@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/provider_status.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 // Status of a metrics provider.
 type ProviderStatus struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_State       v1.ProviderState       `protobuf:"varint,1,opt,name=state,enum=common.v1.ProviderState"`
+	xxx_hidden_State       common.ProviderState   `protobuf:"varint,1,opt,name=state,enum=common.v1.ProviderState"`
 	xxx_hidden_Message     *string                `protobuf:"bytes,2,opt,name=message"`
 	xxx_hidden_Health      *string                `protobuf:"bytes,3,opt,name=health"`
 	xxx_hidden_LastUpdated *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=last_updated,json=lastUpdated"`
@@ -64,13 +64,13 @@ func (x *ProviderStatus) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ProviderStatus) GetState() v1.ProviderState {
+func (x *ProviderStatus) GetState() common.ProviderState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_State
 		}
 	}
-	return v1.ProviderState(0)
+	return common.ProviderState(0)
 }
 
 func (x *ProviderStatus) GetMessage() string {
@@ -110,7 +110,7 @@ func (x *ProviderStatus) GetVersion() string {
 	return ""
 }
 
-func (x *ProviderStatus) SetState(v v1.ProviderState) {
+func (x *ProviderStatus) SetState(v common.ProviderState) {
 	x.xxx_hidden_State = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
@@ -171,7 +171,7 @@ func (x *ProviderStatus) HasVersion() bool {
 
 func (x *ProviderStatus) ClearState() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_State = v1.ProviderState_PROVIDER_STATE_UNSPECIFIED
+	x.xxx_hidden_State = common.ProviderState_PROVIDER_STATE_UNSPECIFIED
 }
 
 func (x *ProviderStatus) ClearMessage() {
@@ -197,7 +197,7 @@ type ProviderStatus_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Current state
-	State *v1.ProviderState
+	State *common.ProviderState
 	// Status message
 	Message *string
 	// Health check status
@@ -243,12 +243,12 @@ const file_metrics_v1_provider_status_proto_rawDesc = "" +
 	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessage\x12\x1f\n" +
 	"\x06health\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06health\x12=\n" +
 	"\flast_updated\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\vlastUpdated\x121\n" +
-	"\aversion\x18\x05 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\aversionB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aversion\x18\x05 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\aversionB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_provider_status_proto_goTypes = []any{
 	(*ProviderStatus)(nil),        // 0: metrics.v1.ProviderStatus
-	(v1.ProviderState)(0),         // 1: common.v1.ProviderState
+	(common.ProviderState)(0),     // 1: common.v1.ProviderState
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_metrics_v1_provider_status_proto_depIdxs = []int32{

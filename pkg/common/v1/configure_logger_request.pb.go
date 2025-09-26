@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/configure_logger_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -180,7 +180,7 @@ const file_common_v1_configure_logger_request_proto_rawDesc = "" +
 	"\vlogger_name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\n" +
 	"loggerName\x12\x14\n" +
 	"\x05level\x18\x02 \x01(\tR\x05level\x12#\n" +
-	"\routput_config\x18\x03 \x01(\tR\foutputConfigB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\routput_config\x18\x03 \x01(\tR\foutputConfigB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_configure_logger_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_configure_logger_request_proto_goTypes = []any{

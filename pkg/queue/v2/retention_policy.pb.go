@@ -166,7 +166,7 @@ const file_queue_v2_retention_policy_proto_rawDesc = "" +
 	"\amax_age\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\x06maxAge\x12-\n" +
 	"\x0emax_size_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmaxSizeBytes\x12\x1f\n" +
 	"\vdiscard_old\x18\x03 \x01(\bR\n" +
-	"discardOldB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"discardOldB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_retention_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_retention_policy_proto_goTypes = []any{

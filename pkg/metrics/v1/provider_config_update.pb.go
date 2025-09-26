@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/provider_config_update.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -281,7 +281,7 @@ const file_metrics_v1_provider_config_update_proto_rawDesc = "" +
 	"\x16resource_limits_update\x18\x05 \x01(\v2 .metrics.v1.ResourceLimitsUpdateR\x14resourceLimitsUpdate\x12V\n" +
 	"\x16security_config_update\x18\x06 \x01(\v2 .metrics.v1.SecurityConfigUpdateR\x14securityConfigUpdate\x127\n" +
 	"\vtag_updates\x18\a \x01(\v2\x16.metrics.v1.TagUpdatesR\n" +
-	"tagUpdatesB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"tagUpdatesB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_config_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_provider_config_update_proto_goTypes = []any{

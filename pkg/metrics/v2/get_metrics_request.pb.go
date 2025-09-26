@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -339,7 +339,7 @@ const file_metrics_v2_get_metrics_request_proto_rawDesc = "" +
 	"providerId\x12@\n" +
 	"\x0eoutput_options\x18\a \x01(\v2\x19.metrics.v2.OutputOptionsR\routputOptions\x12)\n" +
 	"\x10include_metadata\x18\b \x01(\bR\x0fincludeMetadata\x12\x1d\n" +
-	"\x05limit\x18\t \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05limit\x18\t \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_get_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_get_metrics_request_proto_goTypes = []any{

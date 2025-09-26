@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/read_consistency.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type ReadConsistency struct {
 	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Level          v1.ReadLevel           `protobuf:"varint,1,opt,name=level,enum=common.v1.ReadLevel"`
+	xxx_hidden_Level          common.ReadLevel       `protobuf:"varint,1,opt,name=level,enum=common.v1.ReadLevel"`
 	xxx_hidden_MaxStalenessMs int64                  `protobuf:"varint,2,opt,name=max_staleness_ms,json=maxStalenessMs"`
 	xxx_hidden_ReadYourWrites bool                   `protobuf:"varint,3,opt,name=read_your_writes,json=readYourWrites"`
 	xxx_hidden_MonotonicReads bool                   `protobuf:"varint,4,opt,name=monotonic_reads,json=monotonicReads"`
@@ -62,13 +62,13 @@ func (x *ReadConsistency) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ReadConsistency) GetLevel() v1.ReadLevel {
+func (x *ReadConsistency) GetLevel() common.ReadLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Level
 		}
 	}
-	return v1.ReadLevel(0)
+	return common.ReadLevel(0)
 }
 
 func (x *ReadConsistency) GetMaxStalenessMs() int64 {
@@ -106,7 +106,7 @@ func (x *ReadConsistency) GetRetryConfig() *ReadRetryConfig {
 	return nil
 }
 
-func (x *ReadConsistency) SetLevel(v v1.ReadLevel) {
+func (x *ReadConsistency) SetLevel(v common.ReadLevel) {
 	x.xxx_hidden_Level = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
@@ -179,7 +179,7 @@ func (x *ReadConsistency) HasRetryConfig() bool {
 
 func (x *ReadConsistency) ClearLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Level = v1.ReadLevel_READ_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Level = common.ReadLevel_READ_LEVEL_UNSPECIFIED
 }
 
 func (x *ReadConsistency) ClearMaxStalenessMs() {
@@ -210,7 +210,7 @@ type ReadConsistency_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Read consistency level
-	Level *v1.ReadLevel
+	Level *common.ReadLevel
 	// Maximum staleness allowed for reads (milliseconds)
 	MaxStalenessMs *int64
 	// Enable read-your-writes consistency
@@ -263,12 +263,12 @@ const file_queue_v1_read_consistency_proto_rawDesc = "" +
 	"\x0fmonotonic_reads\x18\x04 \x01(\bR\x0emonotonicReads\x12&\n" +
 	"\n" +
 	"timeout_ms\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMs\x12<\n" +
-	"\fretry_config\x18\x06 \x01(\v2\x19.queue.v1.ReadRetryConfigR\vretryConfigB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fretry_config\x18\x06 \x01(\v2\x19.queue.v1.ReadRetryConfigR\vretryConfigB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_read_consistency_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_read_consistency_proto_goTypes = []any{
 	(*ReadConsistency)(nil), // 0: queue.v1.ReadConsistency
-	(v1.ReadLevel)(0),       // 1: common.v1.ReadLevel
+	(common.ReadLevel)(0),   // 1: common.v1.ReadLevel
 	(*ReadRetryConfig)(nil), // 2: queue.v1.ReadRetryConfig
 }
 var file_queue_v1_read_consistency_proto_depIdxs = []int32{

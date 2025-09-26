@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -231,7 +231,7 @@ const file_web_v2_list_middleware_request_proto_rawDesc = "" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x15.common.v2.PaginationR\n" +
 	"pagination\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_list_middleware_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_list_middleware_request_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/cache_policy.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -304,7 +304,7 @@ const file_common_v1_cache_policy_proto_rawDesc = "" +
 	"\vdefault_ttl\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\n" +
 	"defaultTtl\x12#\n" +
 	"\rrefresh_ahead\x18\x06 \x01(\bR\frefreshAhead\x12!\n" +
-	"\fenable_stats\x18\a \x01(\bR\venableStatsB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fenable_stats\x18\a \x01(\bR\venableStatsB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_cache_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_cache_policy_proto_goTypes = []any{

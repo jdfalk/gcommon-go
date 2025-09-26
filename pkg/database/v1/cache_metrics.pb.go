@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/cache_metrics.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -474,7 +474,7 @@ const file_database_v1_cache_metrics_proto_rawDesc = "" +
 	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fnetworkBytesOut\x12C\n" +
 	"\x11cpu_usage_percent\x18\v \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fcpuUsagePercent\x12I\n" +
 	"\x14memory_usage_percent\x18\f \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\x12memoryUsagePercent\x12=\n" +
-	"\fcollected_at\x18\r \x01(\v2\x1a.google.protobuf.TimestampR\vcollectedAtB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fcollected_at\x18\r \x01(\v2\x1a.google.protobuf.TimestampR\vcollectedAtB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_cache_metrics_proto_goTypes = []any{

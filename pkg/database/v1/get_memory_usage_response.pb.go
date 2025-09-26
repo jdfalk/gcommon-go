@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/get_memory_usage_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ type GetMemoryUsageResponse struct {
 	state                         protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_MemoryUsageBytes   int64                  `protobuf:"varint,1,opt,name=memory_usage_bytes,json=memoryUsageBytes"`
 	xxx_hidden_MemoryUsagePercent float64                `protobuf:"fixed64,2,opt,name=memory_usage_percent,json=memoryUsagePercent"`
-	xxx_hidden_Error              *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error              *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -75,7 +75,7 @@ func (x *GetMemoryUsageResponse) GetMemoryUsagePercent() float64 {
 	return 0
 }
 
-func (x *GetMemoryUsageResponse) GetError() *v1.Error {
+func (x *GetMemoryUsageResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -92,7 +92,7 @@ func (x *GetMemoryUsageResponse) SetMemoryUsagePercent(v float64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *GetMemoryUsageResponse) SetError(v *v1.Error) {
+func (x *GetMemoryUsageResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -139,7 +139,7 @@ type GetMemoryUsageResponse_builder struct {
 	// Memory usage as a percentage of total capacity
 	MemoryUsagePercent *float64
 	// Error information if the operation failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 GetMemoryUsageResponse_builder) Build() *GetMemoryUsageResponse {
@@ -166,12 +166,12 @@ const file_database_v1_get_memory_usage_response_proto_rawDesc = "" +
 	"\x16GetMemoryUsageResponse\x125\n" +
 	"\x12memory_usage_bytes\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10memoryUsageBytes\x12I\n" +
 	"\x14memory_usage_percent\x18\x02 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\x12memoryUsagePercent\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_memory_usage_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_memory_usage_response_proto_goTypes = []any{
 	(*GetMemoryUsageResponse)(nil), // 0: database.v1.GetMemoryUsageResponse
-	(*v1.Error)(nil),               // 1: common.v1.Error
+	(*common.Error)(nil),           // 1: common.v1.Error
 }
 var file_database_v1_get_memory_usage_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.GetMemoryUsageResponse.error:type_name -> common.v1.Error

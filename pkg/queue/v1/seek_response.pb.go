@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/seek_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Response for seek operations on a queue.
 // Contains the result of attempting to seek to a specific position.
 type SeekResponse struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success      bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Position     int64                  `protobuf:"varint,2,opt,name=position"`
-	xxx_hidden_Offset       int64                  `protobuf:"varint,3,opt,name=offset"`
-	xxx_hidden_PartitionId  int32                  `protobuf:"varint,4,opt,name=partition_id,json=partitionId"`
-	xxx_hidden_ErrorMessage *string                `protobuf:"bytes,5,opt,name=error_message,json=errorMessage"`
-	xxx_hidden_Metadata     *v1.ResponseMetadata   `protobuf:"bytes,6,opt,name=metadata"`
+	state                   protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Success      bool                     `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_Position     int64                    `protobuf:"varint,2,opt,name=position"`
+	xxx_hidden_Offset       int64                    `protobuf:"varint,3,opt,name=offset"`
+	xxx_hidden_PartitionId  int32                    `protobuf:"varint,4,opt,name=partition_id,json=partitionId"`
+	xxx_hidden_ErrorMessage *string                  `protobuf:"bytes,5,opt,name=error_message,json=errorMessage"`
+	xxx_hidden_Metadata     *common.ResponseMetadata `protobuf:"bytes,6,opt,name=metadata"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -103,7 +103,7 @@ func (x *SeekResponse) GetErrorMessage() string {
 	return ""
 }
 
-func (x *SeekResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *SeekResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -135,7 +135,7 @@ func (x *SeekResponse) SetErrorMessage(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
 }
 
-func (x *SeekResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *SeekResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -224,7 +224,7 @@ type SeekResponse_builder struct {
 	// Error message if seek failed
 	ErrorMessage *string
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 }
 
 func (b0 SeekResponse_builder) Build() *SeekResponse {
@@ -266,12 +266,12 @@ const file_queue_v1_seek_response_proto_rawDesc = "" +
 	"\x06offset\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06offset\x12*\n" +
 	"\fpartition_id\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vpartitionId\x12,\n" +
 	"\rerror_message\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x127\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_seek_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_seek_response_proto_goTypes = []any{
-	(*SeekResponse)(nil),        // 0: queue.v1.SeekResponse
-	(*v1.ResponseMetadata)(nil), // 1: common.v1.ResponseMetadata
+	(*SeekResponse)(nil),            // 0: queue.v1.SeekResponse
+	(*common.ResponseMetadata)(nil), // 1: common.v1.ResponseMetadata
 }
 var file_queue_v1_seek_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.SeekResponse.metadata:type_name -> common.v1.ResponseMetadata

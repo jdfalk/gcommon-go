@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -438,7 +438,7 @@ const file_metrics_v2_deletion_options_proto_rawDesc = "" +
 	"\x10cleanup_strategy\x18\t \x01(\x0e2\x1a.common.v2.CleanupStrategyR\x0fcleanupStrategy\x12.\n" +
 	"\x13wait_for_completion\x18\n" +
 	" \x01(\bR\x11waitForCompletion\x126\n" +
-	"\x12completion_timeout\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11completionTimeoutB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12completion_timeout\x18\v \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11completionTimeoutB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_deletion_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_deletion_options_proto_goTypes = []any{

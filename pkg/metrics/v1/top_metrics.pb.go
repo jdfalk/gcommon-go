@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/top_metrics.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -171,7 +171,7 @@ const file_metrics_v1_top_metrics_proto_rawDesc = "" +
 	"\x0ehighest_errors\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rhighestErrors\x12+\n" +
 	"\fmost_queried\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\vmostQueried\x127\n" +
 	"\x12slowest_performing\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x11slowestPerforming\x12@\n" +
-	"\x17most_resource_intensive\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15mostResourceIntensiveB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17most_resource_intensive\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15mostResourceIntensiveB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_top_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_top_metrics_proto_goTypes = []any{

@@ -524,7 +524,7 @@ const file_metrics_v2_performance_stats_proto_rawDesc = "" +
 	"\x0fcpu_utilization\x18\v \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0ecpuUtilization\x12=\n" +
 	"\x12memory_utilization\x18\f \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11memoryUtilization\x12F\n" +
 	"\x18network_io_bytes_per_sec\x18\r \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x14networkIoBytesPerSec\x12@\n" +
-	"\x15disk_io_bytes_per_sec\x18\x0e \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11diskIoBytesPerSecB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15disk_io_bytes_per_sec\x18\x0e \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11diskIoBytesPerSecB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_performance_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_performance_stats_proto_goTypes = []any{

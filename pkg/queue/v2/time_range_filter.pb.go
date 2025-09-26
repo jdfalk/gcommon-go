@@ -210,7 +210,7 @@ const file_queue_v2_time_range_filter_proto_rawDesc = "" +
 	"start_time\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tstartTime\x12\"\n" +
 	"\bend_time\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\aendTime\x12)\n" +
 	"\vgranularity\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vgranularity\x12/\n" +
-	"\x0fmax_data_points\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rmaxDataPointsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmax_data_points\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rmaxDataPointsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_time_range_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_time_range_filter_proto_goTypes = []any{

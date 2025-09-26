@@ -134,7 +134,7 @@ const file_media_v2_split_point_proto_rawDesc = "" +
 	"\n" +
 	"SplitPoint\x127\n" +
 	"\ttimestamp\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\ttimestamp\x12,\n" +
-	"\fsegment_name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\vsegmentNameB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fsegment_name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\vsegmentNameB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_split_point_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_split_point_proto_goTypes = []any{

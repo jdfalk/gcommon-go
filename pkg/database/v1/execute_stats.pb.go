@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/execute_stats.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -185,7 +185,7 @@ const file_database_v1_execute_stats_proto_rawDesc = "" +
 	"\fExecuteStats\x12D\n" +
 	"\x0eexecution_time\x18\x01 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\rexecutionTime\x12,\n" +
 	"\raffected_rows\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\faffectedRows\x123\n" +
-	"\rcost_estimate\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcostEstimateB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rcost_estimate\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcostEstimateB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_execute_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_execute_stats_proto_goTypes = []any{

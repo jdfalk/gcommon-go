@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/alerting_condition.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // AlertingCondition specifies a single metric threshold comparison
 // that triggers an alert when satisfied.
 type AlertingCondition struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Operator        v1.ComparisonOperator  `protobuf:"varint,1,opt,name=operator,enum=common.v1.ComparisonOperator"`
-	xxx_hidden_Metric          *string                `protobuf:"bytes,2,opt,name=metric"`
-	xxx_hidden_Threshold       float64                `protobuf:"fixed64,3,opt,name=threshold"`
-	xxx_hidden_DurationSeconds int32                  `protobuf:"varint,4,opt,name=duration_seconds,json=durationSeconds"`
+	state                      protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Operator        common.ComparisonOperator `protobuf:"varint,1,opt,name=operator,enum=common.v1.ComparisonOperator"`
+	xxx_hidden_Metric          *string                   `protobuf:"bytes,2,opt,name=metric"`
+	xxx_hidden_Threshold       float64                   `protobuf:"fixed64,3,opt,name=threshold"`
+	xxx_hidden_DurationSeconds int32                     `protobuf:"varint,4,opt,name=duration_seconds,json=durationSeconds"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -63,13 +63,13 @@ func (x *AlertingCondition) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *AlertingCondition) GetOperator() v1.ComparisonOperator {
+func (x *AlertingCondition) GetOperator() common.ComparisonOperator {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Operator
 		}
 	}
-	return v1.ComparisonOperator(0)
+	return common.ComparisonOperator(0)
 }
 
 func (x *AlertingCondition) GetMetric() string {
@@ -96,7 +96,7 @@ func (x *AlertingCondition) GetDurationSeconds() int32 {
 	return 0
 }
 
-func (x *AlertingCondition) SetOperator(v v1.ComparisonOperator) {
+func (x *AlertingCondition) SetOperator(v common.ComparisonOperator) {
 	x.xxx_hidden_Operator = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -146,7 +146,7 @@ func (x *AlertingCondition) HasDurationSeconds() bool {
 
 func (x *AlertingCondition) ClearOperator() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Operator = v1.ComparisonOperator_COMPARISON_OPERATOR_UNSPECIFIED
+	x.xxx_hidden_Operator = common.ComparisonOperator_COMPARISON_OPERATOR_UNSPECIFIED
 }
 
 func (x *AlertingCondition) ClearMetric() {
@@ -168,7 +168,7 @@ type AlertingCondition_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Operator to use when comparing the metric value to the threshold.
-	Operator *v1.ComparisonOperator
+	Operator *common.ComparisonOperator
 	// Metric name or query expression being evaluated.
 	Metric *string
 	// Threshold value to compare against.
@@ -210,12 +210,12 @@ const file_metrics_v1_alerting_condition_proto_rawDesc = "" +
 	"\boperator\x18\x01 \x01(\x0e2\x1d.common.v1.ComparisonOperatorR\boperator\x12\x1f\n" +
 	"\x06metric\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06metric\x12,\n" +
 	"\tthreshold\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\tthreshold\x122\n" +
-	"\x10duration_seconds\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0fdurationSecondsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10duration_seconds\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0fdurationSecondsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_alerting_condition_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_alerting_condition_proto_goTypes = []any{
-	(*AlertingCondition)(nil),  // 0: metrics.v1.AlertingCondition
-	(v1.ComparisonOperator)(0), // 1: common.v1.ComparisonOperator
+	(*AlertingCondition)(nil),      // 0: metrics.v1.AlertingCondition
+	(common.ComparisonOperator)(0), // 1: common.v1.ComparisonOperator
 }
 var file_metrics_v1_alerting_condition_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.AlertingCondition.operator:type_name -> common.v1.ComparisonOperator

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/revoke_api_key_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -172,7 +172,7 @@ const file_common_v1_revoke_api_key_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12,\n" +
 	"\rerror_message\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x12&\n" +
 	"\n" +
-	"revoked_at\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\trevokedAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"revoked_at\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\trevokedAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_revoke_api_key_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_revoke_api_key_response_proto_goTypes = []any{

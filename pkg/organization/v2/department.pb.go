@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -826,7 +826,7 @@ const file_organization_v2_department_proto_rawDesc = "" +
 	"\rannual_budget\x18\x13 \x01(\x01R\fannualBudget\x12\x1a\n" +
 	"\btimezone\x18\x14 \x01(\tR\btimezone\x120\n" +
 	"\x14child_department_ids\x18\x15 \x03(\tR\x12childDepartmentIds\x12\x19\n" +
-	"\bteam_ids\x18\x16 \x03(\tR\ateamIdsB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bteam_ids\x18\x16 \x03(\tR\ateamIdsB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_department_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_department_proto_goTypes = []any{

@@ -180,7 +180,7 @@ const file_metrics_v2_export_status_proto_rawDesc = "" +
 	"\x0efailed_exports\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rfailedExports\x12;\n" +
 	"\vlast_export\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"lastExport\x12B\n" +
-	"\texporters\x18\x04 \x03(\v2\x1a.metrics.v2.ExporterStatusB\b\xbaH\x05\x92\x01\x02\b\x01R\texportersB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\texporters\x18\x04 \x03(\v2\x1a.metrics.v2.ExporterStatusB\b\xbaH\x05\x92\x01\x02\b\x01R\texportersB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_export_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_export_status_proto_goTypes = []any{

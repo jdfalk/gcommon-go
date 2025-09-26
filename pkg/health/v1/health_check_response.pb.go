@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/health_check_response.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,15 +27,15 @@ const (
 // Contains health status and diagnostic information.
 // Follows 1-1-1 pattern: one message per file.
 type HealthCheckResponse struct {
-	state                         protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Results            *[]*HealthResult       `protobuf:"bytes,1,rep,name=results"`
-	xxx_hidden_Summary            *string                `protobuf:"bytes,2,opt,name=summary"`
-	xxx_hidden_TotalChecks        int32                  `protobuf:"varint,3,opt,name=total_checks,json=totalChecks"`
-	xxx_hidden_HealthyChecks      int32                  `protobuf:"varint,4,opt,name=healthy_checks,json=healthyChecks"`
-	xxx_hidden_UnhealthyChecks    int32                  `protobuf:"varint,5,opt,name=unhealthy_checks,json=unhealthyChecks"`
-	xxx_hidden_Metadata           *v1.ResponseMetadata   `protobuf:"bytes,6,opt,name=metadata"`
-	xxx_hidden_AllChecksCompleted bool                   `protobuf:"varint,7,opt,name=all_checks_completed,json=allChecksCompleted"`
-	xxx_hidden_Warnings           []string               `protobuf:"bytes,8,rep,name=warnings"`
+	state                         protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Results            *[]*HealthResult         `protobuf:"bytes,1,rep,name=results"`
+	xxx_hidden_Summary            *string                  `protobuf:"bytes,2,opt,name=summary"`
+	xxx_hidden_TotalChecks        int32                    `protobuf:"varint,3,opt,name=total_checks,json=totalChecks"`
+	xxx_hidden_HealthyChecks      int32                    `protobuf:"varint,4,opt,name=healthy_checks,json=healthyChecks"`
+	xxx_hidden_UnhealthyChecks    int32                    `protobuf:"varint,5,opt,name=unhealthy_checks,json=unhealthyChecks"`
+	xxx_hidden_Metadata           *common.ResponseMetadata `protobuf:"bytes,6,opt,name=metadata"`
+	xxx_hidden_AllChecksCompleted bool                     `protobuf:"varint,7,opt,name=all_checks_completed,json=allChecksCompleted"`
+	xxx_hidden_Warnings           []string                 `protobuf:"bytes,8,rep,name=warnings"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -107,7 +107,7 @@ func (x *HealthCheckResponse) GetUnhealthyChecks() int32 {
 	return 0
 }
 
-func (x *HealthCheckResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *HealthCheckResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -152,7 +152,7 @@ func (x *HealthCheckResponse) SetUnhealthyChecks(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 8)
 }
 
-func (x *HealthCheckResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *HealthCheckResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -250,7 +250,7 @@ type HealthCheckResponse_builder struct {
 	// Number of unhealthy checks
 	UnhealthyChecks *int32
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 	// Whether all requested checks completed successfully
 	AllChecksCompleted *bool
 	// Any warnings or notices about the health check process
@@ -300,13 +300,13 @@ const file_health_v1_health_check_response_proto_rawDesc = "" +
 	"\x10unhealthy_checks\x18\x05 \x01(\x05R\x0funhealthyChecks\x127\n" +
 	"\bmetadata\x18\x06 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x120\n" +
 	"\x14all_checks_completed\x18\a \x01(\bR\x12allChecksCompleted\x12\x1a\n" +
-	"\bwarnings\x18\b \x03(\tR\bwarningsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\b \x03(\tR\bwarningsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_health_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_health_check_response_proto_goTypes = []any{
-	(*HealthCheckResponse)(nil), // 0: health.v1.HealthCheckResponse
-	(*HealthResult)(nil),        // 1: health.v1.HealthResult
-	(*v1.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
+	(*HealthCheckResponse)(nil),     // 0: health.v1.HealthCheckResponse
+	(*HealthResult)(nil),            // 1: health.v1.HealthResult
+	(*common.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
 }
 var file_health_v1_health_check_response_proto_depIdxs = []int32{
 	1, // 0: health.v1.HealthCheckResponse.results:type_name -> health.v1.HealthResult

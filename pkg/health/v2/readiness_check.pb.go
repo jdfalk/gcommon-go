@@ -309,7 +309,7 @@ const file_health_v2_readiness_check_proto_rawDesc = "" +
 	"\x14startup_grace_period\x18\x06 \x01(\v2\x19.google.protobuf.DurationR\x12startupGracePeriod\x129\n" +
 	"\n" +
 	"updated_at\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x18\n" +
-	"\aenabled\x18\b \x01(\bR\aenabledB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aenabled\x18\b \x01(\bR\aenabledB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_readiness_check_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v2_readiness_check_proto_goTypes = []any{

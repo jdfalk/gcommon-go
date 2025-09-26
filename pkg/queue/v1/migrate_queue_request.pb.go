@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/migrate_queue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -340,7 +340,7 @@ const file_queue_v1_migrate_queue_request_proto_rawDesc = "" +
 	"\n" +
 	"batch_size\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tbatchSize\x12&\n" +
 	"\n" +
-	"timeout_ms\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_migrate_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_migrate_queue_request_proto_goTypes = []any{

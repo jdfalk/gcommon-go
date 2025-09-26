@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/health_check_response.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // HealthCheckResponse contains the result of a database health check.
 // Provides connection status, response time, and error details.
 type DatabaseHealthCheckResponse struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Status       v1.CommonHealthStatus  `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_ConnectionOk bool                   `protobuf:"varint,2,opt,name=connection_ok,json=connectionOk"`
-	xxx_hidden_ResponseTime *durationpb.Duration   `protobuf:"bytes,3,opt,name=response_time,json=responseTime"`
-	xxx_hidden_Error        *v1.Error              `protobuf:"bytes,4,opt,name=error"`
+	state                   protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Status       common.CommonHealthStatus `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_ConnectionOk bool                      `protobuf:"varint,2,opt,name=connection_ok,json=connectionOk"`
+	xxx_hidden_ResponseTime *durationpb.Duration      `protobuf:"bytes,3,opt,name=response_time,json=responseTime"`
+	xxx_hidden_Error        *common.Error             `protobuf:"bytes,4,opt,name=error"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -65,13 +65,13 @@ func (x *DatabaseHealthCheckResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *DatabaseHealthCheckResponse) GetStatus() v1.CommonHealthStatus {
+func (x *DatabaseHealthCheckResponse) GetStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *DatabaseHealthCheckResponse) GetConnectionOk() bool {
@@ -95,13 +95,13 @@ func (x *DatabaseHealthCheckResponse) GetResponseTime() *durationpb.Duration {
 	return nil
 }
 
-func (x *DatabaseHealthCheckResponse) GetError() *v1.Error {
+func (x *DatabaseHealthCheckResponse) GetError() *common.Error {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Error) {
 				protoimpl.X.UnmarshalField(x, 4)
 			}
-			var rv *v1.Error
+			var rv *common.Error
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Error), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -109,7 +109,7 @@ func (x *DatabaseHealthCheckResponse) GetError() *v1.Error {
 	return nil
 }
 
-func (x *DatabaseHealthCheckResponse) SetStatus(v v1.CommonHealthStatus) {
+func (x *DatabaseHealthCheckResponse) SetStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -128,7 +128,7 @@ func (x *DatabaseHealthCheckResponse) SetResponseTime(v *durationpb.Duration) {
 	}
 }
 
-func (x *DatabaseHealthCheckResponse) SetError(v *v1.Error) {
+func (x *DatabaseHealthCheckResponse) SetError(v *common.Error) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
@@ -167,7 +167,7 @@ func (x *DatabaseHealthCheckResponse) HasError() bool {
 
 func (x *DatabaseHealthCheckResponse) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Status = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *DatabaseHealthCheckResponse) ClearConnectionOk() {
@@ -182,20 +182,20 @@ func (x *DatabaseHealthCheckResponse) ClearResponseTime() {
 
 func (x *DatabaseHealthCheckResponse) ClearError() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*v1.Error)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*common.Error)(nil))
 }
 
 type DatabaseHealthCheckResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Overall health status of the database
-	Status *v1.CommonHealthStatus
+	Status *common.CommonHealthStatus
 	// Whether the database connection is operational
 	ConnectionOk *bool
 	// Time taken to perform the health check
 	ResponseTime *durationpb.Duration
 	// Error information if the health check failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 DatabaseHealthCheckResponse_builder) Build() *DatabaseHealthCheckResponse {
@@ -230,14 +230,14 @@ const file_database_v1_health_check_response_proto_rawDesc = "" +
 	"\x06status\x18\x01 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x12#\n" +
 	"\rconnection_ok\x18\x02 \x01(\bR\fconnectionOk\x12B\n" +
 	"\rresponse_time\x18\x03 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\fresponseTime\x12*\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_health_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_health_check_response_proto_goTypes = []any{
 	(*DatabaseHealthCheckResponse)(nil), // 0: database.v1.DatabaseHealthCheckResponse
-	(v1.CommonHealthStatus)(0),          // 1: common.v1.CommonHealthStatus
+	(common.CommonHealthStatus)(0),      // 1: common.v1.CommonHealthStatus
 	(*durationpb.Duration)(nil),         // 2: google.protobuf.Duration
-	(*v1.Error)(nil),                    // 3: common.v1.Error
+	(*common.Error)(nil),                // 3: common.v1.Error
 }
 var file_database_v1_health_check_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.DatabaseHealthCheckResponse.status:type_name -> common.v1.CommonHealthStatus

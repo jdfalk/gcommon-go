@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_offset_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type GetOffsetResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Offset      int64                  `protobuf:"varint,1,opt,name=offset"`
-	xxx_hidden_QueueName   *string                `protobuf:"bytes,2,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Offset      int64                   `protobuf:"varint,1,opt,name=offset"`
+	xxx_hidden_QueueName   *string                 `protobuf:"bytes,2,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -76,7 +76,7 @@ func (x *GetOffsetResponse) GetQueueName() string {
 	return ""
 }
 
-func (x *GetOffsetResponse) GetMetadata() *v1.RequestMetadata {
+func (x *GetOffsetResponse) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -93,7 +93,7 @@ func (x *GetOffsetResponse) SetQueueName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *GetOffsetResponse) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetOffsetResponse) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -140,7 +140,7 @@ type GetOffsetResponse_builder struct {
 	// Name of the queue or topic.
 	QueueName *string
 	// Optional request metadata.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetOffsetResponse_builder) Build() *GetOffsetResponse {
@@ -168,12 +168,12 @@ const file_queue_v1_get_offset_response_proto_rawDesc = "" +
 	"\x06offset\x18\x01 \x01(\x03R\x06offset\x12(\n" +
 	"\n" +
 	"queue_name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tqueueName\x126\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_offset_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_offset_response_proto_goTypes = []any{
-	(*GetOffsetResponse)(nil),  // 0: queue.v1.GetOffsetResponse
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*GetOffsetResponse)(nil),      // 0: queue.v1.GetOffsetResponse
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_get_offset_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.GetOffsetResponse.metadata:type_name -> common.v1.RequestMetadata

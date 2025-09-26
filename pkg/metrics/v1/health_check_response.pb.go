@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/health_check_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // *
 // HealthCheckResponse contains the result of a metrics subsystem health check.
 type MetricsHealthCheckResponse struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Status       v1.CommonHealthStatus  `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_ResponseTime *durationpb.Duration   `protobuf:"bytes,2,opt,name=response_time,json=responseTime"`
-	xxx_hidden_Message      *string                `protobuf:"bytes,3,opt,name=message"`
-	xxx_hidden_Error        *v1.Error              `protobuf:"bytes,4,opt,name=error"`
+	state                   protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Status       common.CommonHealthStatus `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_ResponseTime *durationpb.Duration      `protobuf:"bytes,2,opt,name=response_time,json=responseTime"`
+	xxx_hidden_Message      *string                   `protobuf:"bytes,3,opt,name=message"`
+	xxx_hidden_Error        *common.Error             `protobuf:"bytes,4,opt,name=error"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -65,13 +65,13 @@ func (x *MetricsHealthCheckResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MetricsHealthCheckResponse) GetStatus() v1.CommonHealthStatus {
+func (x *MetricsHealthCheckResponse) GetStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *MetricsHealthCheckResponse) GetResponseTime() *durationpb.Duration {
@@ -98,13 +98,13 @@ func (x *MetricsHealthCheckResponse) GetMessage() string {
 	return ""
 }
 
-func (x *MetricsHealthCheckResponse) GetError() *v1.Error {
+func (x *MetricsHealthCheckResponse) GetError() *common.Error {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Error) {
 				protoimpl.X.UnmarshalField(x, 4)
 			}
-			var rv *v1.Error
+			var rv *common.Error
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Error), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -112,7 +112,7 @@ func (x *MetricsHealthCheckResponse) GetError() *v1.Error {
 	return nil
 }
 
-func (x *MetricsHealthCheckResponse) SetStatus(v v1.CommonHealthStatus) {
+func (x *MetricsHealthCheckResponse) SetStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -131,7 +131,7 @@ func (x *MetricsHealthCheckResponse) SetMessage(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *MetricsHealthCheckResponse) SetError(v *v1.Error) {
+func (x *MetricsHealthCheckResponse) SetError(v *common.Error) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
@@ -170,7 +170,7 @@ func (x *MetricsHealthCheckResponse) HasError() bool {
 
 func (x *MetricsHealthCheckResponse) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Status = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *MetricsHealthCheckResponse) ClearResponseTime() {
@@ -185,20 +185,20 @@ func (x *MetricsHealthCheckResponse) ClearMessage() {
 
 func (x *MetricsHealthCheckResponse) ClearError() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*v1.Error)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*common.Error)(nil))
 }
 
 type MetricsHealthCheckResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Health status of the subsystem.
-	Status *v1.CommonHealthStatus
+	Status *common.CommonHealthStatus
 	// Time taken to execute the health check.
 	ResponseTime *durationpb.Duration
 	// Optional human-readable message.
 	Message *string
 	// Error details if unhealthy.
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 MetricsHealthCheckResponse_builder) Build() *MetricsHealthCheckResponse {
@@ -234,14 +234,14 @@ const file_metrics_v1_health_check_response_proto_rawDesc = "" +
 	"\x06status\x18\x01 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x12B\n" +
 	"\rresponse_time\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\fresponseTime\x12!\n" +
 	"\amessage\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessage\x12*\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_health_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_health_check_response_proto_goTypes = []any{
 	(*MetricsHealthCheckResponse)(nil), // 0: metrics.v1.MetricsHealthCheckResponse
-	(v1.CommonHealthStatus)(0),         // 1: common.v1.CommonHealthStatus
+	(common.CommonHealthStatus)(0),     // 1: common.v1.CommonHealthStatus
 	(*durationpb.Duration)(nil),        // 2: google.protobuf.Duration
-	(*v1.Error)(nil),                   // 3: common.v1.Error
+	(*common.Error)(nil),               // 3: common.v1.Error
 }
 var file_metrics_v1_health_check_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsHealthCheckResponse.status:type_name -> common.v1.CommonHealthStatus

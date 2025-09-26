@@ -206,7 +206,7 @@ const file_common_v2_enable2_fa_request_proto_rawDesc = "" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12!\n" +
 	"\fphone_number\x18\x02 \x01(\tR\vphoneNumber\x12+\n" +
 	"\x11use_authenticator\x18\x03 \x01(\bR\x10useAuthenticator\x122\n" +
-	"\x15generate_backup_codes\x18\x04 \x01(\bR\x13generateBackupCodesB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15generate_backup_codes\x18\x04 \x01(\bR\x13generateBackupCodesB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_enable2_fa_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_enable2_fa_request_proto_goTypes = []any{

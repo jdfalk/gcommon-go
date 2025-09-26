@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/update_tenant_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type UpdateTenantResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Errors      *[]*v1.Error           `protobuf:"bytes,1,rep,name=errors"`
+	xxx_hidden_Errors      *[]*common.Error       `protobuf:"bytes,1,rep,name=errors"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,2,opt,name=success"`
 	xxx_hidden_Tenant      *Tenant                `protobuf:"bytes,3,opt,name=tenant"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -59,7 +59,7 @@ func (x *UpdateTenantResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *UpdateTenantResponse) GetErrors() []*v1.Error {
+func (x *UpdateTenantResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -82,7 +82,7 @@ func (x *UpdateTenantResponse) GetTenant() *Tenant {
 	return nil
 }
 
-func (x *UpdateTenantResponse) SetErrors(v []*v1.Error) {
+func (x *UpdateTenantResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -122,7 +122,7 @@ type UpdateTenantResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Any errors encountered
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 	// Updated tenant details
@@ -150,12 +150,12 @@ const file_organization_v1_update_tenant_response_proto_rawDesc = "" +
 	"\x14UpdateTenantResponse\x122\n" +
 	"\x06errors\x18\x01 \x03(\v2\x10.common.v1.ErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12\x18\n" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess\x12/\n" +
-	"\x06tenant\x18\x03 \x01(\v2\x17.organization.v1.TenantR\x06tenantB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06tenant\x18\x03 \x01(\v2\x17.organization.v1.TenantR\x06tenantB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_update_tenant_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_update_tenant_response_proto_goTypes = []any{
 	(*UpdateTenantResponse)(nil), // 0: organization.v1.UpdateTenantResponse
-	(*v1.Error)(nil),             // 1: common.v1.Error
+	(*common.Error)(nil),         // 1: common.v1.Error
 	(*Tenant)(nil),               // 2: organization.v1.Tenant
 }
 var file_organization_v1_update_tenant_response_proto_depIdxs = []int32{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: config/v1/get_schema_response.proto
 
-package v1
+package config
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type GetSchemaResponse struct {
 	state             protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Schema *ConfigSchema          `protobuf:"bytes,1,opt,name=schema"`
-	xxx_hidden_Error  *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error  *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	unknownFields     protoimpl.UnknownFields
 	sizeCache         protoimpl.SizeCache
 }
@@ -64,7 +64,7 @@ func (x *GetSchemaResponse) GetSchema() *ConfigSchema {
 	return nil
 }
 
-func (x *GetSchemaResponse) GetError() *v1.Error {
+func (x *GetSchemaResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -75,7 +75,7 @@ func (x *GetSchemaResponse) SetSchema(v *ConfigSchema) {
 	x.xxx_hidden_Schema = v
 }
 
-func (x *GetSchemaResponse) SetError(v *v1.Error) {
+func (x *GetSchemaResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -107,7 +107,7 @@ type GetSchemaResponse_builder struct {
 	// Configuration schema
 	Schema *ConfigSchema
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 GetSchemaResponse_builder) Build() *GetSchemaResponse {
@@ -126,13 +126,13 @@ const file_config_v1_get_schema_response_proto_rawDesc = "" +
 	"#config/v1/get_schema_response.proto\x12\tconfig.v1\x1a\x15common/v1/error.proto\x1a\x1dconfig/v1/config_schema.proto\x1a!google/protobuf/go_features.proto\"l\n" +
 	"\x11GetSchemaResponse\x12/\n" +
 	"\x06schema\x18\x01 \x01(\v2\x17.config.v1.ConfigSchemaR\x06schema\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_schema_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_schema_response_proto_goTypes = []any{
 	(*GetSchemaResponse)(nil), // 0: config.v1.GetSchemaResponse
 	(*ConfigSchema)(nil),      // 1: config.v1.ConfigSchema
-	(*v1.Error)(nil),          // 2: common.v1.Error
+	(*common.Error)(nil),      // 2: common.v1.Error
 }
 var file_config_v1_get_schema_response_proto_depIdxs = []int32{
 	1, // 0: config.v1.GetSchemaResponse.schema:type_name -> config.v1.ConfigSchema

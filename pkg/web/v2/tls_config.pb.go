@@ -376,7 +376,7 @@ const file_web_v2_tls_config_proto_rawDesc = "" +
 	"\x13require_client_cert\x18\x0f \x01(\bR\x11requireClientCert\x12,\n" +
 	"\x12verify_client_cert\x18\x10 \x01(\bR\x10verifyClientCert\x12*\n" +
 	"\vserver_name\x18\x11 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\n" +
-	"serverNameB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"serverNameB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_tls_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_tls_config_proto_goTypes = []any{

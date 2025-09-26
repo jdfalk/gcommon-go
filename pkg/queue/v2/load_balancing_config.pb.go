@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -305,7 +305,7 @@ const file_queue_v2_load_balancing_config_proto_rawDesc = "" +
 	"\x0eprefetch_count\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rprefetchCount\x12#\n" +
 	"\bpriority\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriority\x12'\n" +
 	"\x0fsticky_sessions\x18\x06 \x01(\bR\x0estickySessions\x12*\n" +
-	"\faffinity_key\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaffinityKeyB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\faffinity_key\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaffinityKeyB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_load_balancing_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_load_balancing_config_proto_goTypes = []any{

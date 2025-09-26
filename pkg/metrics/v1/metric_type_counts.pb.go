@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_type_counts.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -261,7 +261,7 @@ const file_metrics_v1_metric_type_counts_proto_rawDesc = "" +
 	"\rsummary_count\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fsummaryCount\x12(\n" +
 	"\vtimer_count\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"timerCount\x12*\n" +
-	"\fcustom_count\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vcustomCountB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fcustom_count\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vcustomCountB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_type_counts_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_type_counts_proto_goTypes = []any{

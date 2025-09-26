@@ -95,7 +95,7 @@ const file_common_v2_provider_state_proto_rawDesc = "" +
 	"\x17PROVIDER_STATE_STOPPING\x10\x04\x12\x1a\n" +
 	"\x16PROVIDER_STATE_STOPPED\x10\x05\x12\x18\n" +
 	"\x14PROVIDER_STATE_ERROR\x10\x06\x12\x1a\n" +
-	"\x16PROVIDER_STATE_UNKNOWN\x10\aB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16PROVIDER_STATE_UNKNOWN\x10\aB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_provider_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_provider_state_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/set_metric_metadata_request.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -23,9 +23,9 @@ const (
 )
 
 type SetMetricMetadataRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *MetricMetadata        `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_RequestMeta *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=request_meta,json=requestMeta"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *MetricMetadata         `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_RequestMeta *common.RequestMetadata `protobuf:"bytes,2,opt,name=request_meta,json=requestMeta"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -66,13 +66,13 @@ func (x *SetMetricMetadataRequest) GetMetadata() *MetricMetadata {
 	return nil
 }
 
-func (x *SetMetricMetadataRequest) GetRequestMeta() *v1.RequestMetadata {
+func (x *SetMetricMetadataRequest) GetRequestMeta() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_RequestMeta) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_RequestMeta), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -84,7 +84,7 @@ func (x *SetMetricMetadataRequest) SetMetadata(v *MetricMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
-func (x *SetMetricMetadataRequest) SetRequestMeta(v *v1.RequestMetadata) {
+func (x *SetMetricMetadataRequest) SetRequestMeta(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_RequestMeta, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -113,7 +113,7 @@ func (x *SetMetricMetadataRequest) ClearMetadata() {
 
 func (x *SetMetricMetadataRequest) ClearRequestMeta() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_RequestMeta, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_RequestMeta, (*common.RequestMetadata)(nil))
 }
 
 type SetMetricMetadataRequest_builder struct {
@@ -122,7 +122,7 @@ type SetMetricMetadataRequest_builder struct {
 	// Metric metadata to apply
 	Metadata *MetricMetadata
 	// Request metadata
-	RequestMeta *v1.RequestMetadata
+	RequestMeta *common.RequestMetadata
 }
 
 func (b0 SetMetricMetadataRequest_builder) Build() *SetMetricMetadataRequest {
@@ -145,13 +145,13 @@ const file_metrics_v1_set_metric_metadata_request_proto_rawDesc = "" +
 	"metrics.v1\x1a common/v1/request_metadata.proto\x1a metrics/v1/metric_metadata.proto\x1a!google/protobuf/go_features.proto\"\x95\x01\n" +
 	"\x18SetMetricMetadataRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.metrics.v1.MetricMetadataR\bmetadata\x12A\n" +
-	"\frequest_meta\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\vrequestMetaB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\frequest_meta\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\vrequestMetaB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_set_metric_metadata_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_set_metric_metadata_request_proto_goTypes = []any{
 	(*SetMetricMetadataRequest)(nil), // 0: metrics.v1.SetMetricMetadataRequest
 	(*MetricMetadata)(nil),           // 1: metrics.v1.MetricMetadata
-	(*v1.RequestMetadata)(nil),       // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),   // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_set_metric_metadata_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.SetMetricMetadataRequest.metadata:type_name -> metrics.v1.MetricMetadata

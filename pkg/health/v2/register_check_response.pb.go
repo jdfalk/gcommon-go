@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -221,7 +221,7 @@ const file_health_v2_register_check_response_proto_rawDesc = "" +
 	"\bcheck_id\x18\x02 \x01(\tR\acheckId\x12\x18\n" +
 	"\amessage\x18\x03 \x01(\tR\amessage\x127\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v2.ResponseMetadataR\bmetadata\x12\x1a\n" +
-	"\bwarnings\x18\x05 \x03(\tR\bwarningsB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\x05 \x03(\tR\bwarningsB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_register_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v2_register_check_response_proto_goTypes = []any{

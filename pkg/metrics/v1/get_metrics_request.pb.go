@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,16 +24,16 @@ const (
 )
 
 type MetricsGetMetricsRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Filter          *MetricFilter          `protobuf:"bytes,2,opt,name=filter"`
-	xxx_hidden_TimeRange       *v1.TimeRangeMetrics   `protobuf:"bytes,3,opt,name=time_range,json=timeRange"`
-	xxx_hidden_Aggregation     *MetricAggregation     `protobuf:"bytes,4,opt,name=aggregation"`
-	xxx_hidden_Pagination      *v1.PaginationOptions  `protobuf:"bytes,5,opt,name=pagination"`
-	xxx_hidden_ProviderId      *string                `protobuf:"bytes,6,opt,name=provider_id,json=providerId"`
-	xxx_hidden_OutputOptions   *OutputOptions         `protobuf:"bytes,7,opt,name=output_options,json=outputOptions"`
-	xxx_hidden_IncludeMetadata bool                   `protobuf:"varint,8,opt,name=include_metadata,json=includeMetadata"`
-	xxx_hidden_Limit           int32                  `protobuf:"varint,9,opt,name=limit"`
+	state                      protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Metadata        *common.RequestMetadata   `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Filter          *MetricFilter             `protobuf:"bytes,2,opt,name=filter"`
+	xxx_hidden_TimeRange       *common.TimeRangeMetrics  `protobuf:"bytes,3,opt,name=time_range,json=timeRange"`
+	xxx_hidden_Aggregation     *MetricAggregation        `protobuf:"bytes,4,opt,name=aggregation"`
+	xxx_hidden_Pagination      *common.PaginationOptions `protobuf:"bytes,5,opt,name=pagination"`
+	xxx_hidden_ProviderId      *string                   `protobuf:"bytes,6,opt,name=provider_id,json=providerId"`
+	xxx_hidden_OutputOptions   *OutputOptions            `protobuf:"bytes,7,opt,name=output_options,json=outputOptions"`
+	xxx_hidden_IncludeMetadata bool                      `protobuf:"varint,8,opt,name=include_metadata,json=includeMetadata"`
+	xxx_hidden_Limit           int32                     `protobuf:"varint,9,opt,name=limit"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -65,7 +65,7 @@ func (x *MetricsGetMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MetricsGetMetricsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *MetricsGetMetricsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -79,7 +79,7 @@ func (x *MetricsGetMetricsRequest) GetFilter() *MetricFilter {
 	return nil
 }
 
-func (x *MetricsGetMetricsRequest) GetTimeRange() *v1.TimeRangeMetrics {
+func (x *MetricsGetMetricsRequest) GetTimeRange() *common.TimeRangeMetrics {
 	if x != nil {
 		return x.xxx_hidden_TimeRange
 	}
@@ -93,7 +93,7 @@ func (x *MetricsGetMetricsRequest) GetAggregation() *MetricAggregation {
 	return nil
 }
 
-func (x *MetricsGetMetricsRequest) GetPagination() *v1.PaginationOptions {
+func (x *MetricsGetMetricsRequest) GetPagination() *common.PaginationOptions {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
@@ -131,7 +131,7 @@ func (x *MetricsGetMetricsRequest) GetLimit() int32 {
 	return 0
 }
 
-func (x *MetricsGetMetricsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *MetricsGetMetricsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -139,7 +139,7 @@ func (x *MetricsGetMetricsRequest) SetFilter(v *MetricFilter) {
 	x.xxx_hidden_Filter = v
 }
 
-func (x *MetricsGetMetricsRequest) SetTimeRange(v *v1.TimeRangeMetrics) {
+func (x *MetricsGetMetricsRequest) SetTimeRange(v *common.TimeRangeMetrics) {
 	x.xxx_hidden_TimeRange = v
 }
 
@@ -147,7 +147,7 @@ func (x *MetricsGetMetricsRequest) SetAggregation(v *MetricAggregation) {
 	x.xxx_hidden_Aggregation = v
 }
 
-func (x *MetricsGetMetricsRequest) SetPagination(v *v1.PaginationOptions) {
+func (x *MetricsGetMetricsRequest) SetPagination(v *common.PaginationOptions) {
 	x.xxx_hidden_Pagination = v
 }
 
@@ -276,15 +276,15 @@ type MetricsGetMetricsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Filter to determine which metrics to retrieve
 	Filter *MetricFilter
 	// Time range for the request
-	TimeRange *v1.TimeRangeMetrics
+	TimeRange *common.TimeRangeMetrics
 	// Aggregation options for the metrics
 	Aggregation *MetricAggregation
 	// Pagination options
-	Pagination *v1.PaginationOptions
+	Pagination *common.PaginationOptions
 	// Optional provider ID to query
 	ProviderId *string
 	// Output format options
@@ -339,16 +339,16 @@ const file_metrics_v1_get_metrics_request_proto_rawDesc = "" +
 	"providerId\x12@\n" +
 	"\x0eoutput_options\x18\a \x01(\v2\x19.metrics.v1.OutputOptionsR\routputOptions\x12)\n" +
 	"\x10include_metadata\x18\b \x01(\bR\x0fincludeMetadata\x12\x1d\n" +
-	"\x05limit\x18\t \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05limit\x18\t \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limitB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_metrics_request_proto_goTypes = []any{
 	(*MetricsGetMetricsRequest)(nil), // 0: metrics.v1.MetricsGetMetricsRequest
-	(*v1.RequestMetadata)(nil),       // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),   // 1: common.v1.RequestMetadata
 	(*MetricFilter)(nil),             // 2: metrics.v1.MetricFilter
-	(*v1.TimeRangeMetrics)(nil),      // 3: common.v1.TimeRangeMetrics
+	(*common.TimeRangeMetrics)(nil),  // 3: common.v1.TimeRangeMetrics
 	(*MetricAggregation)(nil),        // 4: metrics.v1.MetricAggregation
-	(*v1.PaginationOptions)(nil),     // 5: common.v1.PaginationOptions
+	(*common.PaginationOptions)(nil), // 5: common.v1.PaginationOptions
 	(*OutputOptions)(nil),            // 6: metrics.v1.OutputOptions
 }
 var file_metrics_v1_get_metrics_request_proto_depIdxs = []int32{

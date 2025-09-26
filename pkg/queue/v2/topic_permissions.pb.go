@@ -264,7 +264,7 @@ const file_queue_v2_topic_permissions_proto_rawDesc = "" +
 	"\n" +
 	"can_delete\x18\x04 \x01(\bR\tcanDelete\x124\n" +
 	"\x16can_manage_permissions\x18\x05 \x01(\bR\x14canManagePermissions\x12$\n" +
-	"\x0ecan_view_stats\x18\x06 \x01(\bR\fcanViewStatsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecan_view_stats\x18\x06 \x01(\bR\fcanViewStatsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_topic_permissions_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_topic_permissions_proto_goTypes = []any{

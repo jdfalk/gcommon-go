@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/push_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -263,7 +263,7 @@ const file_queue_v1_push_response_proto_rawDesc = "" +
 	"\vqueue_depth\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"queueDepth\x12\x1c\n" +
 	"\tpersisted\x18\x05 \x01(\bR\tpersisted\x12R\n" +
-	"\x17estimated_delivery_time\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\x15estimatedDeliveryTimeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17estimated_delivery_time\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\x15estimatedDeliveryTimeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_push_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_push_response_proto_goTypes = []any{

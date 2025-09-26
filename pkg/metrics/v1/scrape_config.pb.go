@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/scrape_config.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -160,7 +160,7 @@ const file_metrics_v1_scrape_config_proto_rawDesc = "" +
 	"\fScrapeConfig\x12$\n" +
 	"\bjob_name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\ajobName\x122\n" +
 	"\atargets\x18\x02 \x03(\v2\x18.metrics.v1.ScrapeTargetR\atargets\x126\n" +
-	"\x17scrape_interval_seconds\x18\x03 \x01(\x05R\x15scrapeIntervalSecondsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17scrape_interval_seconds\x18\x03 \x01(\x05R\x15scrapeIntervalSecondsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_scrape_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_scrape_config_proto_goTypes = []any{

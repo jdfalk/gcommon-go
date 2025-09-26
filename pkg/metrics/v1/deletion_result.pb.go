@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/deletion_result.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -347,7 +347,7 @@ const file_metrics_v1_deletion_result_proto_rawDesc = "" +
 	"\x15cleanup_strategy_used\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x13cleanupStrategyUsed\x124\n" +
 	"\x11deletion_duration\x18\t \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10deletionDuration\x12>\n" +
 	"\x0edry_run_result\x18\n" +
-	" \x01(\v2\x18.metrics.v1.DryRunResultR\fdryRunResultB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\v2\x18.metrics.v1.DryRunResultR\fdryRunResultB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_deletion_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_deletion_result_proto_goTypes = []any{

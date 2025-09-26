@@ -106,7 +106,7 @@ const file_media_v2_merge_audio_response_proto_rawDesc = "" +
 	"\n" +
 	"#media/v2/merge_audio_response.proto\x12\bmedia.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"N\n" +
 	"\x12MergeAudioResponse\x128\n" +
-	"\x14merged_audio_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11mergedAudioFileIdB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14merged_audio_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11mergedAudioFileIdB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_merge_audio_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_merge_audio_response_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/transcode_options.proto
 
-package v1
+package media
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -298,7 +298,7 @@ const file_media_v1_transcode_options_proto_rawDesc = "" +
 	"audioCodec\x12#\n" +
 	"\raudio_bitrate\x18\x05 \x01(\x05R\faudioBitrate\x12-\n" +
 	"\x12preserve_subtitles\x18\x06 \x01(\bR\x11preserveSubtitles\x12+\n" +
-	"\x11preserve_chapters\x18\a \x01(\bR\x10preserveChaptersB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11preserve_chapters\x18\a \x01(\bR\x10preserveChaptersB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_transcode_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_transcode_options_proto_goTypes = []any{

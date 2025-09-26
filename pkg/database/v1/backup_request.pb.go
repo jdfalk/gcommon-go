@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/backup_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,10 +26,10 @@ const (
 // *
 // Request to create a backup of the cache contents.
 type BackupRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Destination *string                `protobuf:"bytes,1,opt,name=destination"`
-	xxx_hidden_Namespace   *string                `protobuf:"bytes,2,opt,name=namespace"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Destination *string                 `protobuf:"bytes,1,opt,name=destination"`
+	xxx_hidden_Namespace   *string                 `protobuf:"bytes,2,opt,name=namespace"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -83,13 +83,13 @@ func (x *BackupRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *BackupRequest) GetMetadata() *v1.RequestMetadata {
+func (x *BackupRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -107,7 +107,7 @@ func (x *BackupRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *BackupRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *BackupRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
@@ -149,7 +149,7 @@ func (x *BackupRequest) ClearNamespace() {
 
 func (x *BackupRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type BackupRequest_builder struct {
@@ -160,7 +160,7 @@ type BackupRequest_builder struct {
 	// Optional namespace to back up
 	Namespace *string
 	// Request metadata for auditing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 BackupRequest_builder) Build() *BackupRequest {
@@ -190,12 +190,12 @@ const file_database_v1_backup_request_proto_rawDesc = "" +
 	"\rBackupRequest\x12)\n" +
 	"\vdestination\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vdestination\x12%\n" +
 	"\tnamespace\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_backup_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_backup_request_proto_goTypes = []any{
-	(*BackupRequest)(nil),      // 0: database.v1.BackupRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*BackupRequest)(nil),          // 0: database.v1.BackupRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_database_v1_backup_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.BackupRequest.metadata:type_name -> common.v1.RequestMetadata

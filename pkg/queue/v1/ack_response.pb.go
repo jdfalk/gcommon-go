@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: queue/v1/ack_response.proto
 
-package v1
+package queue
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type AckResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -67,7 +67,7 @@ func (x *AckResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *AckResponse) GetError() *v1.Error {
+func (x *AckResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -79,7 +79,7 @@ func (x *AckResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *AckResponse) SetError(v *v1.Error) {
+func (x *AckResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -112,7 +112,7 @@ type AckResponse_builder struct {
 	// True if the message was removed from the queue.
 	Success *bool
 	// Optional error information when success is false.
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 AckResponse_builder) Build() *AckResponse {
@@ -134,12 +134,12 @@ const file_queue_v1_ack_response_proto_rawDesc = "" +
 	"\x1bqueue/v1/ack_response.proto\x12\bqueue.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\"O\n" +
 	"\vAckResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_ack_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_ack_response_proto_goTypes = []any{
-	(*AckResponse)(nil), // 0: queue.v1.AckResponse
-	(*v1.Error)(nil),    // 1: common.v1.Error
+	(*AckResponse)(nil),  // 0: queue.v1.AckResponse
+	(*common.Error)(nil), // 1: common.v1.Error
 }
 var file_queue_v1_ack_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.AckResponse.error:type_name -> common.v1.Error

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/register_middleware_response.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ type RegisterMiddlewareResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
 	xxx_hidden_Middleware  *MiddlewareInfo        `protobuf:"bytes,2,opt,name=middleware"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -73,7 +73,7 @@ func (x *RegisterMiddlewareResponse) GetMiddleware() *MiddlewareInfo {
 	return nil
 }
 
-func (x *RegisterMiddlewareResponse) GetError() *v1.Error {
+func (x *RegisterMiddlewareResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -89,7 +89,7 @@ func (x *RegisterMiddlewareResponse) SetMiddleware(v *MiddlewareInfo) {
 	x.xxx_hidden_Middleware = v
 }
 
-func (x *RegisterMiddlewareResponse) SetError(v *v1.Error) {
+func (x *RegisterMiddlewareResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -135,7 +135,7 @@ type RegisterMiddlewareResponse_builder struct {
 	// Details about the registered middleware
 	Middleware *MiddlewareInfo
 	// Error information if the operation failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 RegisterMiddlewareResponse_builder) Build() *RegisterMiddlewareResponse {
@@ -161,13 +161,13 @@ const file_web_v1_register_middleware_response_proto_rawDesc = "" +
 	"\n" +
 	"middleware\x18\x02 \x01(\v2\x16.web.v1.MiddlewareInfoR\n" +
 	"middleware\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_register_middleware_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_register_middleware_response_proto_goTypes = []any{
 	(*RegisterMiddlewareResponse)(nil), // 0: web.v1.RegisterMiddlewareResponse
 	(*MiddlewareInfo)(nil),             // 1: web.v1.MiddlewareInfo
-	(*v1.Error)(nil),                   // 2: common.v1.Error
+	(*common.Error)(nil),               // 2: common.v1.Error
 }
 var file_web_v1_register_middleware_response_proto_depIdxs = []int32{
 	1, // 0: web.v1.RegisterMiddlewareResponse.middleware:type_name -> web.v1.MiddlewareInfo

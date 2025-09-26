@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/get_cache_config_request.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -23,8 +23,8 @@ const (
 )
 
 type GetCacheConfigRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
 	unknownFields       protoimpl.UnknownFields
 	sizeCache           protoimpl.SizeCache
 }
@@ -54,14 +54,14 @@ func (x *GetCacheConfigRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetCacheConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetCacheConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
 	return nil
 }
 
-func (x *GetCacheConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetCacheConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -80,7 +80,7 @@ type GetCacheConfigRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetCacheConfigRequest_builder) Build() *GetCacheConfigRequest {
@@ -97,12 +97,12 @@ const file_web_v1_get_cache_config_request_proto_rawDesc = "" +
 	"\n" +
 	"%web/v1/get_cache_config_request.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\"O\n" +
 	"\x15GetCacheConfigRequest\x126\n" +
-	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_get_cache_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_get_cache_config_request_proto_goTypes = []any{
-	(*GetCacheConfigRequest)(nil), // 0: web.v1.GetCacheConfigRequest
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
+	(*GetCacheConfigRequest)(nil),  // 0: web.v1.GetCacheConfigRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_web_v1_get_cache_config_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.GetCacheConfigRequest.metadata:type_name -> common.v1.RequestMetadata

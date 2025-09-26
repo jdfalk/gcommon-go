@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/stream_options.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,16 +24,16 @@ const (
 )
 
 type StreamOptions struct {
-	state                               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_IncludeHistorical        bool                   `protobuf:"varint,1,opt,name=include_historical,json=includeHistorical"`
-	xxx_hidden_BatchSize                int32                  `protobuf:"varint,2,opt,name=batch_size,json=batchSize"`
-	xxx_hidden_BatchTimeoutMs           int32                  `protobuf:"varint,3,opt,name=batch_timeout_ms,json=batchTimeoutMs"`
-	xxx_hidden_IncludeMetadata          bool                   `protobuf:"varint,4,opt,name=include_metadata,json=includeMetadata"`
-	xxx_hidden_Compression              v1.StreamCompression   `protobuf:"varint,5,opt,name=compression,enum=common.v1.StreamCompression"`
-	xxx_hidden_SendHeartbeats           bool                   `protobuf:"varint,6,opt,name=send_heartbeats,json=sendHeartbeats"`
-	xxx_hidden_HeartbeatIntervalSeconds int32                  `protobuf:"varint,7,opt,name=heartbeat_interval_seconds,json=heartbeatIntervalSeconds"`
-	xxx_hidden_AutoRetry                bool                   `protobuf:"varint,8,opt,name=auto_retry,json=autoRetry"`
-	xxx_hidden_Qos                      v1.StreamQOS           `protobuf:"varint,9,opt,name=qos,enum=common.v1.StreamQOS"`
+	state                               protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_IncludeHistorical        bool                     `protobuf:"varint,1,opt,name=include_historical,json=includeHistorical"`
+	xxx_hidden_BatchSize                int32                    `protobuf:"varint,2,opt,name=batch_size,json=batchSize"`
+	xxx_hidden_BatchTimeoutMs           int32                    `protobuf:"varint,3,opt,name=batch_timeout_ms,json=batchTimeoutMs"`
+	xxx_hidden_IncludeMetadata          bool                     `protobuf:"varint,4,opt,name=include_metadata,json=includeMetadata"`
+	xxx_hidden_Compression              common.StreamCompression `protobuf:"varint,5,opt,name=compression,enum=common.v1.StreamCompression"`
+	xxx_hidden_SendHeartbeats           bool                     `protobuf:"varint,6,opt,name=send_heartbeats,json=sendHeartbeats"`
+	xxx_hidden_HeartbeatIntervalSeconds int32                    `protobuf:"varint,7,opt,name=heartbeat_interval_seconds,json=heartbeatIntervalSeconds"`
+	xxx_hidden_AutoRetry                bool                     `protobuf:"varint,8,opt,name=auto_retry,json=autoRetry"`
+	xxx_hidden_Qos                      common.StreamQOS         `protobuf:"varint,9,opt,name=qos,enum=common.v1.StreamQOS"`
 	XXX_raceDetectHookData              protoimpl.RaceDetectHookData
 	XXX_presence                        [1]uint32
 	unknownFields                       protoimpl.UnknownFields
@@ -93,13 +93,13 @@ func (x *StreamOptions) GetIncludeMetadata() bool {
 	return false
 }
 
-func (x *StreamOptions) GetCompression() v1.StreamCompression {
+func (x *StreamOptions) GetCompression() common.StreamCompression {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			return x.xxx_hidden_Compression
 		}
 	}
-	return v1.StreamCompression(0)
+	return common.StreamCompression(0)
 }
 
 func (x *StreamOptions) GetSendHeartbeats() bool {
@@ -123,13 +123,13 @@ func (x *StreamOptions) GetAutoRetry() bool {
 	return false
 }
 
-func (x *StreamOptions) GetQos() v1.StreamQOS {
+func (x *StreamOptions) GetQos() common.StreamQOS {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 8) {
 			return x.xxx_hidden_Qos
 		}
 	}
-	return v1.StreamQOS(0)
+	return common.StreamQOS(0)
 }
 
 func (x *StreamOptions) SetIncludeHistorical(v bool) {
@@ -152,7 +152,7 @@ func (x *StreamOptions) SetIncludeMetadata(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 9)
 }
 
-func (x *StreamOptions) SetCompression(v v1.StreamCompression) {
+func (x *StreamOptions) SetCompression(v common.StreamCompression) {
 	x.xxx_hidden_Compression = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 9)
 }
@@ -172,7 +172,7 @@ func (x *StreamOptions) SetAutoRetry(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 9)
 }
 
-func (x *StreamOptions) SetQos(v v1.StreamQOS) {
+func (x *StreamOptions) SetQos(v common.StreamQOS) {
 	x.xxx_hidden_Qos = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 8, 9)
 }
@@ -262,7 +262,7 @@ func (x *StreamOptions) ClearIncludeMetadata() {
 
 func (x *StreamOptions) ClearCompression() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	x.xxx_hidden_Compression = v1.StreamCompression_STREAM_COMPRESSION_UNSPECIFIED
+	x.xxx_hidden_Compression = common.StreamCompression_STREAM_COMPRESSION_UNSPECIFIED
 }
 
 func (x *StreamOptions) ClearSendHeartbeats() {
@@ -282,7 +282,7 @@ func (x *StreamOptions) ClearAutoRetry() {
 
 func (x *StreamOptions) ClearQos() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 8)
-	x.xxx_hidden_Qos = v1.StreamQOS_STREAM_QOS_UNSPECIFIED
+	x.xxx_hidden_Qos = common.StreamQOS_STREAM_QOS_UNSPECIFIED
 }
 
 type StreamOptions_builder struct {
@@ -297,7 +297,7 @@ type StreamOptions_builder struct {
 	// Whether to include metadata with each metric
 	IncludeMetadata *bool
 	// Compression to use for the stream
-	Compression *v1.StreamCompression
+	Compression *common.StreamCompression
 	// Whether to send heartbeat messages during idle periods
 	SendHeartbeats *bool
 	// Heartbeat interval (seconds)
@@ -305,7 +305,7 @@ type StreamOptions_builder struct {
 	// Whether to automatically retry on errors
 	AutoRetry *bool
 	// Quality of service level
-	Qos *v1.StreamQOS
+	Qos *common.StreamQOS
 }
 
 func (b0 StreamOptions_builder) Build() *StreamOptions {
@@ -368,13 +368,13 @@ const file_metrics_v1_stream_options_proto_rawDesc = "" +
 	"\x1aheartbeat_interval_seconds\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x18heartbeatIntervalSeconds\x12\x1d\n" +
 	"\n" +
 	"auto_retry\x18\b \x01(\bR\tautoRetry\x12&\n" +
-	"\x03qos\x18\t \x01(\x0e2\x14.common.v1.StreamQOSR\x03qosB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x03qos\x18\t \x01(\x0e2\x14.common.v1.StreamQOSR\x03qosB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stream_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stream_options_proto_goTypes = []any{
-	(*StreamOptions)(nil),     // 0: metrics.v1.StreamOptions
-	(v1.StreamCompression)(0), // 1: common.v1.StreamCompression
-	(v1.StreamQOS)(0),         // 2: common.v1.StreamQOS
+	(*StreamOptions)(nil),         // 0: metrics.v1.StreamOptions
+	(common.StreamCompression)(0), // 1: common.v1.StreamCompression
+	(common.StreamQOS)(0),         // 2: common.v1.StreamQOS
 }
 var file_metrics_v1_stream_options_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.StreamOptions.compression:type_name -> common.v1.StreamCompression

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -546,7 +546,7 @@ const file_queue_v2_peek_response_proto_rawDesc = "" +
 	"\x13newest_message_time\x18\x14 \x01(\v2\x1a.google.protobuf.TimestampR\x11newestMessageTime\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v2.ErrorR\x05error\x127\n" +
 	"\tpeeked_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\bpeekedAt\x12N\n" +
-	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_peek_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_peek_response_proto_goTypes = []any{

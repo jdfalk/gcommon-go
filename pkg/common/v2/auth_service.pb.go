@@ -35,7 +35,7 @@ const file_common_v2_auth_service_proto_rawDesc = "" +
 	"\vGetUserInfo\x12\x1d.common.v2.GetUserInfoRequest\x1a\x1e.common.v2.GetUserInfoResponse\x12j\n" +
 	"\x15InitiatePasswordReset\x12'.common.v2.InitiatePasswordResetRequest\x1a(.common.v2.InitiatePasswordResetResponse\x12j\n" +
 	"\x15CompletePasswordReset\x12'.common.v2.CompletePasswordResetRequest\x1a(.common.v2.CompletePasswordResetResponse\x12U\n" +
-	"\x0eChangePassword\x12 .common.v2.ChangePasswordRequest\x1a!.common.v2.ChangePasswordResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eChangePassword\x12 .common.v2.ChangePasswordRequest\x1a!.common.v2.ChangePasswordResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_auth_service_proto_goTypes = []any{
 	(*AuthAuthenticateRequest)(nil),       // 0: common.v2.AuthAuthenticateRequest

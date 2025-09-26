@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/peek_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,18 +30,18 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type PeekRequest struct {
-	state                              protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName               *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Metadata                *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=metadata"`
-	xxx_hidden_MaxMessages             int32                  `protobuf:"varint,12,opt,name=max_messages,json=maxMessages"`
-	xxx_hidden_StartPosition           int32                  `protobuf:"varint,13,opt,name=start_position,json=startPosition"`
-	xxx_hidden_GroupIdFilter           *string                `protobuf:"bytes,14,opt,name=group_id_filter,json=groupIdFilter"`
-	xxx_hidden_AttributeFilters        map[string]string      `protobuf:"bytes,15,rep,name=attribute_filters,json=attributeFilters" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_MessageTypeFilter       *string                `protobuf:"bytes,16,opt,name=message_type_filter,json=messageTypeFilter"`
-	xxx_hidden_MinPriority             int32                  `protobuf:"varint,17,opt,name=min_priority,json=minPriority"`
-	xxx_hidden_IncludePayload          bool                   `protobuf:"varint,18,opt,name=include_payload,json=includePayload"`
-	xxx_hidden_IncludeAttributes       bool                   `protobuf:"varint,19,opt,name=include_attributes,json=includeAttributes"`
-	xxx_hidden_IncludeDeliveryMetadata bool                   `protobuf:"varint,20,opt,name=include_delivery_metadata,json=includeDeliveryMetadata"`
+	state                              protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName               *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Metadata                *common.RequestMetadata `protobuf:"bytes,11,opt,name=metadata"`
+	xxx_hidden_MaxMessages             int32                   `protobuf:"varint,12,opt,name=max_messages,json=maxMessages"`
+	xxx_hidden_StartPosition           int32                   `protobuf:"varint,13,opt,name=start_position,json=startPosition"`
+	xxx_hidden_GroupIdFilter           *string                 `protobuf:"bytes,14,opt,name=group_id_filter,json=groupIdFilter"`
+	xxx_hidden_AttributeFilters        map[string]string       `protobuf:"bytes,15,rep,name=attribute_filters,json=attributeFilters" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_MessageTypeFilter       *string                 `protobuf:"bytes,16,opt,name=message_type_filter,json=messageTypeFilter"`
+	xxx_hidden_MinPriority             int32                   `protobuf:"varint,17,opt,name=min_priority,json=minPriority"`
+	xxx_hidden_IncludePayload          bool                    `protobuf:"varint,18,opt,name=include_payload,json=includePayload"`
+	xxx_hidden_IncludeAttributes       bool                    `protobuf:"varint,19,opt,name=include_attributes,json=includeAttributes"`
+	xxx_hidden_IncludeDeliveryMetadata bool                    `protobuf:"varint,20,opt,name=include_delivery_metadata,json=includeDeliveryMetadata"`
 	XXX_raceDetectHookData             protoimpl.RaceDetectHookData
 	XXX_presence                       [1]uint32
 	unknownFields                      protoimpl.UnknownFields
@@ -83,7 +83,7 @@ func (x *PeekRequest) GetQueueName() string {
 	return ""
 }
 
-func (x *PeekRequest) GetMetadata() *v1.RequestMetadata {
+func (x *PeekRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -164,7 +164,7 @@ func (x *PeekRequest) SetQueueName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 11)
 }
 
-func (x *PeekRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *PeekRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -341,7 +341,7 @@ type PeekRequest_builder struct {
 	// *
 	// Standard request metadata including authentication context,
 	// tracing information, and client details.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// *
 	// Maximum number of messages to peek at.
 	// Range: 1-100. Default: 1.
@@ -446,13 +446,13 @@ const file_queue_v1_peek_request_proto_rawDesc = "" +
 	"\x19include_delivery_metadata\x18\x14 \x01(\bR\x17includeDeliveryMetadata\x1aC\n" +
 	"\x15AttributeFiltersEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_peek_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_peek_request_proto_goTypes = []any{
-	(*PeekRequest)(nil),        // 0: queue.v1.PeekRequest
-	nil,                        // 1: queue.v1.PeekRequest.AttributeFiltersEntry
-	(*v1.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
+	(*PeekRequest)(nil),            // 0: queue.v1.PeekRequest
+	nil,                            // 1: queue.v1.PeekRequest.AttributeFiltersEntry
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_queue_v1_peek_request_proto_depIdxs = []int32{
 	2, // 0: queue.v1.PeekRequest.metadata:type_name -> common.v1.RequestMetadata

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -358,7 +358,7 @@ const file_queue_v2_stream_config_proto_rawDesc = "" +
 	"\bauto_ack\x18\x06 \x01(\bR\aautoAck\x12<\n" +
 	"\fack_deadline\x18\a \x01(\v2\x19.google.protobuf.DurationR\vackDeadline\x126\n" +
 	"\x17enable_message_ordering\x18\b \x01(\bR\x15enableMessageOrdering\x12E\n" +
-	"\x0erestart_policy\x18\t \x01(\x0e2\x1e.common.v2.StreamRestartPolicyR\rrestartPolicyB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0erestart_policy\x18\t \x01(\x0e2\x1e.common.v2.StreamRestartPolicyR\rrestartPolicyB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_stream_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_stream_config_proto_goTypes = []any{

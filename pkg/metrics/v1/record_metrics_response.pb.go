@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_metrics_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,7 +30,7 @@ type RecordMetricsResponse struct {
 	xxx_hidden_SuccessCount      int32                  `protobuf:"varint,2,opt,name=success_count,json=successCount"`
 	xxx_hidden_FailureCount      int32                  `protobuf:"varint,3,opt,name=failure_count,json=failureCount"`
 	xxx_hidden_TotalCount        int32                  `protobuf:"varint,4,opt,name=total_count,json=totalCount"`
-	xxx_hidden_Error             *v1.Error              `protobuf:"bytes,5,opt,name=error"`
+	xxx_hidden_Error             *common.Error          `protobuf:"bytes,5,opt,name=error"`
 	xxx_hidden_Results           *[]*MetricResult       `protobuf:"bytes,6,rep,name=results"`
 	xxx_hidden_CompletedAt       *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=completed_at,json=completedAt"`
 	xxx_hidden_ProviderId        *string                `protobuf:"bytes,8,opt,name=provider_id,json=providerId"`
@@ -96,7 +96,7 @@ func (x *RecordMetricsResponse) GetTotalCount() int32 {
 	return 0
 }
 
-func (x *RecordMetricsResponse) GetError() *v1.Error {
+func (x *RecordMetricsResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -170,7 +170,7 @@ func (x *RecordMetricsResponse) SetTotalCount(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 11)
 }
 
-func (x *RecordMetricsResponse) SetError(v *v1.Error) {
+func (x *RecordMetricsResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -315,7 +315,7 @@ type RecordMetricsResponse_builder struct {
 	// Total number of metrics processed
 	TotalCount *int32
 	// Overall error information if the batch operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Detailed results for each metric (if requested)
 	Results []*MetricResult
 	// Timestamp when the batch operation was completed
@@ -383,12 +383,12 @@ const file_metrics_v1_record_metrics_response_proto_rawDesc = "" +
 	"\x05stats\x18\t \x01(\v2\x1d.metrics.v1.MetricsBatchStatsR\x05stats\x12$\n" +
 	"\bwarnings\x18\n" +
 	" \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x12L\n" +
-	"\x12validation_summary\x18\v \x01(\v2\x1d.metrics.v1.ValidationSummaryR\x11validationSummaryB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12validation_summary\x18\v \x01(\v2\x1d.metrics.v1.ValidationSummaryR\x11validationSummaryB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_metrics_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_record_metrics_response_proto_goTypes = []any{
 	(*RecordMetricsResponse)(nil), // 0: metrics.v1.RecordMetricsResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 	(*MetricResult)(nil),          // 2: metrics.v1.MetricResult
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 	(*MetricsBatchStats)(nil),     // 4: metrics.v1.MetricsBatchStats

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/delivery_settings.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -206,7 +206,7 @@ const file_queue_v1_delivery_settings_proto_rawDesc = "" +
 	"\rdelivery_mode\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fdeliveryMode\x12,\n" +
 	"\rpush_endpoint\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fpushEndpoint\x127\n" +
 	"\x13delivery_timeout_ms\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x11deliveryTimeoutMs\x12)\n" +
-	"\x10ordered_delivery\x18\x04 \x01(\bR\x0forderedDeliveryB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10ordered_delivery\x18\x04 \x01(\bR\x0forderedDeliveryB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_delivery_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_delivery_settings_proto_goTypes = []any{

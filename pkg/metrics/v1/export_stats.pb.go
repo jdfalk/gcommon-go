@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/export_stats.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -279,7 +279,7 @@ const file_metrics_v1_export_stats_proto_rawDesc = "" +
 	"\x0efailed_exports\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rfailedExports\x12>\n" +
 	"\x13export_success_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11exportSuccessRate\x12]\n" +
 	"\x13export_destinations\x18\x06 \x03(\v2\".metrics.v1.ExportDestinationStatsB\b\xbaH\x05\x92\x01\x02\b\x01R\x12exportDestinations\x12P\n" +
-	"\x16last_successful_export\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\x14lastSuccessfulExportB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16last_successful_export\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\x14lastSuccessfulExportB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_export_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_export_stats_proto_goTypes = []any{

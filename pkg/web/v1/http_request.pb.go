@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/http_request.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,34 +32,34 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type HttpRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Method          *string                `protobuf:"bytes,1,opt,name=method"`
-	xxx_hidden_Url             *string                `protobuf:"bytes,2,opt,name=url"`
-	xxx_hidden_ProtocolVersion *string                `protobuf:"bytes,3,opt,name=protocol_version,json=protocolVersion"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=metadata"`
-	xxx_hidden_Headers         map[string]string      `protobuf:"bytes,12,rep,name=headers" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Body            *anypb.Any             `protobuf:"bytes,13,opt,name=body"`
-	xxx_hidden_QueryParams     map[string]string      `protobuf:"bytes,14,rep,name=query_params,json=queryParams" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_PathParams      map[string]string      `protobuf:"bytes,15,rep,name=path_params,json=pathParams" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Cookies         map[string]string      `protobuf:"bytes,16,rep,name=cookies" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_ClientIp        *string                `protobuf:"bytes,17,opt,name=client_ip,json=clientIp"`
-	xxx_hidden_UserAgent       *string                `protobuf:"bytes,18,opt,name=user_agent,json=userAgent"`
-	xxx_hidden_Referrer        *string                `protobuf:"bytes,19,opt,name=referrer"`
-	xxx_hidden_ContentLength   int64                  `protobuf:"varint,20,opt,name=content_length,json=contentLength"`
-	xxx_hidden_ContentType     *string                `protobuf:"bytes,21,opt,name=content_type,json=contentType"`
-	xxx_hidden_Accept          *string                `protobuf:"bytes,22,opt,name=accept"`
-	xxx_hidden_AcceptLanguage  *string                `protobuf:"bytes,23,opt,name=accept_language,json=acceptLanguage"`
-	xxx_hidden_AcceptEncoding  *string                `protobuf:"bytes,24,opt,name=accept_encoding,json=acceptEncoding"`
-	xxx_hidden_Authorization   *string                `protobuf:"bytes,25,opt,name=authorization"`
-	xxx_hidden_RequestId       *string                `protobuf:"bytes,26,opt,name=request_id,json=requestId"`
-	xxx_hidden_SessionId       *string                `protobuf:"bytes,27,opt,name=session_id,json=sessionId"`
-	xxx_hidden_TargetService   *string                `protobuf:"bytes,28,opt,name=target_service,json=targetService"`
-	xxx_hidden_TargetVersion   *string                `protobuf:"bytes,29,opt,name=target_version,json=targetVersion"`
-	xxx_hidden_TimeoutMs       int64                  `protobuf:"varint,30,opt,name=timeout_ms,json=timeoutMs"`
-	xxx_hidden_Streaming       bool                   `protobuf:"varint,31,opt,name=streaming"`
-	xxx_hidden_KeepAlive       bool                   `protobuf:"varint,32,opt,name=keep_alive,json=keepAlive"`
-	xxx_hidden_ReceivedAt      *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=received_at,json=receivedAt"`
-	xxx_hidden_CreatedAt       *timestamppb.Timestamp `protobuf:"bytes,52,opt,name=created_at,json=createdAt"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Method          *string                 `protobuf:"bytes,1,opt,name=method"`
+	xxx_hidden_Url             *string                 `protobuf:"bytes,2,opt,name=url"`
+	xxx_hidden_ProtocolVersion *string                 `protobuf:"bytes,3,opt,name=protocol_version,json=protocolVersion"`
+	xxx_hidden_Metadata        *common.RequestMetadata `protobuf:"bytes,11,opt,name=metadata"`
+	xxx_hidden_Headers         map[string]string       `protobuf:"bytes,12,rep,name=headers" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Body            *anypb.Any              `protobuf:"bytes,13,opt,name=body"`
+	xxx_hidden_QueryParams     map[string]string       `protobuf:"bytes,14,rep,name=query_params,json=queryParams" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_PathParams      map[string]string       `protobuf:"bytes,15,rep,name=path_params,json=pathParams" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Cookies         map[string]string       `protobuf:"bytes,16,rep,name=cookies" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_ClientIp        *string                 `protobuf:"bytes,17,opt,name=client_ip,json=clientIp"`
+	xxx_hidden_UserAgent       *string                 `protobuf:"bytes,18,opt,name=user_agent,json=userAgent"`
+	xxx_hidden_Referrer        *string                 `protobuf:"bytes,19,opt,name=referrer"`
+	xxx_hidden_ContentLength   int64                   `protobuf:"varint,20,opt,name=content_length,json=contentLength"`
+	xxx_hidden_ContentType     *string                 `protobuf:"bytes,21,opt,name=content_type,json=contentType"`
+	xxx_hidden_Accept          *string                 `protobuf:"bytes,22,opt,name=accept"`
+	xxx_hidden_AcceptLanguage  *string                 `protobuf:"bytes,23,opt,name=accept_language,json=acceptLanguage"`
+	xxx_hidden_AcceptEncoding  *string                 `protobuf:"bytes,24,opt,name=accept_encoding,json=acceptEncoding"`
+	xxx_hidden_Authorization   *string                 `protobuf:"bytes,25,opt,name=authorization"`
+	xxx_hidden_RequestId       *string                 `protobuf:"bytes,26,opt,name=request_id,json=requestId"`
+	xxx_hidden_SessionId       *string                 `protobuf:"bytes,27,opt,name=session_id,json=sessionId"`
+	xxx_hidden_TargetService   *string                 `protobuf:"bytes,28,opt,name=target_service,json=targetService"`
+	xxx_hidden_TargetVersion   *string                 `protobuf:"bytes,29,opt,name=target_version,json=targetVersion"`
+	xxx_hidden_TimeoutMs       int64                   `protobuf:"varint,30,opt,name=timeout_ms,json=timeoutMs"`
+	xxx_hidden_Streaming       bool                    `protobuf:"varint,31,opt,name=streaming"`
+	xxx_hidden_KeepAlive       bool                    `protobuf:"varint,32,opt,name=keep_alive,json=keepAlive"`
+	xxx_hidden_ReceivedAt      *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=received_at,json=receivedAt"`
+	xxx_hidden_CreatedAt       *timestamppb.Timestamp  `protobuf:"bytes,52,opt,name=created_at,json=createdAt"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -121,7 +121,7 @@ func (x *HttpRequest) GetProtocolVersion() string {
 	return ""
 }
 
-func (x *HttpRequest) GetMetadata() *v1.RequestMetadata {
+func (x *HttpRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -340,7 +340,7 @@ func (x *HttpRequest) SetProtocolVersion(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 27)
 }
 
-func (x *HttpRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *HttpRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -740,7 +740,7 @@ type HttpRequest_builder struct {
 	// *
 	// Standard request metadata including authentication context,
 	// tracing information, and client details.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// *
 	// HTTP headers as key-value pairs.
 	// Includes standard headers like Content-Type, Authorization, etc.
@@ -961,18 +961,18 @@ const file_web_v1_http_request_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\x1a:\n" +
 	"\fCookiesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_http_request_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_web_v1_http_request_proto_goTypes = []any{
-	(*HttpRequest)(nil),           // 0: web.v1.HttpRequest
-	nil,                           // 1: web.v1.HttpRequest.HeadersEntry
-	nil,                           // 2: web.v1.HttpRequest.QueryParamsEntry
-	nil,                           // 3: web.v1.HttpRequest.PathParamsEntry
-	nil,                           // 4: web.v1.HttpRequest.CookiesEntry
-	(*v1.RequestMetadata)(nil),    // 5: common.v1.RequestMetadata
-	(*anypb.Any)(nil),             // 6: google.protobuf.Any
-	(*timestamppb.Timestamp)(nil), // 7: google.protobuf.Timestamp
+	(*HttpRequest)(nil),            // 0: web.v1.HttpRequest
+	nil,                            // 1: web.v1.HttpRequest.HeadersEntry
+	nil,                            // 2: web.v1.HttpRequest.QueryParamsEntry
+	nil,                            // 3: web.v1.HttpRequest.PathParamsEntry
+	nil,                            // 4: web.v1.HttpRequest.CookiesEntry
+	(*common.RequestMetadata)(nil), // 5: common.v1.RequestMetadata
+	(*anypb.Any)(nil),              // 6: google.protobuf.Any
+	(*timestamppb.Timestamp)(nil),  // 7: google.protobuf.Timestamp
 }
 var file_web_v1_http_request_proto_depIdxs = []int32{
 	5, // 0: web.v1.HttpRequest.metadata:type_name -> common.v1.RequestMetadata

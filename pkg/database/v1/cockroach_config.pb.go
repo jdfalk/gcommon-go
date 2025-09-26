@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/cockroach_config.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -382,7 +382,7 @@ const file_database_v1_cockroach_config_proto_rawDesc = "" +
 	"\x10application_name\x18\a \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x0fapplicationName\x120\n" +
 	"\x14retry_backoff_factor\x18\b \x01(\x02R\x12retryBackoffFactor\x12\x1f\n" +
 	"\vmax_retries\x18\t \x01(\x05R\n" +
-	"maxRetriesB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"maxRetriesB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cockroach_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_cockroach_config_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -152,7 +152,7 @@ const file_organization_v2_get_department_response_proto_rawDesc = "" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess\x12;\n" +
 	"\n" +
 	"department\x18\x03 \x01(\v2\x1b.organization.v2.DepartmentR\n" +
-	"departmentB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"departmentB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_get_department_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_get_department_response_proto_goTypes = []any{

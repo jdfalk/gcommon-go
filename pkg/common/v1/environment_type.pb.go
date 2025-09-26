@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/environment_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -120,7 +120,7 @@ const file_common_v1_environment_type_proto_rawDesc = "" +
 	"\x1cENVIRONMENT_TYPE_INTEGRATION\x10\b\x12 \n" +
 	"\x1cENVIRONMENT_TYPE_PERFORMANCE\x10\t\x12\x1d\n" +
 	"\x19ENVIRONMENT_TYPE_SECURITY\x10\n" +
-	"B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_environment_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_environment_type_proto_goTypes = []any{

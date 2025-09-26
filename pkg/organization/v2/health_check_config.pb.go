@@ -302,7 +302,7 @@ const file_organization_v2_health_check_config_proto_rawDesc = "" +
 	"\x10interval_seconds\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fintervalSeconds\x120\n" +
 	"\x0ftimeout_seconds\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0etimeoutSeconds\x124\n" +
 	"\x11healthy_threshold\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x10healthyThreshold\x128\n" +
-	"\x13unhealthy_threshold\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x12unhealthyThresholdB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13unhealthy_threshold\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x12unhealthyThresholdB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_health_check_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_health_check_config_proto_goTypes = []any{

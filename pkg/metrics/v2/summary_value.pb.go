@@ -155,7 +155,7 @@ const file_metrics_v2_summary_value_proto_rawDesc = "" +
 	"\fSummaryValue\x12<\n" +
 	"\tquantiles\x18\x01 \x03(\v2\x14.metrics.v2.QuantileB\b\xbaH\x05\x92\x01\x02\b\x01R\tquantiles\x12\x1d\n" +
 	"\x05count\x18\x02 \x01(\x04B\a\xbaH\x042\x02(\x00R\x05count\x12 \n" +
-	"\x03sum\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x03sumB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x03sum\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x03sumB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_summary_value_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_summary_value_proto_goTypes = []any{

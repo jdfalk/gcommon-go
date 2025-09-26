@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/verify_mfa_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -206,7 +206,7 @@ const file_common_v1_verify_mfa_response_proto_rawDesc = "" +
 	"\bverified\x18\x01 \x01(\bR\bverified\x12,\n" +
 	"\rerror_message\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x126\n" +
 	"\x12remaining_attempts\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11remainingAttempts\x12,\n" +
-	"\rsession_token\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fsessionTokenB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rsession_token\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fsessionTokenB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_verify_mfa_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_verify_mfa_response_proto_goTypes = []any{

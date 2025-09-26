@@ -94,7 +94,7 @@ const file_common_v2_role_scope_proto_rawDesc = "" +
 	"\x17ROLE_SCOPE_ORGANIZATION\x10\x02\x12\x16\n" +
 	"\x12ROLE_SCOPE_PROJECT\x10\x03\x12\x13\n" +
 	"\x0fROLE_SCOPE_TEAM\x10\x04\x12\x17\n" +
-	"\x13ROLE_SCOPE_RESOURCE\x10\x05B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13ROLE_SCOPE_RESOURCE\x10\x05B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_role_scope_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_role_scope_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/nack_error.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,12 +26,12 @@ const (
 // *
 // Error information for NACK operations.
 type NackError struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Code        *string                `protobuf:"bytes,1,opt,name=code"`
-	xxx_hidden_Message     *string                `protobuf:"bytes,2,opt,name=message"`
-	xxx_hidden_Category    v1.NackErrorCategory   `protobuf:"varint,3,opt,name=category,enum=common.v1.NackErrorCategory"`
-	xxx_hidden_Retryable   bool                   `protobuf:"varint,4,opt,name=retryable"`
-	xxx_hidden_Details     *string                `protobuf:"bytes,5,opt,name=details"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Code        *string                  `protobuf:"bytes,1,opt,name=code"`
+	xxx_hidden_Message     *string                  `protobuf:"bytes,2,opt,name=message"`
+	xxx_hidden_Category    common.NackErrorCategory `protobuf:"varint,3,opt,name=category,enum=common.v1.NackErrorCategory"`
+	xxx_hidden_Retryable   bool                     `protobuf:"varint,4,opt,name=retryable"`
+	xxx_hidden_Details     *string                  `protobuf:"bytes,5,opt,name=details"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -83,13 +83,13 @@ func (x *NackError) GetMessage() string {
 	return ""
 }
 
-func (x *NackError) GetCategory() v1.NackErrorCategory {
+func (x *NackError) GetCategory() common.NackErrorCategory {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Category
 		}
 	}
-	return v1.NackErrorCategory(0)
+	return common.NackErrorCategory(0)
 }
 
 func (x *NackError) GetRetryable() bool {
@@ -119,7 +119,7 @@ func (x *NackError) SetMessage(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *NackError) SetCategory(v v1.NackErrorCategory) {
+func (x *NackError) SetCategory(v common.NackErrorCategory) {
 	x.xxx_hidden_Category = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
@@ -181,7 +181,7 @@ func (x *NackError) ClearMessage() {
 
 func (x *NackError) ClearCategory() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Category = v1.NackErrorCategory_NACK_ERROR_CATEGORY_UNSPECIFIED
+	x.xxx_hidden_Category = common.NackErrorCategory_NACK_ERROR_CATEGORY_UNSPECIFIED
 }
 
 func (x *NackError) ClearRetryable() {
@@ -202,7 +202,7 @@ type NackError_builder struct {
 	// Error message
 	Message *string
 	// Error category
-	Category *v1.NackErrorCategory
+	Category *common.NackErrorCategory
 	// Whether the error is retryable
 	Retryable *bool
 	// Stack trace or additional details
@@ -246,12 +246,12 @@ const file_queue_v1_nack_error_proto_rawDesc = "" +
 	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessage\x128\n" +
 	"\bcategory\x18\x03 \x01(\x0e2\x1c.common.v1.NackErrorCategoryR\bcategory\x12\x1c\n" +
 	"\tretryable\x18\x04 \x01(\bR\tretryable\x12!\n" +
-	"\adetails\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\adetailsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adetails\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\adetailsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_nack_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_nack_error_proto_goTypes = []any{
-	(*NackError)(nil),         // 0: queue.v1.NackError
-	(v1.NackErrorCategory)(0), // 1: common.v1.NackErrorCategory
+	(*NackError)(nil),             // 0: queue.v1.NackError
+	(common.NackErrorCategory)(0), // 1: common.v1.NackErrorCategory
 }
 var file_queue_v1_nack_error_proto_depIdxs = []int32{
 	1, // 0: queue.v1.NackError.category:type_name -> common.v1.NackErrorCategory

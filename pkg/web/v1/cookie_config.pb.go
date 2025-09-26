@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/cookie_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,7 +32,7 @@ type CookieConfig struct {
 	xxx_hidden_Path        *string                `protobuf:"bytes,3,opt,name=path"`
 	xxx_hidden_Secure      bool                   `protobuf:"varint,4,opt,name=secure"`
 	xxx_hidden_HttpOnly    bool                   `protobuf:"varint,5,opt,name=http_only,json=httpOnly"`
-	xxx_hidden_SameSite    v1.CookieSameSite      `protobuf:"varint,6,opt,name=same_site,json=sameSite,enum=common.v1.CookieSameSite"`
+	xxx_hidden_SameSite    common.CookieSameSite  `protobuf:"varint,6,opt,name=same_site,json=sameSite,enum=common.v1.CookieSameSite"`
 	xxx_hidden_MaxAge      *durationpb.Duration   `protobuf:"bytes,7,opt,name=max_age,json=maxAge"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -109,13 +109,13 @@ func (x *CookieConfig) GetHttpOnly() bool {
 	return false
 }
 
-func (x *CookieConfig) GetSameSite() v1.CookieSameSite {
+func (x *CookieConfig) GetSameSite() common.CookieSameSite {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 5) {
 			return x.xxx_hidden_SameSite
 		}
 	}
-	return v1.CookieSameSite(0)
+	return common.CookieSameSite(0)
 }
 
 func (x *CookieConfig) GetMaxAge() *durationpb.Duration {
@@ -150,7 +150,7 @@ func (x *CookieConfig) SetHttpOnly(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 7)
 }
 
-func (x *CookieConfig) SetSameSite(v v1.CookieSameSite) {
+func (x *CookieConfig) SetSameSite(v common.CookieSameSite) {
 	x.xxx_hidden_SameSite = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 7)
 }
@@ -235,7 +235,7 @@ func (x *CookieConfig) ClearHttpOnly() {
 
 func (x *CookieConfig) ClearSameSite() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
-	x.xxx_hidden_SameSite = v1.CookieSameSite_COOKIE_SAME_SITE_UNSPECIFIED
+	x.xxx_hidden_SameSite = common.CookieSameSite_COOKIE_SAME_SITE_UNSPECIFIED
 }
 
 func (x *CookieConfig) ClearMaxAge() {
@@ -256,7 +256,7 @@ type CookieConfig_builder struct {
 	// Set HttpOnly flag
 	HttpOnly *bool
 	// SameSite policy
-	SameSite *v1.CookieSameSite
+	SameSite *common.CookieSameSite
 	// Max age of the cookie
 	MaxAge *durationpb.Duration
 }
@@ -305,12 +305,12 @@ const file_web_v1_cookie_config_proto_rawDesc = "" +
 	"\x06secure\x18\x04 \x01(\bR\x06secure\x12\x1b\n" +
 	"\thttp_only\x18\x05 \x01(\bR\bhttpOnly\x126\n" +
 	"\tsame_site\x18\x06 \x01(\x0e2\x19.common.v1.CookieSameSiteR\bsameSite\x122\n" +
-	"\amax_age\x18\a \x01(\v2\x19.google.protobuf.DurationR\x06maxAgeB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amax_age\x18\a \x01(\v2\x19.google.protobuf.DurationR\x06maxAgeB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_cookie_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_cookie_config_proto_goTypes = []any{
 	(*CookieConfig)(nil),        // 0: web.v1.CookieConfig
-	(v1.CookieSameSite)(0),      // 1: common.v1.CookieSameSite
+	(common.CookieSameSite)(0),  // 1: common.v1.CookieSameSite
 	(*durationpb.Duration)(nil), // 2: google.protobuf.Duration
 }
 var file_web_v1_cookie_config_proto_depIdxs = []int32{

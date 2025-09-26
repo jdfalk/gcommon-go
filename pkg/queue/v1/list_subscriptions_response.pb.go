@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/list_subscriptions_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type ListSubscriptionsResponse struct {
-	state                    protoimpl.MessageState        `protogen:"opaque.v1"`
-	xxx_hidden_Subscriptions *[]*v1.CommonSubscriptionInfo `protobuf:"bytes,1,rep,name=subscriptions"`
-	xxx_hidden_NextPageToken *string                       `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken"`
-	xxx_hidden_Metadata      *v1.ResponseMetadata          `protobuf:"bytes,3,opt,name=metadata"`
+	state                    protoimpl.MessageState            `protogen:"opaque.v1"`
+	xxx_hidden_Subscriptions *[]*common.CommonSubscriptionInfo `protobuf:"bytes,1,rep,name=subscriptions"`
+	xxx_hidden_NextPageToken *string                           `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken"`
+	xxx_hidden_Metadata      *common.ResponseMetadata          `protobuf:"bytes,3,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -59,7 +59,7 @@ func (x *ListSubscriptionsResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListSubscriptionsResponse) GetSubscriptions() []*v1.CommonSubscriptionInfo {
+func (x *ListSubscriptionsResponse) GetSubscriptions() []*common.CommonSubscriptionInfo {
 	if x != nil {
 		if x.xxx_hidden_Subscriptions != nil {
 			return *x.xxx_hidden_Subscriptions
@@ -78,14 +78,14 @@ func (x *ListSubscriptionsResponse) GetNextPageToken() string {
 	return ""
 }
 
-func (x *ListSubscriptionsResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *ListSubscriptionsResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
 	return nil
 }
 
-func (x *ListSubscriptionsResponse) SetSubscriptions(v []*v1.CommonSubscriptionInfo) {
+func (x *ListSubscriptionsResponse) SetSubscriptions(v []*common.CommonSubscriptionInfo) {
 	x.xxx_hidden_Subscriptions = &v
 }
 
@@ -94,7 +94,7 @@ func (x *ListSubscriptionsResponse) SetNextPageToken(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *ListSubscriptionsResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *ListSubscriptionsResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -125,11 +125,11 @@ type ListSubscriptionsResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Subscriptions returned
-	Subscriptions []*v1.CommonSubscriptionInfo
+	Subscriptions []*common.CommonSubscriptionInfo
 	// Token for fetching the next page
 	NextPageToken *string
 	// Response metadata common across services
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 }
 
 func (b0 ListSubscriptionsResponse_builder) Build() *ListSubscriptionsResponse {
@@ -153,13 +153,13 @@ const file_queue_v1_list_subscriptions_response_proto_rawDesc = "" +
 	"\x19ListSubscriptionsResponse\x12Q\n" +
 	"\rsubscriptions\x18\x01 \x03(\v2!.common.v1.CommonSubscriptionInfoB\b\xbaH\x05\x92\x01\x02\b\x01R\rsubscriptions\x12/\n" +
 	"\x0fnext_page_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x127\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_list_subscriptions_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_list_subscriptions_response_proto_goTypes = []any{
-	(*ListSubscriptionsResponse)(nil), // 0: queue.v1.ListSubscriptionsResponse
-	(*v1.CommonSubscriptionInfo)(nil), // 1: common.v1.CommonSubscriptionInfo
-	(*v1.ResponseMetadata)(nil),       // 2: common.v1.ResponseMetadata
+	(*ListSubscriptionsResponse)(nil),     // 0: queue.v1.ListSubscriptionsResponse
+	(*common.CommonSubscriptionInfo)(nil), // 1: common.v1.CommonSubscriptionInfo
+	(*common.ResponseMetadata)(nil),       // 2: common.v1.ResponseMetadata
 }
 var file_queue_v1_list_subscriptions_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ListSubscriptionsResponse.subscriptions:type_name -> common.v1.CommonSubscriptionInfo

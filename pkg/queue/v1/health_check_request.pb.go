@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/health_check_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type QueueHealthCheckRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Queue    *string                `protobuf:"bytes,1,opt,name=queue"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Queue    *string                 `protobuf:"bytes,1,opt,name=queue"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -70,13 +70,13 @@ func (x *QueueHealthCheckRequest) GetQueue() string {
 	return ""
 }
 
-func (x *QueueHealthCheckRequest) GetMetadata() *v1.RequestMetadata {
+func (x *QueueHealthCheckRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -89,7 +89,7 @@ func (x *QueueHealthCheckRequest) SetQueue(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *QueueHealthCheckRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *QueueHealthCheckRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -119,7 +119,7 @@ func (x *QueueHealthCheckRequest) ClearQueue() {
 
 func (x *QueueHealthCheckRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type QueueHealthCheckRequest_builder struct {
@@ -128,7 +128,7 @@ type QueueHealthCheckRequest_builder struct {
 	// Name of the queue to check.
 	Queue *string
 	// Request metadata for tracing.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 QueueHealthCheckRequest_builder) Build() *QueueHealthCheckRequest {
@@ -153,12 +153,12 @@ const file_queue_v1_health_check_request_proto_rawDesc = "" +
 	"#queue/v1/health_check_request.proto\x12\bqueue.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"t\n" +
 	"\x17QueueHealthCheckRequest\x12\x1d\n" +
 	"\x05queue\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05queue\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_health_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_health_check_request_proto_goTypes = []any{
 	(*QueueHealthCheckRequest)(nil), // 0: queue.v1.QueueHealthCheckRequest
-	(*v1.RequestMetadata)(nil),      // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_health_check_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.QueueHealthCheckRequest.metadata:type_name -> common.v1.RequestMetadata

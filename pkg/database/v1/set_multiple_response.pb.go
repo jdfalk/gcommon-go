@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/set_multiple_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,7 +30,7 @@ type SetMultipleResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
 	xxx_hidden_FailedKeys  []string               `protobuf:"bytes,2,rep,name=failed_keys,json=failedKeys"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	xxx_hidden_SetCount    int32                  `protobuf:"varint,4,opt,name=set_count,json=setCount"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -77,7 +77,7 @@ func (x *SetMultipleResponse) GetFailedKeys() []string {
 	return nil
 }
 
-func (x *SetMultipleResponse) GetError() *v1.Error {
+func (x *SetMultipleResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -100,7 +100,7 @@ func (x *SetMultipleResponse) SetFailedKeys(v []string) {
 	x.xxx_hidden_FailedKeys = v
 }
 
-func (x *SetMultipleResponse) SetError(v *v1.Error) {
+func (x *SetMultipleResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -152,7 +152,7 @@ type SetMultipleResponse_builder struct {
 	// List of keys that failed to be set
 	FailedKeys []string
 	// Error details if operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Number of keys that were successfully set
 	SetCount *int32
 }
@@ -184,12 +184,12 @@ const file_database_v1_set_multiple_response_proto_rawDesc = "" +
 	"\vfailed_keys\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"failedKeys\x12&\n" +
 	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05error\x12$\n" +
-	"\tset_count\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bsetCountB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tset_count\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bsetCountB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_set_multiple_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_set_multiple_response_proto_goTypes = []any{
 	(*SetMultipleResponse)(nil), // 0: database.v1.SetMultipleResponse
-	(*v1.Error)(nil),            // 1: common.v1.Error
+	(*common.Error)(nil),        // 1: common.v1.Error
 }
 var file_database_v1_set_multiple_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.SetMultipleResponse.error:type_name -> common.v1.Error

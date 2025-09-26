@@ -180,7 +180,7 @@ const file_database_v2_migration_script_proto_rawDesc = "" +
 	"\x0fMigrationScript\x12\x18\n" +
 	"\aversion\x18\x01 \x01(\tR\aversion\x12\x16\n" +
 	"\x06script\x18\x02 \x01(\tR\x06script\x12*\n" +
-	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescriptionB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescriptionB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_migration_script_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_migration_script_proto_goTypes = []any{

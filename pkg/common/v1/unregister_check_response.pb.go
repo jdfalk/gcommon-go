@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/unregister_check_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -204,7 +204,7 @@ const file_common_v1_unregister_check_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\"\n" +
 	"\bcheck_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\acheckId\x12&\n" +
 	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05error\x12!\n" +
-	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_unregister_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_unregister_check_response_proto_goTypes = []any{

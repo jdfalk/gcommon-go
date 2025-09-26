@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/create_schema_response.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type CreateSchemaResponse struct {
 	state              protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error   *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error   *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -69,13 +69,13 @@ func (x *CreateSchemaResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *CreateSchemaResponse) GetError() *v1.Error {
+func (x *CreateSchemaResponse) GetError() *common.Error {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Error) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.Error
+			var rv *common.Error
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Error), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -88,7 +88,7 @@ func (x *CreateSchemaResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *CreateSchemaResponse) SetError(v *v1.Error) {
+func (x *CreateSchemaResponse) SetError(v *common.Error) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -118,7 +118,7 @@ func (x *CreateSchemaResponse) ClearSuccess() {
 
 func (x *CreateSchemaResponse) ClearError() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*v1.Error)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*common.Error)(nil))
 }
 
 type CreateSchemaResponse_builder struct {
@@ -127,7 +127,7 @@ type CreateSchemaResponse_builder struct {
 	// Whether the schema was created successfully
 	Success *bool
 	// Error information if the creation failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 CreateSchemaResponse_builder) Build() *CreateSchemaResponse {
@@ -152,12 +152,12 @@ const file_database_v1_create_schema_response_proto_rawDesc = "" +
 	"(database/v1/create_schema_response.proto\x12\vdatabase.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\"\\\n" +
 	"\x14CreateSchemaResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12*\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_create_schema_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_create_schema_response_proto_goTypes = []any{
 	(*CreateSchemaResponse)(nil), // 0: database.v1.CreateSchemaResponse
-	(*v1.Error)(nil),             // 1: common.v1.Error
+	(*common.Error)(nil),         // 1: common.v1.Error
 }
 var file_database_v1_create_schema_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.CreateSchemaResponse.error:type_name -> common.v1.Error

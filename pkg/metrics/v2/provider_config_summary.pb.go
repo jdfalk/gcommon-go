@@ -180,7 +180,7 @@ const file_metrics_v2_provider_config_summary_proto_rawDesc = "" +
 	"\x0eexporter_count\x18\x01 \x01(\x05B\v\xbaH\b\x1a\x06\x18\xff\xff\x03(\x01R\rexporterCount\x12)\n" +
 	"\x10security_enabled\x18\x02 \x01(\bR\x0fsecurityEnabled\x12J\n" +
 	"\x0fresource_limits\x18\x03 \x01(\v2!.metrics.v2.ResourceLimitsSummaryR\x0eresourceLimits\x129\n" +
-	"\x13export_destinations\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12exportDestinationsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13export_destinations\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12exportDestinationsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_provider_config_summary_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_provider_config_summary_proto_goTypes = []any{

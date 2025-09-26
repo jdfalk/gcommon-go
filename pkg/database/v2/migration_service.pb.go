@@ -30,7 +30,7 @@ const file_database_v2_migration_service_proto_rawDesc = "" +
 	"\x0eApplyMigration\x12 .database.v2.RunMigrationRequest\x1a!.database.v2.RunMigrationResponse\x12\\\n" +
 	"\x0fRevertMigration\x12#.database.v2.RevertMigrationRequest\x1a$.database.v2.RevertMigrationResponse\x12e\n" +
 	"\x12GetMigrationStatus\x12&.database.v2.GetMigrationStatusRequest\x1a'.database.v2.GetMigrationStatusResponse\x12Y\n" +
-	"\x0eListMigrations\x12\".database.v2.ListMigrationsRequest\x1a#.database.v2.ListMigrationsResponseB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eListMigrations\x12\".database.v2.ListMigrationsRequest\x1a#.database.v2.ListMigrationsResponseB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_migration_service_proto_goTypes = []any{
 	(*RunMigrationRequest)(nil),        // 0: database.v2.RunMigrationRequest

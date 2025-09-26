@@ -241,7 +241,7 @@ const file_queue_v2_content_update_proto_rawDesc = "" +
 	"\x10content_encoding\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fcontentEncoding\x12*\n" +
 	"\fcontent_type\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcontentType\x12)\n" +
 	"\vcompression\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcompression\x122\n" +
-	"\x10content_checksum\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fcontentChecksumB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10content_checksum\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fcontentChecksumB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_content_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_content_update_proto_goTypes = []any{

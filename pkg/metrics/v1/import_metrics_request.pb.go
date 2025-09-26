@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/import_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type ImportMetricsRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metrics  *[]*MetricData         `protobuf:"bytes,1,rep,name=metrics"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metrics  *[]*MetricData          `protobuf:"bytes,1,rep,name=metrics"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -69,13 +69,13 @@ func (x *ImportMetricsRequest) GetMetrics() []*MetricData {
 	return nil
 }
 
-func (x *ImportMetricsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ImportMetricsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -87,7 +87,7 @@ func (x *ImportMetricsRequest) SetMetrics(v []*MetricData) {
 	x.xxx_hidden_Metrics = &v
 }
 
-func (x *ImportMetricsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ImportMetricsRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -105,7 +105,7 @@ func (x *ImportMetricsRequest) HasMetadata() bool {
 
 func (x *ImportMetricsRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type ImportMetricsRequest_builder struct {
@@ -114,7 +114,7 @@ type ImportMetricsRequest_builder struct {
 	// Metrics to import
 	Metrics []*MetricData
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ImportMetricsRequest_builder) Build() *ImportMetricsRequest {
@@ -137,13 +137,13 @@ const file_metrics_v1_import_metrics_request_proto_rawDesc = "" +
 	"metrics.v1\x1a common/v1/request_metadata.proto\x1a\x1cmetrics/v1/metric_data.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\x8e\x01\n" +
 	"\x14ImportMetricsRequest\x12:\n" +
 	"\ametrics\x18\x01 \x03(\v2\x16.metrics.v1.MetricDataB\b\xbaH\x05\x92\x01\x02\b\x01R\ametrics\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_import_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_import_metrics_request_proto_goTypes = []any{
-	(*ImportMetricsRequest)(nil), // 0: metrics.v1.ImportMetricsRequest
-	(*MetricData)(nil),           // 1: metrics.v1.MetricData
-	(*v1.RequestMetadata)(nil),   // 2: common.v1.RequestMetadata
+	(*ImportMetricsRequest)(nil),   // 0: metrics.v1.ImportMetricsRequest
+	(*MetricData)(nil),             // 1: metrics.v1.MetricData
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_import_metrics_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.ImportMetricsRequest.metrics:type_name -> metrics.v1.MetricData

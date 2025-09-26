@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/touch_expiration_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // *
 // Request to update the TTL of an existing cache key.
 type TouchExpirationRequest struct {
-	state                protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Key       *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_Ttl       *durationpb.Duration   `protobuf:"bytes,2,opt,name=ttl"`
-	xxx_hidden_Namespace *string                `protobuf:"bytes,3,opt,name=namespace"`
-	xxx_hidden_Metadata  *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
+	state                protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Key       *string                 `protobuf:"bytes,1,opt,name=key"`
+	xxx_hidden_Ttl       *durationpb.Duration    `protobuf:"bytes,2,opt,name=ttl"`
+	xxx_hidden_Namespace *string                 `protobuf:"bytes,3,opt,name=namespace"`
+	xxx_hidden_Metadata  *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -99,13 +99,13 @@ func (x *TouchExpirationRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *TouchExpirationRequest) GetMetadata() *v1.RequestMetadata {
+func (x *TouchExpirationRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 4)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -132,7 +132,7 @@ func (x *TouchExpirationRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *TouchExpirationRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *TouchExpirationRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
@@ -186,7 +186,7 @@ func (x *TouchExpirationRequest) ClearNamespace() {
 
 func (x *TouchExpirationRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type TouchExpirationRequest_builder struct {
@@ -199,7 +199,7 @@ type TouchExpirationRequest_builder struct {
 	// Optional namespace
 	Namespace *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 TouchExpirationRequest_builder) Build() *TouchExpirationRequest {
@@ -234,13 +234,13 @@ const file_database_v1_touch_expiration_request_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03key\x12/\n" +
 	"\x03ttl\x18\x02 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x03ttl\x12%\n" +
 	"\tnamespace\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_touch_expiration_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_touch_expiration_request_proto_goTypes = []any{
 	(*TouchExpirationRequest)(nil), // 0: database.v1.TouchExpirationRequest
 	(*durationpb.Duration)(nil),    // 1: google.protobuf.Duration
-	(*v1.RequestMetadata)(nil),     // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_database_v1_touch_expiration_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.TouchExpirationRequest.ttl:type_name -> google.protobuf.Duration

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/metrics_retention_policy_config.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -172,7 +172,7 @@ const file_common_v1_metrics_retention_policy_config_proto_rawDesc = "" +
 	"\x1cMetricsRetentionPolicyConfig\x125\n" +
 	"\bduration\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\bduration\x12*\n" +
 	"\fstorage_tier\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vstorageTier\x12)\n" +
-	"\vcompression\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcompressionB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vcompression\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcompressionB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_metrics_retention_policy_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_metrics_retention_policy_config_proto_goTypes = []any{

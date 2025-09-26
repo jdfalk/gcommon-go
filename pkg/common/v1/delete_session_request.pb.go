@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/delete_session_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -143,7 +143,7 @@ const file_common_v1_delete_session_request_proto_rawDesc = "" +
 	"\x18AuthDeleteSessionRequest\x12&\n" +
 	"\n" +
 	"session_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsessionId\x12\x14\n" +
-	"\x05force\x18\x02 \x01(\bR\x05forceB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05force\x18\x02 \x01(\bR\x05forceB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_delete_session_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_delete_session_request_proto_goTypes = []any{

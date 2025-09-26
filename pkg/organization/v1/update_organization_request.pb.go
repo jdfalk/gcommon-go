@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/update_organization_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type UpdateOrganizationRequest struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata       *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_OrganizationId *string                `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
-	xxx_hidden_Organization   *Organization          `protobuf:"bytes,3,opt,name=organization"`
-	xxx_hidden_UpdateFields   []string               `protobuf:"bytes,4,rep,name=update_fields,json=updateFields"`
+	state                     protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata       *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_OrganizationId *string                 `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
+	xxx_hidden_Organization   *Organization           `protobuf:"bytes,3,opt,name=organization"`
+	xxx_hidden_UpdateFields   []string                `protobuf:"bytes,4,rep,name=update_fields,json=updateFields"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -60,7 +60,7 @@ func (x *UpdateOrganizationRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *UpdateOrganizationRequest) GetMetadata() *v1.RequestMetadata {
+func (x *UpdateOrganizationRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -91,7 +91,7 @@ func (x *UpdateOrganizationRequest) GetUpdateFields() []string {
 	return nil
 }
 
-func (x *UpdateOrganizationRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *UpdateOrganizationRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -146,7 +146,7 @@ type UpdateOrganizationRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Organization ID to update
 	OrganizationId *string
 	// Updated organization information
@@ -178,12 +178,12 @@ const file_organization_v1_update_organization_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x80\x01\n" +
 	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationId\x12A\n" +
 	"\forganization\x18\x03 \x01(\v2\x1d.organization.v1.OrganizationR\forganization\x12#\n" +
-	"\rupdate_fields\x18\x04 \x03(\tR\fupdateFieldsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rupdate_fields\x18\x04 \x03(\tR\fupdateFieldsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_update_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_update_organization_request_proto_goTypes = []any{
 	(*UpdateOrganizationRequest)(nil), // 0: organization.v1.UpdateOrganizationRequest
-	(*v1.RequestMetadata)(nil),        // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
 	(*Organization)(nil),              // 2: organization.v1.Organization
 }
 var file_organization_v1_update_organization_request_proto_depIdxs = []int32{

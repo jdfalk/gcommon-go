@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_stats_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type MetricsGetStatsRequest struct {
-	state               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metric   *string                `protobuf:"bytes,1,opt,name=metric"`
-	xxx_hidden_Range    *MetricsTimestampRange `protobuf:"bytes,2,opt,name=range"`
-	xxx_hidden_Metadata *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metric   *string                 `protobuf:"bytes,1,opt,name=metric"`
+	xxx_hidden_Range    *MetricsTimestampRange  `protobuf:"bytes,2,opt,name=range"`
+	xxx_hidden_Metadata *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -78,13 +78,13 @@ func (x *MetricsGetStatsRequest) GetRange() *MetricsTimestampRange {
 	return nil
 }
 
-func (x *MetricsGetStatsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *MetricsGetStatsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -101,7 +101,7 @@ func (x *MetricsGetStatsRequest) SetRange(v *MetricsTimestampRange) {
 	x.xxx_hidden_Range = v
 }
 
-func (x *MetricsGetStatsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *MetricsGetStatsRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
@@ -142,7 +142,7 @@ func (x *MetricsGetStatsRequest) ClearRange() {
 
 func (x *MetricsGetStatsRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 type MetricsGetStatsRequest_builder struct {
@@ -153,7 +153,7 @@ type MetricsGetStatsRequest_builder struct {
 	// Time range for stats
 	Range *MetricsTimestampRange
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 MetricsGetStatsRequest_builder) Build() *MetricsGetStatsRequest {
@@ -181,13 +181,13 @@ const file_metrics_v1_get_stats_request_proto_rawDesc = "" +
 	"\x16MetricsGetStatsRequest\x12\x1f\n" +
 	"\x06metric\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06metric\x127\n" +
 	"\x05range\x18\x02 \x01(\v2!.metrics.v1.MetricsTimestampRangeR\x05range\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_stats_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_stats_request_proto_goTypes = []any{
 	(*MetricsGetStatsRequest)(nil), // 0: metrics.v1.MetricsGetStatsRequest
 	(*MetricsTimestampRange)(nil),  // 1: metrics.v1.MetricsTimestampRange
-	(*v1.RequestMetadata)(nil),     // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_get_stats_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsGetStatsRequest.range:type_name -> metrics.v1.MetricsTimestampRange

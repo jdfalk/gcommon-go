@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/delete_queue_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -174,7 +174,7 @@ const file_queue_v1_delete_queue_response_proto_rawDesc = "" +
 	"\x13DeleteQueueResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x120\n" +
 	"\x0fpurged_messages\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0epurgedMessages\x12!\n" +
-	"\amessage\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_delete_queue_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_delete_queue_response_proto_goTypes = []any{

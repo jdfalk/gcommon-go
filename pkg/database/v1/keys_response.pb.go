@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/keys_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type KeysResponse struct {
 	xxx_hidden_Keys        []string               `protobuf:"bytes,1,rep,name=keys"`
 	xxx_hidden_TotalCount  int64                  `protobuf:"varint,2,opt,name=total_count,json=totalCount"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,3,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,4,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,4,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -84,7 +84,7 @@ func (x *KeysResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *KeysResponse) GetError() *v1.Error {
+func (x *KeysResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -105,7 +105,7 @@ func (x *KeysResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *KeysResponse) SetError(v *v1.Error) {
+func (x *KeysResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -154,7 +154,7 @@ type KeysResponse_builder struct {
 	// Whether the operation was successful
 	Success *bool
 	// Error details if keys retrieval failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 KeysResponse_builder) Build() *KeysResponse {
@@ -184,12 +184,12 @@ const file_database_v1_keys_response_proto_rawDesc = "" +
 	"\vtotal_count\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"totalCount\x12\x18\n" +
 	"\asuccess\x18\x03 \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_keys_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_keys_response_proto_goTypes = []any{
 	(*KeysResponse)(nil), // 0: database.v1.KeysResponse
-	(*v1.Error)(nil),     // 1: common.v1.Error
+	(*common.Error)(nil), // 1: common.v1.Error
 }
 var file_database_v1_keys_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.KeysResponse.error:type_name -> common.v1.Error

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/batch_delivery_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -200,7 +200,7 @@ const file_queue_v1_batch_delivery_config_proto_rawDesc = "" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x12-\n" +
 	"\x0emax_batch_size\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fmaxBatchSize\x12/\n" +
 	"\x0fmax_batch_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rmaxBatchBytes\x121\n" +
-	"\x10batch_timeout_ms\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0ebatchTimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10batch_timeout_ms\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0ebatchTimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_batch_delivery_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_batch_delivery_config_proto_goTypes = []any{

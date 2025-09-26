@@ -203,7 +203,7 @@ const file_metrics_v2_error_type_stats_proto_rawDesc = "" +
 	"\x04rate\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x04rate\x127\n" +
 	"\n" +
 	"percentage\x18\x04 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\n" +
-	"percentageB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"percentageB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_error_type_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_error_type_stats_proto_goTypes = []any{

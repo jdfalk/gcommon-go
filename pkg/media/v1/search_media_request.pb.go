@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: media/v1/search_media_request.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type SearchMediaRequest struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Query       *string                `protobuf:"bytes,1,opt,name=query"`
-	xxx_hidden_MediaType   v1.MediaType           `protobuf:"varint,2,opt,name=media_type,json=mediaType,enum=common.v1.MediaType"`
+	xxx_hidden_MediaType   common.MediaType       `protobuf:"varint,2,opt,name=media_type,json=mediaType,enum=common.v1.MediaType"`
 	xxx_hidden_Tags        []string               `protobuf:"bytes,3,rep,name=tags"`
 	xxx_hidden_Language    *string                `protobuf:"bytes,4,opt,name=language"`
 	xxx_hidden_PageSize    int32                  `protobuf:"varint,5,opt,name=page_size,json=pageSize"`
@@ -73,13 +73,13 @@ func (x *SearchMediaRequest) GetQuery() string {
 	return ""
 }
 
-func (x *SearchMediaRequest) GetMediaType() v1.MediaType {
+func (x *SearchMediaRequest) GetMediaType() common.MediaType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_MediaType
 		}
 	}
-	return v1.MediaType(0)
+	return common.MediaType(0)
 }
 
 func (x *SearchMediaRequest) GetTags() []string {
@@ -121,7 +121,7 @@ func (x *SearchMediaRequest) SetQuery(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *SearchMediaRequest) SetMediaType(v v1.MediaType) {
+func (x *SearchMediaRequest) SetMediaType(v common.MediaType) {
 	x.xxx_hidden_MediaType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
@@ -187,7 +187,7 @@ func (x *SearchMediaRequest) ClearQuery() {
 
 func (x *SearchMediaRequest) ClearMediaType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_MediaType = v1.MediaType_MEDIA_TYPE_UNSPECIFIED
+	x.xxx_hidden_MediaType = common.MediaType_MEDIA_TYPE_UNSPECIFIED
 }
 
 func (x *SearchMediaRequest) ClearLanguage() {
@@ -209,7 +209,7 @@ type SearchMediaRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	Query     *string
-	MediaType *v1.MediaType
+	MediaType *common.MediaType
 	Tags      []string
 	Language  *string
 	PageSize  *int32
@@ -258,12 +258,12 @@ const file_media_v1_search_media_request_proto_rawDesc = "" +
 	"\tpage_size\x18\x05 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12&\n" +
 	"\n" +
-	"page_token\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"page_token\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_search_media_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_search_media_request_proto_goTypes = []any{
 	(*SearchMediaRequest)(nil), // 0: media.v1.SearchMediaRequest
-	(v1.MediaType)(0),          // 1: common.v1.MediaType
+	(common.MediaType)(0),      // 1: common.v1.MediaType
 }
 var file_media_v1_search_media_request_proto_depIdxs = []int32{
 	1, // 0: media.v1.SearchMediaRequest.media_type:type_name -> common.v1.MediaType

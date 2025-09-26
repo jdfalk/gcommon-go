@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/get_organization_settings_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type GetOrganizationSettingsRequest struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata       *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_OrganizationId *string                `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
+	state                     protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata       *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_OrganizationId *string                 `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -58,7 +58,7 @@ func (x *GetOrganizationSettingsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetOrganizationSettingsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetOrganizationSettingsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -75,7 +75,7 @@ func (x *GetOrganizationSettingsRequest) GetOrganizationId() string {
 	return ""
 }
 
-func (x *GetOrganizationSettingsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetOrganizationSettingsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -111,7 +111,7 @@ type GetOrganizationSettingsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Organization identifier
 	OrganizationId *string
 }
@@ -135,12 +135,12 @@ const file_organization_v1_get_organization_settings_request_proto_rawDesc = "" 
 	"7organization/v1/get_organization_settings_request.proto\x12\x0forganization.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"\xdb\x01\n" +
 	"\x1eGetOrganizationSettingsRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x80\x01\n" +
-	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationIdB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationIdB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_get_organization_settings_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_get_organization_settings_request_proto_goTypes = []any{
 	(*GetOrganizationSettingsRequest)(nil), // 0: organization.v1.GetOrganizationSettingsRequest
-	(*v1.RequestMetadata)(nil),             // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),         // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_get_organization_settings_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.GetOrganizationSettingsRequest.metadata:type_name -> common.v1.RequestMetadata

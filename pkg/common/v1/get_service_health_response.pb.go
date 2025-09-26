@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_service_health_response.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -164,7 +164,7 @@ const file_common_v1_get_service_health_response_proto_rawDesc = "" +
 	"\x06status\x18\x01 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x129\n" +
 	"\n" +
 	"last_check\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheck\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_service_health_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_service_health_response_proto_goTypes = []any{

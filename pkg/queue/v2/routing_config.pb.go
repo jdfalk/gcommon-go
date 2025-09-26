@@ -211,7 +211,7 @@ const file_queue_v2_routing_config_proto_rawDesc = "" +
 	"\vkey_pattern\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"keyPattern\x12\x16\n" +
 	"\x06sticky\x18\x03 \x01(\bR\x06sticky\x12,\n" +
-	"\rload_balancer\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\floadBalancerB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rload_balancer\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\floadBalancerB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_routing_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_routing_config_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/update_options.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,7 +30,7 @@ type UpdateOptions struct {
 	xxx_hidden_DryRun          bool                   `protobuf:"varint,2,opt,name=dry_run,json=dryRun"`
 	xxx_hidden_RestartIfNeeded bool                   `protobuf:"varint,3,opt,name=restart_if_needed,json=restartIfNeeded"`
 	xxx_hidden_BackupConfig    bool                   `protobuf:"varint,4,opt,name=backup_config,json=backupConfig"`
-	xxx_hidden_Strategy        v1.UpdateStrategy      `protobuf:"varint,5,opt,name=strategy,enum=common.v1.UpdateStrategy"`
+	xxx_hidden_Strategy        common.UpdateStrategy  `protobuf:"varint,5,opt,name=strategy,enum=common.v1.UpdateStrategy"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -90,13 +90,13 @@ func (x *UpdateOptions) GetBackupConfig() bool {
 	return false
 }
 
-func (x *UpdateOptions) GetStrategy() v1.UpdateStrategy {
+func (x *UpdateOptions) GetStrategy() common.UpdateStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			return x.xxx_hidden_Strategy
 		}
 	}
-	return v1.UpdateStrategy(0)
+	return common.UpdateStrategy(0)
 }
 
 func (x *UpdateOptions) SetValidateConfig(v bool) {
@@ -119,7 +119,7 @@ func (x *UpdateOptions) SetBackupConfig(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
 }
 
-func (x *UpdateOptions) SetStrategy(v v1.UpdateStrategy) {
+func (x *UpdateOptions) SetStrategy(v common.UpdateStrategy) {
 	x.xxx_hidden_Strategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 5)
 }
@@ -181,7 +181,7 @@ func (x *UpdateOptions) ClearBackupConfig() {
 
 func (x *UpdateOptions) ClearStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	x.xxx_hidden_Strategy = v1.UpdateStrategy_UPDATE_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_Strategy = common.UpdateStrategy_UPDATE_STRATEGY_UNSPECIFIED
 }
 
 type UpdateOptions_builder struct {
@@ -196,7 +196,7 @@ type UpdateOptions_builder struct {
 	// Whether to backup current configuration before update
 	BackupConfig *bool
 	// Update strategy
-	Strategy *v1.UpdateStrategy
+	Strategy *common.UpdateStrategy
 }
 
 func (b0 UpdateOptions_builder) Build() *UpdateOptions {
@@ -237,12 +237,12 @@ const file_metrics_v1_update_options_proto_rawDesc = "" +
 	"\adry_run\x18\x02 \x01(\bR\x06dryRun\x12*\n" +
 	"\x11restart_if_needed\x18\x03 \x01(\bR\x0frestartIfNeeded\x12#\n" +
 	"\rbackup_config\x18\x04 \x01(\bR\fbackupConfig\x125\n" +
-	"\bstrategy\x18\x05 \x01(\x0e2\x19.common.v1.UpdateStrategyR\bstrategyB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bstrategy\x18\x05 \x01(\x0e2\x19.common.v1.UpdateStrategyR\bstrategyB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_update_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_update_options_proto_goTypes = []any{
-	(*UpdateOptions)(nil),  // 0: metrics.v1.UpdateOptions
-	(v1.UpdateStrategy)(0), // 1: common.v1.UpdateStrategy
+	(*UpdateOptions)(nil),      // 0: metrics.v1.UpdateOptions
+	(common.UpdateStrategy)(0), // 1: common.v1.UpdateStrategy
 }
 var file_metrics_v1_update_options_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.UpdateOptions.strategy:type_name -> common.v1.UpdateStrategy

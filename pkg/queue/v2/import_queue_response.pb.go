@@ -397,7 +397,7 @@ const file_queue_v2_import_queue_response_proto_rawDesc = "" +
 	"\x10progress_percent\x18\n" +
 	" \x01(\x02B\x0f\xbaH\f\n" +
 	"\n" +
-	"\x1d\x00\x00\xc8B-\x00\x00\x00\x00R\x0fprogressPercentB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1d\x00\x00\xc8B-\x00\x00\x00\x00R\x0fprogressPercentB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_import_queue_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_import_queue_response_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/load_balancer_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,11 +26,11 @@ const (
 
 // LoadBalancerConfig message definition.
 type WebLoadBalancerConfig struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Strategy        v1.LoadBalanceStrategy `protobuf:"varint,1,opt,name=strategy,enum=common.v1.LoadBalanceStrategy"`
-	xxx_hidden_Upstreams       []string               `protobuf:"bytes,2,rep,name=upstreams"`
-	xxx_hidden_HealthCheckPath *string                `protobuf:"bytes,3,opt,name=health_check_path,json=healthCheckPath"`
-	xxx_hidden_Timeout         *durationpb.Duration   `protobuf:"bytes,4,opt,name=timeout"`
+	state                      protoimpl.MessageState     `protogen:"opaque.v1"`
+	xxx_hidden_Strategy        common.LoadBalanceStrategy `protobuf:"varint,1,opt,name=strategy,enum=common.v1.LoadBalanceStrategy"`
+	xxx_hidden_Upstreams       []string                   `protobuf:"bytes,2,rep,name=upstreams"`
+	xxx_hidden_HealthCheckPath *string                    `protobuf:"bytes,3,opt,name=health_check_path,json=healthCheckPath"`
+	xxx_hidden_Timeout         *durationpb.Duration       `protobuf:"bytes,4,opt,name=timeout"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -62,13 +62,13 @@ func (x *WebLoadBalancerConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *WebLoadBalancerConfig) GetStrategy() v1.LoadBalanceStrategy {
+func (x *WebLoadBalancerConfig) GetStrategy() common.LoadBalanceStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Strategy
 		}
 	}
-	return v1.LoadBalanceStrategy(0)
+	return common.LoadBalanceStrategy(0)
 }
 
 func (x *WebLoadBalancerConfig) GetUpstreams() []string {
@@ -95,7 +95,7 @@ func (x *WebLoadBalancerConfig) GetTimeout() *durationpb.Duration {
 	return nil
 }
 
-func (x *WebLoadBalancerConfig) SetStrategy(v v1.LoadBalanceStrategy) {
+func (x *WebLoadBalancerConfig) SetStrategy(v common.LoadBalanceStrategy) {
 	x.xxx_hidden_Strategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -136,7 +136,7 @@ func (x *WebLoadBalancerConfig) HasTimeout() bool {
 
 func (x *WebLoadBalancerConfig) ClearStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Strategy = v1.LoadBalanceStrategy_LOAD_BALANCE_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_Strategy = common.LoadBalanceStrategy_LOAD_BALANCE_STRATEGY_UNSPECIFIED
 }
 
 func (x *WebLoadBalancerConfig) ClearHealthCheckPath() {
@@ -152,7 +152,7 @@ type WebLoadBalancerConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Load balancing strategy
-	Strategy *v1.LoadBalanceStrategy
+	Strategy *common.LoadBalanceStrategy
 	// Upstream server addresses
 	Upstreams []string
 	// Health check path
@@ -187,13 +187,13 @@ const file_web_v1_load_balancer_config_proto_rawDesc = "" +
 	"\bstrategy\x18\x01 \x01(\x0e2\x1e.common.v1.LoadBalanceStrategyR\bstrategy\x12&\n" +
 	"\tupstreams\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\tupstreams\x123\n" +
 	"\x11health_check_path\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fhealthCheckPath\x123\n" +
-	"\atimeout\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\atimeoutB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\atimeout\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\atimeoutB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_load_balancer_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_load_balancer_config_proto_goTypes = []any{
-	(*WebLoadBalancerConfig)(nil), // 0: web.v1.WebLoadBalancerConfig
-	(v1.LoadBalanceStrategy)(0),   // 1: common.v1.LoadBalanceStrategy
-	(*durationpb.Duration)(nil),   // 2: google.protobuf.Duration
+	(*WebLoadBalancerConfig)(nil),   // 0: web.v1.WebLoadBalancerConfig
+	(common.LoadBalanceStrategy)(0), // 1: common.v1.LoadBalanceStrategy
+	(*durationpb.Duration)(nil),     // 2: google.protobuf.Duration
 }
 var file_web_v1_load_balancer_config_proto_depIdxs = []int32{
 	1, // 0: web.v1.WebLoadBalancerConfig.strategy:type_name -> common.v1.LoadBalanceStrategy

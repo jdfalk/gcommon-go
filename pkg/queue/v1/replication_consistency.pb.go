@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/replication_consistency.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type ReplicationConsistency struct {
-	state                            protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_MinWriteReplicas      int32                  `protobuf:"varint,1,opt,name=min_write_replicas,json=minWriteReplicas"`
-	xxx_hidden_MinReadReplicas       int32                  `protobuf:"varint,2,opt,name=min_read_replicas,json=minReadReplicas"`
-	xxx_hidden_ReplicationFactor     int32                  `protobuf:"varint,3,opt,name=replication_factor,json=replicationFactor"`
-	xxx_hidden_ReplicationLevel      v1.ReplicationLevel    `protobuf:"varint,4,opt,name=replication_level,json=replicationLevel,enum=common.v1.ReplicationLevel"`
-	xxx_hidden_AntiEntropyEnabled    bool                   `protobuf:"varint,5,opt,name=anti_entropy_enabled,json=antiEntropyEnabled"`
-	xxx_hidden_RepairIntervalSeconds int32                  `protobuf:"varint,6,opt,name=repair_interval_seconds,json=repairIntervalSeconds"`
+	state                            protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_MinWriteReplicas      int32                   `protobuf:"varint,1,opt,name=min_write_replicas,json=minWriteReplicas"`
+	xxx_hidden_MinReadReplicas       int32                   `protobuf:"varint,2,opt,name=min_read_replicas,json=minReadReplicas"`
+	xxx_hidden_ReplicationFactor     int32                   `protobuf:"varint,3,opt,name=replication_factor,json=replicationFactor"`
+	xxx_hidden_ReplicationLevel      common.ReplicationLevel `protobuf:"varint,4,opt,name=replication_level,json=replicationLevel,enum=common.v1.ReplicationLevel"`
+	xxx_hidden_AntiEntropyEnabled    bool                    `protobuf:"varint,5,opt,name=anti_entropy_enabled,json=antiEntropyEnabled"`
+	xxx_hidden_RepairIntervalSeconds int32                   `protobuf:"varint,6,opt,name=repair_interval_seconds,json=repairIntervalSeconds"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -83,13 +83,13 @@ func (x *ReplicationConsistency) GetReplicationFactor() int32 {
 	return 0
 }
 
-func (x *ReplicationConsistency) GetReplicationLevel() v1.ReplicationLevel {
+func (x *ReplicationConsistency) GetReplicationLevel() common.ReplicationLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_ReplicationLevel
 		}
 	}
-	return v1.ReplicationLevel(0)
+	return common.ReplicationLevel(0)
 }
 
 func (x *ReplicationConsistency) GetAntiEntropyEnabled() bool {
@@ -121,7 +121,7 @@ func (x *ReplicationConsistency) SetReplicationFactor(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *ReplicationConsistency) SetReplicationLevel(v v1.ReplicationLevel) {
+func (x *ReplicationConsistency) SetReplicationLevel(v common.ReplicationLevel) {
 	x.xxx_hidden_ReplicationLevel = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
@@ -195,7 +195,7 @@ func (x *ReplicationConsistency) ClearReplicationFactor() {
 
 func (x *ReplicationConsistency) ClearReplicationLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_ReplicationLevel = v1.ReplicationLevel_REPLICATION_LEVEL_UNSPECIFIED
+	x.xxx_hidden_ReplicationLevel = common.ReplicationLevel_REPLICATION_LEVEL_UNSPECIFIED
 }
 
 func (x *ReplicationConsistency) ClearAntiEntropyEnabled() {
@@ -218,7 +218,7 @@ type ReplicationConsistency_builder struct {
 	// Replication factor (total number of replicas)
 	ReplicationFactor *int32
 	// Consistency level for replication
-	ReplicationLevel *v1.ReplicationLevel
+	ReplicationLevel *common.ReplicationLevel
 	// Enable anti-entropy repair
 	AntiEntropyEnabled *bool
 	// Anti-entropy repair interval (seconds)
@@ -267,12 +267,12 @@ const file_queue_v1_replication_consistency_proto_rawDesc = "" +
 	"\x12replication_factor\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11replicationFactor\x12H\n" +
 	"\x11replication_level\x18\x04 \x01(\x0e2\x1b.common.v1.ReplicationLevelR\x10replicationLevel\x120\n" +
 	"\x14anti_entropy_enabled\x18\x05 \x01(\bR\x12antiEntropyEnabled\x12?\n" +
-	"\x17repair_interval_seconds\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x15repairIntervalSecondsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17repair_interval_seconds\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x15repairIntervalSecondsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_replication_consistency_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_replication_consistency_proto_goTypes = []any{
 	(*ReplicationConsistency)(nil), // 0: queue.v1.ReplicationConsistency
-	(v1.ReplicationLevel)(0),       // 1: common.v1.ReplicationLevel
+	(common.ReplicationLevel)(0),   // 1: common.v1.ReplicationLevel
 }
 var file_queue_v1_replication_consistency_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ReplicationConsistency.replication_level:type_name -> common.v1.ReplicationLevel

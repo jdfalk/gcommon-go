@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/alert_severity.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -95,7 +95,7 @@ const file_common_v1_alert_severity_proto_rawDesc = "" +
 	"\x17ALERT_SEVERITY_CRITICAL\x10\x04\x12\x17\n" +
 	"\x13ALERT_SEVERITY_INFO\x10\x05\x12\x1a\n" +
 	"\x16ALERT_SEVERITY_WARNING\x10\x06\x12\x18\n" +
-	"\x14ALERT_SEVERITY_ERROR\x10\aB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14ALERT_SEVERITY_ERROR\x10\aB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_alert_severity_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_alert_severity_proto_goTypes = []any{

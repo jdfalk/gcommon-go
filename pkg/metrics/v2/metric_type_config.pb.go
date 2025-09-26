@@ -178,7 +178,7 @@ const file_metrics_v2_metric_type_config_proto_rawDesc = "" +
 	"\thistogram\x18\x01 \x01(\v2\x1b.metrics.v2.HistogramConfigR\thistogram\x123\n" +
 	"\asummary\x18\x02 \x01(\v2\x19.metrics.v2.SummaryConfigR\asummary\x12-\n" +
 	"\x05gauge\x18\x03 \x01(\v2\x17.metrics.v2.GaugeConfigR\x05gauge\x123\n" +
-	"\acounter\x18\x04 \x01(\v2\x19.metrics.v2.CounterConfigR\acounterB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\acounter\x18\x04 \x01(\v2\x19.metrics.v2.CounterConfigR\acounterB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_metric_type_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_metric_type_config_proto_goTypes = []any{

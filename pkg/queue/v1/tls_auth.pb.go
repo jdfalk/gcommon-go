@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/tls_auth.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -209,7 +209,7 @@ const file_queue_v1_tls_auth_proto_rawDesc = "" +
 	"\bcert_pem\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\acertPem\x12 \n" +
 	"\akey_pem\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06keyPem\x12\x1e\n" +
 	"\x06ca_pem\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05caPem\x12#\n" +
-	"\rverify_server\x18\x04 \x01(\bR\fverifyServerB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rverify_server\x18\x04 \x01(\bR\fverifyServerB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_tls_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_tls_auth_proto_goTypes = []any{

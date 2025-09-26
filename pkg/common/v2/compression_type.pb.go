@@ -87,7 +87,7 @@ const file_common_v2_compression_type_proto_rawDesc = "" +
 	"\x15COMPRESSION_TYPE_GZIP\x10\x02\x12\x18\n" +
 	"\x14COMPRESSION_TYPE_ZIP\x10\x03\x12\x1a\n" +
 	"\x16COMPRESSION_TYPE_BZIP2\x10\x04\x12\x1b\n" +
-	"\x17COMPRESSION_TYPE_TAR_GZ\x10\x05B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17COMPRESSION_TYPE_TAR_GZ\x10\x05B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_compression_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_compression_type_proto_goTypes = []any{

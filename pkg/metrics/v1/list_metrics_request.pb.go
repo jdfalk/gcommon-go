@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/list_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 // ListMetricsRequest requests a paginated list of metrics.
 type ListMetricsRequest struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Pagination  *v1.Pagination         `protobuf:"bytes,1,opt,name=pagination"`
+	xxx_hidden_Pagination  *common.Pagination     `protobuf:"bytes,1,opt,name=pagination"`
 	xxx_hidden_NameFilter  *string                `protobuf:"bytes,2,opt,name=name_filter,json=nameFilter"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -60,7 +60,7 @@ func (x *ListMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListMetricsRequest) GetPagination() *v1.Pagination {
+func (x *ListMetricsRequest) GetPagination() *common.Pagination {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
@@ -77,7 +77,7 @@ func (x *ListMetricsRequest) GetNameFilter() string {
 	return ""
 }
 
-func (x *ListMetricsRequest) SetPagination(v *v1.Pagination) {
+func (x *ListMetricsRequest) SetPagination(v *common.Pagination) {
 	x.xxx_hidden_Pagination = v
 }
 
@@ -113,7 +113,7 @@ type ListMetricsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Pagination information
-	Pagination *v1.Pagination
+	Pagination *common.Pagination
 	// Optional name filter
 	NameFilter *string
 }
@@ -141,12 +141,12 @@ const file_metrics_v1_list_metrics_request_proto_rawDesc = "" +
 	"pagination\x18\x01 \x01(\v2\x15.common.v1.PaginationR\n" +
 	"pagination\x12(\n" +
 	"\vname_filter\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
-	"nameFilterB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"nameFilterB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_list_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_list_metrics_request_proto_goTypes = []any{
 	(*ListMetricsRequest)(nil), // 0: metrics.v1.ListMetricsRequest
-	(*v1.Pagination)(nil),      // 1: common.v1.Pagination
+	(*common.Pagination)(nil),  // 1: common.v1.Pagination
 }
 var file_metrics_v1_list_metrics_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.ListMetricsRequest.pagination:type_name -> common.v1.Pagination

@@ -247,7 +247,7 @@ const file_organization_v2_billing_settings_proto_rawDesc = "" +
 	"\x0fbilling_address\x18\x02 \x01(\tR\x0ebillingAddress\x12\x15\n" +
 	"\x06tax_id\x18\x03 \x01(\tR\x05taxId\x12\x1a\n" +
 	"\bcurrency\x18\x04 \x01(\tR\bcurrency\x12#\n" +
-	"\rbilling_cycle\x18\x05 \x01(\tR\fbillingCycleB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rbilling_cycle\x18\x05 \x01(\tR\fbillingCycleB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_billing_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_billing_settings_proto_goTypes = []any{

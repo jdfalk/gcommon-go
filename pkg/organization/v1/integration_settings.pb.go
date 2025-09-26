@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/integration_settings.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type IntegrationSettings struct {
-	state                          protoimpl.MessageState     `protogen:"opaque.v1"`
-	xxx_hidden_EnabledIntegrations *[]*Integration            `protobuf:"bytes,1,rep,name=enabled_integrations,json=enabledIntegrations"`
-	xxx_hidden_Webhooks            *[]*WebhookConfig          `protobuf:"bytes,2,rep,name=webhooks"`
-	xxx_hidden_ApiKeys             *[]*v1.MetricsAPIKeyConfig `protobuf:"bytes,3,rep,name=api_keys,json=apiKeys"`
-	xxx_hidden_OauthApps           *[]*OAuthAppConfig         `protobuf:"bytes,4,rep,name=oauth_apps,json=oauthApps"`
+	state                          protoimpl.MessageState         `protogen:"opaque.v1"`
+	xxx_hidden_EnabledIntegrations *[]*Integration                `protobuf:"bytes,1,rep,name=enabled_integrations,json=enabledIntegrations"`
+	xxx_hidden_Webhooks            *[]*WebhookConfig              `protobuf:"bytes,2,rep,name=webhooks"`
+	xxx_hidden_ApiKeys             *[]*common.MetricsAPIKeyConfig `protobuf:"bytes,3,rep,name=api_keys,json=apiKeys"`
+	xxx_hidden_OauthApps           *[]*OAuthAppConfig             `protobuf:"bytes,4,rep,name=oauth_apps,json=oauthApps"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -80,13 +80,13 @@ func (x *IntegrationSettings) GetWebhooks() []*WebhookConfig {
 	return nil
 }
 
-func (x *IntegrationSettings) GetApiKeys() []*v1.MetricsAPIKeyConfig {
+func (x *IntegrationSettings) GetApiKeys() []*common.MetricsAPIKeyConfig {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_ApiKeys) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *[]*v1.MetricsAPIKeyConfig
+			var rv *[]*common.MetricsAPIKeyConfig
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_ApiKeys), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -111,11 +111,11 @@ func (x *IntegrationSettings) SetWebhooks(v []*WebhookConfig) {
 	x.xxx_hidden_Webhooks = &v
 }
 
-func (x *IntegrationSettings) SetApiKeys(v []*v1.MetricsAPIKeyConfig) {
-	var sv *[]*v1.MetricsAPIKeyConfig
+func (x *IntegrationSettings) SetApiKeys(v []*common.MetricsAPIKeyConfig) {
+	var sv *[]*common.MetricsAPIKeyConfig
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_ApiKeys), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.MetricsAPIKeyConfig{}
+		sv = &[]*common.MetricsAPIKeyConfig{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_ApiKeys), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -134,7 +134,7 @@ type IntegrationSettings_builder struct {
 	// Webhook configuration for external notifications
 	Webhooks []*WebhookConfig
 	// API keys for external services
-	ApiKeys []*v1.MetricsAPIKeyConfig
+	ApiKeys []*common.MetricsAPIKeyConfig
 	// OAuth applications registered for this organization
 	OauthApps []*OAuthAppConfig
 }
@@ -164,15 +164,15 @@ const file_organization_v1_integration_settings_proto_rawDesc = "" +
 	"\bapi_keys\x18\x03 \x03(\v2\x1e.common.v1.MetricsAPIKeyConfigB\n" +
 	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\aapiKeys\x12H\n" +
 	"\n" +
-	"oauth_apps\x18\x04 \x03(\v2\x1f.organization.v1.OAuthAppConfigB\b\xbaH\x05\x92\x01\x02\b\x01R\toauthAppsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"oauth_apps\x18\x04 \x03(\v2\x1f.organization.v1.OAuthAppConfigB\b\xbaH\x05\x92\x01\x02\b\x01R\toauthAppsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_integration_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_integration_settings_proto_goTypes = []any{
-	(*IntegrationSettings)(nil),    // 0: organization.v1.IntegrationSettings
-	(*Integration)(nil),            // 1: organization.v1.Integration
-	(*WebhookConfig)(nil),          // 2: organization.v1.WebhookConfig
-	(*v1.MetricsAPIKeyConfig)(nil), // 3: common.v1.MetricsAPIKeyConfig
-	(*OAuthAppConfig)(nil),         // 4: organization.v1.OAuthAppConfig
+	(*IntegrationSettings)(nil),        // 0: organization.v1.IntegrationSettings
+	(*Integration)(nil),                // 1: organization.v1.Integration
+	(*WebhookConfig)(nil),              // 2: organization.v1.WebhookConfig
+	(*common.MetricsAPIKeyConfig)(nil), // 3: common.v1.MetricsAPIKeyConfig
+	(*OAuthAppConfig)(nil),             // 4: organization.v1.OAuthAppConfig
 }
 var file_organization_v1_integration_settings_proto_depIdxs = []int32{
 	1, // 0: organization.v1.IntegrationSettings.enabled_integrations:type_name -> organization.v1.Integration

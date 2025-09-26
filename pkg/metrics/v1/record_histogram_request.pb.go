@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_histogram_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,17 +25,17 @@ const (
 )
 
 type RecordHistogramRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name            *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Value           float64                `protobuf:"fixed64,2,opt,name=value"`
-	xxx_hidden_Labels          map[string]string      `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Help            *string                `protobuf:"bytes,4,opt,name=help"`
-	xxx_hidden_Unit            *string                `protobuf:"bytes,5,opt,name=unit"`
-	xxx_hidden_Buckets         []float64              `protobuf:"fixed64,6,rep,packed,name=buckets"`
-	xxx_hidden_Timestamp       *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=timestamp"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,8,opt,name=metadata"`
-	xxx_hidden_SampleWeight    float64                `protobuf:"fixed64,9,opt,name=sample_weight,json=sampleWeight"`
-	xxx_hidden_CreateIfMissing bool                   `protobuf:"varint,10,opt,name=create_if_missing,json=createIfMissing"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Name            *string                 `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Value           float64                 `protobuf:"fixed64,2,opt,name=value"`
+	xxx_hidden_Labels          map[string]string       `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Help            *string                 `protobuf:"bytes,4,opt,name=help"`
+	xxx_hidden_Unit            *string                 `protobuf:"bytes,5,opt,name=unit"`
+	xxx_hidden_Buckets         []float64               `protobuf:"fixed64,6,rep,packed,name=buckets"`
+	xxx_hidden_Timestamp       *timestamppb.Timestamp  `protobuf:"bytes,7,opt,name=timestamp"`
+	xxx_hidden_Metadata        *common.RequestMetadata `protobuf:"bytes,8,opt,name=metadata"`
+	xxx_hidden_SampleWeight    float64                 `protobuf:"fixed64,9,opt,name=sample_weight,json=sampleWeight"`
+	xxx_hidden_CreateIfMissing bool                    `protobuf:"varint,10,opt,name=create_if_missing,json=createIfMissing"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -125,7 +125,7 @@ func (x *RecordHistogramRequest) GetTimestamp() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *RecordHistogramRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RecordHistogramRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -178,7 +178,7 @@ func (x *RecordHistogramRequest) SetTimestamp(v *timestamppb.Timestamp) {
 	x.xxx_hidden_Timestamp = v
 }
 
-func (x *RecordHistogramRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RecordHistogramRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -304,7 +304,7 @@ type RecordHistogramRequest_builder struct {
 	// Optional timestamp when the observation was made
 	Timestamp *timestamppb.Timestamp
 	// Request metadata for tracing and debugging
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Optional sample weight (for weighted observations)
 	SampleWeight *float64
 	// Whether to create the histogram if it doesn't exist
@@ -366,14 +366,14 @@ const file_metrics_v1_record_histogram_request_proto_rawDesc = "" +
 	" \x01(\bR\x0fcreateIfMissing\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_histogram_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_record_histogram_request_proto_goTypes = []any{
 	(*RecordHistogramRequest)(nil), // 0: metrics.v1.RecordHistogramRequest
 	nil,                            // 1: metrics.v1.RecordHistogramRequest.LabelsEntry
 	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
-	(*v1.RequestMetadata)(nil),     // 3: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_metrics_v1_record_histogram_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RecordHistogramRequest.labels:type_name -> metrics.v1.RecordHistogramRequest.LabelsEntry

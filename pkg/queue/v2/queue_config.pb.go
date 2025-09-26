@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -310,7 +310,7 @@ const file_queue_v2_queue_config_proto_rawDesc = "" +
 	"\x10default_priority\x18\x05 \x01(\x0e2\x18.common.v2.PriorityLevelR\x0fdefaultPriority\x12\x18\n" +
 	"\adurable\x18\x06 \x01(\bR\adurable\x12\x1f\n" +
 	"\vauto_delete\x18\a \x01(\bR\n" +
-	"autoDeleteB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"autoDeleteB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_queue_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_queue_config_proto_goTypes = []any{

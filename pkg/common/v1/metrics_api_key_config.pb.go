@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/metrics_api_key_config.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -156,7 +156,7 @@ const file_common_v1_metrics_api_key_config_proto_rawDesc = "" +
 	"\vheader_name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\n" +
 	"headerName\x12\x1a\n" +
 	"\brequired\x18\x02 \x01(\bR\brequired\x12!\n" +
-	"\fallowed_keys\x18\x03 \x03(\tR\vallowedKeysB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fallowed_keys\x18\x03 \x03(\tR\vallowedKeysB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_metrics_api_key_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_metrics_api_key_config_proto_goTypes = []any{

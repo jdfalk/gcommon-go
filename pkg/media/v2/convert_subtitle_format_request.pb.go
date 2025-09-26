@@ -172,7 +172,7 @@ const file_media_v2_convert_subtitle_format_request_proto_rawDesc = "" +
 	"\x1cConvertSubtitleFormatRequest\x121\n" +
 	"\x10subtitle_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0esubtitleFileId\x12#\n" +
 	"\rtarget_format\x18\x02 \x01(\tR\ftargetFormat\x12)\n" +
-	"\x10preserve_styling\x18\x03 \x01(\bR\x0fpreserveStylingB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10preserve_styling\x18\x03 \x01(\bR\x0fpreserveStylingB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_convert_subtitle_format_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_convert_subtitle_format_request_proto_goTypes = []any{

@@ -104,7 +104,7 @@ const file_health_v2_health_status_proto_rawDesc = "" +
 	"\x16HEALTH_STATUS_STARTING\x10\x04\x12\x1a\n" +
 	"\x16HEALTH_STATUS_STOPPING\x10\x05\x12\x19\n" +
 	"\x15HEALTH_STATUS_UNKNOWN\x10\x06\x12\x1d\n" +
-	"\x19HEALTH_STATUS_MAINTENANCE\x10\aB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x19HEALTH_STATUS_MAINTENANCE\x10\aB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_health_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_health_v2_health_status_proto_goTypes = []any{

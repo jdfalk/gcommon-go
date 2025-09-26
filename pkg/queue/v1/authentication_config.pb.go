@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/authentication_config.proto
 
-package v1
+package queue
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -390,7 +390,7 @@ const file_queue_v1_authentication_config_proto_rawDesc = "" +
 	"\x03tls\x18\x04 \x01(\v2\x11.queue.v1.TLSAuthH\x00R\x03tls\x12(\n" +
 	"\x04sasl\x18\x05 \x01(\v2\x12.queue.v1.SASLAuthH\x00R\x04sasl\x12.\n" +
 	"\x06oauth2\x18\x06 \x01(\v2\x14.queue.v1.OAuth2AuthH\x00R\x06oauth2B\v\n" +
-	"\tauth_typeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tauth_typeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_authentication_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_authentication_config_proto_goTypes = []any{

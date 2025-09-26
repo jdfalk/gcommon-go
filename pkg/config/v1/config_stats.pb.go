@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/config_stats.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -200,7 +200,7 @@ const file_config_v1_config_stats_proto_rawDesc = "" +
 	"\rtotal_configs\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalConfigs\x12.\n" +
 	"\x0eactive_configs\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ractiveConfigs\x126\n" +
 	"\x12deprecated_configs\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11deprecatedConfigs\x12@\n" +
-	"\x14avg_access_frequency\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x12avgAccessFrequencyB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14avg_access_frequency\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x12avgAccessFrequencyB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_config_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_config_stats_proto_goTypes = []any{

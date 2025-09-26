@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/secret_validation_severity.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -81,7 +81,7 @@ const file_common_v1_secret_validation_severity_proto_rawDesc = "" +
 	"\x1fSECRET_VALIDATION_SEVERITY_INFO\x10\x01\x12&\n" +
 	"\"SECRET_VALIDATION_SEVERITY_WARNING\x10\x02\x12$\n" +
 	" SECRET_VALIDATION_SEVERITY_ERROR\x10\x03\x12'\n" +
-	"#SECRET_VALIDATION_SEVERITY_CRITICAL\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"#SECRET_VALIDATION_SEVERITY_CRITICAL\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_secret_validation_severity_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_secret_validation_severity_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/error.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -262,7 +262,7 @@ const file_common_v1_error_proto_rawDesc = "" +
 	"\x06source\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06source\x1a:\n" +
 	"\fDetailsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_error_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_common_v1_error_proto_goTypes = []any{

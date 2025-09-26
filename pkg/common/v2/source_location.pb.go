@@ -210,7 +210,7 @@ const file_common_v2_source_location_proto_rawDesc = "" +
 	"\x04file\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04file\x12\x1b\n" +
 	"\x04line\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x04line\x12#\n" +
 	"\bfunction\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bfunction\x12!\n" +
-	"\apackage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\apackageB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\apackage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\apackageB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_source_location_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_source_location_proto_goTypes = []any{

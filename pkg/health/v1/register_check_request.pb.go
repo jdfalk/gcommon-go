@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/register_check_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,10 +27,10 @@ const (
 // Allows dynamic addition of health checks at runtime.
 // Follows 1-1-1 pattern: one message per file.
 type RegisterCheckRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_HealthCheck     *HealthCheck           `protobuf:"bytes,1,opt,name=health_check,json=healthCheck"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
-	xxx_hidden_ReplaceExisting bool                   `protobuf:"varint,3,opt,name=replace_existing,json=replaceExisting"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_HealthCheck     *HealthCheck            `protobuf:"bytes,1,opt,name=health_check,json=healthCheck"`
+	xxx_hidden_Metadata        *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
+	xxx_hidden_ReplaceExisting bool                    `protobuf:"varint,3,opt,name=replace_existing,json=replaceExisting"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -69,7 +69,7 @@ func (x *RegisterCheckRequest) GetHealthCheck() *HealthCheck {
 	return nil
 }
 
-func (x *RegisterCheckRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RegisterCheckRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -87,7 +87,7 @@ func (x *RegisterCheckRequest) SetHealthCheck(v *HealthCheck) {
 	x.xxx_hidden_HealthCheck = v
 }
 
-func (x *RegisterCheckRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RegisterCheckRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -136,7 +136,7 @@ type RegisterCheckRequest_builder struct {
 	// Health check configuration to register
 	HealthCheck *HealthCheck
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Whether to replace existing check with same ID
 	ReplaceExisting *bool
 }
@@ -162,13 +162,13 @@ const file_health_v1_register_check_request_proto_rawDesc = "" +
 	"\x14RegisterCheckRequest\x129\n" +
 	"\fhealth_check\x18\x01 \x01(\v2\x16.health.v1.HealthCheckR\vhealthCheck\x126\n" +
 	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12)\n" +
-	"\x10replace_existing\x18\x03 \x01(\bR\x0freplaceExistingB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10replace_existing\x18\x03 \x01(\bR\x0freplaceExistingB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_register_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_register_check_request_proto_goTypes = []any{
-	(*RegisterCheckRequest)(nil), // 0: health.v1.RegisterCheckRequest
-	(*HealthCheck)(nil),          // 1: health.v1.HealthCheck
-	(*v1.RequestMetadata)(nil),   // 2: common.v1.RequestMetadata
+	(*RegisterCheckRequest)(nil),   // 0: health.v1.RegisterCheckRequest
+	(*HealthCheck)(nil),            // 1: health.v1.HealthCheck
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_health_v1_register_check_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.RegisterCheckRequest.health_check:type_name -> health.v1.HealthCheck

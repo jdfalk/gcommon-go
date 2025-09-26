@@ -31,7 +31,7 @@ const file_database_v2_transaction_service_proto_rawDesc = "" +
 	"\x10BeginTransaction\x12$.database.v2.BeginTransactionRequest\x1a%.database.v2.BeginTransactionResponse\x12R\n" +
 	"\x11CommitTransaction\x12%.database.v2.CommitTransactionRequest\x1a\x16.google.protobuf.Empty\x12V\n" +
 	"\x13RollbackTransaction\x12'.database.v2.RollbackTransactionRequest\x1a\x16.google.protobuf.Empty\x12e\n" +
-	"\x14GetTransactionStatus\x12%.database.v2.TransactionStatusRequest\x1a&.database.v2.TransactionStatusResponseB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14GetTransactionStatus\x12%.database.v2.TransactionStatusRequest\x1a&.database.v2.TransactionStatusResponseB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_transaction_service_proto_goTypes = []any{
 	(*BeginTransactionRequest)(nil),    // 0: database.v2.BeginTransactionRequest

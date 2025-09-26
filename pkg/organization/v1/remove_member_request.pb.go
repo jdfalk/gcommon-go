@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/remove_member_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type RemoveMemberRequest struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata       *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_OrganizationId *string                `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
-	xxx_hidden_MemberId       *string                `protobuf:"bytes,3,opt,name=member_id,json=memberId"`
+	state                     protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata       *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_OrganizationId *string                 `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
+	xxx_hidden_MemberId       *string                 `protobuf:"bytes,3,opt,name=member_id,json=memberId"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -59,7 +59,7 @@ func (x *RemoveMemberRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *RemoveMemberRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RemoveMemberRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -86,7 +86,7 @@ func (x *RemoveMemberRequest) GetMemberId() string {
 	return ""
 }
 
-func (x *RemoveMemberRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RemoveMemberRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -139,7 +139,7 @@ type RemoveMemberRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Organization identifier
 	OrganizationId *string
 	// Member identifier to remove
@@ -170,12 +170,12 @@ const file_organization_v1_remove_member_request_proto_rawDesc = "" +
 	"\x13RemoveMemberRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x80\x01\n" +
 	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationId\x12\x1b\n" +
-	"\tmember_id\x18\x03 \x01(\tR\bmemberIdB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tmember_id\x18\x03 \x01(\tR\bmemberIdB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_remove_member_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_remove_member_request_proto_goTypes = []any{
-	(*RemoveMemberRequest)(nil), // 0: organization.v1.RemoveMemberRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*RemoveMemberRequest)(nil),    // 0: organization.v1.RemoveMemberRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_remove_member_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.RemoveMemberRequest.metadata:type_name -> common.v1.RequestMetadata

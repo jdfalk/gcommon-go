@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/template_parameter.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -542,7 +542,7 @@ const file_common_v1_template_parameter_proto_rawDesc = "" +
 	"\bexamples\x18\f \x03(\tR\bexamples\x12$\n" +
 	"\rdocumentation\x18\r \x01(\tR\rdocumentation\x12,\n" +
 	"\fdisplay_name\x18\x0e \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\vdisplayName\x12 \n" +
-	"\vplaceholder\x18\x0f \x01(\tR\vplaceholderB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vplaceholder\x18\x0f \x01(\tR\vplaceholderB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_template_parameter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_template_parameter_proto_goTypes = []any{

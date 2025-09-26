@@ -35,7 +35,7 @@ const file_database_v2_database_admin_service_proto_rawDesc = "" +
 	"\fCreateSchema\x12 .database.v2.CreateSchemaRequest\x1a!.database.v2.CreateSchemaResponse\x12D\n" +
 	"\n" +
 	"DropSchema\x12\x1e.database.v2.DropSchemaRequest\x1a\x16.google.protobuf.Empty\x12P\n" +
-	"\vListSchemas\x12\x1f.database.v2.ListSchemasRequest\x1a .database.v2.ListSchemasResponseB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vListSchemas\x12\x1f.database.v2.ListSchemasRequest\x1a .database.v2.ListSchemasResponseB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_database_admin_service_proto_goTypes = []any{
 	(*CreateDatabaseRequest)(nil),   // 0: database.v2.CreateDatabaseRequest

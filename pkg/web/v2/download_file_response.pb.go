@@ -107,7 +107,7 @@ const file_web_v2_download_file_response_proto_rawDesc = "" +
 	"\n" +
 	"#web/v2/download_file_response.proto\x12\x06web.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"A\n" +
 	"\x14DownloadFileResponse\x12)\n" +
-	"\vplaceholder\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vplaceholderB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vplaceholder\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vplaceholderB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_download_file_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_download_file_response_proto_goTypes = []any{

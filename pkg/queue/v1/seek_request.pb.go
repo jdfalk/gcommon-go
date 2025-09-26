@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/seek_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,7 +32,7 @@ type SeekRequest struct {
 	xxx_hidden_QueueName        *string                    `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
 	xxx_hidden_SubscriptionName *string                    `protobuf:"bytes,2,opt,name=subscription_name,json=subscriptionName"`
 	xxx_hidden_SeekPosition     isSeekRequest_SeekPosition `protobuf_oneof:"seek_position"`
-	xxx_hidden_Metadata         *v1.RequestMetadata        `protobuf:"bytes,100,opt,name=metadata"`
+	xxx_hidden_Metadata         *common.RequestMetadata    `protobuf:"bytes,100,opt,name=metadata"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -129,7 +129,7 @@ func (x *SeekRequest) GetMessageId() string {
 	return ""
 }
 
-func (x *SeekRequest) GetMetadata() *v1.RequestMetadata {
+func (x *SeekRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -170,7 +170,7 @@ func (x *SeekRequest) SetMessageId(v string) {
 	x.xxx_hidden_SeekPosition = &seekRequest_MessageId{v}
 }
 
-func (x *SeekRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *SeekRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -339,7 +339,7 @@ type SeekRequest_builder struct {
 	MessageId *string
 	// -- end of xxx_hidden_SeekPosition
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 SeekRequest_builder) Build() *SeekRequest {
@@ -438,13 +438,13 @@ const file_queue_v1_seek_request_proto_rawDesc = "" +
 	"\n" +
 	"message_id\x18\a \x01(\tH\x00R\tmessageId\x126\n" +
 	"\bmetadata\x18d \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB\x0f\n" +
-	"\rseek_positionB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rseek_positionB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_seek_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_seek_request_proto_goTypes = []any{
-	(*SeekRequest)(nil),           // 0: queue.v1.SeekRequest
-	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
-	(*v1.RequestMetadata)(nil),    // 2: common.v1.RequestMetadata
+	(*SeekRequest)(nil),            // 0: queue.v1.SeekRequest
+	(*timestamppb.Timestamp)(nil),  // 1: google.protobuf.Timestamp
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_queue_v1_seek_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.SeekRequest.timestamp:type_name -> google.protobuf.Timestamp

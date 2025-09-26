@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/health_service.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -34,7 +34,7 @@ const file_common_v1_health_service_proto_rawDesc = "" +
 	"\fListServices\x12\x1e.common.v1.ListServicesRequest\x1a\x1f.common.v1.ListServicesResponse\x12R\n" +
 	"\rRegisterCheck\x12\x1f.common.v1.RegisterCheckRequest\x1a .common.v1.RegisterCheckResponse\x12X\n" +
 	"\x0fUnregisterCheck\x12!.common.v1.UnregisterCheckRequest\x1a\".common.v1.UnregisterCheckResponse\x12[\n" +
-	"\x10GetHealthMetrics\x12\".common.v1.GetHealthMetricsRequest\x1a#.common.v1.GetHealthMetricsResponseB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10GetHealthMetrics\x12\".common.v1.GetHealthMetricsRequest\x1a#.common.v1.GetHealthMetricsResponseB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_health_service_proto_goTypes = []any{
 	(*HealthHealthCheckRequest)(nil),  // 0: common.v1.HealthHealthCheckRequest

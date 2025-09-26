@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_provider_stats_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type GetProviderStatsRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_ProviderId      *string                `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
-	xxx_hidden_TimeRange       *v1.TimeRangeMetrics   `protobuf:"bytes,3,opt,name=time_range,json=timeRange"`
-	xxx_hidden_Options         *StatsOptions          `protobuf:"bytes,4,opt,name=options"`
-	xxx_hidden_Granularity     *string                `protobuf:"bytes,5,opt,name=granularity"`
-	xxx_hidden_IncludeRealtime bool                   `protobuf:"varint,6,opt,name=include_realtime,json=includeRealtime"`
+	state                      protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Metadata        *common.RequestMetadata  `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_ProviderId      *string                  `protobuf:"bytes,2,opt,name=provider_id,json=providerId"`
+	xxx_hidden_TimeRange       *common.TimeRangeMetrics `protobuf:"bytes,3,opt,name=time_range,json=timeRange"`
+	xxx_hidden_Options         *StatsOptions            `protobuf:"bytes,4,opt,name=options"`
+	xxx_hidden_Granularity     *string                  `protobuf:"bytes,5,opt,name=granularity"`
+	xxx_hidden_IncludeRealtime bool                     `protobuf:"varint,6,opt,name=include_realtime,json=includeRealtime"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -62,7 +62,7 @@ func (x *GetProviderStatsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetProviderStatsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetProviderStatsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -79,7 +79,7 @@ func (x *GetProviderStatsRequest) GetProviderId() string {
 	return ""
 }
 
-func (x *GetProviderStatsRequest) GetTimeRange() *v1.TimeRangeMetrics {
+func (x *GetProviderStatsRequest) GetTimeRange() *common.TimeRangeMetrics {
 	if x != nil {
 		return x.xxx_hidden_TimeRange
 	}
@@ -110,7 +110,7 @@ func (x *GetProviderStatsRequest) GetIncludeRealtime() bool {
 	return false
 }
 
-func (x *GetProviderStatsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetProviderStatsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -119,7 +119,7 @@ func (x *GetProviderStatsRequest) SetProviderId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
 
-func (x *GetProviderStatsRequest) SetTimeRange(v *v1.TimeRangeMetrics) {
+func (x *GetProviderStatsRequest) SetTimeRange(v *common.TimeRangeMetrics) {
 	x.xxx_hidden_TimeRange = v
 }
 
@@ -210,11 +210,11 @@ type GetProviderStatsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Provider ID to get stats for
 	ProviderId *string
 	// Time range for statistics
-	TimeRange *v1.TimeRangeMetrics
+	TimeRange *common.TimeRangeMetrics
 	// What statistics to include
 	Options *StatsOptions
 	// Granularity for time-series statistics
@@ -259,13 +259,13 @@ const file_metrics_v1_get_provider_stats_request_proto_rawDesc = "" +
 	"time_range\x18\x03 \x01(\v2\x1b.common.v1.TimeRangeMetricsR\ttimeRange\x122\n" +
 	"\aoptions\x18\x04 \x01(\v2\x18.metrics.v1.StatsOptionsR\aoptions\x12 \n" +
 	"\vgranularity\x18\x05 \x01(\tR\vgranularity\x12)\n" +
-	"\x10include_realtime\x18\x06 \x01(\bR\x0fincludeRealtimeB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10include_realtime\x18\x06 \x01(\bR\x0fincludeRealtimeB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_provider_stats_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_provider_stats_request_proto_goTypes = []any{
 	(*GetProviderStatsRequest)(nil), // 0: metrics.v1.GetProviderStatsRequest
-	(*v1.RequestMetadata)(nil),      // 1: common.v1.RequestMetadata
-	(*v1.TimeRangeMetrics)(nil),     // 2: common.v1.TimeRangeMetrics
+	(*common.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*common.TimeRangeMetrics)(nil), // 2: common.v1.TimeRangeMetrics
 	(*StatsOptions)(nil),            // 3: metrics.v1.StatsOptions
 }
 var file_metrics_v1_get_provider_stats_request_proto_depIdxs = []int32{

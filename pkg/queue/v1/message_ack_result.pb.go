@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/message_ack_result.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ type MessageAckResult struct {
 	state                       protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_ReceiptHandle    *string                `protobuf:"bytes,1,opt,name=receipt_handle,json=receiptHandle"`
 	xxx_hidden_Success          bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_Error            *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error            *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	xxx_hidden_MessageId        *string                `protobuf:"bytes,4,opt,name=message_id,json=messageId"`
 	xxx_hidden_ProcessingResult *string                `protobuf:"bytes,5,opt,name=processing_result,json=processingResult"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
@@ -78,7 +78,7 @@ func (x *MessageAckResult) GetSuccess() bool {
 	return false
 }
 
-func (x *MessageAckResult) GetError() *v1.Error {
+func (x *MessageAckResult) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -115,7 +115,7 @@ func (x *MessageAckResult) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *MessageAckResult) SetError(v *v1.Error) {
+func (x *MessageAckResult) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -199,7 +199,7 @@ type MessageAckResult_builder struct {
 	Success *bool
 	// *
 	// Error information if acknowledgment failed for this message.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// Message ID for correlation (if available).
 	MessageId *string
@@ -243,12 +243,12 @@ const file_queue_v1_message_ack_result_proto_rawDesc = "" +
 	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05error\x12&\n" +
 	"\n" +
 	"message_id\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tmessageId\x124\n" +
-	"\x11processing_result\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10processingResultB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11processing_result\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10processingResultB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_message_ack_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_message_ack_result_proto_goTypes = []any{
 	(*MessageAckResult)(nil), // 0: queue.v1.MessageAckResult
-	(*v1.Error)(nil),         // 1: common.v1.Error
+	(*common.Error)(nil),     // 1: common.v1.Error
 }
 var file_queue_v1_message_ack_result_proto_depIdxs = []int32{
 	1, // 0: queue.v1.MessageAckResult.error:type_name -> common.v1.Error

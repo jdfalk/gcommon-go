@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/liveness_check_response.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,12 +28,12 @@ const (
 // Indicates whether a service is alive and responsive.
 // Follows 1-1-1 pattern: one message per file.
 type LivenessCheckResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Status      HealthStatus           `protobuf:"varint,1,opt,name=status,enum=health.v1.HealthStatus"`
-	xxx_hidden_Alive       bool                   `protobuf:"varint,2,opt,name=alive"`
-	xxx_hidden_StartedAt   *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=started_at,json=startedAt"`
-	xxx_hidden_Metadata    *v1.ResponseMetadata   `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_Details     *string                `protobuf:"bytes,5,opt,name=details"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Status      HealthStatus             `protobuf:"varint,1,opt,name=status,enum=health.v1.HealthStatus"`
+	xxx_hidden_Alive       bool                     `protobuf:"varint,2,opt,name=alive"`
+	xxx_hidden_StartedAt   *timestamppb.Timestamp   `protobuf:"bytes,3,opt,name=started_at,json=startedAt"`
+	xxx_hidden_Metadata    *common.ResponseMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Details     *string                  `protobuf:"bytes,5,opt,name=details"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -88,7 +88,7 @@ func (x *LivenessCheckResponse) GetStartedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *LivenessCheckResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *LivenessCheckResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -119,7 +119,7 @@ func (x *LivenessCheckResponse) SetStartedAt(v *timestamppb.Timestamp) {
 	x.xxx_hidden_StartedAt = v
 }
 
-func (x *LivenessCheckResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *LivenessCheckResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -196,7 +196,7 @@ type LivenessCheckResponse_builder struct {
 	// Uptime since last restart
 	StartedAt *timestamppb.Timestamp
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 	// Additional liveness details
 	Details *string
 }
@@ -233,14 +233,14 @@ const file_health_v1_liveness_check_response_proto_rawDesc = "" +
 	"\n" +
 	"started_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tstartedAt\x127\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x12\x18\n" +
-	"\adetails\x18\x05 \x01(\tR\adetailsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adetails\x18\x05 \x01(\tR\adetailsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_liveness_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_liveness_check_response_proto_goTypes = []any{
-	(*LivenessCheckResponse)(nil), // 0: health.v1.LivenessCheckResponse
-	(HealthStatus)(0),             // 1: health.v1.HealthStatus
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
-	(*v1.ResponseMetadata)(nil),   // 3: common.v1.ResponseMetadata
+	(*LivenessCheckResponse)(nil),   // 0: health.v1.LivenessCheckResponse
+	(HealthStatus)(0),               // 1: health.v1.HealthStatus
+	(*timestamppb.Timestamp)(nil),   // 2: google.protobuf.Timestamp
+	(*common.ResponseMetadata)(nil), // 3: common.v1.ResponseMetadata
 }
 var file_health_v1_liveness_check_response_proto_depIdxs = []int32{
 	1, // 0: health.v1.LivenessCheckResponse.status:type_name -> health.v1.HealthStatus

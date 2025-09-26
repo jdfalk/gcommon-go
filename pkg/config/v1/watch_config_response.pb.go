@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: config/v1/watch_config_response.proto
 
-package v1
+package config
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,11 +26,11 @@ const (
 // *
 // WatchConfigResponse describes a configuration change event.
 type WatchConfigResponse struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ChangeType    v1.ConfigChangeType    `protobuf:"varint,1,opt,name=change_type,json=changeType,enum=common.v1.ConfigChangeType"`
-	xxx_hidden_Entry         *ConfigEntry           `protobuf:"bytes,2,opt,name=entry"`
-	xxx_hidden_PreviousEntry *ConfigEntry           `protobuf:"bytes,3,opt,name=previous_entry,json=previousEntry"`
-	xxx_hidden_Timestamp     *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=timestamp"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ChangeType    common.ConfigChangeType `protobuf:"varint,1,opt,name=change_type,json=changeType,enum=common.v1.ConfigChangeType"`
+	xxx_hidden_Entry         *ConfigEntry            `protobuf:"bytes,2,opt,name=entry"`
+	xxx_hidden_PreviousEntry *ConfigEntry            `protobuf:"bytes,3,opt,name=previous_entry,json=previousEntry"`
+	xxx_hidden_Timestamp     *timestamppb.Timestamp  `protobuf:"bytes,4,opt,name=timestamp"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -62,13 +62,13 @@ func (x *WatchConfigResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *WatchConfigResponse) GetChangeType() v1.ConfigChangeType {
+func (x *WatchConfigResponse) GetChangeType() common.ConfigChangeType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_ChangeType
 		}
 	}
-	return v1.ConfigChangeType(0)
+	return common.ConfigChangeType(0)
 }
 
 func (x *WatchConfigResponse) GetEntry() *ConfigEntry {
@@ -92,7 +92,7 @@ func (x *WatchConfigResponse) GetTimestamp() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *WatchConfigResponse) SetChangeType(v v1.ConfigChangeType) {
+func (x *WatchConfigResponse) SetChangeType(v common.ConfigChangeType) {
 	x.xxx_hidden_ChangeType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -139,7 +139,7 @@ func (x *WatchConfigResponse) HasTimestamp() bool {
 
 func (x *WatchConfigResponse) ClearChangeType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_ChangeType = v1.ConfigChangeType_CONFIG_CHANGE_TYPE_UNSPECIFIED
+	x.xxx_hidden_ChangeType = common.ConfigChangeType_CONFIG_CHANGE_TYPE_UNSPECIFIED
 }
 
 func (x *WatchConfigResponse) ClearEntry() {
@@ -158,7 +158,7 @@ type WatchConfigResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Type of change
-	ChangeType *v1.ConfigChangeType
+	ChangeType *common.ConfigChangeType
 	// Configuration entry
 	Entry *ConfigEntry
 	// Previous value for updates/deletes
@@ -191,12 +191,12 @@ const file_config_v1_watch_config_response_proto_rawDesc = "" +
 	"changeType\x12,\n" +
 	"\x05entry\x18\x02 \x01(\v2\x16.config.v1.ConfigEntryR\x05entry\x12=\n" +
 	"\x0eprevious_entry\x18\x03 \x01(\v2\x16.config.v1.ConfigEntryR\rpreviousEntry\x128\n" +
-	"\ttimestamp\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\ttimestamp\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestampB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_watch_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_watch_config_response_proto_goTypes = []any{
 	(*WatchConfigResponse)(nil),   // 0: config.v1.WatchConfigResponse
-	(v1.ConfigChangeType)(0),      // 1: common.v1.ConfigChangeType
+	(common.ConfigChangeType)(0),  // 1: common.v1.ConfigChangeType
 	(*ConfigEntry)(nil),           // 2: config.v1.ConfigEntry
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/increment_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -30,7 +30,7 @@ type IncrementResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_NewValue    int64                  `protobuf:"varint,1,opt,name=new_value,json=newValue"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -76,7 +76,7 @@ func (x *IncrementResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *IncrementResponse) GetError() *v1.Error {
+func (x *IncrementResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -93,7 +93,7 @@ func (x *IncrementResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *IncrementResponse) SetError(v *v1.Error) {
+func (x *IncrementResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -140,7 +140,7 @@ type IncrementResponse_builder struct {
 	// Whether the operation was successful
 	Success *bool
 	// Error details if increment failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 IncrementResponse_builder) Build() *IncrementResponse {
@@ -167,12 +167,12 @@ const file_database_v1_increment_response_proto_rawDesc = "" +
 	"\x11IncrementResponse\x12$\n" +
 	"\tnew_value\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\bnewValue\x12\x18\n" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_increment_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_increment_response_proto_goTypes = []any{
 	(*IncrementResponse)(nil), // 0: database.v1.IncrementResponse
-	(*v1.Error)(nil),          // 1: common.v1.Error
+	(*common.Error)(nil),      // 1: common.v1.Error
 }
 var file_database_v1_increment_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.IncrementResponse.error:type_name -> common.v1.Error

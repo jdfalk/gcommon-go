@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -294,7 +294,7 @@ const file_queue_v2_retry_policy_proto_rawDesc = "" +
 	"\x12backoff_multiplier\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11backoffMultiplier\x12D\n" +
 	"\x0edelay_strategy\x18\x05 \x01(\x0e2\x1d.common.v2.RetryDelayStrategyR\rdelayStrategy\x12#\n" +
 	"\renable_jitter\x18\x06 \x01(\bR\fenableJitter\x123\n" +
-	"\rjitter_factor\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fjitterFactorB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rjitter_factor\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fjitterFactorB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_retry_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_retry_policy_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/revoke_token_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -278,7 +278,7 @@ const file_common_v1_revoke_token_response_proto_rawDesc = "" +
 	"revoked_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\trevokedAt\x12p\n" +
 	"\auser_id\x18\x04 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12+\n" +
 	"\x11revocation_reason\x18\x05 \x01(\tR\x10revocationReason\x121\n" +
-	"\x15last_token_in_session\x18\x06 \x01(\bR\x12lastTokenInSessionB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15last_token_in_session\x18\x06 \x01(\bR\x12lastTokenInSessionB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_revoke_token_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_revoke_token_response_proto_goTypes = []any{

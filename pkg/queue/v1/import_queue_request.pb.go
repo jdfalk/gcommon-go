@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/import_queue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,14 +26,14 @@ const (
 // *
 // Request to import queue data from external source.
 type ImportQueueRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName   *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_SourcePath  *string                `protobuf:"bytes,2,opt,name=source_path,json=sourcePath"`
-	xxx_hidden_Format      v1.QueueExportFormat   `protobuf:"varint,3,opt,name=format,enum=common.v1.QueueExportFormat"`
-	xxx_hidden_Overwrite   bool                   `protobuf:"varint,4,opt,name=overwrite"`
-	xxx_hidden_Validate    bool                   `protobuf:"varint,5,opt,name=validate"`
-	xxx_hidden_MaxMessages uint64                 `protobuf:"varint,6,opt,name=max_messages,json=maxMessages"`
-	xxx_hidden_TimeoutMs   uint64                 `protobuf:"varint,7,opt,name=timeout_ms,json=timeoutMs"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_QueueName   *string                  `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_SourcePath  *string                  `protobuf:"bytes,2,opt,name=source_path,json=sourcePath"`
+	xxx_hidden_Format      common.QueueExportFormat `protobuf:"varint,3,opt,name=format,enum=common.v1.QueueExportFormat"`
+	xxx_hidden_Overwrite   bool                     `protobuf:"varint,4,opt,name=overwrite"`
+	xxx_hidden_Validate    bool                     `protobuf:"varint,5,opt,name=validate"`
+	xxx_hidden_MaxMessages uint64                   `protobuf:"varint,6,opt,name=max_messages,json=maxMessages"`
+	xxx_hidden_TimeoutMs   uint64                   `protobuf:"varint,7,opt,name=timeout_ms,json=timeoutMs"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -85,13 +85,13 @@ func (x *ImportQueueRequest) GetSourcePath() string {
 	return ""
 }
 
-func (x *ImportQueueRequest) GetFormat() v1.QueueExportFormat {
+func (x *ImportQueueRequest) GetFormat() common.QueueExportFormat {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Format
 		}
 	}
-	return v1.QueueExportFormat(0)
+	return common.QueueExportFormat(0)
 }
 
 func (x *ImportQueueRequest) GetOverwrite() bool {
@@ -132,7 +132,7 @@ func (x *ImportQueueRequest) SetSourcePath(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 7)
 }
 
-func (x *ImportQueueRequest) SetFormat(v v1.QueueExportFormat) {
+func (x *ImportQueueRequest) SetFormat(v common.QueueExportFormat) {
 	x.xxx_hidden_Format = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 7)
 }
@@ -218,7 +218,7 @@ func (x *ImportQueueRequest) ClearSourcePath() {
 
 func (x *ImportQueueRequest) ClearFormat() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Format = v1.QueueExportFormat_QUEUE_EXPORT_FORMAT_UNSPECIFIED
+	x.xxx_hidden_Format = common.QueueExportFormat_QUEUE_EXPORT_FORMAT_UNSPECIFIED
 }
 
 func (x *ImportQueueRequest) ClearOverwrite() {
@@ -249,7 +249,7 @@ type ImportQueueRequest_builder struct {
 	// Source location for import data
 	SourcePath *string
 	// Format of the import data
-	Format *v1.QueueExportFormat
+	Format *common.QueueExportFormat
 	// Whether to overwrite existing data
 	Overwrite *bool
 	// Whether to validate data before import
@@ -310,12 +310,12 @@ const file_queue_v1_import_queue_request_proto_rawDesc = "" +
 	"\bvalidate\x18\x05 \x01(\bR\bvalidate\x12!\n" +
 	"\fmax_messages\x18\x06 \x01(\x04R\vmaxMessages\x12\x1d\n" +
 	"\n" +
-	"timeout_ms\x18\a \x01(\x04R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\a \x01(\x04R\ttimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_import_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_import_queue_request_proto_goTypes = []any{
-	(*ImportQueueRequest)(nil), // 0: queue.v1.ImportQueueRequest
-	(v1.QueueExportFormat)(0),  // 1: common.v1.QueueExportFormat
+	(*ImportQueueRequest)(nil),    // 0: queue.v1.ImportQueueRequest
+	(common.QueueExportFormat)(0), // 1: common.v1.QueueExportFormat
 }
 var file_queue_v1_import_queue_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ImportQueueRequest.format:type_name -> common.v1.QueueExportFormat

@@ -97,7 +97,7 @@ const file_media_v2_create_media_file_request_proto_rawDesc = "" +
 	"(media/v2/create_media_file_request.proto\x12\bmedia.v2\x1a\x19media/v2/media_file.proto\x1a!google/protobuf/go_features.proto\"L\n" +
 	"\x16CreateMediaFileRequest\x122\n" +
 	"\n" +
-	"media_file\x18\x01 \x01(\v2\x13.media.v2.MediaFileR\tmediaFileB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"media_file\x18\x01 \x01(\v2\x13.media.v2.MediaFileR\tmediaFileB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_create_media_file_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_create_media_file_request_proto_goTypes = []any{

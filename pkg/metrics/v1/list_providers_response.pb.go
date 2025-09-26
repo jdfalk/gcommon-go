@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/list_providers_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type ListProvidersResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_Providers   *[]*ProviderInfo       `protobuf:"bytes,3,rep,name=providers"`
 	xxx_hidden_Pagination  *MetricsPaginationInfo `protobuf:"bytes,4,opt,name=pagination"`
 	xxx_hidden_Summary     *ProviderSummary       `protobuf:"bytes,5,opt,name=summary"`
@@ -70,7 +70,7 @@ func (x *ListProvidersResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *ListProvidersResponse) GetError() *v1.Error {
+func (x *ListProvidersResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -112,7 +112,7 @@ func (x *ListProvidersResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *ListProvidersResponse) SetError(v *v1.Error) {
+func (x *ListProvidersResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -194,7 +194,7 @@ type ListProvidersResponse_builder struct {
 	// Success status of the operation
 	Success *bool
 	// Error information if the operation failed
-	Error *v1.Error
+	Error *common.Error
 	// List of providers
 	Providers []*ProviderInfo
 	// Pagination information
@@ -235,12 +235,12 @@ const file_metrics_v1_list_providers_response_proto_rawDesc = "" +
 	"pagination\x18\x04 \x01(\v2!.metrics.v1.MetricsPaginationInfoR\n" +
 	"pagination\x125\n" +
 	"\asummary\x18\x05 \x01(\v2\x1b.metrics.v1.ProviderSummaryR\asummary\x12=\n" +
-	"\fgenerated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAtB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fgenerated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAtB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_list_providers_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_list_providers_response_proto_goTypes = []any{
 	(*ListProvidersResponse)(nil), // 0: metrics.v1.ListProvidersResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 	(*ProviderInfo)(nil),          // 2: metrics.v1.ProviderInfo
 	(*MetricsPaginationInfo)(nil), // 3: metrics.v1.MetricsPaginationInfo
 	(*ProviderSummary)(nil),       // 4: metrics.v1.ProviderSummary

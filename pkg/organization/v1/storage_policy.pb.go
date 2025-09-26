@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/storage_policy.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -209,7 +209,7 @@ const file_organization_v1_storage_policy_proto_rawDesc = "" +
 	"\tstatement\x18\x02 \x01(\tR\tstatement\x12\x16\n" +
 	"\x06effect\x18\x03 \x01(\tR\x06effect\x12\x1c\n" +
 	"\tresources\x18\x04 \x03(\tR\tresources\x12\x18\n" +
-	"\aactions\x18\x05 \x03(\tR\aactionsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aactions\x18\x05 \x03(\tR\aactionsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_storage_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_storage_policy_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/stream_start.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -201,7 +201,7 @@ const file_metrics_v1_stream_start_proto_rawDesc = "" +
 	"\x0efrom_beginning\x18\x02 \x01(\bR\rfromBeginning\x12\x19\n" +
 	"\bfrom_now\x18\x03 \x01(\bR\afromNow\x12(\n" +
 	"\vfrom_offset\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
-	"fromOffsetB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"fromOffsetB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_stream_start_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_stream_start_proto_goTypes = []any{

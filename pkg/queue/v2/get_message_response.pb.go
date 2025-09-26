@@ -233,7 +233,7 @@ const file_queue_v2_get_message_response_proto_rawDesc = "" +
 	"\bhas_more\x18\x03 \x01(\bR\ahasMore\x12.\n" +
 	"\x0emessage_offset\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rmessageOffset\x12(\n" +
 	"\vqueue_depth\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
-	"queueDepthB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"queueDepthB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_get_message_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_get_message_response_proto_goTypes = []any{

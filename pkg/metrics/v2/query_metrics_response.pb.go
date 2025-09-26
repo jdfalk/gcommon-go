@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -291,7 +291,7 @@ const file_metrics_v2_query_metrics_response_proto_rawDesc = "" +
 	"query_plan\x18\x05 \x01(\v2\x15.metrics.v2.QueryPlanR\tqueryPlan\x12$\n" +
 	"\bwarnings\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x12/\n" +
 	"\x0fnext_page_token\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x12,\n" +
-	"\rtotal_results\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalResultsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rtotal_results\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalResultsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_query_metrics_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_query_metrics_response_proto_goTypes = []any{

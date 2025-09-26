@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/size_distribution.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -215,7 +215,7 @@ const file_queue_v1_size_distribution_proto_rawDesc = "" +
 	"\x0emin_size_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fminSizeBytes\x12-\n" +
 	"\x0emax_size_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmaxSizeBytes\x12<\n" +
 	"\x12average_size_bytes\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x10averageSizeBytes\x12:\n" +
-	"\x11median_size_bytes\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fmedianSizeBytesB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11median_size_bytes\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fmedianSizeBytesB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_size_distribution_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_size_distribution_proto_goTypes = []any{

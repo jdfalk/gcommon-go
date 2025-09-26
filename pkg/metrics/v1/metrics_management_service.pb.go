@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metrics_management_service.proto
 
-package v1
+package metrics
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -32,7 +32,7 @@ const file_metrics_v1_metrics_management_service_proto_rawDesc = "" +
 	"\x15UpdateMetricsProvider\x12!.metrics.v1.UpdateProviderRequest\x1a\".metrics.v1.UpdateProviderResponse\x12^\n" +
 	"\x15DeleteMetricsProvider\x12!.metrics.v1.DeleteProviderRequest\x1a\".metrics.v1.DeleteProviderResponse\x12[\n" +
 	"\x14ListMetricsProviders\x12 .metrics.v1.ListProvidersRequest\x1a!.metrics.v1.ListProvidersResponse\x12]\n" +
-	"\x10GetProviderStats\x12#.metrics.v1.GetProviderStatsRequest\x1a$.metrics.v1.GetProviderStatsResponseB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10GetProviderStats\x12#.metrics.v1.GetProviderStatsRequest\x1a$.metrics.v1.GetProviderStatsResponseB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_management_service_proto_goTypes = []any{
 	(*CreateProviderRequest)(nil),    // 0: metrics.v1.CreateProviderRequest

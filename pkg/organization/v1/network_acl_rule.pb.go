@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/network_acl_rule.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -280,7 +280,7 @@ const file_organization_v1_network_acl_rule_proto_rawDesc = "" +
 	"\bprotocol\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bprotocol\x12&\n" +
 	"\n" +
 	"port_range\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tportRange\x12#\n" +
-	"\bpriority\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriorityB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpriority\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriorityB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_network_acl_rule_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_network_acl_rule_proto_goTypes = []any{

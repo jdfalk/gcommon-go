@@ -159,7 +159,7 @@ const file_metrics_v2_import_config_proto_rawDesc = "" +
 	"\fImportConfig\x12\"\n" +
 	"\asources\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\asources\x12#\n" +
 	"\bschedule\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bschedule\x12\x18\n" +
-	"\aenabled\x18\x03 \x01(\bR\aenabledB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aenabled\x18\x03 \x01(\bR\aenabledB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_import_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_import_config_proto_goTypes = []any{

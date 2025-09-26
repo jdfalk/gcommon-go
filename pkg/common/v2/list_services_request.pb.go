@@ -96,7 +96,7 @@ const file_common_v2_list_services_request_proto_rawDesc = "" +
 	"\n" +
 	"%common/v2/list_services_request.proto\x12\tcommon.v2\x1a common/v2/request_metadata.proto\x1a!google/protobuf/go_features.proto\"M\n" +
 	"\x13ListServicesRequest\x126\n" +
-	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_list_services_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_list_services_request_proto_goTypes = []any{

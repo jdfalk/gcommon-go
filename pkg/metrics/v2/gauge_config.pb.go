@@ -169,7 +169,7 @@ const file_metrics_v2_gauge_config_proto_rawDesc = "" +
 	"\vGaugeConfig\x12+\n" +
 	"\tmin_value\x18\x01 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\bminValue\x12+\n" +
 	"\tmax_value\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\bmaxValue\x12%\n" +
-	"\x0eallow_negative\x18\x03 \x01(\bR\rallowNegativeB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eallow_negative\x18\x03 \x01(\bR\rallowNegativeB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_gauge_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_gauge_config_proto_goTypes = []any{

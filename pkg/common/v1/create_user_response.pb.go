@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/create_user_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -387,7 +387,7 @@ const file_common_v1_create_user_response_proto_rawDesc = "" +
 	"\x12verification_token\x18\t \x01(\tR\x11verificationToken\x129\n" +
 	"\n" +
 	"expires_at\x18\n" +
-	" \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\v2\x1a.google.protobuf.TimestampR\texpiresAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_create_user_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_create_user_response_proto_goTypes = []any{

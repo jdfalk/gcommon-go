@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/subscription_config_update.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,15 +24,15 @@ const (
 )
 
 type SubscriptionConfigUpdate struct {
-	state                          protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_Name                *string                 `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_DeliverySettings    *DeliverySettings       `protobuf:"bytes,2,opt,name=delivery_settings,json=deliverySettings"`
-	xxx_hidden_RetrySettings       *v1.ConfigRetrySettings `protobuf:"bytes,3,opt,name=retry_settings,json=retrySettings"`
-	xxx_hidden_FilterSettings      *FilterSettings         `protobuf:"bytes,4,opt,name=filter_settings,json=filterSettings"`
-	xxx_hidden_RoutingSettings     *RoutingSettings        `protobuf:"bytes,5,opt,name=routing_settings,json=routingSettings"`
-	xxx_hidden_MaxInflightMessages int32                   `protobuf:"varint,6,opt,name=max_inflight_messages,json=maxInflightMessages"`
-	xxx_hidden_AckTimeoutMs        int32                   `protobuf:"varint,7,opt,name=ack_timeout_ms,json=ackTimeoutMs"`
-	xxx_hidden_PriorityLevel       int32                   `protobuf:"varint,8,opt,name=priority_level,json=priorityLevel"`
+	state                          protoimpl.MessageState      `protogen:"opaque.v1"`
+	xxx_hidden_Name                *string                     `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_DeliverySettings    *DeliverySettings           `protobuf:"bytes,2,opt,name=delivery_settings,json=deliverySettings"`
+	xxx_hidden_RetrySettings       *common.ConfigRetrySettings `protobuf:"bytes,3,opt,name=retry_settings,json=retrySettings"`
+	xxx_hidden_FilterSettings      *FilterSettings             `protobuf:"bytes,4,opt,name=filter_settings,json=filterSettings"`
+	xxx_hidden_RoutingSettings     *RoutingSettings            `protobuf:"bytes,5,opt,name=routing_settings,json=routingSettings"`
+	xxx_hidden_MaxInflightMessages int32                       `protobuf:"varint,6,opt,name=max_inflight_messages,json=maxInflightMessages"`
+	xxx_hidden_AckTimeoutMs        int32                       `protobuf:"varint,7,opt,name=ack_timeout_ms,json=ackTimeoutMs"`
+	xxx_hidden_PriorityLevel       int32                       `protobuf:"varint,8,opt,name=priority_level,json=priorityLevel"`
 	XXX_raceDetectHookData         protoimpl.RaceDetectHookData
 	XXX_presence                   [1]uint32
 	unknownFields                  protoimpl.UnknownFields
@@ -81,7 +81,7 @@ func (x *SubscriptionConfigUpdate) GetDeliverySettings() *DeliverySettings {
 	return nil
 }
 
-func (x *SubscriptionConfigUpdate) GetRetrySettings() *v1.ConfigRetrySettings {
+func (x *SubscriptionConfigUpdate) GetRetrySettings() *common.ConfigRetrySettings {
 	if x != nil {
 		return x.xxx_hidden_RetrySettings
 	}
@@ -132,7 +132,7 @@ func (x *SubscriptionConfigUpdate) SetDeliverySettings(v *DeliverySettings) {
 	x.xxx_hidden_DeliverySettings = v
 }
 
-func (x *SubscriptionConfigUpdate) SetRetrySettings(v *v1.ConfigRetrySettings) {
+func (x *SubscriptionConfigUpdate) SetRetrySettings(v *common.ConfigRetrySettings) {
 	x.xxx_hidden_RetrySettings = v
 }
 
@@ -259,7 +259,7 @@ type SubscriptionConfigUpdate_builder struct {
 	// Updated delivery settings
 	DeliverySettings *DeliverySettings
 	// Updated retry configuration
-	RetrySettings *v1.ConfigRetrySettings
+	RetrySettings *common.ConfigRetrySettings
 	// Updated filtering rules
 	FilterSettings *FilterSettings
 	// Updated routing configuration
@@ -312,15 +312,15 @@ const file_queue_v1_subscription_config_update_proto_rawDesc = "" +
 	"\x10routing_settings\x18\x05 \x01(\v2\x19.queue.v1.RoutingSettingsR\x0froutingSettings\x122\n" +
 	"\x15max_inflight_messages\x18\x06 \x01(\x05R\x13maxInflightMessages\x12$\n" +
 	"\x0eack_timeout_ms\x18\a \x01(\x05R\fackTimeoutMs\x12%\n" +
-	"\x0epriority_level\x18\b \x01(\x05R\rpriorityLevelB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0epriority_level\x18\b \x01(\x05R\rpriorityLevelB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_subscription_config_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_subscription_config_update_proto_goTypes = []any{
-	(*SubscriptionConfigUpdate)(nil), // 0: queue.v1.SubscriptionConfigUpdate
-	(*DeliverySettings)(nil),         // 1: queue.v1.DeliverySettings
-	(*v1.ConfigRetrySettings)(nil),   // 2: common.v1.ConfigRetrySettings
-	(*FilterSettings)(nil),           // 3: queue.v1.FilterSettings
-	(*RoutingSettings)(nil),          // 4: queue.v1.RoutingSettings
+	(*SubscriptionConfigUpdate)(nil),   // 0: queue.v1.SubscriptionConfigUpdate
+	(*DeliverySettings)(nil),           // 1: queue.v1.DeliverySettings
+	(*common.ConfigRetrySettings)(nil), // 2: common.v1.ConfigRetrySettings
+	(*FilterSettings)(nil),             // 3: queue.v1.FilterSettings
+	(*RoutingSettings)(nil),            // 4: queue.v1.RoutingSettings
 }
 var file_queue_v1_subscription_config_update_proto_depIdxs = []int32{
 	1, // 0: queue.v1.SubscriptionConfigUpdate.delivery_settings:type_name -> queue.v1.DeliverySettings

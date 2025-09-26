@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/session_service.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -35,7 +35,7 @@ const file_common_v1_session_service_proto_rawDesc = "" +
 	"\x10TerminateSession\x12\".common.v1.TerminateSessionRequest\x1a#.common.v1.TerminateSessionResponse\x12Z\n" +
 	"\rDeleteSession\x12#.common.v1.AuthDeleteSessionRequest\x1a$.common.v1.AuthDeleteSessionResponse\x12[\n" +
 	"\x10ListUserSessions\x12\".common.v1.ListUserSessionsRequest\x1a#.common.v1.ListUserSessionsResponse\x12W\n" +
-	"\fListSessions\x12\".common.v1.AuthListSessionsRequest\x1a#.common.v1.AuthListSessionsResponseB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fListSessions\x12\".common.v1.AuthListSessionsRequest\x1a#.common.v1.AuthListSessionsResponseB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_session_service_proto_goTypes = []any{
 	(*AuthCreateSessionRequest)(nil),  // 0: common.v1.AuthCreateSessionRequest

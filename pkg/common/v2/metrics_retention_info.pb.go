@@ -185,7 +185,7 @@ const file_common_v2_metrics_retention_info_proto_rawDesc = "" +
 	"\x14total_retained_bytes\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12totalRetainedBytes\x125\n" +
 	"\x12total_purged_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10totalPurgedBytes\x12/\n" +
 	"\x0foldest_data_age\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\roldestDataAge\x12M\n" +
-	"\bpolicies\x18\x04 \x03(\v2'.common.v2.MetricsRetentionPolicyConfigB\b\xbaH\x05\x92\x01\x02\b\x01R\bpoliciesB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpolicies\x18\x04 \x03(\v2'.common.v2.MetricsRetentionPolicyConfigB\b\xbaH\x05\x92\x01\x02\b\x01R\bpoliciesB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_metrics_retention_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_metrics_retention_info_proto_goTypes = []any{

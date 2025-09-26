@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/delete_user_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -174,7 +174,7 @@ const file_common_v1_delete_user_response_proto_rawDesc = "" +
 	"\x12DeleteUserResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12,\n" +
 	"\rerror_message\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x127\n" +
-	"\x13data_retention_info\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11dataRetentionInfoB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13data_retention_info\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11dataRetentionInfoB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_delete_user_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_delete_user_response_proto_goTypes = []any{

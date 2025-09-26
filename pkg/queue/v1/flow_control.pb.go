@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/flow_control.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -166,7 +166,7 @@ const file_queue_v1_flow_control_proto_rawDesc = "" +
 	"\vFlowControl\x12+\n" +
 	"\rmax_in_flight\x18\x01 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\vmaxInFlight\x126\n" +
 	"\x13max_bytes_in_flight\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x10maxBytesInFlight\x12<\n" +
-	"\fack_deadline\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\vackDeadlineB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fack_deadline\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\vackDeadlineB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_flow_control_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_flow_control_proto_goTypes = []any{

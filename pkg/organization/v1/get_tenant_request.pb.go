@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/get_tenant_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type GetTenantRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_TenantId    *string                `protobuf:"bytes,2,opt,name=tenant_id,json=tenantId"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_TenantId    *string                 `protobuf:"bytes,2,opt,name=tenant_id,json=tenantId"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -58,7 +58,7 @@ func (x *GetTenantRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetTenantRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetTenantRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -75,7 +75,7 @@ func (x *GetTenantRequest) GetTenantId() string {
 	return ""
 }
 
-func (x *GetTenantRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetTenantRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -111,7 +111,7 @@ type GetTenantRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Tenant identifier
 	TenantId *string
 }
@@ -135,12 +135,12 @@ const file_organization_v1_get_tenant_request_proto_rawDesc = "" +
 	"(organization/v1/get_tenant_request.proto\x12\x0forganization.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"p\n" +
 	"\x10GetTenantRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12$\n" +
-	"\ttenant_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\btenantIdB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\ttenant_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\btenantIdB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_get_tenant_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_get_tenant_request_proto_goTypes = []any{
-	(*GetTenantRequest)(nil),   // 0: organization.v1.GetTenantRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*GetTenantRequest)(nil),       // 0: organization.v1.GetTenantRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_get_tenant_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.GetTenantRequest.metadata:type_name -> common.v1.RequestMetadata

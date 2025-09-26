@@ -183,7 +183,7 @@ const file_database_v2_get_response_proto_rawDesc = "" +
 	"\vGetResponse\x121\n" +
 	"\x05entry\x18\x01 \x01(\v2\x17.database.v2.CacheEntryB\x02(\x01R\x05entry\x12\x14\n" +
 	"\x05found\x18\x02 \x01(\bR\x05found\x12\x1b\n" +
-	"\tcache_hit\x18\x03 \x01(\bR\bcacheHitB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tcache_hit\x18\x03 \x01(\bR\bcacheHitB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_get_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_get_response_proto_goTypes = []any{

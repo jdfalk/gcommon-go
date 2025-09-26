@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/schema_validation.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -209,7 +209,7 @@ const file_queue_v1_schema_validation_proto_rawDesc = "" +
 	"\x06passed\x18\x01 \x01(\bR\x06passed\x12K\n" +
 	"\x15backup_schema_version\x18\x02 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\x13backupSchemaVersion\x12M\n" +
 	"\x16current_schema_version\x18\x03 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\x14currentSchemaVersion\x12:\n" +
-	"\x14compatibility_status\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x13compatibilityStatusB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14compatibility_status\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x13compatibilityStatusB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_schema_validation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_schema_validation_proto_goTypes = []any{

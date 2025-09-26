@@ -365,7 +365,7 @@ const file_queue_v2_subscription_stats_proto_rawDesc = "" +
 	"\x10consumption_rate\x18\x06 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0fconsumptionRate\x12C\n" +
 	"\x16avg_processing_time_ms\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x13avgProcessingTimeMs\x122\n" +
 	"\x10active_consumers\x18\b \x01(\rB\a\xbaH\x04*\x02(\x00R\x0factiveConsumers\x125\n" +
-	"\x12last_activity_time\x18\t \x01(\x04B\a\xbaH\x042\x02(\x00R\x10lastActivityTimeB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12last_activity_time\x18\t \x01(\x04B\a\xbaH\x042\x02(\x00R\x10lastActivityTimeB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_subscription_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_subscription_stats_proto_goTypes = []any{

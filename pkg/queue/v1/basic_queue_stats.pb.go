@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/basic_queue_stats.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -401,7 +401,7 @@ const file_queue_v1_basic_queue_stats_proto_rawDesc = "" +
 	"egressRate\x12(\n" +
 	"\x10avg_message_size\x18\t \x01(\x01R\x0eavgMessageSize\x12$\n" +
 	"\x0equeue_depth_ms\x18\n" +
-	" \x01(\x04R\fqueueDepthMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x04R\fqueueDepthMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_basic_queue_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_basic_queue_stats_proto_goTypes = []any{

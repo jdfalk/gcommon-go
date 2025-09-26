@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/row.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -112,7 +112,7 @@ const file_database_v1_row_proto_rawDesc = "" +
 	"\x15database/v1/row.proto\x12\vdatabase.v1\x1a\x19google/protobuf/any.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"?\n" +
 	"\x03Row\x128\n" +
 	"\x06values\x18\x01 \x03(\v2\x14.google.protobuf.AnyB\n" +
-	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\x06valuesB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\x06valuesB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_row_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_row_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/error_trend.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -154,7 +154,7 @@ const file_metrics_v1_error_trend_proto_rawDesc = "" +
 	"ErrorTrend\x12(\n" +
 	"\x10error_rate_trend\x18\x01 \x01(\tR\x0eerrorRateTrend\x129\n" +
 	"\x10trend_confidence\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0ftrendConfidence\x12:\n" +
-	"\x14emerging_error_types\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12emergingErrorTypesB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14emerging_error_types\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12emergingErrorTypesB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_error_trend_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_error_trend_proto_goTypes = []any{

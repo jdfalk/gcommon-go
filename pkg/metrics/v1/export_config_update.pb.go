@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/export_config_update.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -241,7 +241,7 @@ const file_metrics_v1_export_config_update_proto_rawDesc = "" +
 	"\x13destination_removes\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x12destinationRemoves\x12%\n" +
 	"\tfrequency\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tfrequency\x12&\n" +
 	"\n" +
-	"batch_size\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tbatchSizeB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"batch_size\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tbatchSizeB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_export_config_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_export_config_update_proto_goTypes = []any{

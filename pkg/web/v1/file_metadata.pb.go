@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/file_metadata.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -232,7 +232,7 @@ const file_web_v1_file_metadata_proto_rawDesc = "" +
 	"\tmime_type\x18\x03 \x01(\v2\x10.web.v1.MimeTypeR\bmimeType\x12\x1a\n" +
 	"\bchecksum\x18\x04 \x01(\tR\bchecksum\x12;\n" +
 	"\vmodified_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
-	"modifiedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"modifiedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_file_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_file_metadata_proto_goTypes = []any{

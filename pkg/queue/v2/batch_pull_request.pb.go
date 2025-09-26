@@ -304,7 +304,7 @@ const file_queue_v2_batch_pull_request_proto_rawDesc = "" +
 	"\x10auto_acknowledge\x18\x04 \x01(\bR\x0fautoAcknowledge\x12%\n" +
 	"\x0econsumer_group\x18\x05 \x01(\tR\rconsumerGroup\x12\"\n" +
 	"\fsubscription\x18\x06 \x01(\tR\fsubscription\x12(\n" +
-	"\x10max_payload_size\x18\a \x01(\x04R\x0emaxPayloadSizeB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10max_payload_size\x18\a \x01(\x04R\x0emaxPayloadSizeB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_batch_pull_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_batch_pull_request_proto_goTypes = []any{

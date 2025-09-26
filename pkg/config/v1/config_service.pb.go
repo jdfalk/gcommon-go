@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/config_service.proto
 
-package v1
+package config
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -36,7 +36,7 @@ const file_config_v1_config_service_proto_rawDesc = "" +
 	"\vGetMultiple\x12#.config.v1.GetMultipleConfigRequest\x1a$.config.v1.GetMultipleConfigResponse\x12X\n" +
 	"\vSetMultiple\x12#.config.v1.SetMultipleConfigRequest\x1a$.config.v1.SetMultipleConfigResponse\x12O\n" +
 	"\bValidate\x12 .config.v1.ValidateConfigRequest\x1a!.config.v1.ValidateConfigResponse\x12F\n" +
-	"\tGetSchema\x12\x1b.config.v1.GetSchemaRequest\x1a\x1c.config.v1.GetSchemaResponseB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tGetSchema\x12\x1b.config.v1.GetSchemaRequest\x1a\x1c.config.v1.GetSchemaResponseB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_config_service_proto_goTypes = []any{
 	(*GetConfigRequest)(nil),          // 0: config.v1.GetConfigRequest

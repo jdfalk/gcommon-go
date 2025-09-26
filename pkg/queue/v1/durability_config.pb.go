@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/durability_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,9 +29,9 @@ const (
 type DurabilityConfig struct {
 	state                        protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Persistent        bool                   `protobuf:"varint,1,opt,name=persistent"`
-	xxx_hidden_FlushPolicy       v1.FlushPolicy         `protobuf:"varint,2,opt,name=flush_policy,json=flushPolicy,enum=common.v1.FlushPolicy"`
+	xxx_hidden_FlushPolicy       common.FlushPolicy     `protobuf:"varint,2,opt,name=flush_policy,json=flushPolicy,enum=common.v1.FlushPolicy"`
 	xxx_hidden_ReplicationFactor int32                  `protobuf:"varint,3,opt,name=replication_factor,json=replicationFactor"`
-	xxx_hidden_AckLevel          v1.AckLevel            `protobuf:"varint,4,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
+	xxx_hidden_AckLevel          common.AckLevel        `protobuf:"varint,4,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
 	xxx_hidden_DurabilityTimeout *durationpb.Duration   `protobuf:"bytes,5,opt,name=durability_timeout,json=durabilityTimeout"`
 	xxx_hidden_WriteAheadLog     bool                   `protobuf:"varint,6,opt,name=write_ahead_log,json=writeAheadLog"`
 	xxx_hidden_SyncInterval      *durationpb.Duration   `protobuf:"bytes,7,opt,name=sync_interval,json=syncInterval"`
@@ -74,13 +74,13 @@ func (x *DurabilityConfig) GetPersistent() bool {
 	return false
 }
 
-func (x *DurabilityConfig) GetFlushPolicy() v1.FlushPolicy {
+func (x *DurabilityConfig) GetFlushPolicy() common.FlushPolicy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_FlushPolicy
 		}
 	}
-	return v1.FlushPolicy(0)
+	return common.FlushPolicy(0)
 }
 
 func (x *DurabilityConfig) GetReplicationFactor() int32 {
@@ -90,13 +90,13 @@ func (x *DurabilityConfig) GetReplicationFactor() int32 {
 	return 0
 }
 
-func (x *DurabilityConfig) GetAckLevel() v1.AckLevel {
+func (x *DurabilityConfig) GetAckLevel() common.AckLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_AckLevel
 		}
 	}
-	return v1.AckLevel(0)
+	return common.AckLevel(0)
 }
 
 func (x *DurabilityConfig) GetDurabilityTimeout() *durationpb.Duration {
@@ -132,7 +132,7 @@ func (x *DurabilityConfig) SetPersistent(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *DurabilityConfig) SetFlushPolicy(v v1.FlushPolicy) {
+func (x *DurabilityConfig) SetFlushPolicy(v common.FlushPolicy) {
 	x.xxx_hidden_FlushPolicy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 8)
 }
@@ -142,7 +142,7 @@ func (x *DurabilityConfig) SetReplicationFactor(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 8)
 }
 
-func (x *DurabilityConfig) SetAckLevel(v v1.AckLevel) {
+func (x *DurabilityConfig) SetAckLevel(v common.AckLevel) {
 	x.xxx_hidden_AckLevel = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 8)
 }
@@ -228,7 +228,7 @@ func (x *DurabilityConfig) ClearPersistent() {
 
 func (x *DurabilityConfig) ClearFlushPolicy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_FlushPolicy = v1.FlushPolicy_FLUSH_POLICY_UNSPECIFIED
+	x.xxx_hidden_FlushPolicy = common.FlushPolicy_FLUSH_POLICY_UNSPECIFIED
 }
 
 func (x *DurabilityConfig) ClearReplicationFactor() {
@@ -238,7 +238,7 @@ func (x *DurabilityConfig) ClearReplicationFactor() {
 
 func (x *DurabilityConfig) ClearAckLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_AckLevel = v1.AckLevel_ACK_LEVEL_UNSPECIFIED
+	x.xxx_hidden_AckLevel = common.AckLevel_ACK_LEVEL_UNSPECIFIED
 }
 
 func (x *DurabilityConfig) ClearDurabilityTimeout() {
@@ -265,11 +265,11 @@ type DurabilityConfig_builder struct {
 	// Whether messages are persisted to disk
 	Persistent *bool
 	// Flush policy for writing messages to storage
-	FlushPolicy *v1.FlushPolicy
+	FlushPolicy *common.FlushPolicy
 	// Number of replicas for each message
 	ReplicationFactor *int32
 	// Acknowledgment level required before considering message durable
-	AckLevel *v1.AckLevel
+	AckLevel *common.AckLevel
 	// Timeout for durability operations
 	DurabilityTimeout *durationpb.Duration
 	// Whether to use write-ahead logging
@@ -328,13 +328,13 @@ const file_queue_v1_durability_config_proto_rawDesc = "" +
 	"\x12durability_timeout\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\x11durabilityTimeout\x12&\n" +
 	"\x0fwrite_ahead_log\x18\x06 \x01(\bR\rwriteAheadLog\x12>\n" +
 	"\rsync_interval\x18\a \x01(\v2\x19.google.protobuf.DurationR\fsyncInterval\x12)\n" +
-	"\x10verify_checksums\x18\b \x01(\bR\x0fverifyChecksumsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10verify_checksums\x18\b \x01(\bR\x0fverifyChecksumsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_durability_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_durability_config_proto_goTypes = []any{
 	(*DurabilityConfig)(nil),    // 0: queue.v1.DurabilityConfig
-	(v1.FlushPolicy)(0),         // 1: common.v1.FlushPolicy
-	(v1.AckLevel)(0),            // 2: common.v1.AckLevel
+	(common.FlushPolicy)(0),     // 1: common.v1.FlushPolicy
+	(common.AckLevel)(0),        // 2: common.v1.AckLevel
 	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
 }
 var file_queue_v1_durability_config_proto_depIdxs = []int32{

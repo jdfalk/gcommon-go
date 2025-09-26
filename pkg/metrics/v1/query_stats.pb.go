@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/query_stats.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -201,7 +201,7 @@ const file_metrics_v1_query_stats_proto_rawDesc = "" +
 	"\rtotal_queries\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalQueries\x12A\n" +
 	"\x15avg_execution_time_ms\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x12avgExecutionTimeMs\x12.\n" +
 	"\x0efailed_queries\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\rfailedQueries\x124\n" +
-	"\x0ecache_hit_rate\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcacheHitRateB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecache_hit_rate\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcacheHitRateB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_stats_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/jwt_credentials.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -146,7 +146,7 @@ const file_common_v1_jwt_credentials_proto_rawDesc = "" +
 	"\x1fcommon/v1/jwt_credentials.proto\x12\tcommon.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"P\n" +
 	"\x0eJWTCredentials\x12\x1d\n" +
 	"\x05token\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05token\x12\x1f\n" +
-	"\x06issuer\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06issuerB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06issuer\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06issuerB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_jwt_credentials_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_jwt_credentials_proto_goTypes = []any{

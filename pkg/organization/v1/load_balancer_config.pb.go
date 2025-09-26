@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/load_balancer_config.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -196,7 +196,7 @@ const file_organization_v1_load_balancer_config_proto_rawDesc = "" +
 	"\x04type\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x04type\x12%\n" +
 	"\talgorithm\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\talgorithm\x12Q\n" +
 	"\fhealth_check\x18\x03 \x01(\v2..organization.v1.OrganizationHealthCheckConfigR\vhealthCheck\x12,\n" +
-	"\x03ssl\x18\x04 \x01(\v2\x1a.organization.v1.SSLConfigR\x03sslB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x03ssl\x18\x04 \x01(\v2\x1a.organization.v1.SSLConfigR\x03sslB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_load_balancer_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_load_balancer_config_proto_goTypes = []any{

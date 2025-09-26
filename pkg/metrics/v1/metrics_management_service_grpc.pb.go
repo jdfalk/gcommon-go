@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: metrics/v1/metrics_management_service.proto
 
-package v1
+package metrics
 
 import (
 	context "context"

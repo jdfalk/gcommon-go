@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/set_health_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -186,7 +186,7 @@ const file_common_v1_set_health_request_proto_rawDesc = "" +
 	"\x10SetHealthRequest\x12!\n" +
 	"\aservice\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\aservice\x125\n" +
 	"\x06status\x18\x02 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_set_health_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_set_health_request_proto_goTypes = []any{

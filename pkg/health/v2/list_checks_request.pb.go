@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -286,7 +286,7 @@ const file_health_v2_list_checks_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadata\x12!\n" +
 	"\fenabled_only\x18\x05 \x01(\bR\venabledOnly\x12\x14\n" +
 	"\x05limit\x18\x06 \x01(\x05R\x05limit\x12\x16\n" +
-	"\x06offset\x18\a \x01(\x05R\x06offsetB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06offset\x18\a \x01(\x05R\x06offsetB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_list_checks_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v2_list_checks_request_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/validate_config_response.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -142,7 +142,7 @@ const file_config_v1_validate_config_response_proto_rawDesc = "" +
 	"\x16ValidateConfigResponse\x12\x14\n" +
 	"\x05valid\x18\x01 \x01(\bR\x05valid\x12B\n" +
 	"\x06errors\x18\x02 \x03(\v2 .config.v1.ConfigValidationErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12H\n" +
-	"\bwarnings\x18\x03 \x03(\v2\".config.v1.ConfigValidationWarningB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\x03 \x03(\v2\".config.v1.ConfigValidationWarningB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_validate_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_validate_config_response_proto_goTypes = []any{

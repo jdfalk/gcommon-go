@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/execute_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type ExecuteRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Statement     *string                `protobuf:"bytes,1,opt,name=statement"`
-	xxx_hidden_Parameters    *[]*QueryParameter     `protobuf:"bytes,2,rep,name=parameters"`
-	xxx_hidden_Database      *string                `protobuf:"bytes,3,opt,name=database"`
-	xxx_hidden_Options       *ExecuteOptions        `protobuf:"bytes,4,opt,name=options"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
-	xxx_hidden_TransactionId *string                `protobuf:"bytes,6,opt,name=transaction_id,json=transactionId"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Statement     *string                 `protobuf:"bytes,1,opt,name=statement"`
+	xxx_hidden_Parameters    *[]*QueryParameter      `protobuf:"bytes,2,rep,name=parameters"`
+	xxx_hidden_Database      *string                 `protobuf:"bytes,3,opt,name=database"`
+	xxx_hidden_Options       *ExecuteOptions         `protobuf:"bytes,4,opt,name=options"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
+	xxx_hidden_TransactionId *string                 `protobuf:"bytes,6,opt,name=transaction_id,json=transactionId"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -112,13 +112,13 @@ func (x *ExecuteRequest) GetOptions() *ExecuteOptions {
 	return nil
 }
 
-func (x *ExecuteRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ExecuteRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 5)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -166,7 +166,7 @@ func (x *ExecuteRequest) SetOptions(v *ExecuteOptions) {
 	}
 }
 
-func (x *ExecuteRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ExecuteRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
@@ -232,7 +232,7 @@ func (x *ExecuteRequest) ClearOptions() {
 
 func (x *ExecuteRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 func (x *ExecuteRequest) ClearTransactionId() {
@@ -252,7 +252,7 @@ type ExecuteRequest_builder struct {
 	// Execution options and configuration
 	Options *ExecuteOptions
 	// Request metadata for tracing and authentication
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Transaction ID if this operation is part of a transaction
 	TransactionId *string
 }
@@ -302,14 +302,14 @@ const file_database_v1_execute_request_proto_rawDesc = "" +
 	"\bdatabase\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bdatabase\x129\n" +
 	"\aoptions\x18\x04 \x01(\v2\x1b.database.v1.ExecuteOptionsB\x02(\x01R\aoptions\x12:\n" +
 	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadata\x12.\n" +
-	"\x0etransaction_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0etransaction_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_execute_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_execute_request_proto_goTypes = []any{
-	(*ExecuteRequest)(nil),     // 0: database.v1.ExecuteRequest
-	(*QueryParameter)(nil),     // 1: database.v1.QueryParameter
-	(*ExecuteOptions)(nil),     // 2: database.v1.ExecuteOptions
-	(*v1.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
+	(*ExecuteRequest)(nil),         // 0: database.v1.ExecuteRequest
+	(*QueryParameter)(nil),         // 1: database.v1.QueryParameter
+	(*ExecuteOptions)(nil),         // 2: database.v1.ExecuteOptions
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_database_v1_execute_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.ExecuteRequest.parameters:type_name -> database.v1.QueryParameter

@@ -262,7 +262,7 @@ const file_common_v2_permission_proto_rawDesc = "" +
 	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12*\n" +
 	"\x05scope\x18\x04 \x01(\x0e2\x14.common.v2.ScopeTypeR\x05scope\x12C\n" +
 	"\n" +
-	"created_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAtB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"created_at\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAtB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_permission_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_permission_proto_goTypes = []any{

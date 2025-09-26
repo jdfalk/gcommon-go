@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/load_balancing_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,14 +26,14 @@ const (
 // *
 // Configuration for load balancing across queue consumers.
 type LoadBalancingConfig struct {
-	state                            protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_Strategy              v1.LoadBalancingStrategy `protobuf:"varint,1,opt,name=strategy,enum=common.v1.LoadBalancingStrategy"`
-	xxx_hidden_Weight                int32                    `protobuf:"varint,2,opt,name=weight"`
-	xxx_hidden_MaxConcurrentMessages int32                    `protobuf:"varint,3,opt,name=max_concurrent_messages,json=maxConcurrentMessages"`
-	xxx_hidden_PrefetchCount         int32                    `protobuf:"varint,4,opt,name=prefetch_count,json=prefetchCount"`
-	xxx_hidden_Priority              int32                    `protobuf:"varint,5,opt,name=priority"`
-	xxx_hidden_StickySessions        bool                     `protobuf:"varint,6,opt,name=sticky_sessions,json=stickySessions"`
-	xxx_hidden_AffinityKey           *string                  `protobuf:"bytes,7,opt,name=affinity_key,json=affinityKey"`
+	state                            protoimpl.MessageState       `protogen:"opaque.v1"`
+	xxx_hidden_Strategy              common.LoadBalancingStrategy `protobuf:"varint,1,opt,name=strategy,enum=common.v1.LoadBalancingStrategy"`
+	xxx_hidden_Weight                int32                        `protobuf:"varint,2,opt,name=weight"`
+	xxx_hidden_MaxConcurrentMessages int32                        `protobuf:"varint,3,opt,name=max_concurrent_messages,json=maxConcurrentMessages"`
+	xxx_hidden_PrefetchCount         int32                        `protobuf:"varint,4,opt,name=prefetch_count,json=prefetchCount"`
+	xxx_hidden_Priority              int32                        `protobuf:"varint,5,opt,name=priority"`
+	xxx_hidden_StickySessions        bool                         `protobuf:"varint,6,opt,name=sticky_sessions,json=stickySessions"`
+	xxx_hidden_AffinityKey           *string                      `protobuf:"bytes,7,opt,name=affinity_key,json=affinityKey"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -65,13 +65,13 @@ func (x *LoadBalancingConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *LoadBalancingConfig) GetStrategy() v1.LoadBalancingStrategy {
+func (x *LoadBalancingConfig) GetStrategy() common.LoadBalancingStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Strategy
 		}
 	}
-	return v1.LoadBalancingStrategy(0)
+	return common.LoadBalancingStrategy(0)
 }
 
 func (x *LoadBalancingConfig) GetWeight() int32 {
@@ -119,7 +119,7 @@ func (x *LoadBalancingConfig) GetAffinityKey() string {
 	return ""
 }
 
-func (x *LoadBalancingConfig) SetStrategy(v v1.LoadBalancingStrategy) {
+func (x *LoadBalancingConfig) SetStrategy(v common.LoadBalancingStrategy) {
 	x.xxx_hidden_Strategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 7)
 }
@@ -205,7 +205,7 @@ func (x *LoadBalancingConfig) HasAffinityKey() bool {
 
 func (x *LoadBalancingConfig) ClearStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Strategy = v1.LoadBalancingStrategy_LOAD_BALANCING_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_Strategy = common.LoadBalancingStrategy_LOAD_BALANCING_STRATEGY_UNSPECIFIED
 }
 
 func (x *LoadBalancingConfig) ClearWeight() {
@@ -242,7 +242,7 @@ type LoadBalancingConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Load balancing strategy
-	Strategy *v1.LoadBalancingStrategy
+	Strategy *common.LoadBalancingStrategy
 	// Weight for this consumer (for weighted strategies)
 	Weight *int32
 	// Maximum concurrent messages per consumer
@@ -305,12 +305,12 @@ const file_queue_v1_load_balancing_config_proto_rawDesc = "" +
 	"\x0eprefetch_count\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rprefetchCount\x12#\n" +
 	"\bpriority\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriority\x12'\n" +
 	"\x0fsticky_sessions\x18\x06 \x01(\bR\x0estickySessions\x12*\n" +
-	"\faffinity_key\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaffinityKeyB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\faffinity_key\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaffinityKeyB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_load_balancing_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_load_balancing_config_proto_goTypes = []any{
-	(*LoadBalancingConfig)(nil),   // 0: queue.v1.LoadBalancingConfig
-	(v1.LoadBalancingStrategy)(0), // 1: common.v1.LoadBalancingStrategy
+	(*LoadBalancingConfig)(nil),       // 0: queue.v1.LoadBalancingConfig
+	(common.LoadBalancingStrategy)(0), // 1: common.v1.LoadBalancingStrategy
 }
 var file_queue_v1_load_balancing_config_proto_depIdxs = []int32{
 	1, // 0: queue.v1.LoadBalancingConfig.strategy:type_name -> common.v1.LoadBalancingStrategy

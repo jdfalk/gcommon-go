@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/backup_config.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -238,7 +238,7 @@ const file_organization_v1_backup_config_proto_rawDesc = "" +
 	"\tfrequency\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tfrequency\x12.\n" +
 	"\x0eretention_days\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rretentionDays\x122\n" +
 	"\x10storage_location\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fstorageLocation\x123\n" +
-	"\x16point_in_time_recovery\x18\x05 \x01(\bR\x13pointInTimeRecoveryB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16point_in_time_recovery\x18\x05 \x01(\bR\x13pointInTimeRecoveryB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_backup_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_backup_config_proto_goTypes = []any{

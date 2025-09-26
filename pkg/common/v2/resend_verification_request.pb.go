@@ -142,7 +142,7 @@ const file_common_v2_resend_verification_request_proto_rawDesc = "" +
 	"\n" +
 	"identifier\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"identifier\x123\n" +
-	"\x04type\x18\x02 \x01(\x0e2\x1f.common.v2.AuthVerificationTypeR\x04typeB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04type\x18\x02 \x01(\x0e2\x1f.common.v2.AuthVerificationTypeR\x04typeB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_resend_verification_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_resend_verification_request_proto_goTypes = []any{

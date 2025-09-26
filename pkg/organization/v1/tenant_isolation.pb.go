@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/tenant_isolation.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,20 +25,20 @@ const (
 )
 
 type TenantIsolation struct {
-	state                    protoimpl.MessageState        `protogen:"opaque.v1"`
-	xxx_hidden_TenantId      *string                       `protobuf:"bytes,1,opt,name=tenant_id,json=tenantId"`
-	xxx_hidden_Level         v1.OrganizationIsolationLevel `protobuf:"varint,2,opt,name=level,enum=common.v1.OrganizationIsolationLevel"`
-	xxx_hidden_Database      *DatabaseIsolation            `protobuf:"bytes,3,opt,name=database"`
-	xxx_hidden_Network       *NetworkIsolation             `protobuf:"bytes,4,opt,name=network"`
-	xxx_hidden_Storage       *StorageIsolation             `protobuf:"bytes,5,opt,name=storage"`
-	xxx_hidden_Compute       *ComputeIsolation             `protobuf:"bytes,6,opt,name=compute"`
-	xxx_hidden_Encryption    *OrganizationEncryptionConfig `protobuf:"bytes,7,opt,name=encryption"`
-	xxx_hidden_AccessControl *v1.OrganizationAccessControl `protobuf:"bytes,8,opt,name=access_control,json=accessControl"`
-	xxx_hidden_Audit         *AuditConfig                  `protobuf:"bytes,9,opt,name=audit"`
-	xxx_hidden_Metadata      *[]*v1.KeyValue               `protobuf:"bytes,10,rep,name=metadata"`
-	xxx_hidden_CreatedAt     *timestamppb.Timestamp        `protobuf:"bytes,11,opt,name=created_at,json=createdAt"`
-	xxx_hidden_UpdatedAt     *timestamppb.Timestamp        `protobuf:"bytes,12,opt,name=updated_at,json=updatedAt"`
-	xxx_hidden_ConfiguredBy  *string                       `protobuf:"bytes,13,opt,name=configured_by,json=configuredBy"`
+	state                    protoimpl.MessageState            `protogen:"opaque.v1"`
+	xxx_hidden_TenantId      *string                           `protobuf:"bytes,1,opt,name=tenant_id,json=tenantId"`
+	xxx_hidden_Level         common.OrganizationIsolationLevel `protobuf:"varint,2,opt,name=level,enum=common.v1.OrganizationIsolationLevel"`
+	xxx_hidden_Database      *DatabaseIsolation                `protobuf:"bytes,3,opt,name=database"`
+	xxx_hidden_Network       *NetworkIsolation                 `protobuf:"bytes,4,opt,name=network"`
+	xxx_hidden_Storage       *StorageIsolation                 `protobuf:"bytes,5,opt,name=storage"`
+	xxx_hidden_Compute       *ComputeIsolation                 `protobuf:"bytes,6,opt,name=compute"`
+	xxx_hidden_Encryption    *OrganizationEncryptionConfig     `protobuf:"bytes,7,opt,name=encryption"`
+	xxx_hidden_AccessControl *common.OrganizationAccessControl `protobuf:"bytes,8,opt,name=access_control,json=accessControl"`
+	xxx_hidden_Audit         *AuditConfig                      `protobuf:"bytes,9,opt,name=audit"`
+	xxx_hidden_Metadata      *[]*common.KeyValue               `protobuf:"bytes,10,rep,name=metadata"`
+	xxx_hidden_CreatedAt     *timestamppb.Timestamp            `protobuf:"bytes,11,opt,name=created_at,json=createdAt"`
+	xxx_hidden_UpdatedAt     *timestamppb.Timestamp            `protobuf:"bytes,12,opt,name=updated_at,json=updatedAt"`
+	xxx_hidden_ConfiguredBy  *string                           `protobuf:"bytes,13,opt,name=configured_by,json=configuredBy"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -82,13 +82,13 @@ func (x *TenantIsolation) GetTenantId() string {
 	return ""
 }
 
-func (x *TenantIsolation) GetLevel() v1.OrganizationIsolationLevel {
+func (x *TenantIsolation) GetLevel() common.OrganizationIsolationLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Level
 		}
 	}
-	return v1.OrganizationIsolationLevel(0)
+	return common.OrganizationIsolationLevel(0)
 }
 
 func (x *TenantIsolation) GetDatabase() *DatabaseIsolation {
@@ -126,7 +126,7 @@ func (x *TenantIsolation) GetEncryption() *OrganizationEncryptionConfig {
 	return nil
 }
 
-func (x *TenantIsolation) GetAccessControl() *v1.OrganizationAccessControl {
+func (x *TenantIsolation) GetAccessControl() *common.OrganizationAccessControl {
 	if x != nil {
 		return x.xxx_hidden_AccessControl
 	}
@@ -140,13 +140,13 @@ func (x *TenantIsolation) GetAudit() *AuditConfig {
 	return nil
 }
 
-func (x *TenantIsolation) GetMetadata() []*v1.KeyValue {
+func (x *TenantIsolation) GetMetadata() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 9) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 10)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -197,7 +197,7 @@ func (x *TenantIsolation) SetTenantId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 13)
 }
 
-func (x *TenantIsolation) SetLevel(v v1.OrganizationIsolationLevel) {
+func (x *TenantIsolation) SetLevel(v common.OrganizationIsolationLevel) {
 	x.xxx_hidden_Level = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 13)
 }
@@ -222,7 +222,7 @@ func (x *TenantIsolation) SetEncryption(v *OrganizationEncryptionConfig) {
 	x.xxx_hidden_Encryption = v
 }
 
-func (x *TenantIsolation) SetAccessControl(v *v1.OrganizationAccessControl) {
+func (x *TenantIsolation) SetAccessControl(v *common.OrganizationAccessControl) {
 	x.xxx_hidden_AccessControl = v
 }
 
@@ -230,11 +230,11 @@ func (x *TenantIsolation) SetAudit(v *AuditConfig) {
 	x.xxx_hidden_Audit = v
 }
 
-func (x *TenantIsolation) SetMetadata(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *TenantIsolation) SetMetadata(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -355,7 +355,7 @@ func (x *TenantIsolation) ClearTenantId() {
 
 func (x *TenantIsolation) ClearLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Level = v1.OrganizationIsolationLevel_ISOLATION_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Level = common.OrganizationIsolationLevel_ISOLATION_LEVEL_UNSPECIFIED
 }
 
 func (x *TenantIsolation) ClearDatabase() {
@@ -407,7 +407,7 @@ type TenantIsolation_builder struct {
 	// Tenant identifier
 	TenantId *string
 	// Isolation level for this tenant
-	Level *v1.OrganizationIsolationLevel
+	Level *common.OrganizationIsolationLevel
 	// Database isolation configuration
 	Database *DatabaseIsolation
 	// Network isolation configuration
@@ -419,11 +419,11 @@ type TenantIsolation_builder struct {
 	// Encryption configuration for tenant data
 	Encryption *OrganizationEncryptionConfig
 	// Access control configuration
-	AccessControl *v1.OrganizationAccessControl
+	AccessControl *common.OrganizationAccessControl
 	// Audit and compliance configuration
 	Audit *AuditConfig
 	// Isolation metadata and custom settings
-	Metadata []*v1.KeyValue
+	Metadata []*common.KeyValue
 	// Isolation configuration creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last update timestamp
@@ -493,21 +493,21 @@ const file_organization_v1_tenant_isolation_proto_rawDesc = "" +
 	"created_at\x18\v \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAt\x12=\n" +
 	"\n" +
 	"updated_at\x18\f \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\tupdatedAt\x12#\n" +
-	"\rconfigured_by\x18\r \x01(\tR\fconfiguredByB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rconfigured_by\x18\r \x01(\tR\fconfiguredByB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_tenant_isolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_tenant_isolation_proto_goTypes = []any{
-	(*TenantIsolation)(nil),              // 0: organization.v1.TenantIsolation
-	(v1.OrganizationIsolationLevel)(0),   // 1: common.v1.OrganizationIsolationLevel
-	(*DatabaseIsolation)(nil),            // 2: organization.v1.DatabaseIsolation
-	(*NetworkIsolation)(nil),             // 3: organization.v1.NetworkIsolation
-	(*StorageIsolation)(nil),             // 4: organization.v1.StorageIsolation
-	(*ComputeIsolation)(nil),             // 5: organization.v1.ComputeIsolation
-	(*OrganizationEncryptionConfig)(nil), // 6: organization.v1.OrganizationEncryptionConfig
-	(*v1.OrganizationAccessControl)(nil), // 7: common.v1.OrganizationAccessControl
-	(*AuditConfig)(nil),                  // 8: organization.v1.AuditConfig
-	(*v1.KeyValue)(nil),                  // 9: common.v1.KeyValue
-	(*timestamppb.Timestamp)(nil),        // 10: google.protobuf.Timestamp
+	(*TenantIsolation)(nil),                  // 0: organization.v1.TenantIsolation
+	(common.OrganizationIsolationLevel)(0),   // 1: common.v1.OrganizationIsolationLevel
+	(*DatabaseIsolation)(nil),                // 2: organization.v1.DatabaseIsolation
+	(*NetworkIsolation)(nil),                 // 3: organization.v1.NetworkIsolation
+	(*StorageIsolation)(nil),                 // 4: organization.v1.StorageIsolation
+	(*ComputeIsolation)(nil),                 // 5: organization.v1.ComputeIsolation
+	(*OrganizationEncryptionConfig)(nil),     // 6: organization.v1.OrganizationEncryptionConfig
+	(*common.OrganizationAccessControl)(nil), // 7: common.v1.OrganizationAccessControl
+	(*AuditConfig)(nil),                      // 8: organization.v1.AuditConfig
+	(*common.KeyValue)(nil),                  // 9: common.v1.KeyValue
+	(*timestamppb.Timestamp)(nil),            // 10: google.protobuf.Timestamp
 }
 var file_organization_v1_tenant_isolation_proto_depIdxs = []int32{
 	1,  // 0: organization.v1.TenantIsolation.level:type_name -> common.v1.OrganizationIsolationLevel

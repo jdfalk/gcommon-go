@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/daily_usage.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -138,7 +138,7 @@ const file_common_v1_daily_usage_proto_rawDesc = "" +
 	"\n" +
 	"DailyUsage\x12\x12\n" +
 	"\x04date\x18\x01 \x01(\tR\x04date\x12,\n" +
-	"\rrequest_count\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\frequestCountB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rrequest_count\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\frequestCountB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_daily_usage_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_daily_usage_proto_goTypes = []any{

@@ -33,7 +33,7 @@ const file_common_v2_notification_service_proto_rawDesc = "" +
 	"\vGetTemplate\x12\x1d.common.v2.GetTemplateRequest\x1a\x1e.common.v2.GetTemplateResponse\x12I\n" +
 	"\n" +
 	"MarkAsRead\x12\x1c.common.v2.MarkAsReadRequest\x1a\x1d.common.v2.MarkAsReadResponse\x12U\n" +
-	"\x06Delete\x12$.common.v2.DeleteNotificationRequest\x1a%.common.v2.DeleteNotificationResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06Delete\x12$.common.v2.DeleteNotificationRequest\x1a%.common.v2.DeleteNotificationResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_notification_service_proto_goTypes = []any{
 	(*SendNotificationRequest)(nil),    // 0: common.v2.SendNotificationRequest

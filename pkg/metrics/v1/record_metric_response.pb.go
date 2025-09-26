@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_metric_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,15 +27,15 @@ const (
 // *
 // RecordMetricResponse contains the result of recording a metric data point.
 type RecordMetricResponse struct {
-	state                  protoimpl.MessageState      `protogen:"opaque.v1"`
-	xxx_hidden_Success     bool                        `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error                   `protobuf:"bytes,2,opt,name=error"`
-	xxx_hidden_MetricId    *string                     `protobuf:"bytes,3,opt,name=metric_id,json=metricId"`
-	xxx_hidden_RecordedAt  *timestamppb.Timestamp      `protobuf:"bytes,4,opt,name=recorded_at,json=recordedAt"`
-	xxx_hidden_ProviderId  *string                     `protobuf:"bytes,5,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Validation  *v1.MetricsValidationResult `protobuf:"bytes,6,opt,name=validation"`
-	xxx_hidden_Stats       *RecordingStats             `protobuf:"bytes,7,opt,name=stats"`
-	xxx_hidden_Warnings    []string                    `protobuf:"bytes,8,rep,name=warnings"`
+	state                  protoimpl.MessageState          `protogen:"opaque.v1"`
+	xxx_hidden_Success     bool                            `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_Error       *common.Error                   `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_MetricId    *string                         `protobuf:"bytes,3,opt,name=metric_id,json=metricId"`
+	xxx_hidden_RecordedAt  *timestamppb.Timestamp          `protobuf:"bytes,4,opt,name=recorded_at,json=recordedAt"`
+	xxx_hidden_ProviderId  *string                         `protobuf:"bytes,5,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Validation  *common.MetricsValidationResult `protobuf:"bytes,6,opt,name=validation"`
+	xxx_hidden_Stats       *RecordingStats                 `protobuf:"bytes,7,opt,name=stats"`
+	xxx_hidden_Warnings    []string                        `protobuf:"bytes,8,rep,name=warnings"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -74,7 +74,7 @@ func (x *RecordMetricResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *RecordMetricResponse) GetError() *v1.Error {
+func (x *RecordMetricResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -108,7 +108,7 @@ func (x *RecordMetricResponse) GetProviderId() string {
 	return ""
 }
 
-func (x *RecordMetricResponse) GetValidation() *v1.MetricsValidationResult {
+func (x *RecordMetricResponse) GetValidation() *common.MetricsValidationResult {
 	if x != nil {
 		return x.xxx_hidden_Validation
 	}
@@ -134,7 +134,7 @@ func (x *RecordMetricResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *RecordMetricResponse) SetError(v *v1.Error) {
+func (x *RecordMetricResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -152,7 +152,7 @@ func (x *RecordMetricResponse) SetProviderId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 8)
 }
 
-func (x *RecordMetricResponse) SetValidation(v *v1.MetricsValidationResult) {
+func (x *RecordMetricResponse) SetValidation(v *common.MetricsValidationResult) {
 	x.xxx_hidden_Validation = v
 }
 
@@ -250,7 +250,7 @@ type RecordMetricResponse_builder struct {
 	// Success status of the operation
 	Success *bool
 	// Error information if the operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Unique ID assigned to the recorded metric (if applicable)
 	MetricId *string
 	// Timestamp when the metric was actually recorded
@@ -258,7 +258,7 @@ type RecordMetricResponse_builder struct {
 	// Provider that handled the metric
 	ProviderId *string
 	// Validation results if validation was requested
-	Validation *v1.MetricsValidationResult
+	Validation *common.MetricsValidationResult
 	// Performance metrics about the recording operation
 	Stats *RecordingStats
 	// Warnings or informational messages
@@ -307,15 +307,15 @@ const file_metrics_v1_record_metric_response_proto_rawDesc = "" +
 	"validation\x18\x06 \x01(\v2\".common.v1.MetricsValidationResultR\n" +
 	"validation\x120\n" +
 	"\x05stats\x18\a \x01(\v2\x1a.metrics.v1.RecordingStatsR\x05stats\x12$\n" +
-	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_metric_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_record_metric_response_proto_goTypes = []any{
-	(*RecordMetricResponse)(nil),       // 0: metrics.v1.RecordMetricResponse
-	(*v1.Error)(nil),                   // 1: common.v1.Error
-	(*timestamppb.Timestamp)(nil),      // 2: google.protobuf.Timestamp
-	(*v1.MetricsValidationResult)(nil), // 3: common.v1.MetricsValidationResult
-	(*RecordingStats)(nil),             // 4: metrics.v1.RecordingStats
+	(*RecordMetricResponse)(nil),           // 0: metrics.v1.RecordMetricResponse
+	(*common.Error)(nil),                   // 1: common.v1.Error
+	(*timestamppb.Timestamp)(nil),          // 2: google.protobuf.Timestamp
+	(*common.MetricsValidationResult)(nil), // 3: common.v1.MetricsValidationResult
+	(*RecordingStats)(nil),                 // 4: metrics.v1.RecordingStats
 }
 var file_metrics_v1_record_metric_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RecordMetricResponse.error:type_name -> common.v1.Error

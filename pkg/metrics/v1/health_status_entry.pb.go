@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/health_status_entry.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -168,7 +168,7 @@ const file_metrics_v1_health_status_entry_proto_rawDesc = "" +
 	"\x11HealthStatusEntry\x128\n" +
 	"\ttimestamp\x18\x01 \x01(\v2\x1a.google.protobuf.TimestampR\ttimestamp\x12,\n" +
 	"\rhealth_status\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fhealthStatus\x12.\n" +
-	"\x0estatus_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rstatusMessageB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0estatus_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rstatusMessageB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_health_status_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_health_status_entry_proto_goTypes = []any{

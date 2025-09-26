@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/get_security_config_response.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -107,7 +107,7 @@ const file_web_v1_get_security_config_response_proto_rawDesc = "" +
 	"\n" +
 	")web/v1/get_security_config_response.proto\x12\x06web.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"F\n" +
 	"\x19GetSecurityConfigResponse\x12)\n" +
-	"\vplaceholder\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vplaceholderB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vplaceholder\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vplaceholderB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_get_security_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_get_security_config_response_proto_goTypes = []any{

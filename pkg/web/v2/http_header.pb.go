@@ -126,7 +126,7 @@ const file_web_v2_http_header_proto_rawDesc = "" +
 	"\n" +
 	"HttpHeader\x12\x1d\n" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12\x16\n" +
-	"\x06values\x18\x02 \x03(\tR\x06valuesB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06values\x18\x02 \x03(\tR\x06valuesB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_http_header_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_http_header_proto_goTypes = []any{

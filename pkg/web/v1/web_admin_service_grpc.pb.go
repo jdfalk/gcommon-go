@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: web/v1/web_admin_service.proto
 
-package v1
+package web
 
 import (
 	context "context"

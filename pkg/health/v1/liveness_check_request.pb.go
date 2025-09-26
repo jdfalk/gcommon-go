@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/liveness_check_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,11 +28,11 @@ const (
 // Liveness checks verify that a service is alive and responsive.
 // Follows 1-1-1 pattern: one message per file.
 type LivenessCheckRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServiceName   *string                `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
-	xxx_hidden_Timeout       *durationpb.Duration   `protobuf:"bytes,3,opt,name=timeout"`
-	xxx_hidden_ProbeEndpoint *string                `protobuf:"bytes,4,opt,name=probe_endpoint,json=probeEndpoint"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServiceName   *string                 `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
+	xxx_hidden_Timeout       *durationpb.Duration    `protobuf:"bytes,3,opt,name=timeout"`
+	xxx_hidden_ProbeEndpoint *string                 `protobuf:"bytes,4,opt,name=probe_endpoint,json=probeEndpoint"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -74,7 +74,7 @@ func (x *LivenessCheckRequest) GetServiceName() string {
 	return ""
 }
 
-func (x *LivenessCheckRequest) GetMetadata() *v1.RequestMetadata {
+func (x *LivenessCheckRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -103,7 +103,7 @@ func (x *LivenessCheckRequest) SetServiceName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *LivenessCheckRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *LivenessCheckRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -168,7 +168,7 @@ type LivenessCheckRequest_builder struct {
 	// Service name to check liveness for
 	ServiceName *string
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Maximum time to wait for the liveness check
 	Timeout *durationpb.Duration
 	// Specific probe endpoint to check (optional)
@@ -201,13 +201,13 @@ const file_health_v1_liveness_check_request_proto_rawDesc = "" +
 	"\fservice_name\x18\x01 \x01(\tR\vserviceName\x126\n" +
 	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x123\n" +
 	"\atimeout\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x12%\n" +
-	"\x0eprobe_endpoint\x18\x04 \x01(\tR\rprobeEndpointB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eprobe_endpoint\x18\x04 \x01(\tR\rprobeEndpointB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_liveness_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_liveness_check_request_proto_goTypes = []any{
-	(*LivenessCheckRequest)(nil), // 0: health.v1.LivenessCheckRequest
-	(*v1.RequestMetadata)(nil),   // 1: common.v1.RequestMetadata
-	(*durationpb.Duration)(nil),  // 2: google.protobuf.Duration
+	(*LivenessCheckRequest)(nil),   // 0: health.v1.LivenessCheckRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*durationpb.Duration)(nil),    // 2: google.protobuf.Duration
 }
 var file_health_v1_liveness_check_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.LivenessCheckRequest.metadata:type_name -> common.v1.RequestMetadata

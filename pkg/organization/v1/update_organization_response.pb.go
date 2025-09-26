@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/update_organization_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type UpdateOrganizationResponse struct {
 	state                   protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Organization *Organization          `protobuf:"bytes,1,opt,name=organization"`
-	xxx_hidden_Errors       *[]*v1.Error           `protobuf:"bytes,2,rep,name=errors"`
+	xxx_hidden_Errors       *[]*common.Error       `protobuf:"bytes,2,rep,name=errors"`
 	xxx_hidden_Success      bool                   `protobuf:"varint,3,opt,name=success"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
@@ -68,7 +68,7 @@ func (x *UpdateOrganizationResponse) GetOrganization() *Organization {
 	return nil
 }
 
-func (x *UpdateOrganizationResponse) GetErrors() []*v1.Error {
+func (x *UpdateOrganizationResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -88,7 +88,7 @@ func (x *UpdateOrganizationResponse) SetOrganization(v *Organization) {
 	x.xxx_hidden_Organization = v
 }
 
-func (x *UpdateOrganizationResponse) SetErrors(v []*v1.Error) {
+func (x *UpdateOrganizationResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -126,7 +126,7 @@ type UpdateOrganizationResponse_builder struct {
 	// Updated organization
 	Organization *Organization
 	// Any errors encountered during update
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 }
@@ -152,13 +152,13 @@ const file_organization_v1_update_organization_response_proto_rawDesc = "" +
 	"\x1aUpdateOrganizationResponse\x12A\n" +
 	"\forganization\x18\x01 \x01(\v2\x1d.organization.v1.OrganizationR\forganization\x122\n" +
 	"\x06errors\x18\x02 \x03(\v2\x10.common.v1.ErrorB\b\xbaH\x05\x92\x01\x02\b\x01R\x06errors\x12\x18\n" +
-	"\asuccess\x18\x03 \x01(\bR\asuccessB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asuccess\x18\x03 \x01(\bR\asuccessB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_update_organization_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_update_organization_response_proto_goTypes = []any{
 	(*UpdateOrganizationResponse)(nil), // 0: organization.v1.UpdateOrganizationResponse
 	(*Organization)(nil),               // 1: organization.v1.Organization
-	(*v1.Error)(nil),                   // 2: common.v1.Error
+	(*common.Error)(nil),               // 2: common.v1.Error
 }
 var file_organization_v1_update_organization_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.UpdateOrganizationResponse.organization:type_name -> organization.v1.Organization

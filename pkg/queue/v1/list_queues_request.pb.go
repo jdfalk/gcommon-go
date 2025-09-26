@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/list_queues_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type ListQueuesRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_PageSize    int32                  `protobuf:"varint,2,opt,name=page_size,json=pageSize"`
-	xxx_hidden_PageToken   *string                `protobuf:"bytes,3,opt,name=page_token,json=pageToken"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_PageSize    int32                   `protobuf:"varint,2,opt,name=page_size,json=pageSize"`
+	xxx_hidden_PageToken   *string                 `protobuf:"bytes,3,opt,name=page_token,json=pageToken"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -59,7 +59,7 @@ func (x *ListQueuesRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListQueuesRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListQueuesRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -83,7 +83,7 @@ func (x *ListQueuesRequest) GetPageToken() string {
 	return ""
 }
 
-func (x *ListQueuesRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListQueuesRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -136,7 +136,7 @@ type ListQueuesRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata used across all services
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Optional page size for results
 	PageSize *int32
 	// Optional token for fetching the next page
@@ -169,12 +169,12 @@ const file_queue_v1_list_queues_request_proto_rawDesc = "" +
 	"\tpage_size\x18\x02 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12&\n" +
 	"\n" +
-	"page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageTokenB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_list_queues_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_list_queues_request_proto_goTypes = []any{
-	(*ListQueuesRequest)(nil),  // 0: queue.v1.ListQueuesRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*ListQueuesRequest)(nil),      // 0: queue.v1.ListQueuesRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_list_queues_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ListQueuesRequest.metadata:type_name -> common.v1.RequestMetadata

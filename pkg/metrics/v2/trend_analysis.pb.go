@@ -179,7 +179,7 @@ const file_metrics_v2_trend_analysis_proto_rawDesc = "" +
 	"\x0eresource_usage\x18\x02 \x01(\v2\x1e.metrics.v2.ResourceUsageTrendR\rresourceUsage\x12.\n" +
 	"\x06errors\x18\x03 \x01(\v2\x16.metrics.v2.ErrorTrendR\x06errors\x12<\n" +
 	"\vdata_volume\x18\x04 \x01(\v2\x1b.metrics.v2.DataVolumeTrendR\n" +
-	"dataVolumeB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"dataVolumeB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_trend_analysis_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_trend_analysis_proto_goTypes = []any{

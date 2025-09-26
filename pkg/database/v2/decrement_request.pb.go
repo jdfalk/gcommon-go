@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -298,7 +298,7 @@ const file_database_v2_decrement_request_proto_rawDesc = "" +
 	"\rinitial_value\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\finitialValue\x12/\n" +
 	"\x03ttl\x18\x04 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\x03ttl\x12%\n" +
 	"\tnamespace\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12:\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_decrement_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_decrement_request_proto_goTypes = []any{

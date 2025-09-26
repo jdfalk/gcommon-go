@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/promotion_rule.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -343,7 +343,7 @@ const file_config_v1_promotion_rule_proto_rawDesc = "" +
 	"\bschedule\x18\b \x01(\tR\bschedule\x12\x18\n" +
 	"\afilters\x18\t \x03(\tR\afilters\x12(\n" +
 	"\x0ftransformations\x18\n" +
-	" \x03(\tR\x0ftransformationsB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x03(\tR\x0ftransformationsB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_promotion_rule_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_promotion_rule_proto_goTypes = []any{

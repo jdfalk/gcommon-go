@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/list_queues_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type ListQueuesResponse struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Queues        *[]*QueueInfo          `protobuf:"bytes,1,rep,name=queues"`
-	xxx_hidden_NextPageToken *string                `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken"`
-	xxx_hidden_Metadata      *v1.ResponseMetadata   `protobuf:"bytes,3,opt,name=metadata"`
+	state                    protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Queues        *[]*QueueInfo            `protobuf:"bytes,1,rep,name=queues"`
+	xxx_hidden_NextPageToken *string                  `protobuf:"bytes,2,opt,name=next_page_token,json=nextPageToken"`
+	xxx_hidden_Metadata      *common.ResponseMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -78,7 +78,7 @@ func (x *ListQueuesResponse) GetNextPageToken() string {
 	return ""
 }
 
-func (x *ListQueuesResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *ListQueuesResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -94,7 +94,7 @@ func (x *ListQueuesResponse) SetNextPageToken(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *ListQueuesResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *ListQueuesResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -129,7 +129,7 @@ type ListQueuesResponse_builder struct {
 	// Token to retrieve the next page
 	NextPageToken *string
 	// Standard response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 }
 
 func (b0 ListQueuesResponse_builder) Build() *ListQueuesResponse {
@@ -153,13 +153,13 @@ const file_queue_v1_list_queues_response_proto_rawDesc = "" +
 	"\x12ListQueuesResponse\x125\n" +
 	"\x06queues\x18\x01 \x03(\v2\x13.queue.v1.QueueInfoB\b\xbaH\x05\x92\x01\x02\b\x01R\x06queues\x12/\n" +
 	"\x0fnext_page_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x127\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_list_queues_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_list_queues_response_proto_goTypes = []any{
-	(*ListQueuesResponse)(nil),  // 0: queue.v1.ListQueuesResponse
-	(*QueueInfo)(nil),           // 1: queue.v1.QueueInfo
-	(*v1.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
+	(*ListQueuesResponse)(nil),      // 0: queue.v1.ListQueuesResponse
+	(*QueueInfo)(nil),               // 1: queue.v1.QueueInfo
+	(*common.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
 }
 var file_queue_v1_list_queues_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ListQueuesResponse.queues:type_name -> queue.v1.QueueInfo

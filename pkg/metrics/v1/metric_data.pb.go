@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_data.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,18 +25,18 @@ const (
 )
 
 type MetricData struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_MetricId      *string                `protobuf:"bytes,1,opt,name=metric_id,json=metricId"`
-	xxx_hidden_Name          *string                `protobuf:"bytes,2,opt,name=name"`
-	xxx_hidden_Type          v1.MetricsMetricType   `protobuf:"varint,3,opt,name=type,enum=common.v1.MetricsMetricType"`
-	xxx_hidden_Description   *string                `protobuf:"bytes,4,opt,name=description"`
-	xxx_hidden_Unit          *string                `protobuf:"bytes,5,opt,name=unit"`
-	xxx_hidden_Labels        map[string]string      `protobuf:"bytes,6,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Values        *[]*MetricValue        `protobuf:"bytes,7,rep,name=values"`
-	xxx_hidden_CreatedAt     *timestamppb.Timestamp `protobuf:"bytes,8,opt,name=created_at,json=createdAt"`
-	xxx_hidden_Source        *string                `protobuf:"bytes,9,opt,name=source"`
-	xxx_hidden_Namespace     *string                `protobuf:"bytes,10,opt,name=namespace"`
-	xxx_hidden_SchemaVersion *string                `protobuf:"bytes,11,opt,name=schema_version,json=schemaVersion"`
+	state                    protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_MetricId      *string                  `protobuf:"bytes,1,opt,name=metric_id,json=metricId"`
+	xxx_hidden_Name          *string                  `protobuf:"bytes,2,opt,name=name"`
+	xxx_hidden_Type          common.MetricsMetricType `protobuf:"varint,3,opt,name=type,enum=common.v1.MetricsMetricType"`
+	xxx_hidden_Description   *string                  `protobuf:"bytes,4,opt,name=description"`
+	xxx_hidden_Unit          *string                  `protobuf:"bytes,5,opt,name=unit"`
+	xxx_hidden_Labels        map[string]string        `protobuf:"bytes,6,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Values        *[]*MetricValue          `protobuf:"bytes,7,rep,name=values"`
+	xxx_hidden_CreatedAt     *timestamppb.Timestamp   `protobuf:"bytes,8,opt,name=created_at,json=createdAt"`
+	xxx_hidden_Source        *string                  `protobuf:"bytes,9,opt,name=source"`
+	xxx_hidden_Namespace     *string                  `protobuf:"bytes,10,opt,name=namespace"`
+	xxx_hidden_SchemaVersion *string                  `protobuf:"bytes,11,opt,name=schema_version,json=schemaVersion"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -88,13 +88,13 @@ func (x *MetricData) GetName() string {
 	return ""
 }
 
-func (x *MetricData) GetType() v1.MetricsMetricType {
+func (x *MetricData) GetType() common.MetricsMetricType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MetricsMetricType(0)
+	return common.MetricsMetricType(0)
 }
 
 func (x *MetricData) GetDescription() string {
@@ -180,7 +180,7 @@ func (x *MetricData) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 11)
 }
 
-func (x *MetricData) SetType(v v1.MetricsMetricType) {
+func (x *MetricData) SetType(v common.MetricsMetricType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 11)
 }
@@ -297,7 +297,7 @@ func (x *MetricData) ClearName() {
 
 func (x *MetricData) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Type = v1.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
 }
 
 func (x *MetricData) ClearDescription() {
@@ -337,7 +337,7 @@ type MetricData_builder struct {
 	// Metric name (e.g., "http_requests_total", "cpu_usage_percent")
 	Name *string
 	// Type of metric (counter, gauge, histogram, etc.)
-	Type *v1.MetricsMetricType
+	Type *common.MetricsMetricType
 	// Human-readable description of the metric
 	Description *string
 	// Unit of measurement (e.g., "bytes", "seconds", "requests")
@@ -421,13 +421,13 @@ const file_metrics_v1_metric_data_proto_rawDesc = "" +
 	"\x0eschema_version\x18\v \x01(\tR\rschemaVersion\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_data_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_metric_data_proto_goTypes = []any{
 	(*MetricData)(nil),            // 0: metrics.v1.MetricData
 	nil,                           // 1: metrics.v1.MetricData.LabelsEntry
-	(v1.MetricsMetricType)(0),     // 2: common.v1.MetricsMetricType
+	(common.MetricsMetricType)(0), // 2: common.v1.MetricsMetricType
 	(*MetricValue)(nil),           // 3: metrics.v1.MetricValue
 	(*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
 }

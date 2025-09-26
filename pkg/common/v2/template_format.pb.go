@@ -93,7 +93,7 @@ const file_common_v2_template_format_proto_rawDesc = "" +
 	"\x13TEMPLATE_FORMAT_XML\x10\x04\x12\x1e\n" +
 	"\x1aTEMPLATE_FORMAT_PROPERTIES\x10\x05\x12\x17\n" +
 	"\x13TEMPLATE_FORMAT_INI\x10\x06\x12\x1a\n" +
-	"\x16TEMPLATE_FORMAT_CUSTOM\x10\aB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16TEMPLATE_FORMAT_CUSTOM\x10\aB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_template_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_template_format_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_counter_response.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type RecordCounterResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Metric      *CounterMetric         `protobuf:"bytes,2,opt,name=metric"`
-	xxx_hidden_RecordedAt  *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=recorded_at,json=recordedAt"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,4,opt,name=error"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Success     bool                    `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_Metric      *CounterMetric          `protobuf:"bytes,2,opt,name=metric"`
+	xxx_hidden_RecordedAt  *timestamppb.Timestamp  `protobuf:"bytes,3,opt,name=recorded_at,json=recordedAt"`
+	xxx_hidden_Error       *common.Error           `protobuf:"bytes,4,opt,name=error"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -82,14 +82,14 @@ func (x *RecordCounterResponse) GetRecordedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *RecordCounterResponse) GetError() *v1.Error {
+func (x *RecordCounterResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
 	return nil
 }
 
-func (x *RecordCounterResponse) GetMetadata() *v1.RequestMetadata {
+func (x *RecordCounterResponse) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -109,11 +109,11 @@ func (x *RecordCounterResponse) SetRecordedAt(v *timestamppb.Timestamp) {
 	x.xxx_hidden_RecordedAt = v
 }
 
-func (x *RecordCounterResponse) SetError(v *v1.Error) {
+func (x *RecordCounterResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
-func (x *RecordCounterResponse) SetMetadata(v *v1.RequestMetadata) {
+func (x *RecordCounterResponse) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -183,9 +183,9 @@ type RecordCounterResponse_builder struct {
 	// Timestamp when the metric was recorded
 	RecordedAt *timestamppb.Timestamp
 	// Error information if operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Response metadata for tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 RecordCounterResponse_builder) Build() *RecordCounterResponse {
@@ -215,15 +215,15 @@ const file_metrics_v1_record_counter_response_proto_rawDesc = "" +
 	"\vrecorded_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"recordedAt\x12&\n" +
 	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05error\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_counter_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_record_counter_response_proto_goTypes = []any{
-	(*RecordCounterResponse)(nil), // 0: metrics.v1.RecordCounterResponse
-	(*CounterMetric)(nil),         // 1: metrics.v1.CounterMetric
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
-	(*v1.Error)(nil),              // 3: common.v1.Error
-	(*v1.RequestMetadata)(nil),    // 4: common.v1.RequestMetadata
+	(*RecordCounterResponse)(nil),  // 0: metrics.v1.RecordCounterResponse
+	(*CounterMetric)(nil),          // 1: metrics.v1.CounterMetric
+	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
+	(*common.Error)(nil),           // 3: common.v1.Error
+	(*common.RequestMetadata)(nil), // 4: common.v1.RequestMetadata
 }
 var file_metrics_v1_record_counter_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RecordCounterResponse.metric:type_name -> metrics.v1.CounterMetric

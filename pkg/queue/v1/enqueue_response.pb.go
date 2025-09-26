@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/enqueue_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,22 +31,22 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type EnqueueResponse struct {
-	state                          protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_MessageId           *string                `protobuf:"bytes,1,opt,name=message_id,json=messageId"`
-	xxx_hidden_Success             bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_RequestMetadata     *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_QueueName           *string                `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
-	xxx_hidden_PayloadMd5          *string                `protobuf:"bytes,13,opt,name=payload_md5,json=payloadMd5"`
-	xxx_hidden_MessageSize         int64                  `protobuf:"varint,14,opt,name=message_size,json=messageSize"`
-	xxx_hidden_SequenceNumber      int64                  `protobuf:"varint,15,opt,name=sequence_number,json=sequenceNumber"`
-	xxx_hidden_AssignedPriority    int32                  `protobuf:"varint,16,opt,name=assigned_priority,json=assignedPriority"`
-	xxx_hidden_DeduplicationId     *string                `protobuf:"bytes,17,opt,name=deduplication_id,json=deduplicationId"`
-	xxx_hidden_GroupId             *string                `protobuf:"bytes,18,opt,name=group_id,json=groupId"`
-	xxx_hidden_AvailableAt         *timestamppb.Timestamp `protobuf:"bytes,19,opt,name=available_at,json=availableAt"`
-	xxx_hidden_ExpiresAt           *timestamppb.Timestamp `protobuf:"bytes,20,opt,name=expires_at,json=expiresAt"`
-	xxx_hidden_Error               *v1.Error              `protobuf:"bytes,61,opt,name=error"`
-	xxx_hidden_EnqueuedAt          *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=enqueued_at,json=enqueuedAt"`
-	xxx_hidden_ResponseGeneratedAt *timestamppb.Timestamp `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
+	state                          protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_MessageId           *string                 `protobuf:"bytes,1,opt,name=message_id,json=messageId"`
+	xxx_hidden_Success             bool                    `protobuf:"varint,2,opt,name=success"`
+	xxx_hidden_RequestMetadata     *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_QueueName           *string                 `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
+	xxx_hidden_PayloadMd5          *string                 `protobuf:"bytes,13,opt,name=payload_md5,json=payloadMd5"`
+	xxx_hidden_MessageSize         int64                   `protobuf:"varint,14,opt,name=message_size,json=messageSize"`
+	xxx_hidden_SequenceNumber      int64                   `protobuf:"varint,15,opt,name=sequence_number,json=sequenceNumber"`
+	xxx_hidden_AssignedPriority    int32                   `protobuf:"varint,16,opt,name=assigned_priority,json=assignedPriority"`
+	xxx_hidden_DeduplicationId     *string                 `protobuf:"bytes,17,opt,name=deduplication_id,json=deduplicationId"`
+	xxx_hidden_GroupId             *string                 `protobuf:"bytes,18,opt,name=group_id,json=groupId"`
+	xxx_hidden_AvailableAt         *timestamppb.Timestamp  `protobuf:"bytes,19,opt,name=available_at,json=availableAt"`
+	xxx_hidden_ExpiresAt           *timestamppb.Timestamp  `protobuf:"bytes,20,opt,name=expires_at,json=expiresAt"`
+	xxx_hidden_Error               *common.Error           `protobuf:"bytes,61,opt,name=error"`
+	xxx_hidden_EnqueuedAt          *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=enqueued_at,json=enqueuedAt"`
+	xxx_hidden_ResponseGeneratedAt *timestamppb.Timestamp  `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
 	XXX_raceDetectHookData         protoimpl.RaceDetectHookData
 	XXX_presence                   [1]uint32
 	unknownFields                  protoimpl.UnknownFields
@@ -95,7 +95,7 @@ func (x *EnqueueResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *EnqueueResponse) GetRequestMetadata() *v1.RequestMetadata {
+func (x *EnqueueResponse) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -177,7 +177,7 @@ func (x *EnqueueResponse) GetExpiresAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *EnqueueResponse) GetError() *v1.Error {
+func (x *EnqueueResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -208,7 +208,7 @@ func (x *EnqueueResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 15)
 }
 
-func (x *EnqueueResponse) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *EnqueueResponse) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -255,7 +255,7 @@ func (x *EnqueueResponse) SetExpiresAt(v *timestamppb.Timestamp) {
 	x.xxx_hidden_ExpiresAt = v
 }
 
-func (x *EnqueueResponse) SetError(v *v1.Error) {
+func (x *EnqueueResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -455,7 +455,7 @@ type EnqueueResponse_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Name of the queue where the message was enqueued.
 	// Echoed from the request for verification.
@@ -495,7 +495,7 @@ type EnqueueResponse_builder struct {
 	// *
 	// Error information if the enqueue operation failed
 	// or completed with warnings.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// Timestamp when the message was enqueued.
 	// Precise timing for SLA and performance monitoring.
@@ -580,14 +580,14 @@ const file_queue_v1_enqueue_response_proto_rawDesc = "" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12;\n" +
 	"\venqueued_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"enqueuedAt\x12N\n" +
-	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_enqueue_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_enqueue_response_proto_goTypes = []any{
-	(*EnqueueResponse)(nil),       // 0: queue.v1.EnqueueResponse
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
-	(*v1.Error)(nil),              // 3: common.v1.Error
+	(*EnqueueResponse)(nil),        // 0: queue.v1.EnqueueResponse
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
+	(*common.Error)(nil),           // 3: common.v1.Error
 }
 var file_queue_v1_enqueue_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.EnqueueResponse.request_metadata:type_name -> common.v1.RequestMetadata

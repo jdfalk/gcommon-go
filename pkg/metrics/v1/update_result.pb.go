@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/update_result.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,14 +26,14 @@ const (
 // *
 // UpdateResult contains information about what was changed.
 type UpdateResult struct {
-	state                      protoimpl.MessageState     `protogen:"opaque.v1"`
-	xxx_hidden_Action          v1.UpdateAction            `protobuf:"varint,1,opt,name=action,enum=common.v1.UpdateAction"`
-	xxx_hidden_ConfigChanges   *[]*v1.MetricsConfigChange `protobuf:"bytes,2,rep,name=config_changes,json=configChanges"`
-	xxx_hidden_UpdatedSettings []string                   `protobuf:"bytes,3,rep,name=updated_settings,json=updatedSettings"`
-	xxx_hidden_RemovedSettings []string                   `protobuf:"bytes,4,rep,name=removed_settings,json=removedSettings"`
-	xxx_hidden_Restarted       bool                       `protobuf:"varint,5,opt,name=restarted"`
-	xxx_hidden_StrategyUsed    *string                    `protobuf:"bytes,6,opt,name=strategy_used,json=strategyUsed"`
-	xxx_hidden_UpdateDuration  *string                    `protobuf:"bytes,7,opt,name=update_duration,json=updateDuration"`
+	state                      protoimpl.MessageState         `protogen:"opaque.v1"`
+	xxx_hidden_Action          common.UpdateAction            `protobuf:"varint,1,opt,name=action,enum=common.v1.UpdateAction"`
+	xxx_hidden_ConfigChanges   *[]*common.MetricsConfigChange `protobuf:"bytes,2,rep,name=config_changes,json=configChanges"`
+	xxx_hidden_UpdatedSettings []string                       `protobuf:"bytes,3,rep,name=updated_settings,json=updatedSettings"`
+	xxx_hidden_RemovedSettings []string                       `protobuf:"bytes,4,rep,name=removed_settings,json=removedSettings"`
+	xxx_hidden_Restarted       bool                           `protobuf:"varint,5,opt,name=restarted"`
+	xxx_hidden_StrategyUsed    *string                        `protobuf:"bytes,6,opt,name=strategy_used,json=strategyUsed"`
+	xxx_hidden_UpdateDuration  *string                        `protobuf:"bytes,7,opt,name=update_duration,json=updateDuration"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -65,16 +65,16 @@ func (x *UpdateResult) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *UpdateResult) GetAction() v1.UpdateAction {
+func (x *UpdateResult) GetAction() common.UpdateAction {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Action
 		}
 	}
-	return v1.UpdateAction(0)
+	return common.UpdateAction(0)
 }
 
-func (x *UpdateResult) GetConfigChanges() []*v1.MetricsConfigChange {
+func (x *UpdateResult) GetConfigChanges() []*common.MetricsConfigChange {
 	if x != nil {
 		if x.xxx_hidden_ConfigChanges != nil {
 			return *x.xxx_hidden_ConfigChanges
@@ -124,12 +124,12 @@ func (x *UpdateResult) GetUpdateDuration() string {
 	return ""
 }
 
-func (x *UpdateResult) SetAction(v v1.UpdateAction) {
+func (x *UpdateResult) SetAction(v common.UpdateAction) {
 	x.xxx_hidden_Action = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 7)
 }
 
-func (x *UpdateResult) SetConfigChanges(v []*v1.MetricsConfigChange) {
+func (x *UpdateResult) SetConfigChanges(v []*common.MetricsConfigChange) {
 	x.xxx_hidden_ConfigChanges = &v
 }
 
@@ -186,7 +186,7 @@ func (x *UpdateResult) HasUpdateDuration() bool {
 
 func (x *UpdateResult) ClearAction() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Action = v1.UpdateAction_UPDATE_ACTION_UNSPECIFIED
+	x.xxx_hidden_Action = common.UpdateAction_UPDATE_ACTION_UNSPECIFIED
 }
 
 func (x *UpdateResult) ClearRestarted() {
@@ -208,9 +208,9 @@ type UpdateResult_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// What update action was taken
-	Action *v1.UpdateAction
+	Action *common.UpdateAction
 	// Configuration changes that were applied
-	ConfigChanges []*v1.MetricsConfigChange
+	ConfigChanges []*common.MetricsConfigChange
 	// Settings that were updated
 	UpdatedSettings []string
 	// Settings that were removed
@@ -262,13 +262,13 @@ const file_metrics_v1_update_result_proto_rawDesc = "" +
 	"\x10removed_settings\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fremovedSettings\x12\x1c\n" +
 	"\trestarted\x18\x05 \x01(\bR\trestarted\x12,\n" +
 	"\rstrategy_used\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fstrategyUsed\x120\n" +
-	"\x0fupdate_duration\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0eupdateDurationB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fupdate_duration\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0eupdateDurationB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_update_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_update_result_proto_goTypes = []any{
-	(*UpdateResult)(nil),           // 0: metrics.v1.UpdateResult
-	(v1.UpdateAction)(0),           // 1: common.v1.UpdateAction
-	(*v1.MetricsConfigChange)(nil), // 2: common.v1.MetricsConfigChange
+	(*UpdateResult)(nil),               // 0: metrics.v1.UpdateResult
+	(common.UpdateAction)(0),           // 1: common.v1.UpdateAction
+	(*common.MetricsConfigChange)(nil), // 2: common.v1.MetricsConfigChange
 }
 var file_metrics_v1_update_result_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.UpdateResult.action:type_name -> common.v1.UpdateAction

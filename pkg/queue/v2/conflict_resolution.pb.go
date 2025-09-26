@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -189,7 +189,7 @@ const file_queue_v2_conflict_resolution_proto_rawDesc = "" +
 	"\n" +
 	"lww_config\x18\x03 \x01(\v2\x18.queue.v2.LastWriterWinsR\tlwwConfig\x12;\n" +
 	"\vmulti_value\x18\x04 \x01(\v2\x1a.queue.v2.MultiValueConfigR\n" +
-	"multiValueB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"multiValueB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_conflict_resolution_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_conflict_resolution_proto_goTypes = []any{

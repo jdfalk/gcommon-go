@@ -268,7 +268,7 @@ const file_queue_v2_restore_status_proto_rawDesc = "" +
 	"\rcurrent_phase\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fcurrentPhase\x12J\n" +
 	"\x13estimated_remaining\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\x12estimatedRemaining\x12;\n" +
 	"\vlast_update\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
-	"lastUpdateB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"lastUpdateB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_restore_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_restore_status_proto_goTypes = []any{

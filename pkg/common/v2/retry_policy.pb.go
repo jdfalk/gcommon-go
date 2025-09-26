@@ -270,7 +270,7 @@ const file_common_v2_retry_policy_proto_rawDesc = "" +
 	"\x12backoff_multiplier\x18\x04 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11backoffMultiplier\x12#\n" +
 	"\renable_jitter\x18\x05 \x01(\bR\fenableJitter\x12I\n" +
 	"\x10retryable_errors\x18\x06 \x03(\x0e2\x14.common.v2.ErrorCodeB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fretryableErrors\x12>\n" +
-	"\rtotal_timeout\x18\a \x01(\v2\x19.google.protobuf.DurationR\ftotalTimeoutB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rtotal_timeout\x18\a \x01(\v2\x19.google.protobuf.DurationR\ftotalTimeoutB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_retry_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_retry_policy_proto_goTypes = []any{

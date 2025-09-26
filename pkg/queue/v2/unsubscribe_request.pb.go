@@ -240,7 +240,7 @@ const file_queue_v2_unsubscribe_request_proto_rawDesc = "" +
 	"\x05force\x18\x03 \x01(\bR\x05force\x12+\n" +
 	"\x11close_connections\x18\x04 \x01(\bR\x10closeConnections\x12&\n" +
 	"\n" +
-	"timeout_ms\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_unsubscribe_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_unsubscribe_request_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/visibility_update.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -168,7 +168,7 @@ const file_queue_v1_visibility_update_proto_rawDesc = "" +
 	"\x10VisibilityUpdate\x12;\n" +
 	"\x15visibility_timeout_ms\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x13visibilityTimeoutMs\x12%\n" +
 	"\x0eextend_current\x18\x02 \x01(\bR\rextendCurrent\x123\n" +
-	"\x11max_visibility_ms\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fmaxVisibilityMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11max_visibility_ms\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fmaxVisibilityMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_visibility_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_visibility_update_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/ordering_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,9 +25,9 @@ const (
 
 type OrderingConfig struct {
 	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_GlobalOrdering    v1.OrderingLevel       `protobuf:"varint,1,opt,name=global_ordering,json=globalOrdering,enum=common.v1.OrderingLevel"`
-	xxx_hidden_PartitionOrdering v1.OrderingLevel       `protobuf:"varint,2,opt,name=partition_ordering,json=partitionOrdering,enum=common.v1.OrderingLevel"`
-	xxx_hidden_ProducerOrdering  v1.OrderingLevel       `protobuf:"varint,3,opt,name=producer_ordering,json=producerOrdering,enum=common.v1.OrderingLevel"`
+	xxx_hidden_GlobalOrdering    common.OrderingLevel   `protobuf:"varint,1,opt,name=global_ordering,json=globalOrdering,enum=common.v1.OrderingLevel"`
+	xxx_hidden_PartitionOrdering common.OrderingLevel   `protobuf:"varint,2,opt,name=partition_ordering,json=partitionOrdering,enum=common.v1.OrderingLevel"`
+	xxx_hidden_ProducerOrdering  common.OrderingLevel   `protobuf:"varint,3,opt,name=producer_ordering,json=producerOrdering,enum=common.v1.OrderingLevel"`
 	xxx_hidden_CausalOrdering    bool                   `protobuf:"varint,4,opt,name=causal_ordering,json=causalOrdering"`
 	xxx_hidden_OrderingTimeoutMs int32                  `protobuf:"varint,5,opt,name=ordering_timeout_ms,json=orderingTimeoutMs"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
@@ -61,31 +61,31 @@ func (x *OrderingConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *OrderingConfig) GetGlobalOrdering() v1.OrderingLevel {
+func (x *OrderingConfig) GetGlobalOrdering() common.OrderingLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_GlobalOrdering
 		}
 	}
-	return v1.OrderingLevel(0)
+	return common.OrderingLevel(0)
 }
 
-func (x *OrderingConfig) GetPartitionOrdering() v1.OrderingLevel {
+func (x *OrderingConfig) GetPartitionOrdering() common.OrderingLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_PartitionOrdering
 		}
 	}
-	return v1.OrderingLevel(0)
+	return common.OrderingLevel(0)
 }
 
-func (x *OrderingConfig) GetProducerOrdering() v1.OrderingLevel {
+func (x *OrderingConfig) GetProducerOrdering() common.OrderingLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_ProducerOrdering
 		}
 	}
-	return v1.OrderingLevel(0)
+	return common.OrderingLevel(0)
 }
 
 func (x *OrderingConfig) GetCausalOrdering() bool {
@@ -102,17 +102,17 @@ func (x *OrderingConfig) GetOrderingTimeoutMs() int32 {
 	return 0
 }
 
-func (x *OrderingConfig) SetGlobalOrdering(v v1.OrderingLevel) {
+func (x *OrderingConfig) SetGlobalOrdering(v common.OrderingLevel) {
 	x.xxx_hidden_GlobalOrdering = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *OrderingConfig) SetPartitionOrdering(v v1.OrderingLevel) {
+func (x *OrderingConfig) SetPartitionOrdering(v common.OrderingLevel) {
 	x.xxx_hidden_PartitionOrdering = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *OrderingConfig) SetProducerOrdering(v v1.OrderingLevel) {
+func (x *OrderingConfig) SetProducerOrdering(v common.OrderingLevel) {
 	x.xxx_hidden_ProducerOrdering = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
@@ -164,17 +164,17 @@ func (x *OrderingConfig) HasOrderingTimeoutMs() bool {
 
 func (x *OrderingConfig) ClearGlobalOrdering() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_GlobalOrdering = v1.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
+	x.xxx_hidden_GlobalOrdering = common.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
 }
 
 func (x *OrderingConfig) ClearPartitionOrdering() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_PartitionOrdering = v1.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
+	x.xxx_hidden_PartitionOrdering = common.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
 }
 
 func (x *OrderingConfig) ClearProducerOrdering() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_ProducerOrdering = v1.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
+	x.xxx_hidden_ProducerOrdering = common.OrderingLevel_ORDERING_LEVEL_UNSPECIFIED
 }
 
 func (x *OrderingConfig) ClearCausalOrdering() {
@@ -191,11 +191,11 @@ type OrderingConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Global ordering guarantee level
-	GlobalOrdering *v1.OrderingLevel
+	GlobalOrdering *common.OrderingLevel
 	// Per-partition ordering guarantee
-	PartitionOrdering *v1.OrderingLevel
+	PartitionOrdering *common.OrderingLevel
 	// Per-producer ordering guarantee
-	ProducerOrdering *v1.OrderingLevel
+	ProducerOrdering *common.OrderingLevel
 	// Enable causal ordering
 	CausalOrdering *bool
 	// Ordering timeout (milliseconds)
@@ -239,12 +239,12 @@ const file_queue_v1_ordering_config_proto_rawDesc = "" +
 	"\x12partition_ordering\x18\x02 \x01(\x0e2\x18.common.v1.OrderingLevelR\x11partitionOrdering\x12E\n" +
 	"\x11producer_ordering\x18\x03 \x01(\x0e2\x18.common.v1.OrderingLevelR\x10producerOrdering\x12'\n" +
 	"\x0fcausal_ordering\x18\x04 \x01(\bR\x0ecausalOrdering\x127\n" +
-	"\x13ordering_timeout_ms\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x11orderingTimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13ordering_timeout_ms\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x11orderingTimeoutMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_ordering_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_ordering_config_proto_goTypes = []any{
-	(*OrderingConfig)(nil), // 0: queue.v1.OrderingConfig
-	(v1.OrderingLevel)(0),  // 1: common.v1.OrderingLevel
+	(*OrderingConfig)(nil),    // 0: queue.v1.OrderingConfig
+	(common.OrderingLevel)(0), // 1: common.v1.OrderingLevel
 }
 var file_queue_v1_ordering_config_proto_depIdxs = []int32{
 	1, // 0: queue.v1.OrderingConfig.global_ordering:type_name -> common.v1.OrderingLevel

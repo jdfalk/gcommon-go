@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/security_config.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type MetricsSecurityConfig struct {
-	state                   protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_RequireAuth  bool                    `protobuf:"varint,1,opt,name=require_auth,json=requireAuth"`
-	xxx_hidden_AuthMethods  []string                `protobuf:"bytes,2,rep,name=auth_methods,json=authMethods"`
-	xxx_hidden_RequireTls   bool                    `protobuf:"varint,3,opt,name=require_tls,json=requireTls"`
-	xxx_hidden_TlsConfig    *MetricsTLSConfig       `protobuf:"bytes,4,opt,name=tls_config,json=tlsConfig"`
-	xxx_hidden_ApiKeyConfig *v1.MetricsAPIKeyConfig `protobuf:"bytes,5,opt,name=api_key_config,json=apiKeyConfig"`
+	state                   protoimpl.MessageState      `protogen:"opaque.v1"`
+	xxx_hidden_RequireAuth  bool                        `protobuf:"varint,1,opt,name=require_auth,json=requireAuth"`
+	xxx_hidden_AuthMethods  []string                    `protobuf:"bytes,2,rep,name=auth_methods,json=authMethods"`
+	xxx_hidden_RequireTls   bool                        `protobuf:"varint,3,opt,name=require_tls,json=requireTls"`
+	xxx_hidden_TlsConfig    *MetricsTLSConfig           `protobuf:"bytes,4,opt,name=tls_config,json=tlsConfig"`
+	xxx_hidden_ApiKeyConfig *common.MetricsAPIKeyConfig `protobuf:"bytes,5,opt,name=api_key_config,json=apiKeyConfig"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -89,7 +89,7 @@ func (x *MetricsSecurityConfig) GetTlsConfig() *MetricsTLSConfig {
 	return nil
 }
 
-func (x *MetricsSecurityConfig) GetApiKeyConfig() *v1.MetricsAPIKeyConfig {
+func (x *MetricsSecurityConfig) GetApiKeyConfig() *common.MetricsAPIKeyConfig {
 	if x != nil {
 		return x.xxx_hidden_ApiKeyConfig
 	}
@@ -114,7 +114,7 @@ func (x *MetricsSecurityConfig) SetTlsConfig(v *MetricsTLSConfig) {
 	x.xxx_hidden_TlsConfig = v
 }
 
-func (x *MetricsSecurityConfig) SetApiKeyConfig(v *v1.MetricsAPIKeyConfig) {
+func (x *MetricsSecurityConfig) SetApiKeyConfig(v *common.MetricsAPIKeyConfig) {
 	x.xxx_hidden_ApiKeyConfig = v
 }
 
@@ -176,7 +176,7 @@ type MetricsSecurityConfig_builder struct {
 	// TLS configuration
 	TlsConfig *MetricsTLSConfig
 	// API key configuration
-	ApiKeyConfig *v1.MetricsAPIKeyConfig
+	ApiKeyConfig *common.MetricsAPIKeyConfig
 }
 
 func (b0 MetricsSecurityConfig_builder) Build() *MetricsSecurityConfig {
@@ -210,13 +210,13 @@ const file_metrics_v1_security_config_proto_rawDesc = "" +
 	"requireTls\x12;\n" +
 	"\n" +
 	"tls_config\x18\x04 \x01(\v2\x1c.metrics.v1.MetricsTLSConfigR\ttlsConfig\x12D\n" +
-	"\x0eapi_key_config\x18\x05 \x01(\v2\x1e.common.v1.MetricsAPIKeyConfigR\fapiKeyConfigB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eapi_key_config\x18\x05 \x01(\v2\x1e.common.v1.MetricsAPIKeyConfigR\fapiKeyConfigB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_security_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_security_config_proto_goTypes = []any{
-	(*MetricsSecurityConfig)(nil),  // 0: metrics.v1.MetricsSecurityConfig
-	(*MetricsTLSConfig)(nil),       // 1: metrics.v1.MetricsTLSConfig
-	(*v1.MetricsAPIKeyConfig)(nil), // 2: common.v1.MetricsAPIKeyConfig
+	(*MetricsSecurityConfig)(nil),      // 0: metrics.v1.MetricsSecurityConfig
+	(*MetricsTLSConfig)(nil),           // 1: metrics.v1.MetricsTLSConfig
+	(*common.MetricsAPIKeyConfig)(nil), // 2: common.v1.MetricsAPIKeyConfig
 }
 var file_metrics_v1_security_config_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsSecurityConfig.tls_config:type_name -> metrics.v1.MetricsTLSConfig

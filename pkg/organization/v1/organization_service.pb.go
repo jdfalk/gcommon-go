@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/organization_service.proto
 
-package v1
+package organization
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -37,7 +37,7 @@ const file_organization_v1_organization_service_proto_rawDesc = "" +
 	"\fUpdateMember\x12$.organization.v1.UpdateMemberRequest\x1a%.organization.v1.UpdateMemberResponse\x12X\n" +
 	"\vListMembers\x12#.organization.v1.ListMembersRequest\x1a$.organization.v1.ListMembersResponse\x12|\n" +
 	"\x17GetOrganizationSettings\x12/.organization.v1.GetOrganizationSettingsRequest\x1a0.organization.v1.GetOrganizationSettingsResponse\x12\x85\x01\n" +
-	"\x1aUpdateOrganizationSettings\x122.organization.v1.UpdateOrganizationSettingsRequest\x1a3.organization.v1.UpdateOrganizationSettingsResponseB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1aUpdateOrganizationSettings\x122.organization.v1.UpdateOrganizationSettingsRequest\x1a3.organization.v1.UpdateOrganizationSettingsResponseB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_organization_service_proto_goTypes = []any{
 	(*CreateOrganizationRequest)(nil),          // 0: organization.v1.CreateOrganizationRequest

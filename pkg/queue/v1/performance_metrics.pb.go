@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/performance_metrics.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -325,7 +325,7 @@ const file_queue_v1_performance_metrics_proto_rawDesc = "" +
 	"\x14disk_available_bytes\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12diskAvailableBytes\x12G\n" +
 	"\x18network_bytes_per_second\x18\x06 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x15networkBytesPerSecond\x126\n" +
 	"\x12active_connections\x18\a \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11activeConnections\x120\n" +
-	"\x0fmax_connections\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0emaxConnectionsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmax_connections\x18\b \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0emaxConnectionsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_performance_metrics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_performance_metrics_proto_goTypes = []any{

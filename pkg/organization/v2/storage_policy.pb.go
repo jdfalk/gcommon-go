@@ -209,7 +209,7 @@ const file_organization_v2_storage_policy_proto_rawDesc = "" +
 	"\tstatement\x18\x02 \x01(\tR\tstatement\x12\x16\n" +
 	"\x06effect\x18\x03 \x01(\tR\x06effect\x12\x1c\n" +
 	"\tresources\x18\x04 \x03(\tR\tresources\x12\x18\n" +
-	"\aactions\x18\x05 \x03(\tR\aactionsB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aactions\x18\x05 \x03(\tR\aactionsB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_storage_policy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_storage_policy_proto_goTypes = []any{

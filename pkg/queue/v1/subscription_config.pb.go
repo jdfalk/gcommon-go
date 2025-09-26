@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/subscription_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,13 +25,13 @@ const (
 
 // SubscriptionConfig describes how a consumer subscribes to a queue.
 type SubscriptionConfig struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name            *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_State           v1.SubscriptionState   `protobuf:"varint,2,opt,name=state,enum=common.v1.SubscriptionState"`
-	xxx_hidden_RoutingStrategy v1.RoutingStrategy     `protobuf:"varint,3,opt,name=routing_strategy,json=routingStrategy,enum=common.v1.RoutingStrategy"`
-	xxx_hidden_DefaultPriority v1.PriorityLevel       `protobuf:"varint,4,opt,name=default_priority,json=defaultPriority,enum=common.v1.PriorityLevel"`
-	xxx_hidden_DeliveryOptions *DeliveryOptions       `protobuf:"bytes,5,opt,name=delivery_options,json=deliveryOptions"`
-	xxx_hidden_MaxInflight     int32                  `protobuf:"varint,6,opt,name=max_inflight,json=maxInflight"`
+	state                      protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Name            *string                  `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_State           common.SubscriptionState `protobuf:"varint,2,opt,name=state,enum=common.v1.SubscriptionState"`
+	xxx_hidden_RoutingStrategy common.RoutingStrategy   `protobuf:"varint,3,opt,name=routing_strategy,json=routingStrategy,enum=common.v1.RoutingStrategy"`
+	xxx_hidden_DefaultPriority common.PriorityLevel     `protobuf:"varint,4,opt,name=default_priority,json=defaultPriority,enum=common.v1.PriorityLevel"`
+	xxx_hidden_DeliveryOptions *DeliveryOptions         `protobuf:"bytes,5,opt,name=delivery_options,json=deliveryOptions"`
+	xxx_hidden_MaxInflight     int32                    `protobuf:"varint,6,opt,name=max_inflight,json=maxInflight"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -73,31 +73,31 @@ func (x *SubscriptionConfig) GetName() string {
 	return ""
 }
 
-func (x *SubscriptionConfig) GetState() v1.SubscriptionState {
+func (x *SubscriptionConfig) GetState() common.SubscriptionState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_State
 		}
 	}
-	return v1.SubscriptionState(0)
+	return common.SubscriptionState(0)
 }
 
-func (x *SubscriptionConfig) GetRoutingStrategy() v1.RoutingStrategy {
+func (x *SubscriptionConfig) GetRoutingStrategy() common.RoutingStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_RoutingStrategy
 		}
 	}
-	return v1.RoutingStrategy(0)
+	return common.RoutingStrategy(0)
 }
 
-func (x *SubscriptionConfig) GetDefaultPriority() v1.PriorityLevel {
+func (x *SubscriptionConfig) GetDefaultPriority() common.PriorityLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_DefaultPriority
 		}
 	}
-	return v1.PriorityLevel(0)
+	return common.PriorityLevel(0)
 }
 
 func (x *SubscriptionConfig) GetDeliveryOptions() *DeliveryOptions {
@@ -119,17 +119,17 @@ func (x *SubscriptionConfig) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *SubscriptionConfig) SetState(v v1.SubscriptionState) {
+func (x *SubscriptionConfig) SetState(v common.SubscriptionState) {
 	x.xxx_hidden_State = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
 
-func (x *SubscriptionConfig) SetRoutingStrategy(v v1.RoutingStrategy) {
+func (x *SubscriptionConfig) SetRoutingStrategy(v common.RoutingStrategy) {
 	x.xxx_hidden_RoutingStrategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *SubscriptionConfig) SetDefaultPriority(v v1.PriorityLevel) {
+func (x *SubscriptionConfig) SetDefaultPriority(v common.PriorityLevel) {
 	x.xxx_hidden_DefaultPriority = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
@@ -192,17 +192,17 @@ func (x *SubscriptionConfig) ClearName() {
 
 func (x *SubscriptionConfig) ClearState() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_State = v1.SubscriptionState_SUBSCRIPTION_STATE_UNSPECIFIED
+	x.xxx_hidden_State = common.SubscriptionState_SUBSCRIPTION_STATE_UNSPECIFIED
 }
 
 func (x *SubscriptionConfig) ClearRoutingStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_RoutingStrategy = v1.RoutingStrategy_ROUTING_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_RoutingStrategy = common.RoutingStrategy_ROUTING_STRATEGY_UNSPECIFIED
 }
 
 func (x *SubscriptionConfig) ClearDefaultPriority() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_DefaultPriority = v1.PriorityLevel_QUEUE_PRIORITY_LEVEL_UNSPECIFIED
+	x.xxx_hidden_DefaultPriority = common.PriorityLevel_QUEUE_PRIORITY_LEVEL_UNSPECIFIED
 }
 
 func (x *SubscriptionConfig) ClearDeliveryOptions() {
@@ -220,11 +220,11 @@ type SubscriptionConfig_builder struct {
 	// Name of the subscription.
 	Name *string
 	// Current state of the subscription.
-	State *v1.SubscriptionState
+	State *common.SubscriptionState
 	// Message routing strategy for this subscription.
-	RoutingStrategy *v1.RoutingStrategy
+	RoutingStrategy *common.RoutingStrategy
 	// Default priority applied to published messages if unspecified.
-	DefaultPriority *v1.PriorityLevel
+	DefaultPriority *common.PriorityLevel
 	// Delivery options controlling retries and dead letter handling.
 	DeliveryOptions *DeliveryOptions
 	// Maximum number of unacknowledged messages allowed.
@@ -270,15 +270,15 @@ const file_queue_v1_subscription_config_proto_rawDesc = "" +
 	"\x10routing_strategy\x18\x03 \x01(\x0e2\x1a.common.v1.RoutingStrategyR\x0froutingStrategy\x12C\n" +
 	"\x10default_priority\x18\x04 \x01(\x0e2\x18.common.v1.PriorityLevelR\x0fdefaultPriority\x12D\n" +
 	"\x10delivery_options\x18\x05 \x01(\v2\x19.queue.v1.DeliveryOptionsR\x0fdeliveryOptions\x12!\n" +
-	"\fmax_inflight\x18\x06 \x01(\x05R\vmaxInflightB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fmax_inflight\x18\x06 \x01(\x05R\vmaxInflightB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_subscription_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_subscription_config_proto_goTypes = []any{
-	(*SubscriptionConfig)(nil), // 0: queue.v1.SubscriptionConfig
-	(v1.SubscriptionState)(0),  // 1: common.v1.SubscriptionState
-	(v1.RoutingStrategy)(0),    // 2: common.v1.RoutingStrategy
-	(v1.PriorityLevel)(0),      // 3: common.v1.PriorityLevel
-	(*DeliveryOptions)(nil),    // 4: queue.v1.DeliveryOptions
+	(*SubscriptionConfig)(nil),    // 0: queue.v1.SubscriptionConfig
+	(common.SubscriptionState)(0), // 1: common.v1.SubscriptionState
+	(common.RoutingStrategy)(0),   // 2: common.v1.RoutingStrategy
+	(common.PriorityLevel)(0),     // 3: common.v1.PriorityLevel
+	(*DeliveryOptions)(nil),       // 4: queue.v1.DeliveryOptions
 }
 var file_queue_v1_subscription_config_proto_depIdxs = []int32{
 	1, // 0: queue.v1.SubscriptionConfig.state:type_name -> common.v1.SubscriptionState

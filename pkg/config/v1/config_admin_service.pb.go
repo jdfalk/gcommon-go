@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/config_admin_service.proto
 
-package v1
+package config
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -38,7 +38,7 @@ const file_config_v1_config_admin_service_proto_rawDesc = "" +
 	"\x10GetConfigHistory\x12\".config.v1.GetConfigHistoryRequest\x1a#.config.v1.GetConfigHistoryResponse\x12U\n" +
 	"\x0eGetConfigStats\x12 .config.v1.GetConfigStatsRequest\x1a!.config.v1.GetConfigStatsResponse\x12X\n" +
 	"\vHealthCheck\x12#.config.v1.ConfigHealthCheckRequest\x1a$.config.v1.ConfigHealthCheckResponse\x12H\n" +
-	"\rUnwatchConfig\x12\x1f.config.v1.UnwatchConfigRequest\x1a\x16.google.protobuf.EmptyB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rUnwatchConfig\x12\x1f.config.v1.UnwatchConfigRequest\x1a\x16.google.protobuf.EmptyB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_config_admin_service_proto_goTypes = []any{
 	(*BackupConfigRequest)(nil),       // 0: config.v1.BackupConfigRequest

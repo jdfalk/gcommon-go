@@ -173,7 +173,7 @@ const file_database_v2_get_namespace_stats_request_proto_rawDesc = "" +
 	"\x18GetNamespaceStatsRequest\x12*\n" +
 	"\fnamespace_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vnamespaceId\x128\n" +
 	"\x18include_detailed_metrics\x18\x02 \x01(\bR\x16includeDetailedMetrics\x128\n" +
-	"\x18include_key_distribution\x18\x03 \x01(\bR\x16includeKeyDistributionB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x18include_key_distribution\x18\x03 \x01(\bR\x16includeKeyDistributionB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_get_namespace_stats_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_get_namespace_stats_request_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/register_check_response.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,12 +27,12 @@ const (
 // Returns success status and any relevant information.
 // Follows 1-1-1 pattern: one message per file.
 type RegisterCheckResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_CheckId     *string                `protobuf:"bytes,2,opt,name=check_id,json=checkId"`
-	xxx_hidden_Message     *string                `protobuf:"bytes,3,opt,name=message"`
-	xxx_hidden_Metadata    *v1.ResponseMetadata   `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_Warnings    []string               `protobuf:"bytes,5,rep,name=warnings"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Success     bool                     `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_CheckId     *string                  `protobuf:"bytes,2,opt,name=check_id,json=checkId"`
+	xxx_hidden_Message     *string                  `protobuf:"bytes,3,opt,name=message"`
+	xxx_hidden_Metadata    *common.ResponseMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Warnings    []string                 `protobuf:"bytes,5,rep,name=warnings"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -91,7 +91,7 @@ func (x *RegisterCheckResponse) GetMessage() string {
 	return ""
 }
 
-func (x *RegisterCheckResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *RegisterCheckResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -120,7 +120,7 @@ func (x *RegisterCheckResponse) SetMessage(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
 
-func (x *RegisterCheckResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *RegisterCheckResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -185,7 +185,7 @@ type RegisterCheckResponse_builder struct {
 	// Human-readable message about the registration
 	Message *string
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 	// Any warnings about the registration
 	Warnings []string
 }
@@ -221,12 +221,12 @@ const file_health_v1_register_check_response_proto_rawDesc = "" +
 	"\bcheck_id\x18\x02 \x01(\tR\acheckId\x12\x18\n" +
 	"\amessage\x18\x03 \x01(\tR\amessage\x127\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x12\x1a\n" +
-	"\bwarnings\x18\x05 \x03(\tR\bwarningsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\x05 \x03(\tR\bwarningsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_register_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_register_check_response_proto_goTypes = []any{
-	(*RegisterCheckResponse)(nil), // 0: health.v1.RegisterCheckResponse
-	(*v1.ResponseMetadata)(nil),   // 1: common.v1.ResponseMetadata
+	(*RegisterCheckResponse)(nil),   // 0: health.v1.RegisterCheckResponse
+	(*common.ResponseMetadata)(nil), // 1: common.v1.ResponseMetadata
 }
 var file_health_v1_register_check_response_proto_depIdxs = []int32{
 	1, // 0: health.v1.RegisterCheckResponse.metadata:type_name -> common.v1.ResponseMetadata

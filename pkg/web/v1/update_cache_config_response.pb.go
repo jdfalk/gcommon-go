@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/update_cache_config_response.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -23,9 +23,9 @@ const (
 )
 
 type UpdateCacheConfigResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Success     bool                    `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -64,7 +64,7 @@ func (x *UpdateCacheConfigResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *UpdateCacheConfigResponse) GetMetadata() *v1.RequestMetadata {
+func (x *UpdateCacheConfigResponse) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -76,7 +76,7 @@ func (x *UpdateCacheConfigResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *UpdateCacheConfigResponse) SetMetadata(v *v1.RequestMetadata) {
+func (x *UpdateCacheConfigResponse) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -109,7 +109,7 @@ type UpdateCacheConfigResponse_builder struct {
 	// Whether the update was successful
 	Success *bool
 	// Request metadata for tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 UpdateCacheConfigResponse_builder) Build() *UpdateCacheConfigResponse {
@@ -131,12 +131,12 @@ const file_web_v1_update_cache_config_response_proto_rawDesc = "" +
 	")web/v1/update_cache_config_response.proto\x12\x06web.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\"m\n" +
 	"\x19UpdateCacheConfigResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x126\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_update_cache_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_update_cache_config_response_proto_goTypes = []any{
 	(*UpdateCacheConfigResponse)(nil), // 0: web.v1.UpdateCacheConfigResponse
-	(*v1.RequestMetadata)(nil),        // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
 }
 var file_web_v1_update_cache_config_response_proto_depIdxs = []int32{
 	1, // 0: web.v1.UpdateCacheConfigResponse.metadata:type_name -> common.v1.RequestMetadata

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/config_entry.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,14 +29,14 @@ const (
 type ConfigEntry struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Key         *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_Value       *v1.ConfigValue        `protobuf:"bytes,2,opt,name=value"`
+	xxx_hidden_Value       *common.ConfigValue    `protobuf:"bytes,2,opt,name=value"`
 	xxx_hidden_Namespace   *string                `protobuf:"bytes,3,opt,name=namespace"`
 	xxx_hidden_Metadata    map[string]string      `protobuf:"bytes,4,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	xxx_hidden_Tags        []string               `protobuf:"bytes,5,rep,name=tags"`
 	xxx_hidden_CreatedAt   *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=created_at,json=createdAt"`
 	xxx_hidden_UpdatedAt   *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=updated_at,json=updatedAt"`
 	xxx_hidden_Version     int64                  `protobuf:"varint,8,opt,name=version"`
-	xxx_hidden_Status      v1.ResourceStatus      `protobuf:"varint,9,opt,name=status,enum=common.v1.ResourceStatus"`
+	xxx_hidden_Status      common.ResourceStatus  `protobuf:"varint,9,opt,name=status,enum=common.v1.ResourceStatus"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -78,7 +78,7 @@ func (x *ConfigEntry) GetKey() string {
 	return ""
 }
 
-func (x *ConfigEntry) GetValue() *v1.ConfigValue {
+func (x *ConfigEntry) GetValue() *common.ConfigValue {
 	if x != nil {
 		return x.xxx_hidden_Value
 	}
@@ -130,13 +130,13 @@ func (x *ConfigEntry) GetVersion() int64 {
 	return 0
 }
 
-func (x *ConfigEntry) GetStatus() v1.ResourceStatus {
+func (x *ConfigEntry) GetStatus() common.ResourceStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 8) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.ResourceStatus(0)
+	return common.ResourceStatus(0)
 }
 
 func (x *ConfigEntry) SetKey(v string) {
@@ -144,7 +144,7 @@ func (x *ConfigEntry) SetKey(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 9)
 }
 
-func (x *ConfigEntry) SetValue(v *v1.ConfigValue) {
+func (x *ConfigEntry) SetValue(v *common.ConfigValue) {
 	x.xxx_hidden_Value = v
 }
 
@@ -174,7 +174,7 @@ func (x *ConfigEntry) SetVersion(v int64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 9)
 }
 
-func (x *ConfigEntry) SetStatus(v v1.ResourceStatus) {
+func (x *ConfigEntry) SetStatus(v common.ResourceStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 8, 9)
 }
@@ -257,7 +257,7 @@ func (x *ConfigEntry) ClearVersion() {
 
 func (x *ConfigEntry) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 8)
-	x.xxx_hidden_Status = v1.ResourceStatus_RESOURCE_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.ResourceStatus_RESOURCE_STATUS_UNSPECIFIED
 }
 
 type ConfigEntry_builder struct {
@@ -266,7 +266,7 @@ type ConfigEntry_builder struct {
 	// Configuration key
 	Key *string
 	// Configuration value
-	Value *v1.ConfigValue
+	Value *common.ConfigValue
 	// Namespace/environment
 	Namespace *string
 	// Entry metadata
@@ -280,7 +280,7 @@ type ConfigEntry_builder struct {
 	// Entry version for optimistic concurrency
 	Version *int64
 	// Entry status
-	Status *v1.ResourceStatus
+	Status *common.ResourceStatus
 }
 
 func (b0 ConfigEntry_builder) Build() *ConfigEntry {
@@ -330,15 +330,15 @@ const file_config_v1_config_entry_proto_rawDesc = "" +
 	"\x06status\x18\t \x01(\x0e2\x19.common.v1.ResourceStatusR\x06status\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_config_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_config_entry_proto_goTypes = []any{
 	(*ConfigEntry)(nil),           // 0: config.v1.ConfigEntry
 	nil,                           // 1: config.v1.ConfigEntry.MetadataEntry
-	(*v1.ConfigValue)(nil),        // 2: common.v1.ConfigValue
+	(*common.ConfigValue)(nil),    // 2: common.v1.ConfigValue
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
-	(v1.ResourceStatus)(0),        // 4: common.v1.ResourceStatus
+	(common.ResourceStatus)(0),    // 4: common.v1.ResourceStatus
 }
 var file_config_v1_config_entry_proto_depIdxs = []int32{
 	2, // 0: config.v1.ConfigEntry.value:type_name -> common.v1.ConfigValue

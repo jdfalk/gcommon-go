@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/access_control.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -314,7 +314,7 @@ const file_config_v1_access_control_proto_rawDesc = "" +
 	"rateLimits\x12+\n" +
 	"\x11approval_required\x18\t \x01(\bR\x10approvalRequired\x12#\n" +
 	"\raudit_enabled\x18\n" +
-	" \x01(\bR\fauditEnabledB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\bR\fauditEnabledB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_access_control_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_access_control_proto_goTypes = []any{

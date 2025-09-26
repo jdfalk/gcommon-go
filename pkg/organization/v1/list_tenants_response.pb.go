@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/list_tenants_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type ListTenantsResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Errors      *[]*v1.Error           `protobuf:"bytes,1,rep,name=errors"`
-	xxx_hidden_Success     bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_Tenants     *[]*Tenant             `protobuf:"bytes,3,rep,name=tenants"`
-	xxx_hidden_Pagination  *v1.PaginatedResponse  `protobuf:"bytes,4,opt,name=pagination"`
+	state                  protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Errors      *[]*common.Error          `protobuf:"bytes,1,rep,name=errors"`
+	xxx_hidden_Success     bool                      `protobuf:"varint,2,opt,name=success"`
+	xxx_hidden_Tenants     *[]*Tenant                `protobuf:"bytes,3,rep,name=tenants"`
+	xxx_hidden_Pagination  *common.PaginatedResponse `protobuf:"bytes,4,opt,name=pagination"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -60,7 +60,7 @@ func (x *ListTenantsResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListTenantsResponse) GetErrors() []*v1.Error {
+func (x *ListTenantsResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -85,14 +85,14 @@ func (x *ListTenantsResponse) GetTenants() []*Tenant {
 	return nil
 }
 
-func (x *ListTenantsResponse) GetPagination() *v1.PaginatedResponse {
+func (x *ListTenantsResponse) GetPagination() *common.PaginatedResponse {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
 	return nil
 }
 
-func (x *ListTenantsResponse) SetErrors(v []*v1.Error) {
+func (x *ListTenantsResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -105,7 +105,7 @@ func (x *ListTenantsResponse) SetTenants(v []*Tenant) {
 	x.xxx_hidden_Tenants = &v
 }
 
-func (x *ListTenantsResponse) SetPagination(v *v1.PaginatedResponse) {
+func (x *ListTenantsResponse) SetPagination(v *common.PaginatedResponse) {
 	x.xxx_hidden_Pagination = v
 }
 
@@ -136,13 +136,13 @@ type ListTenantsResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Any errors encountered
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 	// List of tenants returned
 	Tenants []*Tenant
 	// Pagination metadata
-	Pagination *v1.PaginatedResponse
+	Pagination *common.PaginatedResponse
 }
 
 func (b0 ListTenantsResponse_builder) Build() *ListTenantsResponse {
@@ -170,14 +170,14 @@ const file_organization_v1_list_tenants_response_proto_rawDesc = "" +
 	"\atenants\x18\x03 \x03(\v2\x17.organization.v1.TenantB\b\xbaH\x05\x92\x01\x02\b\x01R\atenants\x12<\n" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x1c.common.v1.PaginatedResponseR\n" +
-	"paginationB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"paginationB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_list_tenants_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_list_tenants_response_proto_goTypes = []any{
-	(*ListTenantsResponse)(nil),  // 0: organization.v1.ListTenantsResponse
-	(*v1.Error)(nil),             // 1: common.v1.Error
-	(*Tenant)(nil),               // 2: organization.v1.Tenant
-	(*v1.PaginatedResponse)(nil), // 3: common.v1.PaginatedResponse
+	(*ListTenantsResponse)(nil),      // 0: organization.v1.ListTenantsResponse
+	(*common.Error)(nil),             // 1: common.v1.Error
+	(*Tenant)(nil),                   // 2: organization.v1.Tenant
+	(*common.PaginatedResponse)(nil), // 3: common.v1.PaginatedResponse
 }
 var file_organization_v1_list_tenants_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.ListTenantsResponse.errors:type_name -> common.v1.Error

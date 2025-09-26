@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/approval_info.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type ApprovalInfo struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Required    bool                   `protobuf:"varint,1,opt,name=required"`
-	xxx_hidden_Status      v1.ApprovalStatus      `protobuf:"varint,2,opt,name=status,enum=common.v1.ApprovalStatus"`
+	xxx_hidden_Status      common.ApprovalStatus  `protobuf:"varint,2,opt,name=status,enum=common.v1.ApprovalStatus"`
 	xxx_hidden_ApprovedBy  *string                `protobuf:"bytes,3,opt,name=approved_by,json=approvedBy"`
 	xxx_hidden_ApprovedAt  *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=approved_at,json=approvedAt"`
 	xxx_hidden_Comments    *string                `protobuf:"bytes,5,opt,name=comments"`
@@ -71,13 +71,13 @@ func (x *ApprovalInfo) GetRequired() bool {
 	return false
 }
 
-func (x *ApprovalInfo) GetStatus() v1.ApprovalStatus {
+func (x *ApprovalInfo) GetStatus() common.ApprovalStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.ApprovalStatus(0)
+	return common.ApprovalStatus(0)
 }
 
 func (x *ApprovalInfo) GetApprovedBy() string {
@@ -132,7 +132,7 @@ func (x *ApprovalInfo) SetRequired(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 7)
 }
 
-func (x *ApprovalInfo) SetStatus(v v1.ApprovalStatus) {
+func (x *ApprovalInfo) SetStatus(v common.ApprovalStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 7)
 }
@@ -217,7 +217,7 @@ func (x *ApprovalInfo) ClearRequired() {
 
 func (x *ApprovalInfo) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Status = v1.ApprovalStatus_APPROVAL_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.ApprovalStatus_APPROVAL_STATUS_UNSPECIFIED
 }
 
 func (x *ApprovalInfo) ClearApprovedBy() {
@@ -250,7 +250,7 @@ type ApprovalInfo_builder struct {
 	// Whether approval was required
 	Required *bool
 	// Approval status
-	Status *v1.ApprovalStatus
+	Status *common.ApprovalStatus
 	// User who approved
 	ApprovedBy *string
 	// Approval timestamp
@@ -311,12 +311,12 @@ const file_config_v1_approval_info_proto_rawDesc = "" +
 	"\vworkflow_id\x18\x06 \x01(\tR\n" +
 	"workflowId\x12*\n" +
 	"\vpolicy_name\x18\a \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\n" +
-	"policyNameB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"policyNameB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_approval_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_approval_info_proto_goTypes = []any{
 	(*ApprovalInfo)(nil),          // 0: config.v1.ApprovalInfo
-	(v1.ApprovalStatus)(0),        // 1: common.v1.ApprovalStatus
+	(common.ApprovalStatus)(0),    // 1: common.v1.ApprovalStatus
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_config_v1_approval_info_proto_depIdxs = []int32{

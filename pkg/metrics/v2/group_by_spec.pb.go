@@ -152,7 +152,7 @@ const file_metrics_v2_group_by_spec_proto_rawDesc = "" +
 	"\n" +
 	"time_group\x18\x02 \x01(\v2\x19.google.protobuf.DurationR\ttimeGroup\x12&\n" +
 	"\n" +
-	"max_groups\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tmaxGroupsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"max_groups\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\tmaxGroupsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_group_by_spec_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_group_by_spec_proto_goTypes = []any{

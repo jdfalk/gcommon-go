@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -134,7 +134,7 @@ const file_database_v2_exists_response_proto_rawDesc = "" +
 	"!database/v2/exists_response.proto\x12\vdatabase.v2\x1a\x15common/v2/error.proto\x1a!google/protobuf/go_features.proto\"P\n" +
 	"\x0eExistsResponse\x12\x16\n" +
 	"\x06exists\x18\x01 \x01(\bR\x06exists\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorR\x05errorB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_exists_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_exists_response_proto_goTypes = []any{

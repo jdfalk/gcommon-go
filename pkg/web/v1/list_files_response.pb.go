@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/list_files_response.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,12 +27,12 @@ const (
 // Response containing a list of files from a directory or file system.
 // Used for file browsing and management operations.
 type ListFilesResponse struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Files         *[]*FileInfo           `protobuf:"bytes,1,rep,name=files"`
-	xxx_hidden_TotalCount    int64                  `protobuf:"varint,2,opt,name=total_count,json=totalCount"`
-	xxx_hidden_NextPageToken *string                `protobuf:"bytes,3,opt,name=next_page_token,json=nextPageToken"`
-	xxx_hidden_HasMore       bool                   `protobuf:"varint,4,opt,name=has_more,json=hasMore"`
-	xxx_hidden_Metadata      *v1.ResponseMetadata   `protobuf:"bytes,5,opt,name=metadata"`
+	state                    protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Files         *[]*FileInfo             `protobuf:"bytes,1,rep,name=files"`
+	xxx_hidden_TotalCount    int64                    `protobuf:"varint,2,opt,name=total_count,json=totalCount"`
+	xxx_hidden_NextPageToken *string                  `protobuf:"bytes,3,opt,name=next_page_token,json=nextPageToken"`
+	xxx_hidden_HasMore       bool                     `protobuf:"varint,4,opt,name=has_more,json=hasMore"`
+	xxx_hidden_Metadata      *common.ResponseMetadata `protobuf:"bytes,5,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -97,7 +97,7 @@ func (x *ListFilesResponse) GetHasMore() bool {
 	return false
 }
 
-func (x *ListFilesResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *ListFilesResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -123,7 +123,7 @@ func (x *ListFilesResponse) SetHasMore(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
 }
 
-func (x *ListFilesResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *ListFilesResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -186,7 +186,7 @@ type ListFilesResponse_builder struct {
 	// Whether there are more results
 	HasMore *bool
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 }
 
 func (b0 ListFilesResponse_builder) Build() *ListFilesResponse {
@@ -221,13 +221,13 @@ const file_web_v1_list_files_response_proto_rawDesc = "" +
 	"totalCount\x12/\n" +
 	"\x0fnext_page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x12\x19\n" +
 	"\bhas_more\x18\x04 \x01(\bR\ahasMore\x127\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_list_files_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_list_files_response_proto_goTypes = []any{
-	(*ListFilesResponse)(nil),   // 0: web.v1.ListFilesResponse
-	(*FileInfo)(nil),            // 1: web.v1.FileInfo
-	(*v1.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
+	(*ListFilesResponse)(nil),       // 0: web.v1.ListFilesResponse
+	(*FileInfo)(nil),                // 1: web.v1.FileInfo
+	(*common.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
 }
 var file_web_v1_list_files_response_proto_depIdxs = []int32{
 	1, // 0: web.v1.ListFilesResponse.files:type_name -> web.v1.FileInfo

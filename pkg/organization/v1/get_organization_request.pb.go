@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/get_organization_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type GetOrganizationRequest struct {
-	state                         protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata           *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_OrganizationId     *string                `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
-	xxx_hidden_IncludeSettings    bool                   `protobuf:"varint,3,opt,name=include_settings,json=includeSettings"`
-	xxx_hidden_IncludeMemberCount bool                   `protobuf:"varint,4,opt,name=include_member_count,json=includeMemberCount"`
-	xxx_hidden_IncludeTenants     bool                   `protobuf:"varint,5,opt,name=include_tenants,json=includeTenants"`
+	state                         protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata           *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_OrganizationId     *string                 `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
+	xxx_hidden_IncludeSettings    bool                    `protobuf:"varint,3,opt,name=include_settings,json=includeSettings"`
+	xxx_hidden_IncludeMemberCount bool                    `protobuf:"varint,4,opt,name=include_member_count,json=includeMemberCount"`
+	xxx_hidden_IncludeTenants     bool                    `protobuf:"varint,5,opt,name=include_tenants,json=includeTenants"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -61,7 +61,7 @@ func (x *GetOrganizationRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetOrganizationRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetOrganizationRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -99,7 +99,7 @@ func (x *GetOrganizationRequest) GetIncludeTenants() bool {
 	return false
 }
 
-func (x *GetOrganizationRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetOrganizationRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -186,7 +186,7 @@ type GetOrganizationRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Organization ID to retrieve
 	OrganizationId *string
 	// Whether to include organization settings in response
@@ -231,12 +231,12 @@ const file_organization_v1_get_organization_request_proto_rawDesc = "" +
 	"\x0forganization_id\x18\x02 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x0eorganizationId\x12)\n" +
 	"\x10include_settings\x18\x03 \x01(\bR\x0fincludeSettings\x120\n" +
 	"\x14include_member_count\x18\x04 \x01(\bR\x12includeMemberCount\x12'\n" +
-	"\x0finclude_tenants\x18\x05 \x01(\bR\x0eincludeTenantsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0finclude_tenants\x18\x05 \x01(\bR\x0eincludeTenantsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_get_organization_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_get_organization_request_proto_goTypes = []any{
 	(*GetOrganizationRequest)(nil), // 0: organization.v1.GetOrganizationRequest
-	(*v1.RequestMetadata)(nil),     // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_get_organization_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.GetOrganizationRequest.metadata:type_name -> common.v1.RequestMetadata

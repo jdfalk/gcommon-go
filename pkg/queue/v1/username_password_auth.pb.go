@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/username_password_auth.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -142,7 +142,7 @@ const file_queue_v1_username_password_auth_proto_rawDesc = "" +
 	"%queue/v1/username_password_auth.proto\x12\bqueue.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"`\n" +
 	"\x14UsernamePasswordAuth\x12#\n" +
 	"\busername\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\busername\x12#\n" +
-	"\bpassword\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\bR\bpasswordB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpassword\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\bR\bpasswordB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_username_password_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_username_password_auth_proto_goTypes = []any{

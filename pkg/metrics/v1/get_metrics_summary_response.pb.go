@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_metrics_summary_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,15 +25,15 @@ const (
 )
 
 type GetMetricsSummaryResponse struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success           bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error             *v1.Error              `protobuf:"bytes,2,opt,name=error"`
-	xxx_hidden_Summary           *MetricsSummary        `protobuf:"bytes,3,opt,name=summary"`
-	xxx_hidden_ProviderSummaries *[]*ProviderSummary    `protobuf:"bytes,4,rep,name=provider_summaries,json=providerSummaries"`
-	xxx_hidden_HealthStatus      *MetricsHealthInfo     `protobuf:"bytes,5,opt,name=health_status,json=healthStatus"`
-	xxx_hidden_GeneratedAt       *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=generated_at,json=generatedAt"`
-	xxx_hidden_TimeRange         *v1.TimeRangeMetrics   `protobuf:"bytes,7,opt,name=time_range,json=timeRange"`
-	xxx_hidden_Warnings          []string               `protobuf:"bytes,8,rep,name=warnings"`
+	state                        protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Success           bool                     `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_Error             *common.Error            `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Summary           *MetricsSummary          `protobuf:"bytes,3,opt,name=summary"`
+	xxx_hidden_ProviderSummaries *[]*ProviderSummary      `protobuf:"bytes,4,rep,name=provider_summaries,json=providerSummaries"`
+	xxx_hidden_HealthStatus      *MetricsHealthInfo       `protobuf:"bytes,5,opt,name=health_status,json=healthStatus"`
+	xxx_hidden_GeneratedAt       *timestamppb.Timestamp   `protobuf:"bytes,6,opt,name=generated_at,json=generatedAt"`
+	xxx_hidden_TimeRange         *common.TimeRangeMetrics `protobuf:"bytes,7,opt,name=time_range,json=timeRange"`
+	xxx_hidden_Warnings          []string                 `protobuf:"bytes,8,rep,name=warnings"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -72,7 +72,7 @@ func (x *GetMetricsSummaryResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *GetMetricsSummaryResponse) GetError() *v1.Error {
+func (x *GetMetricsSummaryResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -109,7 +109,7 @@ func (x *GetMetricsSummaryResponse) GetGeneratedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *GetMetricsSummaryResponse) GetTimeRange() *v1.TimeRangeMetrics {
+func (x *GetMetricsSummaryResponse) GetTimeRange() *common.TimeRangeMetrics {
 	if x != nil {
 		return x.xxx_hidden_TimeRange
 	}
@@ -128,7 +128,7 @@ func (x *GetMetricsSummaryResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 8)
 }
 
-func (x *GetMetricsSummaryResponse) SetError(v *v1.Error) {
+func (x *GetMetricsSummaryResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -148,7 +148,7 @@ func (x *GetMetricsSummaryResponse) SetGeneratedAt(v *timestamppb.Timestamp) {
 	x.xxx_hidden_GeneratedAt = v
 }
 
-func (x *GetMetricsSummaryResponse) SetTimeRange(v *v1.TimeRangeMetrics) {
+func (x *GetMetricsSummaryResponse) SetTimeRange(v *common.TimeRangeMetrics) {
 	x.xxx_hidden_TimeRange = v
 }
 
@@ -229,7 +229,7 @@ type GetMetricsSummaryResponse_builder struct {
 	// Success status of the operation
 	Success *bool
 	// Error information if the operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Summary information organized by category
 	Summary *MetricsSummary
 	// Provider-level statistics (if requested)
@@ -239,7 +239,7 @@ type GetMetricsSummaryResponse_builder struct {
 	// When the summary was generated
 	GeneratedAt *timestamppb.Timestamp
 	// Time range covered by the summary
-	TimeRange *v1.TimeRangeMetrics
+	TimeRange *common.TimeRangeMetrics
 	// Warnings or informational messages
 	Warnings []string
 }
@@ -277,17 +277,17 @@ const file_metrics_v1_get_metrics_summary_response_proto_rawDesc = "" +
 	"\fgenerated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vgeneratedAt\x12:\n" +
 	"\n" +
 	"time_range\x18\a \x01(\v2\x1b.common.v1.TimeRangeMetricsR\ttimeRange\x12$\n" +
-	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bwarnings\x18\b \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarningsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_metrics_summary_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_metrics_summary_response_proto_goTypes = []any{
 	(*GetMetricsSummaryResponse)(nil), // 0: metrics.v1.GetMetricsSummaryResponse
-	(*v1.Error)(nil),                  // 1: common.v1.Error
+	(*common.Error)(nil),              // 1: common.v1.Error
 	(*MetricsSummary)(nil),            // 2: metrics.v1.MetricsSummary
 	(*ProviderSummary)(nil),           // 3: metrics.v1.ProviderSummary
 	(*MetricsHealthInfo)(nil),         // 4: metrics.v1.MetricsHealthInfo
 	(*timestamppb.Timestamp)(nil),     // 5: google.protobuf.Timestamp
-	(*v1.TimeRangeMetrics)(nil),       // 6: common.v1.TimeRangeMetrics
+	(*common.TimeRangeMetrics)(nil),   // 6: common.v1.TimeRangeMetrics
 }
 var file_metrics_v1_get_metrics_summary_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.GetMetricsSummaryResponse.error:type_name -> common.v1.Error

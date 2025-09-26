@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_health.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,11 +27,11 @@ const (
 // *
 // MetricHealth captures the health status of a metric source or scrape job.
 type MetricHealth struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_TargetId    *string                `protobuf:"bytes,1,opt,name=target_id,json=targetId"`
-	xxx_hidden_Status      v1.CommonHealthStatus  `protobuf:"varint,2,opt,name=status,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_CheckedAt   *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=checked_at,json=checkedAt"`
-	xxx_hidden_Message     *string                `protobuf:"bytes,4,opt,name=message"`
+	state                  protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_TargetId    *string                   `protobuf:"bytes,1,opt,name=target_id,json=targetId"`
+	xxx_hidden_Status      common.CommonHealthStatus `protobuf:"varint,2,opt,name=status,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_CheckedAt   *timestamppb.Timestamp    `protobuf:"bytes,3,opt,name=checked_at,json=checkedAt"`
+	xxx_hidden_Message     *string                   `protobuf:"bytes,4,opt,name=message"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -73,13 +73,13 @@ func (x *MetricHealth) GetTargetId() string {
 	return ""
 }
 
-func (x *MetricHealth) GetStatus() v1.CommonHealthStatus {
+func (x *MetricHealth) GetStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *MetricHealth) GetCheckedAt() *timestamppb.Timestamp {
@@ -104,7 +104,7 @@ func (x *MetricHealth) SetTargetId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *MetricHealth) SetStatus(v v1.CommonHealthStatus) {
+func (x *MetricHealth) SetStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
@@ -153,7 +153,7 @@ func (x *MetricHealth) ClearTargetId() {
 
 func (x *MetricHealth) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Status = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *MetricHealth) ClearCheckedAt() {
@@ -171,7 +171,7 @@ type MetricHealth_builder struct {
 	// Metric identifier or scrape job id
 	TargetId *string
 	// Health status
-	Status *v1.CommonHealthStatus
+	Status *common.CommonHealthStatus
 	// When this health status was checked
 	CheckedAt *timestamppb.Timestamp
 	// Additional message or context
@@ -209,13 +209,13 @@ const file_metrics_v1_metric_health_proto_rawDesc = "" +
 	"\x06status\x18\x02 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x129\n" +
 	"\n" +
 	"checked_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tcheckedAt\x12!\n" +
-	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_health_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_health_proto_goTypes = []any{
-	(*MetricHealth)(nil),          // 0: metrics.v1.MetricHealth
-	(v1.CommonHealthStatus)(0),    // 1: common.v1.CommonHealthStatus
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
+	(*MetricHealth)(nil),           // 0: metrics.v1.MetricHealth
+	(common.CommonHealthStatus)(0), // 1: common.v1.CommonHealthStatus
+	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 }
 var file_metrics_v1_metric_health_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricHealth.status:type_name -> common.v1.CommonHealthStatus

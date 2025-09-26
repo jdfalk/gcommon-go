@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_type_config.proto
 
-package v1
+package metrics
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -178,7 +178,7 @@ const file_metrics_v1_metric_type_config_proto_rawDesc = "" +
 	"\thistogram\x18\x01 \x01(\v2\x1b.metrics.v1.HistogramConfigR\thistogram\x123\n" +
 	"\asummary\x18\x02 \x01(\v2\x19.metrics.v1.SummaryConfigR\asummary\x12-\n" +
 	"\x05gauge\x18\x03 \x01(\v2\x17.metrics.v1.GaugeConfigR\x05gauge\x123\n" +
-	"\acounter\x18\x04 \x01(\v2\x19.metrics.v1.CounterConfigR\acounterB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\acounter\x18\x04 \x01(\v2\x19.metrics.v1.CounterConfigR\acounterB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_type_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_type_config_proto_goTypes = []any{

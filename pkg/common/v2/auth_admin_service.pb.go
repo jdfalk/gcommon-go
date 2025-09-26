@@ -48,7 +48,7 @@ const file_common_v2_auth_admin_service_proto_rawDesc = "" +
 	"DeleteRole\x12\x1c.common.v2.DeleteRoleRequest\x1a\x16.google.protobuf.Empty\x12F\n" +
 	"\tListRoles\x12\x1b.common.v2.ListRolesRequest\x1a\x1c.common.v2.ListRolesResponse\x12Z\n" +
 	"\x16InvalidateUserSessions\x12(.common.v2.InvalidateUserSessionsRequest\x1a\x16.google.protobuf.Empty\x12U\n" +
-	"\x0eGetSystemStats\x12 .common.v2.GetSystemStatsRequest\x1a!.common.v2.GetSystemStatsResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eGetSystemStats\x12 .common.v2.GetSystemStatsRequest\x1a!.common.v2.GetSystemStatsResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_auth_admin_service_proto_goTypes = []any{
 	(*CreateUserRequest)(nil),             // 0: common.v2.CreateUserRequest

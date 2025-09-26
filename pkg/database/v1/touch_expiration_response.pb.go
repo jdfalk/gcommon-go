@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/touch_expiration_response.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ type TouchExpirationResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
 	xxx_hidden_KeyExisted  bool                   `protobuf:"varint,2,opt,name=key_existed,json=keyExisted"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -75,7 +75,7 @@ func (x *TouchExpirationResponse) GetKeyExisted() bool {
 	return false
 }
 
-func (x *TouchExpirationResponse) GetError() *v1.Error {
+func (x *TouchExpirationResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -92,7 +92,7 @@ func (x *TouchExpirationResponse) SetKeyExisted(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *TouchExpirationResponse) SetError(v *v1.Error) {
+func (x *TouchExpirationResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -139,7 +139,7 @@ type TouchExpirationResponse_builder struct {
 	// Whether the key existed before the touch operation
 	KeyExisted *bool
 	// Error details if touch failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 TouchExpirationResponse_builder) Build() *TouchExpirationResponse {
@@ -167,12 +167,12 @@ const file_database_v1_touch_expiration_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12\x1f\n" +
 	"\vkey_existed\x18\x02 \x01(\bR\n" +
 	"keyExisted\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_touch_expiration_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_touch_expiration_response_proto_goTypes = []any{
 	(*TouchExpirationResponse)(nil), // 0: database.v1.TouchExpirationResponse
-	(*v1.Error)(nil),                // 1: common.v1.Error
+	(*common.Error)(nil),            // 1: common.v1.Error
 }
 var file_database_v1_touch_expiration_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.TouchExpirationResponse.error:type_name -> common.v1.Error

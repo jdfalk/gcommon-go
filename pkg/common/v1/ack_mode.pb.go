@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/ack_mode.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -85,7 +85,7 @@ const file_common_v1_ack_mode_proto_rawDesc = "" +
 	"\x14ACK_MODE_UNSPECIFIED\x10\x00\x12\x13\n" +
 	"\x0fACK_MODE_MANUAL\x10\x01\x12\x11\n" +
 	"\rACK_MODE_AUTO\x10\x02\x12\x13\n" +
-	"\x0fACK_MODE_CLIENT\x10\x03B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fACK_MODE_CLIENT\x10\x03B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_ack_mode_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_ack_mode_proto_goTypes = []any{

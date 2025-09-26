@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/response_compression.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -84,7 +84,7 @@ const file_common_v1_response_compression_proto_rawDesc = "" +
 	" RESPONSE_COMPRESSION_UNSPECIFIED\x10\x00\x12\x1d\n" +
 	"\x19RESPONSE_COMPRESSION_NONE\x10\x01\x12\x1d\n" +
 	"\x19RESPONSE_COMPRESSION_GZIP\x10\x02\x12\x1f\n" +
-	"\x1bRESPONSE_COMPRESSION_SNAPPY\x10\x03B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1bRESPONSE_COMPRESSION_SNAPPY\x10\x03B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_response_compression_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_response_compression_proto_goTypes = []any{

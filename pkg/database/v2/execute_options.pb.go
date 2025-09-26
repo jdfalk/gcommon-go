@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -187,7 +187,7 @@ const file_database_v2_execute_options_proto_rawDesc = "" +
 	"\x0eExecuteOptions\x127\n" +
 	"\atimeout\x18\x01 \x01(\v2\x19.google.protobuf.DurationB\x02(\x01R\atimeout\x122\n" +
 	"\x15return_generated_keys\x18\x02 \x01(\bR\x13returnGeneratedKeys\x12?\n" +
-	"\tisolation\x18\x03 \x01(\x0e2!.common.v2.DatabaseIsolationLevelR\tisolationB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tisolation\x18\x03 \x01(\x0e2!.common.v2.DatabaseIsolationLevelR\tisolationB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_execute_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_execute_options_proto_goTypes = []any{

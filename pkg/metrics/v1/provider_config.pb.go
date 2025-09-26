@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/provider_config.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,16 +24,16 @@ const (
 )
 
 type ProviderConfig struct {
-	state                     protoimpl.MessageState         `protogen:"opaque.v1"`
-	xxx_hidden_ProviderId     *string                        `protobuf:"bytes,1,opt,name=provider_id,json=providerId"`
-	xxx_hidden_Name           *string                        `protobuf:"bytes,2,opt,name=name"`
-	xxx_hidden_Type           v1.MetricsProviderType         `protobuf:"varint,3,opt,name=type,enum=common.v1.MetricsProviderType"`
-	xxx_hidden_Settings       *ProviderSettings              `protobuf:"bytes,4,opt,name=settings"`
-	xxx_hidden_ExportConfig   *ExportConfig                  `protobuf:"bytes,5,opt,name=export_config,json=exportConfig"`
-	xxx_hidden_ResourceLimits *v1.OrganizationResourceLimits `protobuf:"bytes,6,opt,name=resource_limits,json=resourceLimits"`
-	xxx_hidden_SecurityConfig *MetricsSecurityConfig         `protobuf:"bytes,7,opt,name=security_config,json=securityConfig"`
-	xxx_hidden_Tags           map[string]string              `protobuf:"bytes,8,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Description    *string                        `protobuf:"bytes,9,opt,name=description"`
+	state                     protoimpl.MessageState             `protogen:"opaque.v1"`
+	xxx_hidden_ProviderId     *string                            `protobuf:"bytes,1,opt,name=provider_id,json=providerId"`
+	xxx_hidden_Name           *string                            `protobuf:"bytes,2,opt,name=name"`
+	xxx_hidden_Type           common.MetricsProviderType         `protobuf:"varint,3,opt,name=type,enum=common.v1.MetricsProviderType"`
+	xxx_hidden_Settings       *ProviderSettings                  `protobuf:"bytes,4,opt,name=settings"`
+	xxx_hidden_ExportConfig   *ExportConfig                      `protobuf:"bytes,5,opt,name=export_config,json=exportConfig"`
+	xxx_hidden_ResourceLimits *common.OrganizationResourceLimits `protobuf:"bytes,6,opt,name=resource_limits,json=resourceLimits"`
+	xxx_hidden_SecurityConfig *MetricsSecurityConfig             `protobuf:"bytes,7,opt,name=security_config,json=securityConfig"`
+	xxx_hidden_Tags           map[string]string                  `protobuf:"bytes,8,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Description    *string                            `protobuf:"bytes,9,opt,name=description"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -85,13 +85,13 @@ func (x *ProviderConfig) GetName() string {
 	return ""
 }
 
-func (x *ProviderConfig) GetType() v1.MetricsProviderType {
+func (x *ProviderConfig) GetType() common.MetricsProviderType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MetricsProviderType(0)
+	return common.MetricsProviderType(0)
 }
 
 func (x *ProviderConfig) GetSettings() *ProviderSettings {
@@ -108,7 +108,7 @@ func (x *ProviderConfig) GetExportConfig() *ExportConfig {
 	return nil
 }
 
-func (x *ProviderConfig) GetResourceLimits() *v1.OrganizationResourceLimits {
+func (x *ProviderConfig) GetResourceLimits() *common.OrganizationResourceLimits {
 	if x != nil {
 		return x.xxx_hidden_ResourceLimits
 	}
@@ -149,7 +149,7 @@ func (x *ProviderConfig) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 9)
 }
 
-func (x *ProviderConfig) SetType(v v1.MetricsProviderType) {
+func (x *ProviderConfig) SetType(v common.MetricsProviderType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 9)
 }
@@ -162,7 +162,7 @@ func (x *ProviderConfig) SetExportConfig(v *ExportConfig) {
 	x.xxx_hidden_ExportConfig = v
 }
 
-func (x *ProviderConfig) SetResourceLimits(v *v1.OrganizationResourceLimits) {
+func (x *ProviderConfig) SetResourceLimits(v *common.OrganizationResourceLimits) {
 	x.xxx_hidden_ResourceLimits = v
 }
 
@@ -247,7 +247,7 @@ func (x *ProviderConfig) ClearName() {
 
 func (x *ProviderConfig) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Type = v1.MetricsProviderType_METRICS_PROVIDER_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MetricsProviderType_METRICS_PROVIDER_TYPE_UNSPECIFIED
 }
 
 func (x *ProviderConfig) ClearSettings() {
@@ -279,13 +279,13 @@ type ProviderConfig_builder struct {
 	// Human-readable name for the provider
 	Name *string
 	// Type of provider (prometheus, opentelemetry, custom, etc.)
-	Type *v1.MetricsProviderType
+	Type *common.MetricsProviderType
 	// Provider-specific configuration
 	Settings *ProviderSettings
 	// Export configuration for this provider
 	ExportConfig *ExportConfig
 	// Resource limits imposed by the organization
-	ResourceLimits *v1.OrganizationResourceLimits
+	ResourceLimits *common.OrganizationResourceLimits
 	// Security configuration
 	SecurityConfig *MetricsSecurityConfig
 	// Tags for provider organization
@@ -341,17 +341,17 @@ const file_metrics_v1_provider_config_proto_rawDesc = "" +
 	"\vdescription\x18\t \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x1a7\n" +
 	"\tTagsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_config_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_provider_config_proto_goTypes = []any{
-	(*ProviderConfig)(nil),                // 0: metrics.v1.ProviderConfig
-	nil,                                   // 1: metrics.v1.ProviderConfig.TagsEntry
-	(v1.MetricsProviderType)(0),           // 2: common.v1.MetricsProviderType
-	(*ProviderSettings)(nil),              // 3: metrics.v1.ProviderSettings
-	(*ExportConfig)(nil),                  // 4: metrics.v1.ExportConfig
-	(*v1.OrganizationResourceLimits)(nil), // 5: common.v1.OrganizationResourceLimits
-	(*MetricsSecurityConfig)(nil),         // 6: metrics.v1.MetricsSecurityConfig
+	(*ProviderConfig)(nil),          // 0: metrics.v1.ProviderConfig
+	nil,                             // 1: metrics.v1.ProviderConfig.TagsEntry
+	(common.MetricsProviderType)(0), // 2: common.v1.MetricsProviderType
+	(*ProviderSettings)(nil),        // 3: metrics.v1.ProviderSettings
+	(*ExportConfig)(nil),            // 4: metrics.v1.ExportConfig
+	(*common.OrganizationResourceLimits)(nil), // 5: common.v1.OrganizationResourceLimits
+	(*MetricsSecurityConfig)(nil),             // 6: metrics.v1.MetricsSecurityConfig
 }
 var file_metrics_v1_provider_config_proto_depIdxs = []int32{
 	2, // 0: metrics.v1.ProviderConfig.type:type_name -> common.v1.MetricsProviderType

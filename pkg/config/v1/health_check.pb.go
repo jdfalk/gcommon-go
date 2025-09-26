@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/health_check.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,7 +26,7 @@ const (
 type HealthCheck struct {
 	state                      protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Name            *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Type            v1.HealthCheckType     `protobuf:"varint,2,opt,name=type,enum=common.v1.HealthCheckType"`
+	xxx_hidden_Type            common.HealthCheckType `protobuf:"varint,2,opt,name=type,enum=common.v1.HealthCheckType"`
 	xxx_hidden_Endpoint        *string                `protobuf:"bytes,3,opt,name=endpoint"`
 	xxx_hidden_IntervalSeconds int32                  `protobuf:"varint,4,opt,name=interval_seconds,json=intervalSeconds"`
 	xxx_hidden_TimeoutSeconds  int32                  `protobuf:"varint,5,opt,name=timeout_seconds,json=timeoutSeconds"`
@@ -73,13 +73,13 @@ func (x *HealthCheck) GetName() string {
 	return ""
 }
 
-func (x *HealthCheck) GetType() v1.HealthCheckType {
+func (x *HealthCheck) GetType() common.HealthCheckType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.HealthCheckType(0)
+	return common.HealthCheckType(0)
 }
 
 func (x *HealthCheck) GetEndpoint() string {
@@ -125,7 +125,7 @@ func (x *HealthCheck) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 7)
 }
 
-func (x *HealthCheck) SetType(v v1.HealthCheckType) {
+func (x *HealthCheck) SetType(v common.HealthCheckType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 7)
 }
@@ -203,7 +203,7 @@ func (x *HealthCheck) ClearName() {
 
 func (x *HealthCheck) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Type = v1.HealthCheckType_HEALTH_CHECK_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.HealthCheckType_HEALTH_CHECK_TYPE_UNSPECIFIED
 }
 
 func (x *HealthCheck) ClearEndpoint() {
@@ -232,7 +232,7 @@ type HealthCheck_builder struct {
 	// Health check name
 	Name *string
 	// Health check type
-	Type *v1.HealthCheckType
+	Type *common.HealthCheckType
 	// Health check endpoint
 	Endpoint *string
 	// Health check interval
@@ -291,12 +291,12 @@ const file_config_v1_health_check_proto_rawDesc = "" +
 	"\aretries\x18\x06 \x01(\x05R\aretries\x12\x1e\n" +
 	"\n" +
 	"conditions\x18\a \x03(\tR\n" +
-	"conditionsB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"conditionsB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_health_check_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_health_check_proto_goTypes = []any{
-	(*HealthCheck)(nil),     // 0: config.v1.HealthCheck
-	(v1.HealthCheckType)(0), // 1: common.v1.HealthCheckType
+	(*HealthCheck)(nil),         // 0: config.v1.HealthCheck
+	(common.HealthCheckType)(0), // 1: common.v1.HealthCheckType
 }
 var file_config_v1_health_check_proto_depIdxs = []int32{
 	1, // 0: config.v1.HealthCheck.type:type_name -> common.v1.HealthCheckType

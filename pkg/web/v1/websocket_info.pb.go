@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: web/v1/websocket_info.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -207,7 +207,7 @@ const file_web_v1_websocket_info_proto_rawDesc = "" +
 	"\tclient_ip\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bclientIp\x12&\n" +
 	"\n" +
 	"user_agent\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tuserAgent\x12=\n" +
-	"\fconnected_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\vconnectedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fconnected_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\vconnectedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_websocket_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_websocket_info_proto_goTypes = []any{

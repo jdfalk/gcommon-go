@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -201,7 +201,7 @@ const file_metrics_v2_delete_provider_request_proto_rawDesc = "" +
 	"\vprovider_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"providerId\x12\x14\n" +
 	"\x05force\x18\x03 \x01(\bR\x05force\x12\x17\n" +
-	"\adry_run\x18\x04 \x01(\bR\x06dryRunB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adry_run\x18\x04 \x01(\bR\x06dryRunB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_delete_provider_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_delete_provider_request_proto_goTypes = []any{

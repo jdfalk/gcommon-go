@@ -103,7 +103,7 @@ const file_common_v2_grant_type_proto_rawDesc = "" +
 	"\x1dGRANT_TYPE_CLIENT_CREDENTIALS\x10\x04\x12\x1c\n" +
 	"\x18GRANT_TYPE_REFRESH_TOKEN\x10\x05\x12\x1a\n" +
 	"\x16GRANT_TYPE_DEVICE_CODE\x10\x06\x12\x1b\n" +
-	"\x17GRANT_TYPE_SAML2_BEARER\x10\aB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17GRANT_TYPE_SAML2_BEARER\x10\aB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_grant_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_grant_type_proto_goTypes = []any{

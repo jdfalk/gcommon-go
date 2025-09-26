@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/partition_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -340,7 +340,7 @@ const file_queue_v1_partition_config_proto_rawDesc = "" +
 	"auto_scale\x18\x05 \x01(\bR\tautoScale\x12.\n" +
 	"\x0emin_partitions\x18\x06 \x01(\rB\a\xbaH\x04*\x02(\x00R\rminPartitions\x12.\n" +
 	"\x0emax_partitions\x18\a \x01(\rB\a\xbaH\x04*\x02(\x00R\rmaxPartitions\x125\n" +
-	"\x12scale_threshold_mb\x18\b \x01(\x04B\a\xbaH\x042\x02(\x00R\x10scaleThresholdMbB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12scale_threshold_mb\x18\b \x01(\x04B\a\xbaH\x042\x02(\x00R\x10scaleThresholdMbB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_partition_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_partition_config_proto_goTypes = []any{

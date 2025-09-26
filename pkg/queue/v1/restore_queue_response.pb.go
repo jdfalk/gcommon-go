@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/restore_queue_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,20 +26,20 @@ const (
 )
 
 type RestoreQueueResponse struct {
-	state                       protoimpl.MessageState      `protogen:"opaque.v1"`
-	xxx_hidden_Success          bool                        `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_OperationId      *string                     `protobuf:"bytes,2,opt,name=operation_id,json=operationId"`
-	xxx_hidden_RestoredQueueId  *string                     `protobuf:"bytes,3,opt,name=restored_queue_id,json=restoredQueueId"`
-	xxx_hidden_StartTime        *timestamppb.Timestamp      `protobuf:"bytes,4,opt,name=start_time,json=startTime"`
-	xxx_hidden_CompletionTime   *timestamppb.Timestamp      `protobuf:"bytes,5,opt,name=completion_time,json=completionTime"`
-	xxx_hidden_Duration         *durationpb.Duration        `protobuf:"bytes,6,opt,name=duration"`
-	xxx_hidden_Statistics       *RestoreStatistics          `protobuf:"bytes,7,opt,name=statistics"`
-	xxx_hidden_Status           *RestoreStatus              `protobuf:"bytes,8,opt,name=status"`
-	xxx_hidden_Errors           *[]*RestoreError            `protobuf:"bytes,9,rep,name=errors"`
-	xxx_hidden_Warnings         *[]*RestoreWarning          `protobuf:"bytes,10,rep,name=warnings"`
-	xxx_hidden_PartitionResults *[]*PartitionRestoreResult  `protobuf:"bytes,11,rep,name=partition_results,json=partitionResults"`
-	xxx_hidden_ValidationResult *v1.MetricsValidationResult `protobuf:"bytes,12,opt,name=validation_result,json=validationResult"`
-	xxx_hidden_Metadata         map[string]string           `protobuf:"bytes,13,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                       protoimpl.MessageState          `protogen:"opaque.v1"`
+	xxx_hidden_Success          bool                            `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_OperationId      *string                         `protobuf:"bytes,2,opt,name=operation_id,json=operationId"`
+	xxx_hidden_RestoredQueueId  *string                         `protobuf:"bytes,3,opt,name=restored_queue_id,json=restoredQueueId"`
+	xxx_hidden_StartTime        *timestamppb.Timestamp          `protobuf:"bytes,4,opt,name=start_time,json=startTime"`
+	xxx_hidden_CompletionTime   *timestamppb.Timestamp          `protobuf:"bytes,5,opt,name=completion_time,json=completionTime"`
+	xxx_hidden_Duration         *durationpb.Duration            `protobuf:"bytes,6,opt,name=duration"`
+	xxx_hidden_Statistics       *RestoreStatistics              `protobuf:"bytes,7,opt,name=statistics"`
+	xxx_hidden_Status           *RestoreStatus                  `protobuf:"bytes,8,opt,name=status"`
+	xxx_hidden_Errors           *[]*RestoreError                `protobuf:"bytes,9,rep,name=errors"`
+	xxx_hidden_Warnings         *[]*RestoreWarning              `protobuf:"bytes,10,rep,name=warnings"`
+	xxx_hidden_PartitionResults *[]*PartitionRestoreResult      `protobuf:"bytes,11,rep,name=partition_results,json=partitionResults"`
+	xxx_hidden_ValidationResult *common.MetricsValidationResult `protobuf:"bytes,12,opt,name=validation_result,json=validationResult"`
+	xxx_hidden_Metadata         map[string]string               `protobuf:"bytes,13,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -160,7 +160,7 @@ func (x *RestoreQueueResponse) GetPartitionResults() []*PartitionRestoreResult {
 	return nil
 }
 
-func (x *RestoreQueueResponse) GetValidationResult() *v1.MetricsValidationResult {
+func (x *RestoreQueueResponse) GetValidationResult() *common.MetricsValidationResult {
 	if x != nil {
 		return x.xxx_hidden_ValidationResult
 	}
@@ -221,7 +221,7 @@ func (x *RestoreQueueResponse) SetPartitionResults(v []*PartitionRestoreResult) 
 	x.xxx_hidden_PartitionResults = &v
 }
 
-func (x *RestoreQueueResponse) SetValidationResult(v *v1.MetricsValidationResult) {
+func (x *RestoreQueueResponse) SetValidationResult(v *common.MetricsValidationResult) {
 	x.xxx_hidden_ValidationResult = v
 }
 
@@ -357,7 +357,7 @@ type RestoreQueueResponse_builder struct {
 	// Partition restoration results
 	PartitionResults []*PartitionRestoreResult
 	// Validation results if validation was requested
-	ValidationResult *v1.MetricsValidationResult
+	ValidationResult *common.MetricsValidationResult
 	// Operation metadata
 	Metadata map[string]string
 }
@@ -416,20 +416,20 @@ const file_queue_v1_restore_queue_response_proto_rawDesc = "" +
 	"\bmetadata\x18\r \x03(\v2,.queue.v1.RestoreQueueResponse.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_restore_queue_response_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_restore_queue_response_proto_goTypes = []any{
-	(*RestoreQueueResponse)(nil),       // 0: queue.v1.RestoreQueueResponse
-	nil,                                // 1: queue.v1.RestoreQueueResponse.MetadataEntry
-	(*timestamppb.Timestamp)(nil),      // 2: google.protobuf.Timestamp
-	(*durationpb.Duration)(nil),        // 3: google.protobuf.Duration
-	(*RestoreStatistics)(nil),          // 4: queue.v1.RestoreStatistics
-	(*RestoreStatus)(nil),              // 5: queue.v1.RestoreStatus
-	(*RestoreError)(nil),               // 6: queue.v1.RestoreError
-	(*RestoreWarning)(nil),             // 7: queue.v1.RestoreWarning
-	(*PartitionRestoreResult)(nil),     // 8: queue.v1.PartitionRestoreResult
-	(*v1.MetricsValidationResult)(nil), // 9: common.v1.MetricsValidationResult
+	(*RestoreQueueResponse)(nil),           // 0: queue.v1.RestoreQueueResponse
+	nil,                                    // 1: queue.v1.RestoreQueueResponse.MetadataEntry
+	(*timestamppb.Timestamp)(nil),          // 2: google.protobuf.Timestamp
+	(*durationpb.Duration)(nil),            // 3: google.protobuf.Duration
+	(*RestoreStatistics)(nil),              // 4: queue.v1.RestoreStatistics
+	(*RestoreStatus)(nil),                  // 5: queue.v1.RestoreStatus
+	(*RestoreError)(nil),                   // 6: queue.v1.RestoreError
+	(*RestoreWarning)(nil),                 // 7: queue.v1.RestoreWarning
+	(*PartitionRestoreResult)(nil),         // 8: queue.v1.PartitionRestoreResult
+	(*common.MetricsValidationResult)(nil), // 9: common.v1.MetricsValidationResult
 }
 var file_queue_v1_restore_queue_response_proto_depIdxs = []int32{
 	2,  // 0: queue.v1.RestoreQueueResponse.start_time:type_name -> google.protobuf.Timestamp

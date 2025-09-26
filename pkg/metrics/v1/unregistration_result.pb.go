@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/unregistration_result.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -272,7 +272,7 @@ const file_metrics_v1_unregistration_result_proto_rawDesc = "" +
 	"\x0eremoved_alerts\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\rremovedAlerts\x121\n" +
 	"\x0fstopped_exports\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0estoppedExports\x12I\n" +
 	"\x12scheduled_deletion\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\x11scheduledDeletion\x12>\n" +
-	"\x0edry_run_result\x18\b \x01(\v2\x18.metrics.v1.DryRunResultR\fdryRunResultB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0edry_run_result\x18\b \x01(\v2\x18.metrics.v1.DryRunResultR\fdryRunResultB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_unregistration_result_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_unregistration_result_proto_goTypes = []any{

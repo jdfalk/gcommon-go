@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/consumer_state.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -103,7 +103,7 @@ const file_common_v1_consumer_state_proto_rawDesc = "" +
 	"\x16CONSUMER_STATE_STOPPED\x10\x04\x12\x18\n" +
 	"\x14CONSUMER_STATE_ERROR\x10\x05\x12\x1d\n" +
 	"\x19CONSUMER_STATE_CONNECTING\x10\x06\x12\x1f\n" +
-	"\x1bCONSUMER_STATE_DISCONNECTED\x10\aB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1bCONSUMER_STATE_DISCONNECTED\x10\aB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_consumer_state_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_consumer_state_proto_goTypes = []any{

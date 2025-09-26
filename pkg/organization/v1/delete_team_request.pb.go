@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/delete_team_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type DeleteTeamRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_TeamId      *string                `protobuf:"bytes,2,opt,name=team_id,json=teamId"`
-	xxx_hidden_Force       bool                   `protobuf:"varint,3,opt,name=force"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_TeamId      *string                 `protobuf:"bytes,2,opt,name=team_id,json=teamId"`
+	xxx_hidden_Force       bool                    `protobuf:"varint,3,opt,name=force"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -59,7 +59,7 @@ func (x *DeleteTeamRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *DeleteTeamRequest) GetMetadata() *v1.RequestMetadata {
+func (x *DeleteTeamRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -83,7 +83,7 @@ func (x *DeleteTeamRequest) GetForce() bool {
 	return false
 }
 
-func (x *DeleteTeamRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *DeleteTeamRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -136,7 +136,7 @@ type DeleteTeamRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Identifier of the team to delete
 	TeamId *string
 	// Force delete even if team has members
@@ -167,12 +167,12 @@ const file_organization_v1_delete_team_request_proto_rawDesc = "" +
 	"\x11DeleteTeamRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12 \n" +
 	"\ateam_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06teamId\x12\x14\n" +
-	"\x05force\x18\x03 \x01(\bR\x05forceB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05force\x18\x03 \x01(\bR\x05forceB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_delete_team_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_delete_team_request_proto_goTypes = []any{
-	(*DeleteTeamRequest)(nil),  // 0: organization.v1.DeleteTeamRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*DeleteTeamRequest)(nil),      // 0: organization.v1.DeleteTeamRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_delete_team_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.DeleteTeamRequest.metadata:type_name -> common.v1.RequestMetadata

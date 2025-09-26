@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/list_media_files_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -157,7 +157,7 @@ const file_media_v1_list_media_files_response_proto_rawDesc = "" +
 	"mediaFiles\x12/\n" +
 	"\x0fnext_page_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x12(\n" +
 	"\vtotal_count\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\n" +
-	"totalCountB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"totalCountB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_list_media_files_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_list_media_files_response_proto_goTypes = []any{

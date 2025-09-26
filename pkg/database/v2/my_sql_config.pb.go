@@ -205,7 +205,7 @@ const file_database_v2_my_sql_config_proto_rawDesc = "" +
 	"\x03dsn\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03dsn\x12-\n" +
 	"\x0emax_open_conns\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fmaxOpenConns\x12-\n" +
 	"\x0emax_idle_conns\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fmaxIdleConns\x12?\n" +
-	"\x17connect_timeout_seconds\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x15connectTimeoutSecondsB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x17connect_timeout_seconds\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x15connectTimeoutSecondsB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_my_sql_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_my_sql_config_proto_goTypes = []any{

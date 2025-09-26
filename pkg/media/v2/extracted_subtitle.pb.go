@@ -302,7 +302,7 @@ const file_media_v2_extracted_subtitle_proto_rawDesc = "" +
 	"\x05title\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05title\x12\x16\n" +
 	"\x06forced\x18\x05 \x01(\bR\x06forced\x12)\n" +
 	"\x10hearing_impaired\x18\x06 \x01(\bR\x0fhearingImpaired\x12\x1f\n" +
-	"\x06format\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06formatB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06format\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06formatB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_extracted_subtitle_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_extracted_subtitle_proto_goTypes = []any{

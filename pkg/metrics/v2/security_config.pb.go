@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -210,7 +210,7 @@ const file_metrics_v2_security_config_proto_rawDesc = "" +
 	"requireTls\x12;\n" +
 	"\n" +
 	"tls_config\x18\x04 \x01(\v2\x1c.metrics.v2.MetricsTLSConfigR\ttlsConfig\x12D\n" +
-	"\x0eapi_key_config\x18\x05 \x01(\v2\x1e.common.v2.MetricsAPIKeyConfigR\fapiKeyConfigB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eapi_key_config\x18\x05 \x01(\v2\x1e.common.v2.MetricsAPIKeyConfigR\fapiKeyConfigB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_security_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_security_config_proto_goTypes = []any{

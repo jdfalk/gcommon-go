@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/vector_clock_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -172,7 +172,7 @@ const file_queue_v1_vector_clock_config_proto_rawDesc = "" +
 	"\aenabled\x18\x01 \x01(\bR\aenabled\x12%\n" +
 	"\tprecision\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tprecision\x12)\n" +
 	"\fmax_drift_ms\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
-	"maxDriftMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"maxDriftMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_vector_clock_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_vector_clock_config_proto_goTypes = []any{

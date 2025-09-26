@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/unregister_metric_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type UnregisterMetricRequest struct {
 	state                       protoimpl.MessageState                     `protogen:"opaque.v1"`
-	xxx_hidden_Metadata         *v1.RequestMetadata                        `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Metadata         *common.RequestMetadata                    `protobuf:"bytes,1,opt,name=metadata"`
 	xxx_hidden_MetricIdentifier isUnregisterMetricRequest_MetricIdentifier `protobuf_oneof:"metric_identifier"`
 	xxx_hidden_ProviderId       *string                                    `protobuf:"bytes,4,opt,name=provider_id,json=providerId"`
 	xxx_hidden_Options          *UnregistrationOptions                     `protobuf:"bytes,5,opt,name=options"`
@@ -60,7 +60,7 @@ func (x *UnregisterMetricRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *UnregisterMetricRequest) GetMetadata() *v1.RequestMetadata {
+func (x *UnregisterMetricRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -102,7 +102,7 @@ func (x *UnregisterMetricRequest) GetOptions() *UnregistrationOptions {
 	return nil
 }
 
-func (x *UnregisterMetricRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *UnregisterMetricRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -218,7 +218,7 @@ type UnregisterMetricRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Metric identifier (either name or ID)
 
 	// Fields of oneof xxx_hidden_MetricIdentifier:
@@ -294,12 +294,12 @@ const file_metrics_v1_unregister_metric_request_proto_rawDesc = "" +
 	"\vprovider_id\x18\x04 \x01(\tR\n" +
 	"providerId\x12;\n" +
 	"\aoptions\x18\x05 \x01(\v2!.metrics.v1.UnregistrationOptionsR\aoptionsB\x13\n" +
-	"\x11metric_identifierB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11metric_identifierB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_unregister_metric_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_unregister_metric_request_proto_goTypes = []any{
 	(*UnregisterMetricRequest)(nil), // 0: metrics.v1.UnregisterMetricRequest
-	(*v1.RequestMetadata)(nil),      // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
 	(*UnregistrationOptions)(nil),   // 2: metrics.v1.UnregistrationOptions
 }
 var file_metrics_v1_unregister_metric_request_proto_depIdxs = []int32{

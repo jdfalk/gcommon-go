@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/output_options.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type OutputOptions struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_NumericFormat     v1.NumericFormat       `protobuf:"varint,1,opt,name=numeric_format,json=numericFormat,enum=common.v1.NumericFormat"`
-	xxx_hidden_IncludeTimestamps bool                   `protobuf:"varint,2,opt,name=include_timestamps,json=includeTimestamps"`
-	xxx_hidden_IncludeLabels     bool                   `protobuf:"varint,3,opt,name=include_labels,json=includeLabels"`
-	xxx_hidden_Compression       v1.ResponseCompression `protobuf:"varint,4,opt,name=compression,enum=common.v1.ResponseCompression"`
-	xxx_hidden_FlattenResponse   bool                   `protobuf:"varint,5,opt,name=flatten_response,json=flattenResponse"`
-	xxx_hidden_Timezone          *string                `protobuf:"bytes,6,opt,name=timezone"`
+	state                        protoimpl.MessageState     `protogen:"opaque.v1"`
+	xxx_hidden_NumericFormat     common.NumericFormat       `protobuf:"varint,1,opt,name=numeric_format,json=numericFormat,enum=common.v1.NumericFormat"`
+	xxx_hidden_IncludeTimestamps bool                       `protobuf:"varint,2,opt,name=include_timestamps,json=includeTimestamps"`
+	xxx_hidden_IncludeLabels     bool                       `protobuf:"varint,3,opt,name=include_labels,json=includeLabels"`
+	xxx_hidden_Compression       common.ResponseCompression `protobuf:"varint,4,opt,name=compression,enum=common.v1.ResponseCompression"`
+	xxx_hidden_FlattenResponse   bool                       `protobuf:"varint,5,opt,name=flatten_response,json=flattenResponse"`
+	xxx_hidden_Timezone          *string                    `protobuf:"bytes,6,opt,name=timezone"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -62,13 +62,13 @@ func (x *OutputOptions) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *OutputOptions) GetNumericFormat() v1.NumericFormat {
+func (x *OutputOptions) GetNumericFormat() common.NumericFormat {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_NumericFormat
 		}
 	}
-	return v1.NumericFormat(0)
+	return common.NumericFormat(0)
 }
 
 func (x *OutputOptions) GetIncludeTimestamps() bool {
@@ -85,13 +85,13 @@ func (x *OutputOptions) GetIncludeLabels() bool {
 	return false
 }
 
-func (x *OutputOptions) GetCompression() v1.ResponseCompression {
+func (x *OutputOptions) GetCompression() common.ResponseCompression {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_Compression
 		}
 	}
-	return v1.ResponseCompression(0)
+	return common.ResponseCompression(0)
 }
 
 func (x *OutputOptions) GetFlattenResponse() bool {
@@ -111,7 +111,7 @@ func (x *OutputOptions) GetTimezone() string {
 	return ""
 }
 
-func (x *OutputOptions) SetNumericFormat(v v1.NumericFormat) {
+func (x *OutputOptions) SetNumericFormat(v common.NumericFormat) {
 	x.xxx_hidden_NumericFormat = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
@@ -126,7 +126,7 @@ func (x *OutputOptions) SetIncludeLabels(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *OutputOptions) SetCompression(v v1.ResponseCompression) {
+func (x *OutputOptions) SetCompression(v common.ResponseCompression) {
 	x.xxx_hidden_Compression = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
@@ -185,7 +185,7 @@ func (x *OutputOptions) HasTimezone() bool {
 
 func (x *OutputOptions) ClearNumericFormat() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_NumericFormat = v1.NumericFormat_NUMERIC_FORMAT_UNSPECIFIED
+	x.xxx_hidden_NumericFormat = common.NumericFormat_NUMERIC_FORMAT_UNSPECIFIED
 }
 
 func (x *OutputOptions) ClearIncludeTimestamps() {
@@ -200,7 +200,7 @@ func (x *OutputOptions) ClearIncludeLabels() {
 
 func (x *OutputOptions) ClearCompression() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_Compression = v1.ResponseCompression_RESPONSE_COMPRESSION_UNSPECIFIED
+	x.xxx_hidden_Compression = common.ResponseCompression_RESPONSE_COMPRESSION_UNSPECIFIED
 }
 
 func (x *OutputOptions) ClearFlattenResponse() {
@@ -217,13 +217,13 @@ type OutputOptions_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Format for numeric values
-	NumericFormat *v1.NumericFormat
+	NumericFormat *common.NumericFormat
 	// Whether to include timestamps
 	IncludeTimestamps *bool
 	// Whether to include labels
 	IncludeLabels *bool
 	// Compression for large responses
-	Compression *v1.ResponseCompression
+	Compression *common.ResponseCompression
 	// Whether to flatten nested structures
 	FlattenResponse *bool
 	// Time zone for timestamp formatting
@@ -273,13 +273,13 @@ const file_metrics_v1_output_options_proto_rawDesc = "" +
 	"\x0einclude_labels\x18\x03 \x01(\bR\rincludeLabels\x12@\n" +
 	"\vcompression\x18\x04 \x01(\x0e2\x1e.common.v1.ResponseCompressionR\vcompression\x12)\n" +
 	"\x10flatten_response\x18\x05 \x01(\bR\x0fflattenResponse\x12#\n" +
-	"\btimezone\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\btimezoneB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\btimezone\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\btimezoneB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_output_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_output_options_proto_goTypes = []any{
-	(*OutputOptions)(nil),       // 0: metrics.v1.OutputOptions
-	(v1.NumericFormat)(0),       // 1: common.v1.NumericFormat
-	(v1.ResponseCompression)(0), // 2: common.v1.ResponseCompression
+	(*OutputOptions)(nil),           // 0: metrics.v1.OutputOptions
+	(common.NumericFormat)(0),       // 1: common.v1.NumericFormat
+	(common.ResponseCompression)(0), // 2: common.v1.ResponseCompression
 }
 var file_metrics_v1_output_options_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.OutputOptions.numeric_format:type_name -> common.v1.NumericFormat

@@ -192,7 +192,7 @@ const file_organization_v2_dns_config_proto_rawDesc = "" +
 	"\bprovider\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bprovider\x12 \n" +
 	"\azone_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06zoneId\x12>\n" +
 	"\arecords\x18\x03 \x03(\v2\x1a.organization.v2.DNSRecordB\b\xbaH\x05\x92\x01\x02\b\x01R\arecords\x12\x19\n" +
-	"\x03ttl\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x03ttlB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x03ttl\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x03ttlB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_dns_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_dns_config_proto_goTypes = []any{

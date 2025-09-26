@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/message_properties.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,8 +26,8 @@ const (
 
 type MessageProperties struct {
 	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Priority        v1.PriorityLevel       `protobuf:"varint,1,opt,name=priority,enum=common.v1.PriorityLevel"`
-	xxx_hidden_DeliveryMode    v1.DeliveryMode        `protobuf:"varint,2,opt,name=delivery_mode,json=deliveryMode,enum=common.v1.DeliveryMode"`
+	xxx_hidden_Priority        common.PriorityLevel   `protobuf:"varint,1,opt,name=priority,enum=common.v1.PriorityLevel"`
+	xxx_hidden_DeliveryMode    common.DeliveryMode    `protobuf:"varint,2,opt,name=delivery_mode,json=deliveryMode,enum=common.v1.DeliveryMode"`
 	xxx_hidden_ExpirationTime  *timestamppb.Timestamp `protobuf:"bytes,3,opt,name=expiration_time,json=expirationTime"`
 	xxx_hidden_CorrelationId   *string                `protobuf:"bytes,4,opt,name=correlation_id,json=correlationId"`
 	xxx_hidden_ReplyTo         *string                `protobuf:"bytes,5,opt,name=reply_to,json=replyTo"`
@@ -67,22 +67,22 @@ func (x *MessageProperties) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MessageProperties) GetPriority() v1.PriorityLevel {
+func (x *MessageProperties) GetPriority() common.PriorityLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Priority
 		}
 	}
-	return v1.PriorityLevel(0)
+	return common.PriorityLevel(0)
 }
 
-func (x *MessageProperties) GetDeliveryMode() v1.DeliveryMode {
+func (x *MessageProperties) GetDeliveryMode() common.DeliveryMode {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_DeliveryMode
 		}
 	}
-	return v1.DeliveryMode(0)
+	return common.DeliveryMode(0)
 }
 
 func (x *MessageProperties) GetExpirationTime() *timestamppb.Timestamp {
@@ -159,12 +159,12 @@ func (x *MessageProperties) GetDeliveryDelayMs() int64 {
 	return 0
 }
 
-func (x *MessageProperties) SetPriority(v v1.PriorityLevel) {
+func (x *MessageProperties) SetPriority(v common.PriorityLevel) {
 	x.xxx_hidden_Priority = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *MessageProperties) SetDeliveryMode(v v1.DeliveryMode) {
+func (x *MessageProperties) SetDeliveryMode(v common.DeliveryMode) {
 	x.xxx_hidden_DeliveryMode = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 10)
 }
@@ -280,12 +280,12 @@ func (x *MessageProperties) HasDeliveryDelayMs() bool {
 
 func (x *MessageProperties) ClearPriority() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Priority = v1.PriorityLevel_QUEUE_PRIORITY_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Priority = common.PriorityLevel_QUEUE_PRIORITY_LEVEL_UNSPECIFIED
 }
 
 func (x *MessageProperties) ClearDeliveryMode() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_DeliveryMode = v1.DeliveryMode_DELIVERY_MODE_UNSPECIFIED
+	x.xxx_hidden_DeliveryMode = common.DeliveryMode_DELIVERY_MODE_UNSPECIFIED
 }
 
 func (x *MessageProperties) ClearExpirationTime() {
@@ -331,9 +331,9 @@ type MessageProperties_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Message priority level
-	Priority *v1.PriorityLevel
+	Priority *common.PriorityLevel
 	// Delivery mode for the message
-	DeliveryMode *v1.DeliveryMode
+	DeliveryMode *common.DeliveryMode
 	// Message expiration time
 	ExpirationTime *timestamppb.Timestamp
 	// Correlation ID for request-response patterns
@@ -412,13 +412,13 @@ const file_queue_v1_message_properties_proto_rawDesc = "" +
 	"\vcompression\x18\b \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vcompression\x122\n" +
 	"\x10deduplication_id\x18\t \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0fdeduplicationId\x123\n" +
 	"\x11delivery_delay_ms\x18\n" +
-	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fdeliveryDelayMsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fdeliveryDelayMsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_message_properties_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_message_properties_proto_goTypes = []any{
 	(*MessageProperties)(nil),     // 0: queue.v1.MessageProperties
-	(v1.PriorityLevel)(0),         // 1: common.v1.PriorityLevel
-	(v1.DeliveryMode)(0),          // 2: common.v1.DeliveryMode
+	(common.PriorityLevel)(0),     // 1: common.v1.PriorityLevel
+	(common.DeliveryMode)(0),      // 2: common.v1.DeliveryMode
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_queue_v1_message_properties_proto_depIdxs = []int32{

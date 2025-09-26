@@ -262,7 +262,7 @@ const file_common_v2_get_system_stats_response_proto_rawDesc = "" +
 	"\x0factive_sessions\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0eactiveSessions\x12,\n" +
 	"\rfailed_logins\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ffailedLogins\x12.\n" +
 	"\x0euptime_seconds\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ruptimeSeconds\x12&\n" +
-	"\x05error\x18\x06 \x01(\v2\x10.common.v2.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x06 \x01(\v2\x10.common.v2.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_system_stats_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_system_stats_response_proto_goTypes = []any{

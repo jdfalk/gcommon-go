@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/get_migration_status_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -142,7 +142,7 @@ const file_database_v1_get_migration_status_response_proto_rawDesc = "" +
 	"\x1aGetMigrationStatusResponse\x12@\n" +
 	"\x0fcurrent_version\x18\x01 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\x0ecurrentVersion\x123\n" +
 	"\x10applied_versions\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fappliedVersions\x123\n" +
-	"\x10pending_versions\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fpendingVersionsB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10pending_versions\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x0fpendingVersionsB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_migration_status_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_migration_status_response_proto_goTypes = []any{

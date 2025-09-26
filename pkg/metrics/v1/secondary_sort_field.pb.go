@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/secondary_sort_field.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,7 +26,7 @@ const (
 type SecondarySortField struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Field       *string                `protobuf:"bytes,1,opt,name=field"`
-	xxx_hidden_Direction   v1.SortDirection       `protobuf:"varint,2,opt,name=direction,enum=common.v1.SortDirection"`
+	xxx_hidden_Direction   common.SortDirection   `protobuf:"varint,2,opt,name=direction,enum=common.v1.SortDirection"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -68,13 +68,13 @@ func (x *SecondarySortField) GetField() string {
 	return ""
 }
 
-func (x *SecondarySortField) GetDirection() v1.SortDirection {
+func (x *SecondarySortField) GetDirection() common.SortDirection {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Direction
 		}
 	}
-	return v1.SortDirection(0)
+	return common.SortDirection(0)
 }
 
 func (x *SecondarySortField) SetField(v string) {
@@ -82,7 +82,7 @@ func (x *SecondarySortField) SetField(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *SecondarySortField) SetDirection(v v1.SortDirection) {
+func (x *SecondarySortField) SetDirection(v common.SortDirection) {
 	x.xxx_hidden_Direction = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 2)
 }
@@ -108,14 +108,14 @@ func (x *SecondarySortField) ClearField() {
 
 func (x *SecondarySortField) ClearDirection() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Direction = v1.SortDirection_SORT_DIRECTION_UNSPECIFIED
+	x.xxx_hidden_Direction = common.SortDirection_SORT_DIRECTION_UNSPECIFIED
 }
 
 type SecondarySortField_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	Field     *string
-	Direction *v1.SortDirection
+	Direction *common.SortDirection
 }
 
 func (b0 SecondarySortField_builder) Build() *SecondarySortField {
@@ -141,12 +141,12 @@ const file_metrics_v1_secondary_sort_field_proto_rawDesc = "" +
 	"metrics.v1\x1a\x1ecommon/v1/sort_direction.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"k\n" +
 	"\x12SecondarySortField\x12\x1d\n" +
 	"\x05field\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05field\x126\n" +
-	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tdirection\x18\x02 \x01(\x0e2\x18.common.v1.SortDirectionR\tdirectionB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_secondary_sort_field_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_secondary_sort_field_proto_goTypes = []any{
 	(*SecondarySortField)(nil), // 0: metrics.v1.SecondarySortField
-	(v1.SortDirection)(0),      // 1: common.v1.SortDirection
+	(common.SortDirection)(0),  // 1: common.v1.SortDirection
 }
 var file_metrics_v1_secondary_sort_field_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.SecondarySortField.direction:type_name -> common.v1.SortDirection

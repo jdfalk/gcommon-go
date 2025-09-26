@@ -286,7 +286,7 @@ const file_common_v2_health_check_all_response_proto_rawDesc = "" +
 	"\x10healthy_services\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0fhealthyServices\x126\n" +
 	"\x12unhealthy_services\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x11unhealthyServices\x123\n" +
 	"\x11total_duration_ms\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\x0ftotalDurationMs\x12\x1c\n" +
-	"\ttimestamp\x18\a \x01(\x03R\ttimestampB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\ttimestamp\x18\a \x01(\x03R\ttimestampB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_health_check_all_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_health_check_all_response_proto_goTypes = []any{

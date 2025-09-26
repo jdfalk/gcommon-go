@@ -180,7 +180,7 @@ const file_common_v2_pagination_proto_rawDesc = "" +
 	"page_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageToken\x12+\n" +
 	"\vpage_number\x18\x03 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\n" +
-	"pageNumberB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"pageNumberB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_pagination_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_pagination_proto_goTypes = []any{

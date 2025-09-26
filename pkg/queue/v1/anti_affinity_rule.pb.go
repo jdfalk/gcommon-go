@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/anti_affinity_rule.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,10 +26,10 @@ const (
 // *
 // Anti-affinity rule for replica placement.
 type AntiAffinityRule struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_LabelKey    *string                `protobuf:"bytes,1,opt,name=label_key,json=labelKey"`
-	xxx_hidden_LabelValues []string               `protobuf:"bytes,2,rep,name=label_values,json=labelValues"`
-	xxx_hidden_Scope       v1.AntiAffinityScope   `protobuf:"varint,3,opt,name=scope,enum=common.v1.AntiAffinityScope"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_LabelKey    *string                  `protobuf:"bytes,1,opt,name=label_key,json=labelKey"`
+	xxx_hidden_LabelValues []string                 `protobuf:"bytes,2,rep,name=label_values,json=labelValues"`
+	xxx_hidden_Scope       common.AntiAffinityScope `protobuf:"varint,3,opt,name=scope,enum=common.v1.AntiAffinityScope"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -78,13 +78,13 @@ func (x *AntiAffinityRule) GetLabelValues() []string {
 	return nil
 }
 
-func (x *AntiAffinityRule) GetScope() v1.AntiAffinityScope {
+func (x *AntiAffinityRule) GetScope() common.AntiAffinityScope {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Scope
 		}
 	}
-	return v1.AntiAffinityScope(0)
+	return common.AntiAffinityScope(0)
 }
 
 func (x *AntiAffinityRule) SetLabelKey(v string) {
@@ -96,7 +96,7 @@ func (x *AntiAffinityRule) SetLabelValues(v []string) {
 	x.xxx_hidden_LabelValues = v
 }
 
-func (x *AntiAffinityRule) SetScope(v v1.AntiAffinityScope) {
+func (x *AntiAffinityRule) SetScope(v common.AntiAffinityScope) {
 	x.xxx_hidden_Scope = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 3)
 }
@@ -122,7 +122,7 @@ func (x *AntiAffinityRule) ClearLabelKey() {
 
 func (x *AntiAffinityRule) ClearScope() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Scope = v1.AntiAffinityScope_ANTI_AFFINITY_SCOPE_UNSPECIFIED
+	x.xxx_hidden_Scope = common.AntiAffinityScope_ANTI_AFFINITY_SCOPE_UNSPECIFIED
 }
 
 type AntiAffinityRule_builder struct {
@@ -133,7 +133,7 @@ type AntiAffinityRule_builder struct {
 	// Label values that should not be co-located
 	LabelValues []string
 	// Scope of the anti-affinity rule
-	Scope *v1.AntiAffinityScope
+	Scope *common.AntiAffinityScope
 }
 
 func (b0 AntiAffinityRule_builder) Build() *AntiAffinityRule {
@@ -160,12 +160,12 @@ const file_queue_v1_anti_affinity_rule_proto_rawDesc = "" +
 	"\x10AntiAffinityRule\x12$\n" +
 	"\tlabel_key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\blabelKey\x12+\n" +
 	"\flabel_values\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\vlabelValues\x122\n" +
-	"\x05scope\x18\x03 \x01(\x0e2\x1c.common.v1.AntiAffinityScopeR\x05scopeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05scope\x18\x03 \x01(\x0e2\x1c.common.v1.AntiAffinityScopeR\x05scopeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_anti_affinity_rule_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_anti_affinity_rule_proto_goTypes = []any{
-	(*AntiAffinityRule)(nil),  // 0: queue.v1.AntiAffinityRule
-	(v1.AntiAffinityScope)(0), // 1: common.v1.AntiAffinityScope
+	(*AntiAffinityRule)(nil),      // 0: queue.v1.AntiAffinityRule
+	(common.AntiAffinityScope)(0), // 1: common.v1.AntiAffinityScope
 }
 var file_queue_v1_anti_affinity_rule_proto_depIdxs = []int32{
 	1, // 0: queue.v1.AntiAffinityRule.scope:type_name -> common.v1.AntiAffinityScope

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_series.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type MetricSeries struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name        *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Type        v1.MetricsMetricType   `protobuf:"varint,2,opt,name=type,enum=common.v1.MetricsMetricType"`
-	xxx_hidden_Labels      map[string]string      `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Values      *[]*MetricValue        `protobuf:"bytes,4,rep,name=values"`
-	xxx_hidden_StepSeconds int64                  `protobuf:"varint,5,opt,name=step_seconds,json=stepSeconds"`
+	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Name        *string                  `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Type        common.MetricsMetricType `protobuf:"varint,2,opt,name=type,enum=common.v1.MetricsMetricType"`
+	xxx_hidden_Labels      map[string]string        `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Values      *[]*MetricValue          `protobuf:"bytes,4,rep,name=values"`
+	xxx_hidden_StepSeconds int64                    `protobuf:"varint,5,opt,name=step_seconds,json=stepSeconds"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -71,13 +71,13 @@ func (x *MetricSeries) GetName() string {
 	return ""
 }
 
-func (x *MetricSeries) GetType() v1.MetricsMetricType {
+func (x *MetricSeries) GetType() common.MetricsMetricType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MetricsMetricType(0)
+	return common.MetricsMetricType(0)
 }
 
 func (x *MetricSeries) GetLabels() map[string]string {
@@ -108,7 +108,7 @@ func (x *MetricSeries) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *MetricSeries) SetType(v v1.MetricsMetricType) {
+func (x *MetricSeries) SetType(v common.MetricsMetricType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
@@ -154,7 +154,7 @@ func (x *MetricSeries) ClearName() {
 
 func (x *MetricSeries) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Type = v1.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
 }
 
 func (x *MetricSeries) ClearStepSeconds() {
@@ -167,7 +167,7 @@ type MetricSeries_builder struct {
 
 	// Metric metadata
 	Name   *string
-	Type   *v1.MetricsMetricType
+	Type   *common.MetricsMetricType
 	Labels map[string]string
 	// Time-ordered series of values
 	Values []*MetricValue
@@ -210,14 +210,14 @@ const file_metrics_v1_metric_series_proto_rawDesc = "" +
 	"\fstep_seconds\x18\x05 \x01(\x03R\vstepSeconds\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_series_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_metric_series_proto_goTypes = []any{
-	(*MetricSeries)(nil),      // 0: metrics.v1.MetricSeries
-	nil,                       // 1: metrics.v1.MetricSeries.LabelsEntry
-	(v1.MetricsMetricType)(0), // 2: common.v1.MetricsMetricType
-	(*MetricValue)(nil),       // 3: metrics.v1.MetricValue
+	(*MetricSeries)(nil),          // 0: metrics.v1.MetricSeries
+	nil,                           // 1: metrics.v1.MetricSeries.LabelsEntry
+	(common.MetricsMetricType)(0), // 2: common.v1.MetricsMetricType
+	(*MetricValue)(nil),           // 3: metrics.v1.MetricValue
 }
 var file_metrics_v1_metric_series_proto_depIdxs = []int32{
 	2, // 0: metrics.v1.MetricSeries.type:type_name -> common.v1.MetricsMetricType

@@ -90,7 +90,7 @@ const file_common_v2_eviction_policy_proto_rawDesc = "" +
 	"\x13EVICTION_POLICY_LRU\x10\x01\x12\x17\n" +
 	"\x13EVICTION_POLICY_LFU\x10\x02\x12\x18\n" +
 	"\x14EVICTION_POLICY_FIFO\x10\x03\x12\x1a\n" +
-	"\x16EVICTION_POLICY_RANDOM\x10\x04B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16EVICTION_POLICY_RANDOM\x10\x04B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_eviction_policy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_eviction_policy_proto_goTypes = []any{

@@ -37,7 +37,7 @@ const file_metrics_v2_metrics_service_proto_rawDesc = "" +
 	"\x10UnregisterMetric\x12#.metrics.v2.UnregisterMetricRequest\x1a$.metrics.v2.UnregisterMetricResponse\x12`\n" +
 	"\x11GetMetricMetadata\x12$.metrics.v2.GetMetricMetadataRequest\x1a%.metrics.v2.GetMetricMetadataResponse\x12Q\n" +
 	"\fQueryMetrics\x12\x1f.metrics.v2.QueryMetricsRequest\x1a .metrics.v2.QueryMetricsResponse\x12`\n" +
-	"\x11GetMetricsSummary\x12$.metrics.v2.GetMetricsSummaryRequest\x1a%.metrics.v2.GetMetricsSummaryResponseB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11GetMetricsSummary\x12$.metrics.v2.GetMetricsSummaryRequest\x1a%.metrics.v2.GetMetricsSummaryResponseB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_metrics_service_proto_goTypes = []any{
 	(*RecordMetricRequest)(nil),         // 0: metrics.v2.RecordMetricRequest

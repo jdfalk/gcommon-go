@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: queue/v1/queue_admin_service.proto
 
-package v1
+package queue
 
 import (
 	context "context"

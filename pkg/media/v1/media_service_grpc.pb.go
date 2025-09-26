@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: media/v1/media_service.proto
 
-package v1
+package media
 
 import (
 	context "context"

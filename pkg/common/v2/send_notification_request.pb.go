@@ -123,7 +123,7 @@ const file_common_v2_send_notification_request_proto_rawDesc = "" +
 	")common/v2/send_notification_request.proto\x12\tcommon.v2\x1a$common/v2/notification_message.proto\x1a common/v2/request_metadata.proto\x1a!google/protobuf/go_features.proto\"\x95\x01\n" +
 	"\x17SendNotificationRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadata\x12B\n" +
-	"\fnotification\x18\x02 \x01(\v2\x1e.common.v2.NotificationMessageR\fnotificationB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fnotification\x18\x02 \x01(\v2\x1e.common.v2.NotificationMessageR\fnotificationB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_send_notification_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_send_notification_request_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/filter_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -83,7 +83,7 @@ const file_common_v1_filter_type_proto_rawDesc = "" +
 	"\x11FILTER_TYPE_LEVEL\x10\x01\x12\x16\n" +
 	"\x12FILTER_TYPE_LOGGER\x10\x02\x12\x17\n" +
 	"\x13FILTER_TYPE_MESSAGE\x10\x03\x12\x15\n" +
-	"\x11FILTER_TYPE_FIELD\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11FILTER_TYPE_FIELD\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_filter_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_filter_type_proto_goTypes = []any{

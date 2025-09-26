@@ -376,7 +376,7 @@ const file_queue_v2_backup_queue_request_proto_rawDesc = "" +
 	"\x0fstart_timestamp\x18\a \x01(\x03R\x0estartTimestamp\x12#\n" +
 	"\rend_timestamp\x18\b \x01(\x03R\fendTimestamp\x12\x1d\n" +
 	"\n" +
-	"timeout_ms\x18\t \x01(\x05R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\t \x01(\x05R\ttimeoutMsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_backup_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_backup_queue_request_proto_goTypes = []any{

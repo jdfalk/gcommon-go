@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: organization/v1/tenant_service.proto
 
-package v1
+package organization
 
 import (
 	context "context"

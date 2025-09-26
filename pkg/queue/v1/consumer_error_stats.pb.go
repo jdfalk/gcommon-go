@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/consumer_error_stats.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -229,7 +229,7 @@ const file_queue_v1_consumer_error_stats_proto_rawDesc = "" +
 	"\x0etimeout_errors\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02 \x00R\rtimeoutErrors\x12:\n" +
 	"\x14serialization_errors\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x13serializationErrors\x129\n" +
 	"\n" +
-	"last_error\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tlastErrorB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"last_error\x18\x05 \x01(\v2\x1a.google.protobuf.TimestampR\tlastErrorB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_consumer_error_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_consumer_error_stats_proto_goTypes = []any{

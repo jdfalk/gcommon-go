@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/offset_reset_strategy.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -81,7 +81,7 @@ const file_common_v1_offset_reset_strategy_proto_rawDesc = "" +
 	"\x1eOFFSET_RESET_STRATEGY_EARLIEST\x10\x01\x12 \n" +
 	"\x1cOFFSET_RESET_STRATEGY_LATEST\x10\x02\x12\x1e\n" +
 	"\x1aOFFSET_RESET_STRATEGY_NONE\x10\x03\x12#\n" +
-	"\x1fOFFSET_RESET_STRATEGY_TIMESTAMP\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1fOFFSET_RESET_STRATEGY_TIMESTAMP\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_offset_reset_strategy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_offset_reset_strategy_proto_goTypes = []any{

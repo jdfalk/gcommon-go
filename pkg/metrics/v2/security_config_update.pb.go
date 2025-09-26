@@ -210,7 +210,7 @@ const file_metrics_v2_security_config_update_proto_rawDesc = "" +
 	"\vrequire_tls\x18\x03 \x01(\bR\n" +
 	"requireTls\x12G\n" +
 	"\x11tls_config_update\x18\x04 \x01(\v2\x1b.metrics.v2.TLSConfigUpdateR\x0ftlsConfigUpdate\x12Q\n" +
-	"\x15api_key_config_update\x18\x05 \x01(\v2\x1e.metrics.v2.APIKeyConfigUpdateR\x12apiKeyConfigUpdateB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15api_key_config_update\x18\x05 \x01(\v2\x1e.metrics.v2.APIKeyConfigUpdateR\x12apiKeyConfigUpdateB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_security_config_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_security_config_update_proto_goTypes = []any{

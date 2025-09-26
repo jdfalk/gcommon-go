@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/organization_settings.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,18 +25,18 @@ const (
 )
 
 type OrganizationSettings struct {
-	state                     protoimpl.MessageState               `protogen:"opaque.v1"`
-	xxx_hidden_OrganizationId *string                              `protobuf:"bytes,1,opt,name=organization_id,json=organizationId"`
-	xxx_hidden_Security       *SecuritySettings                    `protobuf:"bytes,2,opt,name=security"`
-	xxx_hidden_Ui             *UISettings                          `protobuf:"bytes,3,opt,name=ui"`
-	xxx_hidden_Integrations   *IntegrationSettings                 `protobuf:"bytes,4,opt,name=integrations"`
-	xxx_hidden_Notifications  *v1.OrganizationNotificationSettings `protobuf:"bytes,5,opt,name=notifications"`
-	xxx_hidden_Billing        *BillingSettings                     `protobuf:"bytes,6,opt,name=billing"`
-	xxx_hidden_Compliance     *v1.OrganizationComplianceSettings   `protobuf:"bytes,7,opt,name=compliance"`
-	xxx_hidden_FeatureFlags   *[]*FeatureFlag                      `protobuf:"bytes,8,rep,name=feature_flags,json=featureFlags"`
-	xxx_hidden_CustomSettings *[]*v1.KeyValue                      `protobuf:"bytes,9,rep,name=custom_settings,json=customSettings"`
-	xxx_hidden_UpdatedAt      *timestamppb.Timestamp               `protobuf:"bytes,10,opt,name=updated_at,json=updatedAt"`
-	xxx_hidden_UpdatedBy      *string                              `protobuf:"bytes,11,opt,name=updated_by,json=updatedBy"`
+	state                     protoimpl.MessageState                   `protogen:"opaque.v1"`
+	xxx_hidden_OrganizationId *string                                  `protobuf:"bytes,1,opt,name=organization_id,json=organizationId"`
+	xxx_hidden_Security       *SecuritySettings                        `protobuf:"bytes,2,opt,name=security"`
+	xxx_hidden_Ui             *UISettings                              `protobuf:"bytes,3,opt,name=ui"`
+	xxx_hidden_Integrations   *IntegrationSettings                     `protobuf:"bytes,4,opt,name=integrations"`
+	xxx_hidden_Notifications  *common.OrganizationNotificationSettings `protobuf:"bytes,5,opt,name=notifications"`
+	xxx_hidden_Billing        *BillingSettings                         `protobuf:"bytes,6,opt,name=billing"`
+	xxx_hidden_Compliance     *common.OrganizationComplianceSettings   `protobuf:"bytes,7,opt,name=compliance"`
+	xxx_hidden_FeatureFlags   *[]*FeatureFlag                          `protobuf:"bytes,8,rep,name=feature_flags,json=featureFlags"`
+	xxx_hidden_CustomSettings *[]*common.KeyValue                      `protobuf:"bytes,9,rep,name=custom_settings,json=customSettings"`
+	xxx_hidden_UpdatedAt      *timestamppb.Timestamp                   `protobuf:"bytes,10,opt,name=updated_at,json=updatedAt"`
+	xxx_hidden_UpdatedBy      *string                                  `protobuf:"bytes,11,opt,name=updated_by,json=updatedBy"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -101,7 +101,7 @@ func (x *OrganizationSettings) GetIntegrations() *IntegrationSettings {
 	return nil
 }
 
-func (x *OrganizationSettings) GetNotifications() *v1.OrganizationNotificationSettings {
+func (x *OrganizationSettings) GetNotifications() *common.OrganizationNotificationSettings {
 	if x != nil {
 		return x.xxx_hidden_Notifications
 	}
@@ -115,7 +115,7 @@ func (x *OrganizationSettings) GetBilling() *BillingSettings {
 	return nil
 }
 
-func (x *OrganizationSettings) GetCompliance() *v1.OrganizationComplianceSettings {
+func (x *OrganizationSettings) GetCompliance() *common.OrganizationComplianceSettings {
 	if x != nil {
 		return x.xxx_hidden_Compliance
 	}
@@ -131,13 +131,13 @@ func (x *OrganizationSettings) GetFeatureFlags() []*FeatureFlag {
 	return nil
 }
 
-func (x *OrganizationSettings) GetCustomSettings() []*v1.KeyValue {
+func (x *OrganizationSettings) GetCustomSettings() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 8) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_CustomSettings) {
 				protoimpl.X.UnmarshalField(x, 9)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_CustomSettings), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -186,7 +186,7 @@ func (x *OrganizationSettings) SetIntegrations(v *IntegrationSettings) {
 	x.xxx_hidden_Integrations = v
 }
 
-func (x *OrganizationSettings) SetNotifications(v *v1.OrganizationNotificationSettings) {
+func (x *OrganizationSettings) SetNotifications(v *common.OrganizationNotificationSettings) {
 	x.xxx_hidden_Notifications = v
 }
 
@@ -194,7 +194,7 @@ func (x *OrganizationSettings) SetBilling(v *BillingSettings) {
 	x.xxx_hidden_Billing = v
 }
 
-func (x *OrganizationSettings) SetCompliance(v *v1.OrganizationComplianceSettings) {
+func (x *OrganizationSettings) SetCompliance(v *common.OrganizationComplianceSettings) {
 	x.xxx_hidden_Compliance = v
 }
 
@@ -202,11 +202,11 @@ func (x *OrganizationSettings) SetFeatureFlags(v []*FeatureFlag) {
 	x.xxx_hidden_FeatureFlags = &v
 }
 
-func (x *OrganizationSettings) SetCustomSettings(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *OrganizationSettings) SetCustomSettings(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_CustomSettings), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_CustomSettings), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -341,15 +341,15 @@ type OrganizationSettings_builder struct {
 	// Integration and API settings
 	Integrations *IntegrationSettings
 	// Notification and communication settings
-	Notifications *v1.OrganizationNotificationSettings
+	Notifications *common.OrganizationNotificationSettings
 	// Billing and subscription settings
 	Billing *BillingSettings
 	// Data retention and compliance settings
-	Compliance *v1.OrganizationComplianceSettings
+	Compliance *common.OrganizationComplianceSettings
 	// Feature flags and experimental features
 	FeatureFlags []*FeatureFlag
 	// Custom organization-specific settings
-	CustomSettings []*v1.KeyValue
+	CustomSettings []*common.KeyValue
 	// Settings last update timestamp
 	UpdatedAt *timestamppb.Timestamp
 	// User ID who last updated these settings
@@ -407,20 +407,20 @@ const file_organization_v1_organization_settings_proto_rawDesc = "" +
 	"updated_at\x18\n" +
 	" \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\tupdatedAt\x12s\n" +
 	"\n" +
-	"updated_by\x18\v \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tupdatedByB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"updated_by\x18\v \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tupdatedByB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_organization_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_organization_settings_proto_goTypes = []any{
-	(*OrganizationSettings)(nil),                // 0: organization.v1.OrganizationSettings
-	(*SecuritySettings)(nil),                    // 1: organization.v1.SecuritySettings
-	(*UISettings)(nil),                          // 2: organization.v1.UISettings
-	(*IntegrationSettings)(nil),                 // 3: organization.v1.IntegrationSettings
-	(*v1.OrganizationNotificationSettings)(nil), // 4: common.v1.OrganizationNotificationSettings
-	(*BillingSettings)(nil),                     // 5: organization.v1.BillingSettings
-	(*v1.OrganizationComplianceSettings)(nil),   // 6: common.v1.OrganizationComplianceSettings
-	(*FeatureFlag)(nil),                         // 7: organization.v1.FeatureFlag
-	(*v1.KeyValue)(nil),                         // 8: common.v1.KeyValue
-	(*timestamppb.Timestamp)(nil),               // 9: google.protobuf.Timestamp
+	(*OrganizationSettings)(nil),                    // 0: organization.v1.OrganizationSettings
+	(*SecuritySettings)(nil),                        // 1: organization.v1.SecuritySettings
+	(*UISettings)(nil),                              // 2: organization.v1.UISettings
+	(*IntegrationSettings)(nil),                     // 3: organization.v1.IntegrationSettings
+	(*common.OrganizationNotificationSettings)(nil), // 4: common.v1.OrganizationNotificationSettings
+	(*BillingSettings)(nil),                         // 5: organization.v1.BillingSettings
+	(*common.OrganizationComplianceSettings)(nil),   // 6: common.v1.OrganizationComplianceSettings
+	(*FeatureFlag)(nil),                             // 7: organization.v1.FeatureFlag
+	(*common.KeyValue)(nil),                         // 8: common.v1.KeyValue
+	(*timestamppb.Timestamp)(nil),                   // 9: google.protobuf.Timestamp
 }
 var file_organization_v1_organization_settings_proto_depIdxs = []int32{
 	1, // 0: organization.v1.OrganizationSettings.security:type_name -> organization.v1.SecuritySettings

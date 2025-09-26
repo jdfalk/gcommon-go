@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -174,7 +174,7 @@ const file_metrics_v2_record_summary_request_proto_rawDesc = "" +
 	"\x06metric\x18\x01 \x01(\v2\x19.metrics.v2.SummaryMetricR\x06metric\x12;\n" +
 	"\vobserved_at\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"observedAt\x12:\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_record_summary_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_record_summary_request_proto_goTypes = []any{

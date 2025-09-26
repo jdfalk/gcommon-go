@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -302,7 +302,7 @@ const file_database_v2_query_request_proto_rawDesc = "" +
 	"\bdatabase\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bdatabase\x127\n" +
 	"\aoptions\x18\x04 \x01(\v2\x19.database.v2.QueryOptionsB\x02(\x01R\aoptions\x12:\n" +
 	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadata\x12.\n" +
-	"\x0etransaction_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0etransaction_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_query_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_query_request_proto_goTypes = []any{

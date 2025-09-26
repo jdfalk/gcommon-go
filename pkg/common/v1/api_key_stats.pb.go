@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/api_key_stats.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -197,7 +197,7 @@ const file_common_v1_api_key_stats_proto_rawDesc = "" +
 	"\x13successful_requests\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x12successfulRequests\x120\n" +
 	"\x0ffailed_requests\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0efailedRequests\x12)\n" +
 	"\flast_used_at\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
-	"lastUsedAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"lastUsedAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_api_key_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_api_key_stats_proto_goTypes = []any{

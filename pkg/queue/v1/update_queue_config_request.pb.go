@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/update_queue_config_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Request to update configuration for an existing queue.
 // Allows modification of queue properties after creation.
 type UpdateQueueConfigRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName   *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Config      *QueueConfig           `protobuf:"bytes,2,opt,name=config"`
-	xxx_hidden_UpdateMask  []string               `protobuf:"bytes,3,rep,name=update_mask,json=updateMask"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_Force       bool                   `protobuf:"varint,5,opt,name=force"`
-	xxx_hidden_Reason      *string                `protobuf:"bytes,6,opt,name=reason"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName   *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Config      *QueueConfig            `protobuf:"bytes,2,opt,name=config"`
+	xxx_hidden_UpdateMask  []string                `protobuf:"bytes,3,rep,name=update_mask,json=updateMask"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Force       bool                    `protobuf:"varint,5,opt,name=force"`
+	xxx_hidden_Reason      *string                 `protobuf:"bytes,6,opt,name=reason"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -89,7 +89,7 @@ func (x *UpdateQueueConfigRequest) GetUpdateMask() []string {
 	return nil
 }
 
-func (x *UpdateQueueConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *UpdateQueueConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -126,7 +126,7 @@ func (x *UpdateQueueConfigRequest) SetUpdateMask(v []string) {
 	x.xxx_hidden_UpdateMask = v
 }
 
-func (x *UpdateQueueConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *UpdateQueueConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -209,7 +209,7 @@ type UpdateQueueConfigRequest_builder struct {
 	// Fields to update (field mask)
 	UpdateMask []string
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Force update even if it might cause data loss
 	Force *bool
 	// Reason for the configuration update
@@ -251,13 +251,13 @@ const file_queue_v1_update_queue_config_request_proto_rawDesc = "" +
 	"updateMask\x126\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x14\n" +
 	"\x05force\x18\x05 \x01(\bR\x05force\x12\x16\n" +
-	"\x06reason\x18\x06 \x01(\tR\x06reasonB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06reason\x18\x06 \x01(\tR\x06reasonB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_update_queue_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_update_queue_config_request_proto_goTypes = []any{
 	(*UpdateQueueConfigRequest)(nil), // 0: queue.v1.UpdateQueueConfigRequest
 	(*QueueConfig)(nil),              // 1: queue.v1.QueueConfig
-	(*v1.RequestMetadata)(nil),       // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),   // 2: common.v1.RequestMetadata
 }
 var file_queue_v1_update_queue_config_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.UpdateQueueConfigRequest.config:type_name -> queue.v1.QueueConfig

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/session_data.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ type SessionData struct {
 	state                   protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_SessionId    *string                `protobuf:"bytes,1,opt,name=session_id,json=sessionId"`
 	xxx_hidden_UserId       *string                `protobuf:"bytes,2,opt,name=user_id,json=userId"`
-	xxx_hidden_State        v1.WebSessionState     `protobuf:"varint,3,opt,name=state,enum=common.v1.WebSessionState"`
+	xxx_hidden_State        common.WebSessionState `protobuf:"varint,3,opt,name=state,enum=common.v1.WebSessionState"`
 	xxx_hidden_CreatedAt    *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=created_at,json=createdAt"`
 	xxx_hidden_LastAccessAt *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=last_access_at,json=lastAccessAt"`
 	xxx_hidden_ExpiresAt    *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=expires_at,json=expiresAt"`
@@ -89,13 +89,13 @@ func (x *SessionData) GetUserId() string {
 	return ""
 }
 
-func (x *SessionData) GetState() v1.WebSessionState {
+func (x *SessionData) GetState() common.WebSessionState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_State
 		}
 	}
-	return v1.WebSessionState(0)
+	return common.WebSessionState(0)
 }
 
 func (x *SessionData) GetCreatedAt() *timestamppb.Timestamp {
@@ -177,7 +177,7 @@ func (x *SessionData) SetUserId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 9)
 }
 
-func (x *SessionData) SetState(v v1.WebSessionState) {
+func (x *SessionData) SetState(v common.WebSessionState) {
 	x.xxx_hidden_State = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 9)
 }
@@ -291,7 +291,7 @@ func (x *SessionData) ClearUserId() {
 
 func (x *SessionData) ClearState() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_State = v1.WebSessionState_WEB_SESSION_STATE_UNSPECIFIED
+	x.xxx_hidden_State = common.WebSessionState_WEB_SESSION_STATE_UNSPECIFIED
 }
 
 func (x *SessionData) ClearCreatedAt() {
@@ -327,7 +327,7 @@ type SessionData_builder struct {
 	// User ID associated with the session
 	UserId *string
 	// Current session state
-	State *v1.WebSessionState
+	State *common.WebSessionState
 	// Session creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last access timestamp
@@ -404,13 +404,13 @@ const file_web_v1_session_data_proto_rawDesc = "" +
 	"\bmetadata\x18\t \x03(\v2!.web.v1.SessionData.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_session_data_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_web_v1_session_data_proto_goTypes = []any{
 	(*SessionData)(nil),           // 0: web.v1.SessionData
 	nil,                           // 1: web.v1.SessionData.MetadataEntry
-	(v1.WebSessionState)(0),       // 2: common.v1.WebSessionState
+	(common.WebSessionState)(0),   // 2: common.v1.WebSessionState
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_web_v1_session_data_proto_depIdxs = []int32{

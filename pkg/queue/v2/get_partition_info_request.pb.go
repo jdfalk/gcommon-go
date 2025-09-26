@@ -380,7 +380,7 @@ const file_queue_v2_get_partition_info_request_proto_rawDesc = "" +
 	"\n" +
 	"time_range\x18\t \x01(\v2\x19.queue.v2.TimeRangeFilterR\ttimeRange\x12*\n" +
 	"\faccess_token\x18\n" +
-	" \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaccessTokenB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\tB\a\xbaH\x04r\x02\x10\x01R\vaccessTokenB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_get_partition_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_get_partition_info_request_proto_goTypes = []any{

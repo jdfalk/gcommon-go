@@ -266,7 +266,7 @@ const file_queue_v2_authorization_config_proto_rawDesc = "" +
 	"\fapi_key_auth\x18\x05 \x01(\v2\x14.queue.v2.APIKeyAuthR\n" +
 	"apiKeyAuth\x12,\n" +
 	"\bjwt_auth\x18\x06 \x01(\v2\x11.queue.v2.JwtAuthR\ajwtAuth\x12B\n" +
-	"\rexternal_auth\x18\a \x01(\v2\x1d.queue.v2.ExternalAuthServiceR\fexternalAuthB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rexternal_auth\x18\a \x01(\v2\x1d.queue.v2.ExternalAuthServiceR\fexternalAuthB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_authorization_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_authorization_config_proto_goTypes = []any{

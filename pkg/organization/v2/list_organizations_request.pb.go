@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -204,7 +204,7 @@ const file_organization_v2_list_organizations_request_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12&\n" +
 	"\n" +
 	"page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageToken\x12\x1f\n" +
-	"\x06filter\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06filterB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06filter\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06filterB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_list_organizations_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_list_organizations_request_proto_goTypes = []any{

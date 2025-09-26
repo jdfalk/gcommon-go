@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/compute_isolation.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,14 +24,14 @@ const (
 )
 
 type ComputeIsolation struct {
-	state                       protoimpl.MessageState         `protogen:"opaque.v1"`
-	xxx_hidden_ComputeInstance  *string                        `protobuf:"bytes,1,opt,name=compute_instance,json=computeInstance"`
-	xxx_hidden_Namespace        *string                        `protobuf:"bytes,2,opt,name=namespace"`
-	xxx_hidden_Cpu              *CPUAllocation                 `protobuf:"bytes,3,opt,name=cpu"`
-	xxx_hidden_Memory           *MemoryAllocation              `protobuf:"bytes,4,opt,name=memory"`
-	xxx_hidden_DedicatedCompute bool                           `protobuf:"varint,5,opt,name=dedicated_compute,json=dedicatedCompute"`
-	xxx_hidden_Limits           *v1.OrganizationResourceLimits `protobuf:"bytes,6,opt,name=limits"`
-	xxx_hidden_AutoScaling      *AutoScalingConfig             `protobuf:"bytes,7,opt,name=auto_scaling,json=autoScaling"`
+	state                       protoimpl.MessageState             `protogen:"opaque.v1"`
+	xxx_hidden_ComputeInstance  *string                            `protobuf:"bytes,1,opt,name=compute_instance,json=computeInstance"`
+	xxx_hidden_Namespace        *string                            `protobuf:"bytes,2,opt,name=namespace"`
+	xxx_hidden_Cpu              *CPUAllocation                     `protobuf:"bytes,3,opt,name=cpu"`
+	xxx_hidden_Memory           *MemoryAllocation                  `protobuf:"bytes,4,opt,name=memory"`
+	xxx_hidden_DedicatedCompute bool                               `protobuf:"varint,5,opt,name=dedicated_compute,json=dedicatedCompute"`
+	xxx_hidden_Limits           *common.OrganizationResourceLimits `protobuf:"bytes,6,opt,name=limits"`
+	xxx_hidden_AutoScaling      *AutoScalingConfig                 `protobuf:"bytes,7,opt,name=auto_scaling,json=autoScaling"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -104,7 +104,7 @@ func (x *ComputeIsolation) GetDedicatedCompute() bool {
 	return false
 }
 
-func (x *ComputeIsolation) GetLimits() *v1.OrganizationResourceLimits {
+func (x *ComputeIsolation) GetLimits() *common.OrganizationResourceLimits {
 	if x != nil {
 		return x.xxx_hidden_Limits
 	}
@@ -141,7 +141,7 @@ func (x *ComputeIsolation) SetDedicatedCompute(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 7)
 }
 
-func (x *ComputeIsolation) SetLimits(v *v1.OrganizationResourceLimits) {
+func (x *ComputeIsolation) SetLimits(v *common.OrganizationResourceLimits) {
 	x.xxx_hidden_Limits = v
 }
 
@@ -243,7 +243,7 @@ type ComputeIsolation_builder struct {
 	// Whether tenant has dedicated compute resources
 	DedicatedCompute *bool
 	// Resource limits and quotas
-	Limits *v1.OrganizationResourceLimits
+	Limits *common.OrganizationResourceLimits
 	// Auto-scaling configuration
 	AutoScaling *AutoScalingConfig
 }
@@ -283,15 +283,15 @@ const file_organization_v1_compute_isolation_proto_rawDesc = "" +
 	"\x06memory\x18\x04 \x01(\v2!.organization.v1.MemoryAllocationR\x06memory\x12+\n" +
 	"\x11dedicated_compute\x18\x05 \x01(\bR\x10dedicatedCompute\x12=\n" +
 	"\x06limits\x18\x06 \x01(\v2%.common.v1.OrganizationResourceLimitsR\x06limits\x12E\n" +
-	"\fauto_scaling\x18\a \x01(\v2\".organization.v1.AutoScalingConfigR\vautoScalingB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fauto_scaling\x18\a \x01(\v2\".organization.v1.AutoScalingConfigR\vautoScalingB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_compute_isolation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_compute_isolation_proto_goTypes = []any{
-	(*ComputeIsolation)(nil),              // 0: organization.v1.ComputeIsolation
-	(*CPUAllocation)(nil),                 // 1: organization.v1.CPUAllocation
-	(*MemoryAllocation)(nil),              // 2: organization.v1.MemoryAllocation
-	(*v1.OrganizationResourceLimits)(nil), // 3: common.v1.OrganizationResourceLimits
-	(*AutoScalingConfig)(nil),             // 4: organization.v1.AutoScalingConfig
+	(*ComputeIsolation)(nil),                  // 0: organization.v1.ComputeIsolation
+	(*CPUAllocation)(nil),                     // 1: organization.v1.CPUAllocation
+	(*MemoryAllocation)(nil),                  // 2: organization.v1.MemoryAllocation
+	(*common.OrganizationResourceLimits)(nil), // 3: common.v1.OrganizationResourceLimits
+	(*AutoScalingConfig)(nil),                 // 4: organization.v1.AutoScalingConfig
 }
 var file_organization_v1_compute_isolation_proto_depIdxs = []int32{
 	1, // 0: organization.v1.ComputeIsolation.cpu:type_name -> organization.v1.CPUAllocation

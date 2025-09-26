@@ -85,7 +85,7 @@ const file_common_v2_synchronization_frequency_proto_rawDesc = "" +
 	" SYNCHRONIZATION_FREQUENCY_HOURLY\x10\x02\x12#\n" +
 	"\x1fSYNCHRONIZATION_FREQUENCY_DAILY\x10\x03\x12$\n" +
 	" SYNCHRONIZATION_FREQUENCY_WEEKLY\x10\x04\x12'\n" +
-	"#SYNCHRONIZATION_FREQUENCY_ON_CHANGE\x10\x05B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"#SYNCHRONIZATION_FREQUENCY_ON_CHANGE\x10\x05B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_synchronization_frequency_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_synchronization_frequency_proto_goTypes = []any{

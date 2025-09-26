@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/cache_info.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,16 +28,16 @@ const (
 // General cache information and metadata.
 // Provides cache instance details and operational status.
 type CacheInfo struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name         *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Version      *string                `protobuf:"bytes,2,opt,name=version"`
-	xxx_hidden_CacheType    *string                `protobuf:"bytes,3,opt,name=cache_type,json=cacheType"`
-	xxx_hidden_HealthStatus v1.CommonHealthStatus  `protobuf:"varint,4,opt,name=health_status,json=healthStatus,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_CreatedAt    *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=created_at,json=createdAt"`
-	xxx_hidden_LastAccessed *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=last_accessed,json=lastAccessed"`
-	xxx_hidden_InstanceId   *string                `protobuf:"bytes,7,opt,name=instance_id,json=instanceId"`
-	xxx_hidden_Description  *string                `protobuf:"bytes,8,opt,name=description"`
-	xxx_hidden_Metadata     map[string]string      `protobuf:"bytes,9,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                   protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Name         *string                   `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Version      *string                   `protobuf:"bytes,2,opt,name=version"`
+	xxx_hidden_CacheType    *string                   `protobuf:"bytes,3,opt,name=cache_type,json=cacheType"`
+	xxx_hidden_HealthStatus common.CommonHealthStatus `protobuf:"varint,4,opt,name=health_status,json=healthStatus,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_CreatedAt    *timestamppb.Timestamp    `protobuf:"bytes,5,opt,name=created_at,json=createdAt"`
+	xxx_hidden_LastAccessed *timestamppb.Timestamp    `protobuf:"bytes,6,opt,name=last_accessed,json=lastAccessed"`
+	xxx_hidden_InstanceId   *string                   `protobuf:"bytes,7,opt,name=instance_id,json=instanceId"`
+	xxx_hidden_Description  *string                   `protobuf:"bytes,8,opt,name=description"`
+	xxx_hidden_Metadata     map[string]string         `protobuf:"bytes,9,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -99,13 +99,13 @@ func (x *CacheInfo) GetCacheType() string {
 	return ""
 }
 
-func (x *CacheInfo) GetHealthStatus() v1.CommonHealthStatus {
+func (x *CacheInfo) GetHealthStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_HealthStatus
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *CacheInfo) GetCreatedAt() *timestamppb.Timestamp {
@@ -164,7 +164,7 @@ func (x *CacheInfo) SetCacheType(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 9)
 }
 
-func (x *CacheInfo) SetHealthStatus(v v1.CommonHealthStatus) {
+func (x *CacheInfo) SetHealthStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_HealthStatus = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 9)
 }
@@ -264,7 +264,7 @@ func (x *CacheInfo) ClearCacheType() {
 
 func (x *CacheInfo) ClearHealthStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_HealthStatus = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_HealthStatus = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *CacheInfo) ClearCreatedAt() {
@@ -295,7 +295,7 @@ type CacheInfo_builder struct {
 	// Cache type (e.g., "memory", "redis", "memcached")
 	CacheType *string
 	// Current health status
-	HealthStatus *v1.CommonHealthStatus
+	HealthStatus *common.CommonHealthStatus
 	// Cache creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last access timestamp
@@ -362,14 +362,14 @@ const file_database_v1_cache_info_proto_rawDesc = "" +
 	"\bmetadata\x18\t \x03(\v2$.database.v1.CacheInfo.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_info_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_database_v1_cache_info_proto_goTypes = []any{
-	(*CacheInfo)(nil),             // 0: database.v1.CacheInfo
-	nil,                           // 1: database.v1.CacheInfo.MetadataEntry
-	(v1.CommonHealthStatus)(0),    // 2: common.v1.CommonHealthStatus
-	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
+	(*CacheInfo)(nil),              // 0: database.v1.CacheInfo
+	nil,                            // 1: database.v1.CacheInfo.MetadataEntry
+	(common.CommonHealthStatus)(0), // 2: common.v1.CommonHealthStatus
+	(*timestamppb.Timestamp)(nil),  // 3: google.protobuf.Timestamp
 }
 var file_database_v1_cache_info_proto_depIdxs = []int32{
 	2, // 0: database.v1.CacheInfo.health_status:type_name -> common.v1.CommonHealthStatus

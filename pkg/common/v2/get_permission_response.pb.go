@@ -163,7 +163,7 @@ const file_common_v2_get_permission_response_proto_rawDesc = "" +
 	"\n" +
 	"permission\x18\x01 \x01(\v2\x15.common.v2.PermissionB\x02(\x01R\n" +
 	"permission\x12*\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorB\x02(\x01R\x05errorB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v2.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_permission_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_permission_response_proto_goTypes = []any{

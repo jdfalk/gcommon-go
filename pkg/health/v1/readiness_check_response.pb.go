@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/readiness_check_response.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,14 +27,14 @@ const (
 // Indicates whether a service is ready to handle requests.
 // Follows 1-1-1 pattern: one message per file.
 type ReadinessCheckResponse struct {
-	state                       protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_Status           HealthStatus            `protobuf:"varint,1,opt,name=status,enum=health.v1.HealthStatus"`
-	xxx_hidden_Ready            bool                    `protobuf:"varint,2,opt,name=ready"`
-	xxx_hidden_Reason           *string                 `protobuf:"bytes,3,opt,name=reason"`
-	xxx_hidden_HealthScore      int32                   `protobuf:"varint,4,opt,name=health_score,json=healthScore"`
-	xxx_hidden_DependencyStatus map[string]HealthStatus `protobuf:"bytes,5,rep,name=dependency_status,json=dependencyStatus" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=health.v1.HealthStatus"`
-	xxx_hidden_Metadata         *v1.ResponseMetadata    `protobuf:"bytes,6,opt,name=metadata"`
-	xxx_hidden_Details          map[string]string       `protobuf:"bytes,7,rep,name=details" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                       protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Status           HealthStatus             `protobuf:"varint,1,opt,name=status,enum=health.v1.HealthStatus"`
+	xxx_hidden_Ready            bool                     `protobuf:"varint,2,opt,name=ready"`
+	xxx_hidden_Reason           *string                  `protobuf:"bytes,3,opt,name=reason"`
+	xxx_hidden_HealthScore      int32                    `protobuf:"varint,4,opt,name=health_score,json=healthScore"`
+	xxx_hidden_DependencyStatus map[string]HealthStatus  `protobuf:"bytes,5,rep,name=dependency_status,json=dependencyStatus" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"varint,2,opt,name=value,enum=health.v1.HealthStatus"`
+	xxx_hidden_Metadata         *common.ResponseMetadata `protobuf:"bytes,6,opt,name=metadata"`
+	xxx_hidden_Details          map[string]string        `protobuf:"bytes,7,rep,name=details" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -106,7 +106,7 @@ func (x *ReadinessCheckResponse) GetDependencyStatus() map[string]HealthStatus {
 	return nil
 }
 
-func (x *ReadinessCheckResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *ReadinessCheckResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -144,7 +144,7 @@ func (x *ReadinessCheckResponse) SetDependencyStatus(v map[string]HealthStatus) 
 	x.xxx_hidden_DependencyStatus = v
 }
 
-func (x *ReadinessCheckResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *ReadinessCheckResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -225,7 +225,7 @@ type ReadinessCheckResponse_builder struct {
 	// Dependency readiness status
 	DependencyStatus map[string]HealthStatus
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 	// Additional readiness details
 	Details map[string]string
 }
@@ -274,15 +274,15 @@ const file_health_v1_readiness_check_response_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\x0e2\x17.health.v1.HealthStatusR\x05value:\x028\x01\x1a:\n" +
 	"\fDetailsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_readiness_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_health_v1_readiness_check_response_proto_goTypes = []any{
-	(*ReadinessCheckResponse)(nil), // 0: health.v1.ReadinessCheckResponse
-	nil,                            // 1: health.v1.ReadinessCheckResponse.DependencyStatusEntry
-	nil,                            // 2: health.v1.ReadinessCheckResponse.DetailsEntry
-	(HealthStatus)(0),              // 3: health.v1.HealthStatus
-	(*v1.ResponseMetadata)(nil),    // 4: common.v1.ResponseMetadata
+	(*ReadinessCheckResponse)(nil),  // 0: health.v1.ReadinessCheckResponse
+	nil,                             // 1: health.v1.ReadinessCheckResponse.DependencyStatusEntry
+	nil,                             // 2: health.v1.ReadinessCheckResponse.DetailsEntry
+	(HealthStatus)(0),               // 3: health.v1.HealthStatus
+	(*common.ResponseMetadata)(nil), // 4: common.v1.ResponseMetadata
 }
 var file_health_v1_readiness_check_response_proto_depIdxs = []int32{
 	3, // 0: health.v1.ReadinessCheckResponse.status:type_name -> health.v1.HealthStatus

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/health_check_response.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,9 +26,9 @@ const (
 // *
 // HealthCheckResponse provides health status for the config service.
 type ConfigHealthCheckResponse struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Status      v1.CommonHealthStatus  `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_Message     *string                `protobuf:"bytes,2,opt,name=message"`
+	state                  protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Status      common.CommonHealthStatus `protobuf:"varint,1,opt,name=status,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_Message     *string                   `protobuf:"bytes,2,opt,name=message"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -60,13 +60,13 @@ func (x *ConfigHealthCheckResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ConfigHealthCheckResponse) GetStatus() v1.CommonHealthStatus {
+func (x *ConfigHealthCheckResponse) GetStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *ConfigHealthCheckResponse) GetMessage() string {
@@ -79,7 +79,7 @@ func (x *ConfigHealthCheckResponse) GetMessage() string {
 	return ""
 }
 
-func (x *ConfigHealthCheckResponse) SetStatus(v v1.CommonHealthStatus) {
+func (x *ConfigHealthCheckResponse) SetStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
@@ -105,7 +105,7 @@ func (x *ConfigHealthCheckResponse) HasMessage() bool {
 
 func (x *ConfigHealthCheckResponse) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Status = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *ConfigHealthCheckResponse) ClearMessage() {
@@ -117,7 +117,7 @@ type ConfigHealthCheckResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Overall health status
-	Status *v1.CommonHealthStatus
+	Status *common.CommonHealthStatus
 	// Optional human-readable message
 	Message *string
 }
@@ -144,12 +144,12 @@ const file_config_v1_health_check_response_proto_rawDesc = "" +
 	"%config/v1/health_check_response.proto\x12\tconfig.v1\x1a\x1dcommon/v1/health_status.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"u\n" +
 	"\x19ConfigHealthCheckResponse\x125\n" +
 	"\x06status\x18\x01 \x01(\x0e2\x1d.common.v1.CommonHealthStatusR\x06status\x12!\n" +
-	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_health_check_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_health_check_response_proto_goTypes = []any{
 	(*ConfigHealthCheckResponse)(nil), // 0: config.v1.ConfigHealthCheckResponse
-	(v1.CommonHealthStatus)(0),        // 1: common.v1.CommonHealthStatus
+	(common.CommonHealthStatus)(0),    // 1: common.v1.CommonHealthStatus
 }
 var file_config_v1_health_check_response_proto_depIdxs = []int32{
 	1, // 0: config.v1.ConfigHealthCheckResponse.status:type_name -> common.v1.CommonHealthStatus

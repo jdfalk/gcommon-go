@@ -28,7 +28,7 @@ const file_queue_v2_workflow_service_proto_rawDesc = "" +
 	"\x1fqueue/v2/workflow_service.proto\x12\bqueue.v2\x1a%queue/v2/start_workflow_request.proto\x1a&queue/v2/start_workflow_response.proto\x1a$queue/v2/stop_workflow_request.proto\x1a%queue/v2/stop_workflow_response.proto\x1a!google/protobuf/go_features.proto2\xb2\x01\n" +
 	"\x0fWorkflowService\x12P\n" +
 	"\rStartWorkflow\x12\x1e.queue.v2.StartWorkflowRequest\x1a\x1f.queue.v2.StartWorkflowResponse\x12M\n" +
-	"\fStopWorkflow\x12\x1d.queue.v2.StopWorkflowRequest\x1a\x1e.queue.v2.StopWorkflowResponseB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fStopWorkflow\x12\x1d.queue.v2.StopWorkflowRequest\x1a\x1e.queue.v2.StopWorkflowResponseB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_workflow_service_proto_goTypes = []any{
 	(*StartWorkflowRequest)(nil),  // 0: queue.v2.StartWorkflowRequest

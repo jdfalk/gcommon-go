@@ -235,7 +235,7 @@ const file_organization_v2_storage_backup_config_proto_rawDesc = "" +
 	"\bschedule\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bschedule\x12.\n" +
 	"\x0eretention_days\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rretentionDays\x12!\n" +
 	"\fcross_region\x18\x04 \x01(\bR\vcrossRegion\x12-\n" +
-	"\x12encryption_enabled\x18\x05 \x01(\bR\x11encryptionEnabledB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12encryption_enabled\x18\x05 \x01(\bR\x11encryptionEnabledB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_storage_backup_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_storage_backup_config_proto_goTypes = []any{

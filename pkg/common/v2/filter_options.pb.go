@@ -160,7 +160,7 @@ const file_common_v2_filter_options_proto_rawDesc = "" +
 	"time_range\x18\x03 \x01(\v2\x1a.common.v2.CommonTimeRangeR\ttimeRange\x1aR\n" +
 	"\fFiltersEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12,\n" +
-	"\x05value\x18\x02 \x01(\v2\x16.common.v2.FilterValueR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\v2\x16.common.v2.FilterValueR\x05value:\x028\x01B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_filter_options_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_common_v2_filter_options_proto_goTypes = []any{

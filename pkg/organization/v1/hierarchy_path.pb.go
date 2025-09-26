@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/hierarchy_path.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -192,7 +192,7 @@ const file_organization_v1_hierarchy_path_proto_rawDesc = "" +
 	"ancestorId\x12#\n" +
 	"\bdistance\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bdistance\x12'\n" +
 	"\n" +
-	"path_nodes\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\tpathNodesB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"path_nodes\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\tpathNodesB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_hierarchy_path_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_hierarchy_path_proto_goTypes = []any{

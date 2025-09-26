@@ -112,7 +112,7 @@ const file_database_v2_list_migrations_response_proto_rawDesc = "" +
 	"\n" +
 	"migrations\x18\x01 \x03(\v2\x1a.database.v2.MigrationInfoB\n" +
 	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\n" +
-	"migrationsB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"migrationsB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_list_migrations_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_list_migrations_response_proto_goTypes = []any{

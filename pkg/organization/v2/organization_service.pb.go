@@ -37,7 +37,7 @@ const file_organization_v2_organization_service_proto_rawDesc = "" +
 	"\fUpdateMember\x12$.organization.v2.UpdateMemberRequest\x1a%.organization.v2.UpdateMemberResponse\x12X\n" +
 	"\vListMembers\x12#.organization.v2.ListMembersRequest\x1a$.organization.v2.ListMembersResponse\x12|\n" +
 	"\x17GetOrganizationSettings\x12/.organization.v2.GetOrganizationSettingsRequest\x1a0.organization.v2.GetOrganizationSettingsResponse\x12\x85\x01\n" +
-	"\x1aUpdateOrganizationSettings\x122.organization.v2.UpdateOrganizationSettingsRequest\x1a3.organization.v2.UpdateOrganizationSettingsResponseB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1aUpdateOrganizationSettings\x122.organization.v2.UpdateOrganizationSettingsRequest\x1a3.organization.v2.UpdateOrganizationSettingsResponseB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_organization_service_proto_goTypes = []any{
 	(*CreateOrganizationRequest)(nil),          // 0: organization.v2.CreateOrganizationRequest

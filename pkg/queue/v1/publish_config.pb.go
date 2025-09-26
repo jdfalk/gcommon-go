@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/publish_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,14 +24,14 @@ const (
 )
 
 type PublishConfig struct {
-	state                         protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_WaitForAck         bool                   `protobuf:"varint,1,opt,name=wait_for_ack,json=waitForAck"`
-	xxx_hidden_AckTimeoutMs       int32                  `protobuf:"varint,2,opt,name=ack_timeout_ms,json=ackTimeoutMs"`
-	xxx_hidden_DuplicateDetection bool                   `protobuf:"varint,3,opt,name=duplicate_detection,json=duplicateDetection"`
-	xxx_hidden_EnableCompression  bool                   `protobuf:"varint,4,opt,name=enable_compression,json=enableCompression"`
-	xxx_hidden_EnableOrdering     bool                   `protobuf:"varint,5,opt,name=enable_ordering,json=enableOrdering"`
-	xxx_hidden_RetryConfig        *v1.CommonRetryPolicy  `protobuf:"bytes,6,opt,name=retry_config,json=retryConfig"`
-	xxx_hidden_PersistenceLevel   *string                `protobuf:"bytes,7,opt,name=persistence_level,json=persistenceLevel"`
+	state                         protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_WaitForAck         bool                      `protobuf:"varint,1,opt,name=wait_for_ack,json=waitForAck"`
+	xxx_hidden_AckTimeoutMs       int32                     `protobuf:"varint,2,opt,name=ack_timeout_ms,json=ackTimeoutMs"`
+	xxx_hidden_DuplicateDetection bool                      `protobuf:"varint,3,opt,name=duplicate_detection,json=duplicateDetection"`
+	xxx_hidden_EnableCompression  bool                      `protobuf:"varint,4,opt,name=enable_compression,json=enableCompression"`
+	xxx_hidden_EnableOrdering     bool                      `protobuf:"varint,5,opt,name=enable_ordering,json=enableOrdering"`
+	xxx_hidden_RetryConfig        *common.CommonRetryPolicy `protobuf:"bytes,6,opt,name=retry_config,json=retryConfig"`
+	xxx_hidden_PersistenceLevel   *string                   `protobuf:"bytes,7,opt,name=persistence_level,json=persistenceLevel"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -98,7 +98,7 @@ func (x *PublishConfig) GetEnableOrdering() bool {
 	return false
 }
 
-func (x *PublishConfig) GetRetryConfig() *v1.CommonRetryPolicy {
+func (x *PublishConfig) GetRetryConfig() *common.CommonRetryPolicy {
 	if x != nil {
 		return x.xxx_hidden_RetryConfig
 	}
@@ -140,7 +140,7 @@ func (x *PublishConfig) SetEnableOrdering(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 7)
 }
 
-func (x *PublishConfig) SetRetryConfig(v *v1.CommonRetryPolicy) {
+func (x *PublishConfig) SetRetryConfig(v *common.CommonRetryPolicy) {
 	x.xxx_hidden_RetryConfig = v
 }
 
@@ -246,7 +246,7 @@ type PublishConfig_builder struct {
 	// Enable message ordering
 	EnableOrdering *bool
 	// Retry configuration for failed publishes - references existing RetryConfig
-	RetryConfig *v1.CommonRetryPolicy
+	RetryConfig *common.CommonRetryPolicy
 	// Persistence level required
 	PersistenceLevel *string
 }
@@ -296,12 +296,12 @@ const file_queue_v1_publish_config_proto_rawDesc = "" +
 	"\x12enable_compression\x18\x04 \x01(\bR\x11enableCompression\x12'\n" +
 	"\x0fenable_ordering\x18\x05 \x01(\bR\x0eenableOrdering\x12?\n" +
 	"\fretry_config\x18\x06 \x01(\v2\x1c.common.v1.CommonRetryPolicyR\vretryConfig\x124\n" +
-	"\x11persistence_level\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10persistenceLevelB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11persistence_level\x18\a \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10persistenceLevelB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_publish_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_publish_config_proto_goTypes = []any{
-	(*PublishConfig)(nil),        // 0: queue.v1.PublishConfig
-	(*v1.CommonRetryPolicy)(nil), // 1: common.v1.CommonRetryPolicy
+	(*PublishConfig)(nil),            // 0: queue.v1.PublishConfig
+	(*common.CommonRetryPolicy)(nil), // 1: common.v1.CommonRetryPolicy
 }
 var file_queue_v1_publish_config_proto_depIdxs = []int32{
 	1, // 0: queue.v1.PublishConfig.retry_config:type_name -> common.v1.CommonRetryPolicy

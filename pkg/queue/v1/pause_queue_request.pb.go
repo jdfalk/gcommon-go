@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/pause_queue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Request to pause a queue.
 // Stops message processing while keeping messages in the queue.
 type PauseQueueRequest struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName    *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Reason       *string                `protobuf:"bytes,2,opt,name=reason"`
-	xxx_hidden_Graceful     bool                   `protobuf:"varint,3,opt,name=graceful"`
-	xxx_hidden_TimeoutMs    int32                  `protobuf:"varint,4,opt,name=timeout_ms,json=timeoutMs"`
-	xxx_hidden_Metadata     *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
-	xxx_hidden_PartitionIds []int32                `protobuf:"varint,6,rep,packed,name=partition_ids,json=partitionIds"`
+	state                   protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName    *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Reason       *string                 `protobuf:"bytes,2,opt,name=reason"`
+	xxx_hidden_Graceful     bool                    `protobuf:"varint,3,opt,name=graceful"`
+	xxx_hidden_TimeoutMs    int32                   `protobuf:"varint,4,opt,name=timeout_ms,json=timeoutMs"`
+	xxx_hidden_Metadata     *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
+	xxx_hidden_PartitionIds []int32                 `protobuf:"varint,6,rep,packed,name=partition_ids,json=partitionIds"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -99,7 +99,7 @@ func (x *PauseQueueRequest) GetTimeoutMs() int32 {
 	return 0
 }
 
-func (x *PauseQueueRequest) GetMetadata() *v1.RequestMetadata {
+func (x *PauseQueueRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -133,7 +133,7 @@ func (x *PauseQueueRequest) SetTimeoutMs(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 6)
 }
 
-func (x *PauseQueueRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *PauseQueueRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -212,7 +212,7 @@ type PauseQueueRequest_builder struct {
 	// Timeout for graceful pause (milliseconds)
 	TimeoutMs *int32
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Whether to pause specific partitions only
 	PartitionIds []int32
 }
@@ -255,12 +255,12 @@ const file_queue_v1_pause_queue_request_proto_rawDesc = "" +
 	"\n" +
 	"timeout_ms\x18\x04 \x01(\x05R\ttimeoutMs\x126\n" +
 	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12#\n" +
-	"\rpartition_ids\x18\x06 \x03(\x05R\fpartitionIdsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rpartition_ids\x18\x06 \x03(\x05R\fpartitionIdsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_pause_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_pause_queue_request_proto_goTypes = []any{
-	(*PauseQueueRequest)(nil),  // 0: queue.v1.PauseQueueRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*PauseQueueRequest)(nil),      // 0: queue.v1.PauseQueueRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_pause_queue_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.PauseQueueRequest.metadata:type_name -> common.v1.RequestMetadata

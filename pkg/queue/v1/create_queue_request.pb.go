@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/create_queue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Request to create a new queue.
 // Defines the queue name and configuration parameters.
 type CreateQueueRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName   *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Config      *QueueConfig           `protobuf:"bytes,2,opt,name=config"`
-	xxx_hidden_IfNotExists bool                   `protobuf:"varint,3,opt,name=if_not_exists,json=ifNotExists"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_Tags        map[string]string      `protobuf:"bytes,5,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Description *string                `protobuf:"bytes,6,opt,name=description"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName   *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Config      *QueueConfig            `protobuf:"bytes,2,opt,name=config"`
+	xxx_hidden_IfNotExists bool                    `protobuf:"varint,3,opt,name=if_not_exists,json=ifNotExists"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Tags        map[string]string       `protobuf:"bytes,5,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Description *string                 `protobuf:"bytes,6,opt,name=description"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -89,7 +89,7 @@ func (x *CreateQueueRequest) GetIfNotExists() bool {
 	return false
 }
 
-func (x *CreateQueueRequest) GetMetadata() *v1.RequestMetadata {
+func (x *CreateQueueRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -127,7 +127,7 @@ func (x *CreateQueueRequest) SetIfNotExists(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 6)
 }
 
-func (x *CreateQueueRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *CreateQueueRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -208,7 +208,7 @@ type CreateQueueRequest_builder struct {
 	// Whether to create the queue even if it already exists
 	IfNotExists *bool
 	// Request metadata for tracing and correlation - required
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Tags to associate with the queue - max 20 tags, each key/value max 100 chars
 	Tags map[string]string
 	// Description of the queue - max 500 characters
@@ -252,14 +252,14 @@ const file_queue_v1_create_queue_request_proto_rawDesc = "" +
 	"\vdescription\x18\x06 \x01(\tB\b\xbaH\x05r\x03\x18\xf4\x03R\vdescription\x1a7\n" +
 	"\tTagsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_create_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_create_queue_request_proto_goTypes = []any{
-	(*CreateQueueRequest)(nil), // 0: queue.v1.CreateQueueRequest
-	nil,                        // 1: queue.v1.CreateQueueRequest.TagsEntry
-	(*QueueConfig)(nil),        // 2: queue.v1.QueueConfig
-	(*v1.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
+	(*CreateQueueRequest)(nil),     // 0: queue.v1.CreateQueueRequest
+	nil,                            // 1: queue.v1.CreateQueueRequest.TagsEntry
+	(*QueueConfig)(nil),            // 2: queue.v1.QueueConfig
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_queue_v1_create_queue_request_proto_depIdxs = []int32{
 	2, // 0: queue.v1.CreateQueueRequest.config:type_name -> queue.v1.QueueConfig

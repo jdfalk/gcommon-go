@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metrics_summary.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,16 +24,16 @@ const (
 )
 
 type MetricsSummary struct {
-	state                           protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_TotalMetrics         int64                    `protobuf:"varint,1,opt,name=total_metrics,json=totalMetrics"`
-	xxx_hidden_TotalDataPoints      int64                    `protobuf:"varint,2,opt,name=total_data_points,json=totalDataPoints"`
-	xxx_hidden_TotalDataVolumeBytes int64                    `protobuf:"varint,3,opt,name=total_data_volume_bytes,json=totalDataVolumeBytes"`
-	xxx_hidden_TypeCounts           *MetricTypeCounts        `protobuf:"bytes,4,opt,name=type_counts,json=typeCounts"`
-	xxx_hidden_Performance          *MetricsPerformanceStats `protobuf:"bytes,5,opt,name=performance"`
-	xxx_hidden_Errors               *v1.MetricsErrorStats    `protobuf:"bytes,6,opt,name=errors"`
-	xxx_hidden_TopMetrics           *TopMetrics              `protobuf:"bytes,7,opt,name=top_metrics,json=topMetrics"`
-	xxx_hidden_Retention            *v1.MetricsRetentionInfo `protobuf:"bytes,8,opt,name=retention"`
-	xxx_hidden_ExportStatus         *ExportStatus            `protobuf:"bytes,9,opt,name=export_status,json=exportStatus"`
+	state                           protoimpl.MessageState       `protogen:"opaque.v1"`
+	xxx_hidden_TotalMetrics         int64                        `protobuf:"varint,1,opt,name=total_metrics,json=totalMetrics"`
+	xxx_hidden_TotalDataPoints      int64                        `protobuf:"varint,2,opt,name=total_data_points,json=totalDataPoints"`
+	xxx_hidden_TotalDataVolumeBytes int64                        `protobuf:"varint,3,opt,name=total_data_volume_bytes,json=totalDataVolumeBytes"`
+	xxx_hidden_TypeCounts           *MetricTypeCounts            `protobuf:"bytes,4,opt,name=type_counts,json=typeCounts"`
+	xxx_hidden_Performance          *MetricsPerformanceStats     `protobuf:"bytes,5,opt,name=performance"`
+	xxx_hidden_Errors               *common.MetricsErrorStats    `protobuf:"bytes,6,opt,name=errors"`
+	xxx_hidden_TopMetrics           *TopMetrics                  `protobuf:"bytes,7,opt,name=top_metrics,json=topMetrics"`
+	xxx_hidden_Retention            *common.MetricsRetentionInfo `protobuf:"bytes,8,opt,name=retention"`
+	xxx_hidden_ExportStatus         *ExportStatus                `protobuf:"bytes,9,opt,name=export_status,json=exportStatus"`
 	XXX_raceDetectHookData          protoimpl.RaceDetectHookData
 	XXX_presence                    [1]uint32
 	unknownFields                   protoimpl.UnknownFields
@@ -100,7 +100,7 @@ func (x *MetricsSummary) GetPerformance() *MetricsPerformanceStats {
 	return nil
 }
 
-func (x *MetricsSummary) GetErrors() *v1.MetricsErrorStats {
+func (x *MetricsSummary) GetErrors() *common.MetricsErrorStats {
 	if x != nil {
 		return x.xxx_hidden_Errors
 	}
@@ -114,7 +114,7 @@ func (x *MetricsSummary) GetTopMetrics() *TopMetrics {
 	return nil
 }
 
-func (x *MetricsSummary) GetRetention() *v1.MetricsRetentionInfo {
+func (x *MetricsSummary) GetRetention() *common.MetricsRetentionInfo {
 	if x != nil {
 		return x.xxx_hidden_Retention
 	}
@@ -151,7 +151,7 @@ func (x *MetricsSummary) SetPerformance(v *MetricsPerformanceStats) {
 	x.xxx_hidden_Performance = v
 }
 
-func (x *MetricsSummary) SetErrors(v *v1.MetricsErrorStats) {
+func (x *MetricsSummary) SetErrors(v *common.MetricsErrorStats) {
 	x.xxx_hidden_Errors = v
 }
 
@@ -159,7 +159,7 @@ func (x *MetricsSummary) SetTopMetrics(v *TopMetrics) {
 	x.xxx_hidden_TopMetrics = v
 }
 
-func (x *MetricsSummary) SetRetention(v *v1.MetricsRetentionInfo) {
+func (x *MetricsSummary) SetRetention(v *common.MetricsRetentionInfo) {
 	x.xxx_hidden_Retention = v
 }
 
@@ -283,11 +283,11 @@ type MetricsSummary_builder struct {
 	// Performance statistics
 	Performance *MetricsPerformanceStats
 	// Error statistics
-	Errors *v1.MetricsErrorStats
+	Errors *common.MetricsErrorStats
 	// Top metrics by various criteria
 	TopMetrics *TopMetrics
 	// Retention information
-	Retention *v1.MetricsRetentionInfo
+	Retention *common.MetricsRetentionInfo
 	// Export status information
 	ExportStatus *ExportStatus
 }
@@ -334,17 +334,17 @@ const file_metrics_v1_metrics_summary_proto_rawDesc = "" +
 	"\vtop_metrics\x18\a \x01(\v2\x16.metrics.v1.TopMetricsR\n" +
 	"topMetrics\x12=\n" +
 	"\tretention\x18\b \x01(\v2\x1f.common.v1.MetricsRetentionInfoR\tretention\x12=\n" +
-	"\rexport_status\x18\t \x01(\v2\x18.metrics.v1.ExportStatusR\fexportStatusB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rexport_status\x18\t \x01(\v2\x18.metrics.v1.ExportStatusR\fexportStatusB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_summary_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metrics_summary_proto_goTypes = []any{
-	(*MetricsSummary)(nil),          // 0: metrics.v1.MetricsSummary
-	(*MetricTypeCounts)(nil),        // 1: metrics.v1.MetricTypeCounts
-	(*MetricsPerformanceStats)(nil), // 2: metrics.v1.MetricsPerformanceStats
-	(*v1.MetricsErrorStats)(nil),    // 3: common.v1.MetricsErrorStats
-	(*TopMetrics)(nil),              // 4: metrics.v1.TopMetrics
-	(*v1.MetricsRetentionInfo)(nil), // 5: common.v1.MetricsRetentionInfo
-	(*ExportStatus)(nil),            // 6: metrics.v1.ExportStatus
+	(*MetricsSummary)(nil),              // 0: metrics.v1.MetricsSummary
+	(*MetricTypeCounts)(nil),            // 1: metrics.v1.MetricTypeCounts
+	(*MetricsPerformanceStats)(nil),     // 2: metrics.v1.MetricsPerformanceStats
+	(*common.MetricsErrorStats)(nil),    // 3: common.v1.MetricsErrorStats
+	(*TopMetrics)(nil),                  // 4: metrics.v1.TopMetrics
+	(*common.MetricsRetentionInfo)(nil), // 5: common.v1.MetricsRetentionInfo
+	(*ExportStatus)(nil),                // 6: metrics.v1.ExportStatus
 }
 var file_metrics_v1_metrics_summary_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsSummary.type_counts:type_name -> metrics.v1.MetricTypeCounts

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/rollback_info.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ type RollbackInfo struct {
 	state                      protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_OriginalAuditId *string                `protobuf:"bytes,1,opt,name=original_audit_id,json=originalAuditId"`
 	xxx_hidden_Reason          *string                `protobuf:"bytes,2,opt,name=reason"`
-	xxx_hidden_Method          v1.RollbackMethod      `protobuf:"varint,3,opt,name=method,enum=common.v1.RollbackMethod"`
+	xxx_hidden_Method          common.RollbackMethod  `protobuf:"varint,3,opt,name=method,enum=common.v1.RollbackMethod"`
 	xxx_hidden_TargetVersion   *string                `protobuf:"bytes,4,opt,name=target_version,json=targetVersion"`
 	xxx_hidden_Automatic       bool                   `protobuf:"varint,5,opt,name=automatic"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
@@ -81,13 +81,13 @@ func (x *RollbackInfo) GetReason() string {
 	return ""
 }
 
-func (x *RollbackInfo) GetMethod() v1.RollbackMethod {
+func (x *RollbackInfo) GetMethod() common.RollbackMethod {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Method
 		}
 	}
-	return v1.RollbackMethod(0)
+	return common.RollbackMethod(0)
 }
 
 func (x *RollbackInfo) GetTargetVersion() string {
@@ -117,7 +117,7 @@ func (x *RollbackInfo) SetReason(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *RollbackInfo) SetMethod(v v1.RollbackMethod) {
+func (x *RollbackInfo) SetMethod(v common.RollbackMethod) {
 	x.xxx_hidden_Method = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
@@ -179,7 +179,7 @@ func (x *RollbackInfo) ClearReason() {
 
 func (x *RollbackInfo) ClearMethod() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Method = v1.RollbackMethod_ROLLBACK_METHOD_UNSPECIFIED
+	x.xxx_hidden_Method = common.RollbackMethod_ROLLBACK_METHOD_UNSPECIFIED
 }
 
 func (x *RollbackInfo) ClearTargetVersion() {
@@ -200,7 +200,7 @@ type RollbackInfo_builder struct {
 	// Rollback reason
 	Reason *string
 	// Rollback method
-	Method *v1.RollbackMethod
+	Method *common.RollbackMethod
 	// Target version for rollback
 	TargetVersion *string
 	// Whether rollback was automatic
@@ -244,12 +244,12 @@ const file_config_v1_rollback_info_proto_rawDesc = "" +
 	"\x06reason\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reason\x121\n" +
 	"\x06method\x18\x03 \x01(\x0e2\x19.common.v1.RollbackMethodR\x06method\x12>\n" +
 	"\x0etarget_version\x18\x04 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\rtargetVersion\x12\x1c\n" +
-	"\tautomatic\x18\x05 \x01(\bR\tautomaticB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tautomatic\x18\x05 \x01(\bR\tautomaticB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_rollback_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_rollback_info_proto_goTypes = []any{
-	(*RollbackInfo)(nil),   // 0: config.v1.RollbackInfo
-	(v1.RollbackMethod)(0), // 1: common.v1.RollbackMethod
+	(*RollbackInfo)(nil),       // 0: config.v1.RollbackInfo
+	(common.RollbackMethod)(0), // 1: common.v1.RollbackMethod
 }
 var file_config_v1_rollback_info_proto_depIdxs = []int32{
 	1, // 0: config.v1.RollbackInfo.method:type_name -> common.v1.RollbackMethod

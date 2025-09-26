@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/percentile_measurement.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -167,7 +167,7 @@ const file_metrics_v1_percentile_measurement_proto_rawDesc = "" +
 	"percentile\x18\x01 \x01(\x01B\x17\xbaH\x14\x12\x12\x19\x00\x00\x00\x00\x00\x00Y@)\x00\x00\x00\x00\x00\x00\x00\x00R\n" +
 	"percentile\x125\n" +
 	"\bduration\x18\x02 \x01(\v2\x19.google.protobuf.DurationR\bduration\x12*\n" +
-	"\fsample_count\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vsampleCountB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fsample_count\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vsampleCountB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_percentile_measurement_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_percentile_measurement_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/check_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -93,7 +93,7 @@ const file_common_v1_check_type_proto_rawDesc = "" +
 	"\x14CHECK_TYPE_READINESS\x10\x02\x12\x16\n" +
 	"\x12CHECK_TYPE_STARTUP\x10\x03\x12\x18\n" +
 	"\x14CHECK_TYPE_COMPONENT\x10\x04\x12\x19\n" +
-	"\x15CHECK_TYPE_DEPENDENCY\x10\x05B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15CHECK_TYPE_DEPENDENCY\x10\x05B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_check_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_check_type_proto_goTypes = []any{

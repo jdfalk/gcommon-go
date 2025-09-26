@@ -97,7 +97,7 @@ const file_web_v2_get_session_response_proto_rawDesc = "" +
 	"\n" +
 	"!web/v2/get_session_response.proto\x12\x06web.v2\x1a\x19web/v2/session_data.proto\x1a!google/protobuf/go_features.proto\"F\n" +
 	"\x15WebGetSessionResponse\x12-\n" +
-	"\asession\x18\x01 \x01(\v2\x13.web.v2.SessionDataR\asessionB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\asession\x18\x01 \x01(\v2\x13.web.v2.SessionDataR\asessionB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_get_session_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_get_session_response_proto_goTypes = []any{

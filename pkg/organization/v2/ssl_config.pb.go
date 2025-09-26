@@ -210,7 +210,7 @@ const file_organization_v2_ssl_config_proto_rawDesc = "" +
 	"\n" +
 	"ssl_policy\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsslPolicy\x12#\n" +
 	"\rredirect_http\x18\x03 \x01(\bR\fredirectHttp\x12?\n" +
-	"\x0fmin_tls_version\x18\x04 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\rminTlsVersionB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmin_tls_version\x18\x04 \x01(\tB\x17\xbaH\x14r\x122\x10^v?\\d+\\.\\d+\\.\\d+R\rminTlsVersionB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_ssl_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_ssl_config_proto_goTypes = []any{

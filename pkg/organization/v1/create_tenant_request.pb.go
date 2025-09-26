@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: organization/v1/create_tenant_request.proto
 
-package v1
+package organization
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -23,10 +23,10 @@ const (
 )
 
 type CreateTenantRequest struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata     *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Tenant       *Tenant                `protobuf:"bytes,2,opt,name=tenant"`
-	xxx_hidden_ValidateOnly bool                   `protobuf:"varint,3,opt,name=validate_only,json=validateOnly"`
+	state                   protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata     *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Tenant       *Tenant                 `protobuf:"bytes,2,opt,name=tenant"`
+	xxx_hidden_ValidateOnly bool                    `protobuf:"varint,3,opt,name=validate_only,json=validateOnly"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -58,7 +58,7 @@ func (x *CreateTenantRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *CreateTenantRequest) GetMetadata() *v1.RequestMetadata {
+func (x *CreateTenantRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -79,7 +79,7 @@ func (x *CreateTenantRequest) GetValidateOnly() bool {
 	return false
 }
 
-func (x *CreateTenantRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *CreateTenantRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -130,7 +130,7 @@ type CreateTenantRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// The tenant to create.
 	Tenant *Tenant
 	// Validate only without persisting if true
@@ -158,13 +158,13 @@ const file_organization_v1_create_tenant_request_proto_rawDesc = "" +
 	"\x13CreateTenantRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12/\n" +
 	"\x06tenant\x18\x02 \x01(\v2\x17.organization.v1.TenantR\x06tenant\x12#\n" +
-	"\rvalidate_only\x18\x03 \x01(\bR\fvalidateOnlyB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rvalidate_only\x18\x03 \x01(\bR\fvalidateOnlyB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_create_tenant_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_create_tenant_request_proto_goTypes = []any{
-	(*CreateTenantRequest)(nil), // 0: organization.v1.CreateTenantRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
-	(*Tenant)(nil),              // 2: organization.v1.Tenant
+	(*CreateTenantRequest)(nil),    // 0: organization.v1.CreateTenantRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*Tenant)(nil),                 // 2: organization.v1.Tenant
 }
 var file_organization_v1_create_tenant_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.CreateTenantRequest.metadata:type_name -> common.v1.RequestMetadata

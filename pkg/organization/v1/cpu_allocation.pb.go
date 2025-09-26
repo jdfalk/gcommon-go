@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/cpu_allocation.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -201,7 +201,7 @@ const file_organization_v1_cpu_allocation_proto_rawDesc = "" +
 	"\rfrequency_mhz\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\ffrequencyMhz\x12:\n" +
 	"\x13usage_limit_percent\x18\x03 \x01(\x05B\n" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\x11usageLimitPercent\x12#\n" +
-	"\bpriority\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriorityB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpriority\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\bpriorityB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_cpu_allocation_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_cpu_allocation_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/restore_statistics.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -360,7 +360,7 @@ const file_queue_v1_restore_statistics_proto_rawDesc = "" +
 	"\frestore_rate\x18\x06 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\vrestoreRate\x125\n" +
 	"\x0ethroughput_bps\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\rthroughputBps\x123\n" +
 	"\x11backup_size_bytes\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0fbackupSizeBytes\x12;\n" +
-	"\x11compression_ratio\x18\t \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x10compressionRatioB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11compression_ratio\x18\t \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x10compressionRatioB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_restore_statistics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_restore_statistics_proto_goTypes = []any{

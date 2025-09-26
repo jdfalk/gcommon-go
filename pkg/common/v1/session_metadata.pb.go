@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/session_metadata.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -402,7 +402,7 @@ const file_common_v1_session_metadata_proto_rawDesc = "" +
 	"deviceInfo\x12<\n" +
 	"\rlocation_info\x18\t \x01(\v2\x17.common.v1.LocationInfoR\flocationInfo\x12-\n" +
 	"\x05state\x18\n" +
-	" \x01(\x0e2\x17.common.v1.SessionStateR\x05stateB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x0e2\x17.common.v1.SessionStateR\x05stateB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_session_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_session_metadata_proto_goTypes = []any{

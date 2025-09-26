@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/register_metric_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,12 +24,12 @@ const (
 )
 
 type RegisterMetricRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Definition      *MetricDefinition      `protobuf:"bytes,2,opt,name=definition"`
-	xxx_hidden_ProviderId      *string                `protobuf:"bytes,3,opt,name=provider_id,json=providerId"`
-	xxx_hidden_ReplaceExisting bool                   `protobuf:"varint,4,opt,name=replace_existing,json=replaceExisting"`
-	xxx_hidden_Options         *RegistrationOptions   `protobuf:"bytes,5,opt,name=options"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata        *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Definition      *MetricDefinition       `protobuf:"bytes,2,opt,name=definition"`
+	xxx_hidden_ProviderId      *string                 `protobuf:"bytes,3,opt,name=provider_id,json=providerId"`
+	xxx_hidden_ReplaceExisting bool                    `protobuf:"varint,4,opt,name=replace_existing,json=replaceExisting"`
+	xxx_hidden_Options         *RegistrationOptions    `protobuf:"bytes,5,opt,name=options"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -61,7 +61,7 @@ func (x *RegisterMetricRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *RegisterMetricRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RegisterMetricRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -99,7 +99,7 @@ func (x *RegisterMetricRequest) GetOptions() *RegistrationOptions {
 	return nil
 }
 
-func (x *RegisterMetricRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RegisterMetricRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -182,7 +182,7 @@ type RegisterMetricRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Metric definition to register
 	Definition *MetricDefinition
 	// Optional provider ID to register with
@@ -225,14 +225,14 @@ const file_metrics_v1_register_metric_request_proto_rawDesc = "" +
 	"\vprovider_id\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"providerId\x12)\n" +
 	"\x10replace_existing\x18\x04 \x01(\bR\x0freplaceExisting\x129\n" +
-	"\aoptions\x18\x05 \x01(\v2\x1f.metrics.v1.RegistrationOptionsR\aoptionsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aoptions\x18\x05 \x01(\v2\x1f.metrics.v1.RegistrationOptionsR\aoptionsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_register_metric_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_register_metric_request_proto_goTypes = []any{
-	(*RegisterMetricRequest)(nil), // 0: metrics.v1.RegisterMetricRequest
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*MetricDefinition)(nil),      // 2: metrics.v1.MetricDefinition
-	(*RegistrationOptions)(nil),   // 3: metrics.v1.RegistrationOptions
+	(*RegisterMetricRequest)(nil),  // 0: metrics.v1.RegisterMetricRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*MetricDefinition)(nil),       // 2: metrics.v1.MetricDefinition
+	(*RegistrationOptions)(nil),    // 3: metrics.v1.RegistrationOptions
 }
 var file_metrics_v1_register_metric_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RegisterMetricRequest.metadata:type_name -> common.v1.RequestMetadata

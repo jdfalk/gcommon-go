@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/health_admin_service.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -32,7 +32,7 @@ const file_common_v1_health_admin_service_proto_rawDesc = "" +
 	"\fDisableCheck\x12\x1e.common.v1.DisableCheckRequest\x1a\x1f.common.v1.DisableCheckResponse\x12C\n" +
 	"\bRunCheck\x12\x1a.common.v1.RunCheckRequest\x1a\x1b.common.v1.RunCheckResponse\x12[\n" +
 	"\x10ResetHealthStats\x12\".common.v1.ResetHealthStatsRequest\x1a#.common.v1.ResetHealthStatsResponse\x12F\n" +
-	"\tSetHealth\x12\x1b.common.v1.SetHealthRequest\x1a\x1c.common.v1.SetHealthResponseB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tSetHealth\x12\x1b.common.v1.SetHealthRequest\x1a\x1c.common.v1.SetHealthResponseB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_health_admin_service_proto_goTypes = []any{
 	(*ConfigureAlertingRequest)(nil),  // 0: common.v1.ConfigureAlertingRequest

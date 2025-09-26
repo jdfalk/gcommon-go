@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/commit_offset_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type CommitOffsetRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName     *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_ConsumerGroup *string                `protobuf:"bytes,2,opt,name=consumer_group,json=consumerGroup"`
-	xxx_hidden_Offset        int64                  `protobuf:"varint,3,opt,name=offset"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName     *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_ConsumerGroup *string                 `protobuf:"bytes,2,opt,name=consumer_group,json=consumerGroup"`
+	xxx_hidden_Offset        int64                   `protobuf:"varint,3,opt,name=offset"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -87,7 +87,7 @@ func (x *CommitOffsetRequest) GetOffset() int64 {
 	return 0
 }
 
-func (x *CommitOffsetRequest) GetMetadata() *v1.RequestMetadata {
+func (x *CommitOffsetRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -109,7 +109,7 @@ func (x *CommitOffsetRequest) SetOffset(v int64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *CommitOffsetRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *CommitOffsetRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -170,7 +170,7 @@ type CommitOffsetRequest_builder struct {
 	// Offset that was last processed successfully.
 	Offset *int64
 	// Optional request metadata for tracing and auth.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 CommitOffsetRequest_builder) Build() *CommitOffsetRequest {
@@ -203,12 +203,12 @@ const file_queue_v1_commit_offset_request_proto_rawDesc = "" +
 	"queue_name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tqueueName\x12%\n" +
 	"\x0econsumer_group\x18\x02 \x01(\tR\rconsumerGroup\x12\x16\n" +
 	"\x06offset\x18\x03 \x01(\x03R\x06offset\x126\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_commit_offset_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_commit_offset_request_proto_goTypes = []any{
-	(*CommitOffsetRequest)(nil), // 0: queue.v1.CommitOffsetRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*CommitOffsetRequest)(nil),    // 0: queue.v1.CommitOffsetRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_commit_offset_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.CommitOffsetRequest.metadata:type_name -> common.v1.RequestMetadata

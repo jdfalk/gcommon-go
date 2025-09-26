@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/session_status.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -89,7 +89,7 @@ const file_common_v1_session_status_proto_rawDesc = "" +
 	"\x15SESSION_STATUS_ACTIVE\x10\x01\x12\x1a\n" +
 	"\x16SESSION_STATUS_EXPIRED\x10\x02\x12\x1d\n" +
 	"\x19SESSION_STATUS_TERMINATED\x10\x03\x12\x1a\n" +
-	"\x16SESSION_STATUS_INVALID\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16SESSION_STATUS_INVALID\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_session_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_session_status_proto_goTypes = []any{

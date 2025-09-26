@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/get_api_key_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -161,7 +161,7 @@ const file_common_v1_get_api_key_response_proto_rawDesc = "" +
 	"\x11GetApiKeyResponse\x12*\n" +
 	"\aapi_key\x18\x01 \x01(\v2\x11.common.v1.APIKeyR\x06apiKey\x12,\n" +
 	"\x05stats\x18\x02 \x01(\v2\x16.common.v1.ApiKeyStatsR\x05stats\x12,\n" +
-	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_get_api_key_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_get_api_key_response_proto_goTypes = []any{

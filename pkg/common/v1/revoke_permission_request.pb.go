@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/revoke_permission_request.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -176,7 +176,7 @@ const file_common_v1_revoke_permission_request_proto_rawDesc = "" +
 	"\n" +
 	"subject_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tsubjectId\x12=\n" +
 	"\fsubject_type\x18\x02 \x01(\x0e2\x1a.common.v1.AuthSubjectTypeR\vsubjectType\x12,\n" +
-	"\rpermission_id\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fpermissionIdB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rpermission_id\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\fpermissionIdB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_revoke_permission_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_revoke_permission_request_proto_goTypes = []any{

@@ -191,7 +191,7 @@ const file_database_v2_query_parameter_proto_rawDesc = "" +
 	"\x0eQueryParameter\x12\x1d\n" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12.\n" +
 	"\x05value\x18\x02 \x01(\v2\x14.google.protobuf.AnyB\x02(\x01R\x05value\x12\x12\n" +
-	"\x04type\x18\x03 \x01(\tR\x04typeB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04type\x18\x03 \x01(\tR\x04typeB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_query_parameter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_query_parameter_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/get_tenant_usage_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,9 +25,9 @@ const (
 
 type GetTenantUsageResponse struct {
 	state                 protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Errors     *[]*v1.Error           `protobuf:"bytes,1,rep,name=errors"`
+	xxx_hidden_Errors     *[]*common.Error       `protobuf:"bytes,1,rep,name=errors"`
 	xxx_hidden_Success    bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_UsageStats *[]*v1.KeyValue        `protobuf:"bytes,3,rep,name=usage_stats,json=usageStats"`
+	xxx_hidden_UsageStats *[]*common.KeyValue    `protobuf:"bytes,3,rep,name=usage_stats,json=usageStats"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -61,7 +61,7 @@ func (x *GetTenantUsageResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *GetTenantUsageResponse) GetErrors() []*v1.Error {
+func (x *GetTenantUsageResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -77,13 +77,13 @@ func (x *GetTenantUsageResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *GetTenantUsageResponse) GetUsageStats() []*v1.KeyValue {
+func (x *GetTenantUsageResponse) GetUsageStats() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_UsageStats) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_UsageStats), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -91,7 +91,7 @@ func (x *GetTenantUsageResponse) GetUsageStats() []*v1.KeyValue {
 	return nil
 }
 
-func (x *GetTenantUsageResponse) SetErrors(v []*v1.Error) {
+func (x *GetTenantUsageResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -100,11 +100,11 @@ func (x *GetTenantUsageResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *GetTenantUsageResponse) SetUsageStats(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *GetTenantUsageResponse) SetUsageStats(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_UsageStats), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_UsageStats), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -127,11 +127,11 @@ type GetTenantUsageResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Any errors encountered
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 	// Usage statistics for the tenant
-	UsageStats []*v1.KeyValue
+	UsageStats []*common.KeyValue
 }
 
 func (b0 GetTenantUsageResponse_builder) Build() *GetTenantUsageResponse {
@@ -160,13 +160,13 @@ const file_organization_v1_get_tenant_usage_response_proto_rawDesc = "" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess\x12@\n" +
 	"\vusage_stats\x18\x03 \x03(\v2\x13.common.v1.KeyValueB\n" +
 	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\n" +
-	"usageStatsB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"usageStatsB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_get_tenant_usage_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_get_tenant_usage_response_proto_goTypes = []any{
 	(*GetTenantUsageResponse)(nil), // 0: organization.v1.GetTenantUsageResponse
-	(*v1.Error)(nil),               // 1: common.v1.Error
-	(*v1.KeyValue)(nil),            // 2: common.v1.KeyValue
+	(*common.Error)(nil),           // 1: common.v1.Error
+	(*common.KeyValue)(nil),        // 2: common.v1.KeyValue
 }
 var file_organization_v1_get_tenant_usage_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.GetTenantUsageResponse.errors:type_name -> common.v1.Error

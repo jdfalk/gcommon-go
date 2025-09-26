@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/logger_status.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -78,7 +78,7 @@ const file_common_v1_logger_status_proto_rawDesc = "" +
 	"\x19LOGGER_STATUS_UNSPECIFIED\x10\x00\x12\x18\n" +
 	"\x14LOGGER_STATUS_ACTIVE\x10\x01\x12\x1a\n" +
 	"\x16LOGGER_STATUS_INACTIVE\x10\x02\x12\x17\n" +
-	"\x13LOGGER_STATUS_ERROR\x10\x03B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13LOGGER_STATUS_ERROR\x10\x03B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_logger_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_logger_status_proto_goTypes = []any{

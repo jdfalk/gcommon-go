@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/middleware_type.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -89,7 +89,7 @@ const file_common_v1_middleware_type_proto_rawDesc = "" +
 	"\x17MIDDLEWARE_TYPE_METRICS\x10\x03\x12\x1f\n" +
 	"\x1bMIDDLEWARE_TYPE_COMPRESSION\x10\x04\x12\x18\n" +
 	"\x14MIDDLEWARE_TYPE_CORS\x10\x05\x12\x1e\n" +
-	"\x1aMIDDLEWARE_TYPE_RATE_LIMIT\x10\x06B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1aMIDDLEWARE_TYPE_RATE_LIMIT\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_middleware_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_middleware_type_proto_goTypes = []any{

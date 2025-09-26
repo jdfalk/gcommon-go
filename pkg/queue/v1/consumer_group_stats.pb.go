@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/consumer_group_stats.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -319,7 +319,7 @@ const file_queue_v1_consumer_group_stats_proto_rawDesc = "" +
 	"\ttotal_lag\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\btotalLag\x12A\n" +
 	"\x0frebalance_stats\x18\a \x01(\v2\x18.queue.v1.RebalanceStatsR\x0erebalanceStats\x12=\n" +
 	"\verror_stats\x18\b \x01(\v2\x1c.queue.v1.ConsumerErrorStatsR\n" +
-	"errorStatsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"errorStatsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_consumer_group_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_consumer_group_stats_proto_goTypes = []any{

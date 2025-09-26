@@ -142,7 +142,7 @@ const file_queue_v2_username_password_auth_proto_rawDesc = "" +
 	"%queue/v2/username_password_auth.proto\x12\bqueue.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"`\n" +
 	"\x14UsernamePasswordAuth\x12#\n" +
 	"\busername\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\busername\x12#\n" +
-	"\bpassword\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\bR\bpasswordB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpassword\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\bR\bpasswordB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_username_password_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_username_password_auth_proto_goTypes = []any{

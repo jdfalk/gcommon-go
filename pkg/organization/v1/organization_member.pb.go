@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/organization_member.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -34,13 +34,13 @@ type OrganizationMember struct {
 	xxx_hidden_UserId          *string                `protobuf:"bytes,3,opt,name=user_id,json=userId"`
 	xxx_hidden_Email           *string                `protobuf:"bytes,4,opt,name=email"`
 	xxx_hidden_DisplayName     *string                `protobuf:"bytes,5,opt,name=display_name,json=displayName"`
-	xxx_hidden_Role            v1.MemberRole          `protobuf:"varint,6,opt,name=role,enum=common.v1.MemberRole"`
-	xxx_hidden_AdditionalRoles []v1.MemberRole        `protobuf:"varint,7,rep,packed,name=additional_roles,json=additionalRoles,enum=common.v1.MemberRole"`
+	xxx_hidden_Role            common.MemberRole      `protobuf:"varint,6,opt,name=role,enum=common.v1.MemberRole"`
+	xxx_hidden_AdditionalRoles []common.MemberRole    `protobuf:"varint,7,rep,packed,name=additional_roles,json=additionalRoles,enum=common.v1.MemberRole"`
 	xxx_hidden_Permissions     []string               `protobuf:"bytes,8,rep,name=permissions"`
 	xxx_hidden_DepartmentIds   []string               `protobuf:"bytes,9,rep,name=department_ids,json=departmentIds"`
 	xxx_hidden_TeamIds         []string               `protobuf:"bytes,10,rep,name=team_ids,json=teamIds"`
 	xxx_hidden_TenantIds       []string               `protobuf:"bytes,11,rep,name=tenant_ids,json=tenantIds"`
-	xxx_hidden_Metadata        *[]*v1.KeyValue        `protobuf:"bytes,12,rep,name=metadata"`
+	xxx_hidden_Metadata        *[]*common.KeyValue    `protobuf:"bytes,12,rep,name=metadata"`
 	xxx_hidden_CreatedAt       *timestamppb.Timestamp `protobuf:"bytes,13,opt,name=created_at,json=createdAt"`
 	xxx_hidden_UpdatedAt       *timestamppb.Timestamp `protobuf:"bytes,14,opt,name=updated_at,json=updatedAt"`
 	xxx_hidden_LastActiveAt    *timestamppb.Timestamp `protobuf:"bytes,15,opt,name=last_active_at,json=lastActiveAt"`
@@ -136,16 +136,16 @@ func (x *OrganizationMember) GetDisplayName() string {
 	return ""
 }
 
-func (x *OrganizationMember) GetRole() v1.MemberRole {
+func (x *OrganizationMember) GetRole() common.MemberRole {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 5) {
 			return x.xxx_hidden_Role
 		}
 	}
-	return v1.MemberRole(0)
+	return common.MemberRole(0)
 }
 
-func (x *OrganizationMember) GetAdditionalRoles() []v1.MemberRole {
+func (x *OrganizationMember) GetAdditionalRoles() []common.MemberRole {
 	if x != nil {
 		return x.xxx_hidden_AdditionalRoles
 	}
@@ -180,13 +180,13 @@ func (x *OrganizationMember) GetTenantIds() []string {
 	return nil
 }
 
-func (x *OrganizationMember) GetMetadata() []*v1.KeyValue {
+func (x *OrganizationMember) GetMetadata() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 11) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 12)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -345,12 +345,12 @@ func (x *OrganizationMember) SetDisplayName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 24)
 }
 
-func (x *OrganizationMember) SetRole(v v1.MemberRole) {
+func (x *OrganizationMember) SetRole(v common.MemberRole) {
 	x.xxx_hidden_Role = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 24)
 }
 
-func (x *OrganizationMember) SetAdditionalRoles(v []v1.MemberRole) {
+func (x *OrganizationMember) SetAdditionalRoles(v []common.MemberRole) {
 	x.xxx_hidden_AdditionalRoles = v
 }
 
@@ -370,11 +370,11 @@ func (x *OrganizationMember) SetTenantIds(v []string) {
 	x.xxx_hidden_TenantIds = v
 }
 
-func (x *OrganizationMember) SetMetadata(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *OrganizationMember) SetMetadata(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -598,7 +598,7 @@ func (x *OrganizationMember) ClearDisplayName() {
 
 func (x *OrganizationMember) ClearRole() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
-	x.xxx_hidden_Role = v1.MemberRole_MEMBER_ROLE_UNSPECIFIED
+	x.xxx_hidden_Role = common.MemberRole_MEMBER_ROLE_UNSPECIFIED
 }
 
 func (x *OrganizationMember) ClearCreatedAt() {
@@ -670,9 +670,9 @@ type OrganizationMember_builder struct {
 	// User's display name (cached for quick access)
 	DisplayName *string
 	// Primary role of the user in this organization
-	Role *v1.MemberRole
+	Role *common.MemberRole
 	// Additional roles the user may have
-	AdditionalRoles []v1.MemberRole
+	AdditionalRoles []common.MemberRole
 	// Specific permissions granted to this member
 	Permissions []string
 	// Department IDs this member belongs to
@@ -682,7 +682,7 @@ type OrganizationMember_builder struct {
 	// Tenant IDs this member has access to (for multi-tenant organizations)
 	TenantIds []string
 	// Member metadata and custom attributes
-	Metadata []*v1.KeyValue
+	Metadata []*common.KeyValue
 	// Membership creation timestamp (when user joined organization)
 	CreatedAt *timestamppb.Timestamp
 	// Last update timestamp
@@ -832,13 +832,13 @@ const file_organization_v1_organization_member_proto_rawDesc = "" +
 	"\n" +
 	"avatar_url\x18\x16 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\tavatarUrl\x12\x14\n" +
 	"\x05phone\x18\x17 \x01(\tR\x05phone\x12\x1a\n" +
-	"\blocation\x18\x18 \x01(\tR\blocationB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\blocation\x18\x18 \x01(\tR\blocationB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_organization_member_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_organization_member_proto_goTypes = []any{
 	(*OrganizationMember)(nil),    // 0: organization.v1.OrganizationMember
-	(v1.MemberRole)(0),            // 1: common.v1.MemberRole
-	(*v1.KeyValue)(nil),           // 2: common.v1.KeyValue
+	(common.MemberRole)(0),        // 1: common.v1.MemberRole
+	(*common.KeyValue)(nil),       // 2: common.v1.KeyValue
 	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
 }
 var file_organization_v1_organization_member_proto_depIdxs = []int32{

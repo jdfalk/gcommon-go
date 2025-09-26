@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: config/v1/get_config_response.proto
 
-package v1
+package config
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type GetConfigResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Entry       *ConfigEntry           `protobuf:"bytes,1,opt,name=entry"`
 	xxx_hidden_Found       bool                   `protobuf:"varint,2,opt,name=found"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,3,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -74,7 +74,7 @@ func (x *GetConfigResponse) GetFound() bool {
 	return false
 }
 
-func (x *GetConfigResponse) GetError() *v1.Error {
+func (x *GetConfigResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -90,7 +90,7 @@ func (x *GetConfigResponse) SetFound(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *GetConfigResponse) SetError(v *v1.Error) {
+func (x *GetConfigResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -136,7 +136,7 @@ type GetConfigResponse_builder struct {
 	// Whether the key was found
 	Found *bool
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 GetConfigResponse_builder) Build() *GetConfigResponse {
@@ -160,13 +160,13 @@ const file_config_v1_get_config_response_proto_rawDesc = "" +
 	"\x11GetConfigResponse\x12,\n" +
 	"\x05entry\x18\x01 \x01(\v2\x16.config.v1.ConfigEntryR\x05entry\x12\x14\n" +
 	"\x05found\x18\x02 \x01(\bR\x05found\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_config_response_proto_goTypes = []any{
 	(*GetConfigResponse)(nil), // 0: config.v1.GetConfigResponse
 	(*ConfigEntry)(nil),       // 1: config.v1.ConfigEntry
-	(*v1.Error)(nil),          // 2: common.v1.Error
+	(*common.Error)(nil),      // 2: common.v1.Error
 }
 var file_config_v1_get_config_response_proto_depIdxs = []int32{
 	1, // 0: config.v1.GetConfigResponse.entry:type_name -> config.v1.ConfigEntry

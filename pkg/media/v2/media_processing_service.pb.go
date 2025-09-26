@@ -31,7 +31,7 @@ const file_media_v2_media_processing_service_proto_rawDesc = "" +
 	"\fAnalyzeMedia\x12\x1d.media.v2.AnalyzeMediaRequest\x1a\x1e.media.v2.AnalyzeMediaResponse\x12M\n" +
 	"\fExtractAudio\x12\x1d.media.v2.ExtractAudioRequest\x1a\x1e.media.v2.ExtractAudioResponse\x12Y\n" +
 	"\x10ExtractSubtitles\x12!.media.v2.ExtractSubtitlesRequest\x1a\".media.v2.ExtractSubtitlesResponse\x12b\n" +
-	"\x13GetProcessingStatus\x12$.media.v2.GetProcessingStatusRequest\x1a%.media.v2.GetProcessingStatusResponseB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13GetProcessingStatus\x12$.media.v2.GetProcessingStatusRequest\x1a%.media.v2.GetProcessingStatusResponseB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_media_processing_service_proto_goTypes = []any{
 	(*TranscodeMediaRequest)(nil),       // 0: media.v2.TranscodeMediaRequest

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/update_message_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -407,7 +407,7 @@ const file_queue_v1_update_message_request_proto_rawDesc = "" +
 	"\x12operation_metadata\x18\f \x03(\v25.queue.v1.UpdateMessageRequest.OperationMetadataEntryR\x11operationMetadata\x1aD\n" +
 	"\x16OperationMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_update_message_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_update_message_request_proto_goTypes = []any{

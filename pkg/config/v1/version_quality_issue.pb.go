@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/version_quality_issue.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -282,7 +282,7 @@ const file_config_v1_version_quality_issue_proto_rawDesc = "" +
 	"\vdescription\x18\x03 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12\x1a\n" +
 	"\blocation\x18\x04 \x01(\tR\blocation\x12\x12\n" +
 	"\x04rule\x18\x05 \x01(\tR\x04rule\x12%\n" +
-	"\x0efix_suggestion\x18\x06 \x01(\tR\rfixSuggestionB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0efix_suggestion\x18\x06 \x01(\tR\rfixSuggestionB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_version_quality_issue_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_version_quality_issue_proto_goTypes = []any{

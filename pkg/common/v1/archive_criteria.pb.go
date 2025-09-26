@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/archive_criteria.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -134,7 +134,7 @@ const file_common_v1_archive_criteria_proto_rawDesc = "" +
 	"\x0fArchiveCriteria\x128\n" +
 	"\n" +
 	"older_than\x18\x01 \x01(\v2\x19.google.protobuf.DurationR\tolderThan\x129\n" +
-	"\x14size_threshold_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12sizeThresholdBytesB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x14size_threshold_bytes\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x12sizeThresholdBytesB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_archive_criteria_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_archive_criteria_proto_goTypes = []any{

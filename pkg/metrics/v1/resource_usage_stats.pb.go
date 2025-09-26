@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/resource_usage_stats.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -197,7 +197,7 @@ const file_metrics_v1_resource_usage_stats_proto_rawDesc = "" +
 	"\x03cpu\x18\x02 \x01(\v2\x14.metrics.v1.CPUUsageR\x03cpu\x12)\n" +
 	"\x04disk\x18\x03 \x01(\v2\x15.metrics.v1.DiskUsageR\x04disk\x122\n" +
 	"\anetwork\x18\x04 \x01(\v2\x18.metrics.v1.NetworkUsageR\anetwork\x12X\n" +
-	"\x13resource_timeseries\x18\x05 \x03(\v2\x1d.metrics.v1.ResourceDataPointB\b\xbaH\x05\x92\x01\x02\b\x01R\x12resourceTimeseriesB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13resource_timeseries\x18\x05 \x03(\v2\x1d.metrics.v1.ResourceDataPointB\b\xbaH\x05\x92\x01\x02\b\x01R\x12resourceTimeseriesB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_resource_usage_stats_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_resource_usage_stats_proto_goTypes = []any{

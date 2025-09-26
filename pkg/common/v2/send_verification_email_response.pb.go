@@ -172,7 +172,7 @@ const file_common_v2_send_verification_email_response_proto_rawDesc = "" +
 	"\x04sent\x18\x01 \x01(\bR\x04sent\x12,\n" +
 	"\rerror_message\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessage\x12&\n" +
 	"\n" +
-	"expires_at\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\texpiresAtB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"expires_at\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\texpiresAtB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_send_verification_email_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_send_verification_email_response_proto_goTypes = []any{

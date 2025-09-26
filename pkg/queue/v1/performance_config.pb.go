@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/performance_config.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -409,7 +409,7 @@ const file_queue_v1_performance_config_proto_rawDesc = "" +
 	"\x13enable_multiplexing\x18\t \x01(\bR\x12enableMultiplexing\x12<\n" +
 	"\fread_timeout\x18\n" +
 	" \x01(\v2\x19.google.protobuf.DurationR\vreadTimeout\x12>\n" +
-	"\rwrite_timeout\x18\v \x01(\v2\x19.google.protobuf.DurationR\fwriteTimeoutB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rwrite_timeout\x18\v \x01(\v2\x19.google.protobuf.DurationR\fwriteTimeoutB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_performance_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_performance_config_proto_goTypes = []any{

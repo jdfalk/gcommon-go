@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/export_metrics_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,7 +29,7 @@ const (
 type ExportMetricsResponse struct {
 	state                      protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success         bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error           *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error           *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	xxx_hidden_ExportedRecords int64                  `protobuf:"varint,3,opt,name=exported_records,json=exportedRecords"`
 	xxx_hidden_ExportedAt      *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=exported_at,json=exportedAt"`
 	xxx_hidden_FileUrl         *string                `protobuf:"bytes,5,opt,name=file_url,json=fileUrl"`
@@ -71,7 +71,7 @@ func (x *ExportMetricsResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *ExportMetricsResponse) GetError() *v1.Error {
+func (x *ExportMetricsResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -107,7 +107,7 @@ func (x *ExportMetricsResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *ExportMetricsResponse) SetError(v *v1.Error) {
+func (x *ExportMetricsResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -189,7 +189,7 @@ type ExportMetricsResponse_builder struct {
 	// Whether the export succeeded
 	Success *bool
 	// Error information if the export failed
-	Error *v1.Error
+	Error *common.Error
 	// Number of records exported
 	ExportedRecords *int64
 	// Timestamp when the export completed
@@ -231,12 +231,12 @@ const file_metrics_v1_export_metrics_response_proto_rawDesc = "" +
 	"\x10exported_records\x18\x03 \x01(\x03R\x0fexportedRecords\x12;\n" +
 	"\vexported_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"exportedAt\x12#\n" +
-	"\bfile_url\x18\x05 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\afileUrlB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bfile_url\x18\x05 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\afileUrlB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_export_metrics_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_export_metrics_response_proto_goTypes = []any{
 	(*ExportMetricsResponse)(nil), // 0: metrics.v1.ExportMetricsResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_metrics_v1_export_metrics_response_proto_depIdxs = []int32{

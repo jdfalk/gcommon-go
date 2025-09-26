@@ -209,7 +209,7 @@ const file_config_v2_compliance_audit_proto_rawDesc = "" +
 	"\x02id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x02id\x12\x1d\n" +
 	"\x04name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12\x12\n" +
 	"\x04type\x18\x03 \x01(\tR\x04type\x12\x18\n" +
-	"\aenabled\x18\x04 \x01(\bR\aenabledB-Z#github.com/jdfalk/gcommon/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aenabled\x18\x04 \x01(\bR\aenabledB1Z'github.com/jdfalk/gcommon/pkg/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v2_compliance_audit_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v2_compliance_audit_proto_goTypes = []any{

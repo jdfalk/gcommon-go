@@ -172,7 +172,7 @@ const file_metrics_v2_data_volume_trend_proto_rawDesc = "" +
 	"\x0fDataVolumeTrend\x12!\n" +
 	"\fvolume_trend\x18\x01 \x01(\tR\vvolumeTrend\x12'\n" +
 	"\x0fingestion_trend\x18\x02 \x01(\tR\x0eingestionTrend\x129\n" +
-	"\x10trend_confidence\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0ftrendConfidenceB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10trend_confidence\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x0ftrendConfidenceB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_data_volume_trend_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_data_volume_trend_proto_goTypes = []any{

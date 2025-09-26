@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: media/v1/merge_options.proto
 
-package v1
+package media
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 
 // Options for merging subtitles.
 type MergeOptions struct {
-	state                         protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_OutputFormat       *string                `protobuf:"bytes,1,opt,name=output_format,json=outputFormat"`
-	xxx_hidden_PreserveFormatting bool                   `protobuf:"varint,2,opt,name=preserve_formatting,json=preserveFormatting"`
-	xxx_hidden_ConflictResolution v1.ConflictResolution  `protobuf:"varint,3,opt,name=conflict_resolution,json=conflictResolution,enum=common.v1.ConflictResolution"`
-	xxx_hidden_SortByTimestamp    bool                   `protobuf:"varint,4,opt,name=sort_by_timestamp,json=sortByTimestamp"`
+	state                         protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_OutputFormat       *string                   `protobuf:"bytes,1,opt,name=output_format,json=outputFormat"`
+	xxx_hidden_PreserveFormatting bool                      `protobuf:"varint,2,opt,name=preserve_formatting,json=preserveFormatting"`
+	xxx_hidden_ConflictResolution common.ConflictResolution `protobuf:"varint,3,opt,name=conflict_resolution,json=conflictResolution,enum=common.v1.ConflictResolution"`
+	xxx_hidden_SortByTimestamp    bool                      `protobuf:"varint,4,opt,name=sort_by_timestamp,json=sortByTimestamp"`
 	XXX_raceDetectHookData        protoimpl.RaceDetectHookData
 	XXX_presence                  [1]uint32
 	unknownFields                 protoimpl.UnknownFields
@@ -77,13 +77,13 @@ func (x *MergeOptions) GetPreserveFormatting() bool {
 	return false
 }
 
-func (x *MergeOptions) GetConflictResolution() v1.ConflictResolution {
+func (x *MergeOptions) GetConflictResolution() common.ConflictResolution {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_ConflictResolution
 		}
 	}
-	return v1.ConflictResolution(0)
+	return common.ConflictResolution(0)
 }
 
 func (x *MergeOptions) GetSortByTimestamp() bool {
@@ -103,7 +103,7 @@ func (x *MergeOptions) SetPreserveFormatting(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
 
-func (x *MergeOptions) SetConflictResolution(v v1.ConflictResolution) {
+func (x *MergeOptions) SetConflictResolution(v common.ConflictResolution) {
 	x.xxx_hidden_ConflictResolution = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
@@ -153,7 +153,7 @@ func (x *MergeOptions) ClearPreserveFormatting() {
 
 func (x *MergeOptions) ClearConflictResolution() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_ConflictResolution = v1.ConflictResolution_COMMON_CONFLICT_RESOLUTION_UNSPECIFIED
+	x.xxx_hidden_ConflictResolution = common.ConflictResolution_COMMON_CONFLICT_RESOLUTION_UNSPECIFIED
 }
 
 func (x *MergeOptions) ClearSortByTimestamp() {
@@ -166,7 +166,7 @@ type MergeOptions_builder struct {
 
 	OutputFormat       *string
 	PreserveFormatting *bool
-	ConflictResolution *v1.ConflictResolution
+	ConflictResolution *common.ConflictResolution
 	SortByTimestamp    *bool
 }
 
@@ -202,12 +202,12 @@ const file_media_v1_merge_options_proto_rawDesc = "" +
 	"\routput_format\x18\x01 \x01(\tR\foutputFormat\x12/\n" +
 	"\x13preserve_formatting\x18\x02 \x01(\bR\x12preserveFormatting\x12N\n" +
 	"\x13conflict_resolution\x18\x03 \x01(\x0e2\x1d.common.v1.ConflictResolutionR\x12conflictResolution\x12*\n" +
-	"\x11sort_by_timestamp\x18\x04 \x01(\bR\x0fsortByTimestampB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11sort_by_timestamp\x18\x04 \x01(\bR\x0fsortByTimestampB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_merge_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_merge_options_proto_goTypes = []any{
-	(*MergeOptions)(nil),       // 0: media.v1.MergeOptions
-	(v1.ConflictResolution)(0), // 1: common.v1.ConflictResolution
+	(*MergeOptions)(nil),           // 0: media.v1.MergeOptions
+	(common.ConflictResolution)(0), // 1: common.v1.ConflictResolution
 }
 var file_media_v1_merge_options_proto_depIdxs = []int32{
 	1, // 0: media.v1.MergeOptions.conflict_resolution:type_name -> common.v1.ConflictResolution

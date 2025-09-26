@@ -100,7 +100,7 @@ const file_common_v2_metrics_provider_type_proto_rawDesc = "" +
 	"\x1fMETRICS_PROVIDER_TYPE_NEW_RELIC\x10\x05\x12$\n" +
 	" METRICS_PROVIDER_TYPE_CLOUDWATCH\x10\x06\x12%\n" +
 	"!METRICS_PROVIDER_TYPE_STACKDRIVER\x10\a\x12 \n" +
-	"\x1cMETRICS_PROVIDER_TYPE_CUSTOM\x10\bB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1cMETRICS_PROVIDER_TYPE_CUSTOM\x10\bB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_metrics_provider_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_metrics_provider_type_proto_goTypes = []any{

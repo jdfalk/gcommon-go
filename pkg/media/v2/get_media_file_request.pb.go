@@ -107,7 +107,7 @@ const file_media_v2_get_media_file_request_proto_rawDesc = "" +
 	"\n" +
 	"%media/v2/get_media_file_request.proto\x12\bmedia.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"~\n" +
 	"\x13GetMediaFileRequest\x12g\n" +
-	"\x02id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x02idB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x02id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x02idB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_get_media_file_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_get_media_file_request_proto_goTypes = []any{

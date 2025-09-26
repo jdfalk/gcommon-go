@@ -91,7 +91,7 @@ const file_common_v2_int64_array_proto_rawDesc = "" +
 	"\x1bcommon/v2/int64_array.proto\x12\tcommon.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\".\n" +
 	"\n" +
 	"Int64Array\x12 \n" +
-	"\x06values\x18\x01 \x03(\x03B\b\xbaH\x05\x92\x01\x02\b\x01R\x06valuesB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06values\x18\x01 \x03(\x03B\b\xbaH\x05\x92\x01\x02\b\x01R\x06valuesB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_int64_array_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_int64_array_proto_goTypes = []any{

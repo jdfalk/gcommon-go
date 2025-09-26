@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/batch_ack_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type BatchAckResponse struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success           bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_AcknowledgedCount int32                  `protobuf:"varint,2,opt,name=acknowledged_count,json=acknowledgedCount"`
-	xxx_hidden_FailedCount       int32                  `protobuf:"varint,3,opt,name=failed_count,json=failedCount"`
-	xxx_hidden_FailedAcks        *[]*FailedAck          `protobuf:"bytes,4,rep,name=failed_acks,json=failedAcks"`
-	xxx_hidden_Metadata          *v1.ResponseMetadata   `protobuf:"bytes,5,opt,name=metadata"`
-	xxx_hidden_BatchId           *string                `protobuf:"bytes,6,opt,name=batch_id,json=batchId"`
+	state                        protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_Success           bool                     `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_AcknowledgedCount int32                    `protobuf:"varint,2,opt,name=acknowledged_count,json=acknowledgedCount"`
+	xxx_hidden_FailedCount       int32                    `protobuf:"varint,3,opt,name=failed_count,json=failedCount"`
+	xxx_hidden_FailedAcks        *[]*FailedAck            `protobuf:"bytes,4,rep,name=failed_acks,json=failedAcks"`
+	xxx_hidden_Metadata          *common.ResponseMetadata `protobuf:"bytes,5,opt,name=metadata"`
+	xxx_hidden_BatchId           *string                  `protobuf:"bytes,6,opt,name=batch_id,json=batchId"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -92,7 +92,7 @@ func (x *BatchAckResponse) GetFailedAcks() []*FailedAck {
 	return nil
 }
 
-func (x *BatchAckResponse) GetMetadata() *v1.ResponseMetadata {
+func (x *BatchAckResponse) GetMetadata() *common.ResponseMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -128,7 +128,7 @@ func (x *BatchAckResponse) SetFailedAcks(v []*FailedAck) {
 	x.xxx_hidden_FailedAcks = &v
 }
 
-func (x *BatchAckResponse) SetMetadata(v *v1.ResponseMetadata) {
+func (x *BatchAckResponse) SetMetadata(v *common.ResponseMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -208,7 +208,7 @@ type BatchAckResponse_builder struct {
 	// Failed message IDs and their error reasons
 	FailedAcks []*FailedAck
 	// Response metadata
-	Metadata *v1.ResponseMetadata
+	Metadata *common.ResponseMetadata
 	// Batch ID for tracking
 	BatchId *string
 }
@@ -250,13 +250,13 @@ const file_queue_v1_batch_ack_response_proto_rawDesc = "" +
 	"\vfailed_acks\x18\x04 \x03(\v2\x13.queue.v1.FailedAckB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"failedAcks\x127\n" +
 	"\bmetadata\x18\x05 \x01(\v2\x1b.common.v1.ResponseMetadataR\bmetadata\x12\"\n" +
-	"\bbatch_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\abatchIdB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bbatch_id\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\abatchIdB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_batch_ack_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_batch_ack_response_proto_goTypes = []any{
-	(*BatchAckResponse)(nil),    // 0: queue.v1.BatchAckResponse
-	(*FailedAck)(nil),           // 1: queue.v1.FailedAck
-	(*v1.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
+	(*BatchAckResponse)(nil),        // 0: queue.v1.BatchAckResponse
+	(*FailedAck)(nil),               // 1: queue.v1.FailedAck
+	(*common.ResponseMetadata)(nil), // 2: common.v1.ResponseMetadata
 }
 var file_queue_v1_batch_ack_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.BatchAckResponse.failed_acks:type_name -> queue.v1.FailedAck

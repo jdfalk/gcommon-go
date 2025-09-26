@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/notification_message.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -366,7 +366,7 @@ const file_common_v1_notification_message_proto_rawDesc = "" +
 	"\asend_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\x06sendAt\x121\n" +
 	"\x06status\x18\a \x01(\x0e2\x19.common.v1.DeliveryStatusR\x06status\x12C\n" +
 	"\n" +
-	"created_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAtB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"created_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAtB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_notification_message_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_notification_message_proto_goTypes = []any{

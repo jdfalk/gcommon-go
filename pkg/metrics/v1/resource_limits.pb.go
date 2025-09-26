@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/resource_limits.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -234,7 +234,7 @@ const file_metrics_v1_resource_limits_proto_rawDesc = "" +
 	"\x0emax_disk_bytes\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fmaxDiskBytes\x12(\n" +
 	"\vmax_metrics\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
 	"maxMetrics\x12C\n" +
-	"\x1amax_data_points_per_metric\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x16maxDataPointsPerMetricB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1amax_data_points_per_metric\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x16maxDataPointsPerMetricB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_resource_limits_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_resource_limits_proto_goTypes = []any{

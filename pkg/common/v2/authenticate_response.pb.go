@@ -363,7 +363,7 @@ const file_common_v2_authenticate_response_proto_rawDesc = "" +
 	"\tuser_info\x18\x06 \x01(\v2\x13.common.v2.UserInfoB\x02(\x01R\buserInfo\x120\n" +
 	"\asession\x18\a \x01(\v2\x12.common.v2.SessionB\x02(\x01R\asession\x127\n" +
 	"\n" +
-	"rate_limit\x18\b \x01(\v2\x14.common.v2.RateLimitB\x02(\x01R\trateLimitB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"rate_limit\x18\b \x01(\v2\x14.common.v2.RateLimitB\x02(\x01R\trateLimitB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_authenticate_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_authenticate_response_proto_goTypes = []any{

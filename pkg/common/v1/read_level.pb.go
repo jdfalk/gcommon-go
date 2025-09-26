@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/read_level.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -81,7 +81,7 @@ const file_common_v1_read_level_proto_rawDesc = "" +
 	"\x13READ_LEVEL_EVENTUAL\x10\x01\x12\x15\n" +
 	"\x11READ_LEVEL_STRONG\x10\x02\x12 \n" +
 	"\x1cREAD_LEVEL_BOUNDED_STALENESS\x10\x03\x12\x16\n" +
-	"\x12READ_LEVEL_SESSION\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12READ_LEVEL_SESSION\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_read_level_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_read_level_proto_goTypes = []any{

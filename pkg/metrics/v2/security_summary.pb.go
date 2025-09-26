@@ -151,7 +151,7 @@ const file_metrics_v2_security_summary_proto_rawDesc = "" +
 	"\fauth_enabled\x18\x01 \x01(\bR\vauthEnabled\x12\x1f\n" +
 	"\vtls_enabled\x18\x02 \x01(\bR\n" +
 	"tlsEnabled\x12+\n" +
-	"\fauth_methods\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\vauthMethodsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fauth_methods\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\vauthMethodsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_security_summary_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_security_summary_proto_goTypes = []any{

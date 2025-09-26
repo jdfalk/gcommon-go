@@ -422,7 +422,7 @@ const file_media_v2_media_metadata_proto_rawDesc = "" +
 	"\vseries_info\x18\f \x01(\v2\x14.media.v2.SeriesInfoR\n" +
 	"seriesInfo\x122\n" +
 	"\n" +
-	"movie_info\x18\r \x01(\v2\x13.media.v2.MovieInfoR\tmovieInfoB,Z\"github.com/jdfalk/gcommon/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"movie_info\x18\r \x01(\v2\x13.media.v2.MovieInfoR\tmovieInfoB0Z&github.com/jdfalk/gcommon/pkg/media/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v2_media_metadata_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v2_media_metadata_proto_goTypes = []any{

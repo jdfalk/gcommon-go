@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/set_health_response.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -267,7 +267,7 @@ const file_common_v1_set_health_response_proto_rawDesc = "" +
 	"\n" +
 	"changed_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tchangedAt\x12&\n" +
 	"\x05error\x18\x05 \x01(\v2\x10.common.v1.ErrorR\x05error\x12\x1f\n" +
-	"\x06reason\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06reason\x18\x06 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_set_health_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_set_health_response_proto_goTypes = []any{

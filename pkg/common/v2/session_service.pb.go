@@ -35,7 +35,7 @@ const file_common_v2_session_service_proto_rawDesc = "" +
 	"\x10TerminateSession\x12\".common.v2.TerminateSessionRequest\x1a#.common.v2.TerminateSessionResponse\x12Z\n" +
 	"\rDeleteSession\x12#.common.v2.AuthDeleteSessionRequest\x1a$.common.v2.AuthDeleteSessionResponse\x12[\n" +
 	"\x10ListUserSessions\x12\".common.v2.ListUserSessionsRequest\x1a#.common.v2.ListUserSessionsResponse\x12W\n" +
-	"\fListSessions\x12\".common.v2.AuthListSessionsRequest\x1a#.common.v2.AuthListSessionsResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\fListSessions\x12\".common.v2.AuthListSessionsRequest\x1a#.common.v2.AuthListSessionsResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_session_service_proto_goTypes = []any{
 	(*AuthCreateSessionRequest)(nil),  // 0: common.v2.AuthCreateSessionRequest

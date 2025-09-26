@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/audit_level.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -86,7 +86,7 @@ const file_common_v1_audit_level_proto_rawDesc = "" +
 	"\x13AUDIT_LEVEL_MINIMAL\x10\x02\x12\x18\n" +
 	"\x14AUDIT_LEVEL_STANDARD\x10\x03\x12\x18\n" +
 	"\x14AUDIT_LEVEL_DETAILED\x10\x04\x12\x17\n" +
-	"\x13AUDIT_LEVEL_VERBOSE\x10\x05B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13AUDIT_LEVEL_VERBOSE\x10\x05B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_audit_level_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_audit_level_proto_goTypes = []any{

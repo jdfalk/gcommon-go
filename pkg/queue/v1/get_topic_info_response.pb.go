@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_topic_info_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,21 +25,21 @@ const (
 )
 
 type GetTopicInfoResponse struct {
-	state                  protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_TopicId     *string                  `protobuf:"bytes,1,opt,name=topic_id,json=topicId"`
-	xxx_hidden_TopicName   *string                  `protobuf:"bytes,2,opt,name=topic_name,json=topicName"`
-	xxx_hidden_Description *string                  `protobuf:"bytes,3,opt,name=description"`
-	xxx_hidden_CreatedAt   *timestamppb.Timestamp   `protobuf:"bytes,4,opt,name=created_at,json=createdAt"`
-	xxx_hidden_UpdatedAt   *timestamppb.Timestamp   `protobuf:"bytes,5,opt,name=updated_at,json=updatedAt"`
-	xxx_hidden_Stats       *TopicStats              `protobuf:"bytes,6,opt,name=stats"`
-	xxx_hidden_Partitions  *[]*PartitionInfo        `protobuf:"bytes,7,rep,name=partitions"`
-	xxx_hidden_Config      *TopicConfiguration      `protobuf:"bytes,8,opt,name=config"`
-	xxx_hidden_State       *string                  `protobuf:"bytes,9,opt,name=state"`
-	xxx_hidden_Permissions *TopicPermissions        `protobuf:"bytes,10,opt,name=permissions"`
-	xxx_hidden_Metadata    map[string]string        `protobuf:"bytes,11,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Tags        []string                 `protobuf:"bytes,12,rep,name=tags"`
-	xxx_hidden_Owner       *OwnerInfo               `protobuf:"bytes,13,opt,name=owner"`
-	xxx_hidden_Retention   *v1.MetricsRetentionInfo `protobuf:"bytes,14,opt,name=retention"`
+	state                  protoimpl.MessageState       `protogen:"opaque.v1"`
+	xxx_hidden_TopicId     *string                      `protobuf:"bytes,1,opt,name=topic_id,json=topicId"`
+	xxx_hidden_TopicName   *string                      `protobuf:"bytes,2,opt,name=topic_name,json=topicName"`
+	xxx_hidden_Description *string                      `protobuf:"bytes,3,opt,name=description"`
+	xxx_hidden_CreatedAt   *timestamppb.Timestamp       `protobuf:"bytes,4,opt,name=created_at,json=createdAt"`
+	xxx_hidden_UpdatedAt   *timestamppb.Timestamp       `protobuf:"bytes,5,opt,name=updated_at,json=updatedAt"`
+	xxx_hidden_Stats       *TopicStats                  `protobuf:"bytes,6,opt,name=stats"`
+	xxx_hidden_Partitions  *[]*PartitionInfo            `protobuf:"bytes,7,rep,name=partitions"`
+	xxx_hidden_Config      *TopicConfiguration          `protobuf:"bytes,8,opt,name=config"`
+	xxx_hidden_State       *string                      `protobuf:"bytes,9,opt,name=state"`
+	xxx_hidden_Permissions *TopicPermissions            `protobuf:"bytes,10,opt,name=permissions"`
+	xxx_hidden_Metadata    map[string]string            `protobuf:"bytes,11,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Tags        []string                     `protobuf:"bytes,12,rep,name=tags"`
+	xxx_hidden_Owner       *OwnerInfo                   `protobuf:"bytes,13,opt,name=owner"`
+	xxx_hidden_Retention   *common.MetricsRetentionInfo `protobuf:"bytes,14,opt,name=retention"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -176,7 +176,7 @@ func (x *GetTopicInfoResponse) GetOwner() *OwnerInfo {
 	return nil
 }
 
-func (x *GetTopicInfoResponse) GetRetention() *v1.MetricsRetentionInfo {
+func (x *GetTopicInfoResponse) GetRetention() *common.MetricsRetentionInfo {
 	if x != nil {
 		return x.xxx_hidden_Retention
 	}
@@ -239,7 +239,7 @@ func (x *GetTopicInfoResponse) SetOwner(v *OwnerInfo) {
 	x.xxx_hidden_Owner = v
 }
 
-func (x *GetTopicInfoResponse) SetRetention(v *v1.MetricsRetentionInfo) {
+func (x *GetTopicInfoResponse) SetRetention(v *common.MetricsRetentionInfo) {
 	x.xxx_hidden_Retention = v
 }
 
@@ -398,7 +398,7 @@ type GetTopicInfoResponse_builder struct {
 	// Owner information
 	Owner *OwnerInfo
 	// Retention policy for messages in this topic
-	Retention *v1.MetricsRetentionInfo
+	Retention *common.MetricsRetentionInfo
 }
 
 func (b0 GetTopicInfoResponse_builder) Build() *GetTopicInfoResponse {
@@ -462,19 +462,19 @@ const file_queue_v1_get_topic_info_response_proto_rawDesc = "" +
 	"\tretention\x18\x0e \x01(\v2\x1f.common.v1.MetricsRetentionInfoR\tretention\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_topic_info_response_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_get_topic_info_response_proto_goTypes = []any{
-	(*GetTopicInfoResponse)(nil),    // 0: queue.v1.GetTopicInfoResponse
-	nil,                             // 1: queue.v1.GetTopicInfoResponse.MetadataEntry
-	(*timestamppb.Timestamp)(nil),   // 2: google.protobuf.Timestamp
-	(*TopicStats)(nil),              // 3: queue.v1.TopicStats
-	(*PartitionInfo)(nil),           // 4: queue.v1.PartitionInfo
-	(*TopicConfiguration)(nil),      // 5: queue.v1.TopicConfiguration
-	(*TopicPermissions)(nil),        // 6: queue.v1.TopicPermissions
-	(*OwnerInfo)(nil),               // 7: queue.v1.OwnerInfo
-	(*v1.MetricsRetentionInfo)(nil), // 8: common.v1.MetricsRetentionInfo
+	(*GetTopicInfoResponse)(nil),        // 0: queue.v1.GetTopicInfoResponse
+	nil,                                 // 1: queue.v1.GetTopicInfoResponse.MetadataEntry
+	(*timestamppb.Timestamp)(nil),       // 2: google.protobuf.Timestamp
+	(*TopicStats)(nil),                  // 3: queue.v1.TopicStats
+	(*PartitionInfo)(nil),               // 4: queue.v1.PartitionInfo
+	(*TopicConfiguration)(nil),          // 5: queue.v1.TopicConfiguration
+	(*TopicPermissions)(nil),            // 6: queue.v1.TopicPermissions
+	(*OwnerInfo)(nil),                   // 7: queue.v1.OwnerInfo
+	(*common.MetricsRetentionInfo)(nil), // 8: common.v1.MetricsRetentionInfo
 }
 var file_queue_v1_get_topic_info_response_proto_depIdxs = []int32{
 	2, // 0: queue.v1.GetTopicInfoResponse.created_at:type_name -> google.protobuf.Timestamp

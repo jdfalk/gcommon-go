@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/access_restriction.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type AccessRestriction struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Type        v1.RestrictionType     `protobuf:"varint,1,opt,name=type,enum=common.v1.RestrictionType"`
+	xxx_hidden_Type        common.RestrictionType `protobuf:"varint,1,opt,name=type,enum=common.v1.RestrictionType"`
 	xxx_hidden_Value       *string                `protobuf:"bytes,2,opt,name=value"`
 	xxx_hidden_Operator    *string                `protobuf:"bytes,3,opt,name=operator"`
 	xxx_hidden_Reason      *string                `protobuf:"bytes,4,opt,name=reason"`
@@ -60,13 +60,13 @@ func (x *AccessRestriction) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *AccessRestriction) GetType() v1.RestrictionType {
+func (x *AccessRestriction) GetType() common.RestrictionType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.RestrictionType(0)
+	return common.RestrictionType(0)
 }
 
 func (x *AccessRestriction) GetValue() string {
@@ -99,7 +99,7 @@ func (x *AccessRestriction) GetReason() string {
 	return ""
 }
 
-func (x *AccessRestriction) SetType(v v1.RestrictionType) {
+func (x *AccessRestriction) SetType(v common.RestrictionType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -149,7 +149,7 @@ func (x *AccessRestriction) HasReason() bool {
 
 func (x *AccessRestriction) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Type = v1.RestrictionType_RESTRICTION_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.RestrictionType_RESTRICTION_TYPE_UNSPECIFIED
 }
 
 func (x *AccessRestriction) ClearValue() {
@@ -171,7 +171,7 @@ type AccessRestriction_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Restriction type
-	Type *v1.RestrictionType
+	Type *common.RestrictionType
 	// Restriction value
 	Value *string
 	// Restriction operator
@@ -212,12 +212,12 @@ const file_config_v1_access_restriction_proto_rawDesc = "" +
 	"\x04type\x18\x01 \x01(\x0e2\x1a.common.v1.RestrictionTypeR\x04type\x12\x1d\n" +
 	"\x05value\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05value\x12#\n" +
 	"\boperator\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\boperator\x12\x1f\n" +
-	"\x06reason\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06reason\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06reasonB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_access_restriction_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_access_restriction_proto_goTypes = []any{
-	(*AccessRestriction)(nil), // 0: config.v1.AccessRestriction
-	(v1.RestrictionType)(0),   // 1: common.v1.RestrictionType
+	(*AccessRestriction)(nil),   // 0: config.v1.AccessRestriction
+	(common.RestrictionType)(0), // 1: common.v1.RestrictionType
 }
 var file_config_v1_access_restriction_proto_depIdxs = []int32{
 	1, // 0: config.v1.AccessRestriction.type:type_name -> common.v1.RestrictionType

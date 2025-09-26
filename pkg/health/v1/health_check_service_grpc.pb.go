@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: health/v1/health_check_service.proto
 
-package v1
+package health
 
 import (
 	context "context"

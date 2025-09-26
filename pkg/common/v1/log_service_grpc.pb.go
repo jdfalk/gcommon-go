@@ -4,7 +4,7 @@
 // - protoc             (unknown)
 // source: common/v1/log_service.proto
 
-package v1
+package common
 
 import (
 	context "context"

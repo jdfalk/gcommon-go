@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_quantile.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -140,7 +140,7 @@ const file_metrics_v1_metric_quantile_proto_rawDesc = "" +
 	"metrics.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"b\n" +
 	"\x0eMetricQuantile\x12*\n" +
 	"\bquantile\x18\x01 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\bquantile\x12$\n" +
-	"\x05value\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x05valueB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x05valueB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_quantile_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_quantile_proto_goTypes = []any{

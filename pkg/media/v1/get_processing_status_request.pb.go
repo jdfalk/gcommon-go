@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/get_processing_status_request.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -107,7 +107,7 @@ const file_media_v1_get_processing_status_request_proto_rawDesc = "" +
 	"\n" +
 	",media/v1/get_processing_status_request.proto\x12\bmedia.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"<\n" +
 	"\x1aGetProcessingStatusRequest\x12\x1e\n" +
-	"\x06job_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05jobIdB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06job_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05jobIdB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_get_processing_status_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_get_processing_status_request_proto_goTypes = []any{

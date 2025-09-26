@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/integration.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type Integration struct {
 	state                   protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Name         *string                `protobuf:"bytes,1,opt,name=name"`
 	xxx_hidden_Enabled      bool                   `protobuf:"varint,2,opt,name=enabled"`
-	xxx_hidden_Config       *[]*v1.KeyValue        `protobuf:"bytes,3,rep,name=config"`
+	xxx_hidden_Config       *[]*common.KeyValue    `protobuf:"bytes,3,rep,name=config"`
 	xxx_hidden_CreatedAt    *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=created_at,json=createdAt"`
 	xxx_hidden_ConfiguredBy *string                `protobuf:"bytes,5,opt,name=configured_by,json=configuredBy"`
 	// Deprecated: Do not use. This will be deleted in the near future.
@@ -81,13 +81,13 @@ func (x *Integration) GetEnabled() bool {
 	return false
 }
 
-func (x *Integration) GetConfig() []*v1.KeyValue {
+func (x *Integration) GetConfig() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Config) {
 				protoimpl.X.UnmarshalField(x, 3)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Config), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -129,11 +129,11 @@ func (x *Integration) SetEnabled(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *Integration) SetConfig(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *Integration) SetConfig(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Config), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Config), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -210,7 +210,7 @@ type Integration_builder struct {
 	// Whether this integration is currently enabled
 	Enabled *bool
 	// Integration-specific configuration
-	Config []*v1.KeyValue
+	Config []*common.KeyValue
 	// Integration creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// User ID who configured this integration
@@ -255,12 +255,12 @@ const file_organization_v1_integration_proto_rawDesc = "" +
 	"\x06config\x18\x03 \x03(\v2\x13.common.v1.KeyValueB\x02(\x01R\x06config\x12C\n" +
 	"\n" +
 	"created_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampB\b\xbaH\x03\xc8\x01\x01(\x01R\tcreatedAt\x12#\n" +
-	"\rconfigured_by\x18\x05 \x01(\tR\fconfiguredByB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rconfigured_by\x18\x05 \x01(\tR\fconfiguredByB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_integration_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_integration_proto_goTypes = []any{
 	(*Integration)(nil),           // 0: organization.v1.Integration
-	(*v1.KeyValue)(nil),           // 1: common.v1.KeyValue
+	(*common.KeyValue)(nil),       // 1: common.v1.KeyValue
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_organization_v1_integration_proto_depIdxs = []int32{

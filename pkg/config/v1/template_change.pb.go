@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/template_change.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,15 +25,15 @@ const (
 )
 
 type TemplateChange struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Version        *string                `protobuf:"bytes,1,opt,name=version"`
-	xxx_hidden_Description    *string                `protobuf:"bytes,2,opt,name=description"`
-	xxx_hidden_Author         *string                `protobuf:"bytes,3,opt,name=author"`
-	xxx_hidden_Timestamp      *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=timestamp"`
-	xxx_hidden_Type           v1.TemplateChangeType  `protobuf:"varint,5,opt,name=type,enum=common.v1.TemplateChangeType"`
-	xxx_hidden_Breaking       bool                   `protobuf:"varint,6,opt,name=breaking"`
-	xxx_hidden_Details        []string               `protobuf:"bytes,7,rep,name=details"`
-	xxx_hidden_MigrationNotes *string                `protobuf:"bytes,8,opt,name=migration_notes,json=migrationNotes"`
+	state                     protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Version        *string                   `protobuf:"bytes,1,opt,name=version"`
+	xxx_hidden_Description    *string                   `protobuf:"bytes,2,opt,name=description"`
+	xxx_hidden_Author         *string                   `protobuf:"bytes,3,opt,name=author"`
+	xxx_hidden_Timestamp      *timestamppb.Timestamp    `protobuf:"bytes,4,opt,name=timestamp"`
+	xxx_hidden_Type           common.TemplateChangeType `protobuf:"varint,5,opt,name=type,enum=common.v1.TemplateChangeType"`
+	xxx_hidden_Breaking       bool                      `protobuf:"varint,6,opt,name=breaking"`
+	xxx_hidden_Details        []string                  `protobuf:"bytes,7,rep,name=details"`
+	xxx_hidden_MigrationNotes *string                   `protobuf:"bytes,8,opt,name=migration_notes,json=migrationNotes"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -102,13 +102,13 @@ func (x *TemplateChange) GetTimestamp() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *TemplateChange) GetType() v1.TemplateChangeType {
+func (x *TemplateChange) GetType() common.TemplateChangeType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.TemplateChangeType(0)
+	return common.TemplateChangeType(0)
 }
 
 func (x *TemplateChange) GetBreaking() bool {
@@ -154,7 +154,7 @@ func (x *TemplateChange) SetTimestamp(v *timestamppb.Timestamp) {
 	x.xxx_hidden_Timestamp = v
 }
 
-func (x *TemplateChange) SetType(v v1.TemplateChangeType) {
+func (x *TemplateChange) SetType(v common.TemplateChangeType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 8)
 }
@@ -243,7 +243,7 @@ func (x *TemplateChange) ClearTimestamp() {
 
 func (x *TemplateChange) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	x.xxx_hidden_Type = v1.TemplateChangeType_TEMPLATE_CHANGE_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.TemplateChangeType_TEMPLATE_CHANGE_TYPE_UNSPECIFIED
 }
 
 func (x *TemplateChange) ClearBreaking() {
@@ -268,7 +268,7 @@ type TemplateChange_builder struct {
 	// Change timestamp
 	Timestamp *timestamppb.Timestamp
 	// Change type
-	Type *v1.TemplateChangeType
+	Type *common.TemplateChangeType
 	// Breaking change flag
 	Breaking *bool
 	// Change details
@@ -323,13 +323,13 @@ const file_config_v1_template_change_proto_rawDesc = "" +
 	"\x04type\x18\x05 \x01(\x0e2\x1d.common.v1.TemplateChangeTypeR\x04type\x12\x1a\n" +
 	"\bbreaking\x18\x06 \x01(\bR\bbreaking\x12\x18\n" +
 	"\adetails\x18\a \x03(\tR\adetails\x12'\n" +
-	"\x0fmigration_notes\x18\b \x01(\tR\x0emigrationNotesB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fmigration_notes\x18\b \x01(\tR\x0emigrationNotesB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_template_change_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_template_change_proto_goTypes = []any{
-	(*TemplateChange)(nil),        // 0: config.v1.TemplateChange
-	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
-	(v1.TemplateChangeType)(0),    // 2: common.v1.TemplateChangeType
+	(*TemplateChange)(nil),         // 0: config.v1.TemplateChange
+	(*timestamppb.Timestamp)(nil),  // 1: google.protobuf.Timestamp
+	(common.TemplateChangeType)(0), // 2: common.v1.TemplateChangeType
 }
 var file_config_v1_template_change_proto_depIdxs = []int32{
 	1, // 0: config.v1.TemplateChange.timestamp:type_name -> google.protobuf.Timestamp

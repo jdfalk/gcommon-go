@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/create_media_file_response.proto
 
-package v1
+package media
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -97,7 +97,7 @@ const file_media_v1_create_media_file_response_proto_rawDesc = "" +
 	")media/v1/create_media_file_response.proto\x12\bmedia.v1\x1a\x19media/v1/media_file.proto\x1a!google/protobuf/go_features.proto\"M\n" +
 	"\x17CreateMediaFileResponse\x122\n" +
 	"\n" +
-	"media_file\x18\x01 \x01(\v2\x13.media.v1.MediaFileR\tmediaFileB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"media_file\x18\x01 \x01(\v2\x13.media.v1.MediaFileR\tmediaFileB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_create_media_file_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_create_media_file_response_proto_goTypes = []any{

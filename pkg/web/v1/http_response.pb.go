@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/http_response.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,37 +32,37 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type HttpResponse struct {
-	state                                protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_StatusCode                int32                  `protobuf:"varint,1,opt,name=status_code,json=statusCode"`
-	xxx_hidden_StatusMessage             *string                `protobuf:"bytes,2,opt,name=status_message,json=statusMessage"`
-	xxx_hidden_ProtocolVersion           *string                `protobuf:"bytes,3,opt,name=protocol_version,json=protocolVersion"`
-	xxx_hidden_RequestMetadata           *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_Headers                   map[string]string      `protobuf:"bytes,12,rep,name=headers" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Body                      *anypb.Any             `protobuf:"bytes,13,opt,name=body"`
-	xxx_hidden_Cookies                   map[string]string      `protobuf:"bytes,14,rep,name=cookies" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_ContentLength             int64                  `protobuf:"varint,15,opt,name=content_length,json=contentLength"`
-	xxx_hidden_ContentType               *string                `protobuf:"bytes,16,opt,name=content_type,json=contentType"`
-	xxx_hidden_ContentEncoding           *string                `protobuf:"bytes,17,opt,name=content_encoding,json=contentEncoding"`
-	xxx_hidden_CacheControl              *string                `protobuf:"bytes,18,opt,name=cache_control,json=cacheControl"`
-	xxx_hidden_Etag                      *string                `protobuf:"bytes,19,opt,name=etag"`
-	xxx_hidden_Location                  *string                `protobuf:"bytes,20,opt,name=location"`
-	xxx_hidden_Server                    *string                `protobuf:"bytes,21,opt,name=server"`
-	xxx_hidden_AccessControlAllowOrigin  *string                `protobuf:"bytes,22,opt,name=access_control_allow_origin,json=accessControlAllowOrigin"`
-	xxx_hidden_AccessControlAllowMethods *string                `protobuf:"bytes,23,opt,name=access_control_allow_methods,json=accessControlAllowMethods"`
-	xxx_hidden_AccessControlAllowHeaders *string                `protobuf:"bytes,24,opt,name=access_control_allow_headers,json=accessControlAllowHeaders"`
-	xxx_hidden_RequestId                 *string                `protobuf:"bytes,25,opt,name=request_id,json=requestId"`
-	xxx_hidden_ServiceName               *string                `protobuf:"bytes,26,opt,name=service_name,json=serviceName"`
-	xxx_hidden_ServiceVersion            *string                `protobuf:"bytes,27,opt,name=service_version,json=serviceVersion"`
-	xxx_hidden_ProcessingTimeMs          int64                  `protobuf:"varint,28,opt,name=processing_time_ms,json=processingTimeMs"`
-	xxx_hidden_ServedFromCache           bool                   `protobuf:"varint,29,opt,name=served_from_cache,json=servedFromCache"`
-	xxx_hidden_Streaming                 bool                   `protobuf:"varint,30,opt,name=streaming"`
-	xxx_hidden_KeepAlive                 bool                   `protobuf:"varint,31,opt,name=keep_alive,json=keepAlive"`
-	xxx_hidden_Compressed                bool                   `protobuf:"varint,32,opt,name=compressed"`
-	xxx_hidden_CompressionRatio          float32                `protobuf:"fixed32,33,opt,name=compression_ratio,json=compressionRatio"`
-	xxx_hidden_Error                     *v1.Error              `protobuf:"bytes,61,opt,name=error"`
-	xxx_hidden_ProcessingStartedAt       *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=processing_started_at,json=processingStartedAt"`
-	xxx_hidden_GeneratedAt               *timestamppb.Timestamp `protobuf:"bytes,52,opt,name=generated_at,json=generatedAt"`
-	xxx_hidden_SentAt                    *timestamppb.Timestamp `protobuf:"bytes,53,opt,name=sent_at,json=sentAt"`
+	state                                protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_StatusCode                int32                   `protobuf:"varint,1,opt,name=status_code,json=statusCode"`
+	xxx_hidden_StatusMessage             *string                 `protobuf:"bytes,2,opt,name=status_message,json=statusMessage"`
+	xxx_hidden_ProtocolVersion           *string                 `protobuf:"bytes,3,opt,name=protocol_version,json=protocolVersion"`
+	xxx_hidden_RequestMetadata           *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_Headers                   map[string]string       `protobuf:"bytes,12,rep,name=headers" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Body                      *anypb.Any              `protobuf:"bytes,13,opt,name=body"`
+	xxx_hidden_Cookies                   map[string]string       `protobuf:"bytes,14,rep,name=cookies" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_ContentLength             int64                   `protobuf:"varint,15,opt,name=content_length,json=contentLength"`
+	xxx_hidden_ContentType               *string                 `protobuf:"bytes,16,opt,name=content_type,json=contentType"`
+	xxx_hidden_ContentEncoding           *string                 `protobuf:"bytes,17,opt,name=content_encoding,json=contentEncoding"`
+	xxx_hidden_CacheControl              *string                 `protobuf:"bytes,18,opt,name=cache_control,json=cacheControl"`
+	xxx_hidden_Etag                      *string                 `protobuf:"bytes,19,opt,name=etag"`
+	xxx_hidden_Location                  *string                 `protobuf:"bytes,20,opt,name=location"`
+	xxx_hidden_Server                    *string                 `protobuf:"bytes,21,opt,name=server"`
+	xxx_hidden_AccessControlAllowOrigin  *string                 `protobuf:"bytes,22,opt,name=access_control_allow_origin,json=accessControlAllowOrigin"`
+	xxx_hidden_AccessControlAllowMethods *string                 `protobuf:"bytes,23,opt,name=access_control_allow_methods,json=accessControlAllowMethods"`
+	xxx_hidden_AccessControlAllowHeaders *string                 `protobuf:"bytes,24,opt,name=access_control_allow_headers,json=accessControlAllowHeaders"`
+	xxx_hidden_RequestId                 *string                 `protobuf:"bytes,25,opt,name=request_id,json=requestId"`
+	xxx_hidden_ServiceName               *string                 `protobuf:"bytes,26,opt,name=service_name,json=serviceName"`
+	xxx_hidden_ServiceVersion            *string                 `protobuf:"bytes,27,opt,name=service_version,json=serviceVersion"`
+	xxx_hidden_ProcessingTimeMs          int64                   `protobuf:"varint,28,opt,name=processing_time_ms,json=processingTimeMs"`
+	xxx_hidden_ServedFromCache           bool                    `protobuf:"varint,29,opt,name=served_from_cache,json=servedFromCache"`
+	xxx_hidden_Streaming                 bool                    `protobuf:"varint,30,opt,name=streaming"`
+	xxx_hidden_KeepAlive                 bool                    `protobuf:"varint,31,opt,name=keep_alive,json=keepAlive"`
+	xxx_hidden_Compressed                bool                    `protobuf:"varint,32,opt,name=compressed"`
+	xxx_hidden_CompressionRatio          float32                 `protobuf:"fixed32,33,opt,name=compression_ratio,json=compressionRatio"`
+	xxx_hidden_Error                     *common.Error           `protobuf:"bytes,61,opt,name=error"`
+	xxx_hidden_ProcessingStartedAt       *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=processing_started_at,json=processingStartedAt"`
+	xxx_hidden_GeneratedAt               *timestamppb.Timestamp  `protobuf:"bytes,52,opt,name=generated_at,json=generatedAt"`
+	xxx_hidden_SentAt                    *timestamppb.Timestamp  `protobuf:"bytes,53,opt,name=sent_at,json=sentAt"`
 	XXX_raceDetectHookData               protoimpl.RaceDetectHookData
 	XXX_presence                         [1]uint32
 	unknownFields                        protoimpl.UnknownFields
@@ -121,7 +121,7 @@ func (x *HttpResponse) GetProtocolVersion() string {
 	return ""
 }
 
-func (x *HttpResponse) GetRequestMetadata() *v1.RequestMetadata {
+func (x *HttpResponse) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -318,7 +318,7 @@ func (x *HttpResponse) GetCompressionRatio() float32 {
 	return 0
 }
 
-func (x *HttpResponse) GetError() *v1.Error {
+func (x *HttpResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -361,7 +361,7 @@ func (x *HttpResponse) SetProtocolVersion(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 30)
 }
 
-func (x *HttpResponse) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *HttpResponse) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -472,7 +472,7 @@ func (x *HttpResponse) SetCompressionRatio(v float32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 25, 30)
 }
 
-func (x *HttpResponse) SetError(v *v1.Error) {
+func (x *HttpResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -833,7 +833,7 @@ type HttpResponse_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// HTTP response headers as key-value pairs.
 	// Includes standard headers like Content-Type, Cache-Control, etc.
@@ -905,7 +905,7 @@ type HttpResponse_builder struct {
 	// *
 	// Error information if the response represents an error
 	// or if there were issues generating the response.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// When response generation started.
 	ProcessingStartedAt *timestamppb.Timestamp
@@ -1066,17 +1066,17 @@ const file_web_v1_http_response_proto_rawDesc = "" +
 	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01\x1a:\n" +
 	"\fCookiesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_http_response_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
 var file_web_v1_http_response_proto_goTypes = []any{
-	(*HttpResponse)(nil),          // 0: web.v1.HttpResponse
-	nil,                           // 1: web.v1.HttpResponse.HeadersEntry
-	nil,                           // 2: web.v1.HttpResponse.CookiesEntry
-	(*v1.RequestMetadata)(nil),    // 3: common.v1.RequestMetadata
-	(*anypb.Any)(nil),             // 4: google.protobuf.Any
-	(*v1.Error)(nil),              // 5: common.v1.Error
-	(*timestamppb.Timestamp)(nil), // 6: google.protobuf.Timestamp
+	(*HttpResponse)(nil),           // 0: web.v1.HttpResponse
+	nil,                            // 1: web.v1.HttpResponse.HeadersEntry
+	nil,                            // 2: web.v1.HttpResponse.CookiesEntry
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
+	(*anypb.Any)(nil),              // 4: google.protobuf.Any
+	(*common.Error)(nil),           // 5: common.v1.Error
+	(*timestamppb.Timestamp)(nil),  // 6: google.protobuf.Timestamp
 }
 var file_web_v1_http_response_proto_depIdxs = []int32{
 	3, // 0: web.v1.HttpResponse.request_metadata:type_name -> common.v1.RequestMetadata

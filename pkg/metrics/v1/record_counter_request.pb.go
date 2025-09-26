@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/record_counter_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,14 +26,14 @@ const (
 // *
 // RecordCounterRequest is used to record or increment a counter metric.
 type RecordCounterRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name        *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Value       float64                `protobuf:"fixed64,2,opt,name=value"`
-	xxx_hidden_Labels      map[string]string      `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_Help        *string                `protobuf:"bytes,4,opt,name=help"`
-	xxx_hidden_Unit        *string                `protobuf:"bytes,5,opt,name=unit"`
-	xxx_hidden_SampleRate  float64                `protobuf:"fixed64,6,opt,name=sample_rate,json=sampleRate"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,7,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Name        *string                 `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Value       float64                 `protobuf:"fixed64,2,opt,name=value"`
+	xxx_hidden_Labels      map[string]string       `protobuf:"bytes,3,rep,name=labels" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_Help        *string                 `protobuf:"bytes,4,opt,name=help"`
+	xxx_hidden_Unit        *string                 `protobuf:"bytes,5,opt,name=unit"`
+	xxx_hidden_SampleRate  float64                 `protobuf:"fixed64,6,opt,name=sample_rate,json=sampleRate"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,7,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -116,7 +116,7 @@ func (x *RecordCounterRequest) GetSampleRate() float64 {
 	return 0
 }
 
-func (x *RecordCounterRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RecordCounterRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -152,7 +152,7 @@ func (x *RecordCounterRequest) SetSampleRate(v float64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 7)
 }
 
-func (x *RecordCounterRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RecordCounterRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -243,7 +243,7 @@ type RecordCounterRequest_builder struct {
 	// Sample rate (0.0-1.0, used for sampling)
 	SampleRate *float64
 	// Request metadata for tracing and debugging
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 RecordCounterRequest_builder) Build() *RecordCounterRequest {
@@ -292,13 +292,13 @@ const file_metrics_v1_record_counter_request_proto_rawDesc = "" +
 	"\bmetadata\x18\a \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x1a9\n" +
 	"\vLabelsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_record_counter_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_record_counter_request_proto_goTypes = []any{
-	(*RecordCounterRequest)(nil), // 0: metrics.v1.RecordCounterRequest
-	nil,                          // 1: metrics.v1.RecordCounterRequest.LabelsEntry
-	(*v1.RequestMetadata)(nil),   // 2: common.v1.RequestMetadata
+	(*RecordCounterRequest)(nil),   // 0: metrics.v1.RecordCounterRequest
+	nil,                            // 1: metrics.v1.RecordCounterRequest.LabelsEntry
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_metrics_v1_record_counter_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.RecordCounterRequest.labels:type_name -> metrics.v1.RecordCounterRequest.LabelsEntry

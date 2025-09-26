@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/upload_media_request.proto
 
-package v1
+package media
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -199,7 +199,7 @@ const file_media_v1_upload_media_request_proto_rawDesc = "" +
 	"\x12UploadMediaRequest\x126\n" +
 	"\bmetadata\x18\x01 \x01(\v2\x18.media.v1.UploadMetadataH\x00R\bmetadata\x12\x16\n" +
 	"\x05chunk\x18\x02 \x01(\fH\x00R\x05chunkB\x06\n" +
-	"\x04dataB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04dataB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_upload_media_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_upload_media_request_proto_goTypes = []any{

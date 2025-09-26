@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -141,7 +141,7 @@ const file_metrics_v2_list_metrics_request_proto_rawDesc = "" +
 	"pagination\x18\x01 \x01(\v2\x15.common.v2.PaginationR\n" +
 	"pagination\x12(\n" +
 	"\vname_filter\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
-	"nameFilterB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"nameFilterB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_list_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_list_metrics_request_proto_goTypes = []any{

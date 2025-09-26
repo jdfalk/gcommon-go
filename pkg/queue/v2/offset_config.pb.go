@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -200,7 +200,7 @@ const file_queue_v2_offset_config_proto_rawDesc = "" +
 	"offsetType\x12*\n" +
 	"\foffset_value\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\voffsetValue\x12C\n" +
 	"\x0fstart_timestamp\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\x0estartTimestamp\x12+\n" +
-	"\x12reset_on_not_found\x18\x04 \x01(\bR\x0fresetOnNotFoundB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12reset_on_not_found\x18\x04 \x01(\bR\x0fresetOnNotFoundB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_offset_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_offset_config_proto_goTypes = []any{

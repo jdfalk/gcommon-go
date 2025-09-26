@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/get_alerting_rules_response.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type GetAlertingRulesResponse struct {
 	state            protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Rules *[]*AlertingRule       `protobuf:"bytes,1,rep,name=rules"`
-	xxx_hidden_Error *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	unknownFields    protoimpl.UnknownFields
 	sizeCache        protoimpl.SizeCache
 }
@@ -67,7 +67,7 @@ func (x *GetAlertingRulesResponse) GetRules() []*AlertingRule {
 	return nil
 }
 
-func (x *GetAlertingRulesResponse) GetError() *v1.Error {
+func (x *GetAlertingRulesResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -78,7 +78,7 @@ func (x *GetAlertingRulesResponse) SetRules(v []*AlertingRule) {
 	x.xxx_hidden_Rules = &v
 }
 
-func (x *GetAlertingRulesResponse) SetError(v *v1.Error) {
+func (x *GetAlertingRulesResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -99,7 +99,7 @@ type GetAlertingRulesResponse_builder struct {
 	// Alerting rules for the metric
 	Rules []*AlertingRule
 	// Error information if retrieval failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 GetAlertingRulesResponse_builder) Build() *GetAlertingRulesResponse {
@@ -119,13 +119,13 @@ const file_metrics_v1_get_alerting_rules_response_proto_rawDesc = "" +
 	"metrics.v1\x1a\x15common/v1/error.proto\x1a\x1emetrics/v1/alerting_rule.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"|\n" +
 	"\x18GetAlertingRulesResponse\x128\n" +
 	"\x05rules\x18\x01 \x03(\v2\x18.metrics.v1.AlertingRuleB\b\xbaH\x05\x92\x01\x02\b\x01R\x05rules\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_get_alerting_rules_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_get_alerting_rules_response_proto_goTypes = []any{
 	(*GetAlertingRulesResponse)(nil), // 0: metrics.v1.GetAlertingRulesResponse
 	(*AlertingRule)(nil),             // 1: metrics.v1.AlertingRule
-	(*v1.Error)(nil),                 // 2: common.v1.Error
+	(*common.Error)(nil),             // 2: common.v1.Error
 }
 var file_metrics_v1_get_alerting_rules_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.GetAlertingRulesResponse.rules:type_name -> metrics.v1.AlertingRule

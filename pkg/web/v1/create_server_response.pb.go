@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: web/v1/create_server_response.proto
 
-package v1
+package web
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,11 +29,11 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type CreateServerResponse struct {
-	state                          protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success             bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_RequestMetadata     *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_Error               *v1.Error              `protobuf:"bytes,61,opt,name=error"`
-	xxx_hidden_ResponseGeneratedAt *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=response_generated_at,json=responseGeneratedAt"`
+	state                          protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Success             bool                    `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_RequestMetadata     *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_Error               *common.Error           `protobuf:"bytes,61,opt,name=error"`
+	xxx_hidden_ResponseGeneratedAt *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=response_generated_at,json=responseGeneratedAt"`
 	XXX_raceDetectHookData         protoimpl.RaceDetectHookData
 	XXX_presence                   [1]uint32
 	unknownFields                  protoimpl.UnknownFields
@@ -72,14 +72,14 @@ func (x *CreateServerResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *CreateServerResponse) GetRequestMetadata() *v1.RequestMetadata {
+func (x *CreateServerResponse) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
 	return nil
 }
 
-func (x *CreateServerResponse) GetError() *v1.Error {
+func (x *CreateServerResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -98,11 +98,11 @@ func (x *CreateServerResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *CreateServerResponse) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *CreateServerResponse) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
-func (x *CreateServerResponse) SetError(v *v1.Error) {
+func (x *CreateServerResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -164,11 +164,11 @@ type CreateServerResponse_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Error information if the operation failed
 	// or completed with warnings.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// Timestamp when this response was generated.
 	ResponseGeneratedAt *timestamppb.Timestamp
@@ -197,14 +197,14 @@ const file_web_v1_create_server_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12E\n" +
 	"\x10request_metadata\x18\v \x01(\v2\x1a.common.v1.RequestMetadataR\x0frequestMetadata\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12N\n" +
-	"\x15response_generated_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_create_server_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_create_server_response_proto_goTypes = []any{
-	(*CreateServerResponse)(nil),  // 0: web.v1.CreateServerResponse
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*v1.Error)(nil),              // 2: common.v1.Error
-	(*timestamppb.Timestamp)(nil), // 3: google.protobuf.Timestamp
+	(*CreateServerResponse)(nil),   // 0: web.v1.CreateServerResponse
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*common.Error)(nil),           // 2: common.v1.Error
+	(*timestamppb.Timestamp)(nil),  // 3: google.protobuf.Timestamp
 }
 var file_web_v1_create_server_response_proto_depIdxs = []int32{
 	1, // 0: web.v1.CreateServerResponse.request_metadata:type_name -> common.v1.RequestMetadata

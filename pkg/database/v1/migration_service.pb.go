@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: database/v1/migration_service.proto
 
-package v1
+package database
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -30,7 +30,7 @@ const file_database_v1_migration_service_proto_rawDesc = "" +
 	"\x0eApplyMigration\x12 .database.v1.RunMigrationRequest\x1a!.database.v1.RunMigrationResponse\x12\\\n" +
 	"\x0fRevertMigration\x12#.database.v1.RevertMigrationRequest\x1a$.database.v1.RevertMigrationResponse\x12e\n" +
 	"\x12GetMigrationStatus\x12&.database.v1.GetMigrationStatusRequest\x1a'.database.v1.GetMigrationStatusResponse\x12Y\n" +
-	"\x0eListMigrations\x12\".database.v1.ListMigrationsRequest\x1a#.database.v1.ListMigrationsResponseB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eListMigrations\x12\".database.v1.ListMigrationsRequest\x1a#.database.v1.ListMigrationsResponseB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_migration_service_proto_goTypes = []any{
 	(*RunMigrationRequest)(nil),        // 0: database.v1.RunMigrationRequest

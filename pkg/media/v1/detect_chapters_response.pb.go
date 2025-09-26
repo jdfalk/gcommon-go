@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/detect_chapters_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -152,7 +152,7 @@ const file_media_v1_detect_chapters_response_proto_rawDesc = "" +
 	"\x16DetectChaptersResponse\x12;\n" +
 	"\bchapters\x18\x01 \x03(\v2\x15.media.v1.ChapterInfoB\b\xbaH\x05\x92\x01\x02\b\x01R\bchapters\x12.\n" +
 	"\x0etotal_chapters\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rtotalChapters\x12)\n" +
-	"\x10confidence_score\x18\x03 \x01(\x01R\x0fconfidenceScoreB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10confidence_score\x18\x03 \x01(\x01R\x0fconfidenceScoreB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_detect_chapters_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_detect_chapters_response_proto_goTypes = []any{

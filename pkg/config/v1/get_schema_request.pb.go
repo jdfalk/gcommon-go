@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/get_schema_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type GetSchemaRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Name        *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Name        *string                 `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -68,7 +68,7 @@ func (x *GetSchemaRequest) GetName() string {
 	return ""
 }
 
-func (x *GetSchemaRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetSchemaRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -80,7 +80,7 @@ func (x *GetSchemaRequest) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *GetSchemaRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetSchemaRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -113,7 +113,7 @@ type GetSchemaRequest_builder struct {
 	// Schema name
 	Name *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetSchemaRequest_builder) Build() *GetSchemaRequest {
@@ -135,12 +135,12 @@ const file_config_v1_get_schema_request_proto_rawDesc = "" +
 	"\"config/v1/get_schema_request.proto\x12\tconfig.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"i\n" +
 	"\x10GetSchemaRequest\x12\x1d\n" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x126\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_schema_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_schema_request_proto_goTypes = []any{
-	(*GetSchemaRequest)(nil),   // 0: config.v1.GetSchemaRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*GetSchemaRequest)(nil),       // 0: config.v1.GetSchemaRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_config_v1_get_schema_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.GetSchemaRequest.metadata:type_name -> common.v1.RequestMetadata

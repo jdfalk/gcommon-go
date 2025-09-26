@@ -202,7 +202,7 @@ const file_queue_v2_validation_error_proto_rawDesc = "" +
 	"error_type\x18\x01 \x01(\tR\terrorType\x12*\n" +
 	"\vdescription\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x18\xe8\aR\vdescription\x12!\n" +
 	"\fpartition_id\x18\x03 \x01(\x05R\vpartitionId\x12<\n" +
-	"\x0eaffected_range\x18\x04 \x01(\v2\x15.queue.v2.OffsetRangeR\raffectedRangeB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eaffected_range\x18\x04 \x01(\v2\x15.queue.v2.OffsetRangeR\raffectedRangeB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_validation_error_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_validation_error_proto_goTypes = []any{

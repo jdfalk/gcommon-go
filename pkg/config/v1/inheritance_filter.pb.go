@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/inheritance_filter.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,9 +25,9 @@ const (
 
 type InheritanceFilter struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Type        v1.LogFilterType       `protobuf:"varint,1,opt,name=type,enum=common.v1.LogFilterType"`
+	xxx_hidden_Type        common.LogFilterType   `protobuf:"varint,1,opt,name=type,enum=common.v1.LogFilterType"`
 	xxx_hidden_Expression  *string                `protobuf:"bytes,2,opt,name=expression"`
-	xxx_hidden_Action      v1.FilterAction        `protobuf:"varint,3,opt,name=action,enum=common.v1.FilterAction"`
+	xxx_hidden_Action      common.FilterAction    `protobuf:"varint,3,opt,name=action,enum=common.v1.FilterAction"`
 	xxx_hidden_Metadata    map[string]string      `protobuf:"bytes,4,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
@@ -60,13 +60,13 @@ func (x *InheritanceFilter) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *InheritanceFilter) GetType() v1.LogFilterType {
+func (x *InheritanceFilter) GetType() common.LogFilterType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.LogFilterType(0)
+	return common.LogFilterType(0)
 }
 
 func (x *InheritanceFilter) GetExpression() string {
@@ -79,13 +79,13 @@ func (x *InheritanceFilter) GetExpression() string {
 	return ""
 }
 
-func (x *InheritanceFilter) GetAction() v1.FilterAction {
+func (x *InheritanceFilter) GetAction() common.FilterAction {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Action
 		}
 	}
-	return v1.FilterAction(0)
+	return common.FilterAction(0)
 }
 
 func (x *InheritanceFilter) GetMetadata() map[string]string {
@@ -95,7 +95,7 @@ func (x *InheritanceFilter) GetMetadata() map[string]string {
 	return nil
 }
 
-func (x *InheritanceFilter) SetType(v v1.LogFilterType) {
+func (x *InheritanceFilter) SetType(v common.LogFilterType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -105,7 +105,7 @@ func (x *InheritanceFilter) SetExpression(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
 
-func (x *InheritanceFilter) SetAction(v v1.FilterAction) {
+func (x *InheritanceFilter) SetAction(v common.FilterAction) {
 	x.xxx_hidden_Action = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
@@ -137,7 +137,7 @@ func (x *InheritanceFilter) HasAction() bool {
 
 func (x *InheritanceFilter) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Type = v1.LogFilterType_FILTER_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.LogFilterType_FILTER_TYPE_UNSPECIFIED
 }
 
 func (x *InheritanceFilter) ClearExpression() {
@@ -147,18 +147,18 @@ func (x *InheritanceFilter) ClearExpression() {
 
 func (x *InheritanceFilter) ClearAction() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Action = v1.FilterAction_FILTER_ACTION_UNSPECIFIED
+	x.xxx_hidden_Action = common.FilterAction_FILTER_ACTION_UNSPECIFIED
 }
 
 type InheritanceFilter_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Filter type
-	Type *v1.LogFilterType
+	Type *common.LogFilterType
 	// Filter expression
 	Expression *string
 	// Filter action
-	Action *v1.FilterAction
+	Action *common.FilterAction
 	// Filter metadata
 	Metadata map[string]string
 }
@@ -197,14 +197,14 @@ const file_config_v1_inheritance_filter_proto_rawDesc = "" +
 	"\bmetadata\x18\x04 \x03(\v2*.config.v1.InheritanceFilter.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_inheritance_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_inheritance_filter_proto_goTypes = []any{
 	(*InheritanceFilter)(nil), // 0: config.v1.InheritanceFilter
 	nil,                       // 1: config.v1.InheritanceFilter.MetadataEntry
-	(v1.LogFilterType)(0),     // 2: common.v1.LogFilterType
-	(v1.FilterAction)(0),      // 3: common.v1.FilterAction
+	(common.LogFilterType)(0), // 2: common.v1.LogFilterType
+	(common.FilterAction)(0),  // 3: common.v1.FilterAction
 }
 var file_config_v1_inheritance_filter_proto_depIdxs = []int32{
 	2, // 0: config.v1.InheritanceFilter.type:type_name -> common.v1.LogFilterType

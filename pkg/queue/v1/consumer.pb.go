@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/consumer.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type Consumer struct {
 	state                         protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_ConsumerId         *string                `protobuf:"bytes,1,opt,name=consumer_id,json=consumerId"`
 	xxx_hidden_ClientInfo         *ConsumerClient        `protobuf:"bytes,2,opt,name=client_info,json=clientInfo"`
-	xxx_hidden_State              v1.ConsumerState       `protobuf:"varint,3,opt,name=state,enum=common.v1.ConsumerState"`
+	xxx_hidden_State              common.ConsumerState   `protobuf:"varint,3,opt,name=state,enum=common.v1.ConsumerState"`
 	xxx_hidden_AssignedPartitions []int32                `protobuf:"varint,4,rep,packed,name=assigned_partitions,json=assignedPartitions"`
 	xxx_hidden_Config             *ConsumerConfig        `protobuf:"bytes,5,opt,name=config"`
 	xxx_hidden_Stats              *ConsumerStats         `protobuf:"bytes,6,opt,name=stats"`
@@ -82,13 +82,13 @@ func (x *Consumer) GetClientInfo() *ConsumerClient {
 	return nil
 }
 
-func (x *Consumer) GetState() v1.ConsumerState {
+func (x *Consumer) GetState() common.ConsumerState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_State
 		}
 	}
-	return v1.ConsumerState(0)
+	return common.ConsumerState(0)
 }
 
 func (x *Consumer) GetAssignedPartitions() []int32 {
@@ -135,7 +135,7 @@ func (x *Consumer) SetClientInfo(v *ConsumerClient) {
 	x.xxx_hidden_ClientInfo = v
 }
 
-func (x *Consumer) SetState(v v1.ConsumerState) {
+func (x *Consumer) SetState(v common.ConsumerState) {
 	x.xxx_hidden_State = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 8)
 }
@@ -220,7 +220,7 @@ func (x *Consumer) ClearClientInfo() {
 
 func (x *Consumer) ClearState() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_State = v1.ConsumerState_CONSUMER_STATE_UNSPECIFIED
+	x.xxx_hidden_State = common.ConsumerState_CONSUMER_STATE_UNSPECIFIED
 }
 
 func (x *Consumer) ClearConfig() {
@@ -247,7 +247,7 @@ type Consumer_builder struct {
 	// Consumer client information
 	ClientInfo *ConsumerClient
 	// Consumer state
-	State *v1.ConsumerState
+	State *common.ConsumerState
 	// Assigned partitions
 	AssignedPartitions []int32
 	// Consumer configuration
@@ -296,13 +296,13 @@ const file_queue_v1_consumer_proto_rawDesc = "" +
 	"\x06config\x18\x05 \x01(\v2\x18.queue.v1.ConsumerConfigR\x06config\x12-\n" +
 	"\x05stats\x18\x06 \x01(\v2\x17.queue.v1.ConsumerStatsR\x05stats\x12A\n" +
 	"\x0elast_heartbeat\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\rlastHeartbeat\x127\n" +
-	"\tjoined_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\bjoinedAtB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tjoined_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\bjoinedAtB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_consumer_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_consumer_proto_goTypes = []any{
 	(*Consumer)(nil),              // 0: queue.v1.Consumer
 	(*ConsumerClient)(nil),        // 1: queue.v1.ConsumerClient
-	(v1.ConsumerState)(0),         // 2: common.v1.ConsumerState
+	(common.ConsumerState)(0),     // 2: common.v1.ConsumerState
 	(*ConsumerConfig)(nil),        // 3: queue.v1.ConsumerConfig
 	(*ConsumerStats)(nil),         // 4: queue.v1.ConsumerStats
 	(*timestamppb.Timestamp)(nil), // 5: google.protobuf.Timestamp

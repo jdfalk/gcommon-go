@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/health_check_result.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type ConfigHealthCheckResult struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Name        *string                `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Status      v1.HealthState         `protobuf:"varint,2,opt,name=status,enum=common.v1.HealthState"`
+	xxx_hidden_Status      common.HealthState     `protobuf:"varint,2,opt,name=status,enum=common.v1.HealthState"`
 	xxx_hidden_Message     *string                `protobuf:"bytes,3,opt,name=message"`
 	xxx_hidden_Timestamp   *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=timestamp"`
 	xxx_hidden_DurationMs  int32                  `protobuf:"varint,5,opt,name=duration_ms,json=durationMs"`
@@ -73,13 +73,13 @@ func (x *ConfigHealthCheckResult) GetName() string {
 	return ""
 }
 
-func (x *ConfigHealthCheckResult) GetStatus() v1.HealthState {
+func (x *ConfigHealthCheckResult) GetStatus() common.HealthState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.HealthState(0)
+	return common.HealthState(0)
 }
 
 func (x *ConfigHealthCheckResult) GetMessage() string {
@@ -118,7 +118,7 @@ func (x *ConfigHealthCheckResult) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 6)
 }
 
-func (x *ConfigHealthCheckResult) SetStatus(v v1.HealthState) {
+func (x *ConfigHealthCheckResult) SetStatus(v common.HealthState) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 6)
 }
@@ -183,7 +183,7 @@ func (x *ConfigHealthCheckResult) ClearName() {
 
 func (x *ConfigHealthCheckResult) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Status = v1.HealthState_HEALTH_STATE_UNSPECIFIED
+	x.xxx_hidden_Status = common.HealthState_HEALTH_STATE_UNSPECIFIED
 }
 
 func (x *ConfigHealthCheckResult) ClearMessage() {
@@ -206,7 +206,7 @@ type ConfigHealthCheckResult_builder struct {
 	// Health check name
 	Name *string
 	// Health check status
-	Status *v1.HealthState
+	Status *common.HealthState
 	// Health check message
 	Message *string
 	// Health check timestamp
@@ -257,13 +257,13 @@ const file_config_v1_health_check_result_proto_rawDesc = "" +
 	"\adetails\x18\x06 \x03(\v2/.config.v1.ConfigHealthCheckResult.DetailsEntryR\adetails\x1a:\n" +
 	"\fDetailsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_health_check_result_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_health_check_result_proto_goTypes = []any{
 	(*ConfigHealthCheckResult)(nil), // 0: config.v1.ConfigHealthCheckResult
 	nil,                             // 1: config.v1.ConfigHealthCheckResult.DetailsEntry
-	(v1.HealthState)(0),             // 2: common.v1.HealthState
+	(common.HealthState)(0),         // 2: common.v1.HealthState
 	(*timestamppb.Timestamp)(nil),   // 3: google.protobuf.Timestamp
 }
 var file_config_v1_health_check_result_proto_depIdxs = []int32{

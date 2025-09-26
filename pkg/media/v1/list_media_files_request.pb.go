@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: media/v1/list_media_files_request.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type ListMediaFilesRequest struct {
 	state                      protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_PageSize        int32                  `protobuf:"varint,1,opt,name=page_size,json=pageSize"`
 	xxx_hidden_PageToken       *string                `protobuf:"bytes,2,opt,name=page_token,json=pageToken"`
-	xxx_hidden_MediaType       v1.MediaType           `protobuf:"varint,3,opt,name=media_type,json=mediaType,enum=common.v1.MediaType"`
+	xxx_hidden_MediaType       common.MediaType       `protobuf:"varint,3,opt,name=media_type,json=mediaType,enum=common.v1.MediaType"`
 	xxx_hidden_PathPrefix      *string                `protobuf:"bytes,4,opt,name=path_prefix,json=pathPrefix"`
 	xxx_hidden_IncludeMetadata bool                   `protobuf:"varint,5,opt,name=include_metadata,json=includeMetadata"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
@@ -79,13 +79,13 @@ func (x *ListMediaFilesRequest) GetPageToken() string {
 	return ""
 }
 
-func (x *ListMediaFilesRequest) GetMediaType() v1.MediaType {
+func (x *ListMediaFilesRequest) GetMediaType() common.MediaType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_MediaType
 		}
 	}
-	return v1.MediaType(0)
+	return common.MediaType(0)
 }
 
 func (x *ListMediaFilesRequest) GetPathPrefix() string {
@@ -115,7 +115,7 @@ func (x *ListMediaFilesRequest) SetPageToken(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *ListMediaFilesRequest) SetMediaType(v v1.MediaType) {
+func (x *ListMediaFilesRequest) SetMediaType(v common.MediaType) {
 	x.xxx_hidden_MediaType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 5)
 }
@@ -177,7 +177,7 @@ func (x *ListMediaFilesRequest) ClearPageToken() {
 
 func (x *ListMediaFilesRequest) ClearMediaType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_MediaType = v1.MediaType_MEDIA_TYPE_UNSPECIFIED
+	x.xxx_hidden_MediaType = common.MediaType_MEDIA_TYPE_UNSPECIFIED
 }
 
 func (x *ListMediaFilesRequest) ClearPathPrefix() {
@@ -195,7 +195,7 @@ type ListMediaFilesRequest_builder struct {
 
 	PageSize        *int32
 	PageToken       *string
-	MediaType       *v1.MediaType
+	MediaType       *common.MediaType
 	PathPrefix      *string
 	IncludeMetadata *bool
 }
@@ -241,12 +241,12 @@ const file_media_v1_list_media_files_request_proto_rawDesc = "" +
 	"media_type\x18\x03 \x01(\x0e2\x14.common.v1.MediaTypeR\tmediaType\x12\x1f\n" +
 	"\vpath_prefix\x18\x04 \x01(\tR\n" +
 	"pathPrefix\x12)\n" +
-	"\x10include_metadata\x18\x05 \x01(\bR\x0fincludeMetadataB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10include_metadata\x18\x05 \x01(\bR\x0fincludeMetadataB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_list_media_files_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_list_media_files_request_proto_goTypes = []any{
 	(*ListMediaFilesRequest)(nil), // 0: media.v1.ListMediaFilesRequest
-	(v1.MediaType)(0),             // 1: common.v1.MediaType
+	(common.MediaType)(0),         // 1: common.v1.MediaType
 }
 var file_media_v1_list_media_files_request_proto_depIdxs = []int32{
 	1, // 0: media.v1.ListMediaFilesRequest.media_type:type_name -> common.v1.MediaType

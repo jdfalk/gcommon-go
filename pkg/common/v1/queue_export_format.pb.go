@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/queue_export_format.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -88,7 +88,7 @@ const file_common_v1_queue_export_format_proto_rawDesc = "" +
 	"\x18QUEUE_EXPORT_FORMAT_JSON\x10\x01\x12 \n" +
 	"\x1cQUEUE_EXPORT_FORMAT_PROTOBUF\x10\x02\x12\x1b\n" +
 	"\x17QUEUE_EXPORT_FORMAT_CSV\x10\x03\x12\x1e\n" +
-	"\x1aQUEUE_EXPORT_FORMAT_CUSTOM\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1aQUEUE_EXPORT_FORMAT_CUSTOM\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_queue_export_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_queue_export_format_proto_goTypes = []any{

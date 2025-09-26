@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/list_config_response.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,10 +26,10 @@ const (
 // *
 // ListConfigResponse returns configuration entries for a list operation.
 type ListConfigResponse struct {
-	state                 protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Entries    *[]*ConfigEntry        `protobuf:"bytes,1,rep,name=entries"`
-	xxx_hidden_Pagination *v1.PaginatedResponse  `protobuf:"bytes,2,opt,name=pagination"`
-	xxx_hidden_Error      *v1.Error              `protobuf:"bytes,3,opt,name=error"`
+	state                 protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Entries    *[]*ConfigEntry           `protobuf:"bytes,1,rep,name=entries"`
+	xxx_hidden_Pagination *common.PaginatedResponse `protobuf:"bytes,2,opt,name=pagination"`
+	xxx_hidden_Error      *common.Error             `protobuf:"bytes,3,opt,name=error"`
 	unknownFields         protoimpl.UnknownFields
 	sizeCache             protoimpl.SizeCache
 }
@@ -68,14 +68,14 @@ func (x *ListConfigResponse) GetEntries() []*ConfigEntry {
 	return nil
 }
 
-func (x *ListConfigResponse) GetPagination() *v1.PaginatedResponse {
+func (x *ListConfigResponse) GetPagination() *common.PaginatedResponse {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
 	return nil
 }
 
-func (x *ListConfigResponse) GetError() *v1.Error {
+func (x *ListConfigResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -86,11 +86,11 @@ func (x *ListConfigResponse) SetEntries(v []*ConfigEntry) {
 	x.xxx_hidden_Entries = &v
 }
 
-func (x *ListConfigResponse) SetPagination(v *v1.PaginatedResponse) {
+func (x *ListConfigResponse) SetPagination(v *common.PaginatedResponse) {
 	x.xxx_hidden_Pagination = v
 }
 
-func (x *ListConfigResponse) SetError(v *v1.Error) {
+func (x *ListConfigResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -122,9 +122,9 @@ type ListConfigResponse_builder struct {
 	// Configuration entries
 	Entries []*ConfigEntry
 	// Pagination information
-	Pagination *v1.PaginatedResponse
+	Pagination *common.PaginatedResponse
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 ListConfigResponse_builder) Build() *ListConfigResponse {
@@ -147,14 +147,14 @@ const file_config_v1_list_config_response_proto_rawDesc = "" +
 	"\n" +
 	"pagination\x18\x02 \x01(\v2\x1c.common.v1.PaginatedResponseR\n" +
 	"pagination\x12&\n" +
-	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x03 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_list_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_list_config_response_proto_goTypes = []any{
-	(*ListConfigResponse)(nil),   // 0: config.v1.ListConfigResponse
-	(*ConfigEntry)(nil),          // 1: config.v1.ConfigEntry
-	(*v1.PaginatedResponse)(nil), // 2: common.v1.PaginatedResponse
-	(*v1.Error)(nil),             // 3: common.v1.Error
+	(*ListConfigResponse)(nil),       // 0: config.v1.ListConfigResponse
+	(*ConfigEntry)(nil),              // 1: config.v1.ConfigEntry
+	(*common.PaginatedResponse)(nil), // 2: common.v1.PaginatedResponse
+	(*common.Error)(nil),             // 3: common.v1.Error
 }
 var file_config_v1_list_config_response_proto_depIdxs = []int32{
 	1, // 0: config.v1.ListConfigResponse.entries:type_name -> config.v1.ConfigEntry

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -438,7 +438,7 @@ const file_queue_v2_seek_request_proto_rawDesc = "" +
 	"\n" +
 	"message_id\x18\a \x01(\tH\x00R\tmessageId\x126\n" +
 	"\bmetadata\x18d \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB\x0f\n" +
-	"\rseek_positionB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rseek_positionB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_seek_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_seek_request_proto_goTypes = []any{

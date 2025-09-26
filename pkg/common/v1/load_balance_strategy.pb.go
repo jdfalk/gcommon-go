@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/load_balance_strategy.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -77,7 +77,7 @@ const file_common_v1_load_balance_strategy_proto_rawDesc = "" +
 	"!LOAD_BALANCE_STRATEGY_UNSPECIFIED\x10\x00\x12%\n" +
 	"!LOAD_BALANCE_STRATEGY_ROUND_ROBIN\x10\x01\x12+\n" +
 	"'LOAD_BALANCE_STRATEGY_LEAST_CONNECTIONS\x10\x02\x12!\n" +
-	"\x1dLOAD_BALANCE_STRATEGY_IP_HASH\x10\x03B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1dLOAD_BALANCE_STRATEGY_IP_HASH\x10\x03B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_load_balance_strategy_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_load_balance_strategy_proto_goTypes = []any{

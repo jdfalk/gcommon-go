@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/stream_messages_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type StreamMessagesRequest struct {
 	xxx_hidden_OffsetConfig    *OffsetConfig          `protobuf:"bytes,4,opt,name=offset_config,json=offsetConfig"`
 	xxx_hidden_MaxMessages     int64                  `protobuf:"varint,5,opt,name=max_messages,json=maxMessages"`
 	xxx_hidden_StreamTimeoutMs int32                  `protobuf:"varint,6,opt,name=stream_timeout_ms,json=streamTimeoutMs"`
-	xxx_hidden_AckLevel        v1.AckLevel            `protobuf:"varint,7,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
+	xxx_hidden_AckLevel        common.AckLevel        `protobuf:"varint,7,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
 	xxx_hidden_BatchSize       int32                  `protobuf:"varint,8,opt,name=batch_size,json=batchSize"`
 	xxx_hidden_Filter          *MessageFilter         `protobuf:"bytes,9,opt,name=filter"`
 	xxx_hidden_AutoAcknowledge bool                   `protobuf:"varint,10,opt,name=auto_acknowledge,json=autoAcknowledge"`
@@ -121,13 +121,13 @@ func (x *StreamMessagesRequest) GetStreamTimeoutMs() int32 {
 	return 0
 }
 
-func (x *StreamMessagesRequest) GetAckLevel() v1.AckLevel {
+func (x *StreamMessagesRequest) GetAckLevel() common.AckLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 6) {
 			return x.xxx_hidden_AckLevel
 		}
 	}
-	return v1.AckLevel(0)
+	return common.AckLevel(0)
 }
 
 func (x *StreamMessagesRequest) GetBatchSize() int32 {
@@ -208,7 +208,7 @@ func (x *StreamMessagesRequest) SetStreamTimeoutMs(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 14)
 }
 
-func (x *StreamMessagesRequest) SetAckLevel(v v1.AckLevel) {
+func (x *StreamMessagesRequest) SetAckLevel(v common.AckLevel) {
 	x.xxx_hidden_AckLevel = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 14)
 }
@@ -367,7 +367,7 @@ func (x *StreamMessagesRequest) ClearStreamTimeoutMs() {
 
 func (x *StreamMessagesRequest) ClearAckLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 6)
-	x.xxx_hidden_AckLevel = v1.AckLevel_ACK_LEVEL_UNSPECIFIED
+	x.xxx_hidden_AckLevel = common.AckLevel_ACK_LEVEL_UNSPECIFIED
 }
 
 func (x *StreamMessagesRequest) ClearBatchSize() {
@@ -414,7 +414,7 @@ type StreamMessagesRequest_builder struct {
 	// Maximum time to keep stream open (milliseconds)
 	StreamTimeoutMs *int32
 	// Acknowledgment level required
-	AckLevel *v1.AckLevel
+	AckLevel *common.AckLevel
 	// Batch size for message delivery
 	BatchSize *int32
 	// Message filter criteria
@@ -504,13 +504,13 @@ const file_queue_v1_stream_messages_request_proto_rawDesc = "" +
 	"\x0epause_on_error\x18\v \x01(\bR\fpauseOnError\x12)\n" +
 	"\x10include_metadata\x18\f \x01(\bR\x0fincludeMetadata\x12-\n" +
 	"\rpartition_ids\x18\r \x03(\x05B\b\xbaH\x05\x92\x01\x02\b\x01R\fpartitionIds\x12;\n" +
-	"\rstream_config\x18\x0e \x01(\v2\x16.queue.v1.StreamConfigR\fstreamConfigB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rstream_config\x18\x0e \x01(\v2\x16.queue.v1.StreamConfigR\fstreamConfigB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_stream_messages_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_stream_messages_request_proto_goTypes = []any{
 	(*StreamMessagesRequest)(nil), // 0: queue.v1.StreamMessagesRequest
 	(*OffsetConfig)(nil),          // 1: queue.v1.OffsetConfig
-	(v1.AckLevel)(0),              // 2: common.v1.AckLevel
+	(common.AckLevel)(0),          // 2: common.v1.AckLevel
 	(*MessageFilter)(nil),         // 3: queue.v1.MessageFilter
 	(*StreamConfig)(nil),          // 4: queue.v1.StreamConfig
 }

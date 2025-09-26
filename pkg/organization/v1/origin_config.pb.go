@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/origin_config.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type OriginConfig struct {
 	xxx_hidden_DomainName     *string                `protobuf:"bytes,1,opt,name=domain_name,json=domainName"`
 	xxx_hidden_OriginPath     *string                `protobuf:"bytes,2,opt,name=origin_path,json=originPath"`
 	xxx_hidden_ProtocolPolicy *string                `protobuf:"bytes,3,opt,name=protocol_policy,json=protocolPolicy"`
-	xxx_hidden_CustomHeaders  *[]*v1.KeyValue        `protobuf:"bytes,4,rep,name=custom_headers,json=customHeaders"`
+	xxx_hidden_CustomHeaders  *[]*common.KeyValue    `protobuf:"bytes,4,rep,name=custom_headers,json=customHeaders"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -90,7 +90,7 @@ func (x *OriginConfig) GetProtocolPolicy() string {
 	return ""
 }
 
-func (x *OriginConfig) GetCustomHeaders() []*v1.KeyValue {
+func (x *OriginConfig) GetCustomHeaders() []*common.KeyValue {
 	if x != nil {
 		if x.xxx_hidden_CustomHeaders != nil {
 			return *x.xxx_hidden_CustomHeaders
@@ -114,7 +114,7 @@ func (x *OriginConfig) SetProtocolPolicy(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *OriginConfig) SetCustomHeaders(v []*v1.KeyValue) {
+func (x *OriginConfig) SetCustomHeaders(v []*common.KeyValue) {
 	x.xxx_hidden_CustomHeaders = &v
 }
 
@@ -164,7 +164,7 @@ type OriginConfig_builder struct {
 	// Origin protocol policy
 	ProtocolPolicy *string
 	// Custom headers to send to origin
-	CustomHeaders []*v1.KeyValue
+	CustomHeaders []*common.KeyValue
 }
 
 func (b0 OriginConfig_builder) Build() *OriginConfig {
@@ -198,12 +198,12 @@ const file_organization_v1_origin_config_proto_rawDesc = "" +
 	"\vorigin_path\x18\x02 \x01(\tR\n" +
 	"originPath\x12'\n" +
 	"\x0fprotocol_policy\x18\x03 \x01(\tR\x0eprotocolPolicy\x12:\n" +
-	"\x0ecustom_headers\x18\x04 \x03(\v2\x13.common.v1.KeyValueR\rcustomHeadersB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecustom_headers\x18\x04 \x03(\v2\x13.common.v1.KeyValueR\rcustomHeadersB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_origin_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_origin_config_proto_goTypes = []any{
-	(*OriginConfig)(nil), // 0: organization.v1.OriginConfig
-	(*v1.KeyValue)(nil),  // 1: common.v1.KeyValue
+	(*OriginConfig)(nil),    // 0: organization.v1.OriginConfig
+	(*common.KeyValue)(nil), // 1: common.v1.KeyValue
 }
 var file_organization_v1_origin_config_proto_depIdxs = []int32{
 	1, // 0: organization.v1.OriginConfig.custom_headers:type_name -> common.v1.KeyValue

@@ -138,7 +138,7 @@ const file_queue_v2_size_range_proto_rawDesc = "" +
 	"\x19queue/v2/size_range.proto\x12\bqueue.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"S\n" +
 	"\tSizeRange\x12\"\n" +
 	"\bmin_size\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\aminSize\x12\"\n" +
-	"\bmax_size\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\amaxSizeB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmax_size\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\amaxSizeB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_size_range_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_size_range_proto_goTypes = []any{

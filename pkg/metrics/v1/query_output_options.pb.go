@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/query_output_options.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -233,7 +233,7 @@ const file_metrics_v1_query_output_options_proto_rawDesc = "" +
 	"\x0einclude_labels\x18\x02 \x01(\bR\rincludeLabels\x12'\n" +
 	"\x0fcompress_output\x18\x03 \x01(\bR\x0ecompressOutput\x124\n" +
 	"\x11numeric_precision\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x10numericPrecision\x12-\n" +
-	"\x12include_statistics\x18\x05 \x01(\bR\x11includeStatisticsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12include_statistics\x18\x05 \x01(\bR\x11includeStatisticsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_output_options_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_output_options_proto_goTypes = []any{

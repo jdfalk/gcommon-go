@@ -424,7 +424,7 @@ const file_common_v2_filter_value_proto_rawDesc = "" +
 	"\fstring_array\x18\x05 \x01(\v2\x16.common.v2.StringArrayB\x02(\x01H\x00R\vstringArray\x128\n" +
 	"\tint_array\x18\x06 \x01(\v2\x15.common.v2.Int64ArrayB\x02(\x01H\x00R\bintArray\x128\n" +
 	"\toperation\x18\a \x01(\x0e2\x1a.common.v2.FilterOperationR\toperationB\a\n" +
-	"\x05valueB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05valueB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_filter_value_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_filter_value_proto_goTypes = []any{

@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/middleware_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 // MiddlewareConfig represents a single middleware's configuration.
 type MiddlewareConfig struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Type        v1.MiddlewareType      `protobuf:"varint,1,opt,name=type,enum=common.v1.MiddlewareType"`
+	xxx_hidden_Type        common.MiddlewareType  `protobuf:"varint,1,opt,name=type,enum=common.v1.MiddlewareType"`
 	xxx_hidden_Enabled     bool                   `protobuf:"varint,2,opt,name=enabled"`
 	xxx_hidden_Priority    int32                  `protobuf:"varint,3,opt,name=priority"`
 	xxx_hidden_Options     map[string]string      `protobuf:"bytes,4,rep,name=options" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
@@ -62,13 +62,13 @@ func (x *MiddlewareConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MiddlewareConfig) GetType() v1.MiddlewareType {
+func (x *MiddlewareConfig) GetType() common.MiddlewareType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MiddlewareType(0)
+	return common.MiddlewareType(0)
 }
 
 func (x *MiddlewareConfig) GetEnabled() bool {
@@ -92,7 +92,7 @@ func (x *MiddlewareConfig) GetOptions() map[string]string {
 	return nil
 }
 
-func (x *MiddlewareConfig) SetType(v v1.MiddlewareType) {
+func (x *MiddlewareConfig) SetType(v common.MiddlewareType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -134,7 +134,7 @@ func (x *MiddlewareConfig) HasPriority() bool {
 
 func (x *MiddlewareConfig) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Type = v1.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MiddlewareType_MIDDLEWARE_TYPE_UNSPECIFIED
 }
 
 func (x *MiddlewareConfig) ClearEnabled() {
@@ -151,7 +151,7 @@ type MiddlewareConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Middleware type
-	Type *v1.MiddlewareType
+	Type *common.MiddlewareType
 	// Whether the middleware is enabled
 	Enabled *bool
 	// Execution priority (lower runs first)
@@ -192,13 +192,13 @@ const file_web_v1_middleware_config_proto_rawDesc = "" +
 	"\aoptions\x18\x04 \x03(\v2%.web.v1.MiddlewareConfig.OptionsEntryR\aoptions\x1a:\n" +
 	"\fOptionsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_middleware_config_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_web_v1_middleware_config_proto_goTypes = []any{
-	(*MiddlewareConfig)(nil), // 0: web.v1.MiddlewareConfig
-	nil,                      // 1: web.v1.MiddlewareConfig.OptionsEntry
-	(v1.MiddlewareType)(0),   // 2: common.v1.MiddlewareType
+	(*MiddlewareConfig)(nil),   // 0: web.v1.MiddlewareConfig
+	nil,                        // 1: web.v1.MiddlewareConfig.OptionsEntry
+	(common.MiddlewareType)(0), // 2: common.v1.MiddlewareType
 }
 var file_web_v1_middleware_config_proto_depIdxs = []int32{
 	2, // 0: web.v1.MiddlewareConfig.type:type_name -> common.v1.MiddlewareType

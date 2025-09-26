@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -251,7 +251,7 @@ const file_config_v2_notification_settings_proto_rawDesc = "" +
 	"recipients\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
 	"recipients\x12,\n" +
 	"\rdelay_minutes\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\fdelayMinutes\x127\n" +
-	"\bbatching\x18\a \x01(\v2\x1b.config.v2.BatchingSettingsR\bbatchingB-Z#github.com/jdfalk/gcommon/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bbatching\x18\a \x01(\v2\x1b.config.v2.BatchingSettingsR\bbatchingB1Z'github.com/jdfalk/gcommon/pkg/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v2_notification_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v2_notification_settings_proto_goTypes = []any{

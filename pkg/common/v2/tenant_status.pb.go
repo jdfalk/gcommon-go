@@ -109,7 +109,7 @@ const file_common_v2_tenant_status_proto_rawDesc = "" +
 	"\x1cTENANT_STATUS_QUOTA_EXCEEDED\x10\x05\x12\x17\n" +
 	"\x13TENANT_STATUS_TRIAL\x10\x06\x12\x1a\n" +
 	"\x16TENANT_STATUS_ARCHIVED\x10\a\x12\x19\n" +
-	"\x15TENANT_STATUS_DELETED\x10\bB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15TENANT_STATUS_DELETED\x10\bB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_tenant_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_tenant_status_proto_goTypes = []any{

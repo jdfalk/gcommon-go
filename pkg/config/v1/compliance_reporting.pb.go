@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: config/v1/compliance_reporting.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -154,7 +154,7 @@ const file_config_v1_compliance_reporting_proto_rawDesc = "" +
 	"\x0ffrequency_hours\x18\x02 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x0efrequencyHours\x12(\n" +
 	"\n" +
 	"recipients\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
-	"recipientsB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"recipientsB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_compliance_reporting_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_compliance_reporting_proto_goTypes = []any{

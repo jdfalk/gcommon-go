@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/session_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -32,7 +32,7 @@ type WebSessionConfig struct {
 	xxx_hidden_CookieName      *string                `protobuf:"bytes,3,opt,name=cookie_name,json=cookieName"`
 	xxx_hidden_SecureCookies   bool                   `protobuf:"varint,4,opt,name=secure_cookies,json=secureCookies"`
 	xxx_hidden_HttpOnly        bool                   `protobuf:"varint,5,opt,name=http_only,json=httpOnly"`
-	xxx_hidden_SameSite        v1.CookieSameSite      `protobuf:"varint,6,opt,name=same_site,json=sameSite,enum=common.v1.CookieSameSite"`
+	xxx_hidden_SameSite        common.CookieSameSite  `protobuf:"varint,6,opt,name=same_site,json=sameSite,enum=common.v1.CookieSameSite"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -102,13 +102,13 @@ func (x *WebSessionConfig) GetHttpOnly() bool {
 	return false
 }
 
-func (x *WebSessionConfig) GetSameSite() v1.CookieSameSite {
+func (x *WebSessionConfig) GetSameSite() common.CookieSameSite {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 5) {
 			return x.xxx_hidden_SameSite
 		}
 	}
-	return v1.CookieSameSite(0)
+	return common.CookieSameSite(0)
 }
 
 func (x *WebSessionConfig) SetIdleTimeout(v *durationpb.Duration) {
@@ -134,7 +134,7 @@ func (x *WebSessionConfig) SetHttpOnly(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
 }
 
-func (x *WebSessionConfig) SetSameSite(v v1.CookieSameSite) {
+func (x *WebSessionConfig) SetSameSite(v common.CookieSameSite) {
 	x.xxx_hidden_SameSite = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 6)
 }
@@ -206,7 +206,7 @@ func (x *WebSessionConfig) ClearHttpOnly() {
 
 func (x *WebSessionConfig) ClearSameSite() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
-	x.xxx_hidden_SameSite = v1.CookieSameSite_COOKIE_SAME_SITE_UNSPECIFIED
+	x.xxx_hidden_SameSite = common.CookieSameSite_COOKIE_SAME_SITE_UNSPECIFIED
 }
 
 type WebSessionConfig_builder struct {
@@ -223,7 +223,7 @@ type WebSessionConfig_builder struct {
 	// Restrict cookie to HTTP only
 	HttpOnly *bool
 	// Cookie SameSite policy
-	SameSite *v1.CookieSameSite
+	SameSite *common.CookieSameSite
 }
 
 func (b0 WebSessionConfig_builder) Build() *WebSessionConfig {
@@ -263,13 +263,13 @@ const file_web_v1_session_config_proto_rawDesc = "" +
 	"cookieName\x12%\n" +
 	"\x0esecure_cookies\x18\x04 \x01(\bR\rsecureCookies\x12\x1b\n" +
 	"\thttp_only\x18\x05 \x01(\bR\bhttpOnly\x126\n" +
-	"\tsame_site\x18\x06 \x01(\x0e2\x19.common.v1.CookieSameSiteR\bsameSiteB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tsame_site\x18\x06 \x01(\x0e2\x19.common.v1.CookieSameSiteR\bsameSiteB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_session_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_session_config_proto_goTypes = []any{
 	(*WebSessionConfig)(nil),    // 0: web.v1.WebSessionConfig
 	(*durationpb.Duration)(nil), // 1: google.protobuf.Duration
-	(v1.CookieSameSite)(0),      // 2: common.v1.CookieSameSite
+	(common.CookieSameSite)(0),  // 2: common.v1.CookieSameSite
 }
 var file_web_v1_session_config_proto_depIdxs = []int32{
 	1, // 0: web.v1.WebSessionConfig.idle_timeout:type_name -> google.protobuf.Duration

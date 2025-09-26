@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/merge_audio_request.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -121,7 +121,7 @@ const file_media_v1_merge_audio_request_proto_rawDesc = "" +
 	"\"media/v1/merge_audio_request.proto\x12\bmedia.v1\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"q\n" +
 	"\x11MergeAudioRequest\x12.\n" +
 	"\x0eaudio_file_ids\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\faudioFileIds\x12,\n" +
-	"\routput_format\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\foutputFormatB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\routput_format\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\foutputFormatB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_merge_audio_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_merge_audio_request_proto_goTypes = []any{

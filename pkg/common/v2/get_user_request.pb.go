@@ -189,7 +189,7 @@ const file_common_v2_get_user_request_proto_rawDesc = "" +
 	"\auser_id\x18\x01 \x01(\tBW\xbaHT\xc8\x01\x01rO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\x06userId\x12'\n" +
 	"\x0finclude_details\x18\x02 \x01(\bR\x0eincludeDetails\x12'\n" +
 	"\x0finclude_deleted\x18\x03 \x01(\bR\x0eincludeDeleted\x12\x16\n" +
-	"\x06fields\x18\x04 \x03(\tR\x06fieldsB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06fields\x18\x04 \x03(\tR\x06fieldsB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_user_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_user_request_proto_goTypes = []any{

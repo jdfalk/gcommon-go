@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/get_stats_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -36,7 +36,7 @@ type CacheGetStatsResponse struct {
 	xxx_hidden_MemoryLimit  int64                  `protobuf:"varint,6,opt,name=memory_limit,json=memoryLimit"`
 	xxx_hidden_EvictedItems int64                  `protobuf:"varint,7,opt,name=evicted_items,json=evictedItems"`
 	xxx_hidden_Success      bool                   `protobuf:"varint,8,opt,name=success"`
-	xxx_hidden_Error        *v1.Error              `protobuf:"bytes,9,opt,name=error"`
+	xxx_hidden_Error        *common.Error          `protobuf:"bytes,9,opt,name=error"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -124,7 +124,7 @@ func (x *CacheGetStatsResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *CacheGetStatsResponse) GetError() *v1.Error {
+func (x *CacheGetStatsResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -171,7 +171,7 @@ func (x *CacheGetStatsResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 7, 9)
 }
 
-func (x *CacheGetStatsResponse) SetError(v *v1.Error) {
+func (x *CacheGetStatsResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -302,7 +302,7 @@ type CacheGetStatsResponse_builder struct {
 	// Whether the operation was successful
 	Success *bool
 	// Error details if stats retrieval failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 CacheGetStatsResponse_builder) Build() *CacheGetStatsResponse {
@@ -361,12 +361,12 @@ const file_database_v1_get_stats_response_proto_rawDesc = "" +
 	"\fmemory_limit\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vmemoryLimit\x12,\n" +
 	"\revicted_items\x18\a \x01(\x03B\a\xbaH\x04\"\x02(\x00R\fevictedItems\x12\x18\n" +
 	"\asuccess\x18\b \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\t \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\t \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_get_stats_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_get_stats_response_proto_goTypes = []any{
 	(*CacheGetStatsResponse)(nil), // 0: database.v1.CacheGetStatsResponse
-	(*v1.Error)(nil),              // 1: common.v1.Error
+	(*common.Error)(nil),          // 1: common.v1.Error
 }
 var file_database_v1_get_stats_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.CacheGetStatsResponse.error:type_name -> common.v1.Error

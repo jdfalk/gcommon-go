@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_query.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,17 +24,17 @@ const (
 )
 
 type MetricQuery struct {
-	state                   protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueryId      *string                `protobuf:"bytes,1,opt,name=query_id,json=queryId"`
-	xxx_hidden_Name         *string                `protobuf:"bytes,2,opt,name=name"`
-	xxx_hidden_QueryString  *string                `protobuf:"bytes,3,opt,name=query_string,json=queryString"`
-	xxx_hidden_Filter       *MetricFilter          `protobuf:"bytes,4,opt,name=filter"`
-	xxx_hidden_TimeFilter   *v1.TimeRangeMetrics   `protobuf:"bytes,5,opt,name=time_filter,json=timeFilter"`
-	xxx_hidden_Aggregations *[]*AggregationSpec    `protobuf:"bytes,6,rep,name=aggregations"`
-	xxx_hidden_GroupBy      *[]*GroupBySpec        `protobuf:"bytes,7,rep,name=group_by,json=groupBy"`
-	xxx_hidden_SortCriteria *[]*v1.SortOptions     `protobuf:"bytes,8,rep,name=sort_criteria,json=sortCriteria"`
-	xxx_hidden_Limit        int32                  `protobuf:"varint,9,opt,name=limit"`
-	xxx_hidden_Offset       int32                  `protobuf:"varint,10,opt,name=offset"`
+	state                   protoimpl.MessageState   `protogen:"opaque.v1"`
+	xxx_hidden_QueryId      *string                  `protobuf:"bytes,1,opt,name=query_id,json=queryId"`
+	xxx_hidden_Name         *string                  `protobuf:"bytes,2,opt,name=name"`
+	xxx_hidden_QueryString  *string                  `protobuf:"bytes,3,opt,name=query_string,json=queryString"`
+	xxx_hidden_Filter       *MetricFilter            `protobuf:"bytes,4,opt,name=filter"`
+	xxx_hidden_TimeFilter   *common.TimeRangeMetrics `protobuf:"bytes,5,opt,name=time_filter,json=timeFilter"`
+	xxx_hidden_Aggregations *[]*AggregationSpec      `protobuf:"bytes,6,rep,name=aggregations"`
+	xxx_hidden_GroupBy      *[]*GroupBySpec          `protobuf:"bytes,7,rep,name=group_by,json=groupBy"`
+	xxx_hidden_SortCriteria *[]*common.SortOptions   `protobuf:"bytes,8,rep,name=sort_criteria,json=sortCriteria"`
+	xxx_hidden_Limit        int32                    `protobuf:"varint,9,opt,name=limit"`
+	xxx_hidden_Offset       int32                    `protobuf:"varint,10,opt,name=offset"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -103,7 +103,7 @@ func (x *MetricQuery) GetFilter() *MetricFilter {
 	return nil
 }
 
-func (x *MetricQuery) GetTimeFilter() *v1.TimeRangeMetrics {
+func (x *MetricQuery) GetTimeFilter() *common.TimeRangeMetrics {
 	if x != nil {
 		return x.xxx_hidden_TimeFilter
 	}
@@ -128,7 +128,7 @@ func (x *MetricQuery) GetGroupBy() []*GroupBySpec {
 	return nil
 }
 
-func (x *MetricQuery) GetSortCriteria() []*v1.SortOptions {
+func (x *MetricQuery) GetSortCriteria() []*common.SortOptions {
 	if x != nil {
 		if x.xxx_hidden_SortCriteria != nil {
 			return *x.xxx_hidden_SortCriteria
@@ -170,7 +170,7 @@ func (x *MetricQuery) SetFilter(v *MetricFilter) {
 	x.xxx_hidden_Filter = v
 }
 
-func (x *MetricQuery) SetTimeFilter(v *v1.TimeRangeMetrics) {
+func (x *MetricQuery) SetTimeFilter(v *common.TimeRangeMetrics) {
 	x.xxx_hidden_TimeFilter = v
 }
 
@@ -182,7 +182,7 @@ func (x *MetricQuery) SetGroupBy(v []*GroupBySpec) {
 	x.xxx_hidden_GroupBy = &v
 }
 
-func (x *MetricQuery) SetSortCriteria(v []*v1.SortOptions) {
+func (x *MetricQuery) SetSortCriteria(v []*common.SortOptions) {
 	x.xxx_hidden_SortCriteria = &v
 }
 
@@ -290,13 +290,13 @@ type MetricQuery_builder struct {
 	// Filter criteria for selecting metrics
 	Filter *MetricFilter
 	// Time range for the query
-	TimeFilter *v1.TimeRangeMetrics
+	TimeFilter *common.TimeRangeMetrics
 	// Aggregation operations to apply
 	Aggregations []*AggregationSpec
 	// Group by specifications
 	GroupBy []*GroupBySpec
 	// Sort criteria
-	SortCriteria []*v1.SortOptions
+	SortCriteria []*common.SortOptions
 	// Maximum number of results to return
 	Limit *int32
 	// Offset for pagination
@@ -353,16 +353,16 @@ const file_metrics_v1_metric_query_proto_rawDesc = "" +
 	"\rsort_criteria\x18\b \x03(\v2\x16.common.v1.SortOptionsR\fsortCriteria\x12\x14\n" +
 	"\x05limit\x18\t \x01(\x05R\x05limit\x12\x16\n" +
 	"\x06offset\x18\n" +
-	" \x01(\x05R\x06offsetB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x05R\x06offsetB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_query_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_query_proto_goTypes = []any{
-	(*MetricQuery)(nil),         // 0: metrics.v1.MetricQuery
-	(*MetricFilter)(nil),        // 1: metrics.v1.MetricFilter
-	(*v1.TimeRangeMetrics)(nil), // 2: common.v1.TimeRangeMetrics
-	(*AggregationSpec)(nil),     // 3: metrics.v1.AggregationSpec
-	(*GroupBySpec)(nil),         // 4: metrics.v1.GroupBySpec
-	(*v1.SortOptions)(nil),      // 5: common.v1.SortOptions
+	(*MetricQuery)(nil),             // 0: metrics.v1.MetricQuery
+	(*MetricFilter)(nil),            // 1: metrics.v1.MetricFilter
+	(*common.TimeRangeMetrics)(nil), // 2: common.v1.TimeRangeMetrics
+	(*AggregationSpec)(nil),         // 3: metrics.v1.AggregationSpec
+	(*GroupBySpec)(nil),             // 4: metrics.v1.GroupBySpec
+	(*common.SortOptions)(nil),      // 5: common.v1.SortOptions
 }
 var file_metrics_v1_metric_query_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricQuery.filter:type_name -> metrics.v1.MetricFilter

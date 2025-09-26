@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/acknowledgment.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -34,7 +34,7 @@ type Acknowledgment struct {
 	xxx_hidden_QueueName            *string                `protobuf:"bytes,3,opt,name=queue_name,json=queueName"`
 	xxx_hidden_PartitionId          int32                  `protobuf:"varint,4,opt,name=partition_id,json=partitionId"`
 	xxx_hidden_Offset               int64                  `protobuf:"varint,5,opt,name=offset"`
-	xxx_hidden_AckType              v1.AckType             `protobuf:"varint,6,opt,name=ack_type,json=ackType,enum=common.v1.AckType"`
+	xxx_hidden_AckType              common.AckType         `protobuf:"varint,6,opt,name=ack_type,json=ackType,enum=common.v1.AckType"`
 	xxx_hidden_AckTimestamp         *timestamppb.Timestamp `protobuf:"bytes,7,opt,name=ack_timestamp,json=ackTimestamp"`
 	xxx_hidden_ProcessingDurationMs int64                  `protobuf:"varint,8,opt,name=processing_duration_ms,json=processingDurationMs"`
 	xxx_hidden_ErrorMessage         *string                `protobuf:"bytes,9,opt,name=error_message,json=errorMessage"`
@@ -114,13 +114,13 @@ func (x *Acknowledgment) GetOffset() int64 {
 	return 0
 }
 
-func (x *Acknowledgment) GetAckType() v1.AckType {
+func (x *Acknowledgment) GetAckType() common.AckType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 5) {
 			return x.xxx_hidden_AckType
 		}
 	}
-	return v1.AckType(0)
+	return common.AckType(0)
 }
 
 func (x *Acknowledgment) GetAckTimestamp() *timestamppb.Timestamp {
@@ -179,7 +179,7 @@ func (x *Acknowledgment) SetOffset(v int64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 10)
 }
 
-func (x *Acknowledgment) SetAckType(v v1.AckType) {
+func (x *Acknowledgment) SetAckType(v common.AckType) {
 	x.xxx_hidden_AckType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 5, 10)
 }
@@ -300,7 +300,7 @@ func (x *Acknowledgment) ClearOffset() {
 
 func (x *Acknowledgment) ClearAckType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 5)
-	x.xxx_hidden_AckType = v1.AckType_ACK_TYPE_UNSPECIFIED
+	x.xxx_hidden_AckType = common.AckType_ACK_TYPE_UNSPECIFIED
 }
 
 func (x *Acknowledgment) ClearAckTimestamp() {
@@ -336,7 +336,7 @@ type Acknowledgment_builder struct {
 	// Message offset within the partition
 	Offset *int64
 	// Acknowledgment type
-	AckType *v1.AckType
+	AckType *common.AckType
 	// Timestamp when message was acknowledged
 	AckTimestamp *timestamppb.Timestamp
 	// Processing duration in milliseconds
@@ -411,12 +411,12 @@ const file_queue_v1_acknowledgment_proto_rawDesc = "" +
 	"\rerror_message\x18\t \x01(\tR\ferrorMessage\x12\x1f\n" +
 	"\vretry_count\x18\n" +
 	" \x01(\x05R\n" +
-	"retryCountB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"retryCountB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_acknowledgment_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_acknowledgment_proto_goTypes = []any{
 	(*Acknowledgment)(nil),        // 0: queue.v1.Acknowledgment
-	(v1.AckType)(0),               // 1: common.v1.AckType
+	(common.AckType)(0),           // 1: common.v1.AckType
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
 var file_queue_v1_acknowledgment_proto_depIdxs = []int32{

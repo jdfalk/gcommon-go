@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/subscription_configuration.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,8 +25,8 @@ const (
 
 type SubscriptionConfiguration struct {
 	state                           protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_AckLevel             v1.AckLevel            `protobuf:"varint,1,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
-	xxx_hidden_DeliveryMode         v1.DeliveryMode        `protobuf:"varint,2,opt,name=delivery_mode,json=deliveryMode,enum=common.v1.DeliveryMode"`
+	xxx_hidden_AckLevel             common.AckLevel        `protobuf:"varint,1,opt,name=ack_level,json=ackLevel,enum=common.v1.AckLevel"`
+	xxx_hidden_DeliveryMode         common.DeliveryMode    `protobuf:"varint,2,opt,name=delivery_mode,json=deliveryMode,enum=common.v1.DeliveryMode"`
 	xxx_hidden_MaxUnackedMessages   int32                  `protobuf:"varint,3,opt,name=max_unacked_messages,json=maxUnackedMessages"`
 	xxx_hidden_AckTimeoutMs         int32                  `protobuf:"varint,4,opt,name=ack_timeout_ms,json=ackTimeoutMs"`
 	xxx_hidden_MinPriority          int32                  `protobuf:"varint,5,opt,name=min_priority,json=minPriority"`
@@ -66,22 +66,22 @@ func (x *SubscriptionConfiguration) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *SubscriptionConfiguration) GetAckLevel() v1.AckLevel {
+func (x *SubscriptionConfiguration) GetAckLevel() common.AckLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_AckLevel
 		}
 	}
-	return v1.AckLevel(0)
+	return common.AckLevel(0)
 }
 
-func (x *SubscriptionConfiguration) GetDeliveryMode() v1.DeliveryMode {
+func (x *SubscriptionConfiguration) GetDeliveryMode() common.DeliveryMode {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_DeliveryMode
 		}
 	}
-	return v1.DeliveryMode(0)
+	return common.DeliveryMode(0)
 }
 
 func (x *SubscriptionConfiguration) GetMaxUnackedMessages() int32 {
@@ -140,12 +140,12 @@ func (x *SubscriptionConfiguration) GetMaxMessageAgeSeconds() int64 {
 	return 0
 }
 
-func (x *SubscriptionConfiguration) SetAckLevel(v v1.AckLevel) {
+func (x *SubscriptionConfiguration) SetAckLevel(v common.AckLevel) {
 	x.xxx_hidden_AckLevel = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *SubscriptionConfiguration) SetDeliveryMode(v v1.DeliveryMode) {
+func (x *SubscriptionConfiguration) SetDeliveryMode(v common.DeliveryMode) {
 	x.xxx_hidden_DeliveryMode = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 10)
 }
@@ -262,12 +262,12 @@ func (x *SubscriptionConfiguration) HasMaxMessageAgeSeconds() bool {
 
 func (x *SubscriptionConfiguration) ClearAckLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_AckLevel = v1.AckLevel_ACK_LEVEL_UNSPECIFIED
+	x.xxx_hidden_AckLevel = common.AckLevel_ACK_LEVEL_UNSPECIFIED
 }
 
 func (x *SubscriptionConfiguration) ClearDeliveryMode() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_DeliveryMode = v1.DeliveryMode_DELIVERY_MODE_UNSPECIFIED
+	x.xxx_hidden_DeliveryMode = common.DeliveryMode_DELIVERY_MODE_UNSPECIFIED
 }
 
 func (x *SubscriptionConfiguration) ClearMaxUnackedMessages() {
@@ -314,9 +314,9 @@ type SubscriptionConfiguration_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Acknowledgment level required
-	AckLevel *v1.AckLevel
+	AckLevel *common.AckLevel
 	// Delivery mode for messages
-	DeliveryMode *v1.DeliveryMode
+	DeliveryMode *common.DeliveryMode
 	// Maximum number of unacknowledged messages
 	MaxUnackedMessages *int32
 	// Acknowledgment timeout (milliseconds)
@@ -399,13 +399,13 @@ const file_queue_v1_subscription_configuration_proto_rawDesc = "" +
 	"\x12expiration_seconds\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11expirationSeconds\x12/\n" +
 	"\x13duplicate_detection\x18\t \x01(\bR\x12duplicateDetection\x12>\n" +
 	"\x17max_message_age_seconds\x18\n" +
-	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x14maxMessageAgeSecondsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x14maxMessageAgeSecondsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_subscription_configuration_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_subscription_configuration_proto_goTypes = []any{
 	(*SubscriptionConfiguration)(nil), // 0: queue.v1.SubscriptionConfiguration
-	(v1.AckLevel)(0),                  // 1: common.v1.AckLevel
-	(v1.DeliveryMode)(0),              // 2: common.v1.DeliveryMode
+	(common.AckLevel)(0),              // 1: common.v1.AckLevel
+	(common.DeliveryMode)(0),          // 2: common.v1.DeliveryMode
 }
 var file_queue_v1_subscription_configuration_proto_depIdxs = []int32{
 	1, // 0: queue.v1.SubscriptionConfiguration.ack_level:type_name -> common.v1.AckLevel

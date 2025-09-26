@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/watch_health_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,12 +27,12 @@ const (
 // Allows real-time monitoring of health check results.
 // Follows 1-1-1 pattern: one message per file.
 type WatchHealthRequest struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServiceName       *string                `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
-	xxx_hidden_CheckId           *string                `protobuf:"bytes,2,opt,name=check_id,json=checkId"`
-	xxx_hidden_Metadata          *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
-	xxx_hidden_StatusChangesOnly bool                   `protobuf:"varint,4,opt,name=status_changes_only,json=statusChangesOnly"`
-	xxx_hidden_Tags              []string               `protobuf:"bytes,5,rep,name=tags"`
+	state                        protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServiceName       *string                 `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
+	xxx_hidden_CheckId           *string                 `protobuf:"bytes,2,opt,name=check_id,json=checkId"`
+	xxx_hidden_Metadata          *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
+	xxx_hidden_StatusChangesOnly bool                    `protobuf:"varint,4,opt,name=status_changes_only,json=statusChangesOnly"`
+	xxx_hidden_Tags              []string                `protobuf:"bytes,5,rep,name=tags"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -84,7 +84,7 @@ func (x *WatchHealthRequest) GetCheckId() string {
 	return ""
 }
 
-func (x *WatchHealthRequest) GetMetadata() *v1.RequestMetadata {
+func (x *WatchHealthRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -115,7 +115,7 @@ func (x *WatchHealthRequest) SetCheckId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *WatchHealthRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *WatchHealthRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -183,7 +183,7 @@ type WatchHealthRequest_builder struct {
 	// Specific check ID to watch (optional)
 	CheckId *string
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Only send updates for status changes
 	StatusChangesOnly *bool
 	// Filter by tags
@@ -221,12 +221,12 @@ const file_health_v1_watch_health_request_proto_rawDesc = "" +
 	"\bcheck_id\x18\x02 \x01(\tR\acheckId\x126\n" +
 	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12.\n" +
 	"\x13status_changes_only\x18\x04 \x01(\bR\x11statusChangesOnly\x12\x12\n" +
-	"\x04tags\x18\x05 \x03(\tR\x04tagsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04tags\x18\x05 \x03(\tR\x04tagsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_watch_health_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_watch_health_request_proto_goTypes = []any{
-	(*WatchHealthRequest)(nil), // 0: health.v1.WatchHealthRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*WatchHealthRequest)(nil),     // 0: health.v1.WatchHealthRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_health_v1_watch_health_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.WatchHealthRequest.metadata:type_name -> common.v1.RequestMetadata

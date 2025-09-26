@@ -143,7 +143,7 @@ const file_queue_v2_api_key_auth_proto_rawDesc = "" +
 	"\n" +
 	"APIKeyAuth\x12 \n" +
 	"\aapi_key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06apiKey\x12\x1e\n" +
-	"\x06key_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05keyIdB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06key_id\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05keyIdB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_api_key_auth_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_api_key_auth_proto_goTypes = []any{

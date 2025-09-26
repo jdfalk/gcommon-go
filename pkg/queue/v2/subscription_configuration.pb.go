@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -399,7 +399,7 @@ const file_queue_v2_subscription_configuration_proto_rawDesc = "" +
 	"\x12expiration_seconds\x18\b \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x11expirationSeconds\x12/\n" +
 	"\x13duplicate_detection\x18\t \x01(\bR\x12duplicateDetection\x12>\n" +
 	"\x17max_message_age_seconds\x18\n" +
-	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x14maxMessageAgeSecondsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x14maxMessageAgeSecondsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_subscription_configuration_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_subscription_configuration_proto_goTypes = []any{

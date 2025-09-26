@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/query_metrics_request.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,13 +24,13 @@ const (
 )
 
 type QueryMetricsRequest struct {
-	state                       protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata         *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_Query            *MetricQuery           `protobuf:"bytes,2,opt,name=query"`
-	xxx_hidden_TimeoutSeconds   int32                  `protobuf:"varint,3,opt,name=timeout_seconds,json=timeoutSeconds"`
-	xxx_hidden_IncludeQueryPlan bool                   `protobuf:"varint,4,opt,name=include_query_plan,json=includeQueryPlan"`
-	xxx_hidden_MetadataOnly     bool                   `protobuf:"varint,5,opt,name=metadata_only,json=metadataOnly"`
-	xxx_hidden_OutputOptions    *QueryOutputOptions    `protobuf:"bytes,6,opt,name=output_options,json=outputOptions"`
+	state                       protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata         *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_Query            *MetricQuery            `protobuf:"bytes,2,opt,name=query"`
+	xxx_hidden_TimeoutSeconds   int32                   `protobuf:"varint,3,opt,name=timeout_seconds,json=timeoutSeconds"`
+	xxx_hidden_IncludeQueryPlan bool                    `protobuf:"varint,4,opt,name=include_query_plan,json=includeQueryPlan"`
+	xxx_hidden_MetadataOnly     bool                    `protobuf:"varint,5,opt,name=metadata_only,json=metadataOnly"`
+	xxx_hidden_OutputOptions    *QueryOutputOptions     `protobuf:"bytes,6,opt,name=output_options,json=outputOptions"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -62,7 +62,7 @@ func (x *QueryMetricsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *QueryMetricsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *QueryMetricsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -104,7 +104,7 @@ func (x *QueryMetricsRequest) GetOutputOptions() *QueryOutputOptions {
 	return nil
 }
 
-func (x *QueryMetricsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *QueryMetricsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -204,7 +204,7 @@ type QueryMetricsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Standard request metadata (tracing, auth, etc.)
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// The metric query to execute
 	Query *MetricQuery
 	// Optional query timeout in seconds
@@ -251,14 +251,14 @@ const file_metrics_v1_query_metrics_request_proto_rawDesc = "" +
 	"\x0ftimeout_seconds\x18\x03 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\x0etimeoutSeconds\x12,\n" +
 	"\x12include_query_plan\x18\x04 \x01(\bR\x10includeQueryPlan\x12#\n" +
 	"\rmetadata_only\x18\x05 \x01(\bR\fmetadataOnly\x12E\n" +
-	"\x0eoutput_options\x18\x06 \x01(\v2\x1e.metrics.v1.QueryOutputOptionsR\routputOptionsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eoutput_options\x18\x06 \x01(\v2\x1e.metrics.v1.QueryOutputOptionsR\routputOptionsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_metrics_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_metrics_request_proto_goTypes = []any{
-	(*QueryMetricsRequest)(nil), // 0: metrics.v1.QueryMetricsRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
-	(*MetricQuery)(nil),         // 2: metrics.v1.MetricQuery
-	(*QueryOutputOptions)(nil),  // 3: metrics.v1.QueryOutputOptions
+	(*QueryMetricsRequest)(nil),    // 0: metrics.v1.QueryMetricsRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*MetricQuery)(nil),            // 2: metrics.v1.MetricQuery
+	(*QueryOutputOptions)(nil),     // 3: metrics.v1.QueryOutputOptions
 }
 var file_metrics_v1_query_metrics_request_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.QueryMetricsRequest.metadata:type_name -> common.v1.RequestMetadata

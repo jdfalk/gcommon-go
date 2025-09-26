@@ -34,7 +34,7 @@ const file_common_v2_health_service_proto_rawDesc = "" +
 	"\fListServices\x12\x1e.common.v2.ListServicesRequest\x1a\x1f.common.v2.ListServicesResponse\x12R\n" +
 	"\rRegisterCheck\x12\x1f.common.v2.RegisterCheckRequest\x1a .common.v2.RegisterCheckResponse\x12X\n" +
 	"\x0fUnregisterCheck\x12!.common.v2.UnregisterCheckRequest\x1a\".common.v2.UnregisterCheckResponse\x12[\n" +
-	"\x10GetHealthMetrics\x12\".common.v2.GetHealthMetricsRequest\x1a#.common.v2.GetHealthMetricsResponseB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10GetHealthMetrics\x12\".common.v2.GetHealthMetricsRequest\x1a#.common.v2.GetHealthMetricsResponseB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_health_service_proto_goTypes = []any{
 	(*HealthHealthCheckRequest)(nil),  // 0: common.v2.HealthHealthCheckRequest

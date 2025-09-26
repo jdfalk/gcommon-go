@@ -261,7 +261,7 @@ const file_queue_v2_message_state_counts_proto_rawDesc = "" +
 	"\x06failed\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x06failed\x12#\n" +
 	"\bretrying\x18\x05 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\bretrying\x12(\n" +
 	"\vdead_letter\x18\x06 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\n" +
-	"deadLetterB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"deadLetterB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_message_state_counts_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_message_state_counts_proto_goTypes = []any{

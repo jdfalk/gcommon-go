@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/acknowledge_response.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,21 +25,21 @@ const (
 )
 
 type AcknowledgeResponse struct {
-	state                               protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Success                  bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_AcknowledgedCount        int32                  `protobuf:"varint,2,opt,name=acknowledged_count,json=acknowledgedCount"`
-	xxx_hidden_FailedCount              int32                  `protobuf:"varint,3,opt,name=failed_count,json=failedCount"`
-	xxx_hidden_RequestMetadata          *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
-	xxx_hidden_QueueName                *string                `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
-	xxx_hidden_MessageResults           *[]*MessageAckResult   `protobuf:"bytes,13,rep,name=message_results,json=messageResults"`
-	xxx_hidden_ConsumerId               *string                `protobuf:"bytes,14,opt,name=consumer_id,json=consumerId"`
-	xxx_hidden_OperationTimeMs          int64                  `protobuf:"varint,15,opt,name=operation_time_ms,json=operationTimeMs"`
-	xxx_hidden_BatchMode                bool                   `protobuf:"varint,16,opt,name=batch_mode,json=batchMode"`
-	xxx_hidden_AlreadyAcknowledgedCount int32                  `protobuf:"varint,17,opt,name=already_acknowledged_count,json=alreadyAcknowledgedCount"`
-	xxx_hidden_ExpiredTimeoutCount      int32                  `protobuf:"varint,18,opt,name=expired_timeout_count,json=expiredTimeoutCount"`
-	xxx_hidden_Error                    *v1.Error              `protobuf:"bytes,61,opt,name=error"`
-	xxx_hidden_AcknowledgedAt           *timestamppb.Timestamp `protobuf:"bytes,51,opt,name=acknowledged_at,json=acknowledgedAt"`
-	xxx_hidden_ResponseGeneratedAt      *timestamppb.Timestamp `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
+	state                               protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Success                  bool                    `protobuf:"varint,1,opt,name=success"`
+	xxx_hidden_AcknowledgedCount        int32                   `protobuf:"varint,2,opt,name=acknowledged_count,json=acknowledgedCount"`
+	xxx_hidden_FailedCount              int32                   `protobuf:"varint,3,opt,name=failed_count,json=failedCount"`
+	xxx_hidden_RequestMetadata          *common.RequestMetadata `protobuf:"bytes,11,opt,name=request_metadata,json=requestMetadata"`
+	xxx_hidden_QueueName                *string                 `protobuf:"bytes,12,opt,name=queue_name,json=queueName"`
+	xxx_hidden_MessageResults           *[]*MessageAckResult    `protobuf:"bytes,13,rep,name=message_results,json=messageResults"`
+	xxx_hidden_ConsumerId               *string                 `protobuf:"bytes,14,opt,name=consumer_id,json=consumerId"`
+	xxx_hidden_OperationTimeMs          int64                   `protobuf:"varint,15,opt,name=operation_time_ms,json=operationTimeMs"`
+	xxx_hidden_BatchMode                bool                    `protobuf:"varint,16,opt,name=batch_mode,json=batchMode"`
+	xxx_hidden_AlreadyAcknowledgedCount int32                   `protobuf:"varint,17,opt,name=already_acknowledged_count,json=alreadyAcknowledgedCount"`
+	xxx_hidden_ExpiredTimeoutCount      int32                   `protobuf:"varint,18,opt,name=expired_timeout_count,json=expiredTimeoutCount"`
+	xxx_hidden_Error                    *common.Error           `protobuf:"bytes,61,opt,name=error"`
+	xxx_hidden_AcknowledgedAt           *timestamppb.Timestamp  `protobuf:"bytes,51,opt,name=acknowledged_at,json=acknowledgedAt"`
+	xxx_hidden_ResponseGeneratedAt      *timestamppb.Timestamp  `protobuf:"bytes,52,opt,name=response_generated_at,json=responseGeneratedAt"`
 	XXX_raceDetectHookData              protoimpl.RaceDetectHookData
 	XXX_presence                        [1]uint32
 	unknownFields                       protoimpl.UnknownFields
@@ -92,7 +92,7 @@ func (x *AcknowledgeResponse) GetFailedCount() int32 {
 	return 0
 }
 
-func (x *AcknowledgeResponse) GetRequestMetadata() *v1.RequestMetadata {
+func (x *AcknowledgeResponse) GetRequestMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_RequestMetadata
 	}
@@ -156,7 +156,7 @@ func (x *AcknowledgeResponse) GetExpiredTimeoutCount() int32 {
 	return 0
 }
 
-func (x *AcknowledgeResponse) GetError() *v1.Error {
+func (x *AcknowledgeResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -192,7 +192,7 @@ func (x *AcknowledgeResponse) SetFailedCount(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 14)
 }
 
-func (x *AcknowledgeResponse) SetRequestMetadata(v *v1.RequestMetadata) {
+func (x *AcknowledgeResponse) SetRequestMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_RequestMetadata = v
 }
 
@@ -230,7 +230,7 @@ func (x *AcknowledgeResponse) SetExpiredTimeoutCount(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 10, 14)
 }
 
-func (x *AcknowledgeResponse) SetError(v *v1.Error) {
+func (x *AcknowledgeResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -410,7 +410,7 @@ type AcknowledgeResponse_builder struct {
 	// *
 	// Request processing metadata including timing, request ID,
 	// and other observability information.
-	RequestMetadata *v1.RequestMetadata
+	RequestMetadata *common.RequestMetadata
 	// *
 	// Name of the queue where messages were acknowledged.
 	// Echoed from the request for verification.
@@ -441,7 +441,7 @@ type AcknowledgeResponse_builder struct {
 	// *
 	// Error information if the overall acknowledgment operation failed
 	// or completed with warnings.
-	Error *v1.Error
+	Error *common.Error
 	// *
 	// Timestamp when the acknowledgment operation was processed.
 	AcknowledgedAt *timestamppb.Timestamp
@@ -520,15 +520,15 @@ const file_queue_v1_acknowledge_response_proto_rawDesc = "" +
 	"\x15expired_timeout_count\x18\x12 \x01(\x05R\x13expiredTimeoutCount\x12&\n" +
 	"\x05error\x18= \x01(\v2\x10.common.v1.ErrorR\x05error\x12C\n" +
 	"\x0facknowledged_at\x183 \x01(\v2\x1a.google.protobuf.TimestampR\x0eacknowledgedAt\x12N\n" +
-	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15response_generated_at\x184 \x01(\v2\x1a.google.protobuf.TimestampR\x13responseGeneratedAtB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_acknowledge_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_acknowledge_response_proto_goTypes = []any{
-	(*AcknowledgeResponse)(nil),   // 0: queue.v1.AcknowledgeResponse
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*MessageAckResult)(nil),      // 2: queue.v1.MessageAckResult
-	(*v1.Error)(nil),              // 3: common.v1.Error
-	(*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
+	(*AcknowledgeResponse)(nil),    // 0: queue.v1.AcknowledgeResponse
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*MessageAckResult)(nil),       // 2: queue.v1.MessageAckResult
+	(*common.Error)(nil),           // 3: common.v1.Error
+	(*timestamppb.Timestamp)(nil),  // 4: google.protobuf.Timestamp
 }
 var file_queue_v1_acknowledge_response_proto_depIdxs = []int32{
 	1, // 0: queue.v1.AcknowledgeResponse.request_metadata:type_name -> common.v1.RequestMetadata

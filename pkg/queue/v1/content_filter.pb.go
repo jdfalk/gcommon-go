@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/content_filter.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -210,7 +210,7 @@ const file_queue_v1_content_filter_proto_rawDesc = "" +
 	"field_path\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tfieldPath\x12#\n" +
 	"\boperator\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\boperator\x12\x1d\n" +
 	"\x05value\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05value\x12%\n" +
-	"\x0ecase_sensitive\x18\x04 \x01(\bR\rcaseSensitiveB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0ecase_sensitive\x18\x04 \x01(\bR\rcaseSensitiveB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_content_filter_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_content_filter_proto_goTypes = []any{

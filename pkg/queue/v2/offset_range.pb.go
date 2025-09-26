@@ -137,7 +137,7 @@ const file_queue_v2_offset_range_proto_rawDesc = "" +
 	"\vOffsetRange\x12*\n" +
 	"\fstart_offset\x18\x01 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\vstartOffset\x12&\n" +
 	"\n" +
-	"end_offset\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tendOffsetB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"end_offset\x18\x02 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\tendOffsetB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_offset_range_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_offset_range_proto_goTypes = []any{

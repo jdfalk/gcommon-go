@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/numeric_format.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -89,7 +89,7 @@ const file_common_v1_numeric_format_proto_rawDesc = "" +
 	"\x16NUMERIC_FORMAT_DEFAULT\x10\x01\x12\x1d\n" +
 	"\x19NUMERIC_FORMAT_SCIENTIFIC\x10\x02\x12\x1e\n" +
 	"\x1aNUMERIC_FORMAT_ENGINEERING\x10\x03\x12\x1d\n" +
-	"\x19NUMERIC_FORMAT_PERCENTAGE\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x19NUMERIC_FORMAT_PERCENTAGE\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_numeric_format_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_numeric_format_proto_goTypes = []any{

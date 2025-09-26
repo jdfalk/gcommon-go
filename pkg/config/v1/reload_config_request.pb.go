@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/reload_config_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,9 +24,9 @@ const (
 )
 
 type ReloadConfigRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Namespace   *string                `protobuf:"bytes,1,opt,name=namespace"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Namespace   *string                 `protobuf:"bytes,1,opt,name=namespace"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -68,7 +68,7 @@ func (x *ReloadConfigRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *ReloadConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ReloadConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -80,7 +80,7 @@ func (x *ReloadConfigRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *ReloadConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ReloadConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -113,7 +113,7 @@ type ReloadConfigRequest_builder struct {
 	// Namespace to reload
 	Namespace *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ReloadConfigRequest_builder) Build() *ReloadConfigRequest {
@@ -135,12 +135,12 @@ const file_config_v1_reload_config_request_proto_rawDesc = "" +
 	"%config/v1/reload_config_request.proto\x12\tconfig.v1\x1a common/v1/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"t\n" +
 	"\x13ReloadConfigRequest\x12%\n" +
 	"\tnamespace\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x126\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_reload_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_reload_config_request_proto_goTypes = []any{
-	(*ReloadConfigRequest)(nil), // 0: config.v1.ReloadConfigRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*ReloadConfigRequest)(nil),    // 0: config.v1.ReloadConfigRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_config_v1_reload_config_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.ReloadConfigRequest.metadata:type_name -> common.v1.RequestMetadata

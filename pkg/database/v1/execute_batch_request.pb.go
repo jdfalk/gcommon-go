@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/execute_batch_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ type ExecuteBatchRequest struct {
 	xxx_hidden_Operations    *[]*DatabaseBatchOperation `protobuf:"bytes,1,rep,name=operations"`
 	xxx_hidden_Database      *string                    `protobuf:"bytes,2,opt,name=database"`
 	xxx_hidden_Options       *BatchExecuteOptions       `protobuf:"bytes,3,opt,name=options"`
-	xxx_hidden_Metadata      *v1.RequestMetadata        `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Metadata      *common.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
 	xxx_hidden_TransactionId *string                    `protobuf:"bytes,5,opt,name=transaction_id,json=transactionId"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
@@ -101,13 +101,13 @@ func (x *ExecuteBatchRequest) GetOptions() *BatchExecuteOptions {
 	return nil
 }
 
-func (x *ExecuteBatchRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ExecuteBatchRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 4)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -150,7 +150,7 @@ func (x *ExecuteBatchRequest) SetOptions(v *BatchExecuteOptions) {
 	}
 }
 
-func (x *ExecuteBatchRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ExecuteBatchRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
@@ -204,7 +204,7 @@ func (x *ExecuteBatchRequest) ClearOptions() {
 
 func (x *ExecuteBatchRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 func (x *ExecuteBatchRequest) ClearTransactionId() {
@@ -222,7 +222,7 @@ type ExecuteBatchRequest_builder struct {
 	// Batch execution options and configuration
 	Options *BatchExecuteOptions
 	// Request metadata for tracing and authentication
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Transaction ID if this batch is part of a transaction
 	TransactionId *string
 }
@@ -267,14 +267,14 @@ const file_database_v1_execute_batch_request_proto_rawDesc = "" +
 	"\bdatabase\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\bdatabase\x12>\n" +
 	"\aoptions\x18\x03 \x01(\v2 .database.v1.BatchExecuteOptionsB\x02(\x01R\aoptions\x12:\n" +
 	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x02(\x01R\bmetadata\x12.\n" +
-	"\x0etransaction_id\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0etransaction_id\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rtransactionIdB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_execute_batch_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_execute_batch_request_proto_goTypes = []any{
 	(*ExecuteBatchRequest)(nil),    // 0: database.v1.ExecuteBatchRequest
 	(*DatabaseBatchOperation)(nil), // 1: database.v1.DatabaseBatchOperation
 	(*BatchExecuteOptions)(nil),    // 2: database.v1.BatchExecuteOptions
-	(*v1.RequestMetadata)(nil),     // 3: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_database_v1_execute_batch_request_proto_depIdxs = []int32{
 	1, // 0: database.v1.ExecuteBatchRequest.operations:type_name -> database.v1.DatabaseBatchOperation

@@ -87,7 +87,7 @@ const file_common_v2_queue_type_proto_rawDesc = "" +
 	"\x11QUEUE_TYPE_MEMORY\x10\x01\x12\x14\n" +
 	"\x10QUEUE_TYPE_REDIS\x10\x02\x12\x13\n" +
 	"\x0fQUEUE_TYPE_NATS\x10\x03\x12\x14\n" +
-	"\x10QUEUE_TYPE_CLOUD\x10\x04B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10QUEUE_TYPE_CLOUD\x10\x04B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_queue_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_queue_type_proto_goTypes = []any{

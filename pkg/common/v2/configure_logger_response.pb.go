@@ -144,7 +144,7 @@ const file_common_v2_configure_logger_response_proto_rawDesc = "" +
 	")common/v2/configure_logger_response.proto\x12\tcommon.v2\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"Y\n" +
 	"\x17ConfigureLoggerResponse\x12\x1f\n" +
 	"\x06status\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06status\x12\x1d\n" +
-	"\x05error\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05errorB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_configure_logger_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_configure_logger_response_proto_goTypes = []any{

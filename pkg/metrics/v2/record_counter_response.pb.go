@@ -7,7 +7,7 @@
 package v2
 
 import (
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -215,7 +215,7 @@ const file_metrics_v2_record_counter_response_proto_rawDesc = "" +
 	"\vrecorded_at\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\n" +
 	"recordedAt\x12&\n" +
 	"\x05error\x18\x04 \x01(\v2\x10.common.v2.ErrorR\x05error\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v2.RequestMetadataR\bmetadataB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_record_counter_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_record_counter_response_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -204,7 +204,7 @@ const file_metrics_v2_buffer_config_proto_rawDesc = "" +
 	"\x0fmax_buffer_size\x18\x01 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\rmaxBufferSize\x12N\n" +
 	"\x11overflow_strategy\x18\x02 \x01(\x0e2!.common.v2.BufferOverflowStrategyR\x10overflowStrategy\x12%\n" +
 	"\x0epersist_buffer\x18\x03 \x01(\bR\rpersistBuffer\x121\n" +
-	"\x10max_memory_bytes\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0emaxMemoryBytesB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10max_memory_bytes\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0emaxMemoryBytesB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_buffer_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_buffer_config_proto_goTypes = []any{

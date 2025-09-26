@@ -355,7 +355,7 @@ const file_health_v2_liveness_check_proto_rawDesc = "" +
 	"\rinitial_delay\x18\a \x01(\v2\x19.google.protobuf.DurationR\finitialDelay\x129\n" +
 	"\n" +
 	"created_at\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x16\n" +
-	"\x06active\x18\t \x01(\bR\x06activeB-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06active\x18\t \x01(\bR\x06activeB1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_liveness_check_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v2_liveness_check_proto_goTypes = []any{

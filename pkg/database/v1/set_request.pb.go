@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/set_request.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -29,14 +29,14 @@ const (
 // Request to store a value in the cache.
 // Supports flexible expiration policies and namespace isolation.
 type SetRequest struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Key           *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_Value         *anypb.Any             `protobuf:"bytes,2,opt,name=value"`
-	xxx_hidden_Namespace     *string                `protobuf:"bytes,3,opt,name=namespace"`
-	xxx_hidden_Ttl           *durationpb.Duration   `protobuf:"bytes,4,opt,name=ttl"`
-	xxx_hidden_Metadata      *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
-	xxx_hidden_Overwrite     bool                   `protobuf:"varint,6,opt,name=overwrite"`
-	xxx_hidden_EntryMetadata map[string]string      `protobuf:"bytes,7,rep,name=entry_metadata,json=entryMetadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                    protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Key           *string                 `protobuf:"bytes,1,opt,name=key"`
+	xxx_hidden_Value         *anypb.Any              `protobuf:"bytes,2,opt,name=value"`
+	xxx_hidden_Namespace     *string                 `protobuf:"bytes,3,opt,name=namespace"`
+	xxx_hidden_Ttl           *durationpb.Duration    `protobuf:"bytes,4,opt,name=ttl"`
+	xxx_hidden_Metadata      *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
+	xxx_hidden_Overwrite     bool                    `protobuf:"varint,6,opt,name=overwrite"`
+	xxx_hidden_EntryMetadata map[string]string       `protobuf:"bytes,7,rep,name=entry_metadata,json=entryMetadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -118,13 +118,13 @@ func (x *SetRequest) GetTtl() *durationpb.Duration {
 	return nil
 }
 
-func (x *SetRequest) GetMetadata() *v1.RequestMetadata {
+func (x *SetRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 4) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 5)
 			}
-			var rv *v1.RequestMetadata
+			var rv *common.RequestMetadata
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -174,7 +174,7 @@ func (x *SetRequest) SetTtl(v *durationpb.Duration) {
 	}
 }
 
-func (x *SetRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *SetRequest) SetMetadata(v *common.RequestMetadata) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
@@ -256,7 +256,7 @@ func (x *SetRequest) ClearTtl() {
 
 func (x *SetRequest) ClearMetadata() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 4)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*v1.RequestMetadata)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Metadata, (*common.RequestMetadata)(nil))
 }
 
 func (x *SetRequest) ClearOverwrite() {
@@ -276,7 +276,7 @@ type SetRequest_builder struct {
 	// Time-to-live for the cache entry (0 for no expiration)
 	Ttl *durationpb.Duration
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Whether to overwrite existing value
 	Overwrite *bool
 	// Entry metadata for extensibility
@@ -331,15 +331,15 @@ const file_database_v1_set_request_proto_rawDesc = "" +
 	"\x0eentry_metadata\x18\a \x03(\v2*.database.v1.SetRequest.EntryMetadataEntryB\x02(\x01R\rentryMetadata\x1a@\n" +
 	"\x12EntryMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_set_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_database_v1_set_request_proto_goTypes = []any{
-	(*SetRequest)(nil),          // 0: database.v1.SetRequest
-	nil,                         // 1: database.v1.SetRequest.EntryMetadataEntry
-	(*anypb.Any)(nil),           // 2: google.protobuf.Any
-	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
-	(*v1.RequestMetadata)(nil),  // 4: common.v1.RequestMetadata
+	(*SetRequest)(nil),             // 0: database.v1.SetRequest
+	nil,                            // 1: database.v1.SetRequest.EntryMetadataEntry
+	(*anypb.Any)(nil),              // 2: google.protobuf.Any
+	(*durationpb.Duration)(nil),    // 3: google.protobuf.Duration
+	(*common.RequestMetadata)(nil), // 4: common.v1.RequestMetadata
 }
 var file_database_v1_set_request_proto_depIdxs = []int32{
 	2, // 0: database.v1.SetRequest.value:type_name -> google.protobuf.Any

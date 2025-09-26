@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/transaction_status_response.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type TransactionStatusResponse struct {
 	state             protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Status *string                `protobuf:"bytes,1,opt,name=status"`
-	xxx_hidden_Error  *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error  *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -72,13 +72,13 @@ func (x *TransactionStatusResponse) GetStatus() string {
 	return ""
 }
 
-func (x *TransactionStatusResponse) GetError() *v1.Error {
+func (x *TransactionStatusResponse) GetError() *common.Error {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Error) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.Error
+			var rv *common.Error
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Error), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -91,7 +91,7 @@ func (x *TransactionStatusResponse) SetStatus(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *TransactionStatusResponse) SetError(v *v1.Error) {
+func (x *TransactionStatusResponse) SetError(v *common.Error) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -121,7 +121,7 @@ func (x *TransactionStatusResponse) ClearStatus() {
 
 func (x *TransactionStatusResponse) ClearError() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*v1.Error)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Error, (*common.Error)(nil))
 }
 
 type TransactionStatusResponse_builder struct {
@@ -130,7 +130,7 @@ type TransactionStatusResponse_builder struct {
 	// Current status of the transaction (e.g., ACTIVE, COMMITTED, ROLLED_BACK)
 	Status *string
 	// Error information if the transaction encountered an issue
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 TransactionStatusResponse_builder) Build() *TransactionStatusResponse {
@@ -155,12 +155,12 @@ const file_database_v1_transaction_status_response_proto_rawDesc = "" +
 	"-database/v1/transaction_status_response.proto\x12\vdatabase.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"h\n" +
 	"\x19TransactionStatusResponse\x12\x1f\n" +
 	"\x06status\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06status\x12*\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorB\x02(\x01R\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_transaction_status_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_transaction_status_response_proto_goTypes = []any{
 	(*TransactionStatusResponse)(nil), // 0: database.v1.TransactionStatusResponse
-	(*v1.Error)(nil),                  // 1: common.v1.Error
+	(*common.Error)(nil),              // 1: common.v1.Error
 }
 var file_database_v1_transaction_status_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.TransactionStatusResponse.error:type_name -> common.v1.Error

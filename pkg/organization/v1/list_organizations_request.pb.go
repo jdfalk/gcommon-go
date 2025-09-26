@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/list_organizations_request.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type ListOrganizationsRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,1,opt,name=metadata"`
-	xxx_hidden_PageSize    int32                  `protobuf:"varint,2,opt,name=page_size,json=pageSize"`
-	xxx_hidden_PageToken   *string                `protobuf:"bytes,3,opt,name=page_token,json=pageToken"`
-	xxx_hidden_Filter      *string                `protobuf:"bytes,4,opt,name=filter"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,1,opt,name=metadata"`
+	xxx_hidden_PageSize    int32                   `protobuf:"varint,2,opt,name=page_size,json=pageSize"`
+	xxx_hidden_PageToken   *string                 `protobuf:"bytes,3,opt,name=page_token,json=pageToken"`
+	xxx_hidden_Filter      *string                 `protobuf:"bytes,4,opt,name=filter"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -60,7 +60,7 @@ func (x *ListOrganizationsRequest) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListOrganizationsRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListOrganizationsRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -94,7 +94,7 @@ func (x *ListOrganizationsRequest) GetFilter() string {
 	return ""
 }
 
-func (x *ListOrganizationsRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListOrganizationsRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -164,7 +164,7 @@ type ListOrganizationsRequest_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Request metadata for tracing and context
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Pagination size
 	PageSize *int32
 	// Pagination token from previous response
@@ -204,12 +204,12 @@ const file_organization_v1_list_organizations_request_proto_rawDesc = "" +
 	"\xbaH\a\x1a\x05\x18\x96\x01(\x00R\bpageSize\x12&\n" +
 	"\n" +
 	"page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tpageToken\x12\x1f\n" +
-	"\x06filter\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06filterB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06filter\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06filterB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_list_organizations_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_list_organizations_request_proto_goTypes = []any{
 	(*ListOrganizationsRequest)(nil), // 0: organization.v1.ListOrganizationsRequest
-	(*v1.RequestMetadata)(nil),       // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),   // 1: common.v1.RequestMetadata
 }
 var file_organization_v1_list_organizations_request_proto_depIdxs = []int32{
 	1, // 0: organization.v1.ListOrganizationsRequest.metadata:type_name -> common.v1.RequestMetadata

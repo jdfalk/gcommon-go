@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_info.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -265,7 +265,7 @@ const file_metrics_v1_metric_info_proto_rawDesc = "" +
 	"\x11data_volume_bytes\x18\x04 \x01(\x03R\x0fdataVolumeBytes\x12\x1d\n" +
 	"\n" +
 	"error_rate\x18\x05 \x01(\x01R\terrorRate\x12=\n" +
-	"\flast_updated\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vlastUpdatedB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\flast_updated\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\vlastUpdatedB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metric_info_proto_goTypes = []any{

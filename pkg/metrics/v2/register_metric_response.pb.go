@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -373,7 +373,7 @@ const file_metrics_v2_register_metric_response_proto_rawDesc = "" +
 	"\x06result\x18\b \x01(\v2\x1e.metrics.v2.RegistrationResultR\x06result\x12\x1a\n" +
 	"\bwarnings\x18\t \x03(\tR\bwarnings\x12+\n" +
 	"\x11replaced_existing\x18\n" +
-	" \x01(\bR\x10replacedExistingB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\bR\x10replacedExistingB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_register_metric_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_register_metric_response_proto_goTypes = []any{

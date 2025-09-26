@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/validate_subtitles_request.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -203,7 +203,7 @@ const file_media_v1_validate_subtitles_request_proto_rawDesc = "" +
 	"\x10subtitle_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x0esubtitleFileId\x12!\n" +
 	"\fcheck_timing\x18\x02 \x01(\bR\vcheckTiming\x12)\n" +
 	"\x10check_formatting\x18\x03 \x01(\bR\x0fcheckFormatting\x12'\n" +
-	"\x0fexpected_format\x18\x04 \x01(\tR\x0eexpectedFormatB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0fexpected_format\x18\x04 \x01(\tR\x0eexpectedFormatB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_validate_subtitles_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_validate_subtitles_request_proto_goTypes = []any{

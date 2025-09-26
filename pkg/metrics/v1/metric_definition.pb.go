@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metric_definition.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,17 +24,17 @@ const (
 )
 
 type MetricDefinition struct {
-	state                   protoimpl.MessageState           `protogen:"opaque.v1"`
-	xxx_hidden_Name         *string                          `protobuf:"bytes,1,opt,name=name"`
-	xxx_hidden_Type         v1.MetricsMetricType             `protobuf:"varint,2,opt,name=type,enum=common.v1.MetricsMetricType"`
-	xxx_hidden_Description  *string                          `protobuf:"bytes,3,opt,name=description"`
-	xxx_hidden_Unit         *string                          `protobuf:"bytes,4,opt,name=unit"`
-	xxx_hidden_Labels       *[]*LabelDefinition              `protobuf:"bytes,5,rep,name=labels"`
-	xxx_hidden_Config       *MetricTypeConfig                `protobuf:"bytes,6,opt,name=config"`
-	xxx_hidden_Retention    *v1.MetricsRetentionPolicyConfig `protobuf:"bytes,7,opt,name=retention"`
-	xxx_hidden_ExportConfig *ExportConfig                    `protobuf:"bytes,8,opt,name=export_config,json=exportConfig"`
-	xxx_hidden_Validation   *ValidationRules                 `protobuf:"bytes,9,opt,name=validation"`
-	xxx_hidden_Tags         map[string]string                `protobuf:"bytes,10,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                   protoimpl.MessageState               `protogen:"opaque.v1"`
+	xxx_hidden_Name         *string                              `protobuf:"bytes,1,opt,name=name"`
+	xxx_hidden_Type         common.MetricsMetricType             `protobuf:"varint,2,opt,name=type,enum=common.v1.MetricsMetricType"`
+	xxx_hidden_Description  *string                              `protobuf:"bytes,3,opt,name=description"`
+	xxx_hidden_Unit         *string                              `protobuf:"bytes,4,opt,name=unit"`
+	xxx_hidden_Labels       *[]*LabelDefinition                  `protobuf:"bytes,5,rep,name=labels"`
+	xxx_hidden_Config       *MetricTypeConfig                    `protobuf:"bytes,6,opt,name=config"`
+	xxx_hidden_Retention    *common.MetricsRetentionPolicyConfig `protobuf:"bytes,7,opt,name=retention"`
+	xxx_hidden_ExportConfig *ExportConfig                        `protobuf:"bytes,8,opt,name=export_config,json=exportConfig"`
+	xxx_hidden_Validation   *ValidationRules                     `protobuf:"bytes,9,opt,name=validation"`
+	xxx_hidden_Tags         map[string]string                    `protobuf:"bytes,10,rep,name=tags" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData  protoimpl.RaceDetectHookData
 	XXX_presence            [1]uint32
 	unknownFields           protoimpl.UnknownFields
@@ -76,13 +76,13 @@ func (x *MetricDefinition) GetName() string {
 	return ""
 }
 
-func (x *MetricDefinition) GetType() v1.MetricsMetricType {
+func (x *MetricDefinition) GetType() common.MetricsMetricType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.MetricsMetricType(0)
+	return common.MetricsMetricType(0)
 }
 
 func (x *MetricDefinition) GetDescription() string {
@@ -121,7 +121,7 @@ func (x *MetricDefinition) GetConfig() *MetricTypeConfig {
 	return nil
 }
 
-func (x *MetricDefinition) GetRetention() *v1.MetricsRetentionPolicyConfig {
+func (x *MetricDefinition) GetRetention() *common.MetricsRetentionPolicyConfig {
 	if x != nil {
 		return x.xxx_hidden_Retention
 	}
@@ -154,7 +154,7 @@ func (x *MetricDefinition) SetName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 10)
 }
 
-func (x *MetricDefinition) SetType(v v1.MetricsMetricType) {
+func (x *MetricDefinition) SetType(v common.MetricsMetricType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 10)
 }
@@ -177,7 +177,7 @@ func (x *MetricDefinition) SetConfig(v *MetricTypeConfig) {
 	x.xxx_hidden_Config = v
 }
 
-func (x *MetricDefinition) SetRetention(v *v1.MetricsRetentionPolicyConfig) {
+func (x *MetricDefinition) SetRetention(v *common.MetricsRetentionPolicyConfig) {
 	x.xxx_hidden_Retention = v
 }
 
@@ -256,7 +256,7 @@ func (x *MetricDefinition) ClearName() {
 
 func (x *MetricDefinition) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Type = v1.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.MetricsMetricType_METRIC_TYPE_UNSPECIFIED
 }
 
 func (x *MetricDefinition) ClearDescription() {
@@ -291,7 +291,7 @@ type MetricDefinition_builder struct {
 	// Unique name for the metric
 	Name *string
 	// Type of metric (counter, gauge, histogram, etc.)
-	Type *v1.MetricsMetricType
+	Type *common.MetricsMetricType
 	// Human-readable description
 	Description *string
 	// Unit of measurement (e.g., "bytes", "requests", "seconds")
@@ -301,7 +301,7 @@ type MetricDefinition_builder struct {
 	// Metric-specific configuration
 	Config *MetricTypeConfig
 	// Retention policy for this metric
-	Retention *v1.MetricsRetentionPolicyConfig
+	Retention *common.MetricsRetentionPolicyConfig
 	// Export configuration for this metric
 	ExportConfig *ExportConfig
 	// Validation rules for metric values
@@ -361,18 +361,18 @@ const file_metrics_v1_metric_definition_proto_rawDesc = "" +
 	" \x03(\v2&.metrics.v1.MetricDefinition.TagsEntryR\x04tags\x1a7\n" +
 	"\tTagsEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metric_definition_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_metrics_v1_metric_definition_proto_goTypes = []any{
-	(*MetricDefinition)(nil),                // 0: metrics.v1.MetricDefinition
-	nil,                                     // 1: metrics.v1.MetricDefinition.TagsEntry
-	(v1.MetricsMetricType)(0),               // 2: common.v1.MetricsMetricType
-	(*LabelDefinition)(nil),                 // 3: metrics.v1.LabelDefinition
-	(*MetricTypeConfig)(nil),                // 4: metrics.v1.MetricTypeConfig
-	(*v1.MetricsRetentionPolicyConfig)(nil), // 5: common.v1.MetricsRetentionPolicyConfig
-	(*ExportConfig)(nil),                    // 6: metrics.v1.ExportConfig
-	(*ValidationRules)(nil),                 // 7: metrics.v1.ValidationRules
+	(*MetricDefinition)(nil),      // 0: metrics.v1.MetricDefinition
+	nil,                           // 1: metrics.v1.MetricDefinition.TagsEntry
+	(common.MetricsMetricType)(0), // 2: common.v1.MetricsMetricType
+	(*LabelDefinition)(nil),       // 3: metrics.v1.LabelDefinition
+	(*MetricTypeConfig)(nil),      // 4: metrics.v1.MetricTypeConfig
+	(*common.MetricsRetentionPolicyConfig)(nil), // 5: common.v1.MetricsRetentionPolicyConfig
+	(*ExportConfig)(nil),                        // 6: metrics.v1.ExportConfig
+	(*ValidationRules)(nil),                     // 7: metrics.v1.ValidationRules
 }
 var file_metrics_v1_metric_definition_proto_depIdxs = []int32{
 	2, // 0: metrics.v1.MetricDefinition.type:type_name -> common.v1.MetricsMetricType

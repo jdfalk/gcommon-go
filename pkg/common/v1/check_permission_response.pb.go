@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/check_permission_response.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -105,7 +105,7 @@ const file_common_v1_check_permission_response_proto_rawDesc = "" +
 	"\n" +
 	")common/v1/check_permission_response.proto\x12\tcommon.v1\x1a!google/protobuf/go_features.proto\"3\n" +
 	"\x17CheckPermissionResponse\x12\x18\n" +
-	"\aallowed\x18\x01 \x01(\bR\aallowedB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aallowed\x18\x01 \x01(\bR\aallowedB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_check_permission_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_check_permission_response_proto_goTypes = []any{

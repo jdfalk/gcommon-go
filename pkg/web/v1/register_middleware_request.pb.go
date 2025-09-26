@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/register_middleware_request.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type RegisterMiddlewareRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServerId    *string                `protobuf:"bytes,1,opt,name=server_id,json=serverId"`
-	xxx_hidden_Middleware  *MiddlewareConfig      `protobuf:"bytes,2,opt,name=middleware"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServerId    *string                 `protobuf:"bytes,1,opt,name=server_id,json=serverId"`
+	xxx_hidden_Middleware  *MiddlewareConfig       `protobuf:"bytes,2,opt,name=middleware"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -76,7 +76,7 @@ func (x *RegisterMiddlewareRequest) GetMiddleware() *MiddlewareConfig {
 	return nil
 }
 
-func (x *RegisterMiddlewareRequest) GetMetadata() *v1.RequestMetadata {
+func (x *RegisterMiddlewareRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -92,7 +92,7 @@ func (x *RegisterMiddlewareRequest) SetMiddleware(v *MiddlewareConfig) {
 	x.xxx_hidden_Middleware = v
 }
 
-func (x *RegisterMiddlewareRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *RegisterMiddlewareRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -138,7 +138,7 @@ type RegisterMiddlewareRequest_builder struct {
 	// Middleware configuration
 	Middleware *MiddlewareConfig
 	// Standard request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 RegisterMiddlewareRequest_builder) Build() *RegisterMiddlewareRequest {
@@ -164,13 +164,13 @@ const file_web_v1_register_middleware_request_proto_rawDesc = "" +
 	"\n" +
 	"middleware\x18\x02 \x01(\v2\x18.web.v1.MiddlewareConfigR\n" +
 	"middleware\x126\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_register_middleware_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_register_middleware_request_proto_goTypes = []any{
 	(*RegisterMiddlewareRequest)(nil), // 0: web.v1.RegisterMiddlewareRequest
 	(*MiddlewareConfig)(nil),          // 1: web.v1.MiddlewareConfig
-	(*v1.RequestMetadata)(nil),        // 2: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),    // 2: common.v1.RequestMetadata
 }
 var file_web_v1_register_middleware_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.RegisterMiddlewareRequest.middleware:type_name -> web.v1.MiddlewareConfig

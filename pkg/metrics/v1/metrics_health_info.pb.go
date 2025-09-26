@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/metrics_health_info.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,11 +25,11 @@ const (
 )
 
 type MetricsHealthInfo struct {
-	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_OverallStatus v1.CommonHealthStatus  `protobuf:"varint,1,opt,name=overall_status,json=overallStatus,enum=common.v1.CommonHealthStatus"`
-	xxx_hidden_HealthChecks  []string               `protobuf:"bytes,2,rep,name=health_checks,json=healthChecks"`
-	xxx_hidden_Warnings      []string               `protobuf:"bytes,3,rep,name=warnings"`
-	xxx_hidden_LastCheck     *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=last_check,json=lastCheck"`
+	state                    protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_OverallStatus common.CommonHealthStatus `protobuf:"varint,1,opt,name=overall_status,json=overallStatus,enum=common.v1.CommonHealthStatus"`
+	xxx_hidden_HealthChecks  []string                  `protobuf:"bytes,2,rep,name=health_checks,json=healthChecks"`
+	xxx_hidden_Warnings      []string                  `protobuf:"bytes,3,rep,name=warnings"`
+	xxx_hidden_LastCheck     *timestamppb.Timestamp    `protobuf:"bytes,4,opt,name=last_check,json=lastCheck"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -61,13 +61,13 @@ func (x *MetricsHealthInfo) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *MetricsHealthInfo) GetOverallStatus() v1.CommonHealthStatus {
+func (x *MetricsHealthInfo) GetOverallStatus() common.CommonHealthStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_OverallStatus
 		}
 	}
-	return v1.CommonHealthStatus(0)
+	return common.CommonHealthStatus(0)
 }
 
 func (x *MetricsHealthInfo) GetHealthChecks() []string {
@@ -91,7 +91,7 @@ func (x *MetricsHealthInfo) GetLastCheck() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *MetricsHealthInfo) SetOverallStatus(v v1.CommonHealthStatus) {
+func (x *MetricsHealthInfo) SetOverallStatus(v common.CommonHealthStatus) {
 	x.xxx_hidden_OverallStatus = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -124,7 +124,7 @@ func (x *MetricsHealthInfo) HasLastCheck() bool {
 
 func (x *MetricsHealthInfo) ClearOverallStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_OverallStatus = v1.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
+	x.xxx_hidden_OverallStatus = common.CommonHealthStatus_HEALTH_STATUS_UNSPECIFIED
 }
 
 func (x *MetricsHealthInfo) ClearLastCheck() {
@@ -134,7 +134,7 @@ func (x *MetricsHealthInfo) ClearLastCheck() {
 type MetricsHealthInfo_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
-	OverallStatus *v1.CommonHealthStatus
+	OverallStatus *common.CommonHealthStatus
 	HealthChecks  []string
 	Warnings      []string
 	LastCheck     *timestamppb.Timestamp
@@ -165,13 +165,13 @@ const file_metrics_v1_metrics_health_info_proto_rawDesc = "" +
 	"\rhealth_checks\x18\x02 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\fhealthChecks\x12$\n" +
 	"\bwarnings\x18\x03 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\bwarnings\x129\n" +
 	"\n" +
-	"last_check\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"last_check\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampR\tlastCheckB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_metrics_health_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_metrics_health_info_proto_goTypes = []any{
-	(*MetricsHealthInfo)(nil),     // 0: metrics.v1.MetricsHealthInfo
-	(v1.CommonHealthStatus)(0),    // 1: common.v1.CommonHealthStatus
-	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
+	(*MetricsHealthInfo)(nil),      // 0: metrics.v1.MetricsHealthInfo
+	(common.CommonHealthStatus)(0), // 1: common.v1.CommonHealthStatus
+	(*timestamppb.Timestamp)(nil),  // 2: google.protobuf.Timestamp
 }
 var file_metrics_v1_metrics_health_info_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.MetricsHealthInfo.overall_status:type_name -> common.v1.CommonHealthStatus

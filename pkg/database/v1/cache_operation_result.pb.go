@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: database/v1/cache_operation_result.proto
 
-package v1
+package database
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -36,7 +36,7 @@ type CacheOperationResult struct {
 	xxx_hidden_DurationMicroseconds int64                  `protobuf:"varint,5,opt,name=duration_microseconds,json=durationMicroseconds"`
 	xxx_hidden_Timestamp            *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=timestamp"`
 	xxx_hidden_ItemsAffected        int64                  `protobuf:"varint,7,opt,name=items_affected,json=itemsAffected"`
-	xxx_hidden_Error                *v1.Error              `protobuf:"bytes,8,opt,name=error"`
+	xxx_hidden_Error                *common.Error          `protobuf:"bytes,8,opt,name=error"`
 	xxx_hidden_Metadata             map[string]string      `protobuf:"bytes,9,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData          protoimpl.RaceDetectHookData
 	XXX_presence                    [1]uint32
@@ -127,7 +127,7 @@ func (x *CacheOperationResult) GetItemsAffected() int64 {
 	return 0
 }
 
-func (x *CacheOperationResult) GetError() *v1.Error {
+func (x *CacheOperationResult) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -175,7 +175,7 @@ func (x *CacheOperationResult) SetItemsAffected(v int64) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 9)
 }
 
-func (x *CacheOperationResult) SetError(v *v1.Error) {
+func (x *CacheOperationResult) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -295,7 +295,7 @@ type CacheOperationResult_builder struct {
 	// Number of items affected
 	ItemsAffected *int64
 	// Error details if operation failed
-	Error *v1.Error
+	Error *common.Error
 	// Additional operation metadata
 	Metadata map[string]string
 }
@@ -351,14 +351,14 @@ const file_database_v1_cache_operation_result_proto_rawDesc = "" +
 	"\bmetadata\x18\t \x03(\v2/.database.v1.CacheOperationResult.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_cache_operation_result_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_database_v1_cache_operation_result_proto_goTypes = []any{
 	(*CacheOperationResult)(nil),  // 0: database.v1.CacheOperationResult
 	nil,                           // 1: database.v1.CacheOperationResult.MetadataEntry
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
-	(*v1.Error)(nil),              // 3: common.v1.Error
+	(*common.Error)(nil),          // 3: common.v1.Error
 }
 var file_database_v1_cache_operation_result_proto_depIdxs = []int32{
 	2, // 0: database.v1.CacheOperationResult.timestamp:type_name -> google.protobuf.Timestamp

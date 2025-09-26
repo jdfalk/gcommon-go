@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/failed_ack.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -179,7 +179,7 @@ const file_queue_v1_failed_ack_proto_rawDesc = "" +
 	"message_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tmessageId\x12*\n" +
 	"\ferror_reason\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\verrorReason\x12&\n" +
 	"\n" +
-	"error_code\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\terrorCodeB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"error_code\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\terrorCodeB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_failed_ack_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_failed_ack_proto_goTypes = []any{

@@ -94,7 +94,7 @@ const file_common_v2_permission_scope_proto_rawDesc = "" +
 	"\x1dPERMISSION_SCOPE_ORGANIZATION\x10\x02\x12\x1c\n" +
 	"\x18PERMISSION_SCOPE_PROJECT\x10\x03\x12\x1d\n" +
 	"\x19PERMISSION_SCOPE_RESOURCE\x10\x04\x12\x19\n" +
-	"\x15PERMISSION_SCOPE_USER\x10\x05B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x15PERMISSION_SCOPE_USER\x10\x05B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_permission_scope_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_permission_scope_proto_goTypes = []any{

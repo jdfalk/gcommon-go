@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/provider_statistics.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,17 +24,17 @@ const (
 )
 
 type ProviderStatistics struct {
-	state                    protoimpl.MessageState   `protogen:"opaque.v1"`
-	xxx_hidden_ProviderInfo  *ProviderInfo            `protobuf:"bytes,1,opt,name=provider_info,json=providerInfo"`
-	xxx_hidden_Performance   *MetricsPerformanceStats `protobuf:"bytes,2,opt,name=performance"`
-	xxx_hidden_ResourceUsage *ResourceUsageStats      `protobuf:"bytes,3,opt,name=resource_usage,json=resourceUsage"`
-	xxx_hidden_Errors        *v1.MetricsErrorStats    `protobuf:"bytes,4,opt,name=errors"`
-	xxx_hidden_DataVolume    *DataVolumeStats         `protobuf:"bytes,5,opt,name=data_volume,json=dataVolume"`
-	xxx_hidden_Exports       *ExportStats             `protobuf:"bytes,6,opt,name=exports"`
-	xxx_hidden_HealthHistory *[]*HealthStatusEntry    `protobuf:"bytes,7,rep,name=health_history,json=healthHistory"`
-	xxx_hidden_Config        *ConfigurationSummary    `protobuf:"bytes,8,opt,name=config"`
-	xxx_hidden_TopMetrics    *TopMetrics              `protobuf:"bytes,9,opt,name=top_metrics,json=topMetrics"`
-	xxx_hidden_Trends        *TrendAnalysis           `protobuf:"bytes,10,opt,name=trends"`
+	state                    protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_ProviderInfo  *ProviderInfo             `protobuf:"bytes,1,opt,name=provider_info,json=providerInfo"`
+	xxx_hidden_Performance   *MetricsPerformanceStats  `protobuf:"bytes,2,opt,name=performance"`
+	xxx_hidden_ResourceUsage *ResourceUsageStats       `protobuf:"bytes,3,opt,name=resource_usage,json=resourceUsage"`
+	xxx_hidden_Errors        *common.MetricsErrorStats `protobuf:"bytes,4,opt,name=errors"`
+	xxx_hidden_DataVolume    *DataVolumeStats          `protobuf:"bytes,5,opt,name=data_volume,json=dataVolume"`
+	xxx_hidden_Exports       *ExportStats              `protobuf:"bytes,6,opt,name=exports"`
+	xxx_hidden_HealthHistory *[]*HealthStatusEntry     `protobuf:"bytes,7,rep,name=health_history,json=healthHistory"`
+	xxx_hidden_Config        *ConfigurationSummary     `protobuf:"bytes,8,opt,name=config"`
+	xxx_hidden_TopMetrics    *TopMetrics               `protobuf:"bytes,9,opt,name=top_metrics,json=topMetrics"`
+	xxx_hidden_Trends        *TrendAnalysis            `protobuf:"bytes,10,opt,name=trends"`
 	unknownFields            protoimpl.UnknownFields
 	sizeCache                protoimpl.SizeCache
 }
@@ -85,7 +85,7 @@ func (x *ProviderStatistics) GetResourceUsage() *ResourceUsageStats {
 	return nil
 }
 
-func (x *ProviderStatistics) GetErrors() *v1.MetricsErrorStats {
+func (x *ProviderStatistics) GetErrors() *common.MetricsErrorStats {
 	if x != nil {
 		return x.xxx_hidden_Errors
 	}
@@ -148,7 +148,7 @@ func (x *ProviderStatistics) SetResourceUsage(v *ResourceUsageStats) {
 	x.xxx_hidden_ResourceUsage = v
 }
 
-func (x *ProviderStatistics) SetErrors(v *v1.MetricsErrorStats) {
+func (x *ProviderStatistics) SetErrors(v *common.MetricsErrorStats) {
 	x.xxx_hidden_Errors = v
 }
 
@@ -285,7 +285,7 @@ type ProviderStatistics_builder struct {
 	// Resource usage statistics
 	ResourceUsage *ResourceUsageStats
 	// Error statistics
-	Errors *v1.MetricsErrorStats
+	Errors *common.MetricsErrorStats
 	// Data volume statistics
 	DataVolume *DataVolumeStats
 	// Export statistics
@@ -336,21 +336,21 @@ const file_metrics_v1_provider_statistics_proto_rawDesc = "" +
 	"\vtop_metrics\x18\t \x01(\v2\x16.metrics.v1.TopMetricsR\n" +
 	"topMetrics\x121\n" +
 	"\x06trends\x18\n" +
-	" \x01(\v2\x19.metrics.v1.TrendAnalysisR\x06trendsB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	" \x01(\v2\x19.metrics.v1.TrendAnalysisR\x06trendsB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_statistics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_provider_statistics_proto_goTypes = []any{
-	(*ProviderStatistics)(nil),      // 0: metrics.v1.ProviderStatistics
-	(*ProviderInfo)(nil),            // 1: metrics.v1.ProviderInfo
-	(*MetricsPerformanceStats)(nil), // 2: metrics.v1.MetricsPerformanceStats
-	(*ResourceUsageStats)(nil),      // 3: metrics.v1.ResourceUsageStats
-	(*v1.MetricsErrorStats)(nil),    // 4: common.v1.MetricsErrorStats
-	(*DataVolumeStats)(nil),         // 5: metrics.v1.DataVolumeStats
-	(*ExportStats)(nil),             // 6: metrics.v1.ExportStats
-	(*HealthStatusEntry)(nil),       // 7: metrics.v1.HealthStatusEntry
-	(*ConfigurationSummary)(nil),    // 8: metrics.v1.ConfigurationSummary
-	(*TopMetrics)(nil),              // 9: metrics.v1.TopMetrics
-	(*TrendAnalysis)(nil),           // 10: metrics.v1.TrendAnalysis
+	(*ProviderStatistics)(nil),       // 0: metrics.v1.ProviderStatistics
+	(*ProviderInfo)(nil),             // 1: metrics.v1.ProviderInfo
+	(*MetricsPerformanceStats)(nil),  // 2: metrics.v1.MetricsPerformanceStats
+	(*ResourceUsageStats)(nil),       // 3: metrics.v1.ResourceUsageStats
+	(*common.MetricsErrorStats)(nil), // 4: common.v1.MetricsErrorStats
+	(*DataVolumeStats)(nil),          // 5: metrics.v1.DataVolumeStats
+	(*ExportStats)(nil),              // 6: metrics.v1.ExportStats
+	(*HealthStatusEntry)(nil),        // 7: metrics.v1.HealthStatusEntry
+	(*ConfigurationSummary)(nil),     // 8: metrics.v1.ConfigurationSummary
+	(*TopMetrics)(nil),               // 9: metrics.v1.TopMetrics
+	(*TrendAnalysis)(nil),            // 10: metrics.v1.TrendAnalysis
 }
 var file_metrics_v1_provider_statistics_proto_depIdxs = []int32{
 	1,  // 0: metrics.v1.ProviderStatistics.provider_info:type_name -> metrics.v1.ProviderInfo

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/export_destination_update.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -211,7 +211,7 @@ const file_metrics_v1_export_destination_update_proto_rawDesc = "" +
 	"\x03url\x18\x02 \x01(\tB\b\xbaH\x05r\x03\x88\x01\x01R\x03url\x12&\n" +
 	"\n" +
 	"auth_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tauthToken\x12\x18\n" +
-	"\aenabled\x18\x04 \x01(\bR\aenabledB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aenabled\x18\x04 \x01(\bR\aenabledB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_export_destination_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_export_destination_update_proto_goTypes = []any{

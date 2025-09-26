@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/list_teams_response.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type ListTeamsResponse struct {
-	state                 protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Errors     *[]*v1.Error           `protobuf:"bytes,1,rep,name=errors"`
-	xxx_hidden_Success    bool                   `protobuf:"varint,2,opt,name=success"`
-	xxx_hidden_Teams      *[]*Team               `protobuf:"bytes,3,rep,name=teams"`
-	xxx_hidden_Pagination *v1.PaginatedResponse  `protobuf:"bytes,4,opt,name=pagination"`
+	state                 protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Errors     *[]*common.Error          `protobuf:"bytes,1,rep,name=errors"`
+	xxx_hidden_Success    bool                      `protobuf:"varint,2,opt,name=success"`
+	xxx_hidden_Teams      *[]*Team                  `protobuf:"bytes,3,rep,name=teams"`
+	xxx_hidden_Pagination *common.PaginatedResponse `protobuf:"bytes,4,opt,name=pagination"`
 	// Deprecated: Do not use. This will be deleted in the near future.
 	XXX_lazyUnmarshalInfo  protoimpl.LazyUnmarshalInfo
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
@@ -62,7 +62,7 @@ func (x *ListTeamsResponse) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ListTeamsResponse) GetErrors() []*v1.Error {
+func (x *ListTeamsResponse) GetErrors() []*common.Error {
 	if x != nil {
 		if x.xxx_hidden_Errors != nil {
 			return *x.xxx_hidden_Errors
@@ -92,14 +92,14 @@ func (x *ListTeamsResponse) GetTeams() []*Team {
 	return nil
 }
 
-func (x *ListTeamsResponse) GetPagination() *v1.PaginatedResponse {
+func (x *ListTeamsResponse) GetPagination() *common.PaginatedResponse {
 	if x != nil {
 		return x.xxx_hidden_Pagination
 	}
 	return nil
 }
 
-func (x *ListTeamsResponse) SetErrors(v []*v1.Error) {
+func (x *ListTeamsResponse) SetErrors(v []*common.Error) {
 	x.xxx_hidden_Errors = &v
 }
 
@@ -119,7 +119,7 @@ func (x *ListTeamsResponse) SetTeams(v []*Team) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *ListTeamsResponse) SetPagination(v *v1.PaginatedResponse) {
+func (x *ListTeamsResponse) SetPagination(v *common.PaginatedResponse) {
 	x.xxx_hidden_Pagination = v
 }
 
@@ -150,13 +150,13 @@ type ListTeamsResponse_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Any errors encountered
-	Errors []*v1.Error
+	Errors []*common.Error
 	// Success status
 	Success *bool
 	// List of teams returned
 	Teams []*Team
 	// Pagination metadata
-	Pagination *v1.PaginatedResponse
+	Pagination *common.PaginatedResponse
 }
 
 func (b0 ListTeamsResponse_builder) Build() *ListTeamsResponse {
@@ -188,14 +188,14 @@ const file_organization_v1_list_teams_response_proto_rawDesc = "" +
 	"\xbaH\x05\x92\x01\x02\b\x01(\x01R\x05teams\x12<\n" +
 	"\n" +
 	"pagination\x18\x04 \x01(\v2\x1c.common.v1.PaginatedResponseR\n" +
-	"paginationB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"paginationB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_list_teams_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_list_teams_response_proto_goTypes = []any{
-	(*ListTeamsResponse)(nil),    // 0: organization.v1.ListTeamsResponse
-	(*v1.Error)(nil),             // 1: common.v1.Error
-	(*Team)(nil),                 // 2: organization.v1.Team
-	(*v1.PaginatedResponse)(nil), // 3: common.v1.PaginatedResponse
+	(*ListTeamsResponse)(nil),        // 0: organization.v1.ListTeamsResponse
+	(*common.Error)(nil),             // 1: common.v1.Error
+	(*Team)(nil),                     // 2: organization.v1.Team
+	(*common.PaginatedResponse)(nil), // 3: common.v1.PaginatedResponse
 }
 var file_organization_v1_list_teams_response_proto_depIdxs = []int32{
 	1, // 0: organization.v1.ListTeamsResponse.errors:type_name -> common.v1.Error

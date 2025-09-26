@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/file_sort_order.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -99,7 +99,7 @@ const file_common_v1_file_sort_order_proto_rawDesc = "" +
 	"\x18FILE_SORT_ORDER_SIZE_ASC\x10\x03\x12\x1d\n" +
 	"\x19FILE_SORT_ORDER_SIZE_DESC\x10\x04\x12 \n" +
 	"\x1cFILE_SORT_ORDER_MODIFIED_ASC\x10\x05\x12!\n" +
-	"\x1dFILE_SORT_ORDER_MODIFIED_DESC\x10\x06B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1dFILE_SORT_ORDER_MODIFIED_DESC\x10\x06B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_file_sort_order_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_file_sort_order_proto_goTypes = []any{

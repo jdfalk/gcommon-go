@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/resume_queue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,12 +27,12 @@ const (
 // Request to resume a paused queue.
 // Restarts message processing for a previously paused queue.
 type ResumeQueueRequest struct {
-	state                             protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName              *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Reason                 *string                `protobuf:"bytes,2,opt,name=reason"`
-	xxx_hidden_Metadata               *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
-	xxx_hidden_PartitionIds           []int32                `protobuf:"varint,4,rep,packed,name=partition_ids,json=partitionIds"`
-	xxx_hidden_ResumeFromLastPosition bool                   `protobuf:"varint,5,opt,name=resume_from_last_position,json=resumeFromLastPosition"`
+	state                             protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName              *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Reason                 *string                 `protobuf:"bytes,2,opt,name=reason"`
+	xxx_hidden_Metadata               *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
+	xxx_hidden_PartitionIds           []int32                 `protobuf:"varint,4,rep,packed,name=partition_ids,json=partitionIds"`
+	xxx_hidden_ResumeFromLastPosition bool                    `protobuf:"varint,5,opt,name=resume_from_last_position,json=resumeFromLastPosition"`
 	XXX_raceDetectHookData            protoimpl.RaceDetectHookData
 	XXX_presence                      [1]uint32
 	unknownFields                     protoimpl.UnknownFields
@@ -84,7 +84,7 @@ func (x *ResumeQueueRequest) GetReason() string {
 	return ""
 }
 
-func (x *ResumeQueueRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ResumeQueueRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -115,7 +115,7 @@ func (x *ResumeQueueRequest) SetReason(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 5)
 }
 
-func (x *ResumeQueueRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ResumeQueueRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -183,7 +183,7 @@ type ResumeQueueRequest_builder struct {
 	// Reason for resuming the queue
 	Reason *string
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Whether to resume specific partitions only
 	PartitionIds []int32
 	// Whether to start processing from where it left off
@@ -222,12 +222,12 @@ const file_queue_v1_resume_queue_request_proto_rawDesc = "" +
 	"\x06reason\x18\x02 \x01(\tR\x06reason\x126\n" +
 	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12#\n" +
 	"\rpartition_ids\x18\x04 \x03(\x05R\fpartitionIds\x129\n" +
-	"\x19resume_from_last_position\x18\x05 \x01(\bR\x16resumeFromLastPositionB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x19resume_from_last_position\x18\x05 \x01(\bR\x16resumeFromLastPositionB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_resume_queue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_resume_queue_request_proto_goTypes = []any{
-	(*ResumeQueueRequest)(nil), // 0: queue.v1.ResumeQueueRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*ResumeQueueRequest)(nil),     // 0: queue.v1.ResumeQueueRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_resume_queue_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.ResumeQueueRequest.metadata:type_name -> common.v1.RequestMetadata

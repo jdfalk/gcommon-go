@@ -186,7 +186,7 @@ const file_metrics_v2_validation_rules_proto_rawDesc = "" +
 	"\tmax_value\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\bmaxValue\x12\x1d\n" +
 	"\n" +
 	"allow_null\x18\x03 \x01(\bR\tallowNull\x12?\n" +
-	"\x16validation_expressions\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15validationExpressionsB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x16validation_expressions\x18\x04 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x15validationExpressionsB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_validation_rules_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_validation_rules_proto_goTypes = []any{

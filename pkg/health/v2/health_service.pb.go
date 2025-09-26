@@ -29,7 +29,7 @@ const file_health_v2_health_service_proto_rawDesc = "" +
 	"\rHealthService\x12F\n" +
 	"\x05Check\x12\x1d.health.v2.HealthCheckRequest\x1a\x1e.health.v2.HealthCheckResponse\x12U\n" +
 	"\x0eCheckReadiness\x12 .health.v2.ReadinessCheckRequest\x1a!.health.v2.ReadinessCheckResponse\x12N\n" +
-	"\vWatchHealth\x12\x1d.health.v2.WatchHealthRequest\x1a\x1e.health.v2.WatchHealthResponse0\x01B-Z#github.com/jdfalk/gcommon/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\vWatchHealth\x12\x1d.health.v2.WatchHealthRequest\x1a\x1e.health.v2.WatchHealthResponse0\x01B1Z'github.com/jdfalk/gcommon/pkg/health/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v2_health_service_proto_goTypes = []any{
 	(*HealthCheckRequest)(nil),     // 0: health.v2.HealthCheckRequest

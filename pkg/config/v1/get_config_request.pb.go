@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/get_config_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,11 +26,11 @@ const (
 // *
 // GetConfigRequest retrieves a single configuration value.
 type GetConfigRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Key         *string                `protobuf:"bytes,1,opt,name=key"`
-	xxx_hidden_Namespace   *string                `protobuf:"bytes,2,opt,name=namespace"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
-	xxx_hidden_Decrypt     bool                   `protobuf:"varint,4,opt,name=decrypt"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Key         *string                 `protobuf:"bytes,1,opt,name=key"`
+	xxx_hidden_Namespace   *string                 `protobuf:"bytes,2,opt,name=namespace"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
+	xxx_hidden_Decrypt     bool                    `protobuf:"varint,4,opt,name=decrypt"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -82,7 +82,7 @@ func (x *GetConfigRequest) GetNamespace() string {
 	return ""
 }
 
-func (x *GetConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -106,7 +106,7 @@ func (x *GetConfigRequest) SetNamespace(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
 
-func (x *GetConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -170,7 +170,7 @@ type GetConfigRequest_builder struct {
 	// Optional namespace/environment
 	Namespace *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Whether to decrypt encrypted values
 	Decrypt *bool
 }
@@ -204,12 +204,12 @@ const file_config_v1_get_config_request_proto_rawDesc = "" +
 	"\x03key\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x03key\x12%\n" +
 	"\tnamespace\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x126\n" +
 	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12\x18\n" +
-	"\adecrypt\x18\x04 \x01(\bR\adecryptB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\adecrypt\x18\x04 \x01(\bR\adecryptB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_config_request_proto_goTypes = []any{
-	(*GetConfigRequest)(nil),   // 0: config.v1.GetConfigRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*GetConfigRequest)(nil),       // 0: config.v1.GetConfigRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_config_v1_get_config_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.GetConfigRequest.metadata:type_name -> common.v1.RequestMetadata

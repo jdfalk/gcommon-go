@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: organization/v1/organization_hierarchy.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,12 +28,12 @@ type OrganizationHierarchy struct {
 	state                     protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Id             *string                `protobuf:"bytes,1,opt,name=id"`
 	xxx_hidden_OrganizationId *string                `protobuf:"bytes,2,opt,name=organization_id,json=organizationId"`
-	xxx_hidden_HierarchyType  v1.HierarchyType       `protobuf:"varint,3,opt,name=hierarchy_type,json=hierarchyType,enum=common.v1.HierarchyType"`
+	xxx_hidden_HierarchyType  common.HierarchyType   `protobuf:"varint,3,opt,name=hierarchy_type,json=hierarchyType,enum=common.v1.HierarchyType"`
 	xxx_hidden_Name           *string                `protobuf:"bytes,4,opt,name=name"`
 	xxx_hidden_Description    *string                `protobuf:"bytes,5,opt,name=description"`
 	xxx_hidden_RootNode       *HierarchyNode         `protobuf:"bytes,6,opt,name=root_node,json=rootNode"`
 	xxx_hidden_Active         bool                   `protobuf:"varint,7,opt,name=active"`
-	xxx_hidden_Metadata       *[]*v1.KeyValue        `protobuf:"bytes,8,rep,name=metadata"`
+	xxx_hidden_Metadata       *[]*common.KeyValue    `protobuf:"bytes,8,rep,name=metadata"`
 	xxx_hidden_CreatedAt      *timestamppb.Timestamp `protobuf:"bytes,9,opt,name=created_at,json=createdAt"`
 	xxx_hidden_UpdatedAt      *timestamppb.Timestamp `protobuf:"bytes,10,opt,name=updated_at,json=updatedAt"`
 	xxx_hidden_CreatedBy      *string                `protobuf:"bytes,11,opt,name=created_by,json=createdBy"`
@@ -91,13 +91,13 @@ func (x *OrganizationHierarchy) GetOrganizationId() string {
 	return ""
 }
 
-func (x *OrganizationHierarchy) GetHierarchyType() v1.HierarchyType {
+func (x *OrganizationHierarchy) GetHierarchyType() common.HierarchyType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_HierarchyType
 		}
 	}
-	return v1.HierarchyType(0)
+	return common.HierarchyType(0)
 }
 
 func (x *OrganizationHierarchy) GetName() string {
@@ -134,13 +134,13 @@ func (x *OrganizationHierarchy) GetActive() bool {
 	return false
 }
 
-func (x *OrganizationHierarchy) GetMetadata() []*v1.KeyValue {
+func (x *OrganizationHierarchy) GetMetadata() []*common.KeyValue {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 7) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Metadata) {
 				protoimpl.X.UnmarshalField(x, 8)
 			}
-			var rv *[]*v1.KeyValue
+			var rv *[]*common.KeyValue
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&rv))
 			return *rv
 		}
@@ -206,7 +206,7 @@ func (x *OrganizationHierarchy) SetOrganizationId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 12)
 }
 
-func (x *OrganizationHierarchy) SetHierarchyType(v v1.HierarchyType) {
+func (x *OrganizationHierarchy) SetHierarchyType(v common.HierarchyType) {
 	x.xxx_hidden_HierarchyType = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 12)
 }
@@ -230,11 +230,11 @@ func (x *OrganizationHierarchy) SetActive(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 6, 12)
 }
 
-func (x *OrganizationHierarchy) SetMetadata(v []*v1.KeyValue) {
-	var sv *[]*v1.KeyValue
+func (x *OrganizationHierarchy) SetMetadata(v []*common.KeyValue) {
+	var sv *[]*common.KeyValue
 	protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	if sv == nil {
-		sv = &[]*v1.KeyValue{}
+		sv = &[]*common.KeyValue{}
 		protoimpl.X.AtomicInitializePointer(protoimpl.Pointer(&x.xxx_hidden_Metadata), protoimpl.Pointer(&sv))
 	}
 	*sv = v
@@ -358,7 +358,7 @@ func (x *OrganizationHierarchy) ClearOrganizationId() {
 
 func (x *OrganizationHierarchy) ClearHierarchyType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_HierarchyType = v1.HierarchyType_HIERARCHY_TYPE_UNSPECIFIED
+	x.xxx_hidden_HierarchyType = common.HierarchyType_HIERARCHY_TYPE_UNSPECIFIED
 }
 
 func (x *OrganizationHierarchy) ClearName() {
@@ -408,7 +408,7 @@ type OrganizationHierarchy_builder struct {
 	// Organization identifier
 	OrganizationId *string
 	// Type of hierarchy structure
-	HierarchyType *v1.HierarchyType
+	HierarchyType *common.HierarchyType
 	// Name of this hierarchy configuration
 	Name *string
 	// Description of this hierarchy structure
@@ -418,7 +418,7 @@ type OrganizationHierarchy_builder struct {
 	// Whether this hierarchy is currently active/primary
 	Active *bool
 	// Hierarchy metadata and configuration
-	Metadata []*v1.KeyValue
+	Metadata []*common.KeyValue
 	// Hierarchy creation timestamp
 	CreatedAt *timestamppb.Timestamp
 	// Last update timestamp
@@ -503,14 +503,14 @@ const file_organization_v1_organization_hierarchy_proto_rawDesc = "" +
 	"\n" +
 	"created_by\x18\v \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tcreatedBy\x12s\n" +
 	"\n" +
-	"updated_by\x18\f \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tupdatedByB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"updated_by\x18\f \x01(\tBT\xbaHQrO2M^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$R\tupdatedByB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_organization_hierarchy_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_organization_hierarchy_proto_goTypes = []any{
 	(*OrganizationHierarchy)(nil), // 0: organization.v1.OrganizationHierarchy
-	(v1.HierarchyType)(0),         // 1: common.v1.HierarchyType
+	(common.HierarchyType)(0),     // 1: common.v1.HierarchyType
 	(*HierarchyNode)(nil),         // 2: organization.v1.HierarchyNode
-	(*v1.KeyValue)(nil),           // 3: common.v1.KeyValue
+	(*common.KeyValue)(nil),       // 3: common.v1.KeyValue
 	(*timestamppb.Timestamp)(nil), // 4: google.protobuf.Timestamp
 }
 var file_organization_v1_organization_hierarchy_proto_depIdxs = []int32{

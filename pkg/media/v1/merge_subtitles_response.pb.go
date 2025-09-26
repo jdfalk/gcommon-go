@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/merge_subtitles_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -172,7 +172,7 @@ const file_media_v1_merge_subtitles_response_proto_rawDesc = "" +
 	"\x16MergeSubtitlesResponse\x12>\n" +
 	"\x17merged_subtitle_file_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x14mergedSubtitleFileId\x12\x18\n" +
 	"\asuccess\x18\x02 \x01(\bR\asuccess\x12,\n" +
-	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\rerror_message\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\ferrorMessageB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_merge_subtitles_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_merge_subtitles_response_proto_goTypes = []any{

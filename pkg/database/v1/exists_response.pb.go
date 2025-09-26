@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: database/v1/exists_response.proto
 
-package v1
+package database
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,7 +28,7 @@ const (
 type ExistsResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Exists      bool                   `protobuf:"varint,1,opt,name=exists"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -67,7 +67,7 @@ func (x *ExistsResponse) GetExists() bool {
 	return false
 }
 
-func (x *ExistsResponse) GetError() *v1.Error {
+func (x *ExistsResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -79,7 +79,7 @@ func (x *ExistsResponse) SetExists(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *ExistsResponse) SetError(v *v1.Error) {
+func (x *ExistsResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -112,7 +112,7 @@ type ExistsResponse_builder struct {
 	// Whether the key exists in the cache
 	Exists *bool
 	// Error details if check failed
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 ExistsResponse_builder) Build() *ExistsResponse {
@@ -134,12 +134,12 @@ const file_database_v1_exists_response_proto_rawDesc = "" +
 	"!database/v1/exists_response.proto\x12\vdatabase.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\"P\n" +
 	"\x0eExistsResponse\x12\x16\n" +
 	"\x06exists\x18\x01 \x01(\bR\x06exists\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB/Z%github.com/jdfalk/gcommon/database/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB1Z'github.com/jdfalk/gcommon/pkg/database/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v1_exists_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v1_exists_response_proto_goTypes = []any{
 	(*ExistsResponse)(nil), // 0: database.v1.ExistsResponse
-	(*v1.Error)(nil),       // 1: common.v1.Error
+	(*common.Error)(nil),   // 1: common.v1.Error
 }
 var file_database_v1_exists_response_proto_depIdxs = []int32{
 	1, // 0: database.v1.ExistsResponse.error:type_name -> common.v1.Error

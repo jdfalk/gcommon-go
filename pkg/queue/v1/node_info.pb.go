@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/node_info.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -31,7 +31,7 @@ type NodeInfo struct {
 	xxx_hidden_NodeId        *string                `protobuf:"bytes,1,opt,name=node_id,json=nodeId"`
 	xxx_hidden_Hostname      *string                `protobuf:"bytes,2,opt,name=hostname"`
 	xxx_hidden_Port          int32                  `protobuf:"varint,3,opt,name=port"`
-	xxx_hidden_State         v1.NodeState           `protobuf:"varint,4,opt,name=state,enum=common.v1.NodeState"`
+	xxx_hidden_State         common.NodeState       `protobuf:"varint,4,opt,name=state,enum=common.v1.NodeState"`
 	xxx_hidden_Roles         []string               `protobuf:"bytes,5,rep,name=roles"`
 	xxx_hidden_LastHeartbeat *timestamppb.Timestamp `protobuf:"bytes,6,opt,name=last_heartbeat,json=lastHeartbeat"`
 	xxx_hidden_Stats         *NodeStats             `protobuf:"bytes,7,opt,name=stats"`
@@ -93,13 +93,13 @@ func (x *NodeInfo) GetPort() int32 {
 	return 0
 }
 
-func (x *NodeInfo) GetState() v1.NodeState {
+func (x *NodeInfo) GetState() common.NodeState {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 3) {
 			return x.xxx_hidden_State
 		}
 	}
-	return v1.NodeState(0)
+	return common.NodeState(0)
 }
 
 func (x *NodeInfo) GetRoles() []string {
@@ -138,7 +138,7 @@ func (x *NodeInfo) SetPort(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 7)
 }
 
-func (x *NodeInfo) SetState(v v1.NodeState) {
+func (x *NodeInfo) SetState(v common.NodeState) {
 	x.xxx_hidden_State = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 7)
 }
@@ -214,7 +214,7 @@ func (x *NodeInfo) ClearPort() {
 
 func (x *NodeInfo) ClearState() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 3)
-	x.xxx_hidden_State = v1.NodeState_NODE_STATE_UNSPECIFIED
+	x.xxx_hidden_State = common.NodeState_NODE_STATE_UNSPECIFIED
 }
 
 func (x *NodeInfo) ClearLastHeartbeat() {
@@ -235,7 +235,7 @@ type NodeInfo_builder struct {
 	// Port number for the node
 	Port *int32
 	// Current state of the node
-	State *v1.NodeState
+	State *common.NodeState
 	// Node roles (leader, follower, etc.)
 	Roles []string
 	// Timestamp when node was last seen
@@ -282,12 +282,12 @@ const file_queue_v1_node_info_proto_rawDesc = "" +
 	"\x05state\x18\x04 \x01(\x0e2\x14.common.v1.NodeStateR\x05state\x12\x1e\n" +
 	"\x05roles\x18\x05 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x05roles\x12A\n" +
 	"\x0elast_heartbeat\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\rlastHeartbeat\x12)\n" +
-	"\x05stats\x18\a \x01(\v2\x13.queue.v1.NodeStatsR\x05statsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05stats\x18\a \x01(\v2\x13.queue.v1.NodeStatsR\x05statsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_node_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_node_info_proto_goTypes = []any{
 	(*NodeInfo)(nil),              // 0: queue.v1.NodeInfo
-	(v1.NodeState)(0),             // 1: common.v1.NodeState
+	(common.NodeState)(0),         // 1: common.v1.NodeState
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 	(*NodeStats)(nil),             // 3: queue.v1.NodeStats
 }

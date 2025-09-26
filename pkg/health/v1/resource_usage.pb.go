@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: health/v1/resource_usage.proto
 
-package v1
+package health
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -827,7 +827,7 @@ const file_health_v1_resource_usage_proto_rawDesc = "" +
 	"\x0ebytes_received\x18\x01 \x01(\x03R\rbytesReceived\x12\x1d\n" +
 	"\n" +
 	"bytes_sent\x18\x02 \x01(\x03R\tbytesSent\x12-\n" +
-	"\x12active_connections\x18\x03 \x01(\x05R\x11activeConnectionsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12active_connections\x18\x03 \x01(\x05R\x11activeConnectionsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_resource_usage_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_health_v1_resource_usage_proto_goTypes = []any{

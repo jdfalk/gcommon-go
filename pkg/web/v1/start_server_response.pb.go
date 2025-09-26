@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/start_server_response.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,9 +27,9 @@ const (
 type StartServerResponse struct {
 	state                    protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success       bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Status        v1.ServerStatus        `protobuf:"varint,2,opt,name=status,enum=common.v1.ServerStatus"`
+	xxx_hidden_Status        common.ServerStatus    `protobuf:"varint,2,opt,name=status,enum=common.v1.ServerStatus"`
 	xxx_hidden_ListenAddress *string                `protobuf:"bytes,3,opt,name=listen_address,json=listenAddress"`
-	xxx_hidden_Error         *v1.Error              `protobuf:"bytes,4,opt,name=error"`
+	xxx_hidden_Error         *common.Error          `protobuf:"bytes,4,opt,name=error"`
 	XXX_raceDetectHookData   protoimpl.RaceDetectHookData
 	XXX_presence             [1]uint32
 	unknownFields            protoimpl.UnknownFields
@@ -68,13 +68,13 @@ func (x *StartServerResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *StartServerResponse) GetStatus() v1.ServerStatus {
+func (x *StartServerResponse) GetStatus() common.ServerStatus {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Status
 		}
 	}
-	return v1.ServerStatus(0)
+	return common.ServerStatus(0)
 }
 
 func (x *StartServerResponse) GetListenAddress() string {
@@ -87,7 +87,7 @@ func (x *StartServerResponse) GetListenAddress() string {
 	return ""
 }
 
-func (x *StartServerResponse) GetError() *v1.Error {
+func (x *StartServerResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -99,7 +99,7 @@ func (x *StartServerResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
 
-func (x *StartServerResponse) SetStatus(v v1.ServerStatus) {
+func (x *StartServerResponse) SetStatus(v common.ServerStatus) {
 	x.xxx_hidden_Status = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 4)
 }
@@ -109,7 +109,7 @@ func (x *StartServerResponse) SetListenAddress(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *StartServerResponse) SetError(v *v1.Error) {
+func (x *StartServerResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -148,7 +148,7 @@ func (x *StartServerResponse) ClearSuccess() {
 
 func (x *StartServerResponse) ClearStatus() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Status = v1.ServerStatus_SERVER_STATUS_UNSPECIFIED
+	x.xxx_hidden_Status = common.ServerStatus_SERVER_STATUS_UNSPECIFIED
 }
 
 func (x *StartServerResponse) ClearListenAddress() {
@@ -166,11 +166,11 @@ type StartServerResponse_builder struct {
 	// Success status
 	Success *bool
 	// Server status
-	Status *v1.ServerStatus
+	Status *common.ServerStatus
 	// Listen address
 	ListenAddress *string
 	// Error information
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 StartServerResponse_builder) Build() *StartServerResponse {
@@ -202,13 +202,13 @@ const file_web_v1_start_server_response_proto_rawDesc = "" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12/\n" +
 	"\x06status\x18\x02 \x01(\x0e2\x17.common.v1.ServerStatusR\x06status\x12.\n" +
 	"\x0elisten_address\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rlistenAddress\x12&\n" +
-	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x04 \x01(\v2\x10.common.v1.ErrorR\x05errorB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_start_server_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_start_server_response_proto_goTypes = []any{
 	(*StartServerResponse)(nil), // 0: web.v1.StartServerResponse
-	(v1.ServerStatus)(0),        // 1: common.v1.ServerStatus
-	(*v1.Error)(nil),            // 2: common.v1.Error
+	(common.ServerStatus)(0),    // 1: common.v1.ServerStatus
+	(*common.Error)(nil),        // 2: common.v1.Error
 }
 var file_web_v1_start_server_response_proto_depIdxs = []int32{
 	1, // 0: web.v1.StartServerResponse.status:type_name -> common.v1.ServerStatus

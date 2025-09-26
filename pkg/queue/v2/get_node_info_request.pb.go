@@ -269,7 +269,7 @@ const file_queue_v2_get_node_info_request_proto_rawDesc = "" +
 	"\x11include_resources\x18\x04 \x01(\bR\x10includeResources\x12)\n" +
 	"\x10include_topology\x18\x05 \x01(\bR\x0fincludeTopology\x12&\n" +
 	"\n" +
-	"timeout_ms\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeout_ms\x18\x06 \x01(\x05B\a\xbaH\x04\x1a\x02 \x00R\ttimeoutMsB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_get_node_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_get_node_info_request_proto_goTypes = []any{

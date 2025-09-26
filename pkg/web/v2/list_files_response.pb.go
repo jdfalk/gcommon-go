@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -221,7 +221,7 @@ const file_web_v2_list_files_response_proto_rawDesc = "" +
 	"totalCount\x12/\n" +
 	"\x0fnext_page_token\x18\x03 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\rnextPageToken\x12\x19\n" +
 	"\bhas_more\x18\x04 \x01(\bR\ahasMore\x127\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1b.common.v2.ResponseMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1b.common.v2.ResponseMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/web/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v2_list_files_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v2_list_files_response_proto_goTypes = []any{

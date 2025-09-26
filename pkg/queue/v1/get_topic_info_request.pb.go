@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/get_topic_info_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,12 +27,12 @@ const (
 // Request to get information about a topic.
 // Used for retrieving topic metadata and configuration.
 type GetTopicInfoRequest struct {
-	state                            protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_TopicName             *string                `protobuf:"bytes,1,opt,name=topic_name,json=topicName"`
-	xxx_hidden_IncludeStats          bool                   `protobuf:"varint,2,opt,name=include_stats,json=includeStats"`
-	xxx_hidden_IncludePartitions     bool                   `protobuf:"varint,3,opt,name=include_partitions,json=includePartitions"`
-	xxx_hidden_IncludeConsumerGroups bool                   `protobuf:"varint,4,opt,name=include_consumer_groups,json=includeConsumerGroups"`
-	xxx_hidden_Metadata              *v1.RequestMetadata    `protobuf:"bytes,5,opt,name=metadata"`
+	state                            protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_TopicName             *string                 `protobuf:"bytes,1,opt,name=topic_name,json=topicName"`
+	xxx_hidden_IncludeStats          bool                    `protobuf:"varint,2,opt,name=include_stats,json=includeStats"`
+	xxx_hidden_IncludePartitions     bool                    `protobuf:"varint,3,opt,name=include_partitions,json=includePartitions"`
+	xxx_hidden_IncludeConsumerGroups bool                    `protobuf:"varint,4,opt,name=include_consumer_groups,json=includeConsumerGroups"`
+	xxx_hidden_Metadata              *common.RequestMetadata `protobuf:"bytes,5,opt,name=metadata"`
 	XXX_raceDetectHookData           protoimpl.RaceDetectHookData
 	XXX_presence                     [1]uint32
 	unknownFields                    protoimpl.UnknownFields
@@ -95,7 +95,7 @@ func (x *GetTopicInfoRequest) GetIncludeConsumerGroups() bool {
 	return false
 }
 
-func (x *GetTopicInfoRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetTopicInfoRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -122,7 +122,7 @@ func (x *GetTopicInfoRequest) SetIncludeConsumerGroups(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 3, 5)
 }
 
-func (x *GetTopicInfoRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetTopicInfoRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -197,7 +197,7 @@ type GetTopicInfoRequest_builder struct {
 	// Whether to include consumer group information
 	IncludeConsumerGroups *bool
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetTopicInfoRequest_builder) Build() *GetTopicInfoRequest {
@@ -235,12 +235,12 @@ const file_queue_v1_get_topic_info_request_proto_rawDesc = "" +
 	"\rinclude_stats\x18\x02 \x01(\bR\fincludeStats\x12-\n" +
 	"\x12include_partitions\x18\x03 \x01(\bR\x11includePartitions\x126\n" +
 	"\x17include_consumer_groups\x18\x04 \x01(\bR\x15includeConsumerGroups\x126\n" +
-	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x05 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_get_topic_info_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_get_topic_info_request_proto_goTypes = []any{
-	(*GetTopicInfoRequest)(nil), // 0: queue.v1.GetTopicInfoRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*GetTopicInfoRequest)(nil),    // 0: queue.v1.GetTopicInfoRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_queue_v1_get_topic_info_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.GetTopicInfoRequest.metadata:type_name -> common.v1.RequestMetadata

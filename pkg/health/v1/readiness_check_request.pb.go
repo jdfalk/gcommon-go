@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/readiness_check_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,12 +28,12 @@ const (
 // Readiness checks verify that a service is ready to handle requests.
 // Follows 1-1-1 pattern: one message per file.
 type ReadinessCheckRequest struct {
-	state                          protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServiceName         *string                `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
-	xxx_hidden_Metadata            *v1.RequestMetadata    `protobuf:"bytes,2,opt,name=metadata"`
-	xxx_hidden_Timeout             *durationpb.Duration   `protobuf:"bytes,3,opt,name=timeout"`
-	xxx_hidden_IncludeDependencies bool                   `protobuf:"varint,4,opt,name=include_dependencies,json=includeDependencies"`
-	xxx_hidden_MinHealthScore      int32                  `protobuf:"varint,5,opt,name=min_health_score,json=minHealthScore"`
+	state                          protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServiceName         *string                 `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
+	xxx_hidden_Metadata            *common.RequestMetadata `protobuf:"bytes,2,opt,name=metadata"`
+	xxx_hidden_Timeout             *durationpb.Duration    `protobuf:"bytes,3,opt,name=timeout"`
+	xxx_hidden_IncludeDependencies bool                    `protobuf:"varint,4,opt,name=include_dependencies,json=includeDependencies"`
+	xxx_hidden_MinHealthScore      int32                   `protobuf:"varint,5,opt,name=min_health_score,json=minHealthScore"`
 	XXX_raceDetectHookData         protoimpl.RaceDetectHookData
 	XXX_presence                   [1]uint32
 	unknownFields                  protoimpl.UnknownFields
@@ -75,7 +75,7 @@ func (x *ReadinessCheckRequest) GetServiceName() string {
 	return ""
 }
 
-func (x *ReadinessCheckRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ReadinessCheckRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -108,7 +108,7 @@ func (x *ReadinessCheckRequest) SetServiceName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *ReadinessCheckRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ReadinessCheckRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -190,7 +190,7 @@ type ReadinessCheckRequest_builder struct {
 	// Service name to check readiness for
 	ServiceName *string
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Maximum time to wait for the readiness check
 	Timeout *durationpb.Duration
 	// Include dependency readiness checks
@@ -230,13 +230,13 @@ const file_health_v1_readiness_check_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x123\n" +
 	"\atimeout\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x121\n" +
 	"\x14include_dependencies\x18\x04 \x01(\bR\x13includeDependencies\x12(\n" +
-	"\x10min_health_score\x18\x05 \x01(\x05R\x0eminHealthScoreB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10min_health_score\x18\x05 \x01(\x05R\x0eminHealthScoreB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_readiness_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_readiness_check_request_proto_goTypes = []any{
-	(*ReadinessCheckRequest)(nil), // 0: health.v1.ReadinessCheckRequest
-	(*v1.RequestMetadata)(nil),    // 1: common.v1.RequestMetadata
-	(*durationpb.Duration)(nil),   // 2: google.protobuf.Duration
+	(*ReadinessCheckRequest)(nil),  // 0: health.v1.ReadinessCheckRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*durationpb.Duration)(nil),    // 2: google.protobuf.Duration
 }
 var file_health_v1_readiness_check_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.ReadinessCheckRequest.metadata:type_name -> common.v1.RequestMetadata

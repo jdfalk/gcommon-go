@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/age_distribution.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -153,7 +153,7 @@ const file_queue_v1_age_distribution_proto_rawDesc = "" +
 	"\x0fAgeDistribution\x127\n" +
 	"\abuckets\x18\x01 \x03(\v2\x13.queue.v1.AgeBucketB\b\xbaH\x05\x92\x01\x02\b\x01R\abuckets\x12>\n" +
 	"\x13average_age_seconds\x18\x02 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x11averageAgeSeconds\x12K\n" +
-	"\x1aoldest_message_age_seconds\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x17oldestMessageAgeSecondsB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1aoldest_message_age_seconds\x18\x03 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\x17oldestMessageAgeSecondsB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_age_distribution_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_age_distribution_proto_goTypes = []any{

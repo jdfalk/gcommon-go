@@ -99,7 +99,7 @@ const file_common_v2_deployment_status_proto_rawDesc = "" +
 	"\x19DEPLOYMENT_STATUS_SUCCESS\x10\x03\x12\x1c\n" +
 	"\x18DEPLOYMENT_STATUS_FAILED\x10\x04\x12!\n" +
 	"\x1dDEPLOYMENT_STATUS_ROLLED_BACK\x10\x05\x12\x1f\n" +
-	"\x1bDEPLOYMENT_STATUS_CANCELLED\x10\x06B-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x1bDEPLOYMENT_STATUS_CANCELLED\x10\x06B1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_deployment_status_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_deployment_status_proto_goTypes = []any{

@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -467,7 +467,7 @@ const file_organization_v2_hierarchy_node_proto_rawDesc = "" +
 	"manager_id\x18\n" +
 	" \x01(\tR\tmanagerId\x123\n" +
 	"\bmetadata\x18\v \x03(\v2\x13.common.v2.KeyValueB\x02(\x01R\bmetadata\x12\x16\n" +
-	"\x06active\x18\f \x01(\bR\x06activeB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06active\x18\f \x01(\bR\x06activeB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_hierarchy_node_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_hierarchy_node_proto_goTypes = []any{

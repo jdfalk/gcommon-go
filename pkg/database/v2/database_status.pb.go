@@ -8,7 +8,7 @@ package v2
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v2 "github.com/jdfalk/gcommon/common/v2"
+	v2 "github.com/jdfalk/gcommon/pkg/common/v2"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -145,7 +145,7 @@ const file_database_v2_database_status_proto_rawDesc = "" +
 	"!database/v2/database_status.proto\x12\vdatabase.v2\x1a$common/v2/database_status_code.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"f\n" +
 	"\x0eDatabaseStatus\x121\n" +
 	"\x04code\x18\x01 \x01(\x0e2\x1d.common.v2.DatabaseStatusCodeR\x04code\x12!\n" +
-	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB/Z%github.com/jdfalk/gcommon/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB3Z)github.com/jdfalk/gcommon/pkg/database/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_database_v2_database_status_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_database_v2_database_status_proto_goTypes = []any{

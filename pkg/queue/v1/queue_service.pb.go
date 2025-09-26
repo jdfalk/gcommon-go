@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: queue/v1/queue_service.proto
 
-package v1
+package queue
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -32,7 +32,7 @@ const file_queue_v1_queue_service_proto_rawDesc = "" +
 	"\x04Peek\x12\x15.queue.v1.PeekRequest\x1a\x16.queue.v1.PeekResponse\x12M\n" +
 	"\fGetQueueInfo\x12\x1d.queue.v1.GetQueueInfoRequest\x1a\x1e.queue.v1.GetQueueInfoResponse\x12K\n" +
 	"\tSubscribe\x12\x1f.queue.v1.QueueSubscribeRequest\x1a\x1b.queue.v1.SubscribeResponse0\x01\x12C\n" +
-	"\aPublish\x12\x1d.queue.v1.QueuePublishRequest\x1a\x19.queue.v1.PublishResponseB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\aPublish\x12\x1d.queue.v1.QueuePublishRequest\x1a\x19.queue.v1.PublishResponseB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_queue_service_proto_goTypes = []any{
 	(*EnqueueRequest)(nil),        // 0: queue.v1.EnqueueRequest

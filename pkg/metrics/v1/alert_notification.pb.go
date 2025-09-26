@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: metrics/v1/alert_notification.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,11 +28,11 @@ const (
 // AlertNotification represents a notification event generated when an
 // alerting rule is triggered.
 type AlertNotification struct {
-	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_RuleId      *string                 `protobuf:"bytes,1,opt,name=rule_id,json=ruleId"`
-	xxx_hidden_Time        *timestamppb.Timestamp  `protobuf:"bytes,2,opt,name=time"`
-	xxx_hidden_Severity    v1.MetricsAlertSeverity `protobuf:"varint,3,opt,name=severity,enum=common.v1.MetricsAlertSeverity"`
-	xxx_hidden_Message     *string                 `protobuf:"bytes,4,opt,name=message"`
+	state                  protoimpl.MessageState      `protogen:"opaque.v1"`
+	xxx_hidden_RuleId      *string                     `protobuf:"bytes,1,opt,name=rule_id,json=ruleId"`
+	xxx_hidden_Time        *timestamppb.Timestamp      `protobuf:"bytes,2,opt,name=time"`
+	xxx_hidden_Severity    common.MetricsAlertSeverity `protobuf:"varint,3,opt,name=severity,enum=common.v1.MetricsAlertSeverity"`
+	xxx_hidden_Message     *string                     `protobuf:"bytes,4,opt,name=message"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -81,13 +81,13 @@ func (x *AlertNotification) GetTime() *timestamppb.Timestamp {
 	return nil
 }
 
-func (x *AlertNotification) GetSeverity() v1.MetricsAlertSeverity {
+func (x *AlertNotification) GetSeverity() common.MetricsAlertSeverity {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 2) {
 			return x.xxx_hidden_Severity
 		}
 	}
-	return v1.MetricsAlertSeverity(0)
+	return common.MetricsAlertSeverity(0)
 }
 
 func (x *AlertNotification) GetMessage() string {
@@ -109,7 +109,7 @@ func (x *AlertNotification) SetTime(v *timestamppb.Timestamp) {
 	x.xxx_hidden_Time = v
 }
 
-func (x *AlertNotification) SetSeverity(v v1.MetricsAlertSeverity) {
+func (x *AlertNotification) SetSeverity(v common.MetricsAlertSeverity) {
 	x.xxx_hidden_Severity = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
@@ -158,7 +158,7 @@ func (x *AlertNotification) ClearTime() {
 
 func (x *AlertNotification) ClearSeverity() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 2)
-	x.xxx_hidden_Severity = v1.MetricsAlertSeverity_METRICS_ALERT_SEVERITY_UNSPECIFIED
+	x.xxx_hidden_Severity = common.MetricsAlertSeverity_METRICS_ALERT_SEVERITY_UNSPECIFIED
 }
 
 func (x *AlertNotification) ClearMessage() {
@@ -174,7 +174,7 @@ type AlertNotification_builder struct {
 	// Timestamp when the notification was generated.
 	Time *timestamppb.Timestamp
 	// Severity level of the alert.
-	Severity *v1.MetricsAlertSeverity
+	Severity *common.MetricsAlertSeverity
 	// Human readable message describing the alert.
 	Message *string
 }
@@ -209,13 +209,13 @@ const file_metrics_v1_alert_notification_proto_rawDesc = "" +
 	"\arule_id\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x06ruleId\x12.\n" +
 	"\x04time\x18\x02 \x01(\v2\x1a.google.protobuf.TimestampR\x04time\x12;\n" +
 	"\bseverity\x18\x03 \x01(\x0e2\x1f.common.v1.MetricsAlertSeverityR\bseverity\x12!\n" +
-	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\amessage\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\amessageB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_alert_notification_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_alert_notification_proto_goTypes = []any{
-	(*AlertNotification)(nil),     // 0: metrics.v1.AlertNotification
-	(*timestamppb.Timestamp)(nil), // 1: google.protobuf.Timestamp
-	(v1.MetricsAlertSeverity)(0),  // 2: common.v1.MetricsAlertSeverity
+	(*AlertNotification)(nil),        // 0: metrics.v1.AlertNotification
+	(*timestamppb.Timestamp)(nil),    // 1: google.protobuf.Timestamp
+	(common.MetricsAlertSeverity)(0), // 2: common.v1.MetricsAlertSeverity
 }
 var file_metrics_v1_alert_notification_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.AlertNotification.time:type_name -> google.protobuf.Timestamp

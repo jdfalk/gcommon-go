@@ -116,7 +116,7 @@ const file_queue_v2_queue_stats_response_proto_rawDesc = "" +
 	"\x12QueueStatsResponse\x12*\n" +
 	"\x05stats\x18\x01 \x01(\v2\x14.queue.v2.QueueStatsR\x05stats\x12D\n" +
 	"\vtime_series\x18\x02 \x03(\v2\x19.queue.v2.QueueStatsPointB\b\xbaH\x05\x92\x01\x02\b\x01R\n" +
-	"timeSeriesB,Z\"github.com/jdfalk/gcommon/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"timeSeriesB0Z&github.com/jdfalk/gcommon/pkg/queue/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v2_queue_stats_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v2_queue_stats_response_proto_goTypes = []any{

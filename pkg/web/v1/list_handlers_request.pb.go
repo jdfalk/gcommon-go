@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/list_handlers_request.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,13 +27,13 @@ const (
 // Request to list registered HTTP handlers.
 // Used for route discovery and management.
 type ListHandlersRequest struct {
-	state                        protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_MethodFilter      *string                `protobuf:"bytes,1,opt,name=method_filter,json=methodFilter"`
-	xxx_hidden_PathFilter        *string                `protobuf:"bytes,2,opt,name=path_filter,json=pathFilter"`
-	xxx_hidden_IncludeMiddleware bool                   `protobuf:"varint,3,opt,name=include_middleware,json=includeMiddleware"`
-	xxx_hidden_Limit             int32                  `protobuf:"varint,4,opt,name=limit"`
-	xxx_hidden_Offset            int32                  `protobuf:"varint,5,opt,name=offset"`
-	xxx_hidden_Metadata          *v1.RequestMetadata    `protobuf:"bytes,6,opt,name=metadata"`
+	state                        protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_MethodFilter      *string                 `protobuf:"bytes,1,opt,name=method_filter,json=methodFilter"`
+	xxx_hidden_PathFilter        *string                 `protobuf:"bytes,2,opt,name=path_filter,json=pathFilter"`
+	xxx_hidden_IncludeMiddleware bool                    `protobuf:"varint,3,opt,name=include_middleware,json=includeMiddleware"`
+	xxx_hidden_Limit             int32                   `protobuf:"varint,4,opt,name=limit"`
+	xxx_hidden_Offset            int32                   `protobuf:"varint,5,opt,name=offset"`
+	xxx_hidden_Metadata          *common.RequestMetadata `protobuf:"bytes,6,opt,name=metadata"`
 	XXX_raceDetectHookData       protoimpl.RaceDetectHookData
 	XXX_presence                 [1]uint32
 	unknownFields                protoimpl.UnknownFields
@@ -106,7 +106,7 @@ func (x *ListHandlersRequest) GetOffset() int32 {
 	return 0
 }
 
-func (x *ListHandlersRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListHandlersRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -138,7 +138,7 @@ func (x *ListHandlersRequest) SetOffset(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 6)
 }
 
-func (x *ListHandlersRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListHandlersRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -227,7 +227,7 @@ type ListHandlersRequest_builder struct {
 	// Pagination offset
 	Offset *int32
 	// Request metadata for tracing and correlation
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ListHandlersRequest_builder) Build() *ListHandlersRequest {
@@ -270,12 +270,12 @@ const file_web_v1_list_handlers_request_proto_rawDesc = "" +
 	"\x12include_middleware\x18\x03 \x01(\bR\x11includeMiddleware\x12\x1d\n" +
 	"\x05limit\x18\x04 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x05limit\x12\x1f\n" +
 	"\x06offset\x18\x05 \x01(\x05B\a\xbaH\x04\x1a\x02(\x00R\x06offset\x126\n" +
-	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x06 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_list_handlers_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_list_handlers_request_proto_goTypes = []any{
-	(*ListHandlersRequest)(nil), // 0: web.v1.ListHandlersRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
+	(*ListHandlersRequest)(nil),    // 0: web.v1.ListHandlersRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_web_v1_list_handlers_request_proto_depIdxs = []int32{
 	1, // 0: web.v1.ListHandlersRequest.metadata:type_name -> common.v1.RequestMetadata

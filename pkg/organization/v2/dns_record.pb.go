@@ -241,7 +241,7 @@ const file_organization_v2_dns_record_proto_rawDesc = "" +
 	"\x04name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12\x14\n" +
 	"\x05value\x18\x03 \x01(\tR\x05value\x12\x10\n" +
 	"\x03ttl\x18\x04 \x01(\x05R\x03ttl\x12\x1a\n" +
-	"\bpriority\x18\x05 \x01(\x05R\bpriorityB3Z)github.com/jdfalk/gcommon/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bpriority\x18\x05 \x01(\x05R\bpriorityB7Z-github.com/jdfalk/gcommon/pkg/organization/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v2_dns_record_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v2_dns_record_proto_goTypes = []any{

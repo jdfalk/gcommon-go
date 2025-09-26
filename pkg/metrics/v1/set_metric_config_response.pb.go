@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: metrics/v1/set_metric_config_response.proto
 
-package v1
+package metrics
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,7 +27,7 @@ const (
 type SetMetricConfigResponse struct {
 	state                  protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Success     bool                   `protobuf:"varint,1,opt,name=success"`
-	xxx_hidden_Error       *v1.Error              `protobuf:"bytes,2,opt,name=error"`
+	xxx_hidden_Error       *common.Error          `protobuf:"bytes,2,opt,name=error"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -66,7 +66,7 @@ func (x *SetMetricConfigResponse) GetSuccess() bool {
 	return false
 }
 
-func (x *SetMetricConfigResponse) GetError() *v1.Error {
+func (x *SetMetricConfigResponse) GetError() *common.Error {
 	if x != nil {
 		return x.xxx_hidden_Error
 	}
@@ -78,7 +78,7 @@ func (x *SetMetricConfigResponse) SetSuccess(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 2)
 }
 
-func (x *SetMetricConfigResponse) SetError(v *v1.Error) {
+func (x *SetMetricConfigResponse) SetError(v *common.Error) {
 	x.xxx_hidden_Error = v
 }
 
@@ -111,7 +111,7 @@ type SetMetricConfigResponse_builder struct {
 	// Operation success flag
 	Success *bool
 	// Error details if any
-	Error *v1.Error
+	Error *common.Error
 }
 
 func (b0 SetMetricConfigResponse_builder) Build() *SetMetricConfigResponse {
@@ -134,12 +134,12 @@ const file_metrics_v1_set_metric_config_response_proto_rawDesc = "" +
 	"metrics.v1\x1a\x15common/v1/error.proto\x1a!google/protobuf/go_features.proto\"[\n" +
 	"\x17SetMetricConfigResponse\x12\x18\n" +
 	"\asuccess\x18\x01 \x01(\bR\asuccess\x12&\n" +
-	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05error\x18\x02 \x01(\v2\x10.common.v1.ErrorR\x05errorB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_set_metric_config_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_set_metric_config_response_proto_goTypes = []any{
 	(*SetMetricConfigResponse)(nil), // 0: metrics.v1.SetMetricConfigResponse
-	(*v1.Error)(nil),                // 1: common.v1.Error
+	(*common.Error)(nil),            // 1: common.v1.Error
 }
 var file_metrics_v1_set_metric_config_response_proto_depIdxs = []int32{
 	1, // 0: metrics.v1.SetMetricConfigResponse.error:type_name -> common.v1.Error

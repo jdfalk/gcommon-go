@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: media/v1/get_processing_status_response.proto
 
-package v1
+package media
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -336,7 +336,7 @@ const file_media_v1_get_processing_status_response_proto_rawDesc = "" +
 	"updated_at\x18\x06 \x01(\v2\x1a.google.protobuf.TimestampR\tupdatedAt\x12=\n" +
 	"\fcompleted_at\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\vcompletedAt\x12#\n" +
 	"\rerror_message\x18\b \x01(\tR\ferrorMessage\x12&\n" +
-	"\x0foutput_file_ids\x18\t \x03(\tR\routputFileIdsB,Z\"github.com/jdfalk/gcommon/media/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0foutput_file_ids\x18\t \x03(\tR\routputFileIdsB.Z$github.com/jdfalk/gcommon/pkg/media/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_media_v1_get_processing_status_response_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_media_v1_get_processing_status_response_proto_goTypes = []any{

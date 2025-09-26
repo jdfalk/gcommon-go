@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/validate_config_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,10 +24,10 @@ const (
 )
 
 type ValidateConfigRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Entries     *[]*ConfigEntry        `protobuf:"bytes,1,rep,name=entries"`
-	xxx_hidden_SchemaName  *string                `protobuf:"bytes,2,opt,name=schema_name,json=schemaName"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,3,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Entries     *[]*ConfigEntry         `protobuf:"bytes,1,rep,name=entries"`
+	xxx_hidden_SchemaName  *string                 `protobuf:"bytes,2,opt,name=schema_name,json=schemaName"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,3,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -78,7 +78,7 @@ func (x *ValidateConfigRequest) GetSchemaName() string {
 	return ""
 }
 
-func (x *ValidateConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ValidateConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -94,7 +94,7 @@ func (x *ValidateConfigRequest) SetSchemaName(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 3)
 }
 
-func (x *ValidateConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ValidateConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -129,7 +129,7 @@ type ValidateConfigRequest_builder struct {
 	// Schema to validate against
 	SchemaName *string
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 ValidateConfigRequest_builder) Build() *ValidateConfigRequest {
@@ -154,13 +154,13 @@ const file_config_v1_validate_config_request_proto_rawDesc = "" +
 	"\aentries\x18\x01 \x03(\v2\x16.config.v1.ConfigEntryR\aentries\x12*\n" +
 	"\vschema_name\x18\x02 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\n" +
 	"schemaName\x126\n" +
-	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x03 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_validate_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_validate_config_request_proto_goTypes = []any{
-	(*ValidateConfigRequest)(nil), // 0: config.v1.ValidateConfigRequest
-	(*ConfigEntry)(nil),           // 1: config.v1.ConfigEntry
-	(*v1.RequestMetadata)(nil),    // 2: common.v1.RequestMetadata
+	(*ValidateConfigRequest)(nil),  // 0: config.v1.ValidateConfigRequest
+	(*ConfigEntry)(nil),            // 1: config.v1.ConfigEntry
+	(*common.RequestMetadata)(nil), // 2: common.v1.RequestMetadata
 }
 var file_config_v1_validate_config_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.ValidateConfigRequest.entries:type_name -> config.v1.ConfigEntry

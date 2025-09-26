@@ -209,7 +209,7 @@ const file_common_v2_component_health_proto_rawDesc = "" +
 	"\x06status\x18\x02 \x01(\x0e2\x18.common.v2.ServingStatusR\x06status\x12\x18\n" +
 	"\amessage\x18\x03 \x01(\tR\amessage\x12\x1f\n" +
 	"\vduration_ms\x18\x04 \x01(\x03R\n" +
-	"durationMsB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"durationMsB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_component_health_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_component_health_proto_goTypes = []any{

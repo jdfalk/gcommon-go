@@ -233,7 +233,7 @@ const file_config_v2_config_diff_entry_proto_rawDesc = "" +
 	"\tnew_value\x18\x03 \x01(\v2\x14.google.protobuf.AnyR\bnewValue\x12(\n" +
 	"\vchange_type\x18\x04 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"changeType\x12%\n" +
-	"\tnamespace\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespaceB-Z#github.com/jdfalk/gcommon/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\tnamespace\x18\x05 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespaceB1Z'github.com/jdfalk/gcommon/pkg/config/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v2_config_diff_entry_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v2_config_diff_entry_proto_goTypes = []any{

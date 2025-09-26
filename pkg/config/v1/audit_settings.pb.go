@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/audit_settings.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -26,7 +26,7 @@ const (
 type AuditSettings struct {
 	state                           protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Enabled              bool                   `protobuf:"varint,1,opt,name=enabled"`
-	xxx_hidden_Level                v1.AuditLevel          `protobuf:"varint,2,opt,name=level,enum=common.v1.AuditLevel"`
+	xxx_hidden_Level                common.AuditLevel      `protobuf:"varint,2,opt,name=level,enum=common.v1.AuditLevel"`
 	xxx_hidden_RetentionDays        int32                  `protobuf:"varint,3,opt,name=retention_days,json=retentionDays"`
 	xxx_hidden_IncludeSensitiveData bool                   `protobuf:"varint,4,opt,name=include_sensitive_data,json=includeSensitiveData"`
 	xxx_hidden_Destinations         []string               `protobuf:"bytes,5,rep,name=destinations"`
@@ -70,13 +70,13 @@ func (x *AuditSettings) GetEnabled() bool {
 	return false
 }
 
-func (x *AuditSettings) GetLevel() v1.AuditLevel {
+func (x *AuditSettings) GetLevel() common.AuditLevel {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			return x.xxx_hidden_Level
 		}
 	}
-	return v1.AuditLevel(0)
+	return common.AuditLevel(0)
 }
 
 func (x *AuditSettings) GetRetentionDays() int32 {
@@ -122,7 +122,7 @@ func (x *AuditSettings) SetEnabled(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 7)
 }
 
-func (x *AuditSettings) SetLevel(v v1.AuditLevel) {
+func (x *AuditSettings) SetLevel(v common.AuditLevel) {
 	x.xxx_hidden_Level = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 1, 7)
 }
@@ -192,7 +192,7 @@ func (x *AuditSettings) ClearEnabled() {
 
 func (x *AuditSettings) ClearLevel() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	x.xxx_hidden_Level = v1.AuditLevel_AUDIT_LEVEL_UNSPECIFIED
+	x.xxx_hidden_Level = common.AuditLevel_AUDIT_LEVEL_UNSPECIFIED
 }
 
 func (x *AuditSettings) ClearRetentionDays() {
@@ -216,7 +216,7 @@ type AuditSettings_builder struct {
 	// Whether audit logging is enabled
 	Enabled *bool
 	// Audit log level
-	Level *v1.AuditLevel
+	Level *common.AuditLevel
 	// Audit log retention period in days
 	RetentionDays *int32
 	// Whether to include sensitive data in audit logs
@@ -273,13 +273,13 @@ const file_config_v1_audit_settings_proto_rawDesc = "" +
 	"\bmetadata\x18\a \x03(\v2&.config.v1.AuditSettings.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_audit_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_audit_settings_proto_goTypes = []any{
-	(*AuditSettings)(nil), // 0: config.v1.AuditSettings
-	nil,                   // 1: config.v1.AuditSettings.MetadataEntry
-	(v1.AuditLevel)(0),    // 2: common.v1.AuditLevel
+	(*AuditSettings)(nil),  // 0: config.v1.AuditSettings
+	nil,                    // 1: config.v1.AuditSettings.MetadataEntry
+	(common.AuditLevel)(0), // 2: common.v1.AuditLevel
 }
 var file_config_v1_audit_settings_proto_depIdxs = []int32{
 	2, // 0: config.v1.AuditSettings.level:type_name -> common.v1.AuditLevel

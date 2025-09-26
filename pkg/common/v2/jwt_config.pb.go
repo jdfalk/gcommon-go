@@ -164,7 +164,7 @@ const file_common_v2_jwt_config_proto_rawDesc = "" +
 	"\tJWTConfig\x124\n" +
 	"\x11signing_algorithm\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x10signingAlgorithm\x12C\n" +
 	"\x10access_token_ttl\x18\x02 \x01(\v2\x19.google.protobuf.DurationR\x0eaccessTokenTtl\x12E\n" +
-	"\x11refresh_token_ttl\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\x0frefreshTokenTtlB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x11refresh_token_ttl\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\x0frefreshTokenTtlB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_jwt_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_jwt_config_proto_goTypes = []any{

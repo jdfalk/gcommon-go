@@ -225,7 +225,7 @@ const file_metrics_v2_data_volume_data_point_proto_rawDesc = "" +
 	"totalBytes\x12,\n" +
 	"\rtotal_metrics\x18\x03 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\ftotalMetrics\x123\n" +
 	"\x11total_data_points\x18\x04 \x01(\x03B\a\xbaH\x04\"\x02(\x00R\x0ftotalDataPoints\x125\n" +
-	"\x0eingestion_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\ringestionRateB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x0eingestion_rate\x18\x05 \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\ringestionRateB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_data_volume_data_point_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v2_data_volume_data_point_proto_goTypes = []any{

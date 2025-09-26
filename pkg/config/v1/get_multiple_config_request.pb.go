@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/get_multiple_config_request.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type GetMultipleConfigRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Keys        []string               `protobuf:"bytes,1,rep,name=keys"`
-	xxx_hidden_Namespace   *string                `protobuf:"bytes,2,opt,name=namespace"`
-	xxx_hidden_Decrypt     bool                   `protobuf:"varint,3,opt,name=decrypt"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_Keys        []string                `protobuf:"bytes,1,rep,name=keys"`
+	xxx_hidden_Namespace   *string                 `protobuf:"bytes,2,opt,name=namespace"`
+	xxx_hidden_Decrypt     bool                    `protobuf:"varint,3,opt,name=decrypt"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -84,7 +84,7 @@ func (x *GetMultipleConfigRequest) GetDecrypt() bool {
 	return false
 }
 
-func (x *GetMultipleConfigRequest) GetMetadata() *v1.RequestMetadata {
+func (x *GetMultipleConfigRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -105,7 +105,7 @@ func (x *GetMultipleConfigRequest) SetDecrypt(v bool) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 4)
 }
 
-func (x *GetMultipleConfigRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *GetMultipleConfigRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -154,7 +154,7 @@ type GetMultipleConfigRequest_builder struct {
 	// Whether to decrypt encrypted values
 	Decrypt *bool
 	// Request metadata
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 GetMultipleConfigRequest_builder) Build() *GetMultipleConfigRequest {
@@ -183,12 +183,12 @@ const file_config_v1_get_multiple_config_request_proto_rawDesc = "" +
 	"\x04keys\x18\x01 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x04keys\x12%\n" +
 	"\tnamespace\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\tnamespace\x12\x18\n" +
 	"\adecrypt\x18\x03 \x01(\bR\adecrypt\x126\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadataB/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_get_multiple_config_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_config_v1_get_multiple_config_request_proto_goTypes = []any{
 	(*GetMultipleConfigRequest)(nil), // 0: config.v1.GetMultipleConfigRequest
-	(*v1.RequestMetadata)(nil),       // 1: common.v1.RequestMetadata
+	(*common.RequestMetadata)(nil),   // 1: common.v1.RequestMetadata
 }
 var file_config_v1_get_multiple_config_request_proto_depIdxs = []int32{
 	1, // 0: config.v1.GetMultipleConfigRequest.metadata:type_name -> common.v1.RequestMetadata

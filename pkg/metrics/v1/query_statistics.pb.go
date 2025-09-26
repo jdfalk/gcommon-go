@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/query_statistics.proto
 
-package v1
+package metrics
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -306,7 +306,7 @@ const file_metrics_v1_query_statistics_proto_rawDesc = "" +
 	"\x15storage_backends_used\x18\x06 \x03(\tB\b\xbaH\x05\x92\x01\x02\b\x01R\x13storageBackendsUsed\x124\n" +
 	"\x0ecache_hit_rate\x18\a \x01(\x01B\x0e\xbaH\v\x12\t)\x00\x00\x00\x00\x00\x00\x00\x00R\fcacheHitRate\x129\n" +
 	"\n" +
-	"query_time\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\tqueryTimeB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"query_time\x18\b \x01(\v2\x1a.google.protobuf.TimestampR\tqueryTimeB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_query_statistics_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_query_statistics_proto_goTypes = []any{

@@ -144,7 +144,7 @@ const file_common_v2_verify_email_request_proto_rawDesc = "" +
 	"\n" +
 	"identifier\x18\x01 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\n" +
 	"identifier\x126\n" +
-	"\x12verification_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11verificationTokenB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x12verification_token\x18\x02 \x01(\tB\a\xbaH\x04r\x02\x10\x01R\x11verificationTokenB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_verify_email_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_verify_email_request_proto_goTypes = []any{

@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/health_check_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -28,15 +28,15 @@ const (
 // Can be used for on-demand health verification.
 // Follows 1-1-1 pattern: one message per file.
 type HealthCheckRequest struct {
-	state                     protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServiceName    *string                `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
-	xxx_hidden_ComponentName  *string                `protobuf:"bytes,2,opt,name=component_name,json=componentName"`
-	xxx_hidden_CheckId        *string                `protobuf:"bytes,3,opt,name=check_id,json=checkId"`
-	xxx_hidden_Metadata       *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_Timeout        *durationpb.Duration   `protobuf:"bytes,5,opt,name=timeout"`
-	xxx_hidden_IncludeDetails bool                   `protobuf:"varint,6,opt,name=include_details,json=includeDetails"`
-	xxx_hidden_ForceRefresh   bool                   `protobuf:"varint,7,opt,name=force_refresh,json=forceRefresh"`
-	xxx_hidden_Tags           []string               `protobuf:"bytes,8,rep,name=tags"`
+	state                     protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServiceName    *string                 `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
+	xxx_hidden_ComponentName  *string                 `protobuf:"bytes,2,opt,name=component_name,json=componentName"`
+	xxx_hidden_CheckId        *string                 `protobuf:"bytes,3,opt,name=check_id,json=checkId"`
+	xxx_hidden_Metadata       *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_Timeout        *durationpb.Duration    `protobuf:"bytes,5,opt,name=timeout"`
+	xxx_hidden_IncludeDetails bool                    `protobuf:"varint,6,opt,name=include_details,json=includeDetails"`
+	xxx_hidden_ForceRefresh   bool                    `protobuf:"varint,7,opt,name=force_refresh,json=forceRefresh"`
+	xxx_hidden_Tags           []string                `protobuf:"bytes,8,rep,name=tags"`
 	XXX_raceDetectHookData    protoimpl.RaceDetectHookData
 	XXX_presence              [1]uint32
 	unknownFields             protoimpl.UnknownFields
@@ -98,7 +98,7 @@ func (x *HealthCheckRequest) GetCheckId() string {
 	return ""
 }
 
-func (x *HealthCheckRequest) GetMetadata() *v1.RequestMetadata {
+func (x *HealthCheckRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -148,7 +148,7 @@ func (x *HealthCheckRequest) SetCheckId(v string) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 2, 8)
 }
 
-func (x *HealthCheckRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *HealthCheckRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -262,7 +262,7 @@ type HealthCheckRequest_builder struct {
 	// Specific check ID to execute (optional, defaults to all checks for service)
 	CheckId *string
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Maximum time to wait for the check to complete
 	Timeout *durationpb.Duration
 	// Whether to include detailed diagnostic information in the response
@@ -316,13 +316,13 @@ const file_health_v1_health_check_request_proto_rawDesc = "" +
 	"\atimeout\x18\x05 \x01(\v2\x19.google.protobuf.DurationR\atimeout\x12'\n" +
 	"\x0finclude_details\x18\x06 \x01(\bR\x0eincludeDetails\x12#\n" +
 	"\rforce_refresh\x18\a \x01(\bR\fforceRefresh\x12\x12\n" +
-	"\x04tags\x18\b \x03(\tR\x04tagsB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x04tags\x18\b \x03(\tR\x04tagsB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_health_check_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_health_check_request_proto_goTypes = []any{
-	(*HealthCheckRequest)(nil),  // 0: health.v1.HealthCheckRequest
-	(*v1.RequestMetadata)(nil),  // 1: common.v1.RequestMetadata
-	(*durationpb.Duration)(nil), // 2: google.protobuf.Duration
+	(*HealthCheckRequest)(nil),     // 0: health.v1.HealthCheckRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*durationpb.Duration)(nil),    // 2: google.protobuf.Duration
 }
 var file_health_v1_health_check_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.HealthCheckRequest.metadata:type_name -> common.v1.RequestMetadata

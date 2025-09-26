@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/rate_limit_info.proto
 
-package v1
+package common
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -194,7 +194,7 @@ const file_common_v1_rate_limit_info_proto_rawDesc = "" +
 	"\n" +
 	"reset_time\x18\x03 \x01(\v2\x1a.google.protobuf.TimestampR\tresetTime\x12:\n" +
 	"\vretry_after\x18\x04 \x01(\v2\x19.google.protobuf.DurationR\n" +
-	"retryAfterB-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"retryAfterB/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_rate_limit_info_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v1_rate_limit_info_proto_goTypes = []any{

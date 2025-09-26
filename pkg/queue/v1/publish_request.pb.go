@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/publish_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,11 +24,11 @@ const (
 )
 
 type QueuePublishRequest struct {
-	state                      protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_TopicName       *string                `protobuf:"bytes,1,opt,name=topic_name,json=topicName"`
-	xxx_hidden_Message         *QueueMessage          `protobuf:"bytes,2,opt,name=message"`
-	xxx_hidden_DeliveryOptions *DeliveryOptions       `protobuf:"bytes,3,opt,name=delivery_options,json=deliveryOptions"`
-	xxx_hidden_Metadata        *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
+	state                      protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_TopicName       *string                 `protobuf:"bytes,1,opt,name=topic_name,json=topicName"`
+	xxx_hidden_Message         *QueueMessage           `protobuf:"bytes,2,opt,name=message"`
+	xxx_hidden_DeliveryOptions *DeliveryOptions        `protobuf:"bytes,3,opt,name=delivery_options,json=deliveryOptions"`
+	xxx_hidden_Metadata        *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
 	XXX_raceDetectHookData     protoimpl.RaceDetectHookData
 	XXX_presence               [1]uint32
 	unknownFields              protoimpl.UnknownFields
@@ -84,7 +84,7 @@ func (x *QueuePublishRequest) GetDeliveryOptions() *DeliveryOptions {
 	return nil
 }
 
-func (x *QueuePublishRequest) GetMetadata() *v1.RequestMetadata {
+func (x *QueuePublishRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -104,7 +104,7 @@ func (x *QueuePublishRequest) SetDeliveryOptions(v *DeliveryOptions) {
 	x.xxx_hidden_DeliveryOptions = v
 }
 
-func (x *QueuePublishRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *QueuePublishRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -163,7 +163,7 @@ type QueuePublishRequest_builder struct {
 	// Optional delivery parameters controlling retries and delays
 	DeliveryOptions *DeliveryOptions
 	// Standard request metadata for tracing and auth - required
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 }
 
 func (b0 QueuePublishRequest_builder) Build() *QueuePublishRequest {
@@ -190,14 +190,14 @@ const file_queue_v1_publish_request_proto_rawDesc = "" +
 	"topic_name\x18\x01 \x01(\tB9\xbaH6\xc8\x01\x01r1\x10\x03\x18\xff\x012*^[a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?$R\ttopicName\x128\n" +
 	"\amessage\x18\x02 \x01(\v2\x16.queue.v1.QueueMessageB\x06\xbaH\x03\xc8\x01\x01R\amessage\x12D\n" +
 	"\x10delivery_options\x18\x03 \x01(\v2\x19.queue.v1.DeliveryOptionsR\x0fdeliveryOptions\x12>\n" +
-	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x06\xbaH\x03\xc8\x01\x01R\bmetadataB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataB\x06\xbaH\x03\xc8\x01\x01R\bmetadataB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_publish_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_publish_request_proto_goTypes = []any{
-	(*QueuePublishRequest)(nil), // 0: queue.v1.QueuePublishRequest
-	(*QueueMessage)(nil),        // 1: queue.v1.QueueMessage
-	(*DeliveryOptions)(nil),     // 2: queue.v1.DeliveryOptions
-	(*v1.RequestMetadata)(nil),  // 3: common.v1.RequestMetadata
+	(*QueuePublishRequest)(nil),    // 0: queue.v1.QueuePublishRequest
+	(*QueueMessage)(nil),           // 1: queue.v1.QueueMessage
+	(*DeliveryOptions)(nil),        // 2: queue.v1.DeliveryOptions
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
 }
 var file_queue_v1_publish_request_proto_depIdxs = []int32{
 	1, // 0: queue.v1.QueuePublishRequest.message:type_name -> queue.v1.QueueMessage

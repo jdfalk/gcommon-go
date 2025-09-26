@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: queue/v1/enqueue_request.proto
 
-package v1
+package queue
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -33,22 +33,22 @@ const (
 //
 // Follows 1-1-1 pattern: one message per file.
 type EnqueueRequest struct {
-	state                          protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_QueueName           *string                `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
-	xxx_hidden_Payload             *anypb.Any             `protobuf:"bytes,2,opt,name=payload"`
-	xxx_hidden_Metadata            *v1.RequestMetadata    `protobuf:"bytes,11,opt,name=metadata"`
-	xxx_hidden_Priority            int32                  `protobuf:"varint,12,opt,name=priority"`
-	xxx_hidden_Delay               *durationpb.Duration   `protobuf:"bytes,13,opt,name=delay"`
-	xxx_hidden_ExpiresAt           *timestamppb.Timestamp `protobuf:"bytes,14,opt,name=expires_at,json=expiresAt"`
-	xxx_hidden_GroupId             *string                `protobuf:"bytes,15,opt,name=group_id,json=groupId"`
-	xxx_hidden_DeduplicationId     *string                `protobuf:"bytes,16,opt,name=deduplication_id,json=deduplicationId"`
-	xxx_hidden_MaxDeliveryAttempts int32                  `protobuf:"varint,17,opt,name=max_delivery_attempts,json=maxDeliveryAttempts"`
-	xxx_hidden_Attributes          map[string]string      `protobuf:"bytes,18,rep,name=attributes" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
-	xxx_hidden_ContentType         *string                `protobuf:"bytes,19,opt,name=content_type,json=contentType"`
-	xxx_hidden_Source              *string                `protobuf:"bytes,20,opt,name=source"`
-	xxx_hidden_MessageType         *string                `protobuf:"bytes,21,opt,name=message_type,json=messageType"`
-	xxx_hidden_CorrelationId       *string                `protobuf:"bytes,22,opt,name=correlation_id,json=correlationId"`
-	xxx_hidden_ReplyTo             *string                `protobuf:"bytes,23,opt,name=reply_to,json=replyTo"`
+	state                          protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_QueueName           *string                 `protobuf:"bytes,1,opt,name=queue_name,json=queueName"`
+	xxx_hidden_Payload             *anypb.Any              `protobuf:"bytes,2,opt,name=payload"`
+	xxx_hidden_Metadata            *common.RequestMetadata `protobuf:"bytes,11,opt,name=metadata"`
+	xxx_hidden_Priority            int32                   `protobuf:"varint,12,opt,name=priority"`
+	xxx_hidden_Delay               *durationpb.Duration    `protobuf:"bytes,13,opt,name=delay"`
+	xxx_hidden_ExpiresAt           *timestamppb.Timestamp  `protobuf:"bytes,14,opt,name=expires_at,json=expiresAt"`
+	xxx_hidden_GroupId             *string                 `protobuf:"bytes,15,opt,name=group_id,json=groupId"`
+	xxx_hidden_DeduplicationId     *string                 `protobuf:"bytes,16,opt,name=deduplication_id,json=deduplicationId"`
+	xxx_hidden_MaxDeliveryAttempts int32                   `protobuf:"varint,17,opt,name=max_delivery_attempts,json=maxDeliveryAttempts"`
+	xxx_hidden_Attributes          map[string]string       `protobuf:"bytes,18,rep,name=attributes" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	xxx_hidden_ContentType         *string                 `protobuf:"bytes,19,opt,name=content_type,json=contentType"`
+	xxx_hidden_Source              *string                 `protobuf:"bytes,20,opt,name=source"`
+	xxx_hidden_MessageType         *string                 `protobuf:"bytes,21,opt,name=message_type,json=messageType"`
+	xxx_hidden_CorrelationId       *string                 `protobuf:"bytes,22,opt,name=correlation_id,json=correlationId"`
+	xxx_hidden_ReplyTo             *string                 `protobuf:"bytes,23,opt,name=reply_to,json=replyTo"`
 	XXX_raceDetectHookData         protoimpl.RaceDetectHookData
 	XXX_presence                   [1]uint32
 	unknownFields                  protoimpl.UnknownFields
@@ -97,7 +97,7 @@ func (x *EnqueueRequest) GetPayload() *anypb.Any {
 	return nil
 }
 
-func (x *EnqueueRequest) GetMetadata() *v1.RequestMetadata {
+func (x *EnqueueRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -218,7 +218,7 @@ func (x *EnqueueRequest) SetPayload(v *anypb.Any) {
 	x.xxx_hidden_Payload = v
 }
 
-func (x *EnqueueRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *EnqueueRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -457,7 +457,7 @@ type EnqueueRequest_builder struct {
 	// *
 	// Standard request metadata including authentication context,
 	// tracing information, and client details.
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// *
 	// Message priority (0-255, where 255 is highest priority).
 	// Higher priority messages are delivered first. Default: 128.
@@ -588,16 +588,16 @@ const file_queue_v1_enqueue_request_proto_rawDesc = "" +
 	"\breply_to\x18\x17 \x01(\tR\areplyTo\x1a=\n" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_enqueue_request_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_queue_v1_enqueue_request_proto_goTypes = []any{
-	(*EnqueueRequest)(nil),        // 0: queue.v1.EnqueueRequest
-	nil,                           // 1: queue.v1.EnqueueRequest.AttributesEntry
-	(*anypb.Any)(nil),             // 2: google.protobuf.Any
-	(*v1.RequestMetadata)(nil),    // 3: common.v1.RequestMetadata
-	(*durationpb.Duration)(nil),   // 4: google.protobuf.Duration
-	(*timestamppb.Timestamp)(nil), // 5: google.protobuf.Timestamp
+	(*EnqueueRequest)(nil),         // 0: queue.v1.EnqueueRequest
+	nil,                            // 1: queue.v1.EnqueueRequest.AttributesEntry
+	(*anypb.Any)(nil),              // 2: google.protobuf.Any
+	(*common.RequestMetadata)(nil), // 3: common.v1.RequestMetadata
+	(*durationpb.Duration)(nil),    // 4: google.protobuf.Duration
+	(*timestamppb.Timestamp)(nil),  // 5: google.protobuf.Timestamp
 }
 var file_queue_v1_enqueue_request_proto_depIdxs = []int32{
 	2, // 0: queue.v1.EnqueueRequest.payload:type_name -> google.protobuf.Any

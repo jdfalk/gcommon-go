@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: health/v1/list_checks_request.proto
 
-package v1
+package health
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,14 +27,14 @@ const (
 // Supports filtering and pagination.
 // Follows 1-1-1 pattern: one message per file.
 type ListChecksRequest struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_ServiceName *string                `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
-	xxx_hidden_CheckType   *string                `protobuf:"bytes,2,opt,name=check_type,json=checkType"`
-	xxx_hidden_Tags        []string               `protobuf:"bytes,3,rep,name=tags"`
-	xxx_hidden_Metadata    *v1.RequestMetadata    `protobuf:"bytes,4,opt,name=metadata"`
-	xxx_hidden_EnabledOnly bool                   `protobuf:"varint,5,opt,name=enabled_only,json=enabledOnly"`
-	xxx_hidden_Limit       int32                  `protobuf:"varint,6,opt,name=limit"`
-	xxx_hidden_Offset      int32                  `protobuf:"varint,7,opt,name=offset"`
+	state                  protoimpl.MessageState  `protogen:"opaque.v1"`
+	xxx_hidden_ServiceName *string                 `protobuf:"bytes,1,opt,name=service_name,json=serviceName"`
+	xxx_hidden_CheckType   *string                 `protobuf:"bytes,2,opt,name=check_type,json=checkType"`
+	xxx_hidden_Tags        []string                `protobuf:"bytes,3,rep,name=tags"`
+	xxx_hidden_Metadata    *common.RequestMetadata `protobuf:"bytes,4,opt,name=metadata"`
+	xxx_hidden_EnabledOnly bool                    `protobuf:"varint,5,opt,name=enabled_only,json=enabledOnly"`
+	xxx_hidden_Limit       int32                   `protobuf:"varint,6,opt,name=limit"`
+	xxx_hidden_Offset      int32                   `protobuf:"varint,7,opt,name=offset"`
 	XXX_raceDetectHookData protoimpl.RaceDetectHookData
 	XXX_presence           [1]uint32
 	unknownFields          protoimpl.UnknownFields
@@ -93,7 +93,7 @@ func (x *ListChecksRequest) GetTags() []string {
 	return nil
 }
 
-func (x *ListChecksRequest) GetMetadata() *v1.RequestMetadata {
+func (x *ListChecksRequest) GetMetadata() *common.RequestMetadata {
 	if x != nil {
 		return x.xxx_hidden_Metadata
 	}
@@ -135,7 +135,7 @@ func (x *ListChecksRequest) SetTags(v []string) {
 	x.xxx_hidden_Tags = v
 }
 
-func (x *ListChecksRequest) SetMetadata(v *v1.RequestMetadata) {
+func (x *ListChecksRequest) SetMetadata(v *common.RequestMetadata) {
 	x.xxx_hidden_Metadata = v
 }
 
@@ -235,7 +235,7 @@ type ListChecksRequest_builder struct {
 	// Filter by tags (optional)
 	Tags []string
 	// Request metadata for authentication and tracing
-	Metadata *v1.RequestMetadata
+	Metadata *common.RequestMetadata
 	// Include only enabled checks
 	EnabledOnly *bool
 	// Maximum number of results to return
@@ -286,12 +286,12 @@ const file_health_v1_list_checks_request_proto_rawDesc = "" +
 	"\bmetadata\x18\x04 \x01(\v2\x1a.common.v1.RequestMetadataR\bmetadata\x12!\n" +
 	"\fenabled_only\x18\x05 \x01(\bR\venabledOnly\x12\x14\n" +
 	"\x05limit\x18\x06 \x01(\x05R\x05limit\x12\x16\n" +
-	"\x06offset\x18\a \x01(\x05R\x06offsetB-Z#github.com/jdfalk/gcommon/health/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06offset\x18\a \x01(\x05R\x06offsetB/Z%github.com/jdfalk/gcommon/pkg/health/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_health_v1_list_checks_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_health_v1_list_checks_request_proto_goTypes = []any{
-	(*ListChecksRequest)(nil),  // 0: health.v1.ListChecksRequest
-	(*v1.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
+	(*ListChecksRequest)(nil),      // 0: health.v1.ListChecksRequest
+	(*common.RequestMetadata)(nil), // 1: common.v1.RequestMetadata
 }
 var file_health_v1_list_checks_request_proto_depIdxs = []int32{
 	1, // 0: health.v1.ListChecksRequest.metadata:type_name -> common.v1.RequestMetadata

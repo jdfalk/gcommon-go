@@ -32,7 +32,7 @@ const file_metrics_v2_metrics_management_service_proto_rawDesc = "" +
 	"\x15UpdateMetricsProvider\x12!.metrics.v2.UpdateProviderRequest\x1a\".metrics.v2.UpdateProviderResponse\x12^\n" +
 	"\x15DeleteMetricsProvider\x12!.metrics.v2.DeleteProviderRequest\x1a\".metrics.v2.DeleteProviderResponse\x12[\n" +
 	"\x14ListMetricsProviders\x12 .metrics.v2.ListProvidersRequest\x1a!.metrics.v2.ListProvidersResponse\x12]\n" +
-	"\x10GetProviderStats\x12#.metrics.v2.GetProviderStatsRequest\x1a$.metrics.v2.GetProviderStatsResponseB.Z$github.com/jdfalk/gcommon/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x10GetProviderStats\x12#.metrics.v2.GetProviderStatsRequest\x1a$.metrics.v2.GetProviderStatsResponseB2Z(github.com/jdfalk/gcommon/pkg/metrics/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v2_metrics_management_service_proto_goTypes = []any{
 	(*CreateProviderRequest)(nil),    // 0: metrics.v2.CreateProviderRequest

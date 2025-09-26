@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: common/v1/ssl_protocol.proto
 
-package v1
+package common
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -81,7 +81,7 @@ const file_common_v1_ssl_protocol_proto_rawDesc = "" +
 	"\x13SSL_PROTOCOL_TLS1_0\x10\x01\x12\x17\n" +
 	"\x13SSL_PROTOCOL_TLS1_1\x10\x02\x12\x17\n" +
 	"\x13SSL_PROTOCOL_TLS1_2\x10\x03\x12\x17\n" +
-	"\x13SSL_PROTOCOL_TLS1_3\x10\x04B-Z#github.com/jdfalk/gcommon/common/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13SSL_PROTOCOL_TLS1_3\x10\x04B/Z%github.com/jdfalk/gcommon/pkg/common/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v1_ssl_protocol_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v1_ssl_protocol_proto_goTypes = []any{

@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: organization/v1/api_key_config.proto
 
-package v1
+package organization
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
@@ -206,7 +206,7 @@ const file_organization_v1_api_key_config_proto_rawDesc = "" +
 	"masked_key\x18\x02 \x01(\tR\tmaskedKey\x12\x16\n" +
 	"\x06scopes\x18\x03 \x03(\tR\x06scopes\x12=\n" +
 	"\n" +
-	"expires_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\texpiresAtB3Z)github.com/jdfalk/gcommon/organization/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"expires_at\x18\x04 \x01(\v2\x1a.google.protobuf.TimestampB\x02(\x01R\texpiresAtB5Z+github.com/jdfalk/gcommon/pkg/organization/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_organization_v1_api_key_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_organization_v1_api_key_config_proto_goTypes = []any{

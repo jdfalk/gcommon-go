@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/value_dependency.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -25,7 +25,7 @@ const (
 
 type ValueDependency struct {
 	state                    protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Type          v1.DependencyType      `protobuf:"varint,1,opt,name=type,enum=common.v1.DependencyType"`
+	xxx_hidden_Type          common.DependencyType  `protobuf:"varint,1,opt,name=type,enum=common.v1.DependencyType"`
 	xxx_hidden_DependentKey  *string                `protobuf:"bytes,2,opt,name=dependent_key,json=dependentKey"`
 	xxx_hidden_DependencyKey *string                `protobuf:"bytes,3,opt,name=dependency_key,json=dependencyKey"`
 	xxx_hidden_Condition     *string                `protobuf:"bytes,4,opt,name=condition"`
@@ -61,13 +61,13 @@ func (x *ValueDependency) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *ValueDependency) GetType() v1.DependencyType {
+func (x *ValueDependency) GetType() common.DependencyType {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Type
 		}
 	}
-	return v1.DependencyType(0)
+	return common.DependencyType(0)
 }
 
 func (x *ValueDependency) GetDependentKey() string {
@@ -107,7 +107,7 @@ func (x *ValueDependency) GetMetadata() map[string]string {
 	return nil
 }
 
-func (x *ValueDependency) SetType(v v1.DependencyType) {
+func (x *ValueDependency) SetType(v common.DependencyType) {
 	x.xxx_hidden_Type = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
@@ -161,7 +161,7 @@ func (x *ValueDependency) HasCondition() bool {
 
 func (x *ValueDependency) ClearType() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Type = v1.DependencyType_DEPENDENCY_TYPE_UNSPECIFIED
+	x.xxx_hidden_Type = common.DependencyType_DEPENDENCY_TYPE_UNSPECIFIED
 }
 
 func (x *ValueDependency) ClearDependentKey() {
@@ -183,7 +183,7 @@ type ValueDependency_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Dependency type
-	Type *v1.DependencyType
+	Type *common.DependencyType
 	// Dependent value key
 	DependentKey *string
 	// Dependency key
@@ -231,13 +231,13 @@ const file_config_v1_value_dependency_proto_rawDesc = "" +
 	"\bmetadata\x18\x05 \x03(\v2(.config.v1.ValueDependency.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_value_dependency_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_value_dependency_proto_goTypes = []any{
-	(*ValueDependency)(nil), // 0: config.v1.ValueDependency
-	nil,                     // 1: config.v1.ValueDependency.MetadataEntry
-	(v1.DependencyType)(0),  // 2: common.v1.DependencyType
+	(*ValueDependency)(nil),    // 0: config.v1.ValueDependency
+	nil,                        // 1: config.v1.ValueDependency.MetadataEntry
+	(common.DependencyType)(0), // 2: common.v1.DependencyType
 }
 var file_config_v1_value_dependency_proto_depIdxs = []int32{
 	2, // 0: config.v1.ValueDependency.type:type_name -> common.v1.DependencyType

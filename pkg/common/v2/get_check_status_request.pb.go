@@ -152,7 +152,7 @@ const file_common_v2_get_check_status_request_proto_rawDesc = "" +
 	"(common/v2/get_check_status_request.proto\x12\tcommon.v2\x1a common/v2/request_metadata.proto\x1a!google/protobuf/go_features.proto\x1a\x1bbuf/validate/validate.proto\"r\n" +
 	"\x15GetCheckStatusRequest\x12\x1d\n" +
 	"\x04name\x18\x01 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\x04name\x12:\n" +
-	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\bmetadata\x18\x02 \x01(\v2\x1a.common.v2.RequestMetadataB\x02(\x01R\bmetadataB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_get_check_status_request_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_common_v2_get_check_status_request_proto_goTypes = []any{

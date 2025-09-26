@@ -4,7 +4,7 @@
 // 	protoc        (unknown)
 // source: metrics/v1/provider_settings_update.proto
 
-package v1
+package metrics
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -153,7 +153,7 @@ const file_metrics_v1_provider_settings_update_proto_rawDesc = "" +
 	"prometheus\x18\x01 \x01(\v2$.metrics.v1.PrometheusSettingsUpdateR\n" +
 	"prometheus\x12M\n" +
 	"\ropentelemetry\x18\x02 \x01(\v2'.metrics.v1.OpenTelemetrySettingsUpdateR\ropentelemetry\x128\n" +
-	"\x06statsd\x18\x03 \x01(\v2 .metrics.v1.StatsDSettingsUpdateR\x06statsdB.Z$github.com/jdfalk/gcommon/metrics/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x06statsd\x18\x03 \x01(\v2 .metrics.v1.StatsDSettingsUpdateR\x06statsdB0Z&github.com/jdfalk/gcommon/pkg/metrics/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_metrics_v1_provider_settings_update_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_metrics_v1_provider_settings_update_proto_goTypes = []any{

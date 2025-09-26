@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: web/v1/cache_config.proto
 
-package v1
+package web
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -27,8 +27,8 @@ const (
 // CacheConfig defines caching behavior for web responses.
 type WebCacheConfig struct {
 	state                protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Strategy  v1.CacheStrategy       `protobuf:"varint,1,opt,name=strategy,enum=common.v1.CacheStrategy"`
-	xxx_hidden_Policy    *v1.CachePolicy        `protobuf:"bytes,2,opt,name=policy"`
+	xxx_hidden_Strategy  common.CacheStrategy   `protobuf:"varint,1,opt,name=strategy,enum=common.v1.CacheStrategy"`
+	xxx_hidden_Policy    *common.CachePolicy    `protobuf:"bytes,2,opt,name=policy"`
 	xxx_hidden_Ttl       *durationpb.Duration   `protobuf:"bytes,3,opt,name=ttl"`
 	xxx_hidden_Enabled   bool                   `protobuf:"varint,4,opt,name=enabled"`
 	xxx_hidden_CacheName *string                `protobuf:"bytes,5,opt,name=cache_name,json=cacheName"`
@@ -65,22 +65,22 @@ func (x *WebCacheConfig) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *WebCacheConfig) GetStrategy() v1.CacheStrategy {
+func (x *WebCacheConfig) GetStrategy() common.CacheStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Strategy
 		}
 	}
-	return v1.CacheStrategy(0)
+	return common.CacheStrategy(0)
 }
 
-func (x *WebCacheConfig) GetPolicy() *v1.CachePolicy {
+func (x *WebCacheConfig) GetPolicy() *common.CachePolicy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 1) {
 			if protoimpl.X.AtomicCheckPointerIsNil(&x.xxx_hidden_Policy) {
 				protoimpl.X.UnmarshalField(x, 2)
 			}
-			var rv *v1.CachePolicy
+			var rv *common.CachePolicy
 			protoimpl.X.AtomicLoadPointer(protoimpl.Pointer(&x.xxx_hidden_Policy), protoimpl.Pointer(&rv))
 			return rv
 		}
@@ -112,12 +112,12 @@ func (x *WebCacheConfig) GetCacheName() string {
 	return ""
 }
 
-func (x *WebCacheConfig) SetStrategy(v v1.CacheStrategy) {
+func (x *WebCacheConfig) SetStrategy(v common.CacheStrategy) {
 	x.xxx_hidden_Strategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 5)
 }
 
-func (x *WebCacheConfig) SetPolicy(v *v1.CachePolicy) {
+func (x *WebCacheConfig) SetPolicy(v *common.CachePolicy) {
 	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Policy, v)
 	if v == nil {
 		protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
@@ -177,12 +177,12 @@ func (x *WebCacheConfig) HasCacheName() bool {
 
 func (x *WebCacheConfig) ClearStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Strategy = v1.CacheStrategy_CACHE_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_Strategy = common.CacheStrategy_CACHE_STRATEGY_UNSPECIFIED
 }
 
 func (x *WebCacheConfig) ClearPolicy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 1)
-	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Policy, (*v1.CachePolicy)(nil))
+	protoimpl.X.AtomicSetPointer(&x.xxx_hidden_Policy, (*common.CachePolicy)(nil))
 }
 
 func (x *WebCacheConfig) ClearTtl() {
@@ -203,9 +203,9 @@ type WebCacheConfig_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Selected cache strategy for responses
-	Strategy *v1.CacheStrategy
+	Strategy *common.CacheStrategy
 	// Detailed cache policy settings
-	Policy *v1.CachePolicy
+	Policy *common.CachePolicy
 	// Override time to live for web resources
 	Ttl *durationpb.Duration
 	// Whether caching is enabled for this server
@@ -249,13 +249,13 @@ const file_web_v1_cache_config_proto_rawDesc = "" +
 	"\x03ttl\x18\x03 \x01(\v2\x19.google.protobuf.DurationR\x03ttl\x12\x18\n" +
 	"\aenabled\x18\x04 \x01(\bR\aenabled\x12(\n" +
 	"\n" +
-	"cache_name\x18\x05 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tcacheNameB*Z github.com/jdfalk/gcommon/web/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"cache_name\x18\x05 \x01(\tB\t\xbaH\x06r\x04\x10\x01\x18dR\tcacheNameB,Z\"github.com/jdfalk/gcommon/pkg/web/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_web_v1_cache_config_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_web_v1_cache_config_proto_goTypes = []any{
 	(*WebCacheConfig)(nil),      // 0: web.v1.WebCacheConfig
-	(v1.CacheStrategy)(0),       // 1: common.v1.CacheStrategy
-	(*v1.CachePolicy)(nil),      // 2: common.v1.CachePolicy
+	(common.CacheStrategy)(0),   // 1: common.v1.CacheStrategy
+	(*common.CachePolicy)(nil),  // 2: common.v1.CachePolicy
 	(*durationpb.Duration)(nil), // 3: google.protobuf.Duration
 }
 var file_web_v1_cache_config_proto_depIdxs = []int32{

@@ -104,7 +104,7 @@ const file_common_v2_hierarchy_type_proto_rawDesc = "" +
 	"\x19HIERARCHY_TYPE_GEOGRAPHIC\x10\x04\x12\x1d\n" +
 	"\x19HIERARCHY_TYPE_FUNCTIONAL\x10\x05\x12\x19\n" +
 	"\x15HIERARCHY_TYPE_MATRIX\x10\x06\x12\x17\n" +
-	"\x13HIERARCHY_TYPE_FLAT\x10\aB-Z#github.com/jdfalk/gcommon/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x13HIERARCHY_TYPE_FLAT\x10\aB1Z'github.com/jdfalk/gcommon/pkg/common/v2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_common_v2_hierarchy_type_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
 var file_common_v2_hierarchy_type_proto_goTypes = []any{

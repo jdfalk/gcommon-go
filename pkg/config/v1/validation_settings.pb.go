@@ -4,11 +4,11 @@
 // 	protoc        (unknown)
 // source: config/v1/validation_settings.proto
 
-package v1
+package config
 
 import (
 	_ "buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go/buf/validate"
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -24,14 +24,14 @@ const (
 )
 
 type ValidationSettings struct {
-	state                       protoimpl.MessageState  `protogen:"opaque.v1"`
-	xxx_hidden_Enabled          bool                    `protobuf:"varint,1,opt,name=enabled"`
-	xxx_hidden_Rules            *[]*ValidationRule      `protobuf:"bytes,2,rep,name=rules"`
-	xxx_hidden_ValidateOnChange bool                    `protobuf:"varint,3,opt,name=validate_on_change,json=validateOnChange"`
-	xxx_hidden_ValidateOnAccess bool                    `protobuf:"varint,4,opt,name=validate_on_access,json=validateOnAccess"`
-	xxx_hidden_TimeoutSeconds   int32                   `protobuf:"varint,5,opt,name=timeout_seconds,json=timeoutSeconds"`
-	xxx_hidden_Retry            *v1.ConfigRetrySettings `protobuf:"bytes,6,opt,name=retry"`
-	xxx_hidden_Metadata         map[string]string       `protobuf:"bytes,7,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
+	state                       protoimpl.MessageState      `protogen:"opaque.v1"`
+	xxx_hidden_Enabled          bool                        `protobuf:"varint,1,opt,name=enabled"`
+	xxx_hidden_Rules            *[]*ValidationRule          `protobuf:"bytes,2,rep,name=rules"`
+	xxx_hidden_ValidateOnChange bool                        `protobuf:"varint,3,opt,name=validate_on_change,json=validateOnChange"`
+	xxx_hidden_ValidateOnAccess bool                        `protobuf:"varint,4,opt,name=validate_on_access,json=validateOnAccess"`
+	xxx_hidden_TimeoutSeconds   int32                       `protobuf:"varint,5,opt,name=timeout_seconds,json=timeoutSeconds"`
+	xxx_hidden_Retry            *common.ConfigRetrySettings `protobuf:"bytes,6,opt,name=retry"`
+	xxx_hidden_Metadata         map[string]string           `protobuf:"bytes,7,rep,name=metadata" protobuf_key:"bytes,1,opt,name=key" protobuf_val:"bytes,2,opt,name=value"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -100,7 +100,7 @@ func (x *ValidationSettings) GetTimeoutSeconds() int32 {
 	return 0
 }
 
-func (x *ValidationSettings) GetRetry() *v1.ConfigRetrySettings {
+func (x *ValidationSettings) GetRetry() *common.ConfigRetrySettings {
 	if x != nil {
 		return x.xxx_hidden_Retry
 	}
@@ -138,7 +138,7 @@ func (x *ValidationSettings) SetTimeoutSeconds(v int32) {
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 4, 7)
 }
 
-func (x *ValidationSettings) SetRetry(v *v1.ConfigRetrySettings) {
+func (x *ValidationSettings) SetRetry(v *common.ConfigRetrySettings) {
 	x.xxx_hidden_Retry = v
 }
 
@@ -219,7 +219,7 @@ type ValidationSettings_builder struct {
 	// Validation timeout in seconds
 	TimeoutSeconds *int32
 	// Validation retry settings
-	Retry *v1.ConfigRetrySettings
+	Retry *common.ConfigRetrySettings
 	// Validation metadata
 	Metadata map[string]string
 }
@@ -265,14 +265,14 @@ const file_config_v1_validation_settings_proto_rawDesc = "" +
 	"\bmetadata\x18\a \x03(\v2+.config.v1.ValidationSettings.MetadataEntryR\bmetadata\x1a;\n" +
 	"\rMetadataEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B-Z#github.com/jdfalk/gcommon/config/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B/Z%github.com/jdfalk/gcommon/pkg/config/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_config_v1_validation_settings_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_config_v1_validation_settings_proto_goTypes = []any{
-	(*ValidationSettings)(nil),     // 0: config.v1.ValidationSettings
-	nil,                            // 1: config.v1.ValidationSettings.MetadataEntry
-	(*ValidationRule)(nil),         // 2: config.v1.ValidationRule
-	(*v1.ConfigRetrySettings)(nil), // 3: common.v1.ConfigRetrySettings
+	(*ValidationSettings)(nil),         // 0: config.v1.ValidationSettings
+	nil,                                // 1: config.v1.ValidationSettings.MetadataEntry
+	(*ValidationRule)(nil),             // 2: config.v1.ValidationRule
+	(*common.ConfigRetrySettings)(nil), // 3: common.v1.ConfigRetrySettings
 }
 var file_config_v1_validation_settings_proto_depIdxs = []int32{
 	2, // 0: config.v1.ValidationSettings.rules:type_name -> config.v1.ValidationRule

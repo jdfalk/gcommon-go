@@ -4,10 +4,10 @@
 // 	protoc        (unknown)
 // source: queue/v1/conflict_resolution.proto
 
-package v1
+package queue
 
 import (
-	v1 "github.com/jdfalk/gcommon/common/v1"
+	common "github.com/jdfalk/gcommon/pkg/common/"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	_ "google.golang.org/protobuf/types/gofeaturespb"
@@ -23,11 +23,11 @@ const (
 )
 
 type QueueConflictResolution struct {
-	state                       protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Strategy         v1.ResolutionStrategy  `protobuf:"varint,1,opt,name=strategy,enum=common.v1.ResolutionStrategy"`
-	xxx_hidden_CustomResolution *CustomResolution      `protobuf:"bytes,2,opt,name=custom_resolution,json=customResolution"`
-	xxx_hidden_LwwConfig        *LastWriterWins        `protobuf:"bytes,3,opt,name=lww_config,json=lwwConfig"`
-	xxx_hidden_MultiValue       *MultiValueConfig      `protobuf:"bytes,4,opt,name=multi_value,json=multiValue"`
+	state                       protoimpl.MessageState    `protogen:"opaque.v1"`
+	xxx_hidden_Strategy         common.ResolutionStrategy `protobuf:"varint,1,opt,name=strategy,enum=common.v1.ResolutionStrategy"`
+	xxx_hidden_CustomResolution *CustomResolution         `protobuf:"bytes,2,opt,name=custom_resolution,json=customResolution"`
+	xxx_hidden_LwwConfig        *LastWriterWins           `protobuf:"bytes,3,opt,name=lww_config,json=lwwConfig"`
+	xxx_hidden_MultiValue       *MultiValueConfig         `protobuf:"bytes,4,opt,name=multi_value,json=multiValue"`
 	XXX_raceDetectHookData      protoimpl.RaceDetectHookData
 	XXX_presence                [1]uint32
 	unknownFields               protoimpl.UnknownFields
@@ -59,13 +59,13 @@ func (x *QueueConflictResolution) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *QueueConflictResolution) GetStrategy() v1.ResolutionStrategy {
+func (x *QueueConflictResolution) GetStrategy() common.ResolutionStrategy {
 	if x != nil {
 		if protoimpl.X.Present(&(x.XXX_presence[0]), 0) {
 			return x.xxx_hidden_Strategy
 		}
 	}
-	return v1.ResolutionStrategy(0)
+	return common.ResolutionStrategy(0)
 }
 
 func (x *QueueConflictResolution) GetCustomResolution() *CustomResolution {
@@ -89,7 +89,7 @@ func (x *QueueConflictResolution) GetMultiValue() *MultiValueConfig {
 	return nil
 }
 
-func (x *QueueConflictResolution) SetStrategy(v v1.ResolutionStrategy) {
+func (x *QueueConflictResolution) SetStrategy(v common.ResolutionStrategy) {
 	x.xxx_hidden_Strategy = v
 	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 4)
 }
@@ -136,7 +136,7 @@ func (x *QueueConflictResolution) HasMultiValue() bool {
 
 func (x *QueueConflictResolution) ClearStrategy() {
 	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Strategy = v1.ResolutionStrategy_RESOLUTION_STRATEGY_UNSPECIFIED
+	x.xxx_hidden_Strategy = common.ResolutionStrategy_RESOLUTION_STRATEGY_UNSPECIFIED
 }
 
 func (x *QueueConflictResolution) ClearCustomResolution() {
@@ -155,7 +155,7 @@ type QueueConflictResolution_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Conflict resolution strategy
-	Strategy *v1.ResolutionStrategy
+	Strategy *common.ResolutionStrategy
 	// Custom resolution function settings
 	CustomResolution *CustomResolution
 	// Last-writer-wins settings
@@ -189,12 +189,12 @@ const file_queue_v1_conflict_resolution_proto_rawDesc = "" +
 	"\n" +
 	"lww_config\x18\x03 \x01(\v2\x18.queue.v1.LastWriterWinsR\tlwwConfig\x12;\n" +
 	"\vmulti_value\x18\x04 \x01(\v2\x1a.queue.v1.MultiValueConfigR\n" +
-	"multiValueB,Z\"github.com/jdfalk/gcommon/queue/v1\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
+	"multiValueB.Z$github.com/jdfalk/gcommon/pkg/queue/\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_queue_v1_conflict_resolution_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_queue_v1_conflict_resolution_proto_goTypes = []any{
 	(*QueueConflictResolution)(nil), // 0: queue.v1.QueueConflictResolution
-	(v1.ResolutionStrategy)(0),      // 1: common.v1.ResolutionStrategy
+	(common.ResolutionStrategy)(0),  // 1: common.v1.ResolutionStrategy
 	(*CustomResolution)(nil),        // 2: queue.v1.CustomResolution
 	(*LastWriterWins)(nil),          // 3: queue.v1.LastWriterWins
 	(*MultiValueConfig)(nil),        // 4: queue.v1.MultiValueConfig
