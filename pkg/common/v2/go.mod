@@ -1,6 +1,6 @@
 module github.com/jdfalk/gcommon-go/pkg/common/v2
 
-go 1.23
+go 1.24
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1
