@@ -1,8 +1,8 @@
 # file: Makefile
-# version: 2.0.0
+# version: 2.1.0
 # guid: makefile-gcommon-go-automation
 
-.PHONY: help setup build test clean generate install-tools
+.PHONY: help setup build test clean generate install-tools release-patch release-minor release-major
 
 help: ## Show this help message
 	@echo "Available targets:"
@@ -42,5 +42,17 @@ doc: ## Generate documentation
 fix-paths: ## Run the Go path fixing script manually
 	@echo "🔧 Running Go path fixes..."
 	python3 scripts/fix-go-paths.py
+
+release-patch: ## Create a patch release (x.y.Z)
+	@echo "🚀 Creating patch release..."
+	python3 scripts/release-manager.py patch
+
+release-minor: ## Create a minor release (x.Y.0)
+	@echo "🚀 Creating minor release..."
+	python3 scripts/release-manager.py minor
+
+release-major: ## Create a major release (X.0.0)
+	@echo "🚀 Creating major release..."
+	python3 scripts/release-manager.py major
 
 .DEFAULT_GOAL := help
