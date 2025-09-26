@@ -1,8 +1,8 @@
 # file: Makefile
-# version: 1.0.0
+# version: 2.0.0
 # guid: makefile-gcommon-go-automation
 
-.PHONY: help setup build test clean generate sync-protos install-tools
+.PHONY: help setup build test clean generate install-tools test-managed switch-managed switch-regular
 
 help: ## Show this help message
 	@echo "Available targets:"
@@ -17,20 +17,11 @@ install-tools: ## Install required tools
 	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 	go install github.com/bufbuild/buf/cmd/buf@latest
 
-generate: sync-protos ## Generate Go code from protocol buffers
+generate: ## Generate Go code from protocol buffers using BSR
+	@echo "📡 Generating Go code from buf.build/jdfalk/gcommon..."
 	buf generate
-
-sync-protos: ## Sync protocol buffer definitions from gcommon repo
-	@echo "Syncing proto files from gcommon repository..."
-	@if [ ! -d "proto" ]; then \
-		git clone --depth 1 --no-checkout https://github.com/jdfalk/gcommon.git proto-temp; \
-		cd proto-temp && git checkout main -- proto/; \
-		mv proto ../proto; \
-		cd .. && rm -rf proto-temp; \
-	else \
-		echo "Proto directory exists, updating..."; \
-		cd proto && git pull origin main || (cd .. && rm -rf proto && $(MAKE) sync-protos); \
-	fi
+	@echo "🔧 Fixing Go module paths for v1/v2+ compatibility..."
+	python3 scripts/fix-go-paths.py
 
 build: generate ## Build the Go module
 	go build ./...
@@ -41,12 +32,29 @@ test: generate ## Run tests
 clean: ## Clean generated files
 	find . -name "*.pb.go" -type f -delete
 	find . -name "*_grpc.pb.go" -type f -delete
-	rm -rf proto/
 
 lint: ## Run linters
 	golangci-lint run
 
 doc: ## Generate documentation
 	godoc -http=:6060
+
+switch-managed: ## Switch to managed mode buf.gen.yaml for testing
+	@echo "🔄 Switching to managed mode generation..."
+	@if [ -f buf.gen.yaml ]; then mv buf.gen.yaml buf.gen.regular.yaml; fi
+	@if [ -f buf.gen.managed.yaml ]; then cp buf.gen.managed.yaml buf.gen.yaml; fi
+	@echo "✅ Switched to managed mode (buf.gen.managed.yaml)"
+
+switch-regular: ## Switch back to regular buf.gen.yaml
+	@echo "🔄 Switching to regular mode generation..."
+	@if [ -f buf.gen.regular.yaml ]; then mv buf.gen.regular.yaml buf.gen.yaml; fi
+	@echo "✅ Switched to regular mode (buf.gen.yaml)"
+
+test-managed: switch-managed generate switch-regular ## Test managed mode generation
+	@echo "🧪 Testing managed mode generation complete"
+
+fix-paths: ## Run the Go path fixing script manually
+	@echo "🔧 Running Go path fixes..."
+	python3 scripts/fix-go-paths.py
 
 .DEFAULT_GOAL := help

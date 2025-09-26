@@ -1,0 +1,54 @@
+# file: buf.gen.managed.yaml
+# version: 1.0.0
+# guid: buf-gen-managed-mode-gcommon
+
+version: v2
+inputs:
+  - module: buf.build/jdfalk/gcommon
+managed:
+  enabled: true
+  override:
+    # v1 files should go directly to pkg/*/ (no v1 subdirectory)
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/common
+      value: github.com/jdfalk/gcommon/pkg/common
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/config
+      value: github.com/jdfalk/gcommon/pkg/config
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/database
+      value: github.com/jdfalk/gcommon/pkg/database
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/health
+      value: github.com/jdfalk/gcommon/pkg/health
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/media
+      value: github.com/jdfalk/gcommon/pkg/media
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/metrics
+      value: github.com/jdfalk/gcommon/pkg/metrics
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/organization
+      value: github.com/jdfalk/gcommon/pkg/organization
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/queue
+      value: github.com/jdfalk/gcommon/pkg/queue
+    - file_option: go_package_prefix
+      module: buf.build/jdfalk/gcommon
+      path: gcommon/v1/web
+      value: github.com/jdfalk/gcommon/pkg/web
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: pkg
+    opt: paths=source_relative
+  - remote: buf.build/grpc/go
+    out: pkg
+    opt: paths=source_relative
