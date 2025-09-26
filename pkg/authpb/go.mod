@@ -1,8 +1,8 @@
-// file: pkg/organizationpb/go.mod
+// file: pkg/authpb/go.mod
 // version: 1.0.0
-// guid: go-mod-organizationpb-v1
+// guid: go-mod-authpb-v1
 
-module github.com/jdfalk/gcommon/pkg/organizationpb
+module github.com/jdfalk/gcommon/pkg/authpb
 
 go 1.24
 
