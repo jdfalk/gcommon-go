@@ -9,7 +9,7 @@ require (
 )
 
 replace (
-	github.com/jdfalk/gcommon/pkg/common/v1 => ./pkg/common/v1
+	github.com/jdfalk/gcommon/pkg/common/ => ./pkg/common/v1
 	github.com/jdfalk/gcommon/pkg/config/ => ./pkg/config/v1
 	github.com/jdfalk/gcommon/pkg/database/ => ./pkg/database/v1
 	github.com/jdfalk/gcommon/pkg/health/ => ./pkg/health/v1
