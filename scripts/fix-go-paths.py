@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 # file: scripts/fix-go-paths.py
-# version: 1.0.0
+# version: 2.0.0
 # guid: fix-go-paths-v1-v2-script
 
 """
-Post-buf-generate script to fix Go module paths.
+Post-buf-generate script to fix Go module paths for pb-suffixed packages.
 
 Go has specific versioning rules:
-- v1 modules: Import path cannot contain /v1 (e.g., github.com/jdfalk/gcommon/pkg/common)
-- v2+ modules: Import path must contain /v2+ (e.g., github.com/jdfalk/gcommon/pkg/common/v2)
+- v1 modules: Import path cannot contain /v1 (e.g., github.com/jdfalk/gcommon/pkg/commonpb)
+- v2+ modules: Import path must contain /v2+ (e.g., github.com/jdfalk/gcommon/pkg/commonpb/v2)
 
 This script:
 1. Moves v1 files from pkg/*/v1/ to pkg/*/
 2. Keeps v2+ files in their versioned directories
 3. Creates appropriate go.mod files for each version
 4. Updates import statements in moved files
+5. Works with pb-suffixed package names (commonpb, metricspb, etc.)
 """
 
 import os
