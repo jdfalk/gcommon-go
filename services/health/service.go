@@ -6,7 +6,9 @@ package health
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
+	"net/http"
 	"sync"
 	"time"
 
@@ -245,4 +247,114 @@ func (s *Service) RemoveDependency(name string) {
 	s.mu.Lock()
 	delete(s.dependencies, name)
 	s.mu.Unlock()
+}
+
+// HTTPHandler returns an HTTP handler for health checks (for REST API compatibility)
+// This provides the same functionality as subtitle-manager's /health endpoint
+func (s *Service) HTTPHandler() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		ctx := r.Context()
+
+		s.mu.RLock()
+		currentStatus := s.status
+		lastCheck := s.lastCheck
+		dependencyCount := len(s.dependencies)
+		s.mu.RUnlock()
+
+		// Create simple health response compatible with subtitle-manager format
+		response := map[string]interface{}{
+			"status":    statusToString(currentStatus),
+			"timestamp": lastCheck.Unix(),
+			"checks": map[string]interface{}{
+				"total":         dependencyCount,
+				"healthy":       countHealthyDependencies(ctx, s.dependencies),
+				"last_check_at": lastCheck.Format(time.RFC3339),
+			},
+		}
+
+		// Set appropriate HTTP status based on health
+		httpStatus := http.StatusOK
+		if currentStatus == InternalHealthUnhealthy {
+			httpStatus = http.StatusServiceUnavailable
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(httpStatus)
+		json.NewEncoder(w).Encode(response)
+	}
+}
+
+// DetailedHTTPHandler returns detailed health information for debugging
+func (s *Service) DetailedHTTPHandler() http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		ctx := r.Context()
+
+		s.mu.RLock()
+		currentStatus := s.status
+		startTime := s.startTime
+		lastCheck := s.lastCheck
+		s.mu.RUnlock()
+
+		// Check each dependency individually
+		dependencyResults := make(map[string]interface{})
+		for name, checker := range s.dependencies {
+			checkResult := map[string]interface{}{
+				"name": checker.Name(),
+			}
+
+			if err := checker.Check(ctx); err != nil {
+				checkResult["status"] = "unhealthy"
+				checkResult["error"] = err.Error()
+			} else {
+				checkResult["status"] = "healthy"
+			}
+			dependencyResults[name] = checkResult
+		}
+
+		response := map[string]interface{}{
+			"status":       statusToString(currentStatus),
+			"uptime":       time.Since(startTime).String(),
+			"last_check":   lastCheck.Format(time.RFC3339),
+			"dependencies": dependencyResults,
+			"config": map[string]interface{}{
+				"check_interval": s.config.CheckInterval.String(),
+				"detailed_mode":  s.config.EnableDetailed,
+			},
+		}
+
+		httpStatus := http.StatusOK
+		if currentStatus == InternalHealthUnhealthy {
+			httpStatus = http.StatusServiceUnavailable
+		}
+
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(httpStatus)
+		if err := json.NewEncoder(w).Encode(response); err != nil {
+			fmt.Printf("Error encoding detailed health response: %v\n", err)
+		}
+	}
+}
+
+// Helper functions for HTTP handlers
+func statusToString(status InternalHealthStatus) string {
+	switch status {
+	case InternalHealthHealthy:
+		return "ok"
+	case InternalHealthUnhealthy:
+		return "unhealthy"
+	case InternalHealthDegraded:
+		return "degraded"
+	default:
+		return "unknown"
+	}
+}
+
+func countHealthyDependencies(ctx context.Context, deps map[string]HealthChecker) int {
+	count := 0
+	for _, checker := range deps {
+		if err := checker.Check(ctx); err == nil {
+			count++
+		}
+	}
+	return count
 }
