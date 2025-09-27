@@ -1,8 +1,8 @@
 # file: Makefile
-# version: 2.1.0
+# version: 2.2.0
 # guid: makefile-gcommon-go-automation
 
-.PHONY: help setup build test clean generate install-tools release-patch release-minor release-major
+.PHONY: help setup build test clean generate install-tools release-patch release-minor release-major go-mod-tidy
 
 help: ## Show this help message
 	@echo "Available targets:"
@@ -54,5 +54,13 @@ release-minor: ## Create a minor release (x.Y.0)
 release-major: ## Create a major release (X.0.0)
 	@echo "🚀 Creating major release..."
 	python3 scripts/release-manager.py major
+
+go-mod-tidy: ## Run go mod tidy on all Go modules in this repository
+	@echo "🔧 Running go mod tidy on all Go modules..."
+	@for dir in $$(find . -name "go.mod" -type f | sed 's|/go.mod||'); do \
+		echo "📦 Tidying $$dir"; \
+		(cd "$$dir" && go mod tidy); \
+	done
+	@echo "✅ All Go modules tidied!"
 
 .DEFAULT_GOAL := help
