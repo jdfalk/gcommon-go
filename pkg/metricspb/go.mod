@@ -8,7 +8,7 @@ go 1.24
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.9-20250912141014-52f32327d4b0.1
-	github.com/jdfalk/gcommon/pkg/commonpb v0.0.0-20250927001935-e959332275b6
+	github.com/jdfalk/gcommon/pkg/commonpb v0.0.0-20250927024843-4db368d2913f
 	google.golang.org/grpc v1.65.0
 	google.golang.org/protobuf v1.36.9
 )
