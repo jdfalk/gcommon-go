@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # file: scripts/fix-go-paths.py
-# version: 2.1.0
+# version: 2.2.0
 # guid: fix-go-paths-v1-v2-script
 
 """
@@ -13,14 +13,12 @@ Go has specific versioning rules:
 This script:
 1. Moves v1 files from pkg/*/v1/ to pkg/*/
 2. Keeps v2+ files in their versioned directories
-3. Creates appropriate go.mod files for each version
+3. Creates appropriate go.mod files for each version (only if they don't exist)
 4. Updates import statements in moved files
 5. Works with pb-suffixed package names (commonpb, metricspb, etc.)
 """
 
-import os
 import shutil
-import glob
 from pathlib import Path
 
 def fix_go_paths():
@@ -68,7 +66,7 @@ def fix_go_paths():
             # Remove empty v1 directory
             if v1_dir.exists() and not any(v1_dir.iterdir()):
                 v1_dir.rmdir()
-                print(f"    🗑️  Removed empty v1 directory")
+                print("    🗑️  Removed empty v1 directory")
 
         # Create go.mod for v1 in module root
         create_go_mod_v1(module_dir, module_name)
@@ -83,6 +81,11 @@ def fix_go_paths():
 def create_go_mod_v1(module_dir: Path, module_name: str):
     """Create go.mod for v1 module in the root directory."""
     go_mod_path = module_dir / "go.mod"
+
+    # Check if go.mod already exists - don't overwrite existing files
+    if go_mod_path.exists():
+        print(f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/go.mod")
+        return
 
     go_mod_content = f"""// file: pkg/{module_name}/go.mod
 // version: 1.0.0
@@ -113,6 +116,11 @@ require (
 def create_go_mod_v2(v2_dir: Path, module_name: str):
     """Create go.mod for v2 module in the v2 directory."""
     go_mod_path = v2_dir / "go.mod"
+
+    # Check if go.mod already exists - don't overwrite existing files
+    if go_mod_path.exists():
+        print(f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/v2/go.mod")
+        return
 
     go_mod_content = f"""// file: pkg/{module_name}/v2/go.mod
 // version: 1.0.0
