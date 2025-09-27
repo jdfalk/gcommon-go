@@ -21,6 +21,7 @@ This script:
 import shutil
 from pathlib import Path
 
+
 def fix_go_paths():
     """Fix Go module paths after buf generate."""
     pkg_dir = Path("pkg")
@@ -78,13 +79,16 @@ def fix_go_paths():
     print("✅ Go module path fixing complete!")
     return True
 
+
 def create_go_mod_v1(module_dir: Path, module_name: str):
     """Create go.mod for v1 module in the root directory."""
     go_mod_path = module_dir / "go.mod"
 
     # Check if go.mod already exists - don't overwrite existing files
     if go_mod_path.exists():
-        print(f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/go.mod")
+        print(
+            f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/go.mod"
+        )
         return
 
     go_mod_content = f"""// file: pkg/{module_name}/go.mod
@@ -108,10 +112,11 @@ require (
 )
 """
 
-    with open(go_mod_path, 'w') as f:
+    with open(go_mod_path, "w") as f:
         f.write(go_mod_content)
 
     print(f"    ✅ Created go.mod for v1: pkg/{module_name}/go.mod")
+
 
 def create_go_mod_v2(v2_dir: Path, module_name: str):
     """Create go.mod for v2 module in the v2 directory."""
@@ -119,7 +124,9 @@ def create_go_mod_v2(v2_dir: Path, module_name: str):
 
     # Check if go.mod already exists - don't overwrite existing files
     if go_mod_path.exists():
-        print(f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/v2/go.mod")
+        print(
+            f"    ⏭️  Skipping go.mod creation (already exists): pkg/{module_name}/v2/go.mod"
+        )
         return
 
     go_mod_content = f"""// file: pkg/{module_name}/v2/go.mod
@@ -143,10 +150,11 @@ require (
 )
 """
 
-    with open(go_mod_path, 'w') as f:
+    with open(go_mod_path, "w") as f:
         f.write(go_mod_content)
 
     print(f"    ✅ Created go.mod for v2: pkg/{module_name}/v2/go.mod")
+
 
 if __name__ == "__main__":
     success = fix_go_paths()

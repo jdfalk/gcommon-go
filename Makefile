@@ -1,5 +1,5 @@
 # file: Makefile
-# version: 2.2.0
+# version: 2.3.0
 # guid: makefile-gcommon-go-automation
 
 .PHONY: help setup build test clean generate install-tools release-patch release-minor release-major go-mod-tidy
@@ -22,6 +22,8 @@ generate: ## Generate Go code from protocol buffers using BSR (managed mode)
 	buf generate
 	@echo "🔧 Fixing Go module paths for v1/v2+ compatibility..."
 	python3 scripts/fix-go-paths.py
+	@echo "📦 Running go mod tidy on all modules..."
+	$(MAKE) go-mod-tidy
 
 build: generate ## Build the Go module
 	go build ./...
