@@ -19,12 +19,25 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	AuthService_Login_FullMethodName           = "/auth.v2.AuthService/Login"
-	AuthService_ValidateToken_FullMethodName   = "/auth.v2.AuthService/ValidateToken"
-	AuthService_AuthorizeAccess_FullMethodName = "/auth.v2.AuthService/AuthorizeAccess"
-	AuthService_GenerateToken_FullMethodName   = "/auth.v2.AuthService/GenerateToken"
-	AuthService_RefreshToken_FullMethodName    = "/auth.v2.AuthService/RefreshToken"
-	AuthService_RevokeToken_FullMethodName     = "/auth.v2.AuthService/RevokeToken"
+	AuthService_Login_FullMethodName               = "/auth.v2.AuthService/Login"
+	AuthService_ValidateToken_FullMethodName       = "/auth.v2.AuthService/ValidateToken"
+	AuthService_AuthorizeAccess_FullMethodName     = "/auth.v2.AuthService/AuthorizeAccess"
+	AuthService_GenerateToken_FullMethodName       = "/auth.v2.AuthService/GenerateToken"
+	AuthService_RefreshToken_FullMethodName        = "/auth.v2.AuthService/RefreshToken"
+	AuthService_RevokeToken_FullMethodName         = "/auth.v2.AuthService/RevokeToken"
+	AuthService_AuthenticateApiKey_FullMethodName  = "/auth.v2.AuthService/AuthenticateApiKey"
+	AuthService_CreateApiKey_FullMethodName        = "/auth.v2.AuthService/CreateApiKey"
+	AuthService_RevokeApiKey_FullMethodName        = "/auth.v2.AuthService/RevokeApiKey"
+	AuthService_ListApiKeys_FullMethodName         = "/auth.v2.AuthService/ListApiKeys"
+	AuthService_InitiateOAuth_FullMethodName       = "/auth.v2.AuthService/InitiateOAuth"
+	AuthService_HandleOAuthCallback_FullMethodName = "/auth.v2.AuthService/HandleOAuthCallback"
+	AuthService_ConfigureOAuth_FullMethodName      = "/auth.v2.AuthService/ConfigureOAuth"
+	AuthService_GetSessionInfo_FullMethodName      = "/auth.v2.AuthService/GetSessionInfo"
+	AuthService_ExtendSession_FullMethodName       = "/auth.v2.AuthService/ExtendSession"
+	AuthService_ListSessions_FullMethodName        = "/auth.v2.AuthService/ListSessions"
+	AuthService_GetUserProfile_FullMethodName      = "/auth.v2.AuthService/GetUserProfile"
+	AuthService_UpdateUserProfile_FullMethodName   = "/auth.v2.AuthService/UpdateUserProfile"
+	AuthService_ChangePassword_FullMethodName      = "/auth.v2.AuthService/ChangePassword"
 )
 
 // AuthServiceClient is the client API for AuthService service.
@@ -32,11 +45,19 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 //
 // *
-// AuthService provides JWT authentication and authorization capabilities.
-// Supports token generation, validation, refresh, revocation, and role-based access control.
-// Follows 1-1-1 pattern: one service per file.
+// AuthService provides comprehensive authentication and authorization functionality.
+// This service supports multiple authentication methods including username/password,
+// API keys, OAuth2 providers, and session management for subtitle-manager integration.
+//
+// Features:
+// - JWT token authentication with refresh capabilities
+// - API key authentication for programmatic access
+// - OAuth2 integration (GitHub, Google, etc.)
+// - Session management with extension and monitoring
+// - User profile management and password changes
+// - Role-based access control and fine-grained permissions
 type AuthServiceClient interface {
-	// Login authenticates a user and returns JWT tokens
+	// Login authenticates a user with username/password and returns JWT tokens
 	Login(ctx context.Context, in *LoginRequest, opts ...grpc.CallOption) (*LoginResponse, error)
 	// ValidateToken validates a JWT token and returns user claims
 	ValidateToken(ctx context.Context, in *ValidateTokenRequest, opts ...grpc.CallOption) (*ValidateTokenResponse, error)
@@ -48,6 +69,32 @@ type AuthServiceClient interface {
 	RefreshToken(ctx context.Context, in *RefreshTokenRequest, opts ...grpc.CallOption) (*RefreshTokenResponse, error)
 	// RevokeToken invalidates a token making it unusable
 	RevokeToken(ctx context.Context, in *RevokeTokenRequest, opts ...grpc.CallOption) (*RevokeTokenResponse, error)
+	// AuthenticateApiKey validates an API key from X-API-Key header
+	AuthenticateApiKey(ctx context.Context, in *ApiKeyAuthRequest, opts ...grpc.CallOption) (*ApiKeyAuthResponse, error)
+	// CreateApiKey generates a new API key for the authenticated user
+	CreateApiKey(ctx context.Context, in *CreateApiKeyRequest, opts ...grpc.CallOption) (*CreateApiKeyResponse, error)
+	// RevokeApiKey invalidates an existing API key
+	RevokeApiKey(ctx context.Context, in *RevokeApiKeyRequest, opts ...grpc.CallOption) (*RevokeApiKeyResponse, error)
+	// ListApiKeys returns all API keys for the authenticated user
+	ListApiKeys(ctx context.Context, in *ListApiKeysRequest, opts ...grpc.CallOption) (*ListApiKeysResponse, error)
+	// InitiateOAuth starts OAuth2 authentication flow with providers like GitHub
+	InitiateOAuth(ctx context.Context, in *OAuthInitiateRequest, opts ...grpc.CallOption) (*OAuthInitiateResponse, error)
+	// HandleOAuthCallback processes OAuth2 callback after user authorization
+	HandleOAuthCallback(ctx context.Context, in *OAuthCallbackRequest, opts ...grpc.CallOption) (*OAuthCallbackResponse, error)
+	// ConfigureOAuth manages OAuth2 provider configurations (admin operation)
+	ConfigureOAuth(ctx context.Context, in *OAuthConfigRequest, opts ...grpc.CallOption) (*OAuthConfigResponse, error)
+	// GetSessionInfo retrieves detailed information about a user session
+	GetSessionInfo(ctx context.Context, in *SessionInfoRequest, opts ...grpc.CallOption) (*SessionInfoResponse, error)
+	// ExtendSession prolongs session expiration time
+	ExtendSession(ctx context.Context, in *ExtendSessionRequest, opts ...grpc.CallOption) (*ExtendSessionResponse, error)
+	// ListSessions returns all active sessions for the authenticated user
+	ListSessions(ctx context.Context, in *ListSessionsRequest, opts ...grpc.CallOption) (*ListSessionsResponse, error)
+	// GetUserProfile retrieves user profile information and preferences
+	GetUserProfile(ctx context.Context, in *UserProfileRequest, opts ...grpc.CallOption) (*UserProfileResponse, error)
+	// UpdateUserProfile modifies user profile information and preferences
+	UpdateUserProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*UpdateProfileResponse, error)
+	// ChangePassword updates user password with security validation
+	ChangePassword(ctx context.Context, in *ChangePasswordRequest, opts ...grpc.CallOption) (*ChangePasswordResponse, error)
 }
 
 type authServiceClient struct {
@@ -118,16 +165,154 @@ func (c *authServiceClient) RevokeToken(ctx context.Context, in *RevokeTokenRequ
 	return out, nil
 }
 
+func (c *authServiceClient) AuthenticateApiKey(ctx context.Context, in *ApiKeyAuthRequest, opts ...grpc.CallOption) (*ApiKeyAuthResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ApiKeyAuthResponse)
+	err := c.cc.Invoke(ctx, AuthService_AuthenticateApiKey_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) CreateApiKey(ctx context.Context, in *CreateApiKeyRequest, opts ...grpc.CallOption) (*CreateApiKeyResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(CreateApiKeyResponse)
+	err := c.cc.Invoke(ctx, AuthService_CreateApiKey_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) RevokeApiKey(ctx context.Context, in *RevokeApiKeyRequest, opts ...grpc.CallOption) (*RevokeApiKeyResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(RevokeApiKeyResponse)
+	err := c.cc.Invoke(ctx, AuthService_RevokeApiKey_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) ListApiKeys(ctx context.Context, in *ListApiKeysRequest, opts ...grpc.CallOption) (*ListApiKeysResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListApiKeysResponse)
+	err := c.cc.Invoke(ctx, AuthService_ListApiKeys_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) InitiateOAuth(ctx context.Context, in *OAuthInitiateRequest, opts ...grpc.CallOption) (*OAuthInitiateResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(OAuthInitiateResponse)
+	err := c.cc.Invoke(ctx, AuthService_InitiateOAuth_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) HandleOAuthCallback(ctx context.Context, in *OAuthCallbackRequest, opts ...grpc.CallOption) (*OAuthCallbackResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(OAuthCallbackResponse)
+	err := c.cc.Invoke(ctx, AuthService_HandleOAuthCallback_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) ConfigureOAuth(ctx context.Context, in *OAuthConfigRequest, opts ...grpc.CallOption) (*OAuthConfigResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(OAuthConfigResponse)
+	err := c.cc.Invoke(ctx, AuthService_ConfigureOAuth_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) GetSessionInfo(ctx context.Context, in *SessionInfoRequest, opts ...grpc.CallOption) (*SessionInfoResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(SessionInfoResponse)
+	err := c.cc.Invoke(ctx, AuthService_GetSessionInfo_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) ExtendSession(ctx context.Context, in *ExtendSessionRequest, opts ...grpc.CallOption) (*ExtendSessionResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ExtendSessionResponse)
+	err := c.cc.Invoke(ctx, AuthService_ExtendSession_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) ListSessions(ctx context.Context, in *ListSessionsRequest, opts ...grpc.CallOption) (*ListSessionsResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ListSessionsResponse)
+	err := c.cc.Invoke(ctx, AuthService_ListSessions_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) GetUserProfile(ctx context.Context, in *UserProfileRequest, opts ...grpc.CallOption) (*UserProfileResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UserProfileResponse)
+	err := c.cc.Invoke(ctx, AuthService_GetUserProfile_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) UpdateUserProfile(ctx context.Context, in *UpdateProfileRequest, opts ...grpc.CallOption) (*UpdateProfileResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(UpdateProfileResponse)
+	err := c.cc.Invoke(ctx, AuthService_UpdateUserProfile_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *authServiceClient) ChangePassword(ctx context.Context, in *ChangePasswordRequest, opts ...grpc.CallOption) (*ChangePasswordResponse, error) {
+	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
+	out := new(ChangePasswordResponse)
+	err := c.cc.Invoke(ctx, AuthService_ChangePassword_FullMethodName, in, out, cOpts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // AuthServiceServer is the server API for AuthService service.
 // All implementations must embed UnimplementedAuthServiceServer
 // for forward compatibility.
 //
 // *
-// AuthService provides JWT authentication and authorization capabilities.
-// Supports token generation, validation, refresh, revocation, and role-based access control.
-// Follows 1-1-1 pattern: one service per file.
+// AuthService provides comprehensive authentication and authorization functionality.
+// This service supports multiple authentication methods including username/password,
+// API keys, OAuth2 providers, and session management for subtitle-manager integration.
+//
+// Features:
+// - JWT token authentication with refresh capabilities
+// - API key authentication for programmatic access
+// - OAuth2 integration (GitHub, Google, etc.)
+// - Session management with extension and monitoring
+// - User profile management and password changes
+// - Role-based access control and fine-grained permissions
 type AuthServiceServer interface {
-	// Login authenticates a user and returns JWT tokens
+	// Login authenticates a user with username/password and returns JWT tokens
 	Login(context.Context, *LoginRequest) (*LoginResponse, error)
 	// ValidateToken validates a JWT token and returns user claims
 	ValidateToken(context.Context, *ValidateTokenRequest) (*ValidateTokenResponse, error)
@@ -139,6 +324,32 @@ type AuthServiceServer interface {
 	RefreshToken(context.Context, *RefreshTokenRequest) (*RefreshTokenResponse, error)
 	// RevokeToken invalidates a token making it unusable
 	RevokeToken(context.Context, *RevokeTokenRequest) (*RevokeTokenResponse, error)
+	// AuthenticateApiKey validates an API key from X-API-Key header
+	AuthenticateApiKey(context.Context, *ApiKeyAuthRequest) (*ApiKeyAuthResponse, error)
+	// CreateApiKey generates a new API key for the authenticated user
+	CreateApiKey(context.Context, *CreateApiKeyRequest) (*CreateApiKeyResponse, error)
+	// RevokeApiKey invalidates an existing API key
+	RevokeApiKey(context.Context, *RevokeApiKeyRequest) (*RevokeApiKeyResponse, error)
+	// ListApiKeys returns all API keys for the authenticated user
+	ListApiKeys(context.Context, *ListApiKeysRequest) (*ListApiKeysResponse, error)
+	// InitiateOAuth starts OAuth2 authentication flow with providers like GitHub
+	InitiateOAuth(context.Context, *OAuthInitiateRequest) (*OAuthInitiateResponse, error)
+	// HandleOAuthCallback processes OAuth2 callback after user authorization
+	HandleOAuthCallback(context.Context, *OAuthCallbackRequest) (*OAuthCallbackResponse, error)
+	// ConfigureOAuth manages OAuth2 provider configurations (admin operation)
+	ConfigureOAuth(context.Context, *OAuthConfigRequest) (*OAuthConfigResponse, error)
+	// GetSessionInfo retrieves detailed information about a user session
+	GetSessionInfo(context.Context, *SessionInfoRequest) (*SessionInfoResponse, error)
+	// ExtendSession prolongs session expiration time
+	ExtendSession(context.Context, *ExtendSessionRequest) (*ExtendSessionResponse, error)
+	// ListSessions returns all active sessions for the authenticated user
+	ListSessions(context.Context, *ListSessionsRequest) (*ListSessionsResponse, error)
+	// GetUserProfile retrieves user profile information and preferences
+	GetUserProfile(context.Context, *UserProfileRequest) (*UserProfileResponse, error)
+	// UpdateUserProfile modifies user profile information and preferences
+	UpdateUserProfile(context.Context, *UpdateProfileRequest) (*UpdateProfileResponse, error)
+	// ChangePassword updates user password with security validation
+	ChangePassword(context.Context, *ChangePasswordRequest) (*ChangePasswordResponse, error)
 	mustEmbedUnimplementedAuthServiceServer()
 }
 
@@ -166,6 +377,45 @@ func (UnimplementedAuthServiceServer) RefreshToken(context.Context, *RefreshToke
 }
 func (UnimplementedAuthServiceServer) RevokeToken(context.Context, *RevokeTokenRequest) (*RevokeTokenResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RevokeToken not implemented")
+}
+func (UnimplementedAuthServiceServer) AuthenticateApiKey(context.Context, *ApiKeyAuthRequest) (*ApiKeyAuthResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AuthenticateApiKey not implemented")
+}
+func (UnimplementedAuthServiceServer) CreateApiKey(context.Context, *CreateApiKeyRequest) (*CreateApiKeyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateApiKey not implemented")
+}
+func (UnimplementedAuthServiceServer) RevokeApiKey(context.Context, *RevokeApiKeyRequest) (*RevokeApiKeyResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RevokeApiKey not implemented")
+}
+func (UnimplementedAuthServiceServer) ListApiKeys(context.Context, *ListApiKeysRequest) (*ListApiKeysResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListApiKeys not implemented")
+}
+func (UnimplementedAuthServiceServer) InitiateOAuth(context.Context, *OAuthInitiateRequest) (*OAuthInitiateResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method InitiateOAuth not implemented")
+}
+func (UnimplementedAuthServiceServer) HandleOAuthCallback(context.Context, *OAuthCallbackRequest) (*OAuthCallbackResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method HandleOAuthCallback not implemented")
+}
+func (UnimplementedAuthServiceServer) ConfigureOAuth(context.Context, *OAuthConfigRequest) (*OAuthConfigResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ConfigureOAuth not implemented")
+}
+func (UnimplementedAuthServiceServer) GetSessionInfo(context.Context, *SessionInfoRequest) (*SessionInfoResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetSessionInfo not implemented")
+}
+func (UnimplementedAuthServiceServer) ExtendSession(context.Context, *ExtendSessionRequest) (*ExtendSessionResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ExtendSession not implemented")
+}
+func (UnimplementedAuthServiceServer) ListSessions(context.Context, *ListSessionsRequest) (*ListSessionsResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ListSessions not implemented")
+}
+func (UnimplementedAuthServiceServer) GetUserProfile(context.Context, *UserProfileRequest) (*UserProfileResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetUserProfile not implemented")
+}
+func (UnimplementedAuthServiceServer) UpdateUserProfile(context.Context, *UpdateProfileRequest) (*UpdateProfileResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateUserProfile not implemented")
+}
+func (UnimplementedAuthServiceServer) ChangePassword(context.Context, *ChangePasswordRequest) (*ChangePasswordResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ChangePassword not implemented")
 }
 func (UnimplementedAuthServiceServer) mustEmbedUnimplementedAuthServiceServer() {}
 func (UnimplementedAuthServiceServer) testEmbeddedByValue()                     {}
@@ -296,6 +546,240 @@ func _AuthService_RevokeToken_Handler(srv interface{}, ctx context.Context, dec 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _AuthService_AuthenticateApiKey_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ApiKeyAuthRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).AuthenticateApiKey(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_AuthenticateApiKey_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).AuthenticateApiKey(ctx, req.(*ApiKeyAuthRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_CreateApiKey_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CreateApiKeyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).CreateApiKey(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_CreateApiKey_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).CreateApiKey(ctx, req.(*CreateApiKeyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_RevokeApiKey_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RevokeApiKeyRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).RevokeApiKey(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_RevokeApiKey_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).RevokeApiKey(ctx, req.(*RevokeApiKeyRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_ListApiKeys_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListApiKeysRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).ListApiKeys(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_ListApiKeys_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).ListApiKeys(ctx, req.(*ListApiKeysRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_InitiateOAuth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OAuthInitiateRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).InitiateOAuth(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_InitiateOAuth_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).InitiateOAuth(ctx, req.(*OAuthInitiateRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_HandleOAuthCallback_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OAuthCallbackRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).HandleOAuthCallback(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_HandleOAuthCallback_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).HandleOAuthCallback(ctx, req.(*OAuthCallbackRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_ConfigureOAuth_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OAuthConfigRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).ConfigureOAuth(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_ConfigureOAuth_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).ConfigureOAuth(ctx, req.(*OAuthConfigRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_GetSessionInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SessionInfoRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).GetSessionInfo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_GetSessionInfo_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).GetSessionInfo(ctx, req.(*SessionInfoRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_ExtendSession_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ExtendSessionRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).ExtendSession(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_ExtendSession_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).ExtendSession(ctx, req.(*ExtendSessionRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_ListSessions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ListSessionsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).ListSessions(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_ListSessions_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).ListSessions(ctx, req.(*ListSessionsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_GetUserProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserProfileRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).GetUserProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_GetUserProfile_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).GetUserProfile(ctx, req.(*UserProfileRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_UpdateUserProfile_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UpdateProfileRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).UpdateUserProfile(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_UpdateUserProfile_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).UpdateUserProfile(ctx, req.(*UpdateProfileRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _AuthService_ChangePassword_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ChangePasswordRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AuthServiceServer).ChangePassword(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: AuthService_ChangePassword_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AuthServiceServer).ChangePassword(ctx, req.(*ChangePasswordRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // AuthService_ServiceDesc is the grpc.ServiceDesc for AuthService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -326,6 +810,58 @@ var AuthService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "RevokeToken",
 			Handler:    _AuthService_RevokeToken_Handler,
+		},
+		{
+			MethodName: "AuthenticateApiKey",
+			Handler:    _AuthService_AuthenticateApiKey_Handler,
+		},
+		{
+			MethodName: "CreateApiKey",
+			Handler:    _AuthService_CreateApiKey_Handler,
+		},
+		{
+			MethodName: "RevokeApiKey",
+			Handler:    _AuthService_RevokeApiKey_Handler,
+		},
+		{
+			MethodName: "ListApiKeys",
+			Handler:    _AuthService_ListApiKeys_Handler,
+		},
+		{
+			MethodName: "InitiateOAuth",
+			Handler:    _AuthService_InitiateOAuth_Handler,
+		},
+		{
+			MethodName: "HandleOAuthCallback",
+			Handler:    _AuthService_HandleOAuthCallback_Handler,
+		},
+		{
+			MethodName: "ConfigureOAuth",
+			Handler:    _AuthService_ConfigureOAuth_Handler,
+		},
+		{
+			MethodName: "GetSessionInfo",
+			Handler:    _AuthService_GetSessionInfo_Handler,
+		},
+		{
+			MethodName: "ExtendSession",
+			Handler:    _AuthService_ExtendSession_Handler,
+		},
+		{
+			MethodName: "ListSessions",
+			Handler:    _AuthService_ListSessions_Handler,
+		},
+		{
+			MethodName: "GetUserProfile",
+			Handler:    _AuthService_GetUserProfile_Handler,
+		},
+		{
+			MethodName: "UpdateUserProfile",
+			Handler:    _AuthService_UpdateUserProfile_Handler,
+		},
+		{
+			MethodName: "ChangePassword",
+			Handler:    _AuthService_ChangePassword_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

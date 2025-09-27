@@ -25,29 +25,68 @@ var File_authpb_v2_auth_service_proto protoreflect.FileDescriptor
 
 const file_authpb_v2_auth_service_proto_rawDesc = "" +
 	"\n" +
-	"\x1cauthpb/v2/auth_service.proto\x12\aauth.v2\x1a\x1dauthpb/v2/login_request.proto\x1a\x1eauthpb/v2/login_response.proto\x1a&authpb/v2/validate_token_request.proto\x1a'authpb/v2/validate_token_response.proto\x1a!authpb/v2/authorize_request.proto\x1a\"authpb/v2/authorize_response.proto\x1a&authpb/v2/generate_token_request.proto\x1a'authpb/v2/generate_token_response.proto\x1a%authpb/v2/refresh_token_request.proto\x1a&authpb/v2/refresh_token_response.proto\x1a$authpb/v2/revoke_token_request.proto\x1a%authpb/v2/revoke_token_response.proto\x1a!google/protobuf/go_features.proto2\xc6\x03\n" +
+	"\x1cauthpb/v2/auth_service.proto\x12\aauth.v2\x1a\x1dauthpb/v2/login_request.proto\x1a\x1eauthpb/v2/login_response.proto\x1a&authpb/v2/validate_token_request.proto\x1a'authpb/v2/validate_token_response.proto\x1a!authpb/v2/authorize_request.proto\x1a\"authpb/v2/authorize_response.proto\x1a&authpb/v2/generate_token_request.proto\x1a'authpb/v2/generate_token_response.proto\x1a%authpb/v2/refresh_token_request.proto\x1a&authpb/v2/refresh_token_response.proto\x1a$authpb/v2/revoke_token_request.proto\x1a%authpb/v2/revoke_token_response.proto\x1a$authpb/v2/api_key_auth_request.proto\x1a%authpb/v2/api_key_auth_response.proto\x1a&authpb/v2/create_api_key_request.proto\x1a'authpb/v2/create_api_key_response.proto\x1a&authpb/v2/revoke_api_key_request.proto\x1a'authpb/v2/revoke_api_key_response.proto\x1a%authpb/v2/list_api_keys_request.proto\x1a&authpb/v2/list_api_keys_response.proto\x1a&authpb/v2/oauth_initiate_request.proto\x1a'authpb/v2/oauth_initiate_response.proto\x1a&authpb/v2/oauth_callback_request.proto\x1a'authpb/v2/oauth_callback_response.proto\x1a$authpb/v2/oauth_config_request.proto\x1a%authpb/v2/oauth_config_response.proto\x1a$authpb/v2/session_info_request.proto\x1a%authpb/v2/session_info_response.proto\x1a&authpb/v2/extend_session_request.proto\x1a'authpb/v2/extend_session_response.proto\x1a%authpb/v2/list_sessions_request.proto\x1a&authpb/v2/list_sessions_response.proto\x1a$authpb/v2/user_profile_request.proto\x1a%authpb/v2/user_profile_response.proto\x1a&authpb/v2/update_profile_request.proto\x1a'authpb/v2/update_profile_response.proto\x1a'authpb/v2/change_password_request.proto\x1a(authpb/v2/change_password_response.proto\x1a!google/protobuf/go_features.proto2\xca\v\n" +
 	"\vAuthService\x126\n" +
 	"\x05Login\x12\x15.auth.v2.LoginRequest\x1a\x16.auth.v2.LoginResponse\x12N\n" +
 	"\rValidateToken\x12\x1d.auth.v2.ValidateTokenRequest\x1a\x1e.auth.v2.ValidateTokenResponse\x12H\n" +
 	"\x0fAuthorizeAccess\x12\x19.auth.v2.AuthorizeRequest\x1a\x1a.auth.v2.AuthorizeResponse\x12N\n" +
 	"\rGenerateToken\x12\x1d.auth.v2.GenerateTokenRequest\x1a\x1e.auth.v2.GenerateTokenResponse\x12K\n" +
 	"\fRefreshToken\x12\x1c.auth.v2.RefreshTokenRequest\x1a\x1d.auth.v2.RefreshTokenResponse\x12H\n" +
-	"\vRevokeToken\x12\x1b.auth.v2.RevokeTokenRequest\x1a\x1c.auth.v2.RevokeTokenResponseB\x8a\x01\n" +
+	"\vRevokeToken\x12\x1b.auth.v2.RevokeTokenRequest\x1a\x1c.auth.v2.RevokeTokenResponse\x12M\n" +
+	"\x12AuthenticateApiKey\x12\x1a.auth.v2.ApiKeyAuthRequest\x1a\x1b.auth.v2.ApiKeyAuthResponse\x12K\n" +
+	"\fCreateApiKey\x12\x1c.auth.v2.CreateApiKeyRequest\x1a\x1d.auth.v2.CreateApiKeyResponse\x12K\n" +
+	"\fRevokeApiKey\x12\x1c.auth.v2.RevokeApiKeyRequest\x1a\x1d.auth.v2.RevokeApiKeyResponse\x12H\n" +
+	"\vListApiKeys\x12\x1b.auth.v2.ListApiKeysRequest\x1a\x1c.auth.v2.ListApiKeysResponse\x12N\n" +
+	"\rInitiateOAuth\x12\x1d.auth.v2.OAuthInitiateRequest\x1a\x1e.auth.v2.OAuthInitiateResponse\x12T\n" +
+	"\x13HandleOAuthCallback\x12\x1d.auth.v2.OAuthCallbackRequest\x1a\x1e.auth.v2.OAuthCallbackResponse\x12K\n" +
+	"\x0eConfigureOAuth\x12\x1b.auth.v2.OAuthConfigRequest\x1a\x1c.auth.v2.OAuthConfigResponse\x12K\n" +
+	"\x0eGetSessionInfo\x12\x1b.auth.v2.SessionInfoRequest\x1a\x1c.auth.v2.SessionInfoResponse\x12N\n" +
+	"\rExtendSession\x12\x1d.auth.v2.ExtendSessionRequest\x1a\x1e.auth.v2.ExtendSessionResponse\x12K\n" +
+	"\fListSessions\x12\x1c.auth.v2.ListSessionsRequest\x1a\x1d.auth.v2.ListSessionsResponse\x12K\n" +
+	"\x0eGetUserProfile\x12\x1b.auth.v2.UserProfileRequest\x1a\x1c.auth.v2.UserProfileResponse\x12R\n" +
+	"\x11UpdateUserProfile\x12\x1d.auth.v2.UpdateProfileRequest\x1a\x1e.auth.v2.UpdateProfileResponse\x12Q\n" +
+	"\x0eChangePassword\x12\x1e.auth.v2.ChangePasswordRequest\x1a\x1f.auth.v2.ChangePasswordResponseB\x8a\x01\n" +
 	"\vcom.auth.v2B\x10AuthServiceProtoP\x01Z$github.com/jdfalk/gcommon/pkg/authpb\xa2\x02\x03AXX\xaa\x02\aAuth.V2\xca\x02\aAuth\\V2\xe2\x02\x13Auth\\V2\\GPBMetadata\xea\x02\bAuth::V2\x92\x03\x05\xd2>\x02\x10\x03b\beditionsp\xe8\a"
 
 var file_authpb_v2_auth_service_proto_goTypes = []any{
-	(*LoginRequest)(nil),          // 0: auth.v2.LoginRequest
-	(*ValidateTokenRequest)(nil),  // 1: auth.v2.ValidateTokenRequest
-	(*AuthorizeRequest)(nil),      // 2: auth.v2.AuthorizeRequest
-	(*GenerateTokenRequest)(nil),  // 3: auth.v2.GenerateTokenRequest
-	(*RefreshTokenRequest)(nil),   // 4: auth.v2.RefreshTokenRequest
-	(*RevokeTokenRequest)(nil),    // 5: auth.v2.RevokeTokenRequest
-	(*LoginResponse)(nil),         // 6: auth.v2.LoginResponse
-	(*ValidateTokenResponse)(nil), // 7: auth.v2.ValidateTokenResponse
-	(*AuthorizeResponse)(nil),     // 8: auth.v2.AuthorizeResponse
-	(*GenerateTokenResponse)(nil), // 9: auth.v2.GenerateTokenResponse
-	(*RefreshTokenResponse)(nil),  // 10: auth.v2.RefreshTokenResponse
-	(*RevokeTokenResponse)(nil),   // 11: auth.v2.RevokeTokenResponse
+	(*LoginRequest)(nil),           // 0: auth.v2.LoginRequest
+	(*ValidateTokenRequest)(nil),   // 1: auth.v2.ValidateTokenRequest
+	(*AuthorizeRequest)(nil),       // 2: auth.v2.AuthorizeRequest
+	(*GenerateTokenRequest)(nil),   // 3: auth.v2.GenerateTokenRequest
+	(*RefreshTokenRequest)(nil),    // 4: auth.v2.RefreshTokenRequest
+	(*RevokeTokenRequest)(nil),     // 5: auth.v2.RevokeTokenRequest
+	(*ApiKeyAuthRequest)(nil),      // 6: auth.v2.ApiKeyAuthRequest
+	(*CreateApiKeyRequest)(nil),    // 7: auth.v2.CreateApiKeyRequest
+	(*RevokeApiKeyRequest)(nil),    // 8: auth.v2.RevokeApiKeyRequest
+	(*ListApiKeysRequest)(nil),     // 9: auth.v2.ListApiKeysRequest
+	(*OAuthInitiateRequest)(nil),   // 10: auth.v2.OAuthInitiateRequest
+	(*OAuthCallbackRequest)(nil),   // 11: auth.v2.OAuthCallbackRequest
+	(*OAuthConfigRequest)(nil),     // 12: auth.v2.OAuthConfigRequest
+	(*SessionInfoRequest)(nil),     // 13: auth.v2.SessionInfoRequest
+	(*ExtendSessionRequest)(nil),   // 14: auth.v2.ExtendSessionRequest
+	(*ListSessionsRequest)(nil),    // 15: auth.v2.ListSessionsRequest
+	(*UserProfileRequest)(nil),     // 16: auth.v2.UserProfileRequest
+	(*UpdateProfileRequest)(nil),   // 17: auth.v2.UpdateProfileRequest
+	(*ChangePasswordRequest)(nil),  // 18: auth.v2.ChangePasswordRequest
+	(*LoginResponse)(nil),          // 19: auth.v2.LoginResponse
+	(*ValidateTokenResponse)(nil),  // 20: auth.v2.ValidateTokenResponse
+	(*AuthorizeResponse)(nil),      // 21: auth.v2.AuthorizeResponse
+	(*GenerateTokenResponse)(nil),  // 22: auth.v2.GenerateTokenResponse
+	(*RefreshTokenResponse)(nil),   // 23: auth.v2.RefreshTokenResponse
+	(*RevokeTokenResponse)(nil),    // 24: auth.v2.RevokeTokenResponse
+	(*ApiKeyAuthResponse)(nil),     // 25: auth.v2.ApiKeyAuthResponse
+	(*CreateApiKeyResponse)(nil),   // 26: auth.v2.CreateApiKeyResponse
+	(*RevokeApiKeyResponse)(nil),   // 27: auth.v2.RevokeApiKeyResponse
+	(*ListApiKeysResponse)(nil),    // 28: auth.v2.ListApiKeysResponse
+	(*OAuthInitiateResponse)(nil),  // 29: auth.v2.OAuthInitiateResponse
+	(*OAuthCallbackResponse)(nil),  // 30: auth.v2.OAuthCallbackResponse
+	(*OAuthConfigResponse)(nil),    // 31: auth.v2.OAuthConfigResponse
+	(*SessionInfoResponse)(nil),    // 32: auth.v2.SessionInfoResponse
+	(*ExtendSessionResponse)(nil),  // 33: auth.v2.ExtendSessionResponse
+	(*ListSessionsResponse)(nil),   // 34: auth.v2.ListSessionsResponse
+	(*UserProfileResponse)(nil),    // 35: auth.v2.UserProfileResponse
+	(*UpdateProfileResponse)(nil),  // 36: auth.v2.UpdateProfileResponse
+	(*ChangePasswordResponse)(nil), // 37: auth.v2.ChangePasswordResponse
 }
 var file_authpb_v2_auth_service_proto_depIdxs = []int32{
 	0,  // 0: auth.v2.AuthService.Login:input_type -> auth.v2.LoginRequest
@@ -56,14 +95,40 @@ var file_authpb_v2_auth_service_proto_depIdxs = []int32{
 	3,  // 3: auth.v2.AuthService.GenerateToken:input_type -> auth.v2.GenerateTokenRequest
 	4,  // 4: auth.v2.AuthService.RefreshToken:input_type -> auth.v2.RefreshTokenRequest
 	5,  // 5: auth.v2.AuthService.RevokeToken:input_type -> auth.v2.RevokeTokenRequest
-	6,  // 6: auth.v2.AuthService.Login:output_type -> auth.v2.LoginResponse
-	7,  // 7: auth.v2.AuthService.ValidateToken:output_type -> auth.v2.ValidateTokenResponse
-	8,  // 8: auth.v2.AuthService.AuthorizeAccess:output_type -> auth.v2.AuthorizeResponse
-	9,  // 9: auth.v2.AuthService.GenerateToken:output_type -> auth.v2.GenerateTokenResponse
-	10, // 10: auth.v2.AuthService.RefreshToken:output_type -> auth.v2.RefreshTokenResponse
-	11, // 11: auth.v2.AuthService.RevokeToken:output_type -> auth.v2.RevokeTokenResponse
-	6,  // [6:12] is the sub-list for method output_type
-	0,  // [0:6] is the sub-list for method input_type
+	6,  // 6: auth.v2.AuthService.AuthenticateApiKey:input_type -> auth.v2.ApiKeyAuthRequest
+	7,  // 7: auth.v2.AuthService.CreateApiKey:input_type -> auth.v2.CreateApiKeyRequest
+	8,  // 8: auth.v2.AuthService.RevokeApiKey:input_type -> auth.v2.RevokeApiKeyRequest
+	9,  // 9: auth.v2.AuthService.ListApiKeys:input_type -> auth.v2.ListApiKeysRequest
+	10, // 10: auth.v2.AuthService.InitiateOAuth:input_type -> auth.v2.OAuthInitiateRequest
+	11, // 11: auth.v2.AuthService.HandleOAuthCallback:input_type -> auth.v2.OAuthCallbackRequest
+	12, // 12: auth.v2.AuthService.ConfigureOAuth:input_type -> auth.v2.OAuthConfigRequest
+	13, // 13: auth.v2.AuthService.GetSessionInfo:input_type -> auth.v2.SessionInfoRequest
+	14, // 14: auth.v2.AuthService.ExtendSession:input_type -> auth.v2.ExtendSessionRequest
+	15, // 15: auth.v2.AuthService.ListSessions:input_type -> auth.v2.ListSessionsRequest
+	16, // 16: auth.v2.AuthService.GetUserProfile:input_type -> auth.v2.UserProfileRequest
+	17, // 17: auth.v2.AuthService.UpdateUserProfile:input_type -> auth.v2.UpdateProfileRequest
+	18, // 18: auth.v2.AuthService.ChangePassword:input_type -> auth.v2.ChangePasswordRequest
+	19, // 19: auth.v2.AuthService.Login:output_type -> auth.v2.LoginResponse
+	20, // 20: auth.v2.AuthService.ValidateToken:output_type -> auth.v2.ValidateTokenResponse
+	21, // 21: auth.v2.AuthService.AuthorizeAccess:output_type -> auth.v2.AuthorizeResponse
+	22, // 22: auth.v2.AuthService.GenerateToken:output_type -> auth.v2.GenerateTokenResponse
+	23, // 23: auth.v2.AuthService.RefreshToken:output_type -> auth.v2.RefreshTokenResponse
+	24, // 24: auth.v2.AuthService.RevokeToken:output_type -> auth.v2.RevokeTokenResponse
+	25, // 25: auth.v2.AuthService.AuthenticateApiKey:output_type -> auth.v2.ApiKeyAuthResponse
+	26, // 26: auth.v2.AuthService.CreateApiKey:output_type -> auth.v2.CreateApiKeyResponse
+	27, // 27: auth.v2.AuthService.RevokeApiKey:output_type -> auth.v2.RevokeApiKeyResponse
+	28, // 28: auth.v2.AuthService.ListApiKeys:output_type -> auth.v2.ListApiKeysResponse
+	29, // 29: auth.v2.AuthService.InitiateOAuth:output_type -> auth.v2.OAuthInitiateResponse
+	30, // 30: auth.v2.AuthService.HandleOAuthCallback:output_type -> auth.v2.OAuthCallbackResponse
+	31, // 31: auth.v2.AuthService.ConfigureOAuth:output_type -> auth.v2.OAuthConfigResponse
+	32, // 32: auth.v2.AuthService.GetSessionInfo:output_type -> auth.v2.SessionInfoResponse
+	33, // 33: auth.v2.AuthService.ExtendSession:output_type -> auth.v2.ExtendSessionResponse
+	34, // 34: auth.v2.AuthService.ListSessions:output_type -> auth.v2.ListSessionsResponse
+	35, // 35: auth.v2.AuthService.GetUserProfile:output_type -> auth.v2.UserProfileResponse
+	36, // 36: auth.v2.AuthService.UpdateUserProfile:output_type -> auth.v2.UpdateProfileResponse
+	37, // 37: auth.v2.AuthService.ChangePassword:output_type -> auth.v2.ChangePasswordResponse
+	19, // [19:38] is the sub-list for method output_type
+	0,  // [0:19] is the sub-list for method input_type
 	0,  // [0:0] is the sub-list for extension type_name
 	0,  // [0:0] is the sub-list for extension extendee
 	0,  // [0:0] is the sub-list for field type_name
@@ -86,6 +151,32 @@ func file_authpb_v2_auth_service_proto_init() {
 	file_authpb_v2_refresh_token_response_proto_init()
 	file_authpb_v2_revoke_token_request_proto_init()
 	file_authpb_v2_revoke_token_response_proto_init()
+	file_authpb_v2_api_key_auth_request_proto_init()
+	file_authpb_v2_api_key_auth_response_proto_init()
+	file_authpb_v2_create_api_key_request_proto_init()
+	file_authpb_v2_create_api_key_response_proto_init()
+	file_authpb_v2_revoke_api_key_request_proto_init()
+	file_authpb_v2_revoke_api_key_response_proto_init()
+	file_authpb_v2_list_api_keys_request_proto_init()
+	file_authpb_v2_list_api_keys_response_proto_init()
+	file_authpb_v2_oauth_initiate_request_proto_init()
+	file_authpb_v2_oauth_initiate_response_proto_init()
+	file_authpb_v2_oauth_callback_request_proto_init()
+	file_authpb_v2_oauth_callback_response_proto_init()
+	file_authpb_v2_oauth_config_request_proto_init()
+	file_authpb_v2_oauth_config_response_proto_init()
+	file_authpb_v2_session_info_request_proto_init()
+	file_authpb_v2_session_info_response_proto_init()
+	file_authpb_v2_extend_session_request_proto_init()
+	file_authpb_v2_extend_session_response_proto_init()
+	file_authpb_v2_list_sessions_request_proto_init()
+	file_authpb_v2_list_sessions_response_proto_init()
+	file_authpb_v2_user_profile_request_proto_init()
+	file_authpb_v2_user_profile_response_proto_init()
+	file_authpb_v2_update_profile_request_proto_init()
+	file_authpb_v2_update_profile_response_proto_init()
+	file_authpb_v2_change_password_request_proto_init()
+	file_authpb_v2_change_password_response_proto_init()
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
