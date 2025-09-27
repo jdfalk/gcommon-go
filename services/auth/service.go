@@ -8,8 +8,6 @@ import (
 	"context"
 	"crypto/rand"
 	"crypto/rsa"
-	"crypto/x509"
-	"encoding/pem"
 	"fmt"
 	"log"
 	"net"
@@ -18,7 +16,6 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 	"github.com/jdfalk/gcommon/pkg/authpb"
-	"github.com/jdfalk/gcommon/services/auth/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -27,12 +24,15 @@ import (
 // AuthenticationService implements the auth service with hybrid architecture
 type AuthenticationService struct {
 	authpb.UnimplementedAuthServiceServer
-	jwtSecret    []byte
-	rsaPrivKey   *rsa.PrivateKey
-	rsaPubKey    *rsa.PublicKey
-	tokenExpiry  time.Duration
+	jwtSecret     []byte
+	rsaPrivKey    *rsa.PrivateKey
+	rsaPubKey     *rsa.PublicKey
+	tokenExpiry   time.Duration
 	refreshExpiry time.Duration
-	users        map[string]types.User // In-memory user store for demo
+	users         map[string]*User        // In-memory user store for demo
+	apiKeys       map[string]*ApiKey      // In-memory API key store
+	sessions      map[string]*Session     // In-memory session store
+	oauthConfigs  map[string]*OAuthConfig // OAuth provider configurations
 }
 
 // User represents a user in our system
@@ -41,6 +41,53 @@ type User struct {
 	Username string
 	Password string // In production, this should be hashed
 	Roles    []string
+}
+
+// UserProfile represents extended user profile information
+type UserProfile struct {
+	FirstName   string
+	LastName    string
+	DisplayName string
+	Avatar      string
+	Timezone    string
+	Language    string
+	Preferences map[string]string
+}
+
+// ApiKey represents an API key for authentication
+type ApiKey struct {
+	ID         string
+	KeyHash    string // SHA-256 hash of the actual key
+	UserID     string
+	Name       string
+	Scopes     []string
+	CreatedAt  time.Time
+	ExpiresAt  time.Time
+	LastUsedAt time.Time
+	IsActive   bool
+}
+
+// Session represents a user session
+type Session struct {
+	ID         string
+	UserID     string
+	TokenID    string
+	CreatedAt  time.Time
+	ExpiresAt  time.Time
+	LastUsedAt time.Time
+	DeviceInfo string
+	IPAddress  string
+	UserAgent  string
+	IsActive   bool
+}
+
+// OAuthConfig represents OAuth provider configuration
+type OAuthConfig struct {
+	Provider     string
+	ClientID     string
+	ClientSecret string
+	RedirectURL  string
+	Scopes       []string
 }
 
 // NewAuthService creates a new authentication service
@@ -55,54 +102,52 @@ func NewAuthService(jwtSecret []byte) (*AuthenticationService, error) {
 		jwtSecret:     jwtSecret,
 		rsaPrivKey:    privateKey,
 		rsaPubKey:     &privateKey.PublicKey,
-		tokenExpiry:   time.Hour,
-		refreshExpiry: time.Hour * 24 * 7, // 7 days
-		users:         make(map[string]types.User),
+		tokenExpiry:   15 * time.Minute,
+		refreshExpiry: 7 * 24 * time.Hour,
+		users:         make(map[string]*User),
+		apiKeys:       make(map[string]*ApiKey),
+		sessions:      make(map[string]*Session),
+		oauthConfigs:  make(map[string]*OAuthConfig),
 	}
 
-	// Add demo users
-	service.users["admin"] = types.User{
+	// Add some demo users
+	service.users["admin"] = &User{
 		ID:       "1",
 		Username: "admin",
-		Password: "admin123", // In production, use proper hashing
-		Roles:    []string{"admin", "user"},
+		Password: "admin", // In production, use proper password hashing
+		Roles:    []string{"admin"},
 	}
-	service.users["user"] = types.User{
+
+	service.users["user"] = &User{
 		ID:       "2",
 		Username: "user",
-		Password: "user123",
+		Password: "user", // In production, use proper password hashing
 		Roles:    []string{"user"},
 	}
 
 	return service, nil
 }
 
-// Login authenticates a user and returns JWT tokens
+// Login handles user authentication and returns JWT tokens
 func (s *AuthenticationService) Login(ctx context.Context, req *authpb.LoginRequest) (*authpb.LoginResponse, error) {
-	// Convert protobuf request to internal type
-	internalReq := &types.LoginRequest{
-		Username: req.GetUsername(),
-		Password: req.GetPassword(),
-	}
-
-	// Validate credentials
-	user, exists := s.users[internalReq.Username]
-	if !exists || user.Password != internalReq.Password {
+	// Check if user exists and password is correct
+	user, exists := s.users[req.GetUsername()]
+	if !exists || user.Password != req.GetPassword() {
 		return nil, status.Errorf(codes.Unauthenticated, "invalid credentials")
 	}
 
-	// Generate tokens
+	// Generate access token
 	accessToken, err := s.generateToken(user.ID, user.Roles, s.tokenExpiry, "access")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate access token: %v", err)
 	}
 
+	// Generate refresh token
 	refreshToken, err := s.generateToken(user.ID, user.Roles, s.refreshExpiry, "refresh")
 	if err != nil {
 		return nil, status.Errorf(codes.Internal, "failed to generate refresh token: %v", err)
 	}
 
-	// Convert internal response to protobuf
 	return &authpb.LoginResponse{
 		AccessToken:  accessToken,
 		RefreshToken: refreshToken,
@@ -110,22 +155,27 @@ func (s *AuthenticationService) Login(ctx context.Context, req *authpb.LoginRequ
 	}, nil
 }
 
-// ValidateToken validates a JWT token and returns user claims
+// ValidateToken checks if a JWT token is valid and returns user information
 func (s *AuthenticationService) ValidateToken(ctx context.Context, req *authpb.ValidateTokenRequest) (*authpb.ValidateTokenResponse, error) {
-	// Convert protobuf to internal type
-	internalReq := &types.ValidateTokenRequest{
-		Token: req.GetToken(),
+	token := req.GetToken()
+
+	if token == "" {
+		return &authpb.ValidateTokenResponse{
+			Valid:  false,
+			UserId: "",
+			Roles:  []string{},
+		}, nil
 	}
 
-	// Parse and validate token
-	token, err := jwt.Parse(internalReq.Token, func(token *jwt.Token) (interface{}, error) {
+	// Parse and validate JWT
+	parsedToken, err := jwt.Parse(token, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodRSA); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 		}
 		return s.rsaPubKey, nil
 	})
 
-	if err != nil || !token.Valid {
+	if err != nil || !parsedToken.Valid {
 		return &authpb.ValidateTokenResponse{
 			Valid:  false,
 			UserId: "",
@@ -134,26 +184,25 @@ func (s *AuthenticationService) ValidateToken(ctx context.Context, req *authpb.V
 	}
 
 	// Extract claims
-	claims, ok := token.Claims.(jwt.MapClaims)
-	if !ok {
+	if claims, ok := parsedToken.Claims.(jwt.MapClaims); ok {
+		userId, _ := claims["user_id"].(string)
+		rolesInterface := claims["roles"].([]interface{})
+		roles := make([]string, len(rolesInterface))
+		for i, role := range rolesInterface {
+			roles[i] = role.(string)
+		}
+
 		return &authpb.ValidateTokenResponse{
-			Valid:  false,
-			UserId: "",
-			Roles:  []string{},
+			Valid:  true,
+			UserId: userId,
+			Roles:  roles,
 		}, nil
 	}
 
-	userId, _ := claims["user_id"].(string)
-	rolesInterface, _ := claims["roles"].([]interface{})
-	roles := make([]string, len(rolesInterface))
-	for i, role := range rolesInterface {
-		roles[i] = role.(string)
-	}
-
 	return &authpb.ValidateTokenResponse{
-		Valid:  true,
-		UserId: userId,
-		Roles:  roles,
+		Valid:  false,
+		UserId: "",
+		Roles:  []string{},
 	}, nil
 }
 

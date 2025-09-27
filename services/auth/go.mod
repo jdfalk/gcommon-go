@@ -36,3 +36,5 @@ require (
 )
 
 replace github.com/jdfalk/gcommon/pkg/authpb => ../../pkg/authpb
+
+replace github.com/jdfalk/gcommon/pkg/authpb/v2 => ../../pkg/authpb/v2
