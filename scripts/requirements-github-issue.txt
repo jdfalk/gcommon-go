@@ -1,0 +1,6 @@
+# file: scripts/requirements-github-issue.txt
+# version: 1.0.0
+# guid: abcd1234-5678-90ef-ghij-klmnopqrstuv
+
+# GitHub API library for creating issues
+PyGithub>=1.55.0
