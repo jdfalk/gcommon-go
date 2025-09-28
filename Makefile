@@ -22,6 +22,8 @@ generate: ## Generate Go code from protocol buffers using BSR (managed mode)
 	buf generate
 	@echo "🔧 Fixing Go module paths for v1/v2+ compatibility..."
 	python3 scripts/fix-go-paths.py
+	@echo "⬆️  Upgrading dependencies in all modules..."
+	$(MAKE) upgrade-deps
 	@echo "📦 Running go mod tidy on all modules..."
 	$(MAKE) go-mod-tidy
 
@@ -64,5 +66,13 @@ go-mod-tidy: ## Run go mod tidy on all Go modules in this repository
 		(cd "$$dir" && go mod tidy); \
 	done
 	@echo "✅ All Go modules tidied!"
+
+upgrade-deps: ## Upgrade all dependencies (direct and transitive) in all Go modules
+	@echo "⬆️  Upgrading dependencies in all Go modules..."
+	@for dir in $$(find . -name "go.mod" -type f | sed 's|/go.mod||'); do \
+		echo "📦 Upgrading dependencies in $$dir"; \
+		(cd "$$dir" && go get -u && go get -u all); \
+	done
+	@echo "✅ All dependencies upgraded!"
 
 .DEFAULT_GOAL := help
