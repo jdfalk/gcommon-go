@@ -1,7 +1,9 @@
 // file: pkg/organizationpb/go.mod
-// version: 1.0.0
+// version: 1.0.1
 // guid: go-mod-organizationpb-v1
 
+// Deprecated: This module is deprecated. Use github.com/jdfalk/gcommon/pkg/organizationpb/v2 instead.
+// The v2 module provides enhanced functionality, additional methods, and improved protobuf definitions.
 module github.com/jdfalk/gcommon/pkg/organizationpb
 
 go 1.24

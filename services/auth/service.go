@@ -15,7 +15,8 @@ import (
 	"time"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/jdfalk/gcommon/pkg/authpb"
+	"github.com/jdfalk/gcommon/pkg/authpb/v2"
+	authpbv2 "github.com/jdfalk/gcommon/pkg/authpb/v2"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -23,7 +24,7 @@ import (
 
 // AuthenticationService implements the auth service with hybrid architecture
 type AuthenticationService struct {
-	authpb.UnimplementedAuthServiceServer
+	authpbv2.UnimplementedAuthServiceServer
 	jwtSecret     []byte
 	rsaPrivKey    *rsa.PrivateKey
 	rsaPubKey     *rsa.PublicKey
@@ -129,7 +130,7 @@ func NewAuthService(jwtSecret []byte) (*AuthenticationService, error) {
 }
 
 // Login handles user authentication and returns JWT tokens
-func (s *AuthenticationService) Login(ctx context.Context, req *authpb.LoginRequest) (*authpb.LoginResponse, error) {
+func (s *AuthenticationService) Login(ctx context.Context, req *authpbv2.LoginRequest) (*authpbv2.LoginResponse, error) {
 	// Check if user exists and password is correct
 	user, exists := s.users[req.GetUsername()]
 	if !exists || user.Password != req.GetPassword() {
@@ -148,7 +149,7 @@ func (s *AuthenticationService) Login(ctx context.Context, req *authpb.LoginRequ
 		return nil, status.Errorf(codes.Internal, "failed to generate refresh token: %v", err)
 	}
 
-	return &authpb.LoginResponse{
+	return &authpbv2.LoginResponse{
 		AccessToken:  accessToken,
 		RefreshToken: refreshToken,
 		ExpiresIn:    int64(s.tokenExpiry.Seconds()),

@@ -1,7 +1,9 @@
 // file: pkg/authpb/go.mod
-// version: 1.0.0
+// version: 1.1.0
 // guid: go-mod-authpb-v1
 
+// Deprecated: This module is deprecated. Use github.com/jdfalk/gcommon/pkg/authpb/v2 instead.
+// The v2 module provides enhanced functionality, additional methods, and improved protobuf definitions.
 module github.com/jdfalk/gcommon/pkg/authpb
 
 go 1.24

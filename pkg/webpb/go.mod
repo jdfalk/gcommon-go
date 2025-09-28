@@ -1,7 +1,9 @@
 // file: pkg/webpb/go.mod
-// version: 1.0.0
+// version: 1.0.1
 // guid: go-mod-webpb-v1
 
+// Deprecated: This module is deprecated. Use github.com/jdfalk/gcommon/pkg/webpb/v2 instead.
+// The v2 module provides enhanced functionality, additional methods, and improved protobuf definitions.
 module github.com/jdfalk/gcommon/pkg/webpb
 
 go 1.24
