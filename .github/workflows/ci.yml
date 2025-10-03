@@ -1,25 +1,30 @@
 # file: .github/workflows/ci.yml
-# version: 2.0.0
+# version: 2.0.1
 # guid: ci-workflow-gcommon-go
 
 name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
+  actions: write
+  checks: write
+  packages: write
   security-events: write
+  id-token: write
+  attestations: write
 
 jobs:
   ci:
     uses: jdfalk/ghcommon/.github/workflows/reusable-ci.yml@main
     with:
-      go-version: '1.24'
-      skip-protobuf: false  # Need protobuf generation for Go SDK (from BSR)
+      go-version: "1.24"
+      skip-protobuf: false # Need protobuf generation for Go SDK (from BSR)
       skip-tests: false
       skip-linting: false
