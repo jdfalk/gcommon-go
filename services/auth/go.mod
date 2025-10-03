@@ -8,7 +8,7 @@ go 1.24.0
 
 require (
 	github.com/golang-jwt/jwt/v5 v5.3.0
-	github.com/jdfalk/gcommon/pkg/authpb/v2 v2.0.0-20250928010352-7f201c29494c
+	github.com/jdfalk/gcommon/pkg/authpb/v2 v2.0.0-20251003134307-5cabf522c911
 	github.com/spf13/cobra v1.10.1
 	github.com/spf13/viper v1.21.0
 	google.golang.org/grpc v1.75.1
