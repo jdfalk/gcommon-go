@@ -14,7 +14,7 @@ replace github.com/jdfalk/gcommon/services/auth => ./services/auth
 replace github.com/jdfalk/gcommon/pkg/authpb/v2 => ./pkg/authpb/v2
 
 require (
-	github.com/jdfalk/gcommon/internal v0.0.0-20250928010352-7f201c29494c
+	github.com/jdfalk/gcommon/internal v0.0.0-20251003134307-5cabf522c911
 	google.golang.org/grpc v1.75.1
 )
 
