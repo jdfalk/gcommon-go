@@ -10,7 +10,7 @@ go 1.24.0
 
 require (
 	buf.build/gen/go/bufbuild/protovalidate/protocolbuffers/go v1.36.10-20250912141014-52f32327d4b0.1
-	github.com/jdfalk/gcommon/pkg/commonpb v0.0.0-20250928010352-7f201c29494c
+	github.com/jdfalk/gcommon/pkg/commonpb v0.0.0-20251003134307-5cabf522c911
 	google.golang.org/grpc v1.75.1
 	google.golang.org/protobuf v1.36.10
 )
