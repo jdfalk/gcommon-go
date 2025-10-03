@@ -8,10 +8,11 @@ go 1.24.0
 
 require (
 	github.com/golang-jwt/jwt/v5 v5.3.0
-	github.com/jdfalk/gcommon/pkg/authpb/v2 v2.0.0-20250928003915-5beec7aae2e9
+	github.com/jdfalk/gcommon/pkg/authpb/v2 v2.0.0-20250928010352-7f201c29494c
 	github.com/spf13/cobra v1.10.1
 	github.com/spf13/viper v1.21.0
 	google.golang.org/grpc v1.75.1
+	google.golang.org/protobuf v1.36.10
 )
 
 require (
@@ -28,8 +29,7 @@ require (
 	golang.org/x/net v0.44.0 // indirect
 	golang.org/x/sys v0.36.0 // indirect
 	golang.org/x/text v0.29.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20250922171735-9219d122eba9 // indirect
-	google.golang.org/protobuf v1.36.9 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20251002232023-7c0ddcbb5797 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
 
