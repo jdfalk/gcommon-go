@@ -502,7 +502,7 @@ func (s *AuthenticationService) AuthenticateApiKey(ctx context.Context, req *aut
 	response := &authpb.ApiKeyAuthResponse{}
 	response.SetStatus(authpb.AuthStatus_AUTH_STATUS_SUCCESS)
 	response.SetUserId(apiKey.UserID)
-	\tresponse.SetRoles(apiKey.Scopes) // Using Scopes as roles for compatibility
+	response.SetRoles(apiKey.Scopes) // Using Scopes as roles for compatibility
 	return response, nil
 }
 
