@@ -97,7 +97,7 @@ managed:
       path: auth/v2
       value: github.com/jdfalk/gcommon/pkg/authpb/v2
 plugins:
-  - remote: buf.build/protocolbuffers/go
+  - local: protoc-gen-go
     out: pkg
     opt: paths=source_relative
   - remote: buf.build/grpc/go
